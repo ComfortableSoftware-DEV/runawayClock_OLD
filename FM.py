@@ -340,8 +340,8 @@ FMFM_SCTN0103_DICTCMNTDICT = {}  # SCTN103 dict defined
 FMFM_SCTN0103_DICTDICT = {}  # SCTN103 dict defined
 FMFM_SCTN0104_LISTCMNTDICT = {}  # SCTN201 device defines
 FMFM_SCTN0104_LISTDICT = {}  # SCTN201 device defines
-FMPSG_SCTN0900_DEFCMNTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0900_DEFDICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0900_DEF1CMNTDICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0900_DEF1DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0901_DEF2CMNTDICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0901_DEF2DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0902_DICTCMNTDICT = {}  # define the dict to hold everything in SCTN0900
@@ -422,10 +422,10 @@ TBGLST = [
 	("FMAXPSG", FMAX_NOP, "FMAXPSG_BEGINS",),
 	("FMAXPSG_SCTN0900_STRDEF", FMAXFM_SCTN0101_AXDEF, "define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>",),
 	("FMAXPSG_SCTN0900_VALDEF", FMAXFM_SCTN0101_AXDEF, "define a value in the first define section in PSG.py <NAC><VALNAME><VAL>",),
-	("FMAXPSG_SCTN0901_DUBLTVVDEF", FMAXFM_SCTN0101_AXDEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
 	("FMAXPSG_SCTN0901_DUBLTSSDEF", FMAXFM_SCTN0101_AXDEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
 	("FMAXPSG_SCTN0901_DUBLTSVDEF", FMAXFM_SCTN0101_AXDEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
 	("FMAXPSG_SCTN0901_DUBLTVSDEF", FMAXFM_SCTN0101_AXDEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
+	("FMAXPSG_SCTN0901_DUBLTVVDEF", FMAXFM_SCTN0101_AXDEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
 	("FMAXPSG_SCTN0901_KEYDEF", FMAXFM_SCTN0101_AXDEF, "define a key in the second section of defines in PSG.py <NAC><VALNAME>",),
 	("FMAXPSG_SCTN0901_STRDEF", FMAXFM_SCTN0101_AXDEF, "define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>",),
 	("FMAXPSG_SCTN0901_VALDEF", FMAXFM_SCTN0101_AXDEF, "define a value in the second define section in PSG.py <NAC><VALNAME><VAL>",),
@@ -479,8 +479,8 @@ TBGLST = [
 	("FMFM_SCTN0104_LISTDICT", FMAXFM_SCTN0103_DICTDEF, "SCTN201 device defines",),
 	("FMFM_____", FMAX_NOP, "FMFM_ENDS",),
 	("FMPSG", FMAX_NOP, "FMPSG_BEGINS",),
-	("FMPSG_SCTN0900_DEFCMNTDICT", FMAXFM_SCTN0103_DICTDEF, "define the dict to hold everything in SCTN0900",),
-	("FMPSG_SCTN0900_DEFDICT", FMAXFM_SCTN0103_DICTDEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0900_DEF1CMNTDICT", FMAXFM_SCTN0103_DICTDEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0900_DEF1DICT", FMAXFM_SCTN0103_DICTDEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0901_DEF2CMNTDICT", FMAXFM_SCTN0103_DICTDEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0901_DEF2DICT", FMAXFM_SCTN0103_DICTDEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0902_DICTCMNTDICT", FMAXFM_SCTN0103_DICTDEF, "define the dict to hold everything in SCTN0900",),
@@ -494,8 +494,17 @@ TBGLST = [
 	("FMPSG_SCTN0905_TUPDICTCMNTDICT", FMAXFM_SCTN0103_DICTDEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0905_TUPDICTDICT", FMAXFM_SCTN0103_DICTDEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_____", FMAX_NOP, "FMPSG_ENDS",),
-	("FMWEB", FMAX_NOP, "FMWEB_BEGINS",),
-	("FMWEB_____", FMAX_NOP, "FMWEB_ENDS",),
+	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
+	("PSGVAL_COLOR_BLACK", FMAXPSG_SCTN0900_STRDEF, "BLACK", "#000000", "black",),
+	("PSGVAL_COLOR_GRAY3", FMAXPSG_SCTN0900_STRDEF, "GRAY3", "#333333", "gray 3",),
+	("PSGVAL_COLOR_GRAY6", FMAXPSG_SCTN0900_STRDEF, "GRAY6", "#666666", "gray 6",),
+	("PSGVAL_COLOR_GRAY9", FMAXPSG_SCTN0900_STRDEF, "GRAY9", "#999999", "gray 9",),
+	("PSGVAL_COLOR_GRAYC", FMAXPSG_SCTN0900_STRDEF, "GRAYC", "#CCCCCC", "gray C",),
+	("PSGVAL_COLOR_WHITE", FMAXPSG_SCTN0900_STRDEF, "WHITE", "#FFFFFF", "white",),
+	("PSGVAL_COLOR_TIME", FMAXPSG_SCTN0900_STRDEF, "TIMECOLOR", "#660044", "the color the clock digits are",),
+	("PSGVAL_COLOR_BACKGROUND", FMAXPSG_SCTN0900_STRDEF, "BACKGROUNDCOLOR", "#330022", "the background of the main frames",),
+	("PSGVAL_COLOR_BLINK", FMAXPSG_SCTN0900_STRDEF, "BLINKCOLOR", "#CC0088", "the highlight color used in blinking bits when they are 'lit'",),
+	("PSGVAL_____", FMAX_NOP, "FMPSG_BEGINS",),
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 ]
 TBGLST.sort()
@@ -832,6 +841,39 @@ def makeFM():
 # FMFM_MAKE_ENDS
 
 
+# FMPSG_MAKE_BEGINS
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# makePSG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def makePSG():
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	strToRtn_ = ""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN0900 DEF1")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN0900_DEF1DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{thisName_} = {value_}  # {FMPSG_SCTN0900_DEF1CMNTDICT[thisName_]}{NEWLINE}"""
+	strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN0901 DEF2")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN0901_DEF2DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{thisName_} = {value_}  # {FMPSG_SCTN0901_DEF2CMNTDICT[thisName_]}{NEWLINE}"""
+	strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN0902 dicts")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN0902_DICTDICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN0902_DICTCMNTDICT[thisName_], value_)}"""
+	strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
+
+	return strToRtn_
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # parseTBGLST
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
@@ -858,8 +900,8 @@ def parseTBGLST(FDTBGLST):
 		FMFM_SCTN0103_DICTDICT, \
 		FMFM_SCTN0104_LISTCMNTDICT, \
 		FMFM_SCTN0104_LISTDICT, \
-		FMPSG_SCTN0900_DEFCMNTDICT, \
-		FMPSG_SCTN0900_DEFDICT, \
+		FMPSG_SCTN0900_DEF1CMNTDICT, \
+		FMPSG_SCTN0900_DEF1DICT, \
 		FMPSG_SCTN0901_DEF2CMNTDICT, \
 		FMPSG_SCTN0901_DEF2DICT, \
 		FMPSG_SCTN0902_DICTCMNTDICT, \
@@ -1165,8 +1207,8 @@ def parseTBGLST(FDTBGLST):
 				continue
 			thisValName_ = thisItem_[2]
 			thisVal_ = thisItem_[3]
-			FMPSG_SCTN0900_DEFDICT[thisValName_] = f"""{DBLQT}{thisVal_}{DBLQT}"""
-			FMPSG_SCTN0900_DEFCMNTDICT[thisValName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0900_DEF1DICT[thisValName_] = f"""{DBLQT}{thisVal_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1CMNTDICT[thisValName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1179,8 +1221,8 @@ def parseTBGLST(FDTBGLST):
 				continue
 			thisValName_ = thisItem_[2]
 			thisVal_ = thisItem_[3]
-			FMPSG_SCTN0900_DEFDICT[thisValName_] = f"""{thisVal_}"""
-			FMPSG_SCTN0900_DEFCMNTDICT[thisValName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0900_DEF1DICT[thisValName_] = f"""{thisVal_}"""
+			FMPSG_SCTN0900_DEF1CMNTDICT[thisValName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1194,8 +1236,8 @@ def parseTBGLST(FDTBGLST):
 			thisValName_ = thisItem_[2]
 			thisVal1_ = thisItem_[3]
 			thisVal2_ = thisItem_[4]
-			FMPSG_SCTN0901_DEFDICT[thisValName_] = f"""{OPAREN}{DBLQT}{thisVal1_}{DBLQT}, {DBLQT}{thisVal2_}{DBLQT}{CPAREN},"""
-			FMPSG_SCTN0901_DEFCMNTDICT[thisValName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0901_DEF2DICT[thisValName_] = f"""{OPAREN}{DBLQT}{thisVal1_}{DBLQT}, {DBLQT}{thisVal2_}{DBLQT}{CPAREN},"""
+			FMPSG_SCTN0901_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1209,8 +1251,8 @@ def parseTBGLST(FDTBGLST):
 			thisValName_ = thisItem_[2]
 			thisVal1_ = thisItem_[3]
 			thisVal2_ = thisItem_[4]
-			FMPSG_SCTN0901_DEFDICT[thisValName_] = f"""{OPAREN}{DBLQT}{thisVal1_}{DBLQT}, {thisVal2_}{CPAREN},"""
-			FMPSG_SCTN0901_DEFCMNTDICT[thisValName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0901_DEF2DICT[thisValName_] = f"""{OPAREN}{DBLQT}{thisVal1_}{DBLQT}, {thisVal2_}{CPAREN},"""
+			FMPSG_SCTN0901_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1224,8 +1266,8 @@ def parseTBGLST(FDTBGLST):
 			thisValName_ = thisItem_[2]
 			thisVal1_ = thisItem_[3]
 			thisVal2_ = thisItem_[4]
-			FMPSG_SCTN0901_DEFDICT[thisValName_] = f"""{OPAREN}{thisVal1_}, {DBLQT}{thisVal2_}{DBLQT}{CPAREN},"""
-			FMPSG_SCTN0901_DEFCMNTDICT[thisValName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0901_DEF2DICT[thisValName_] = f"""{OPAREN}{thisVal1_}, {DBLQT}{thisVal2_}{DBLQT}{CPAREN},"""
+			FMPSG_SCTN0901_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1239,8 +1281,8 @@ def parseTBGLST(FDTBGLST):
 			thisValName_ = thisItem_[2]
 			thisVal1_ = thisItem_[3]
 			thisVal2_ = thisItem_[4]
-			FMPSG_SCTN0901_DEFDICT[thisValName_] = f"""{OPAREN}{thisVal1_}, {thisVal2_}{CPAREN}"""
-			FMPSG_SCTN0901_DEFCMNTDICT[thisValName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0901_DEF2DICT[thisValName_] = f"""{OPAREN}{thisVal1_}, {thisVal2_}{CPAREN}"""
+			FMPSG_SCTN0901_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1252,8 +1294,8 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 4 items", thisItem_)
 				continue
 			thisValName_ = thisItem_[2]
-			FMPSG_SCTN0901_DEFDICT[thisValName_] = f"""{DBLQT}{thisValName_}{DBLQT}"""
-			FMPSG_SCTN0901_DEFCMNTDICT[thisValName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0901_DEF2DICT[thisValName_] = f"""{DBLQT}{thisValName_}{DBLQT}"""
+			FMPSG_SCTN0901_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1266,8 +1308,8 @@ def parseTBGLST(FDTBGLST):
 				continue
 			thisValName_ = thisItem_[2]
 			thisVal_ = thisItem_[3]
-			FMPSG_SCTN0901_DEFDICT[thisValName_] = f"""{DBLQT}{thisVal1_}{DBLQT}"""
-			FMPSG_SCTN0901_DEFCMNTDICT[thisValName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0901_DEF2DICT[thisValName_] = f"""{DBLQT}{thisVal1_}{DBLQT}"""
+			FMPSG_SCTN0901_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1280,8 +1322,8 @@ def parseTBGLST(FDTBGLST):
 				continue
 			thisValName_ = thisItem_[2]
 			thisVal_ = thisItem_[3]
-			FMPSG_SCTN0901_DEFDICT[thisValName_] = f"""{thisVal1_}"""
-			FMPSG_SCTN0901_DEFCMNTDICT[thisValName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0901_DEF2DICT[thisValName_] = f"""{thisVal1_}"""
+			FMPSG_SCTN0901_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1452,6 +1494,14 @@ def __main__():
 		FDOut.writelines(strToWrt_)
 	# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# FMCF_MAIN_ENDS
+
+	# FMPSG_MAIN_BEGINS
+	# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+	with open(PSG_NAME, "tw") as FDOut:
+		strToWrt_ = makePSG()
+		FDOut.writelines(strToWrt_)
+	# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+	# FMPSG_MAIN_ENDS
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 

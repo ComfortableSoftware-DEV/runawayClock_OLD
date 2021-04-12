@@ -340,8 +340,8 @@ FMFM_SCTN0103_DICTCMNTDICT = {}  # SCTN103 dict defined
 FMFM_SCTN0103_DICTDICT = {}  # SCTN103 dict defined
 FMFM_SCTN0104_LISTCMNTDICT = {}  # SCTN201 device defines
 FMFM_SCTN0104_LISTDICT = {}  # SCTN201 device defines
-FMPSG_SCTN0900_DEFCMNTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0900_DEFDICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0900_DEF1CMNTDICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0900_DEF1DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0901_DEF2CMNTDICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0901_DEF2DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0902_DICTCMNTDICT = {}  # define the dict to hold everything in SCTN0900
@@ -393,8 +393,8 @@ FMFM_SCTN0004_BTNSHOLDABLELIST = []  # buttons holdable list
 		FMFM_SCTN0103_DICTDICT, \
 		FMFM_SCTN0104_LISTCMNTDICT, \
 		FMFM_SCTN0104_LISTDICT, \
-		FMPSG_SCTN0900_DEFCMNTDICT, \
-		FMPSG_SCTN0900_DEFDICT, \
+		FMPSG_SCTN0900_DEF1CMNTDICT, \
+		FMPSG_SCTN0900_DEF1DICT, \
 		FMPSG_SCTN0901_DEF2CMNTDICT, \
 		FMPSG_SCTN0901_DEF2DICT, \
 		FMPSG_SCTN0902_DICTCMNTDICT, \
