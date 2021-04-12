@@ -300,71 +300,6 @@ timerRunning = False
 currentData = None
 
 
-def pickleIt(fileName, dataToPickle):
-	# fold here ⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱
-	with open(CONFIGDIRECTORY + fileName, 'wb') as FD_OUT_:
-		PD.dump(dataToPickle, FD_OUT_)
-		FD_OUT_.flush()
-		FD_OUT_.close()
-	with open(CONFIGDIRECTORY + LASTFILENAME, "tw") as FD_OUT_:
-		FD_OUT_.writelines(fileName)
-		FD_OUT_.flush()
-		FD_OUT_.close()
-# fold here ⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰
-
-
-def unPickleIt(fileName):
-	# fold here ⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱
-	with open(CONFIGDIRECTORY + fileName, "rb") as FD_IN_:
-		dataToRTN_ = PD.load(FD_IN_)
-	return dataToRTN_
-# fold here ⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰
-
-
-def getData(fileName):
-	# fold here ⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱
-	global currentData
-	if PATH.exists(CONFIGDIRECTORY + fileName):
-		try:
-			currentData = unPickleIt(fileName)
-		except PD.UnpicklingError:
-			currentData = defaults()
-			pickleIt(fileName, currentData)
-	else:
-		currentData = defaults()
-		pickleIt(fileName, currentData)
-# fold here ⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰
-
-
-def makeTime(secondsIn):
-	# fold here ⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱
-	secondsIn = int(secondsIn)
-	strRTN = f"{int(secondsIn // 60):02d}:{int(secondsIn % 60):02d}"
-	return strRTN
-# fold here ⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰
-
-
-def myInit():
-	global currentData
-	# fold here ⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱
-	if PATH.exists(CONFIGDIRECTORY + LASTFILENAME):
-		# print(f"lastfilename {LASTFILENAME} being opened\n")
-		FD_IN_ = open(CONFIGDIRECTORY + LASTFILENAME, "tr")
-		filename = FD_IN_.readline()
-		FD_IN_.close()
-		if PATH.exists(CONFIGDIRECTORY + filename):
-			getData(filename)
-		else:
-			currentData = defaults()
-			pickleIt(LASTFILENAME, currentData)
-	else:
-		currentData = defaults()
-		pickleIt(LASTFILENAME, currentData)
-	# fold here ⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰
-
-
-myInit()
-
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # buttons defined here, don't forget to ** double unpack these when used
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
@@ -1032,30 +967,58 @@ mainFrame = SG.Window(
 ).finalize()
 
 
-def nowStr(dtObj=DT.now()):
-	return dtObj.strftime("%Y%m%d.%H%M%S")
-
-
-def setTimer():
-	# fold here ⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱
-	ticks_ = ticks // ticksPerSecond
-	mins_ = int(ticks_ // 60)
-	secs_ = int(ticks_ % 60)
-	timeStr = f"{mins_:03d}:{secs_:02d}"
-	if directionUp is True and timerRunning is True:
-		mainFrame.Element("_upTime_").Update(value=(makeTime(currentData[UPSEC] - ticks_)))
-		mainFrame.Element("_downTime_").Update(value=(makeTime(0)))
-		mainFrame.Element("_timer_").Update(value=timeStr)
-	elif directionUp is False and timerRunning is True:
-		mainFrame.Element("_upTime_").Update(value=(makeTime(0)))
-		mainFrame.Element("_downTime_").Update(value=(makeTime(currentData[DOWNSEC] - ticks_)))
-		mainFrame.Element("_timer_").Update(value=timeStr)
-	else:
-		mainFrame.Element("_upTime_").Update(value=(makeTime(0)))
-		mainFrame.Element("_downTime_").Update(value=(makeTime(0)))
-		mainFrame.Element("_timer_").Update(value=timeStr)
-	# fold here ⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰⟰
-
+"""Window(
+	title,
+	layout=None,
+	default_element_size=(45, 1),
+	default_button_element_size=(None, None),
+	auto_size_text=None,
+	auto_size_buttons=None,
+	location=(None, None),
+	size=(None, None),
+	element_padding=None,
+	margins=(None, None),
+	button_color=None,
+	font=None,
+	progress_bar_color=(None, None),
+	background_color=None,
+	border_depth=None,
+	auto_close=False,
+	auto_close_duration=3,
+	icon=None,
+	force_toplevel=False,
+	alpha_channel=1,
+	return_keyboard_events=False,
+	use_default_focus=True,
+	text_justification=None,
+	no_titlebar=False,
+	grab_anywhere=False,
+	keep_on_top=False,
+	resizable=False,
+	disable_close=False,
+	disable_minimize=False,
+	right_click_menu=None,
+	transparent_color=None,
+	debugger_enabled=True,
+	right_click_menu_background_color=None,
+	right_click_menu_text_color=None,
+	right_click_menu_disabled_text_color=None,
+	right_click_menu_selected_colors=(None, None),
+	right_click_menu_font=None,
+	right_click_menu_tearoff=False,
+	finalize=False,
+	element_justification='left',
+	ttk_theme=None,
+	use_ttk_buttons=None,
+	modal=False,
+	enable_close_attempted_event=False,
+	titlebar_background_color=None,
+	titlebar_text_color=None,
+	titlebar_font=None,
+	titlebar_icon=None,
+	use_custom_titlebar=None,
+	metadata=None)
+"""
 
 def updateAll():
 	# fold here ⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱

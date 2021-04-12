@@ -174,6 +174,8 @@ MOVELEFT = lambda NUM_: f"""{ESC}[{NUM_}D"""
 MOVETO = lambda LN_, COL_: f"""{ESC}[{LN_};{COL_}H"""
 NSPC = lambda NUM_: f"""{SPCSTR * NUM_}"""  # returns a string with NUM_ SPC
 NTAB = lambda NUM_: f"""{TABSTR * NUM_}"""  # returns a string with NUM_ TAB
+PSG_NAME = f"""newPSG.py"""
+PSGTOP_NAME = f"""{CONFIGDIR}PSGTOP.py"""
 QTSET = [DBLQT, SGLQT, BKQT]  # set of all quote characters
 SCTN0102NAME = f"""{CONFIGDIR}SCTN0102.py"""
 SCTNSNAME = f"""{CONFIGDIR}SCTNS.py"""
@@ -226,7 +228,10 @@ FMAXFM_SCTN0103_DICTDEF = "FMAXFM_SCTN0103_DICTDEF"  # define a dict for FM <NAC
 FMAXFM_SCTN0104_LISTDEF = "FMAXFM_SCTN0104_LISTDEF"  # define a list in FM <NAC>
 FMAXPSG_SCTN0900_STRDEF = "FMAXPSG_SCTN0900_STRDEF"  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
 FMAXPSG_SCTN0900_VALDEF = "FMAXPSG_SCTN0900_VALDEF"  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
-FMAXPSG_SCTN0901_DUBLTDEF = "FMAXPSG_SCTN0901_DUBLTDEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+FMAXPSG_SCTN0901_DUBLTSSDEF = "FMAXPSG_SCTN0901_DUBLTSSDEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+FMAXPSG_SCTN0901_DUBLTSVDEF = "FMAXPSG_SCTN0901_DUBLTSVDEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+FMAXPSG_SCTN0901_DUBLTVSDEF = "FMAXPSG_SCTN0901_DUBLTVSDEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+FMAXPSG_SCTN0901_DUBLTVVDEF = "FMAXPSG_SCTN0901_DUBLTVVDEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
 FMAXPSG_SCTN0901_KEYDEF = "FMAXPSG_SCTN0901_KEYDEF"  # define a key in the second section of defines in PSG.py <NAC><VALNAME>
 FMAXPSG_SCTN0901_STRDEF = "FMAXPSG_SCTN0901_STRDEF"  # define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>
 FMAXPSG_SCTN0901_VALDEF = "FMAXPSG_SCTN0901_VALDEF"  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
@@ -276,7 +281,10 @@ FMAXFM_AXLST = [
 	FMAXFM_SCTN0104_LISTDEF,  # define a list in FM <NAC>
 	FMAXPSG_SCTN0900_STRDEF,  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
 	FMAXPSG_SCTN0900_VALDEF,  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
-	FMAXPSG_SCTN0901_DUBLTDEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+	FMAXPSG_SCTN0901_DUBLTSSDEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+	FMAXPSG_SCTN0901_DUBLTSVDEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+	FMAXPSG_SCTN0901_DUBLTVSDEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+	FMAXPSG_SCTN0901_DUBLTVVDEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
 	FMAXPSG_SCTN0901_KEYDEF,  # define a key in the second section of defines in PSG.py <NAC><VALNAME>
 	FMAXPSG_SCTN0901_STRDEF,  # define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>
 	FMAXPSG_SCTN0901_VALDEF,  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
