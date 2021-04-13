@@ -1018,6 +1018,40 @@ mainFrame = SG.Window(
 	titlebar_icon=None,
 	use_custom_titlebar=None,
 	metadata=None)
+
+	Button(
+	button_text='',
+	button_type=7,
+	target=(None, None),
+	tooltip=None,
+	file_types=(('ALL Files', '*.*'),),
+	initial_folder=None,
+	default_extension='',
+	disabled=False,
+	change_submits=False,
+	enable_events=False,
+	image_filename=None,
+	image_data=None,
+	image_size=(None, None),
+	image_subsample=None,
+	border_width=None,
+	size=(None, None),
+	s=(None, None),
+	auto_size_button=None,
+	button_color=None,
+	disabled_button_color=None,
+	highlight_colors=None,
+	use_ttk_buttons=None,
+	font=None,
+	bind_return_key=False,
+	focus=False,
+	pad=None,
+	key=None,
+	k=None,
+	right_click_menu=None,
+	visible=True,
+	metadata=None)
+
 """
 
 def updateAll():
