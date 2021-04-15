@@ -1,14 +1,23 @@
+
+
+import PySimpleGUI as SG
+
+
+import CF
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-BACKGROUNDCOLOR = "#330022"  # the background of the main frames
+BACKGROUNDCOLOR = "#331122"  # the background of the main frames
 BLACK = "#000000"  # black
-BLINKCOLOR = "#CC0088"  # the highlight color used in blinking bits when they are 'lit'
 GRAY3 = "#333333"  # gray 3
 GRAY6 = "#666666"  # gray 6
 GRAY9 = "#999999"  # gray 9
 GRAYC = "#CCCCCC"  # gray C
-TIMECOLOR = "#660044"  # the color the clock digits are
+NORMALCOLOR = "#660044"  # the color the clock digits are
+NORMALHIGH = "#CC0088"  # the highlight color used in blinking bits when they are 'lit'
+NORMALLOW = "#330022"  # the color the clock digits are
 WHITE = "#FFFFFF"  # white
 
 
@@ -29,7 +38,10 @@ BUTTON_COLOR = "button_color"  #
 BUTTON_TEXT = "button_text"  # 
 BUTTON_TYPE = "button_type"  # 
 CHANGE_SUBMITS = "change_submits"  # 
+CHECKBOX_COLOR = "checkbox_color"  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
+CLOCKTIME = "CLOCKTIME"  # holds the clock value (str HH:MM:SS)
 DEBUGGER_ENABLED = "debugger_enabled"  # 
+DEFAULT = "default"  # 
 DEFAULT_BUTTON_ELEMENT_SIZE = "default_button_element_size"  # 
 DEFAULT_ELEMENT_SIZE = "default_element_size"  # 
 DEFAULT_EXTENSION = "default_extension"  # 
@@ -37,6 +49,7 @@ DISABLE_CLOSE = "disable_close"  #
 DISABLE_MINIMIZE = "disable_minimize"  # 
 DISABLED = "disabled"  # 
 DISABLED_BUTTON_COLOR = "disabled_button_color"  # 
+ELAPSEDTIME = "ELAPSEDTIME"  # holds the elapsed time
 ELEMENT_JUSTIFICATION = "element_justification"  # 
 ELEMENT_PADDING = "element_padding"  # 
 ENABLE_CLOSE_ATTEMPTED_EVENT = "enable_close_attempted_event"  # 
@@ -62,6 +75,7 @@ LOCATION = "location"  #
 MARGINS = "margins"  # 
 METADATA = "metadata"  # 
 MODAL = "modal"  # 
+NEXTTIME = "NEXTTIME"  # holds the next scheduled time countdown
 NO_TITLEBAR = "no_titlebar"  # 
 PAD = "pad"  # 
 PROGRESS_BAR_COLOR = "progress_bar_color"  # 
@@ -77,6 +91,8 @@ RIGHT_CLICK_MENU_TEXT_COLOR = "right_click_menu_text_color"  #
 S = "s"  # 
 SIZE = "size"  # 
 TARGET = "target"  # 
+TEXT = "text"  # 
+TEXT_COLOR = "text_color"  # 
 TEXT_JUSTIFICATION = "text_justification"  # 
 TITLE = "title"  # 
 TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  # 
@@ -115,37 +131,37 @@ VISIBLE = "visible"  #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 BUTTONTUP = (
-	(AUTO_SIZE_BUTTON, None),  # 
-	(BIND_RETURN_KEY, False),  # 
-	(BORDER_WIDTH, None),  # 
-	(BUTTON_COLOR, None),  # 
-	(BUTTON_TEXT, ""),  # 
-	(BUTTON_TYPE, 7),  # 
-	(CHANGE_SUBMITS, False),  # 
-	(DEFAULT_EXTENSION, ""),  # 
-	(DISABLED, False),  # 
-	(DISABLED_BUTTON_COLOR, None),  # 
-	(ENABLE_EVENTS, False),  # 
-	(FILE_TYPES, (('ALL FILES', '*.*'),)),  # 
-	(FOCUS, False),  # 
-	(FONT, None),  # 
-	(HIGHLIGHT_COLORS, None),  # 
-	(IMAGE_DATA, None),  # 
-	(IMAGE_FILENAME, None),  # 
-	(IMAGE_SIZE, (None, None)),  # 
-	(IMAGE_SUBSAMPLE, None),  # 
-	(INITIAL_FOLDER, None),  # 
-	(K, None),  # 
-	(KEY, None),  # 
-	(METADATA, None),  # 
-	(PAD, None),  # 
-	(RIGHT_CLICK_MENU, None),  # 
-	(S, (None, None)),  # 
-	(SIZE, (None, None)),  # 
-	(TARGET, (None, None))),  # 
-	(TOOLTIP, None),  # 
-	(USE_TTK_BUTTONS, None),  # 
-	(VISIBLE, True),  # 
+	(AUTO_SIZE_BUTTON, None),  # if True the button size is sized to fit the text
+	(BIND_RETURN_KEY, False),  # If True the return key will cause this button to be pressed
+	(BORDER_WIDTH, None),  # width of border around button in pixels
+	(BUTTON_COLOR, None),  # Color of button. default is from theme or the window. Easy to remember which is which if you say 'ON' between colors. 'red' on 'green'. Normally a tuple, but can be a simplified-button-color-string 'foreground on background'. Can be a single color if want to set only the background.
+	(BUTTON_TEXT, ""),  # str text to display on the button
+	(BUTTON_TYPE, 7),  # You  should NOT be setting this directly. ONLY the shortcut functions set this
+	(CHANGE_SUBMITS, False),  # DO NOT USE. Only listed for backwards compat - Use enable_events instead
+	(DEFAULT_EXTENSION, ""),  # If no extension entered by user, add this to filename (only used in saveas dialogs)
+	(DISABLED, False),  # If True button will be created disabled. If BUTTON_DISABLED_MEANS_IGNORE then the button will be ignored rather than disabled using tkinter
+	(DISABLED_BUTTON_COLOR, None),  # colors to use when button is disabled (text, background). Use None for a color if don't want to change. Only ttk buttons support both text and background colors. tk buttons only support changing text color
+	(ENABLE_EVENTS, False),  # Turns on the element specific events. If this button is a target, should it generate an event when filled in
+	(FILE_TYPES, (('ALL FILES', '*.*'),)),  # the filetypes that will be used to match files. To indicate all files: (('ALL Files', '*.*'),).  Note - NOT SUPPORTED ON MAC
+	(FOCUS, False),  # if True, initial focus will be put on this button
+	(FONT, None),  # specifies the font family, size, etc
+	(HIGHLIGHT_COLORS, None),  # colors to use when button has focus (highlight, background). None will use computed colors. Only used by Linux and only for non-TTK button
+	(IMAGE_DATA, None),  # Raw or Base64 representation of the image to put on button. Choose either filename or data
+	(IMAGE_FILENAME, None),  # image filename if there is a button image. GIFs and PNGs only.
+	(IMAGE_SIZE, (None, None)),  # Size of the image in pixels (width, height)
+	(IMAGE_SUBSAMPLE, None),  # amount to reduce the size of the image. Divides the size by this number. 2=1/2, 3=1/3, 4=1/4, etc
+	(INITIAL_FOLDER, None),  # starting path for folders and files
+	(K, None),  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
+	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
+	(METADATA, None),  # User metadata that can be set to ANYTHING
+	(PAD, None),  # Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
+	(RIGHT_CLICK_MENU, None),  # A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.
+	(S, (None, None)),  # (width, height) of the button in characters wide, rows high
+	(SIZE, (None, None)),  # (width, height) of the button in characters wide, rows high
+	(TARGET, (None, None)),  # str | Tuple[int, int] key or (row,col) target for the button. Note that -1 for column means 1 element to the left of this one. The constant ThisRow is used to indicate the current row. The Button itself is a valid target for some types of button
+	(TOOLTIP, None),  # text, that will appear when mouse hovers over the element
+	(USE_TTK_BUTTONS, None),  # True = use ttk buttons. False = do not use ttk buttons.  None (Default) = use ttk buttons only if on a Mac and not with button images
+	(VISIBLE, True),  # set visibility state of the element
 )
 
 def BUTTONDICT():
@@ -153,65 +169,101 @@ def BUTTONDICT():
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of CHECKBOX structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+CHECKBOXTUP = (
+	(AUTO_SIZE_TEXT, None),  # if True will size the element to match the length of the text
+	(BACKGROUND_COLOR, None),  # color of background
+	(CHANGE_SUBMITS, False),  # DO NOT USE. Only listed for backwards compat - Use enable_events instead
+	(CHECKBOX_COLOR, None),  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
+	(DEFAULT, False),  # Set to True if you want this checkbox initially checked
+	(DISABLED, False),  # set disable state
+	(ENABLE_EVENTS, False),  # Turns on the element specific events. Checkbox events happen when an item changes
+	(FONT, None),  # specifies the font family, size, etc
+	(K, None),  # Used with window.FindElement and with return values to uniquely identify this element
+	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element
+	(METADATA, None),  # User metadata that can be set to ANYTHING
+	(PAD, None),  # Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
+	(S, (None, None)),  # (width, height) width = characters-wide, height = rows-high
+	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
+	(TEXT, ""),  # Text to display next to checkbox
+	(TEXT_COLOR, None),  # color of the text
+	(TOOLTIP, None),  # that will appear when mouse hovers over the element
+	(VISIBLE, True),  # set visibility state of the element
+)
+
+def CHECKBOXDICT():
+	return dict((x, y) for x, y in CHECKBOXTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of WINDOW structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 WINDOWTUP = (
-	(ALPHA_CHANNEL, 1),  # 
-	(AUTO_CLOSE, False),  # 
-	(AUTO_CLOSE_DURATION, 3),  # 
-	(AUTO_SIZE_BUTTONS, None),  # 
-	(AUTO_SIZE_TEXT, None),  # 
-	(BACKGROUND_COLOR, None),  # 
-	(BORDER_DEPTH, None),  # 
-	(BUTTON_COLOR, None),  # 
-	(DEBUGGER_ENABLED, True),  # 
-	(DEFAULT_BUTTON_ELEMENT_SIZE, (None, None)),  # 
-	(DEFAULT_ELEMENT_SIZE, (45, 1)),  # 
-	(DISABLE_CLOSE, False),  # 
-	(DISABLE_MINIMIZE, False),  # 
-	(ELEMENT_JUSTIFICATION, "left"),  # 
-	(ELEMENT_PADDING, None),  # 
-	(ENABLE_CLOSE_ATTEMPTED_EVENT, False),  # 
-	(FINALIZE, False),  # 
-	(FONT, None),  # 
-	(FORCE_TOPLEVEL, False),  # 
-	(GRAB_ANYWHERE, False),  # 
-	(ICON, None),  # 
-	(KEEP_ON_TOP, False),  # 
-	(LAYOUT, None),  # 
-	(LOCATION, (None, None)),  # 
-	(MARGINS, (None, None)),  # 
-	(METADATA, None),  # 
-	(MODAL, False),  # 
-	(NO_TITLEBAR, False),  # 
-	(PROGRESS_BAR_COLOR, (None, None)),  # 
-	(RESIZABLE, False),  # 
-	(RETURN_KEYBOARD_EVENTS, False),  # 
-	(RIGHT_CLICK_MENU, None),  # 
-	(RIGHT_CLICK_MENU_BACKGROUND_COLOR, None),  # 
-	(RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR, None),  # 
-	(RIGHT_CLICK_MENU_FONT, None),  # 
-	(RIGHT_CLICK_MENU_SELECTED_COLORS, (None, None)),  # 
-	(RIGHT_CLICK_MENU_TEAROFF, False),  # 
-	(RIGHT_CLICK_MENU_TEXT_COLOR, None),  # 
-	(SIZE, (None, None)),  # 
-	(TEXT_JUSTIFICATION, None),  # 
-	(TITLE, ""),  # holds the window title
-	(TITLEBAR_BACKGROUND_COLOR, None),  # 
-	(TITLEBAR_FONT, None),  # 
-	(TITLEBAR_ICON, None),  # 
-	(TITLEBAR_TEXT_COLOR, None),  # 
-	(TRANSPARENT_COLOR, None),  # 
-	(TTK_THEME, None),  # 
-	(USE_CUSTOM_TITLEBAR, None),  # 
-	(USE_DEFAULT_FOCUS, True),  # 
-	(USE_TTK_BUTTONS, None),  # 
+	(ALPHA_CHANNEL, 1),  # Sets the opacity of the window. 0 = invisible 1 = completely visible. Values bewteen 0 & 1 will produce semi-transparent windows in SOME environments (The Raspberry Pi always has this value at 1 and cannot change.
+	(AUTO_CLOSE, False),  # If True, the window will automatically close itself
+	(AUTO_CLOSE_DURATION, 3),  # Number of seconds to wait before closing the window
+	(AUTO_SIZE_BUTTONS, None),  # True if Buttons in this Window should be sized to exactly fit the text on this.
+	(AUTO_SIZE_TEXT, None),  # True if Elements in Window should be sized to exactly fir the length of text
+	(BACKGROUND_COLOR, None),  # color of background
+	(BORDER_DEPTH, None),  # Default border depth (width) for all elements in the window
+	(BUTTON_COLOR, None),  # Default button colors for all buttons in the window
+	(DEBUGGER_ENABLED, True),  # Default border depth (width) for all elements in the window
+	(DEFAULT_BUTTON_ELEMENT_SIZE, (None, None)),  # (width, height) size in characters (wide) and rows (high) for all Button elements in this window
+	(DEFAULT_ELEMENT_SIZE, (45, 1)),  # size in characters (wide) and rows (high) for all elements in this window
+	(DISABLE_CLOSE, False),  # If True, the X button in the top right corner of the window will no work.  Use with caution and always give a way out toyour users
+	(DISABLE_MINIMIZE, False),  # if True the user won't be able to minimize window.  Good for taking over entire screen and staying that way.
+	(ELEMENT_JUSTIFICATION, "left"),  # All elements in the Window itself will have this justification 'left', 'right', 'center' are valid values
+	(ELEMENT_PADDING, None),  # Default amount of padding to put around elements in window (left/right, top/bottom) or ((left, right), (top, bottom))
+	(ENABLE_CLOSE_ATTEMPTED_EVENT, False),  # If True then the window will not close when 'X' clicked. Instead an event WINDOW_CLOSE_ATTEMPTED_EVENT if returned from window.read
+	(FINALIZE, False),  # If True then the Finalize method will be called. Use this rather than chaining .Finalize for cleaner code
+	(FONT, None),  # specifies the font family, size, etc
+	(FORCE_TOPLEVEL, False),  # If True will cause this window to skip the normal use of a hidden master window
+	(GRAB_ANYWHERE, False),  # If True can use mouse to click and drag to move the window. Almost every location of the window will work except input fields on some systems
+	(ICON, None),  # Can be either a filename or Base64 value. For Windows if filename, it MUST be ICO format. For Linux, must NOT be ICO
+	(KEEP_ON_TOP, False),  # If True, window will be created on top of all other windows on screen. It can be bumped down if another window created with this parm
+	(LAYOUT, None),  # The layout for the window. Can also be specified in the Layout method
+	(LOCATION, (None, None)),  # (x,y) location, in pixels, to locate the upper left corner of the window on the screen. Default is to center on screen.
+	(MARGINS, (None, None)),  # (left/right, top/bottom) Amount of pixels to leave inside the window's frame around the edges before your elements are shown.
+	(METADATA, None),  # User metadata that can be set to ANYTHING
+	(MODAL, False),  # If True then this window will be the only window a user can interact with until it is closed
+	(NO_TITLEBAR, False),  # If true, no titlebar nor frame will be shown on window. This means you cannot minimize the window and it will not show up on the taskbar
+	(PROGRESS_BAR_COLOR, (None, None)),  # (bar color, background color) Sets the default colors for all progress bars in the window
+	(RESIZABLE, False),  # If True, allows the user to resize the window. Note the not all Elements will change size or location when resizing.
+	(RETURN_KEYBOARD_EVENTS, False),  # if True key presses on the keyboard will be returned as Events from Read calls
+	(RIGHT_CLICK_MENU, None),  # A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.
+	(RIGHT_CLICK_MENU_BACKGROUND_COLOR, None),  # Background color for right click menus
+	(RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR, None),  # Text color for disabled right click menu items
+	(RIGHT_CLICK_MENU_FONT, None),  # Font for right click menus
+	(RIGHT_CLICK_MENU_SELECTED_COLORS, (None, None)),  # Text AND background colors for a selected item. Can be a Tuple OR a color string. simplified-button-color-string 'foreground on background'. Can be a single color if want to set only the background.
+	(RIGHT_CLICK_MENU_TEAROFF, False),  # If True then all right click menus can be torn off
+	(RIGHT_CLICK_MENU_TEXT_COLOR, None),  # Text color for right click menus
+	(SIZE, (None, None)),  # (width, height) size in pixels for this window. Normally the window is autosized to fit contents, not set to an absolute size by the user
+	(TEXT_JUSTIFICATION, None),  # Default text justification for all Text Elements in window
+	(TITLE, ""),  # The title that will be displayed in the Titlebar and on the Taskbar
+	(TITLEBAR_BACKGROUND_COLOR, None),  # If custom titlebar indicated by use_custom_titlebar, then use this as background color
+	(TITLEBAR_FONT, None),  # If custom titlebar indicated by use_custom_titlebar, then use this as title font
+	(TITLEBAR_ICON, None),  # If custom titlebar indicated by use_custom_titlebar, then use this as the icon (file or base64 bytes)
+	(TITLEBAR_TEXT_COLOR, None),  # If custom titlebar indicated by use_custom_titlebar, then use this as text color
+	(TRANSPARENT_COLOR, None),  # Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.
+	(TTK_THEME, None),  # Set the tkinter ttk 'theme' of the window.  Default = DEFAULT_TTK_THEME.  Sets all ttk widgets to this theme as their default
+	(USE_CUSTOM_TITLEBAR, None),  # If True, then a custom titlebar will be used instead of the normal titlebar
+	(USE_DEFAULT_FOCUS, True),  # If True will use the default focus algorithm to set the focus to the 'Correct' element
+	(USE_TTK_BUTTONS, None),  # Affects all buttons in window. True = use ttk buttons. False = do not use ttk buttons.  None = use ttk buttons only if on a Mac
 )
 
 def WINDOWDICT():
 	return dict((x, y) for x, y in WINDOWTUP)
 
 
+#
+#
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * end of managed sections of PSG.py
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+#
 
 
