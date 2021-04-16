@@ -178,7 +178,7 @@ PSG_NAME = f"""newPSG.py"""
 PSGTOP_NAME = f"""{CONFIGDIR}PSGTOP.py"""
 QTSET = [DBLQT, SGLQT, BKQT]  # set of all quote characters
 SCTN0102NAME = f"""{CONFIGDIR}SCTN0102.py"""
-SCTNSNAME = f"""{CONFIGDIR}SCTNS.py"""
+SCTNSNAME = f"""{CONFIGDIR}SCTNS.md"""
 SP_NAME = "newSP.py"
 SPTOP_NAME = f"""{CONFIGDIR}SPTOP.py"""
 TBGLST_NAME = "TBGLST.py"
@@ -264,6 +264,21 @@ FMAXPSG_SCTN0907_SPIN_DICTTUPVALVALADD = "FMAXPSG_SCTN0907_SPIN_DICTTUPVALVALADD
 FMAXPSG_SCTN0907_SPIN_VALUESSTRADD = "FMAXPSG_SCTN0907_SPIN_VALUESSTRADD"  # add a STR to the values list <NAC><SPINNAME><STR>
 FMAXPSG_SCTN0907_SPIN_VALUESVALADD = "FMAXPSG_SCTN0907_SPIN_VALUESVALADD"  # add a VAL to the values list <NAC><SPINNAME><VAL>
 FMAXPSG_SCTN0907_SPINDEF = "FMAXPSG_SCTN0907_SPINDEF"  # define a spin box entry <NAC><SPINNAME>
+FMAXPSG_SCTN0908_CHECKBOXDEF = "FMAXPSG_SCTN0908_CHECKBOXDEF"  # define a checkbox <NAC><CHECKBOXNAME>
+FMAXPSG_SCTN0909_TEXTDEF = "FMAXPSG_SCTN0909_TEXTDEF"  # define a text <NAC><TEXTNAME>
+FMAXPSG_SCTN090A_COLUMNDEF = "FMAXPSG_SCTN090A_COLUMNDEF"  # define a column <NAC><COLUMNNAME>
+FMAXPSG_SCTN090B_LAYOUTDEF = "FMAXPSG_SCTN090B_LAYOUTDEF"  # define a layout <NAC><LAYOUTNAME>
+FMAXPSG_SCTN090C_WINDOWDEF = "FMAXPSG_SCTN090C_WINDOWDEF"  # define a window <NAC><WINDOWNAME>
+FMAXPSG_SCTN090D_FRAMEDEF = "FMAXPSG_SCTN090D_FRAMEDEF"  # define a frame <NAC><FRAMENAME>
+FMAXPSG_SCTN090E_MAINDICTDEF = "FMAXPSG_SCTN090E_MAINDICTDEF"  # define a main dictdict <NAC><MAINNAME>
+FMAXPSG_SCTN090E_MAINDICTDICTDEF = "FMAXPSG_SCTN090E_MAINDICTDICTDEF"  # add a str to the main dictdict
+FMAXPSG_SCTN090E_MAINDICTDICTSTRADD = "FMAXPSG_SCTN090E_MAINDICTDICTSTRADD"  # add a str to the main dictdict
+FMAXPSG_SCTN090E_MAINDICTDICTVALADD = "FMAXPSG_SCTN090E_MAINDICTDICTVALADD"  # add a str to the main dictdict
+FMAXPSG_SCTN090E_MAINDICTSTRADD = "FMAXPSG_SCTN090E_MAINDICTSTRADD"  # add a str to the main dictdict
+FMAXPSG_SCTN090E_MAINDICTVALADD = "FMAXPSG_SCTN090E_MAINDICTVALADD"  # add a str to the main dictdict
+FMPSG_SCTN0907_SPINCMNTDICT = "FMPSG_SCTN0907_SPINCMNTDICT"  # holds the spin element stufs (TUPDICT)f
+FMPSG_SCTN0907_SPINDICT = "FMPSG_SCTN0907_SPINDICT"  # holds the spin element stuffs (TUPDICT)
+FMPSG_SCTN0907_SPINVALUESLISTDICT = "FMPSG_SCTN0907_SPINVALUESLISTDICT"  # holds the spin element stuffs (TUPDICT)
 
 
 FMAXFM_AXLST = [
@@ -326,6 +341,21 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0907_SPIN_VALUESSTRADD,  # add a STR to the values list <NAC><SPINNAME><STR>
 	FMAXPSG_SCTN0907_SPIN_VALUESVALADD,  # add a VAL to the values list <NAC><SPINNAME><VAL>
 	FMAXPSG_SCTN0907_SPINDEF,  # define a spin box entry <NAC><SPINNAME>
+	FMAXPSG_SCTN0908_CHECKBOXDEF,  # define a checkbox <NAC><CHECKBOXNAME>
+	FMAXPSG_SCTN0909_TEXTDEF,  # define a text <NAC><TEXTNAME>
+	FMAXPSG_SCTN090A_COLUMNDEF,  # define a column <NAC><COLUMNNAME>
+	FMAXPSG_SCTN090B_LAYOUTDEF,  # define a layout <NAC><LAYOUTNAME>
+	FMAXPSG_SCTN090C_WINDOWDEF,  # define a window <NAC><WINDOWNAME>
+	FMAXPSG_SCTN090D_FRAMEDEF,  # define a frame <NAC><FRAMENAME>
+	FMAXPSG_SCTN090E_MAINDICTDEF,  # define a main dictdict <NAC><MAINNAME>
+	FMAXPSG_SCTN090E_MAINDICTDICTDEF,  # add a str to the main dictdict
+	FMAXPSG_SCTN090E_MAINDICTDICTSTRADD,  # add a str to the main dictdict
+	FMAXPSG_SCTN090E_MAINDICTDICTVALADD,  # add a str to the main dictdict
+	FMAXPSG_SCTN090E_MAINDICTSTRADD,  # add a str to the main dictdict
+	FMAXPSG_SCTN090E_MAINDICTVALADD,  # add a str to the main dictdict
+	FMPSG_SCTN0907_SPINCMNTDICT,  # holds the spin element stufs (TUPDICT)f
+	FMPSG_SCTN0907_SPINDICT,  # holds the spin element stuffs (TUPDICT)
+	FMPSG_SCTN0907_SPINVALUESLISTDICT,  # holds the spin element stuffs (TUPDICT)
 ]
 
 
@@ -372,12 +402,28 @@ FMPSG_SCTN0904_PLATEQOUTERCMNTDICT = {}  # define the dict to hold everything in
 FMPSG_SCTN0904_PLATEQOUTERDICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0905_TUPDICTCMNTDICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0905_TUPDICTDICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0906_BTNSCMNTDICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN0906_BTNSDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN0908_CHECKBOXCMNTDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN0908_CHECKBOXDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN0909_TEXTCMNTDICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN0909_TEXTDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090A_COLUMNSCMNTDICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090A_COLUMNSDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090B_LAYOUTCMNTDICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090B_LAYOUTDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090C_WINDOWCMNTDICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090C_WINDOWDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090D_FRAMECMNTDICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090D_FRAMEDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090D_MAINCMNTDICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090D_MAINDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090D_MAINDICTDICT = {}  # holds all of the button entriess (TUPDICT)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN104 _LIST_ _DEF_
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-FMFM_SCTN0004_BTNSHOLDABLELIST = []  # buttons holdable list
 
 
 #
@@ -425,4 +471,20 @@ FMFM_SCTN0004_BTNSHOLDABLELIST = []  # buttons holdable list
 		FMPSG_SCTN0904_PLATEQOUTERDICT, \
 		FMPSG_SCTN0905_TUPDICTCMNTDICT, \
 		FMPSG_SCTN0905_TUPDICTDICT, \
-		FMFM_SCTN0004_BTNSHOLDABLELIST
+		FMPSG_SCTN0906_BTNSCMNTDICT, \
+		FMPSG_SCTN0906_BTNSDICT, \
+		FMPSG_SCTN0908_CHECKBOXCMNTDICT, \
+		FMPSG_SCTN0908_CHECKBOXDICT, \
+		FMPSG_SCTN0909_TEXTCMNTDICT, \
+		FMPSG_SCTN0909_TEXTDICT, \
+		FMPSG_SCTN090A_COLUMNSCMNTDICT, \
+		FMPSG_SCTN090A_COLUMNSDICT, \
+		FMPSG_SCTN090B_LAYOUTCMNTDICT, \
+		FMPSG_SCTN090B_LAYOUTDICT, \
+		FMPSG_SCTN090C_WINDOWCMNTDICT, \
+		FMPSG_SCTN090C_WINDOWDICT, \
+		FMPSG_SCTN090D_FRAMECMNTDICT, \
+		FMPSG_SCTN090D_FRAMEDICT, \
+		FMPSG_SCTN090D_MAINCMNTDICT, \
+		FMPSG_SCTN090D_MAINDICT, \
+		FMPSG_SCTN090D_MAINDICTDICT
