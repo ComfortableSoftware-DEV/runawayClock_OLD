@@ -30,7 +30,7 @@ AUTO_CLOSE_DURATION = "auto_close_duration"  #
 AUTO_SIZE_BUTTON = "auto_size_button"  #
 AUTO_SIZE_BUTTONS = "auto_size_buttons"  #
 AUTO_SIZE_TEXT = "auto_size_text"  #
-AVOIDMOUSE = "AVOIDMOUSE"  #
+AVOID_MOUSE = "AVOID_MOUSE"  #
 BACKGROUND_COLOR = "background_color"  #
 BIND_RETURN_KEY = "bind_return_key"  #
 BORDER_DEPTH = "border_depth"  #
@@ -40,6 +40,8 @@ BUTTON_TEXT = "button_text"  #
 BUTTON_TYPE = "button_type"  #
 CHANGE_SUBMITS = "change_submits"  #
 CHECKBOX_COLOR = "checkbox_color"  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
+CIRCLE_COLOR = "circle_color"  #
+CLICK_SUBMITS = "click_submits"  #
 CLOCKTIME = "CLOCKTIME"  # holds the clock value (str HH:MM:SS)
 DEBUGGER_ENABLED = "debugger_enabled"  #
 DEFAULT = "default"  #
@@ -52,14 +54,13 @@ DISABLE_MINIMIZE = "disable_minimize"  #
 DISABLED = "disabled"  #
 DISABLED_BUTTON_COLOR = "disabled_button_color"  #
 DISMISSED = "DISMISSED"  # alarm dismissed bool
-ELAPSEDTIME = "ELAPSEDTIME"  # holds the elapsed time
 ELEMENT_JUSTIFICATION = "element_justification"  #
 ELEMENT_PADDING = "element_padding"  #
 ENABLE_CLOSE_ATTEMPTED_EVENT = "enable_close_attempted_event"  #
 ENABLE_EVENTS = "enable_events"  #
 ENABLED = "enabled"  #
-EVENTENTRIES = "EVENTENTRIES"  #
-EVENTMODE = "EVENTMODE"  #
+EVENT_ENTRIES = "EVENT_ENTRIES"  #
+EVENT_MODE = "EVENT_MODE"  #
 EXPAND_X = "expand_x"  #
 EXPAND_Y = "expand_y"  #
 FILE_TYPES = "file_types"  #
@@ -69,21 +70,23 @@ FONT = "font"  #
 FORCE_TOPLEVEL = "force_toplevel"  #
 GRAB = "grab"  #
 GRAB_ANYWHERE = "grab_anywhere"  #
+GROUP_ID = "group_id"  #
 HIGHLIGHT_COLORS = "highlight_colors"  #
 ICON = "icon"  #
 IMAGE_DATA = "image_data"  #
 IMAGE_FILENAME = "image_filename"  #
 IMAGE_SIZE = "image_size"  #
 IMAGE_SUBSAMPLE = "image_subsample"  #
-INDEXNEXTEVENT = "INDEXNEXTEVENT"  #
+INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  #
 INITIAL_FOLDER = "initial_folder"  #
+INITIAL_VALUE = "INITIAL_VALUE"  #
 JUSTIFICATION = "justification"  #
 K = "k"  #
 KEEP_ON_TOP = "keep_on_top"  #
 KEY = "key"  #
 LAYOUT = "layout"  #
 LOCATION = "location"  #
-MAINFONT = "Source Code Pro"  # set the main font
+MAIN_FONT = "Source Code Pro"  # set the main font
 MARGINS = "margins"  #
 METADATA = "metadata"  #
 MODAL = "modal"  #
@@ -91,12 +94,12 @@ MODE_ALARM = "MODE_ALARM"  #
 MODE_ALARMREMIND = "MODE_ALARMREMIND"  #
 MODE_INTERVAL = "MODE_INTERVAL"  #
 NAME = "NAME"  #
-NEXTTIME = "NEXTTIME"  # holds the next scheduled time countdown
 NO_TITLEBAR = "no_titlebar"  #
 PAD = "pad"  #
 PREDISMISSABLE = "PREDISMISSABLE"  #
 PROGRESS_BAR_COLOR = "progress_bar_color"  #
 READONLY = "readonly"  #
+RELIEF = "relief"  #
 RESIZABLE = "resizable"  #
 RETURN_KEYBOARD_EVENTS = "return_keyboard_events"  #
 RIGHT_CLICK_MENU = "right_click_menu"  #
@@ -109,6 +112,7 @@ RIGHT_CLICK_MENU_TEXT_COLOR = "right_click_menu_text_color"  #
 RUNNING = "RUNNING"  # is this interval running or not
 S = "s"  #
 SCROLLABLE = "scrollable"  # can this column be scrolled bool
+SET_TO_INDEX = "set_to_index"  # change selection to a particular choice starting with index = 0
 SIZE = "size"  #
 SNOOZABLE = "SNOOZABLE"  #
 SNOOZED = "SNOOZED"  # snoozed bool
@@ -116,12 +120,12 @@ TARGET = "target"  #
 TEXT = "text"  #
 TEXT_COLOR = "text_color"  #
 TEXT_JUSTIFICATION = "text_justification"  #
-TIMEALARM = "TIMEALARM"  #
-TIMEELAPSED = "TIMEELAPSED"  # 24 hour centric elapsed time running, can be reset, may go to 99h
-TIMEINTERVAL = "TIMEINTERVAL"  #
-TIMEOFNEXTEVENT = "TIMEOFNEXTEVENT"  # what time is the next alarm, == TIMEALARM is tomorrow
-TIMEREMIND = "TIMEREMIND"  #
-TIMETONEXTEVENT = "TIMETONEXTEVENT"  # down counter to next event on this window/alarm/interval/reminder
+TIME_ALARM = "TIME_ALARM"  #
+TIME_ELAPSED = "TIME_ELAPSED"  # 24 hour centric elapsed time running, can be reset, may go to 99h
+TIME_INTERVAL = "TIME_INTERVAL"  #
+TIME_OF_NEXT_EVENT = "TIME_OF_NEXT_EVENT"  # what time is the next alarm, == TIME_ALARM is tomorrow
+TIME_REMIND = "TIME_REMIND"  #
+TIME_TO_NEXT_EVENT = "TIME_TO_NEXT_EVENT"  # down counter to next event on this window/alarm/interval/reminder
 TITLE = "title"  #
 TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  #
 TITLEBAR_FONT = "titlebar_font"  #
@@ -130,12 +134,13 @@ TITLEBAR_TEXT_COLOR = "titlebar_text_color"  #
 TOOLTIP = "tooltip"  #
 TRANSPARENT = "TRANSPARENT"  #
 TRANSPARENT_COLOR = "transparent_color"  #
-TRANSPARENTUNDERMOUSE = "TRANSPARENTUNDERMOUSE"  # is the clock transparent under mouse (ineffective if mouse is avoided)
+TRANSPARENT_UNDER_MOUSE = "TRANSPARENT_UNDER_MOUSE"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 TTK_THEME = "ttk_theme"  #
 USE_CUSTOM_TITLEBAR = "use_custom_titlebar"  #
 USE_DEFAULT_FOCUS = "use_default_focus"  #
 USE_TTK_BUTTONS = "use_ttk_buttons"  #
-VALUES = "values"  #
+VALUE = "value"  # the value of the element
+VALUES = "values"  # list of values
 VERTICAL_ALIGNMENT = "vertical_alignment"  #
 VERTICAL_SCROLL_ONLY = "verticale_scroll_only"  #
 VISIBLE = "visible"  #
@@ -160,71 +165,71 @@ VISIBLE = "visible"  #
 # * SCTN0905 tupdict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTYALARM structures
+# * start of EMPTY_ALARM structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-EMPTYALARMTUP = (
+EMPTY_ALARMTUP = (
 	(DISMISSED, False),  # bool is this event dismissed already
 	(ENABLED, True),  # enabled state of this entry
-	(EVENTMODE, MODE_ALARM),  # set the mode to MODE_ALARM by default of course
+	(EVENT_MODE, MODE_ALARM),  # set the mode to MODE_ALARM by default of course
 	(NAME, ""),  # name of this entry
 	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
 	(SNOOZABLE, False),  # enabled state of this entry
 	(SNOOZED, True),  # enabled state of this entry
-	(TIMEALARM, "00:00:00"),  # time this alarm is set for
-	(TIMEOFNEXTEVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIMETONEXTEVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
+	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_TO_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
 )
 
-def EMPTYALARMDICT():
-	return dict((x, y) for x, y in EMPTYALARMTUP)
+def EMPTY_ALARMDICT():
+	return dict((x, y) for x, y in EMPTY_ALARMTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTYALARMREMIND structures
+# * start of EMPTY_ALARM_REMIND structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-EMPTYALARMREMINDTUP = (
+EMPTY_ALARM_REMINDTUP = (
 	(DISMISSED, False),  # bool is this event dismissed already
 	(ENABLED, True),  # enabled state of this entry
-	(EVENTMODE, MODE_ALARMREMIND),  # set the mode to MODE_ALARM by default of course
+	(EVENT_MODE, MODE_ALARMREMIND),  # set the mode to MODE_ALARM by default of course
 	(NAME, ""),  # name of this entry
 	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
 	(SNOOZABLE, False),  # enabled state of this entry
 	(SNOOZED, True),  # enabled state of this entry
-	(TIMEALARM, "00:00:00"),  # time this alarm is set for
-	(TIMEOFNEXTEVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIMEREMIND, "00:00:00"),  # time this alarm is set for
-	(TIMETONEXTEVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
+	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_REMIND, "00:00:00"),  # time this alarm is set for
+	(TIME_TO_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
 )
 
-def EMPTYALARMREMINDDICT():
-	return dict((x, y) for x, y in EMPTYALARMREMINDTUP)
+def EMPTY_ALARM_REMINDDICT():
+	return dict((x, y) for x, y in EMPTY_ALARM_REMINDTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTYINTERVAL structures
+# * start of EMPTY_INTERVAL structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-EMPTYINTERVALTUP = (
+EMPTY_INTERVALTUP = (
 	(ENABLED, True),  # enabled state of this entry
-	(EVENTMODE, MODE_INTERVAL),  # set the mode to MODE_ALARM by default of course
+	(EVENT_MODE, MODE_INTERVAL),  # set the mode to MODE_ALARM by default of course
 	(NAME, ""),  # name of this entry
 	(RUNNING, True),  # running state of this entry
-	(TIMEINTERVAL, "00:00:00"),  # time this alarm is set for
-	(TIMEOFNEXTEVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIMETONEXTEVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_INTERVAL, "00:00:00"),  # time this alarm is set for
+	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_TO_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
 )
 
-def EMPTYINTERVALDICT():
-	return dict((x, y) for x, y in EMPTYINTERVALTUP)
+def EMPTY_INTERVALDICT():
+	return dict((x, y) for x, y in EMPTY_INTERVALTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of FULLBUTTON structures
+# * start of FULL_BUTTON structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-FULLBUTTONTUP = (
+FULL_BUTTONTUP = (
 	(AUTO_SIZE_BUTTON, None),  # if True the button size is sized to fit the text
 	(BIND_RETURN_KEY, False),  # If True the return key will cause this button to be pressed
 	(BORDER_WIDTH, None),  # width of border around button in pixels
@@ -233,7 +238,7 @@ FULLBUTTONTUP = (
 	(BUTTON_TYPE, 7),  # You  should NOT be setting this directly. ONLY the shortcut functions set this
 	(CHANGE_SUBMITS, False),  # DO NOT USE. Only listed for backwards compat - Use enable_events instead
 	(DEFAULT_EXTENSION, ""),  # If no extension entered by user, add this to filename (only used in saveas dialogs)
-	(DISABLED, False),  # If True button will be created disabled. If FULLBUTTON_DISABLED_MEANS_IGNORE then the button will be ignored rather than disabled using tkinter
+	(DISABLED, False),  # If True button will be created disabled. If FULL_BUTTON_DISABLED_MEANS_IGNORE then the button will be ignored rather than disabled using tkinter
 	(DISABLED_BUTTON_COLOR, None),  # colors to use when button is disabled (text, background). Use None for a color if don't want to change. Only ttk buttons support both text and background colors. tk buttons only support changing text color
 	(ENABLE_EVENTS, False),  # Turns on the element specific events. If this button is a target, should it generate an event when filled in
 	(FILE_TYPES, (('ALL FILES', '*.*'),)),  # the filetypes that will be used to match files. To indicate all files: (('ALL Files', '*.*'),).  Note - NOT SUPPORTED ON MAC
@@ -258,15 +263,15 @@ FULLBUTTONTUP = (
 	(VISIBLE, True),  # set visibility state of the element
 )
 
-def FULLBUTTONDICT():
-	return dict((x, y) for x, y in FULLBUTTONTUP)
+def FULL_BUTTONDICT():
+	return dict((x, y) for x, y in FULL_BUTTONTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of FULLCHECKBOX structures
+# * start of FULL_CHECKBOX structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-FULLCHECKBOXTUP = (
+FULL_CHECKBOXTUP = (
 	(AUTO_SIZE_TEXT, None),  # if True will size the element to match the length of the text
 	(BACKGROUND_COLOR, None),  # color of background
 	(CHANGE_SUBMITS, False),  # DO NOT USE. Only listed for backwards compat - Use enable_events instead
@@ -287,15 +292,15 @@ FULLCHECKBOXTUP = (
 	(VISIBLE, True),  # set visibility state of the element
 )
 
-def FULLCHECKBOXDICT():
-	return dict((x, y) for x, y in FULLCHECKBOXTUP)
+def FULL_CHECKBOXDICT():
+	return dict((x, y) for x, y in FULL_CHECKBOXTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of FULLCOLUMN structures
+# * start of FULL_COLUMN structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-FULLCOLUMNTUP = (
+FULL_COLUMNTUP = (
 	(BACKGROUND_COLOR, None),  # color of background of entire Column
 	(ELEMENT_JUSTIFICATION, None),  # All elements inside the Column will have this justification 'left', 'right', 'center' are valid values
 	(EXPAND_X, None),  # If True the column will automatically expand in the X direction to fill available space
@@ -316,44 +321,134 @@ FULLCOLUMNTUP = (
 	(VISIBLE, True),  # set visibility state of the element
 )
 
-def FULLCOLUMNDICT():
-	return dict((x, y) for x, y in FULLCOLUMNTUP)
+def FULL_COLUMNDICT():
+	return dict((x, y) for x, y in FULL_COLUMNTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of FULLCOMBO structures
+# * start of FULL_COMBO structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-FULLCOMBOTUP = (
-	(AUTO_SIZE_TEXT, None),  #
-	(BACKGROUND_COLOR, None),  #
-	(CHANGE_SUBMITS, None),  #
-	(DEFAULT_VALUE, None),  #
-	(DISABLED, None),  #
-	(ENABLE_EVENTS, None),  #
-	(FONT, None),  #
-	(K, None),  #
-	(KEY, None),  #
-	(METADATA, None),  #
-	(PAD, None),  #
-	(READONLY, None),  #
-	(S, None),  #
-	(SIZE, None),  #
-	(TEXT_COLOR, None),  #
-	(TOOLTIP, None),  #
-	(VALUES, []),  #
-	(VISIBLE, None),  #
+FULL_COMBOTUP = (
+	(AUTO_SIZE_TEXT, None),  # True if element should be the same size as the contents
+	(BACKGROUND_COLOR, None),  # color of background
+	(CHANGE_SUBMITS, False),  # DEPRICATED DO NOT USE. Use `enable_events` instead
+	(DEFAULT_VALUE, None),  # Choice to be displayed as initial value. Must match one of values variable contents
+	(DISABLED, False),  # set disable state for element
+	(ENABLE_EVENTS, False),  #
+	(FONT, None),  # specifies the font family, size, etc
+	(K, None),  # Used with window.FindElement and with return values to uniquely identify this element
+	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element
+	(METADATA, None),  # User metadata that can be set to ANYTHING
+	(PAD, None),  # Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
+	(READONLY, False),  # make element readonly (user can't change). True means user cannot change
+	(S, (None, None)),  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
+	(SIZE, (None, None)),  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
+	(TEXT_COLOR, None),  # color of the text
+	(TOOLTIP, None),  # text that will appear when mouse hovers over this element
+	(VALUES, []),  # values to choose. While displayed as text, the items returned are what the caller supplied, not text
+	(VISIBLE, True),  # set visibility state of the element
 )
 
-def FULLCOMBODICT():
-	return dict((x, y) for x, y in FULLCOMBOTUP)
+def FULL_COMBODICT():
+	return dict((x, y) for x, y in FULL_COMBOTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of FULLWINDOW structures
+# * start of FULL_RADIO structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-FULLWINDOWTUP = (
+FULL_RADIOTUP = (
+	(AUTO_SIZE_TEXT, None,),  #
+	(BACKGROUND_COLOR, None,),  #
+	(CHANGE_SUBMITS, False,),  #
+	(CIRCLE_COLOR, None,),  #
+	(DEFAULT, False,),  #
+	(DISABLED, False,),  #
+	(ENABLE_EVENTS, False,),  #
+	(FONT, None,),  #
+	(GROUP_ID, ""),  # Groups together multiple Radio Buttons. Any type works
+	(K, None,),  #
+	(KEY, None,),  #
+	(METADATA, None),  #
+	(PAD, None,),  #
+	(S, (None, None),),  #
+	(SIZE, (None, None),),  #
+	(TEXT, ""),  #
+	(TEXT_COLOR, None,),  #
+	(TOOLTIP, None,),  #
+	(VISIBLE, True,),  #
+)
+
+def FULL_RADIODICT():
+	return dict((x, y) for x, y in FULL_RADIOTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of FULL_SPIN structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+FULL_SPINTUP = (
+	(AUTO_SIZE_TEXT, None),  # if True will size the element to match the length of the text
+	(BACKGROUND_COLOR, None),  # color of background
+	(CHANGE_SUBMITS, False),  # DO NOT USE. Only listed for backwards compat - Use enable_events instead
+	(DISABLED, False),  # set disable state
+	(ENABLE_EVENTS, False),  # Turns on the element specific events. Spin events happen when an item changes
+	(FONT, None),  # specifies the font family, size, etc
+	(INITIAL_VALUE, None),  # Initial item to show in window. Choose from list of values supplied
+	(K, None),  # Used with window.FindElement and with return values to uniquely identify this element
+	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element
+	(METADATA, None),  # User metadata that can be set to ANYTHING
+	(PAD, None),  # Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
+	(READONLY, False),  # readonly bool
+	(S, (None, None)),  # (width, height) width = characters-wide, height = rows-high
+	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
+	(TEXT_COLOR, None),  # color of the text
+	(TOOLTIP, None),  # text, that will appear when mouse hovers over the element
+	(VALUES, []),  # List of valid values
+	(VISIBLE, True),  # set visibility state of the element
+)
+
+def FULL_SPINDICT():
+	return dict((x, y) for x, y in FULL_SPINTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of FULL_TEXT structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+FULL_TEXTTUP = (
+	(AUTO_SIZE_TEXT, None),  # if True size of the Text Element will be sized to fit the string provided in 'text' parm
+	(BACKGROUND_COLOR, None),  # color of background
+	(BORDER_WIDTH, None),  # number of pixels for the border (if using a relief)
+	(CLICK_SUBMITS, False),  # DO NOT USE. Only listed for backwards compat - Use enable_events instead
+	(ENABLE_EVENTS, False),  # Turns on the element specific events. Text events happen when the text is clicked
+	(FONT, None),  # specifies the font family, size, etc
+	(GRAB, None),  # If True can grab this element and move the window around. Default is False
+	(JUSTIFICATION, None),  # how string should be aligned within space provided by size. Valid choices = `left`, `right`, `center`
+	(K, None),  # Same as the Key. You can use either k or key. Which ever is set will be used.
+	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
+	(METADATA, None),  # User metadata that can be set to ANYTHING
+	(PAD, None),  # Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
+	(RELIEF, None),  # relief style around the text. Values are same as progress meter relief values. Should be a constant that is defined at starting with 'RELIEF_' - `RELIEF_RAISED, RELIEF_SUNKEN, RELIEF_FLAT, RELIEF_RIDGE, RELIEF_GROOVE, RELIEF_SOLID`
+	(RIGHT_CLICK_MENU, None),  # A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.
+	(S, (None, None)),  # Same as size parameter.  It's an alias. If EITHER of them are set, then the one that's set will be used. If BOTH are set, size will be used
+	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
+	(TEXT, ),  # The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
+	(TEXT_COLOR, None),  # color of the text
+	(TOOLTIP, None),  # text, that will appear when mouse hovers over the element
+	(VISIBLE, True),  # set visibility state of the element
+)
+
+def FULL_TEXTDICT():
+	return dict((x, y) for x, y in FULL_TEXTTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of FULL_WINDOW structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+FULL_WINDOWTUP = (
 	(ALPHA_CHANNEL, 1),  # Sets the opacity of the window. 0 = invisible 1 = completely visible. Values bewteen 0 & 1 will produce semi-transparent windows in SOME environments (The Raspberry Pi always has this value at 1 and cannot change.
 	(AUTO_CLOSE, False),  # If True, the window will automatically close itself
 	(AUTO_CLOSE_DURATION, 3),  # Number of seconds to wait before closing the window
@@ -369,7 +464,7 @@ FULLWINDOWTUP = (
 	(DISABLE_MINIMIZE, False),  # if True the user won't be able to minimize window.  Good for taking over entire screen and staying that way.
 	(ELEMENT_JUSTIFICATION, "left"),  # All elements in the Window itself will have this justification 'left', 'right', 'center' are valid values
 	(ELEMENT_PADDING, None),  # Default amount of padding to put around elements in window (left/right, top/bottom) or ((left, right), (top, bottom))
-	(ENABLE_CLOSE_ATTEMPTED_EVENT, False),  # If True then the window will not close when 'X' clicked. Instead an event FULLWINDOW_CLOSE_ATTEMPTED_EVENT if returned from window.read
+	(ENABLE_CLOSE_ATTEMPTED_EVENT, False),  # If True then the window will not close when 'X' clicked. Instead an event FULL_WINDOW_CLOSE_ATTEMPTED_EVENT if returned from window.read
 	(FINALIZE, False),  # If True then the Finalize method will be called. Use this rather than chaining .Finalize for cleaner code
 	(FONT, None),  # specifies the font family, size, etc
 	(FORCE_TOPLEVEL, False),  # If True will cause this window to skip the normal use of a hidden master window
@@ -406,15 +501,15 @@ FULLWINDOWTUP = (
 	(USE_TTK_BUTTONS, None),  # Affects all buttons in window. True = use ttk buttons. False = do not use ttk buttons.  None = use ttk buttons only if on a Mac
 )
 
-def FULLWINDOWDICT():
-	return dict((x, y) for x, y in FULLWINDOWTUP)
+def FULL_WINDOWDICT():
+	return dict((x, y) for x, y in FULL_WINDOWTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of NORMALBUTTON structures
+# * start of NORMAL_BUTTON structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-NORMALBUTTONTUP = (
+NORMAL_BUTTONTUP = (
 	(BUTTON_COLOR, None),  # Color of button. default is from theme or the window. Easy to remember which is which if you say 'ON' between colors. 'red' on 'green'. Normally a tuple, but can be a simplified-button-color-string 'foreground on background'. Can be a single color if want to set only the background.
 	(BUTTON_TEXT, ""),  # str text to display on the button
 	(FOCUS, False),  # if True, initial focus will be put on this button
@@ -424,15 +519,15 @@ NORMALBUTTONTUP = (
 	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
 )
 
-def NORMALBUTTONDICT():
-	return dict((x, y) for x, y in NORMALBUTTONTUP)
+def NORMAL_BUTTONDICT():
+	return dict((x, y) for x, y in NORMAL_BUTTONTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of NORMALCHECKBOX structures
+# * start of NORMAL_CHECKBOX structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-NORMALCHECKBOXTUP = (
+NORMAL_CHECKBOXTUP = (
 	(BACKGROUND_COLOR, None),  # color of background
 	(CHECKBOX_COLOR, None),  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
 	(DEFAULT, False),  # Set to True if you want this checkbox initially checked
@@ -442,15 +537,92 @@ NORMALCHECKBOXTUP = (
 	(TEXT_COLOR, None),  # color of the text
 )
 
-def NORMALCHECKBOXDICT():
-	return dict((x, y) for x, y in NORMALCHECKBOXTUP)
+def NORMAL_CHECKBOXDICT():
+	return dict((x, y) for x, y in NORMAL_CHECKBOXTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of NORMALWINDOW structures
+# * start of NORMAL_COMBO structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-NORMALWINDOWTUP = (
+NORMAL_COMBOTUP = (
+	(BACKGROUND_COLOR, None),  # color of background
+	(DEFAULT_VALUE, None),  # Choice to be displayed as initial value. Must match one of values variable contents
+	(FONT, None),  # specifies the font family, size, etc
+	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element
+	(SIZE, None),  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
+	(TEXT_COLOR, None),  # color of the text
+	(VALUES, []),  # values to choose. While displayed as text, the items returned are what the caller supplied, not text
+)
+
+def NORMAL_COMBODICT():
+	return dict((x, y) for x, y in NORMAL_COMBOTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of NORMAL_RADIO structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+NORMAL_RADIOTUP = (
+	(BACKGROUND_COLOR, None,),  #
+	(CIRCLE_COLOR, None,),  #
+	(DEFAULT, False,),  #
+	(FONT, None,),  #
+	(GROUP_ID, ""),  # Groups together multiple Radio Buttons. Any type works
+	(KEY, None,),  #
+	(SIZE, (None, None),),  #
+	(TEXT, ""),  #
+	(TEXT_COLOR, None,),  #
+)
+
+def NORMAL_RADIODICT():
+	return dict((x, y) for x, y in NORMAL_RADIOTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of NORMAL_SPIN structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+NORMAL_SPINTUP = (
+	(BACKGROUND_COLOR, None),  # color of background
+	(FONT, None),  # specifies the font family, size, etc
+	(INITIAL_VALUE, None),  # Initial item to show in window. Choose from list of values supplied
+	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element
+	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
+	(TEXT_COLOR, None),  # color of the text
+	(VALUES, []),  # List of valid values
+)
+
+def NORMAL_SPINDICT():
+	return dict((x, y) for x, y in NORMAL_SPINTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of NORMAL_TEXT structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+NORMAL_TEXTTUP = (
+	(BACKGROUND_COLOR, None),  # color of background
+	(BORDER_WIDTH, None),  # number of pixels for the border (if using a relief)
+	(FONT, None),  # specifies the font family, size, etc
+	(GRAB, None),  # If True can grab this element and move the window around. Default is False
+	(JUSTIFICATION, None),  # how string should be aligned within space provided by size. Valid choices = `left`, `right`, `center`
+	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
+	(RELIEF, None),  # relief style around the text. Values are same as progress meter relief values. Should be a constant that is defined at starting with 'RELIEF_' - `RELIEF_RAISED, RELIEF_SUNKEN, RELIEF_FLAT, RELIEF_RIDGE, RELIEF_GROOVE, RELIEF_SOLID`
+	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
+	(TEXT, ),  # The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
+	(TEXT_COLOR, None),  # color of the text
+)
+
+def NORMAL_TEXTDICT():
+	return dict((x, y) for x, y in NORMAL_TEXTTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of NORMAL_WINDOW structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+NORMAL_WINDOWTUP = (
 	(BACKGROUND_COLOR, None),  # color of background
 	(FINALIZE, False),  # If True then the Finalize method will be called. Use this rather than chaining .Finalize for cleaner code
 	(FONT, None),  # specifies the font family, size, etc
@@ -469,8 +641,27 @@ NORMALWINDOWTUP = (
 	(TRANSPARENT_COLOR, None),  # Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.
 )
 
-def NORMALWINDOWDICT():
-	return dict((x, y) for x, y in NORMALWINDOWTUP)
+def NORMAL_WINDOWDICT():
+	return dict((x, y) for x, y in NORMAL_WINDOWTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of UPDATE_COMBO structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+UPDATE_COMBOTUP = (
+	(DISABLED, None),  # set disable state for element
+	(FONT, None),  # specifies the font family, size, etc
+	(READONLY, None),  # make element readonly (user can't change). True means user cannot change
+	(SET_TO_INDEX, None),  #
+	(SIZE, None),  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
+	(VALUE, None),  # change which value is current selected based on new list of previous list of choices
+	(VALUES, None),  # values to choose. While displayed as text, the items returned are what the caller supplied, not text
+	(VISIBLE, None),  # set visibility state of the element
+)
+
+def UPDATE_COMBODICT():
+	return dict((x, y) for x, y in UPDATE_COMBOTUP)
 
 
 #
@@ -556,13 +747,13 @@ type of signal audio, visual, both
 audio filename
 
 EMPTYMAIN = {
+	AVOIDMOUSE: True,
 	CLOCKTIME: "00:00:00",
 	ELAPSEDTIME: "00:00:00",
+	INDEXNEXTEVENT: 0,
 	TIMENEXTEVENT: "00:00:00",
 	TIMETONEXTEVENT: "00:00:00"
-	INDEXNEXTEVENT: 0,
 	TRANSPARENT: True,
-	AVOIDMOUSE: True,
 	EVENTENTRIES: {
 		0: {
 			ENABLED: True,
@@ -656,24 +847,24 @@ update(self, visible=None)
 
 
 Combo(
-	values,
-	default_value=None,
-	size=(None, None),
-	s=(None, None),
 	auto_size_text=None,
 	background_color=None,
-	text_color=None,
 	change_submits=False,
-	enable_events=False,
+	default_value=None,
 	disabled=False,
-	key=None,
-	k=None,
-	pad=None,
-	tooltip=None,
-	readonly=False,
+	enable_events=False,
 	font=None,
-	visible=True,
+	k=None,
+	key=None,
 	metadata=None)
+	pad=None,
+	readonly=False,
+	s=(None, None),
+	size=(None, None),
+	text_color=None,
+	tooltip=None,
+	values,
+	visible=True,
 
 Update = update(
 	self,
@@ -746,8 +937,35 @@ update(self, value=None, values=None, set_to_index=None, disabled=None, readonly
     :type size: (int, int)
 
 
-Radio(text, group_id, default=False, disabled=False, size=(None, None), s=(None, None), auto_size_text=None, background_color=None, text_color=None, circle_color=None, font=None, key=None, k=None, pad=None, tooltip=None, change_submits=False, enable_events=False, visible=True, metadata=None)
-Update = update(self, value=None, text=None, background_color=None, text_color=None, circle_color=None, disabled=None, visible=None)
+Radio(
+	text,
+	group_id,
+	default=False,
+	disabled=False,
+	size=(None, None),
+	s=(None, None),
+	auto_size_text=None,
+	background_color=None,
+	text_color=None,
+	circle_color=None,
+	font=None,
+	key=None,
+	k=None,
+	pad=None,
+	tooltip=None,
+	change_submits=False,
+	enable_events=False,
+	visible=True,
+	metadata=None)
+Update = update(
+	self,
+	value=None,
+	text=None,
+	background_color=None,
+	text_color=None,
+	circle_color=None,
+	disabled=None,
+	visible=None)
 __init__(self, text, group_id, default=False, disabled=False, size=(None, None), s=(None, None), auto_size_text=None, background_color=None, text_color=None, circle_color=None, font=None, key=None, k=None, pad=None, tooltip=None, change_submits=False, enable_events=False, visible=True, metadata=None)
     :param text: Text to display next to button
     :type text: (str)
@@ -804,7 +1022,25 @@ update(self, value=None, text=None, background_color=None, text_color=None, circ
     :param visible: control visibility of element
     :type visible: (bool)
 
-Spin(values, initial_value=None, disabled=False, change_submits=False, enable_events=False, readonly=False, size=(None, None), s=(None, None), auto_size_text=None, font=None, background_color=None, text_color=None, key=None, k=None, pad=None, tooltip=None, visible=True, metadata=None)
+Spin(
+	values,
+	initial_value=None,
+	disabled=False,
+	change_submits=False,
+	enable_events=False,
+	readonly=False,
+	size=(None, None),
+	s=(None, None),
+	auto_size_text=None,
+	font=None,
+	background_color=None,
+	text_color=None,
+	key=None,
+	k=None,
+	pad=None,
+	tooltip=None,
+	visible=True,
+	metadata=None)
 __init__(self, values, initial_value=None, disabled=False, change_submits=False, enable_events=False, readonly=False, size=(None, None), s=(None, None), auto_size_text=None, font=None, background_color=None, text_color=None, key=None, k=None, pad=None, tooltip=None, visible=True, metadata=None)
     :param values: List of valid values
     :type values: Tuple[Any] or List[Any]
@@ -846,7 +1082,6 @@ get(self)
     Return the current chosen value showing in spinbox.
     This value will be the same as what was provided as list of choices.  If list items are ints, then the
     item returned will be an int (not a string)
-
     :return: The currently visible entry
     :rtype: (Any)
 update(self, value=None, values=None, disabled=None, readonly=None, visible=None)
@@ -866,7 +1101,27 @@ update(self, value=None, values=None, disabled=None, readonly=None, visible=None
     :type visible: (bool)
 
 
-    	Text(text='', size=(None, None), s=(None, None), auto_size_text=None, click_submits=False, enable_events=False, relief=None, font=None, text_color=None, background_color=None, border_width=None, justification=None, pad=None, key=None, k=None, right_click_menu=None, grab=None, tooltip=None, visible=True, metadata=None)
+Text(
+	text='',
+	size=(None, None),
+	s=(None, None),
+	auto_size_text=None,
+	click_submits=False,
+	enable_events=False,
+	relief=None,
+	font=None,
+	text_color=None,
+	background_color=None,
+	border_width=None,
+	justification=None,
+	pad=None,
+	key=None,
+	k=None,
+	right_click_menu=None,
+	grab=None,
+	tooltip=None,
+	visible=True,
+	metadata=None)
 __init__(self, text='', size=(None, None), s=(None, None), auto_size_text=None, click_submits=False, enable_events=False, relief=None, font=None, text_color=None, background_color=None, border_width=None, justification=None, pad=None, key=None, k=None, right_click_menu=None, grab=None, tooltip=None, visible=True, metadata=None)
     :param text: The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
     :type text: Any
