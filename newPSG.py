@@ -46,6 +46,7 @@ DEFAULT = "default"  #
 DEFAULT_BUTTON_ELEMENT_SIZE = "default_button_element_size"  # 
 DEFAULT_ELEMENT_SIZE = "default_element_size"  # 
 DEFAULT_EXTENSION = "default_extension"  # 
+DEFAULT_VALUE = "default_value"  # 
 DISABLE_CLOSE = "disable_close"  # 
 DISABLE_MINIMIZE = "disable_minimize"  # 
 DISABLED = "disabled"  # 
@@ -82,6 +83,7 @@ KEEP_ON_TOP = "keep_on_top"  #
 KEY = "key"  # 
 LAYOUT = "layout"  # 
 LOCATION = "location"  # 
+MAINFONT = "Source Code Pro"  # set the main font
 MARGINS = "margins"  # 
 METADATA = "metadata"  # 
 MODAL = "modal"  # 
@@ -94,6 +96,7 @@ NO_TITLEBAR = "no_titlebar"  #
 PAD = "pad"  # 
 PREDISMISSABLE = "PREDISMISSABLE"  # 
 PROGRESS_BAR_COLOR = "progress_bar_color"  # 
+READONLY = "readonly"  # 
 RESIZABLE = "resizable"  # 
 RETURN_KEYBOARD_EVENTS = "return_keyboard_events"  # 
 RIGHT_CLICK_MENU = "right_click_menu"  # 
@@ -132,6 +135,7 @@ TTK_THEME = "ttk_theme"  #
 USE_CUSTOM_TITLEBAR = "use_custom_titlebar"  # 
 USE_DEFAULT_FOCUS = "use_default_focus"  # 
 USE_TTK_BUTTONS = "use_ttk_buttons"  # 
+VALUES = "values"  # 
 VERTICAL_ALIGNMENT = "vertical_alignment"  # 
 VERTICAL_SCROLL_ONLY = "verticale_scroll_only"  # 
 VISIBLE = "visible"  # 
@@ -214,23 +218,6 @@ EMPTYINTERVALTUP = (
 
 def EMPTYINTERVALDICT():
 	return dict((x, y) for x, y in EMPTYINTERVALTUP)
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTYMAIN structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTYMAINTUP = (
-	(AVOIDMOUSE, True),  # will the clock avoid the mouse or not bool
-	(TIMECLOCK, "00:00:00"),  # the big clock time, updated every time anything is done
-	(TIMEELAPSED, "00:00:00"),  # time elapsed since app started 24 hour centric, consider 99h (4 1/8 days)
-	(TIMEOFNEXTEVENT, "00:00:00"),  # time of next event
-	(TIMETONEXTEVENT, "00:00:00"),  # time to next event counting down
-	(TRANSPARENTUNDERMOUSE, True),  # will the clock be transparent under the mouse (ineffective if mouse is avoided)
-)
-
-def EMPTYMAINDICT():
-	return dict((x, y) for x, y in EMPTYMAINTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -331,6 +318,35 @@ FULLCOLUMNTUP = (
 
 def FULLCOLUMNDICT():
 	return dict((x, y) for x, y in FULLCOLUMNTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of FULLCOMBO structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+FULLCOMBOTUP = (
+	(AUTO_SIZE_TEXT, None),  # 
+	(BACKGROUND_COLOR, None),  # 
+	(CHANGE_SUBMITS, None),  # 
+	(DEFAULT_VALUE, None),  # 
+	(DISABLED, None),  # 
+	(ENABLE_EVENTS, None),  # 
+	(FONT, None),  # 
+	(K, None),  # 
+	(KEY, None),  # 
+	(METADATA, None),  # 
+	(PAD, None),  # 
+	(READONLY, None),  # 
+	(S, None),  # 
+	(SIZE, None),  # 
+	(TEXT_COLOR, None),  # 
+	(TOOLTIP, None),  # 
+	(VALUES, []),  # 
+	(VISIBLE, None),  # 
+)
+
+def FULLCOMBODICT():
+	return dict((x, y) for x, y in FULLCOMBOTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

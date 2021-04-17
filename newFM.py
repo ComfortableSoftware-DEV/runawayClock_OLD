@@ -416,9 +416,9 @@ FMPSG_SCTN090C_WINDOWCMNTDICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090C_WINDOWDICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090D_FRAMECMNTDICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090D_FRAMEDICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090D_MAINCMNTDICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN090D_MAINDICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090D_MAINDICTDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090E_MAINCMNTDICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090E_MAINDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090E_MAINDICTDICT = {}  # holds all of the button entriess (TUPDICT)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -485,6 +485,6 @@ FMPSG_SCTN090D_MAINDICTDICT = {}  # holds all of the button entriess (TUPDICT)
 		FMPSG_SCTN090C_WINDOWDICT, \
 		FMPSG_SCTN090D_FRAMECMNTDICT, \
 		FMPSG_SCTN090D_FRAMEDICT, \
-		FMPSG_SCTN090D_MAINCMNTDICT, \
-		FMPSG_SCTN090D_MAINDICT, \
-		FMPSG_SCTN090D_MAINDICTDICT
+		FMPSG_SCTN090E_MAINCMNTDICT, \
+		FMPSG_SCTN090E_MAINDICT, \
+		FMPSG_SCTN090E_MAINDICTDICT

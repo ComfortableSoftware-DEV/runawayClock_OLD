@@ -416,407 +416,9 @@ FMPSG_SCTN090C_WINDOWCMNTDICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090C_WINDOWDICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090D_FRAMECMNTDICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090D_FRAMEDICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090D_MAINCMNTDICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN090D_MAINDICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090D_MAINDICTDICT = {}  # holds all of the button entriess (TUPDICT)
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN104 _LIST_ _DEF_
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-
-#
-#
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * end of managed portions of FM.py
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-#
-#
-
-
-#!/usr/bin/python
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# modules defined in FM.py
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# FM.py is copied, along with the appropriate FMxxxxxx.py file from CONFIGDIR to local by pythonUnitsLink.py
-# make sure if you change the modules, you also update the stored copy FMxxxxxx.py TBGLST file when you update FM.py
-# CF.py is always linked, make sure to update CFTOP.py and SCTN0102 when FM.py or CF.py are changed
-# all other units are loaded dynamically by pythonUnitsLink.py using the SCTN16 structure, FMSCTNENABLED.py file locally, etc.
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# * def doErrorItem(message_, itemToError_):
-# * def explodeItem(itemToExplode_):
-# * def makeAComment(comment_):
-# * def makeADict(dictName_, dictComment_, dictItems_):
-# * def makeAList(listName_, listComment_, listItems_):
-# * def makeATupDict(tupDictName_, tupDictItems_, tupDictSidecar_):
-# * def makeAWideComment(comment_):
-# * def makeCF():
-# * def makeDBSQLT()
-# * def makeDO():
-# * def makeDOHBI():
-# * def makeFM():
-# * def makeFO():
-# * def makeSP():
-# * def parseTBGLST(FDTBGLST):
-# * def readFileToStr(FILENAME_):
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# * def __main__():
-
-
-#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0001 _CHR_ _CONST_
-#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-BKQT = "`"  # BACK TICK
-BKSLSH = "\\"  # BACKSLASH
-CBRCE = "}"  # CLOSEBRACE
-CBRKT = "]"  # CLOSEBRACKET
-CPAREN = ")"  # CLOSE PARENTHESIS
-DBLQT = "\""  # DOUBLE QUOTE
-ESC = "\x1b"
-NEWLINE = "\n"  # NEWLINE
-OBRCE = "{"  # OPENBRACE
-OBRKT = "["  # OPENBRACKET
-OPAREN = "("  # OPENPAREN
-SGLQT = "'"  # simple ' character
-SPCSTR = " "  # SPACE character"
-TABSTR = "\t"  # TAB
-
-CMNTLEN = 200
-CONFIGDIR = "/rcr/0-units/python/"
-FOLDLEN = 200
-TRIQT = f"""{DBLQT}{DBLQT}{DBLQT}"""
-
-
-#
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0002 value_ constants
-#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-#
-#
-
-
-AO_NAME = "newAO.py"
-AOTOP_NAME = f"""{CONFIGDIR}AOTOP.py"""
-BIN04 = lambda X: f"""{X:04b}"""
-BIN08 = lambda X: f"""{X:08b}"""
-BIN16 = lambda X: f"""{X:016b}"""
-BIN32 = lambda X: f"""{X:032b}"""
-BIN64 = lambda X: f"""{X:064b}"""
-CF_NAME = "newCF.py"
-CFTOP_NAME = f"""{CONFIGDIR}CFTOP.py"""
-CLRALL = f"""{ESC}[2J"""
-CLRDOWN = f"""{ESC}[J"""
-CLREOL = f"""{ESC}[K"""
-CMNTLINE = f"""# * {"#*" * (CMNTLEN // 2)}"""
-DBSQLT_NAME = "newDBSQLT.py"
-DICTMODE_KEYSTR = "DICTMODE_KEYSTR"  # define dictmode 'key':val
-DICTMODE_KEYVAL = "DICTMODE_KEYVAL"  # define dictmode key:val
-DOHBIBTM_NAME = f"""{CONFIGDIR}DO_HBIBTM.py"""
-DOHBI_NAME = "newDOHBI.py"
-DOHBITOP_NAME = f"""{CONFIGDIR}DO_HBITOP.py"""
-DO_NAME = "newDO.py"
-DOTOP_NAME = f"""{CONFIGDIR}DOTOP.py"""
-EEOL = f"""{ESC}[K"""
-EMPTY_DICT = {}
-EMPTY_LIST = []
-EMPTY_STR = ""
-EMPTYSTRLST = [None, "", DBLQT, f"""{DBLQT}{DBLQT}""", SGLQT, f"""{SGLQT}{SGLQT}""", BKQT, "None", "\r", NEWLINE, "\r\n", "\n\r", ]
-EMPTY_TUPLE = ()
-FM_NAME = "newFM.py"
-FMTOP_NAME = f"""{CONFIGDIR}FMTOP.py"""
-FOLD1ENDHERE = f"""# fold here {"⥣1" * (FOLDLEN // 2)}"""
-FOLD1ENDHERELN = f"""# fold here {"⥣1" * (FOLDLEN // 2)}{NEWLINE}"""
-FOLD1STARTHERE = f"""# fold here {"⥥1" * (FOLDLEN // 2)}"""
-FOLD1STARTHERELN = f"""# fold here {"⥥1" * (FOLDLEN // 2)}{NEWLINE}"""
-FOLD2ENDHERE = f"""# fold here {"⥣2" * (FOLDLEN // 2)}"""
-FOLD2ENDHERELN = f"""# fold here {"⥣2" * (FOLDLEN // 2)}{NEWLINE}"""
-FOLD2STARTHERE = f"""# fold here {"⥥2" * (FOLDLEN // 2)}"""
-FOLD2STARTHERELN = f"""# fold here {"⥥2" * (FOLDLEN // 2)}{NEWLINE}"""
-FOLD3ENDHERE = f"""# fold here {"⥣3" * (FOLDLEN // 2)}"""
-FOLD3ENDHERELN = f"""# fold here {"⥣3" * (FOLDLEN // 2)}{NEWLINE}"""
-FOLD3STARTHERE = f"""# fold here {"⥥3" * (FOLDLEN // 2)}"""
-FOLD3STARTHERELN = f"""# fold here {"⥥3" * (FOLDLEN // 2)}{NEWLINE}"""
-FO_NAME = "newFO.py"
-FOTOP_NAME = f"""{CONFIGDIR}FOTOP.py"""
-HEX08 = lambda X_: f"""{X_:02H}"""  # {thisComment_}
-HEX16 = lambda X_: f"""{X_:04H}"""  # {thisComment_}
-HEX32 = lambda X_: f"""{X_:08H}"""  # {thisComment_}
-HEX64 = lambda X_: f"""{X_:016H}"""  # {thisComment_}
-IMPORTANTSTR = f"""# * {"!-" * (CMNTLEN // 2)}"""  # important line marker
-INDENTIN = " -=> "  # display arrow RIGHT
-INDENTOUT = " <=- "  # display arrow LEFT
-INFOSTR = f"""# * {"%_" * (CMNTLEN // 2)}"""  # INFO _STR_ line
-IO_NAME = "newIO.py"
-IOTOP_NAME = f"""{CONFIGDIR}IOTOP.py"""
-LINESUP = lambda NUM_: f"""{ESC}[{NUM_}A"""
-MARK1END = lambda TAG_: f"""# {"⥣1 " * (CMNTLEN // 3)} {TAG_}"""
-MARK1ENDLN = lambda TAG_: f"""# {"⥣1 " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK1MID = lambda TAG_: f"""# {"⥣1⥥ " * (CMNTLEN // 4)} {TAG_}"""
-MARK1MIDLN = lambda TAG_: f"""# {"⥣1⥥ " * (CMNTLEN // 4)} {TAG_}{NEWLINE}"""
-MARK1START = lambda TAG_: f"""# {"1⥥ " * (CMNTLEN // 3)} {TAG_}"""
-MARK1STARTLN = lambda TAG_: f"""# {"1⥥ " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK2END = lambda TAG_: f"""# {"⥣2 " * (CMNTLEN // 3)} {TAG_}"""
-MARK2ENDLN = lambda TAG_: f"""# {"⥣2 " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK2MID = lambda TAG_: f"""# {"⥣2⥥ " * (CMNTLEN // 4)} {TAG_}"""
-MARK2MIDLN = lambda TAG_: f"""# {"⥣2⥥ " * (CMNTLEN // 4)} {TAG_}{NEWLINE}"""
-MARK2START = lambda TAG_: f"""# {"2⥥ " * (CMNTLEN // 3)} {TAG_}"""
-MARK2STARTLN = lambda TAG_: f"""# {"2⥥ " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK3END = lambda TAG_: f"""# {"⥣3 " * (CMNTLEN // 3)} {TAG_}"""
-MARK3ENDLN = lambda TAG_: f"""# {"⥣3 " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK3MID = lambda TAG_: f"""# {"⥣3⥥ " * (CMNTLEN // 4)} {TAG_}"""
-MARK3MIDLN = lambda TAG_: f"""# {"⥣3⥥ " * (CMNTLEN // 4)} {TAG_}{NEWLINE}"""
-MARK3START = lambda TAG_: f"""# {"3⥥ " * (CMNTLEN // 3)} {TAG_}"""
-MARK3STARTLN = lambda TAG_: f"""# {"3⥥ " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK4END = lambda TAG_: f"""# {"⥣4 " * (CMNTLEN // 3)} {TAG_}"""
-MARK4ENDLN = lambda TAG_: f"""# {"⥣4 " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK4MID = lambda TAG_: f"""# {"⥣4⥥ " * (CMNTLEN // 4)} {TAG_}"""
-MARK4MIDLN = lambda TAG_: f"""# {"⥣4⥥ " * (CMNTLEN // 4)} {TAG_}{NEWLINE}"""
-MARK4START = lambda TAG_: f"""# {"4⥥ " * (CMNTLEN // 3)} {TAG_}"""
-MARK4STARTLN = lambda TAG_: f"""# {"4⥥ " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK5END = lambda TAG_: f"""# {"⥣5 " * (CMNTLEN // 3)} {TAG_}"""
-MARK5ENDLN = lambda TAG_: f"""# {"⥣5 " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK5MID = lambda TAG_: f"""# {"⥣5⥥ " * (CMNTLEN // 4)} {TAG_}"""
-MARK5MIDLN = lambda TAG_: f"""# {"⥣5⥥ " * (CMNTLEN // 4)} {TAG_}{NEWLINE}"""
-MARK5START = lambda TAG_: f"""# {"5⥥ " * (CMNTLEN // 3)} {TAG_}"""
-MARK5STARTLN = lambda TAG_: f"""# {"5⥥ " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK6END = lambda TAG_: f"""# {"⥣6 " * (CMNTLEN // 3)} {TAG_}"""
-MARK6ENDLN = lambda TAG_: f"""# {"⥣6 " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK6MID = lambda TAG_: f"""# {"⥣6⥥ " * (CMNTLEN // 4)} {TAG_}"""
-MARK6MIDLN = lambda TAG_: f"""# {"⥣6⥥ " * (CMNTLEN // 4)} {TAG_}{NEWLINE}"""
-MARK6START = lambda TAG_: f"""# {"6⥥ " * (CMNTLEN // 3)} {TAG_}"""
-MARK6STARTLN = lambda TAG_: f"""# {"6⥥ " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK7END = lambda TAG_: f"""# {"⥣7 " * (CMNTLEN // 3)} {TAG_}"""
-MARK7ENDLN = lambda TAG_: f"""# {"⥣7 " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK7MID = lambda TAG_: f"""# {"⥣7⥥ " * (CMNTLEN // 4)} {TAG_}"""
-MARK7MIDLN = lambda TAG_: f"""# {"⥣7⥥ " * (CMNTLEN // 4)} {TAG_}{NEWLINE}"""
-MARK7START = lambda TAG_: f"""# {"7⥥ " * (CMNTLEN // 3)} {TAG_}"""
-MARK7STARTLN = lambda TAG_: f"""# {"7⥥ " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK8END = lambda TAG_: f"""# {"⥣8 " * (CMNTLEN // 3)} {TAG_}"""
-MARK8ENDLN = lambda TAG_: f"""# {"⥣8 " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK8MID = lambda TAG_: f"""# {"⥣8⥥ " * (CMNTLEN // 4)} {TAG_}"""
-MARK8MIDLN = lambda TAG_: f"""# {"⥣8⥥ " * (CMNTLEN // 4)} {TAG_}{NEWLINE}"""
-MARK8START = lambda TAG_: f"""# {"8⥥ " * (CMNTLEN // 3)} {TAG_}"""
-MARK8STARTLN = lambda TAG_: f"""# {"8⥥ " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK9END = lambda TAG_: f"""# {"⥣9 " * (CMNTLEN // 3)} {TAG_}"""
-MARK9ENDLN = lambda TAG_: f"""# {"⥣9 " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARK9MID = lambda TAG_: f"""# {"⥣9⥥ " * (CMNTLEN // 4)} {TAG_}"""
-MARK9MIDLN = lambda TAG_: f"""# {"⥣9⥥ " * (CMNTLEN // 4)} {TAG_}{NEWLINE}"""
-MARK9START = lambda TAG_: f"""# {"9⥥ " * (CMNTLEN // 3)} {TAG_}"""
-MARK9STARTLN = lambda TAG_: f"""# {"9⥥ " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
-MARKLINES_NAME = f"""{CONFIGDIR}MARKLINES.py"""
-MOVELEFT = lambda NUM_: f"""{ESC}[{NUM_}D"""
-MOVETO = lambda LN_, COL_: f"""{ESC}[{LN_};{COL_}H"""
-NSPC = lambda NUM_: f"""{SPCSTR * NUM_}"""  # returns a string with NUM_ SPC
-NTAB = lambda NUM_: f"""{TABSTR * NUM_}"""  # returns a string with NUM_ TAB
-PSG_NAME = f"""newPSG.py"""
-PSGTOP_NAME = f"""{CONFIGDIR}PSGTOP.py"""
-QTSET = [DBLQT, SGLQT, BKQT]  # set of all quote characters
-SCTN0102NAME = f"""{CONFIGDIR}SCTN0102.py"""
-SCTNSNAME = f"""{CONFIGDIR}SCTNS.md"""
-SP_NAME = "newSP.py"
-SPTOP_NAME = f"""{CONFIGDIR}SPTOP.py"""
-TBGLST_NAME = "TBGLST.py"
-VO_NAME = "newVO.py"
-VOTOP_NAME = f"""{CONFIGDIR}VOTOP.py"""
-WHIRLSTR = f"""-{BKSLSH}|/*"""
-WHIRLCOUNT = 0
-
-
-CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from 'text' strings like color codes"}
-	f"{ESC}[0m",  # entry for ESC-[0m
-	f"{ESC}[1m",  # entry for ESC-[1m
-	f"{ESC}[32m",  # entry for ESC-[32m
-	f"{ESC}[35m",  # entry for ESC-[35m
-	f"{ESC}[36m",  # entry for ESC-[36m
-]
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN003 TYPEs and lambda
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN101 FMAX _DEF_
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-FMAX_NOP = "FMAX_NOP"  # skip this entry
-FMAXCF_SCTN0003_LAMBDADEF = "FMAXCF_SCTN0003_LAMBDADEF"  # define a lambda function <NAC><NAME><lambda str>
-FMAXCF_SCTN0003_TYPEDEF = "FMAXCF_SCTN0003_TYPEDEF"  # define a fake type used in the translation dict <NAC><NAME><TYPE>
-FMAXCF_SCTN0201_STRDEF = "FMAXCF_SCTN0201_STRDEF"  # define a STR in SCTN21 <NAC><NAME><str>
-FMAXCF_SCTN0201_VALDEF = "FMAXCF_SCTN0201_VALDEF"  # define a VAL in SCTN21 <NAC><NAME><VAL>
-FMAXCF_SCTN0202_OPTIONSADDHELPLINE = "FMAXCF_SCTN0202_OPTIONSADDHELPLINE"  # add a line to the help for a PARM, after the comment is automatically added<NAC><PARM><ADDONHELPLINE>
-FMAXCF_SCTN0202_OPTIONSDICTSTRADD = "FMAXCF_SCTN0202_OPTIONSDICTSTRADD"  # define a OPTNAME: 'str' in SCTN202 <NAC><KEY><PARM><STRDEFAULT>
-FMAXCF_SCTN0202_OPTIONSDICTVALADD = "FMAXCF_SCTN0202_OPTIONSDICTVALADD"  # define a OPTNAME: VAL in SCTN202 <NAC><KEY><PARM><VALDEFAULT>
-FMAXCF_SCTN0202_OPTIONSSTRADD = "FMAXCF_SCTN0202_OPTIONSSTRADD"  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
-FMAXCF_SCTN0202_OPTIONSVALADD = "FMAXCF_SCTN0202_OPTIONSVALADD"  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
-FMAXCF_SCTN0203_DICTDEF = "FMAXCF_SCTN0203_DICTDEF"  # define a dict in SCTN203 <NAC><DICTNAME><DICTMODE>
-FMAXCF_SCTN0203_DICTSTRADD = "FMAXCF_SCTN0203_DICTSTRADD"  # define a dict STR in SCTN203 <NAC><DICTNAME><STR>
-FMAXCF_SCTN0203_DICTVALADD = "FMAXCF_SCTN0203_DICTVALADD"  # define a dict VAL in SCTN203 <NAC><DICTNAME><VAL>
-FMAXCF_SCTN0204_LISTDEF = "FMAXCF_SCTN0204_LISTDEF"  # define a list in SCTN204 <NAC><LISTNAME>
-FMAXCF_SCTN0204_LISTSTRADD = "FMAXCF_SCTN0204_LISTSTRADD"  # define a list STR in SCTN204 <NAC><LISTNAME><STR>
-FMAXCF_SCTN0204_LISTVALADD = "FMAXCF_SCTN0204_LISTVALADD"  # define a VAL in a list in SCTN204 <NAC><LISTNAME><VAL>
-FMAXFM_SCTN0101_AXDEF = "FMAXFM_SCTN0101_AXDEF"  # define a new FM action <NAC>
-FMAXFM_SCTN0102_STRDEF = "FMAXFM_SCTN0102_STRDEF"  # define a FM string <NAC><VALNAME><STR>
-FMAXFM_SCTN0102_VALDEF = "FMAXFM_SCTN0102_VALDEF"  # define a FM value_ <NAC><VALNAME><VAL>
-FMAXFM_SCTN0103_DICTDEF = "FMAXFM_SCTN0103_DICTDEF"  # define a dict for FM <NAC>
-FMAXFM_SCTN0104_LISTDEF = "FMAXFM_SCTN0104_LISTDEF"  # define a list in FM <NAC>
-FMAXPSG_SCTN0900_STRDEF = "FMAXPSG_SCTN0900_STRDEF"  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
-FMAXPSG_SCTN0900_VALDEF = "FMAXPSG_SCTN0900_VALDEF"  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
-FMAXPSG_SCTN0901_DUBLTSSDEF = "FMAXPSG_SCTN0901_DUBLTSSDEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-FMAXPSG_SCTN0901_DUBLTSVDEF = "FMAXPSG_SCTN0901_DUBLTSVDEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-FMAXPSG_SCTN0901_DUBLTVSDEF = "FMAXPSG_SCTN0901_DUBLTVSDEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-FMAXPSG_SCTN0901_DUBLTVVDEF = "FMAXPSG_SCTN0901_DUBLTVVDEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-FMAXPSG_SCTN0901_KEYDEF = "FMAXPSG_SCTN0901_KEYDEF"  # define a key in the second section of defines in PSG.py <NAC><VALNAME>
-FMAXPSG_SCTN0901_STRDEF = "FMAXPSG_SCTN0901_STRDEF"  # define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>
-FMAXPSG_SCTN0901_VALDEF = "FMAXPSG_SCTN0901_VALDEF"  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
-FMAXPSG_SCTN0902_DICTDEF = "FMAXPSG_SCTN0902_DICTDEF"  # define a dict in PSG <NAC><DICTNAME>
-FMAXPSG_SCTN0902_DICTSTRADD = "FMAXPSG_SCTN0902_DICTSTRADD"  # add a str to a dict <NAC><DICTNAME><KEY><VAL>
-FMAXPSG_SCTN0902_DICTSTRSTRADD = "FMAXPSG_SCTN0902_DICTSTRSTRADD"  # add a str-str to a dict <NAC><DICTNAME><STR><STR>
-FMAXPSG_SCTN0902_DICTSTRVALADD = "FMAXPSG_SCTN0902_DICTSTRVALADD"  # add a str-val to a dict <NAC><DICTNAME><STR><VAL>
-FMAXPSG_SCTN0902_DICTVALADD = "FMAXPSG_SCTN0902_DICTVALADD"  # add a val to a dict in PSG <NAC><DICTNAME><KEY><VAL>
-FMAXPSG_SCTN0903_LISTDEF = "FMAXPSG_SCTN0903_LISTDEF"  # define a list in PSG <NAC><LISTNAME>
-FMAXPSG_SCTN0903_LISTSTRADD = "FMAXPSG_SCTN0903_LISTSTRADD"  # add a str to a list in PSG <NAC><LISTNAME><STR>
-FMAXPSG_SCTN0903_LISTVALADD = "FMAXPSG_SCTN0903_LISTVALADD"  # add a val to a list in PSG <NAC><LISTNAME><VAL>
-FMAXPSG_SCTN0904_PLATEQELIFADD = "FMAXPSG_SCTN0904_PLATEQELIFADD"  # platform equalizer define an elif <NAC><STRUCTNAME><CONDITION><VAL>
-FMAXPSG_SCTN0904_PLATEQELSEADD = "FMAXPSG_SCTN0904_PLATEQELSEADD"  # platform equalizer define an else <NAC><STRUCTNAME><CONDITION>
-FMAXPSG_SCTN0904_PLATEQFUNCSTRADD = "FMAXPSG_SCTN0904_PLATEQFUNCSTRADD"  # add a function string line <NAC><STRUCTNAME><CONDITION>
-FMAXPSG_SCTN0904_PLATEQIFADD = "FMAXPSG_SCTN0904_PLATEQIFADD"  # add the 1st if to a platform equalizer <NAC><STRUCTNAME><CONDITION>
-FMAXPSG_SCTN0904_PLATEQPLATDEF = "FMAXPSG_SCTN0904_PLATEQPLATDEF"  # define a platform equalizer struct <NAC><STRUCTNAME>
-FMAXPSG_SCTN0904_PLATEQSTRADD = "FMAXPSG_SCTN0904_PLATEQSTRADD"  # add a string to a PLATEQ <NAC><STRUCTNAME><VALNAME><VAL>
-FMAXPSG_SCTN0904_PLATEQVALADD = "FMAXPSG_SCTN0904_PLATEQVALADD"  # add a value to a PLATEQ <NAC><STRUCTNAME><VALNAME><VAL>
-FMAXPSG_SCTN0905_TUPDICTDEF = "FMAXPSG_SCTN0905_TUPDICTDEF"  # define a TUPDICT in the second define section in PSG.py <NAC><TUPDICTNAME>
-FMAXPSG_SCTN0905_TUPDICTSTRADD = "FMAXPSG_SCTN0905_TUPDICTSTRADD"  # add a str to a tupdict <NAC><TUPDICTNAME><KEY><STR>
-FMAXPSG_SCTN0905_TUPDICTSTRSTRADD = "FMAXPSG_SCTN0905_TUPDICTSTRSTRADD"  # add a str to a tupdict <NAC><TUPDICTNAME><STR><STR>
-FMAXPSG_SCTN0905_TUPDICTSTRVALADD = "FMAXPSG_SCTN0905_TUPDICTSTRVALADD"  # add a value to a tupdict <NAC><TUPDICTNAME><STR><VAL>
-FMAXPSG_SCTN0905_TUPDICTVALADD = "FMAXPSG_SCTN0905_TUPDICTVALADD"  # add a value to a tupdict <NAC><TUPDICTNAME><KEY><VAL>
-FMAXPSG_SCTN0906_BTN_STRADD = "FMAXPSG_SCTN0906_BTN_STRADD"  # add a (VAL,VAL) to a tupdict <NAC><BTNNAME><KEY><VAL>
-FMAXPSG_SCTN0906_BTN_TUPVALVALADD = "FMAXPSG_SCTN0906_BTN_TUPVALVALADD"  # add a (VAL,VAL) to a tupdict <NAC><BTNNAME><KEY><VAL1><VAL2>
-FMAXPSG_SCTN0906_BTN_VALADD = "FMAXPSG_SCTN0906_BTN_VALADD"  # add a (VAL,VAL) to a tupdict <NAC><BTNNAME><KEY><VAL>
-FMAXPSG_SCTN0906_BTNDEF = "FMAXPSG_SCTN0906_BTNDEF"  # define a button <NAC><BTNNAME>
-FMAXPSG_SCTN0907_SPIN_DICTSTRADD = "FMAXPSG_SCTN0907_SPIN_DICTSTRADD"  # add a VAL to the SPINDICT <NAC><SPINNAME><KEY><VAL>
-FMAXPSG_SCTN0907_SPIN_DICTTUPVALVALADD = "FMAXPSG_SCTN0907_SPIN_DICTTUPVALVALADD"  # add a (VAL1, VAL2) to the SPINDICT <NAC><SPINNAME><KEY><VAL1><VAL2>
-FMAXPSG_SCTN0907_SPIN_VALUESSTRADD = "FMAXPSG_SCTN0907_SPIN_VALUESSTRADD"  # add a STR to the values list <NAC><SPINNAME><STR>
-FMAXPSG_SCTN0907_SPIN_VALUESVALADD = "FMAXPSG_SCTN0907_SPIN_VALUESVALADD"  # add a VAL to the values list <NAC><SPINNAME><VAL>
-FMAXPSG_SCTN0907_SPINDEF = "FMAXPSG_SCTN0907_SPINDEF"  # define a spin box entry <NAC><SPINNAME>
-FMPSG_SCTN0907_SPINCMNTDICT = "FMPSG_SCTN0907_SPINCMNTDICT"  # holds the spin element stuff
-FMPSG_SCTN0907_SPINDICT = "FMPSG_SCTN0907_SPINDICT"  # holds the spin element stuff
-FMPSG_SCTN0907_SPINVALUESLISTDICT = "FMPSG_SCTN0907_SPINVALUESLISTDICT"  # holds the spin element stuff
-
-
-FMAXFM_AXLST = [
-	FMAX_NOP,  # skip this entry
-	FMAXCF_SCTN0003_LAMBDADEF,  # define a lambda function <NAC><NAME><lambda str>
-	FMAXCF_SCTN0003_TYPEDEF,  # define a fake type used in the translation dict <NAC><NAME><TYPE>
-	FMAXCF_SCTN0201_STRDEF,  # define a STR in SCTN21 <NAC><NAME><str>
-	FMAXCF_SCTN0201_VALDEF,  # define a VAL in SCTN21 <NAC><NAME><VAL>
-	FMAXCF_SCTN0202_OPTIONSADDHELPLINE,  # add a line to the help for a PARM, after the comment is automatically added<NAC><PARM><ADDONHELPLINE>
-	FMAXCF_SCTN0202_OPTIONSDICTSTRADD,  # define a OPTNAME: 'str' in SCTN202 <NAC><KEY><PARM><STRDEFAULT>
-	FMAXCF_SCTN0202_OPTIONSDICTVALADD,  # define a OPTNAME: VAL in SCTN202 <NAC><KEY><PARM><VALDEFAULT>
-	FMAXCF_SCTN0202_OPTIONSSTRADD,  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
-	FMAXCF_SCTN0202_OPTIONSVALADD,  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
-	FMAXCF_SCTN0203_DICTDEF,  # define a dict in SCTN203 <NAC><DICTNAME><DICTMODE>
-	FMAXCF_SCTN0203_DICTSTRADD,  # define a dict STR in SCTN203 <NAC><DICTNAME><STR>
-	FMAXCF_SCTN0203_DICTVALADD,  # define a dict VAL in SCTN203 <NAC><DICTNAME><VAL>
-	FMAXCF_SCTN0204_LISTDEF,  # define a list in SCTN204 <NAC><LISTNAME>
-	FMAXCF_SCTN0204_LISTSTRADD,  # define a list STR in SCTN204 <NAC><LISTNAME><STR>
-	FMAXCF_SCTN0204_LISTVALADD,  # define a VAL in a list in SCTN204 <NAC><LISTNAME><VAL>
-	FMAXFM_SCTN0101_AXDEF,  # define a new FM action <NAC>
-	FMAXFM_SCTN0102_STRDEF,  # define a FM string <NAC><VALNAME><STR>
-	FMAXFM_SCTN0102_VALDEF,  # define a FM value_ <NAC><VALNAME><VAL>
-	FMAXFM_SCTN0103_DICTDEF,  # define a dict for FM <NAC>
-	FMAXFM_SCTN0104_LISTDEF,  # define a list in FM <NAC>
-	FMAXPSG_SCTN0900_STRDEF,  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
-	FMAXPSG_SCTN0900_VALDEF,  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
-	FMAXPSG_SCTN0901_DUBLTSSDEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0901_DUBLTSVDEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0901_DUBLTVSDEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0901_DUBLTVVDEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0901_KEYDEF,  # define a key in the second section of defines in PSG.py <NAC><VALNAME>
-	FMAXPSG_SCTN0901_STRDEF,  # define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>
-	FMAXPSG_SCTN0901_VALDEF,  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
-	FMAXPSG_SCTN0902_DICTDEF,  # define a dict in PSG <NAC><DICTNAME>
-	FMAXPSG_SCTN0902_DICTSTRADD,  # add a str to a dict <NAC><DICTNAME><KEY><VAL>
-	FMAXPSG_SCTN0902_DICTSTRSTRADD,  # add a str-str to a dict <NAC><DICTNAME><STR><STR>
-	FMAXPSG_SCTN0902_DICTSTRVALADD,  # add a str-val to a dict <NAC><DICTNAME><STR><VAL>
-	FMAXPSG_SCTN0902_DICTVALADD,  # add a val to a dict in PSG <NAC><DICTNAME><KEY><VAL>
-	FMAXPSG_SCTN0903_LISTDEF,  # define a list in PSG <NAC><LISTNAME>
-	FMAXPSG_SCTN0903_LISTSTRADD,  # add a str to a list in PSG <NAC><LISTNAME><STR>
-	FMAXPSG_SCTN0903_LISTVALADD,  # add a val to a list in PSG <NAC><LISTNAME><VAL>
-	FMAXPSG_SCTN0904_PLATEQELIFADD,  # platform equalizer define an elif <NAC><STRUCTNAME><CONDITION><VAL>
-	FMAXPSG_SCTN0904_PLATEQELSEADD,  # platform equalizer define an else <NAC><STRUCTNAME><CONDITION>
-	FMAXPSG_SCTN0904_PLATEQFUNCSTRADD,  # add a function string line <NAC><STRUCTNAME><CONDITION>
-	FMAXPSG_SCTN0904_PLATEQIFADD,  # add the 1st if to a platform equalizer <NAC><STRUCTNAME><CONDITION>
-	FMAXPSG_SCTN0904_PLATEQPLATDEF,  # define a platform equalizer struct <NAC><STRUCTNAME>
-	FMAXPSG_SCTN0904_PLATEQSTRADD,  # add a string to a PLATEQ <NAC><STRUCTNAME><VALNAME><VAL>
-	FMAXPSG_SCTN0904_PLATEQVALADD,  # add a value to a PLATEQ <NAC><STRUCTNAME><VALNAME><VAL>
-	FMAXPSG_SCTN0905_TUPDICTDEF,  # define a TUPDICT in the second define section in PSG.py <NAC><TUPDICTNAME>
-	FMAXPSG_SCTN0905_TUPDICTSTRADD,  # add a str to a tupdict <NAC><TUPDICTNAME><KEY><STR>
-	FMAXPSG_SCTN0905_TUPDICTSTRSTRADD,  # add a str to a tupdict <NAC><TUPDICTNAME><STR><STR>
-	FMAXPSG_SCTN0905_TUPDICTSTRVALADD,  # add a value to a tupdict <NAC><TUPDICTNAME><STR><VAL>
-	FMAXPSG_SCTN0905_TUPDICTVALADD,  # add a value to a tupdict <NAC><TUPDICTNAME><KEY><VAL>
-	FMAXPSG_SCTN0906_BTN_STRADD,  # add a (VAL,VAL) to a tupdict <NAC><BTNNAME><KEY><VAL>
-	FMAXPSG_SCTN0906_BTN_TUPVALVALADD,  # add a (VAL,VAL) to a tupdict <NAC><BTNNAME><KEY><VAL1><VAL2>
-	FMAXPSG_SCTN0906_BTN_VALADD,  # add a (VAL,VAL) to a tupdict <NAC><BTNNAME><KEY><VAL>
-	FMAXPSG_SCTN0906_BTNDEF,  # define a button <NAC><BTNNAME>
-	FMAXPSG_SCTN0907_SPIN_DICTSTRADD,  # add a VAL to the SPINDICT <NAC><SPINNAME><KEY><VAL>
-	FMAXPSG_SCTN0907_SPIN_DICTTUPVALVALADD,  # add a (VAL1, VAL2) to the SPINDICT <NAC><SPINNAME><KEY><VAL1><VAL2>
-	FMAXPSG_SCTN0907_SPIN_VALUESSTRADD,  # add a STR to the values list <NAC><SPINNAME><STR>
-	FMAXPSG_SCTN0907_SPIN_VALUESVALADD,  # add a VAL to the values list <NAC><SPINNAME><VAL>
-	FMAXPSG_SCTN0907_SPINDEF,  # define a spin box entry <NAC><SPINNAME>
-	FMPSG_SCTN0907_SPINCMNTDICT,  # holds the spin element stuff
-	FMPSG_SCTN0907_SPINDICT,  # holds the spin element stuff
-	FMPSG_SCTN0907_SPINVALUESLISTDICT,  # holds the spin element stuff
-]
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN102 VAL _DEF_
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN103 _DICT_ _DEF_
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-FMCF_SCTN0003_TYPECMNTDICT = {}  # SCTN009 types comments
-FMCF_SCTN0003_TYPEDICT = {}  # SCTN003 types
-FMCF_SCTN0201_DEFCMNTDICT = {}  # SCTN201 defines comments dict
-FMCF_SCTN0201_DEFDICT = {}  # SCTN201 defines dict
-FMCF_SCTN0202_OPTIONSCMNTDICT = {}  # SCTN202 OPTIONS comments dict
-FMCF_SCTN0202_OPTIONSDICT = {}  # SCTN202 OPTIONS dict
-FMCF_SCTN0202_OPTIONSDICTCMNTDICT = {}  # SCTN202 OPTIONSDICT comments dict
-FMCF_SCTN0202_OPTIONSDICTDICT = {}  # SCTN202 OPTIONSDICT
-FMCF_SCTN0202_OPTIONSHELPDICT = {}  # SCTN202 OPTIONS HELPDICT
-FMCF_SCTN0203_DICTCMNTDICT = {}  # SCTN203 dict comments dict
-FMCF_SCTN0203_DICTDICT = {}  # SCTN203 dict dict
-FMCF_SCTN0204_LISTCMNTDICT = {}  # SCTN204 list comments dict
-FMCF_SCTN0204_LISTDICT = {}  # SCTN204 list dict
-FMFM_SCTN0101_AXCMNTDICT = {}  # SCTN101 FMAX defined
-FMFM_SCTN0101_AXDICT = {}  # SCTN101 FMAX defined
-FMFM_SCTN0102_VALCMNTDICT = {}  # SCTN102 val
-FMFM_SCTN0102_VALDICT = {}  # SCTN102 val
-FMFM_SCTN0103_DICTCMNTDICT = {}  # SCTN103 dict defined
-FMFM_SCTN0103_DICTDICT = {}  # SCTN103 dict defined
-FMFM_SCTN0104_LISTCMNTDICT = {}  # SCTN201 device defines
-FMFM_SCTN0104_LISTDICT = {}  # SCTN201 device defines
-FMPSG_SCTN0900_DEF1CMNTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0900_DEF1DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0901_DEF2CMNTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0901_DEF2DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0902_DICTCMNTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0902_DICTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0903_LISTCMNTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0903_LISTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0904_PLATEQINNERCMNTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0904_PLATEQINNERDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0904_PLATEQOUTERCMNTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0904_PLATEQOUTERDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0905_TUPDICTCMNTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0905_TUPDICTDICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0906_BTNSCMNTDICT = {}  # holds all of the button entries
-FMPSG_SCTN0906_BTNSDICT = {}  # holds all of the button entries
+FMPSG_SCTN090E_MAINCMNTDICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090E_MAINDICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090E_MAINDICTDICT = {}  # holds all of the button entriess (TUPDICT)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -928,11 +530,11 @@ TBGLST = [
 	("FMAXPSG_SCTN090C_WINDOWDEF", FMAXFM_SCTN0101_AXDEF, "define a window <NAC><WINDOWNAME>",),
 	("FMAXPSG_SCTN090D_FRAMEDEF", FMAXFM_SCTN0101_AXDEF, "define a frame <NAC><FRAMENAME>",),
 	("FMAXPSG_SCTN090E_MAINDICTDEF", FMAXFM_SCTN0101_AXDEF, "define a main dictdict <NAC><MAINNAME>",),
-	("FMAXPSG_SCTN090E_MAINDICTSTRADD", FMAXFM_SCTN0101_AXDEF, "add a str to the main dictdict",),
-	("FMAXPSG_SCTN090E_MAINDICTVALADD", FMAXFM_SCTN0101_AXDEF, "add a str to the main dictdict",),
 	("FMAXPSG_SCTN090E_MAINDICTDICTDEF", FMAXFM_SCTN0101_AXDEF, "add a str to the main dictdict",),
 	("FMAXPSG_SCTN090E_MAINDICTDICTSTRADD", FMAXFM_SCTN0101_AXDEF, "add a str to the main dictdict",),
 	("FMAXPSG_SCTN090E_MAINDICTDICTVALADD", FMAXFM_SCTN0101_AXDEF, "add a str to the main dictdict",),
+	("FMAXPSG_SCTN090E_MAINDICTSTRADD", FMAXFM_SCTN0101_AXDEF, "add a str to the main dictdict",),
+	("FMAXPSG_SCTN090E_MAINDICTVALADD", FMAXFM_SCTN0101_AXDEF, "add a str to the main dictdict",),
 	("FMAXPSG_____", FMAX_NOP, "FMAXPSG_ENDS",),
 	("FMAX_NOP", FMAXFM_SCTN0101_AXDEF, "skip this entry",),
 	("FMCF", FMAX_NOP, "FMCF_BEGINS",),
@@ -993,10 +595,9 @@ TBGLST = [
 	("FMPSG_SCTN090C_WINDOWDICT", FMAXFM_SCTN0103_DICTDEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN090D_FRAMECMNTDICT", FMAXFM_SCTN0103_DICTDEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN090D_FRAMEDICT", FMAXFM_SCTN0103_DICTDEF, "holds all of the button entriess (TUPDICT)",),
-	("FMPSG_SCTN090D_MAINCMNTDICT", FMAXFM_SCTN0103_DICTDEF, "holds all of the button entries (TUPDICT)",),
-	("FMPSG_SCTN090D_MAINDICT", FMAXFM_SCTN0103_DICTDEF, "holds all of the button entriess (TUPDICT)",),
-	("FMPSG_SCTN090D_MAINDICTDICT", FMAXFM_SCTN0103_DICTDEF, "holds all of the button entriess (TUPDICT)",),
-
+	("FMPSG_SCTN090E_MAINCMNTDICT", FMAXFM_SCTN0103_DICTDEF, "holds all of the button entries (TUPDICT)",),
+	("FMPSG_SCTN090E_MAINDICT", FMAXFM_SCTN0103_DICTDEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN090E_MAINDICTDICT", FMAXFM_SCTN0103_DICTDEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_____", FMAX_NOP, "FMPSG_ENDS",),
 	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
 	("PSGVAL_COLOR_BACKGROUND", FMAXPSG_SCTN0900_STRDEF, "BACKGROUNDCOLOR", "#331122", "the background of the main frames",),
@@ -1040,15 +641,13 @@ TBGLST = [
 	("PSGVAL_EMPTYINTERVAL_TIMEINTERVAL", FMAXPSG_SCTN0905_TUPDICTSTRADD, "EMPTYINTERVAL", "TIMEINTERVAL", "00:00:00", "time this alarm is set for",),
 	("PSGVAL_EMPTYINTERVAL_TIMEOFNEXTEVENT", FMAXPSG_SCTN0905_TUPDICTSTRADD, "EMPTYINTERVAL", "TIMEOFNEXTEVENT", "00:00:00", "post snooze or tomorrow",),
 	("PSGVAL_EMPTYINTERVAL_TIMETONEXTEVENT", FMAXPSG_SCTN0905_TUPDICTSTRADD, "EMPTYINTERVAL", "TIMETONEXTEVENT", "00:00:00", "post snooze or tomorrow",),
-
-	("PSGVAL_EMPTYMAIN", FMAXPSG_SCTN0905_TUPDICTDEF, "EMPTYMAIN", "empty main form",),
-	("PSGVAL_EMPTYMAIN_TIMECLOCK", FMAXPSG_SCTN0905_TUPDICTSTRADD, "EMPTYMAIN", "TIMECLOCK", "00:00:00", "the big clock time, updated every time anything is done",),
-	("PSGVAL_EMPTYMAIN_TIMEELAPSED", FMAXPSG_SCTN0905_TUPDICTSTRADD, "EMPTYMAIN", "TIMEELAPSED", "00:00:00", "time elapsed since app started 24 hour centric, consider 99h (4 1/8 days)",),
-	("PSGVAL_EMPTYMAIN_TIMEOFNEXTEVENT", FMAXPSG_SCTN0905_TUPDICTSTRADD, "EMPTYMAIN", "TIMEOFNEXTEVENT", "00:00:00", "time of next event",),
-	("PSGVAL_EMPTYMAIN_TIMETONEXTEVENT", FMAXPSG_SCTN0905_TUPDICTSTRADD, "EMPTYMAIN", "TIMETONEXTEVENT", "00:00:00", "time to next event counting down",),
-	("PSGVAL_EMPTYMAIN_AVOIDMOUSE", FMAXPSG_SCTN0905_TUPDICTVALADD, "EMPTYMAIN", "AVOIDMOUSE", "True", "will the clock avoid the mouse or not bool",),
-	("PSGVAL_EMPTYMAIN_TRANSPARENTUNDERMOUSE", FMAXPSG_SCTN0905_TUPDICTVALADD, "EMPTYMAIN", "TRANSPARENTUNDERMOUSE", "True", "will the clock be transparent under the mouse (ineffective if mouse is avoided)",),
-
+	("PSGVAL_EMPTYMAIN", FMAXPSG_SCTN090E_MAINDICTDEF, "EMPTYMAIN", "empty main form",),
+	("PSGVAL_EMPTYMAIN_AVOIDMOUSE", FMAXPSG_SCTN090E_MAINDICTVALADD, "EMPTYMAIN", "AVOIDMOUSE", "True", "will the clock avoid the mouse or not bool",),
+	("PSGVAL_EMPTYMAIN_TIMECLOCK", FMAXPSG_SCTN090E_MAINDICTSTRADD, "EMPTYMAIN", "TIMECLOCK", "00:00:00", "the big clock time, updated every time anything is done",),
+	("PSGVAL_EMPTYMAIN_TIMEELAPSED", FMAXPSG_SCTN090E_MAINDICTSTRADD, "EMPTYMAIN", "TIMEELAPSED", "00:00:00", "time elapsed since app started 24 hour centric, consider 99h (4 1/8 days)",),
+	("PSGVAL_EMPTYMAIN_TIMEOFNEXTEVENT", FMAXPSG_SCTN090E_MAINDICTSTRADD, "EMPTYMAIN", "TIMEOFNEXTEVENT", "00:00:00", "time of next event",),
+	("PSGVAL_EMPTYMAIN_TIMETONEXTEVENT", FMAXPSG_SCTN090E_MAINDICTSTRADD, "EMPTYMAIN", "TIMETONEXTEVENT", "00:00:00", "time to next event counting down",),
+	("PSGVAL_EMPTYMAIN_TRANSPARENTUNDERMOUSE", FMAXPSG_SCTN090E_MAINDICTVALADD, "EMPTYMAIN", "TRANSPARENTUNDERMOUSE", "True", "will the clock be transparent under the mouse (ineffective if mouse is avoided)",),
 	("PSGVAL_FULLBUTTON", FMAXPSG_SCTN0905_TUPDICTDEF, "FULLBUTTON", "define the button empty tupdict",),
 	("PSGVAL_FULLBUTTON_AUTO_SIZE_BUTTON", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLBUTTON", "AUTO_SIZE_BUTTON", "None", "if True the button size is sized to fit the text",),
 	("PSGVAL_FULLBUTTON_BIND_RETURN_KEY", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLBUTTON", "BIND_RETURN_KEY", "False", "If True the return key will cause this button to be pressed",),
@@ -1119,6 +718,25 @@ TBGLST = [
 	("PSGVAL_FULLCOLUMN_VERTACLE_SCROLL_ONLY", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOLUMN", "VERTICAL_SCROLL_ONLY", "False", "if Truen then no horizontal scrollbar will be shown",),
 	("PSGVAL_FULLCOLUMN_VERTICAL_ALIGNMENT", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOLUMN", "VERTICAL_ALIGNMENT", "None", "Place the column at the 'top', 'center', 'bottom' of the row (can also use t,c,r). Defaults to no setting (tkinter decides)",),
 	("PSGVAL_FULLCOLUMN_VISIBLE", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOLUMN", "VISIBLE", "True", "set visibility state of the element",),
+	("PSGVAL_FULLCOMBO", FMAXPSG_SCTN0905_TUPDICTDEF, "FULLCOMBO", "a full combo tupdict",),
+	("PSGVAL_FULLCOMBO_AUTO_SIZE_TEXT", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "AUTO_SIZE_TEXT", "None", "",),
+	("PSGVAL_FULLCOMBO_BACKGROUND_COLOR", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "BACKGROUND_COLOR", "None", "",),
+	("PSGVAL_FULLCOMBO_CHANGE_SUBMITS", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "CHANGE_SUBMITS", "None", "",),
+	("PSGVAL_FULLCOMBO_DEFAULT_VALUE", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "DEFAULT_VALUE", "None", "",),
+	("PSGVAL_FULLCOMBO_DISABLED", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "DISABLED", "None", "",),
+	("PSGVAL_FULLCOMBO_ENABLE_EVENTS", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "ENABLE_EVENTS", "None", "",),
+	("PSGVAL_FULLCOMBO_FONT", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "FONT", "None", "",),
+	("PSGVAL_FULLCOMBO_K", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "K", "None", "",),
+	("PSGVAL_FULLCOMBO_KEY", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "KEY", "None", "",),
+	("PSGVAL_FULLCOMBO_METADATA", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "METADATA", "None", "",),
+	("PSGVAL_FULLCOMBO_PAD", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "PAD", "None", "",),
+	("PSGVAL_FULLCOMBO_READONLY", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "READONLY", "None", "",),
+	("PSGVAL_FULLCOMBO_S", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "S", "None", "",),
+	("PSGVAL_FULLCOMBO_SIZE", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "SIZE", "None", "",),
+	("PSGVAL_FULLCOMBO_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "TEXT_COLOR", "None", "",),
+	("PSGVAL_FULLCOMBO_TOOLTIP", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "TOOLTIP", "None", "",),
+	("PSGVAL_FULLCOMBO_VALUES", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "VALUES", "[]", "",),
+	("PSGVAL_FULLCOMBO_VISIBLE", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLCOMBO", "VISIBLE", "None", "",),
 	("PSGVAL_FULLWINDOW", FMAXPSG_SCTN0905_TUPDICTDEF, "FULLWINDOW", "define the FULLWINDOW tupdict",),
 	("PSGVAL_FULLWINDOW_ALPHA_CHANNEL", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLWINDOW", "ALPHA_CHANNEL", "1", "Sets the opacity of the window. 0 = invisible 1 = completely visible. Values bewteen 0 & 1 will produce semi-transparent windows in SOME environments (The Raspberry Pi always has this value at 1 and cannot change.",),
 	("PSGVAL_FULLWINDOW_AUTO_CLOSE", FMAXPSG_SCTN0905_TUPDICTVALADD, "FULLWINDOW", "AUTO_CLOSE", "False", "If True, the window will automatically close itself",),
@@ -1203,117 +821,123 @@ TBGLST = [
 	("PSGVAL_NORMALWINDOW_TITLEBAR_ICON", FMAXPSG_SCTN0905_TUPDICTVALADD, "NORMALWINDOW", "TITLEBAR_ICON", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as the icon (file or base64 bytes)",),
 	("PSGVAL_NORMALWINDOW_TITLEBAR_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICTVALADD, "NORMALWINDOW", "TITLEBAR_TEXT_COLOR", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as text color",),
 	("PSGVAL_NORMALWINDOW_TRANSPARENT_COLOR", FMAXPSG_SCTN0905_TUPDICTVALADD, "NORMALWINDOW", "TRANSPARENT_COLOR", "None", "Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.",),
-	("PSGVAL__ALPHA_CHANNEL", FMAXPSG_SCTN0901_STRDEF, "ALPHA_CHANNEL", "alpha_channel", "",),
-	("PSGVAL__AUTO_CLOSE", FMAXPSG_SCTN0901_STRDEF, "AUTO_CLOSE", "auto_close", "",),
-	("PSGVAL__AUTO_CLOSE_DURATION", FMAXPSG_SCTN0901_STRDEF, "AUTO_CLOSE_DURATION", "auto_close_duration", "",),
-	("PSGVAL__AUTO_SIZE_BUTTON", FMAXPSG_SCTN0901_STRDEF, "AUTO_SIZE_BUTTON", "auto_size_button", "",),
-	("PSGVAL__AUTO_SIZE_BUTTONS", FMAXPSG_SCTN0901_STRDEF, "AUTO_SIZE_BUTTONS", "auto_size_buttons", "",),
-	("PSGVAL__AUTO_SIZE_TEXT", FMAXPSG_SCTN0901_STRDEF, "AUTO_SIZE_TEXT", "auto_size_text", "",),
 	("PSGVAL__AVOIDMOUSE", FMAXPSG_SCTN0901_KEYDEF, "AVOIDMOUSE", "",),
-	("PSGVAL__BACKGROUND_COLOR", FMAXPSG_SCTN0901_STRDEF, "BACKGROUND_COLOR", "background_color", "",),
-	("PSGVAL__BIND_RETURN_KEY", FMAXPSG_SCTN0901_STRDEF, "BIND_RETURN_KEY", "bind_return_key", "",),
-	("PSGVAL__BORDER_DEPTH", FMAXPSG_SCTN0901_STRDEF, "BORDER_DEPTH", "border_depth", "",),
-	("PSGVAL__BORDER_WIDTH", FMAXPSG_SCTN0901_STRDEF, "BORDER_WIDTH", "border_width", "",),
-	("PSGVAL__BUTTON_COLOR", FMAXPSG_SCTN0901_STRDEF, "BUTTON_COLOR", "button_color", "",),
-	("PSGVAL__BUTTON_TEXT", FMAXPSG_SCTN0901_STRDEF, "BUTTON_TEXT", "button_text", "",),
-	("PSGVAL__BUTTON_TYPE", FMAXPSG_SCTN0901_STRDEF, "BUTTON_TYPE", "button_type", "",),
-	("PSGVAL__CHANGE_SUBMITS", FMAXPSG_SCTN0901_STRDEF, "CHANGE_SUBMITS", "change_submits", "",),
-	("PSGVAL__CHECKBOX_COLOR", FMAXPSG_SCTN0901_STRDEF, "CHECKBOX_COLOR", "checkbox_color", "color of background of the box that has the check mark in it. The checkmark is the same color as the text",),
-	("PSGVAL__CLOCKTIME", FMAXPSG_SCTN0901_KEYDEF, "CLOCKTIME", "holds the clock value (str HH:MM:SS)",),
-	("PSGVAL__DEBUGGER_ENABLED", FMAXPSG_SCTN0901_STRDEF, "DEBUGGER_ENABLED", "debugger_enabled", "",),
-	("PSGVAL__DEFAULT", FMAXPSG_SCTN0901_STRDEF, "DEFAULT", "default", "",),
-	("PSGVAL__DEFAULT_BUTTON_ELEMENT_SIZE", FMAXPSG_SCTN0901_STRDEF, "DEFAULT_BUTTON_ELEMENT_SIZE", "default_button_element_size", "",),
-	("PSGVAL__DEFAULT_ELEMENT_SIZE", FMAXPSG_SCTN0901_STRDEF, "DEFAULT_ELEMENT_SIZE", "default_element_size", "",),
-	("PSGVAL__DEFAULT_EXTENSION", FMAXPSG_SCTN0901_STRDEF, "DEFAULT_EXTENSION", "default_extension", "",),
-	("PSGVAL__DISABLED", FMAXPSG_SCTN0901_STRDEF, "DISABLED", "disabled", "",),
-	("PSGVAL__DISABLED_BUTTON_COLOR", FMAXPSG_SCTN0901_STRDEF, "DISABLED_BUTTON_COLOR", "disabled_button_color", "",),
-	("PSGVAL__DISABLE_CLOSE", FMAXPSG_SCTN0901_STRDEF, "DISABLE_CLOSE", "disable_close", "",),
-	("PSGVAL__DISABLE_MINIMIZE", FMAXPSG_SCTN0901_STRDEF, "DISABLE_MINIMIZE", "disable_minimize", "",),
 	("PSGVAL__DISMISSED", FMAXPSG_SCTN0901_KEYDEF, "DISMISSED", "alarm dismissed bool",),
 	("PSGVAL__ELAPSEDTIME", FMAXPSG_SCTN0901_KEYDEF, "ELAPSEDTIME", "holds the elapsed time",),
-	("PSGVAL__ELEMENT_JUSTIFICATION", FMAXPSG_SCTN0901_STRDEF, "ELEMENT_JUSTIFICATION", "element_justification", "",),
-	("PSGVAL__ELEMENT_PADDING", FMAXPSG_SCTN0901_STRDEF, "ELEMENT_PADDING", "element_padding", "",),
-	("PSGVAL__ENABLED", FMAXPSG_SCTN0901_STRDEF, "ENABLED", "enabled", "",),
-	("PSGVAL__ENABLE_CLOSE_ATTEMPTED_EVENT", FMAXPSG_SCTN0901_STRDEF, "ENABLE_CLOSE_ATTEMPTED_EVENT", "enable_close_attempted_event", "",),
-	("PSGVAL__ENABLE_EVENTS", FMAXPSG_SCTN0901_STRDEF, "ENABLE_EVENTS", "enable_events", "",),
 	("PSGVAL__EVENTENTRIES", FMAXPSG_SCTN0901_KEYDEF, "EVENTENTRIES", "",),
 	("PSGVAL__EVENTMODE", FMAXPSG_SCTN0901_KEYDEF, "EVENTMODE", "",),
-	("PSGVAL__EXPAND_X", FMAXPSG_SCTN0901_STRDEF, "EXPAND_X", "expand_x", "",),
-	("PSGVAL__EXPAND_Y", FMAXPSG_SCTN0901_STRDEF, "EXPAND_Y", "expand_y", "",),
-	("PSGVAL__FILE_TYPES", FMAXPSG_SCTN0901_STRDEF, "FILE_TYPES", "file_types", "",),
-	("PSGVAL__FINALIZE", FMAXPSG_SCTN0901_STRDEF, "FINALIZE", "finalize", "",),
 	("PSGVAL__FOCUS", FMAXPSG_SCTN0901_STRDEF, "FOCUS", "focus", "",),
-	("PSGVAL__FONT", FMAXPSG_SCTN0901_STRDEF, "FONT", "font", "",),
-	("PSGVAL__FORCE_TOPLEVEL", FMAXPSG_SCTN0901_STRDEF, "FORCE_TOPLEVEL", "force_toplevel", "",),
-	("PSGVAL__GRAB", FMAXPSG_SCTN0901_STRDEF, "GRAB", "grab", "",),
-	("PSGVAL__GRAB_ANYWHERE", FMAXPSG_SCTN0901_STRDEF, "GRAB_ANYWHERE", "grab_anywhere", "",),
-	("PSGVAL__HIGHLIGHT_COLORS", FMAXPSG_SCTN0901_STRDEF, "HIGHLIGHT_COLORS", "highlight_colors", "",),
-	("PSGVAL__ICON", FMAXPSG_SCTN0901_STRDEF, "ICON", "icon", "",),
-	("PSGVAL__IMAGE_DATA", FMAXPSG_SCTN0901_STRDEF, "IMAGE_DATA", "image_data", "",),
-	("PSGVAL__IMAGE_FILENAME", FMAXPSG_SCTN0901_STRDEF, "IMAGE_FILENAME", "image_filename", "",),
-	("PSGVAL__IMAGE_SIZE", FMAXPSG_SCTN0901_STRDEF, "IMAGE_SIZE", "image_size", "",),
-	("PSGVAL__IMAGE_SUBSAMPLE", FMAXPSG_SCTN0901_STRDEF, "IMAGE_SUBSAMPLE", "image_subsample", "",),
 	("PSGVAL__INDEXNEXTEVENT", FMAXPSG_SCTN0901_KEYDEF, "INDEXNEXTEVENT", "",),
-	("PSGVAL__INITIAL_FOLDER", FMAXPSG_SCTN0901_STRDEF, "INITIAL_FOLDER", "initial_folder", "",),
-	("PSGVAL__JUSTIFICATION", FMAXPSG_SCTN0901_STRDEF, "JUSTIFICATION", "justification", "",),
-	("PSGVAL__K", FMAXPSG_SCTN0901_STRDEF, "K", "k", "",),
-	("PSGVAL__KEEP_ON_TOP", FMAXPSG_SCTN0901_STRDEF, "KEEP_ON_TOP", "keep_on_top", "",),
-	("PSGVAL__KEY", FMAXPSG_SCTN0901_STRDEF, "KEY", "key", "",),
-	("PSGVAL__LAYOUT", FMAXPSG_SCTN0901_STRDEF, "LAYOUT", "layout", "",),
-	("PSGVAL__LOCATION", FMAXPSG_SCTN0901_STRDEF, "LOCATION", "location", "",),
-	("PSGVAL__MARGINS", FMAXPSG_SCTN0901_STRDEF, "MARGINS", "margins", "",),
-	("PSGVAL__METADATA", FMAXPSG_SCTN0901_STRDEF, "METADATA", "metadata", "",),
-	("PSGVAL__MODAL", FMAXPSG_SCTN0901_STRDEF, "MODAL", "modal", "",),
+	("PSGVAL__MAINFONT", FMAXPSG_SCTN0901_STRDEF, "MAINFONT", "Source Code Pro", "set the main font",),
 	("PSGVAL__MODE_ALARM", FMAXPSG_SCTN0901_KEYDEF, "MODE_ALARM", "",),
 	("PSGVAL__MODE_ALARMREMIND", FMAXPSG_SCTN0901_KEYDEF, "MODE_ALARMREMIND", "",),
 	("PSGVAL__MODE_INTERVAL", FMAXPSG_SCTN0901_KEYDEF, "MODE_INTERVAL", "",),
 	("PSGVAL__NAME", FMAXPSG_SCTN0901_KEYDEF, "NAME", "",),
 	("PSGVAL__NEXTTIME", FMAXPSG_SCTN0901_KEYDEF, "NEXTTIME", "holds the next scheduled time countdown",),
-	("PSGVAL__NO_TITLEBAR", FMAXPSG_SCTN0901_STRDEF, "NO_TITLEBAR", "no_titlebar", "",),
-	("PSGVAL__PAD", FMAXPSG_SCTN0901_STRDEF, "PAD", "pad", "",),
 	("PSGVAL__PREDISMISSABLE", FMAXPSG_SCTN0901_KEYDEF, "PREDISMISSABLE", "",),
-	("PSGVAL__PROGRESS_BAR_COLOR", FMAXPSG_SCTN0901_STRDEF, "PROGRESS_BAR_COLOR", "progress_bar_color", "",),
-	("PSGVAL__RESIZABLE", FMAXPSG_SCTN0901_STRDEF, "RESIZABLE", "resizable", "",),
-	("PSGVAL__RETURN_KEYBOARD_EVENTS", FMAXPSG_SCTN0901_STRDEF, "RETURN_KEYBOARD_EVENTS", "return_keyboard_events", "",),
-	("PSGVAL__RIGHT_CLICK_MENU", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU", "right_click_menu", "",),
-	("PSGVAL__RIGHT_CLICK_MENU_BACKGROUND_COLOR", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_BACKGROUND_COLOR", "right_click_menu_background_color", "",),
-	("PSGVAL__RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR", "right_click_menu_disabled_text_color", "",),
-	("PSGVAL__RIGHT_CLICK_MENU_FONT", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_FONT", "right_click_menu_font", "",),
-	("PSGVAL__RIGHT_CLICK_MENU_SELECTED_COLORS", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_SELECTED_COLORS", "right_click_menu_selected_colors", "",),
-	("PSGVAL__RIGHT_CLICK_MENU_TEAROFF", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_TEAROFF", "right_click_menu_tearoff", "",),
-	("PSGVAL__RIGHT_CLICK_MENU_TEXT_COLOR", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_TEXT_COLOR", "right_click_menu_text_color", "",),
 	("PSGVAL__RUNNING", FMAXPSG_SCTN0901_KEYDEF, "RUNNING", "is this interval running or not",),
-	("PSGVAL__S", FMAXPSG_SCTN0901_STRDEF, "S", "s", "",),
-	("PSGVAL__SCROLLABLE", FMAXPSG_SCTN0901_STRDEF, "SCROLLABLE", "scrollable", "can this column be scrolled bool",),
-	("PSGVAL__SIZE", FMAXPSG_SCTN0901_STRDEF, "SIZE", "size", "",),
-	("PSGVAL__SNOOZABLE", FMAXPSG_SCTN0901_KEYDEF, "SNOOZABLE", "",),
-	("PSGVAL__SNOOZED", FMAXPSG_SCTN0901_KEYDEF, "SNOOZED", "snoozed bool",),
-	("PSGVAL__TARGET", FMAXPSG_SCTN0901_STRDEF, "TARGET", "target", "",),
-	("PSGVAL__TEXT", FMAXPSG_SCTN0901_STRDEF, "TEXT", "text", "",),
-	("PSGVAL__TEXT_COLOR", FMAXPSG_SCTN0901_STRDEF, "TEXT_COLOR", "text_color", "",),
-	("PSGVAL__TEXT_JUSTIFICATION", FMAXPSG_SCTN0901_STRDEF, "TEXT_JUSTIFICATION", "text_justification", "",),
 	("PSGVAL__TIMEALARM", FMAXPSG_SCTN0901_KEYDEF, "TIMEALARM", "",),
 	("PSGVAL__TIMEELAPSED", FMAXPSG_SCTN0901_KEYDEF, "TIMEELAPSED", "24 hour centric elapsed time running, can be reset, may go to 99h",),
 	("PSGVAL__TIMEINTERVAL", FMAXPSG_SCTN0901_KEYDEF, "TIMEINTERVAL", "",),
 	("PSGVAL__TIMEOFNEXTEVENT", FMAXPSG_SCTN0901_KEYDEF, "TIMEOFNEXTEVENT", "what time is the next alarm, == TIMEALARM is tomorrow",),
 	("PSGVAL__TIMEREMIND", FMAXPSG_SCTN0901_KEYDEF, "TIMEREMIND", "",),
 	("PSGVAL__TIMETONEXTEVENT", FMAXPSG_SCTN0901_KEYDEF, "TIMETONEXTEVENT", "down counter to next event on this window/alarm/interval/reminder",),
-	("PSGVAL__TITLE", FMAXPSG_SCTN0901_STRDEF, "TITLE", "title", "",),
-	("PSGVAL__TITLEBAR_BACKGROUND_COLOR", FMAXPSG_SCTN0901_STRDEF, "TITLEBAR_BACKGROUND_COLOR", "titlebar_background_color", "",),
-	("PSGVAL__TITLEBAR_FONT", FMAXPSG_SCTN0901_STRDEF, "TITLEBAR_FONT", "titlebar_font", "",),
-	("PSGVAL__TITLEBAR_ICON", FMAXPSG_SCTN0901_STRDEF, "TITLEBAR_ICON", "titlebar_icon", "",),
-	("PSGVAL__TITLEBAR_TEXT_COLOR", FMAXPSG_SCTN0901_STRDEF, "TITLEBAR_TEXT_COLOR", "titlebar_text_color", "",),
-	("PSGVAL__TOOLTIP", FMAXPSG_SCTN0901_STRDEF, "TOOLTIP", "tooltip", "",),
 	("PSGVAL__TRANSPARENT", FMAXPSG_SCTN0901_KEYDEF, "TRANSPARENT", "",),
 	("PSGVAL__TRANSPARENTUNDERMOUSE", FMAXPSG_SCTN0901_KEYDEF, "TRANSPARENTUNDERMOUSE", "is the clock transparent under mouse (ineffective if mouse is avoided)",),
-	("PSGVAL__TRANSPARENT_COLOR", FMAXPSG_SCTN0901_STRDEF, "TRANSPARENT_COLOR", "transparent_color", "",),
-	("PSGVAL__TTK_THEME", FMAXPSG_SCTN0901_STRDEF, "TTK_THEME", "ttk_theme", "",),
-	("PSGVAL__USE_CUSTOM_TITLEBAR", FMAXPSG_SCTN0901_STRDEF, "USE_CUSTOM_TITLEBAR", "use_custom_titlebar", "",),
-	("PSGVAL__USE_DEFAULT_FOCUS", FMAXPSG_SCTN0901_STRDEF, "USE_DEFAULT_FOCUS", "use_default_focus", "",),
-	("PSGVAL__USE_TTK_BUTTONS", FMAXPSG_SCTN0901_STRDEF, "USE_TTK_BUTTONS", "use_ttk_buttons", "",),
-	("PSGVAL__VERTICAL_ALIGNMENT", FMAXPSG_SCTN0901_STRDEF, "VERTICAL_ALIGNMENT", "vertical_alignment", "",),
-	("PSGVAL__VERTICAL_SCROLL_ONLY", FMAXPSG_SCTN0901_STRDEF, "VERTICAL_SCROLL_ONLY", "verticale_scroll_only", "",),
-	("PSGVAL__VISIBLE", FMAXPSG_SCTN0901_STRDEF, "VISIBLE", "visible", "",),
+	("PSGVAL___ALPHA_CHANNEL", FMAXPSG_SCTN0901_STRDEF, "ALPHA_CHANNEL", "alpha_channel", "",),
+	("PSGVAL___AUTO_CLOSE", FMAXPSG_SCTN0901_STRDEF, "AUTO_CLOSE", "auto_close", "",),
+	("PSGVAL___AUTO_CLOSE_DURATION", FMAXPSG_SCTN0901_STRDEF, "AUTO_CLOSE_DURATION", "auto_close_duration", "",),
+	("PSGVAL___AUTO_SIZE_BUTTON", FMAXPSG_SCTN0901_STRDEF, "AUTO_SIZE_BUTTON", "auto_size_button", "",),
+	("PSGVAL___AUTO_SIZE_BUTTONS", FMAXPSG_SCTN0901_STRDEF, "AUTO_SIZE_BUTTONS", "auto_size_buttons", "",),
+	("PSGVAL___AUTO_SIZE_TEXT", FMAXPSG_SCTN0901_STRDEF, "AUTO_SIZE_TEXT", "auto_size_text", "",),
+	("PSGVAL___AUTO_SIZE_TEXT", FMAXPSG_SCTN0901_STRDEF, "AUTO_SIZE_TEXT", "auto_size_text", "",),
+	("PSGVAL___BACKGROUND_COLOR", FMAXPSG_SCTN0901_STRDEF, "BACKGROUND_COLOR", "background_color", "",),
+	("PSGVAL___BIND_RETURN_KEY", FMAXPSG_SCTN0901_STRDEF, "BIND_RETURN_KEY", "bind_return_key", "",),
+	("PSGVAL___BORDER_DEPTH", FMAXPSG_SCTN0901_STRDEF, "BORDER_DEPTH", "border_depth", "",),
+	("PSGVAL___BORDER_WIDTH", FMAXPSG_SCTN0901_STRDEF, "BORDER_WIDTH", "border_width", "",),
+	("PSGVAL___BUTTON_COLOR", FMAXPSG_SCTN0901_STRDEF, "BUTTON_COLOR", "button_color", "",),
+	("PSGVAL___BUTTON_TEXT", FMAXPSG_SCTN0901_STRDEF, "BUTTON_TEXT", "button_text", "",),
+	("PSGVAL___BUTTON_TYPE", FMAXPSG_SCTN0901_STRDEF, "BUTTON_TYPE", "button_type", "",),
+	("PSGVAL___CHANGE_SUBMITS", FMAXPSG_SCTN0901_STRDEF, "CHANGE_SUBMITS", "change_submits", "",),
+	("PSGVAL___CHECKBOX_COLOR", FMAXPSG_SCTN0901_STRDEF, "CHECKBOX_COLOR", "checkbox_color", "color of background of the box that has the check mark in it. The checkmark is the same color as the text",),
+	("PSGVAL___CLOCKTIME", FMAXPSG_SCTN0901_KEYDEF, "CLOCKTIME", "holds the clock value (str HH:MM:SS)",),
+	("PSGVAL___DEBUGGER_ENABLED", FMAXPSG_SCTN0901_STRDEF, "DEBUGGER_ENABLED", "debugger_enabled", "",),
+	("PSGVAL___DEFAULT", FMAXPSG_SCTN0901_STRDEF, "DEFAULT", "default", "",),
+	("PSGVAL___DEFAULT_BUTTON_ELEMENT_SIZE", FMAXPSG_SCTN0901_STRDEF, "DEFAULT_BUTTON_ELEMENT_SIZE", "default_button_element_size", "",),
+	("PSGVAL___DEFAULT_ELEMENT_SIZE", FMAXPSG_SCTN0901_STRDEF, "DEFAULT_ELEMENT_SIZE", "default_element_size", "",),
+	("PSGVAL___DEFAULT_EXTENSION", FMAXPSG_SCTN0901_STRDEF, "DEFAULT_EXTENSION", "default_extension", "",),
+	("PSGVAL___DEFAULT_VALUE", FMAXPSG_SCTN0901_STRDEF, "DEFAULT_VALUE", "default_value", "",),
+	("PSGVAL___DISABLED", FMAXPSG_SCTN0901_STRDEF, "DISABLED", "disabled", "",),
+	("PSGVAL___DISABLED_BUTTON_COLOR", FMAXPSG_SCTN0901_STRDEF, "DISABLED_BUTTON_COLOR", "disabled_button_color", "",),
+	("PSGVAL___DISABLE_CLOSE", FMAXPSG_SCTN0901_STRDEF, "DISABLE_CLOSE", "disable_close", "",),
+	("PSGVAL___DISABLE_MINIMIZE", FMAXPSG_SCTN0901_STRDEF, "DISABLE_MINIMIZE", "disable_minimize", "",),
+	("PSGVAL___ELEMENT_JUSTIFICATION", FMAXPSG_SCTN0901_STRDEF, "ELEMENT_JUSTIFICATION", "element_justification", "",),
+	("PSGVAL___ELEMENT_PADDING", FMAXPSG_SCTN0901_STRDEF, "ELEMENT_PADDING", "element_padding", "",),
+	("PSGVAL___ENABLED", FMAXPSG_SCTN0901_STRDEF, "ENABLED", "enabled", "",),
+	("PSGVAL___ENABLE_CLOSE_ATTEMPTED_EVENT", FMAXPSG_SCTN0901_STRDEF, "ENABLE_CLOSE_ATTEMPTED_EVENT", "enable_close_attempted_event", "",),
+	("PSGVAL___ENABLE_EVENTS", FMAXPSG_SCTN0901_STRDEF, "ENABLE_EVENTS", "enable_events", "",),
+	("PSGVAL___ENABLE_EVENTS", FMAXPSG_SCTN0901_STRDEF, "ENABLE_EVENTS", "enable_events", "",),
+	("PSGVAL___EXPAND_X", FMAXPSG_SCTN0901_STRDEF, "EXPAND_X", "expand_x", "",),
+	("PSGVAL___EXPAND_Y", FMAXPSG_SCTN0901_STRDEF, "EXPAND_Y", "expand_y", "",),
+	("PSGVAL___FILE_TYPES", FMAXPSG_SCTN0901_STRDEF, "FILE_TYPES", "file_types", "",),
+	("PSGVAL___FINALIZE", FMAXPSG_SCTN0901_STRDEF, "FINALIZE", "finalize", "",),
+	("PSGVAL___FONT", FMAXPSG_SCTN0901_STRDEF, "FONT", "font", "",),
+	("PSGVAL___FORCE_TOPLEVEL", FMAXPSG_SCTN0901_STRDEF, "FORCE_TOPLEVEL", "force_toplevel", "",),
+	("PSGVAL___GRAB", FMAXPSG_SCTN0901_STRDEF, "GRAB", "grab", "",),
+	("PSGVAL___GRAB_ANYWHERE", FMAXPSG_SCTN0901_STRDEF, "GRAB_ANYWHERE", "grab_anywhere", "",),
+	("PSGVAL___HIGHLIGHT_COLORS", FMAXPSG_SCTN0901_STRDEF, "HIGHLIGHT_COLORS", "highlight_colors", "",),
+	("PSGVAL___ICON", FMAXPSG_SCTN0901_STRDEF, "ICON", "icon", "",),
+	("PSGVAL___IMAGE_DATA", FMAXPSG_SCTN0901_STRDEF, "IMAGE_DATA", "image_data", "",),
+	("PSGVAL___IMAGE_FILENAME", FMAXPSG_SCTN0901_STRDEF, "IMAGE_FILENAME", "image_filename", "",),
+	("PSGVAL___IMAGE_SIZE", FMAXPSG_SCTN0901_STRDEF, "IMAGE_SIZE", "image_size", "",),
+	("PSGVAL___IMAGE_SUBSAMPLE", FMAXPSG_SCTN0901_STRDEF, "IMAGE_SUBSAMPLE", "image_subsample", "",),
+	("PSGVAL___INITIAL_FOLDER", FMAXPSG_SCTN0901_STRDEF, "INITIAL_FOLDER", "initial_folder", "",),
+	("PSGVAL___JUSTIFICATION", FMAXPSG_SCTN0901_STRDEF, "JUSTIFICATION", "justification", "",),
+	("PSGVAL___K", FMAXPSG_SCTN0901_STRDEF, "K", "k", "",),
+	("PSGVAL___KEEP_ON_TOP", FMAXPSG_SCTN0901_STRDEF, "KEEP_ON_TOP", "keep_on_top", "",),
+	("PSGVAL___KEY", FMAXPSG_SCTN0901_STRDEF, "KEY", "key", "",),
+	("PSGVAL___LAYOUT", FMAXPSG_SCTN0901_STRDEF, "LAYOUT", "layout", "",),
+	("PSGVAL___LOCATION", FMAXPSG_SCTN0901_STRDEF, "LOCATION", "location", "",),
+	("PSGVAL___MARGINS", FMAXPSG_SCTN0901_STRDEF, "MARGINS", "margins", "",),
+	("PSGVAL___METADATA", FMAXPSG_SCTN0901_STRDEF, "METADATA", "metadata", "",),
+	("PSGVAL___MODAL", FMAXPSG_SCTN0901_STRDEF, "MODAL", "modal", "",),
+	("PSGVAL___NO_TITLEBAR", FMAXPSG_SCTN0901_STRDEF, "NO_TITLEBAR", "no_titlebar", "",),
+	("PSGVAL___PAD", FMAXPSG_SCTN0901_STRDEF, "PAD", "pad", "",),
+	("PSGVAL___PROGRESS_BAR_COLOR", FMAXPSG_SCTN0901_STRDEF, "PROGRESS_BAR_COLOR", "progress_bar_color", "",),
+	("PSGVAL___READONLY", FMAXPSG_SCTN0901_STRDEF, "READONLY", "readonly", "",),
+	("PSGVAL___RESIZABLE", FMAXPSG_SCTN0901_STRDEF, "RESIZABLE", "resizable", "",),
+	("PSGVAL___RETURN_KEYBOARD_EVENTS", FMAXPSG_SCTN0901_STRDEF, "RETURN_KEYBOARD_EVENTS", "return_keyboard_events", "",),
+	("PSGVAL___RIGHT_CLICK_MENU", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU", "right_click_menu", "",),
+	("PSGVAL___RIGHT_CLICK_MENU_BACKGROUND_COLOR", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_BACKGROUND_COLOR", "right_click_menu_background_color", "",),
+	("PSGVAL___RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR", "right_click_menu_disabled_text_color", "",),
+	("PSGVAL___RIGHT_CLICK_MENU_FONT", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_FONT", "right_click_menu_font", "",),
+	("PSGVAL___RIGHT_CLICK_MENU_SELECTED_COLORS", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_SELECTED_COLORS", "right_click_menu_selected_colors", "",),
+	("PSGVAL___RIGHT_CLICK_MENU_TEAROFF", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_TEAROFF", "right_click_menu_tearoff", "",),
+	("PSGVAL___RIGHT_CLICK_MENU_TEXT_COLOR", FMAXPSG_SCTN0901_STRDEF, "RIGHT_CLICK_MENU_TEXT_COLOR", "right_click_menu_text_color", "",),
+	("PSGVAL___S", FMAXPSG_SCTN0901_STRDEF, "S", "s", "",),
+	("PSGVAL___SCROLLABLE", FMAXPSG_SCTN0901_STRDEF, "SCROLLABLE", "scrollable", "can this column be scrolled bool",),
+	("PSGVAL___SIZE", FMAXPSG_SCTN0901_STRDEF, "SIZE", "size", "",),
+	("PSGVAL___SNOOZABLE", FMAXPSG_SCTN0901_KEYDEF, "SNOOZABLE", "",),
+	("PSGVAL___SNOOZED", FMAXPSG_SCTN0901_KEYDEF, "SNOOZED", "snoozed bool",),
+	("PSGVAL___TARGET", FMAXPSG_SCTN0901_STRDEF, "TARGET", "target", "",),
+	("PSGVAL___TEXT", FMAXPSG_SCTN0901_STRDEF, "TEXT", "text", "",),
+	("PSGVAL___TEXT_COLOR", FMAXPSG_SCTN0901_STRDEF, "TEXT_COLOR", "text_color", "",),
+	("PSGVAL___TEXT_JUSTIFICATION", FMAXPSG_SCTN0901_STRDEF, "TEXT_JUSTIFICATION", "text_justification", "",),
+	("PSGVAL___TITLE", FMAXPSG_SCTN0901_STRDEF, "TITLE", "title", "",),
+	("PSGVAL___TITLEBAR_BACKGROUND_COLOR", FMAXPSG_SCTN0901_STRDEF, "TITLEBAR_BACKGROUND_COLOR", "titlebar_background_color", "",),
+	("PSGVAL___TITLEBAR_FONT", FMAXPSG_SCTN0901_STRDEF, "TITLEBAR_FONT", "titlebar_font", "",),
+	("PSGVAL___TITLEBAR_ICON", FMAXPSG_SCTN0901_STRDEF, "TITLEBAR_ICON", "titlebar_icon", "",),
+	("PSGVAL___TITLEBAR_TEXT_COLOR", FMAXPSG_SCTN0901_STRDEF, "TITLEBAR_TEXT_COLOR", "titlebar_text_color", "",),
+	("PSGVAL___TOOLTIP", FMAXPSG_SCTN0901_STRDEF, "TOOLTIP", "tooltip", "",),
+	("PSGVAL___TRANSPARENT_COLOR", FMAXPSG_SCTN0901_STRDEF, "TRANSPARENT_COLOR", "transparent_color", "",),
+	("PSGVAL___TTK_THEME", FMAXPSG_SCTN0901_STRDEF, "TTK_THEME", "ttk_theme", "",),
+	("PSGVAL___USE_CUSTOM_TITLEBAR", FMAXPSG_SCTN0901_STRDEF, "USE_CUSTOM_TITLEBAR", "use_custom_titlebar", "",),
+	("PSGVAL___USE_DEFAULT_FOCUS", FMAXPSG_SCTN0901_STRDEF, "USE_DEFAULT_FOCUS", "use_default_focus", "",),
+	("PSGVAL___USE_TTK_BUTTONS", FMAXPSG_SCTN0901_STRDEF, "USE_TTK_BUTTONS", "use_ttk_buttons", "",),
+	("PSGVAL___VALUES", FMAXPSG_SCTN0901_STRDEF, "VALUES", "values", "",),
+	("PSGVAL___VERTICAL_ALIGNMENT", FMAXPSG_SCTN0901_STRDEF, "VERTICAL_ALIGNMENT", "vertical_alignment", "",),
+	("PSGVAL___VERTICAL_SCROLL_ONLY", FMAXPSG_SCTN0901_STRDEF, "VERTICAL_SCROLL_ONLY", "verticale_scroll_only", "",),
+	("PSGVAL___VISIBLE", FMAXPSG_SCTN0901_STRDEF, "VISIBLE", "visible", "",),
 	("PSGVAL_____", FMAX_NOP, "FMPSG_BEGINS",),
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 ]
@@ -1762,9 +1386,9 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN090C_WINDOWDICT, \
 		FMPSG_SCTN090D_FRAMECMNTDICT, \
 		FMPSG_SCTN090D_FRAMEDICT, \
-		FMPSG_SCTN090D_MAINCMNTDICT, \
-		FMPSG_SCTN090D_MAINDICT, \
-		FMPSG_SCTN090D_MAINDICTDICT
+		FMPSG_SCTN090E_MAINCMNTDICT, \
+		FMPSG_SCTN090E_MAINDICT, \
+		FMPSG_SCTN090E_MAINDICTDICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
