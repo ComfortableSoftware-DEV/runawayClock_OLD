@@ -9,20 +9,36 @@ import CF
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-BACKGROUNDCOLOR = "#331122"  # the background of the main frames
 BLACK = "#000000"  # black
+CLOCKS_SZ_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
+CLOCKS_SZ_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
+CLOCKS_SZ_TIME_TOGO = 10  # size of the main togo clock on the clocks only floating widget
+COLOR_BACKGROUND = "#331122"  # the background of the main frames
+COLOR_CLOCK_BACKGROUND = "#221133"  # the background of the main frames
+COLOR_CLOCK_TIME = "#882299"  # color of the clock on any window/frame/etc.
+COLOR_TEXT_HIGH = "#CC0088"  # the highlight color used in blinking bits when they are 'lit'
+COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
+COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
+COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
+COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
+EDIT_SZ_CLOCK_TOGO = 10  # size of the main togo clock on the clocks only floating widget
+EDIT_SZ_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
+EDIT_SZ_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
 GRAY3 = "#333333"  # gray 3
 GRAY6 = "#666666"  # gray 6
 GRAY9 = "#999999"  # gray 9
 GRAYC = "#CCCCCC"  # gray C
-NORMALCOLOR = "#660044"  # the color the clock digits are
-NORMALHIGH = "#CC0088"  # the highlight color used in blinking bits when they are 'lit'
-NORMALLOW = "#330022"  # the color the clock digits are
+JUSTIFICATION_CENTER = "center"  # comment
+JUSTIFICATION_LEFT = "left"  # comment
+JUSTIFICATION_RIGHT = "right"  # comment
+MAIN_SZ_TIME_CLOCK = 60  # size of the main clock on the clocks only floating widget
+MAIN_SZ_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floating widget
+MAIN_SZ_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
 WHITE = "#FFFFFF"  # white
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0901 DEF2
+# * SCTN0910 DEF2
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALPHA_CHANNEL = "alpha_channel"  # 
 AUTO_CLOSE = "auto_close"  # 
@@ -42,7 +58,14 @@ CHANGE_SUBMITS = "change_submits"  #
 CHECKBOX_COLOR = "checkbox_color"  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
 CIRCLE_COLOR = "circle_color"  # 
 CLICK_SUBMITS = "click_submits"  # 
+CLOCKS_FONT_CLOCK = (DEFAULT_FONT, CLOCKS_SZ_TIME_CLOCK)  # the font for the clocks only clock
 CLOCKTIME = "CLOCKTIME"  # holds the clock value (str HH:MM:SS)
+COLORS_CLOCK_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_CLOCK_TIME = (COLOR_CLOCK_TIME, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_CLOCK_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TEXT_HIGH = (COLOR_TEXT_HIGH, COLOR_BACKGROUND)  # combined colors for a clock text element
+COLORS_TEXT_LOW = (COLOR_TEXT_LOW, COLOR_BACKGROUND)  # combined colors for a clock text element
+COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors for a clock text element
 DEBUGGER_ENABLED = "debugger_enabled"  # 
 DEFAULT = "default"  # 
 DEFAULT_BUTTON_ELEMENT_SIZE = "default_button_element_size"  # 
@@ -67,6 +90,10 @@ FILE_TYPES = "file_types"  #
 FINALIZE = "finalize"  # 
 FOCUS = "focus"  # 
 FONT = "font"  # 
+FONT_MAIN = "Source Code Pro"  # set the main font
+FONTSZ_CLOCKS_CLOCK_TIME = (FONT_MAIN, CLOCKS_SZ_TIME_CLOCK)  # combined colors for a clock text element
+FONTSZ_CLOCKS_ELAPSED = (FONT_MAIN, CLOCKS_SZ_TIME_ELAPSED)  # combined colors for a clock text element
+FONTSZ_CLOCKS_TOGO = (FONT_MAIN, CLOCKS_SZ_TIME_TOGO)  # combined colors for a clock text element
 FORCE_TOPLEVEL = "force_toplevel"  # 
 GRAB = "grab"  # 
 GRAB_ANYWHERE = "grab_anywhere"  # 
@@ -84,9 +111,11 @@ JUSTIFICATION = "justification"  #
 K = "k"  # 
 KEEP_ON_TOP = "keep_on_top"  # 
 KEY = "key"  # 
+KEY_TIME_CLOCK = "KEY_TIME_CLOCK"  # key for all clocks time
+KEY_TIME_ELAPSED = "KEY_TIME_ELAPSED"  # key for all clocks elapsed
+KEY_TIME_TOGO = "KEY_TIME_TOGO"  # key for all clocks togo
 LAYOUT = "layout"  # 
 LOCATION = "location"  # 
-MAIN_FONT = "Source Code Pro"  # set the main font
 MARGINS = "margins"  # 
 METADATA = "metadata"  # 
 MODAL = "modal"  # 
@@ -120,12 +149,13 @@ TARGET = "target"  #
 TEXT = "text"  # 
 TEXT_COLOR = "text_color"  # 
 TEXT_JUSTIFICATION = "text_justification"  # 
-TIME_ALARM = "TIME_ALARM"  # 
+TIME_ALARM = "TIME_ALARM"  # the alarm time
+TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # 24 hour centric elapsed time running, can be reset, may go to 99h
 TIME_INTERVAL = "TIME_INTERVAL"  # 
 TIME_OF_NEXT_EVENT = "TIME_OF_NEXT_EVENT"  # what time is the next alarm, == TIME_ALARM is tomorrow
 TIME_REMIND = "TIME_REMIND"  # 
-TIME_TO_NEXT_EVENT = "TIME_TO_NEXT_EVENT"  # down counter to next event on this window/alarm/interval/reminder
+TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 TITLE = "title"  # 
 TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  # 
 TITLEBAR_FONT = "titlebar_font"  # 
@@ -143,7 +173,7 @@ VALUE = "value"  # the value of the element
 VALUES = "values"  # list of values
 VERTICAL_ALIGNMENT = "vertical_alignment"  # 
 VERTICAL_SCROLL_ONLY = "verticale_scroll_only"  # 
-VISIBLE = "visible"  # 
+VISIBLE = "visible"  # visibility of elements
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -178,7 +208,7 @@ EMPTY_ALARMTUP = (
 	(SNOOZED, True),  # enabled state of this entry
 	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
 	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_TO_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
 )
 
 def EMPTY_ALARMDICT():
@@ -200,11 +230,25 @@ EMPTY_ALARM_REMINDTUP = (
 	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
 	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
 	(TIME_REMIND, "00:00:00"),  # time this alarm is set for
-	(TIME_TO_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
 )
 
 def EMPTY_ALARM_REMINDDICT():
 	return dict((x, y) for x, y in EMPTY_ALARM_REMINDTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of EMPTY_CLOCKS structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+EMPTY_CLOCKSTUP = (
+	(TIME_CLOCK, "00:00:00"),  # the main clock time
+	(TIME_ELAPSED, "00:00:00"),  # the main elapsed time
+	(TIME_OF_NEXT_EVENT, "00:00:00"),  # the main count down to the next event time
+)
+
+def EMPTY_CLOCKSDICT():
+	return dict((x, y) for x, y in EMPTY_CLOCKSTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -218,7 +262,7 @@ EMPTY_INTERVALTUP = (
 	(RUNNING, True),  # running state of this entry
 	(TIME_INTERVAL, "00:00:00"),  # time this alarm is set for
 	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_TO_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
 )
 
 def EMPTY_INTERVALDICT():
