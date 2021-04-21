@@ -226,6 +226,7 @@ FMAXFM_SCTN0102_STR_DEF = "FMAXFM_SCTN0102_STR_DEF"  # define a FM string <NAC><
 FMAXFM_SCTN0102_VAL_DEF = "FMAXFM_SCTN0102_VAL_DEF"  # define a FM value_ <NAC><VALNAME><VAL>
 FMAXFM_SCTN0103_DICT_DEF = "FMAXFM_SCTN0103_DICT_DEF"  # define a dict for FM <NAC>
 FMAXFM_SCTN0104_LIST_DEF = "FMAXFM_SCTN0104_LIST_DEF"  # define a list in FM <NAC>
+FMAXPSG_SCTN0900_KEY_DEF = "FMAXPSG_SCTN0900_KEY_DEF"  # put a key in def1 of PSG.py
 FMAXPSG_SCTN0900_STR_DEF = "FMAXPSG_SCTN0900_STR_DEF"  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
 FMAXPSG_SCTN0900_VAL_DEF = "FMAXPSG_SCTN0900_VAL_DEF"  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
 FMAXPSG_SCTN0901_DUBLT_SS_DEF = "FMAXPSG_SCTN0901_DUBLT_SS_DEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
@@ -270,16 +271,21 @@ FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD = "FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD"  # add a
 FMAXPSG_SCTN0909_TEXT_DEF = "FMAXPSG_SCTN0909_TEXT_DEF"  # define a text <NAC><TEXTNAME>
 FMAXPSG_SCTN0909_TEXT_STR_ADD = "FMAXPSG_SCTN0909_TEXT_STR_ADD"  # add a str to a text element <NAC><TEXTNAME><KEY><VAL>
 FMAXPSG_SCTN0909_TEXT_VAL_ADD = "FMAXPSG_SCTN0909_TEXT_VAL_ADD"  # add a val to a text element <NAC><TEXTNAME>
-FMAXPSG_SCTN090A_COLUMN_DEF = "FMAXPSG_SCTN090A_COLUMN_DEF"  # define a column <NAC><COLUMNNAME>
-FMAXPSG_SCTN090B_LAYOUT_DEF = "FMAXPSG_SCTN090B_LAYOUT_DEF"  # define a layout <NAC><LAYOUTNAME>
-FMAXPSG_SCTN090C_WINDOW_DEF = "FMAXPSG_SCTN090C_WINDOW_DEF"  # define a window <NAC><WINDOWNAME>
+FMAXPSG_SCTN090A_RADIO_DEF = "FMAXPSG_SCTN090A_RADIO_DEF"  # define a radio button element
+FMAXPSG_SCTN090B_COLUMN_DEF = "FMAXPSG_SCTN090B_COLUMN_DEF"  # define a column <NAC><COLUMNNAME>
+FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_DEF = "FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_DEF"  # add a dict to the mainapp dict <NAC><DICTNAME
+FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_STR_ADD = "FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_STR_ADD"  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
+FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_VAL_ADD = "FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_VAL_ADD"  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
+FMAXPSG_SCTN090C_MAINAPP_DICT_STR_ADD = "FMAXPSG_SCTN090C_MAINAPP_DICT_STR_ADD"  # add a string to the mainapp dict <NAC><KEY><STR>
+FMAXPSG_SCTN090C_MAINAPP_DICT_VAL_ADD = "FMAXPSG_SCTN090C_MAINAPP_DICT_VAL_ADD"  # add a value to the mainapp dict <NAC><KEY><VAL>
 FMAXPSG_SCTN090D_FRAME_DEF = "FMAXPSG_SCTN090D_FRAME_DEF"  # define a frame <NAC><FRAMENAME>
-FMAXPSG_SCTN090E_MAINDICT_DEF = "FMAXPSG_SCTN090E_MAINDICT_DEF"  # define a main dictdict <NAC><MAINNAME>
-FMAXPSG_SCTN090E_MAINDICT_DICT_DEF = "FMAXPSG_SCTN090E_MAINDICT_DICT_DEF"  # add a str to the main dictdict
-FMAXPSG_SCTN090E_MAINDICT_DICT_STR_ADD = "FMAXPSG_SCTN090E_MAINDICT_DICT_STR_ADD"  # add a str to the main dictdict
-FMAXPSG_SCTN090E_MAINDICT_DICT_VAL_ADD = "FMAXPSG_SCTN090E_MAINDICT_DICT_VAL_ADD"  # add a str to the main dictdict
-FMAXPSG_SCTN090E_MAINDICT_STR_ADD = "FMAXPSG_SCTN090E_MAINDICT_STR_ADD"  # add a str to the main dictdict
-FMAXPSG_SCTN090E_MAINDICT_VAL_ADD = "FMAXPSG_SCTN090E_MAINDICT_VAL_ADD"  # add a str to the main dictdict
+FMAXPSG_SCTN090E_LAYOUT_DEF = "FMAXPSG_SCTN090E_LAYOUT_DEF"  # define layouts
+FMAXPSG_SCTN090F_MAINDICT_DEF = "FMAXPSG_SCTN090F_MAINDICT_DEF"  # define a main dictdict <NAC><MAINNAME>
+FMAXPSG_SCTN090F_MAINDICT_DICT_DEF = "FMAXPSG_SCTN090F_MAINDICT_DICT_DEF"  # add a str to the main dictdict
+FMAXPSG_SCTN090F_MAINDICT_DICT_STR_ADD = "FMAXPSG_SCTN090F_MAINDICT_DICT_STR_ADD"  # add a str to the main dictdict
+FMAXPSG_SCTN090F_MAINDICT_DICT_VAL_ADD = "FMAXPSG_SCTN090F_MAINDICT_DICT_VAL_ADD"  # add a str to the main dictdict
+FMAXPSG_SCTN090F_MAINDICT_STR_ADD = "FMAXPSG_SCTN090F_MAINDICT_STR_ADD"  # add a str to the main dictdict
+FMAXPSG_SCTN090F_MAINDICT_VAL_ADD = "FMAXPSG_SCTN090F_MAINDICT_VAL_ADD"  # add a str to the main dictdict
 FMAXPSG_SCTN0910_DUBLT_SS_DEF = "FMAXPSG_SCTN0910_DUBLT_SS_DEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
 FMAXPSG_SCTN0910_DUBLT_SV_DEF = "FMAXPSG_SCTN0910_DUBLT_SV_DEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
 FMAXPSG_SCTN0910_DUBLT_VS_DEF = "FMAXPSG_SCTN0910_DUBLT_VS_DEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
@@ -310,6 +316,7 @@ FMAXFM_AXLST = [
 	FMAXFM_SCTN0102_VAL_DEF,  # define a FM value_ <NAC><VALNAME><VAL>
 	FMAXFM_SCTN0103_DICT_DEF,  # define a dict for FM <NAC>
 	FMAXFM_SCTN0104_LIST_DEF,  # define a list in FM <NAC>
+	FMAXPSG_SCTN0900_KEY_DEF,  # put a key in def1 of PSG.py
 	FMAXPSG_SCTN0900_STR_DEF,  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
 	FMAXPSG_SCTN0900_VAL_DEF,  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
 	FMAXPSG_SCTN0901_DUBLT_SS_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
@@ -354,16 +361,21 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0909_TEXT_DEF,  # define a text <NAC><TEXTNAME>
 	FMAXPSG_SCTN0909_TEXT_STR_ADD,  # add a str to a text element <NAC><TEXTNAME><KEY><VAL>
 	FMAXPSG_SCTN0909_TEXT_VAL_ADD,  # add a val to a text element <NAC><TEXTNAME>
-	FMAXPSG_SCTN090A_COLUMN_DEF,  # define a column <NAC><COLUMNNAME>
-	FMAXPSG_SCTN090B_LAYOUT_DEF,  # define a layout <NAC><LAYOUTNAME>
-	FMAXPSG_SCTN090C_WINDOW_DEF,  # define a window <NAC><WINDOWNAME>
+	FMAXPSG_SCTN090A_RADIO_DEF,  # define a radio button element
+	FMAXPSG_SCTN090B_COLUMN_DEF,  # define a column <NAC><COLUMNNAME>
+	FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_DEF,  # add a dict to the mainapp dict <NAC><DICTNAME
+	FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_STR_ADD,  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
+	FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_VAL_ADD,  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
+	FMAXPSG_SCTN090C_MAINAPP_DICT_STR_ADD,  # add a string to the mainapp dict <NAC><KEY><STR>
+	FMAXPSG_SCTN090C_MAINAPP_DICT_VAL_ADD,  # add a value to the mainapp dict <NAC><KEY><VAL>
 	FMAXPSG_SCTN090D_FRAME_DEF,  # define a frame <NAC><FRAMENAME>
-	FMAXPSG_SCTN090E_MAINDICT_DEF,  # define a main dictdict <NAC><MAINNAME>
-	FMAXPSG_SCTN090E_MAINDICT_DICT_DEF,  # add a str to the main dictdict
-	FMAXPSG_SCTN090E_MAINDICT_DICT_STR_ADD,  # add a str to the main dictdict
-	FMAXPSG_SCTN090E_MAINDICT_DICT_VAL_ADD,  # add a str to the main dictdict
-	FMAXPSG_SCTN090E_MAINDICT_STR_ADD,  # add a str to the main dictdict
-	FMAXPSG_SCTN090E_MAINDICT_VAL_ADD,  # add a str to the main dictdict
+	FMAXPSG_SCTN090E_LAYOUT_DEF,  # define layouts
+	FMAXPSG_SCTN090F_MAINDICT_DEF,  # define a main dictdict <NAC><MAINNAME>
+	FMAXPSG_SCTN090F_MAINDICT_DICT_DEF,  # add a str to the main dictdict
+	FMAXPSG_SCTN090F_MAINDICT_DICT_STR_ADD,  # add a str to the main dictdict
+	FMAXPSG_SCTN090F_MAINDICT_DICT_VAL_ADD,  # add a str to the main dictdict
+	FMAXPSG_SCTN090F_MAINDICT_STR_ADD,  # add a str to the main dictdict
+	FMAXPSG_SCTN090F_MAINDICT_VAL_ADD,  # add a str to the main dictdict
 	FMAXPSG_SCTN0910_DUBLT_SS_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
 	FMAXPSG_SCTN0910_DUBLT_SV_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
 	FMAXPSG_SCTN0910_DUBLT_VS_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
@@ -425,16 +437,18 @@ FMPSG_SCTN0908_CHECKBOX_CMNT_DICT = {}  # holds all of the button entriess (TUPD
 FMPSG_SCTN0908_CHECKBOX_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0909_TEXT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0909_TEXT_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090A_COLUMNS_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090A_COLUMNSCMNTDICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN090B_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN090B_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090C_WINDOW_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN090C_WINDOW_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090A_RADIO_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090A_RADIO_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090B_COLUMNS_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090B_COLUMNSCMNTDICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090C_MAINAPP_CMNT_DICT = {}  # the main app dict for this app
+FMPSG_SCTN090C_MAINAPP_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090D_FRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090D_FRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090E_MAINDICT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN090E_MAINDICT_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090E_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090E_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090F_MAINDICT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090F_MAINDICT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0910_DEF3_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0910_DEF3_DICT = {}  # define the dict to hold everything in SCTN0900
 
@@ -449,6 +463,15 @@ FMPSG_SCTN0910_DEF3_DICT = {}  # define the dict to hold everything in SCTN0900
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * end of managed portions of FM.py
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+#
+
+
+#
+#
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of unmanaged sections of FM.py
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
 
@@ -493,6 +516,7 @@ TBGLST = [
 	("FMAXFM_SCTN0104_LIST_DEF", FMAXFM_SCTN0101_AX_DEF, "define a list in FM <NAC>",),
 	("FMAXFM_____", FMAX_NOP, "FMAXFM_ENDS",),
 	("FMAXPSG", FMAX_NOP, "FMAXPSG_BEGINS",),
+	("FMAXPSG_SCTN0900_KEY_DEF", FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py",),
 	("FMAXPSG_SCTN0900_STR_DEF", FMAXFM_SCTN0101_AX_DEF, "define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>",),
 	("FMAXPSG_SCTN0900_VAL_DEF", FMAXFM_SCTN0101_AX_DEF, "define a value in the first define section in PSG.py <NAC><VALNAME><VAL>",),
 	("FMAXPSG_SCTN0901_DUBLT_SS_DEF", FMAXFM_SCTN0101_AX_DEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
@@ -537,16 +561,21 @@ TBGLST = [
 	("FMAXPSG_SCTN0909_TEXT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a text <NAC><TEXTNAME>",),
 	("FMAXPSG_SCTN0909_TEXT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to a text element <NAC><TEXTNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN0909_TEXT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a val to a text element <NAC><TEXTNAME>",),
-	("FMAXPSG_SCTN090A_COLUMN_DEF", FMAXFM_SCTN0101_AX_DEF, "define a column <NAC><COLUMNNAME>",),
-	("FMAXPSG_SCTN090B_LAYOUT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a layout <NAC><LAYOUTNAME>",),
-	("FMAXPSG_SCTN090C_WINDOW_DEF", FMAXFM_SCTN0101_AX_DEF, "define a window <NAC><WINDOWNAME>",),
+	("FMAXPSG_SCTN090A_RADIO_DEF", FMAXFM_SCTN0101_AX_DEF, "define a radio button element",),
+	("FMAXPSG_SCTN090B_COLUMN_DEF", FMAXFM_SCTN0101_AX_DEF, "define a column <NAC><COLUMNNAME>",),
+	("FMAXPSG_SCTN090C_MAINAPP_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a string to the mainapp dict <NAC><KEY><STR>",),
+	("FMAXPSG_SCTN090C_MAINAPP_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to the mainapp dict <NAC><KEY><VAL>",),
+	("FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>",),
+	("FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>",),
+	("FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_DEF", FMAXFM_SCTN0101_AX_DEF, "add a dict to the mainapp dict <NAC><DICTNAME",),
 	("FMAXPSG_SCTN090D_FRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME>",),
-	("FMAXPSG_SCTN090E_MAINDICT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a main dictdict <NAC><MAINNAME>",),
-	("FMAXPSG_SCTN090E_MAINDICT_DICT_DEF", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
-	("FMAXPSG_SCTN090E_MAINDICT_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
-	("FMAXPSG_SCTN090E_MAINDICT_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
-	("FMAXPSG_SCTN090E_MAINDICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
-	("FMAXPSG_SCTN090E_MAINDICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
+	("FMAXPSG_SCTN090E_LAYOUT_DEF", FMAXFM_SCTN0101_AX_DEF, "define layouts",),
+	("FMAXPSG_SCTN090F_MAINDICT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a main dictdict <NAC><MAINNAME>",),
+	("FMAXPSG_SCTN090F_MAINDICT_DICT_DEF", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
+	("FMAXPSG_SCTN090F_MAINDICT_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
+	("FMAXPSG_SCTN090F_MAINDICT_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
+	("FMAXPSG_SCTN090F_MAINDICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
+	("FMAXPSG_SCTN090F_MAINDICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
 	("FMAXPSG_SCTN0910_DUBLT_SS_DEF", FMAXFM_SCTN0101_AX_DEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
 	("FMAXPSG_SCTN0910_DUBLT_SV_DEF", FMAXFM_SCTN0101_AX_DEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
 	("FMAXPSG_SCTN0910_DUBLT_VS_DEF", FMAXFM_SCTN0101_AX_DEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
@@ -583,6 +612,8 @@ TBGLST = [
 	("FMPSG", FMAX_NOP, "FMPSG_BEGINS",),
 	("FMPSG_SCTN0900_DEF1_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0900_DEF1_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0901_DEF2_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0901_DEF2_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0902_DICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0902_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0903_LIST_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
@@ -602,25 +633,32 @@ TBGLST = [
 	("FMPSG_SCTN0908_CHECKBOX_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0909_TEXT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0909_TEXT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
-	("FMPSG_SCTN090A_COLUMNSCMNTDICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
-	("FMPSG_SCTN090A_COLUMNS_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
-	("FMPSG_SCTN090B_LAYOUT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
-	("FMPSG_SCTN090B_LAYOUT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
-	("FMPSG_SCTN090C_WINDOW_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
-	("FMPSG_SCTN090C_WINDOW_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN090A_RADIO_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
+	("FMPSG_SCTN090A_RADIO_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN090B_COLUMNSCMNTDICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
+	("FMPSG_SCTN090B_COLUMNS_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN090C_MAINAPP_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict for this app",),
+	("FMPSG_SCTN090C_MAINAPP_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict for this app",),
 	("FMPSG_SCTN090D_FRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN090D_FRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
-	("FMPSG_SCTN090E_MAINDICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
-	("FMPSG_SCTN090E_MAINDICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN090E_LAYOUT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
+	("FMPSG_SCTN090E_LAYOUT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN090F_MAINDICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
+	("FMPSG_SCTN090F_MAINDICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0910_DEF3_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0910_DEF3_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_____", FMAX_NOP, "FMPSG_ENDS",),
 	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
+	("PSGVAL_APPMODE_CLOCKS", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_CLOCKS", "mode clocks only",),
+	("PSGVAL_APPMODE_EDIT", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_EDIT", "edit mode on top of main window",),
+	("PSGVAL_APPMODE_MAIN", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_MAIN", "main mode (xpand from clocks to this)",),
 	("PSGVAL_CLOCKS_SZ_TIME_CLOCK", FMAXPSG_SCTN0900_VAL_DEF, "CLOCKS_SZ_TIME_CLOCK", "20", "size of the main clock on the clocks only floating widget",),
 	("PSGVAL_CLOCKS_SZ_TIME_ELAPSED", FMAXPSG_SCTN0900_VAL_DEF, "CLOCKS_SZ_TIME_ELAPSED", "10", "size of the elapsed clock on the clocks only floating widget",),
 	("PSGVAL_CLOCKS_SZ_TIME_TOGO", FMAXPSG_SCTN0900_VAL_DEF, "CLOCKS_SZ_TIME_TOGO", "10", "size of the main togo clock on the clocks only floating widget",),
 	("PSGVAL_COLOR_BACKGROUND", FMAXPSG_SCTN0900_STR_DEF, "COLOR_BACKGROUND", "#331122", "the background of the main frames",),
 	("PSGVAL_COLOR_BLACK", FMAXPSG_SCTN0900_STR_DEF, "BLACK", "#000000", "black",),
+	("PSGVAL_COLOR_BTN_BACKGROUND", FMAXPSG_SCTN0901_STR_DEF, "COLOR_BTN_BACKGROUND", "#441133", "background color on buttons by default",),
+	("PSGVAL_COLOR_BTN_TEXT", FMAXPSG_SCTN0901_STR_DEF, "COLOR_BTN_TEXT", "#660044", "text color on buttons by default",),
 	("PSGVAL_COLOR_CLOCK_BACKGROUND", FMAXPSG_SCTN0900_STR_DEF, "COLOR_CLOCK_BACKGROUND", "#221133", "the background of the main frames",),
 	("PSGVAL_COLOR_GRAY3", FMAXPSG_SCTN0900_STR_DEF, "GRAY3", "#333333", "gray 3",),
 	("PSGVAL_COLOR_GRAY6", FMAXPSG_SCTN0900_STR_DEF, "GRAY6", "#666666", "gray 6",),
@@ -671,15 +709,7 @@ TBGLST = [
 	("PSGVAL_EMPTY_INTERVAL_TIME_INTERVAL", FMAXPSG_SCTN0905_TUPDICT_STR_ADD, "EMPTY_INTERVAL", "TIME_INTERVAL", "00:00:00", "time this alarm is set for",),
 	("PSGVAL_EMPTY_INTERVAL_TIME_OF_NEXT_EVENT", FMAXPSG_SCTN0905_TUPDICT_STR_ADD, "EMPTY_INTERVAL", "TIME_OF_NEXT_EVENT", "00:00:00", "post snooze or tomorrow",),
 	("PSGVAL_EMPTY_INTERVAL_TIME_TOGO", FMAXPSG_SCTN0905_TUPDICT_STR_ADD, "EMPTY_INTERVAL", "TIME_TOGO", "00:00:00", "post snooze or tomorrow",),
-	("PSGVAL_EMPTY_MAIN", FMAXPSG_SCTN090E_MAINDICT_DEF, "EMPTY_MAIN", "empty main form",),
-	("PSGVAL_EMPTY_MAIN_AVOID_MOUSE", FMAXPSG_SCTN090E_MAINDICT_VAL_ADD, "EMPTY_MAIN", "AVOID_MOUSE", "True", "will the clock avoid the mouse or not bool",),
-	("PSGVAL_EMPTY_MAIN_EVENT_ENTRIES", FMAXPSG_SCTN090E_MAINDICT_DICT_DEF, "EMPTY_MAIN", "EVENT_ENTRIES", "{}", "the events for this structure",),
-	("PSGVAL_EMPTY_MAIN_INDEX_OF_NEXT_EVENT", FMAXPSG_SCTN090E_MAINDICT_VAL_ADD, "EMPTY_MAIN", "INDEX_OF_NEXT_EVENT", "0", "index of the next event in time",),
-	("PSGVAL_EMPTY_MAIN_TIMECLOCK", FMAXPSG_SCTN090E_MAINDICT_STR_ADD, "EMPTY_MAIN", "TIMECLOCK", "00:00:00", "the big clock time, updated every time anything is done",),
-	("PSGVAL_EMPTY_MAIN_TIME_ELAPSED", FMAXPSG_SCTN090E_MAINDICT_STR_ADD, "EMPTY_MAIN", "TIME_ELAPSED", "00:00:00", "time elapsed since app started 24 hour centric, consider 99h (4 1/8 days)",),
-	("PSGVAL_EMPTY_MAIN_TIME_OF_NEXT_EVENT", FMAXPSG_SCTN090E_MAINDICT_STR_ADD, "EMPTY_MAIN", "TIME_OF_NEXT_EVENT", "00:00:00", "time of next event",),
-	("PSGVAL_EMPTY_MAIN_TIME_TOGO", FMAXPSG_SCTN090E_MAINDICT_STR_ADD, "EMPTY_MAIN", "TIME_TOGO", "00:00:00", "time to next event counting down",),
-	("PSGVAL_EMPTY_MAIN_TRANSPARENT_UNDER_MOUSE", FMAXPSG_SCTN090E_MAINDICT_VAL_ADD, "EMPTY_MAIN", "TRANSPARENT_UNDER_MOUSE", "True", "will the clock be transparent under the mouse (ineffective if mouse is avoided)",),
+	("PSGVAL_FONT_DEFAULT", FMAXPSG_SCTN0900_STR_DEF, "FONT_DEFAULT", "Source Code Pro", "set the main font",),
 	("PSGVAL_FULL_BUTTON", FMAXPSG_SCTN0905_TUPDICT_DEF, "FULL_BUTTON", "define the button empty tupdict",),
 	("PSGVAL_FULL_BUTTON_AUTO_SIZE_BUTTON", FMAXPSG_SCTN0905_TUPDICT_VAL_ADD, "FULL_BUTTON", "AUTO_SIZE_BUTTON", "None", "if True the button size is sized to fit the text",),
 	("PSGVAL_FULL_BUTTON_BIND_RETURN_KEY", FMAXPSG_SCTN0905_TUPDICT_VAL_ADD, "FULL_BUTTON", "BIND_RETURN_KEY", "False", "If True the return key will cause this button to be pressed",),
@@ -965,35 +995,21 @@ TBGLST = [
 	("PSGVAL_UPDATE_COMBO_VALUE", FMAXPSG_SCTN0905_TUPDICT_VAL_ADD, "UPDATE_COMBO", "VALUE", "None", "change which value is current selected based on new list of previous list of choices",),
 	("PSGVAL_UPDATE_COMBO_VALUES", FMAXPSG_SCTN0905_TUPDICT_VAL_ADD, "UPDATE_COMBO", "VALUES", "None", "values to choose. While displayed as text, the items returned are what the caller supplied, not text",),
 	("PSGVAL_UPDATE_COMBO_VISIBLE", FMAXPSG_SCTN0905_TUPDICT_VAL_ADD, "UPDATE_COMBO", "VISIBLE", "None", "set visibility state of the element",),
-	("PSGVAL__AVOID_MOUSE", FMAXPSG_SCTN0901_KEY_DEF, "AVOID_MOUSE", "",),
-	("PSGVAL__CLOCKS_FONTSZ_TIME_CLOCK", FMAXPSG_SCTN0901_VAL_DEF, "CLOCKS_FONTSZ_TIME_CLOCK", "(FONT_DEFAULT, CLOCKS_SZ_TIME_CLOCK)", "the font for the clocks only clock",),
-	("PSGVAL__CLOCKS_FONTSZ_TIME_ELAPSED", FMAXPSG_SCTN0901_VAL_DEF, "CLOCKS_FONTSZ_TIME_ELAPSED", "(FONT_DEFAULT, CLOCKS_SZ_TIME_ELAPSED)", "the font for the clocks only clock",),
-	("PSGVAL__CLOCKS_FONTSZ_TIME_TOGO", FMAXPSG_SCTN0901_VAL_DEF, "CLOCKS_FONTSZ_TIME_TOGO", "(FONT_DEFAULT, CLOCKS_SZ_TIME_TOGO)", "the font for the clocks only clock",),
-	("PSGVAL__CLOCKTIME", FMAXPSG_SCTN0901_KEY_DEF, "CLOCKTIME", "holds the clock value (str HH:MM:SS)",),
-	("PSGVAL__COLORS_TEXT_HIGH", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TEXT_HIGH", "(COLOR_TEXT_HIGH, COLOR_BACKGROUND)", "combined colors for a clock text element",),
-	("PSGVAL__COLORS_TEXT_LOW", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TEXT_LOW", "(COLOR_TEXT_LOW, COLOR_BACKGROUND)", "combined colors for a clock text element",),
-	("PSGVAL__COLORS_TEXT_NORMAL", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TEXT_NORMAL", "(COLOR_TEXT_NORMAL, COLOR_BACKGROUND)", "combined colors for a clock text element",),
-	("PSGVAL__COLORS_TIME_CLOCK", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TIME_CLOCK", "(COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)", "combined colors for a clock text element",),
-	("PSGVAL__COLORS_TIME_ELAPSED", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TIME_ELAPSED", "(COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)", "combined colors for a clock text element",),
-	("PSGVAL__COLORS_TIME_TOGO", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TIME_TOGO", "(COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)", "combined colors for a clock text element",),
-	("PSGVAL_FONT_DEFAULT", FMAXPSG_SCTN0900_STR_DEF, "FONT_DEFAULT", "Source Code Pro", "set the main font",),
-	("PSGVAL__INDEX_OF_NEXT_EVENT", FMAXPSG_SCTN0901_KEY_DEF, "INDEX_OF_NEXT_EVENT", "",),
-	("PSGVAL__KEY_TIME_CLOCK", FMAXPSG_SCTN0901_KEY_DEF, "KEY_TIME_CLOCK", "key for all clocks time",),
-	("PSGVAL__KEY_TIME_ELAPSED", FMAXPSG_SCTN0901_KEY_DEF, "KEY_TIME_ELAPSED", "key for all clocks elapsed",),
-	("PSGVAL__KEY_TIME_TOGO", FMAXPSG_SCTN0901_KEY_DEF, "KEY_TIME_TOGO", "key for all clocks togo",),
-	("PSGVAL__MODE_ALARM", FMAXPSG_SCTN0901_KEY_DEF, "MODE_ALARM", "",),
-	("PSGVAL__MODE_ALARMREMIND", FMAXPSG_SCTN0901_KEY_DEF, "MODE_ALARMREMIND", "",),
-	("PSGVAL__MODE_INTERVAL", FMAXPSG_SCTN0901_KEY_DEF, "MODE_INTERVAL", "",),
-	("PSGVAL__NAME", FMAXPSG_SCTN0901_KEY_DEF, "NAME", "",),
-	("PSGVAL__PREDISMISSABLE", FMAXPSG_SCTN0901_KEY_DEF, "PREDISMISSABLE", "",),
-	("PSGVAL__RUNNING", FMAXPSG_SCTN0901_KEY_DEF, "RUNNING", "is this interval running or not",),
-	("PSGVAL__SNOOZABLE", FMAXPSG_SCTN0901_KEY_DEF, "SNOOZABLE", "",),
-	("PSGVAL__SNOOZED", FMAXPSG_SCTN0901_KEY_DEF, "SNOOZED", "snoozed bool",),
+	("PSGVAL__APPMODE", FMAXPSG_SCTN0901_VAL_DEF, "APPMODE", "APPMODE_CLOCKS", "what screen are we showing APPMODE_CLOCKS or APPMODE_CLOCKS+APPMODE_MAIN[+APPMODE_EDIT]",),
+	("PSGVAL__AVOID_MOUSE", FMAXPSG_SCTN0901_KEY_DEF, "AVOID_MOUSE", "key for avoiding the mouse bool",),
+	("PSGVAL__CLOCKS_BTN_XPAND00", FMAXPSG_SCTN0906_BTN_DEF, "CLOCKS_BTN_XPAND", "",),
+	("PSGVAL__CLOCKS_BTN_XPAND01", FMAXPSG_SCTN0906_BTN_VALADD, "CLOCKS_BTN_XPAND", "FONT", "FONT_DEFAULT", "comment",),
+	("PSGVAL__CLOCKS_BTN_XPAND01", FMAXPSG_SCTN0906_BTN_STRADD, "CLOCKS_BTN_XPAND", "IMAGE_FILENAME", "res/xpand.png", "filename for the button icon",),
+	("PSGVAL__CLOCKS_BTN_XPAND01", FMAXPSG_SCTN0906_BTN_STRADD, "CLOCKS_BTN_XPAND", "BUTTON_TEXT", "", "button_text empty for the XPAND button",),
+	("PSGVAL__CLOCKS_BTN_XPAND01", FMAXPSG_SCTN0906_BTN_VALADD, "CLOCKS_BTN_XPAND", "BUTTON_COLOR", "COLORS_BTN_NORMAL", "default button color",),
+	("PSGVAL__CLOCKS_BTN_XPAND01", FMAXPSG_SCTN0906_BTN_VALADD, "CLOCKS_BTN_XPAND", "FOCUS", "True", "focus on click",),
 	("PSGVAL__CLOCKS_DICT00", FMAXPSG_SCTN0902_DICT_DEF, "CLOCKS_DICT", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICT01", FMAXPSG_SCTN0902_DICT_STR_ADD, "CLOCKS_DICT", "KEY_TIME_CLOCK", "00:00:00", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICT01", FMAXPSG_SCTN0902_DICT_STR_ADD, "CLOCKS_DICT", "KEY_TIME_ELAPSED", "00:00:00", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICT01", FMAXPSG_SCTN0902_DICT_STR_ADD, "CLOCKS_DICT", "KEY_TIME_TOGO", "00:00:00", "holds the values for the clocks frame",),
-
+	("PSGVAL__CLOCKS_FONTSZ_TIME_CLOCK", FMAXPSG_SCTN0901_VAL_DEF, "CLOCKS_FONTSZ_TIME_CLOCK", "(FONT_DEFAULT, CLOCKS_SZ_TIME_CLOCK)", "the font for the clocks only clock",),
+	("PSGVAL__CLOCKS_FONTSZ_TIME_ELAPSED", FMAXPSG_SCTN0901_VAL_DEF, "CLOCKS_FONTSZ_TIME_ELAPSED", "(FONT_DEFAULT, CLOCKS_SZ_TIME_ELAPSED)", "the font for the clocks only clock",),
+	("PSGVAL__CLOCKS_FONTSZ_TIME_TOGO", FMAXPSG_SCTN0901_VAL_DEF, "CLOCKS_FONTSZ_TIME_TOGO", "(FONT_DEFAULT, CLOCKS_SZ_TIME_TOGO)", "the font for the clocks only clock",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK00", FMAXPSG_SCTN0909_TEXT_DEF, "CLOCKS_TEXT_TIME_CLOCK", "define the text element for CLOCKS_CLOCK_TIME",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_STR_ADD, "CLOCKS_TEXT_TIME_CLOCK", "JUSTIFICATION", "JUSTIFICATION_CENTER", "center everything",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_CLOCK", "BACKGROUND_COLOR", "COLOR_CLOCK_BACKGROUND", "background color for the clock elements",),
@@ -1015,6 +1031,26 @@ TBGLST = [
 	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_TOGO", "KEY", "KEY_TIME_TOGO", "characters, line size line",),
 	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_TOGO", "SIZE", "(5, 1)", "characters, lines size line",),
 	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_TOGO", "TEXT_COLOR", "COLOR_TIME_TOGO", "the text color for a clock_time element",),
+	("PSGVAL__COLORS_BTN_NORMAL", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_BTN_NORMAL", "(COLOR_TEXT_NORMAL, COLOR_BACKGROUND)", "comment",),
+	("PSGVAL__COLORS_TEXT_HIGH", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TEXT_HIGH", "(COLOR_TEXT_HIGH, COLOR_BACKGROUND)", "combined colors for a clock text element",),
+	("PSGVAL__COLORS_TEXT_LOW", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TEXT_LOW", "(COLOR_TEXT_LOW, COLOR_BACKGROUND)", "combined colors for a clock text element",),
+	("PSGVAL__COLORS_TEXT_NORMAL", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TEXT_NORMAL", "(COLOR_TEXT_NORMAL, COLOR_BACKGROUND)", "combined colors for a clock text element",),
+	("PSGVAL__COLORS_TIME_CLOCK", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TIME_CLOCK", "(COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)", "combined colors for a clock text element",),
+	("PSGVAL__COLORS_TIME_ELAPSED", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TIME_ELAPSED", "(COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)", "combined colors for a clock text element",),
+	("PSGVAL__COLORS_TIME_TOGO", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TIME_TOGO", "(COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)", "combined colors for a clock text element",),
+	("PSGVAL__EVENT_MODE", FMAXPSG_SCTN0901_KEY_DEF, "EVENT_MODE", "",),
+	("PSGVAL__EVENT_MODE_ALARM", FMAXPSG_SCTN0901_KEY_DEF, "EVENT_MODE_ALARM", "",),
+	("PSGVAL__EVENT_MODE_ALARMREMIND", FMAXPSG_SCTN0901_KEY_DEF, "EVENT_MODE_ALARMREMIND", "",),
+	("PSGVAL__EVENT_MODE_INTERVAL", FMAXPSG_SCTN0901_KEY_DEF, "EVENT_MODE_INTERVAL", "",),
+	("PSGVAL__INDEX_OF_NEXT_EVENT", FMAXPSG_SCTN0901_KEY_DEF, "INDEX_OF_NEXT_EVENT", "",),
+	("PSGVAL__KEY_TIME_CLOCK", FMAXPSG_SCTN0901_KEY_DEF, "KEY_TIME_CLOCK", "key for all clocks time",),
+	("PSGVAL__KEY_TIME_ELAPSED", FMAXPSG_SCTN0901_KEY_DEF, "KEY_TIME_ELAPSED", "key for all clocks elapsed",),
+	("PSGVAL__KEY_TIME_TOGO", FMAXPSG_SCTN0901_KEY_DEF, "KEY_TIME_TOGO", "key for all clocks togo",),
+	("PSGVAL__NAME", FMAXPSG_SCTN0901_KEY_DEF, "NAME", "",),
+	("PSGVAL__PREDISMISSABLE", FMAXPSG_SCTN0901_KEY_DEF, "PREDISMISSABLE", "",),
+	("PSGVAL__RUNNING", FMAXPSG_SCTN0901_KEY_DEF, "RUNNING", "is this interval running or not",),
+	("PSGVAL__SNOOZABLE", FMAXPSG_SCTN0901_KEY_DEF, "SNOOZABLE", "",),
+	("PSGVAL__SNOOZED", FMAXPSG_SCTN0901_KEY_DEF, "SNOOZED", "snoozed bool",),
 	("PSGVAL__TIME_ALARM", FMAXPSG_SCTN0901_KEY_DEF, "TIME_ALARM", "the alarm time",),
 	("PSGVAL__TIME_CLOCK", FMAXPSG_SCTN0901_KEY_DEF, "TIME_CLOCK", "the main clock time",),
 	("PSGVAL__TIME_ELAPSED", FMAXPSG_SCTN0901_KEY_DEF, "TIME_ELAPSED", "24 hour centric elapsed time running, can be reset, may go to 99h",),
@@ -1059,7 +1095,6 @@ TBGLST = [
 	("PSGVAL___ENABLE_CLOSE_ATTEMPTED_EVENT", FMAXPSG_SCTN0910_STR_DEF, "ENABLE_CLOSE_ATTEMPTED_EVENT", "enable_close_attempted_event", "",),
 	("PSGVAL___ENABLE_EVENTS", FMAXPSG_SCTN0910_STR_DEF, "ENABLE_EVENTS", "enable_events", "",),
 	("PSGVAL___EVENT_ENTRIES", FMAXPSG_SCTN0901_KEY_DEF, "EVENT_ENTRIES", "",),
-	("PSGVAL___EVENT_MODE", FMAXPSG_SCTN0901_KEY_DEF, "EVENT_MODE", "",),
 	("PSGVAL___EXPAND_X", FMAXPSG_SCTN0910_STR_DEF, "EXPAND_X", "expand_x", "",),
 	("PSGVAL___EXPAND_Y", FMAXPSG_SCTN0910_STR_DEF, "EXPAND_Y", "expand_y", "",),
 	("PSGVAL___FILE_TYPES", FMAXPSG_SCTN0910_STR_DEF, "FILE_TYPES", "file_types", "",),
@@ -1496,14 +1531,12 @@ def makePSG():
 	dictToUse_ = sortADict(FMPSG_SCTN0902_DICT_DICT)
 	for thisName_, value_ in dictToUse_.items():
 		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN0902_DICT_CMNT_DICT[thisName_], value_)}"""
-	strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN0903 lists")}"""
 	dictToUse_ = sortADict(FMPSG_SCTN0903_LIST_DICT)
 	for thisName_, value_ in dictToUse_.items():
 		strToRtn_ += f"""{makeAList(thisName_, FMPSG_SCTN0903_LIST_CMNT_DICT[thisName_], value_)}"""
-	strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN0904 platform equalizers")}"""
@@ -1518,6 +1551,60 @@ def makePSG():
 	dictToUse_ = sortADict(FMPSG_SCTN0905_TUPDICT_DICT)
 	for thisName_, value_ in dictToUse_.items():
 		strToRtn_ += f"""{makeANormalTupDict(thisName_, value_)}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN0906 button elements")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN0906_BTNS_DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN0906_BTNS_CMNT_DICT[thisName_], value_)}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN0907 spin box elements")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN0907_SPIN_DICT)  ## add FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN0907_SPIN_CMNT_DICT[thisName_], value_)}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN0908 checkbox elements")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN0908_CHECKBOX_DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN0902_DICT_CMNT_DICT[thisName_], value_)}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN0909 text elements")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN0909_TEXT_DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN0909_TEXT_CMNT_DICT[thisName_], value_)}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN090A radio elements")}""" ## needs to be managed with the same structure as layouts
+	dictToUse_ = sortADict(FMPSG_SCTN090A_RADIO_DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN090A_RADIO_DICT[thisName_], value_)}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN090B column elements")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN090B_COLUMNS_DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN090B_COLUMNS_DICT[thisName_], value_)}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN090E layout")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN090E_LAYOUT_DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN090E_LAYOUT_CMNT_DICT[thisName_], value_)}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN090F mainwindow root")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN090F_MAINDICT_DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN090F_MAINDICT_CMNT_DICT[thisName_], value_)}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN090D frame")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN090D_FRAME_DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN090D_FRAME_DICT[thisName_], value_)}"""
 
 	strToRtn_ += f"""{makeAWideComment("end of managed sections of PSG.py")}"""
 	strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
@@ -1554,6 +1641,8 @@ def parseTBGLST(FDTBGLST):
 		FMFM_SCTN0104_LIST_DICT, \
 		FMPSG_SCTN0900_DEF1_CMNT_DICT, \
 		FMPSG_SCTN0900_DEF1_DICT, \
+		FMPSG_SCTN0901_DEF2_CMNT_DICT, \
+		FMPSG_SCTN0901_DEF2_DICT, \
 		FMPSG_SCTN0902_DICT_CMNT_DICT, \
 		FMPSG_SCTN0902_DICT_DICT, \
 		FMPSG_SCTN0903_LIST_CMNT_DICT, \
@@ -1573,16 +1662,18 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0908_CHECKBOX_DICT, \
 		FMPSG_SCTN0909_TEXT_CMNT_DICT, \
 		FMPSG_SCTN0909_TEXT_DICT, \
-		FMPSG_SCTN090A_COLUMNS_DICT, \
-		FMPSG_SCTN090A_COLUMNSCMNTDICT, \
-		FMPSG_SCTN090B_LAYOUT_CMNT_DICT, \
-		FMPSG_SCTN090B_LAYOUT_DICT, \
-		FMPSG_SCTN090C_WINDOW_CMNT_DICT, \
-		FMPSG_SCTN090C_WINDOW_DICT, \
+		FMPSG_SCTN090A_RADIO_CMNT_DICT, \
+		FMPSG_SCTN090A_RADIO_DICT, \
+		FMPSG_SCTN090B_COLUMNS_DICT, \
+		FMPSG_SCTN090B_COLUMNSCMNTDICT, \
+		FMPSG_SCTN090C_MAINAPP_CMNT_DICT, \
+		FMPSG_SCTN090C_MAINAPP_DICT, \
 		FMPSG_SCTN090D_FRAME_CMNT_DICT, \
 		FMPSG_SCTN090D_FRAME_DICT, \
-		FMPSG_SCTN090E_MAINDICT_CMNT_DICT, \
-		FMPSG_SCTN090E_MAINDICT_DICT, \
+		FMPSG_SCTN090E_LAYOUT_CMNT_DICT, \
+		FMPSG_SCTN090E_LAYOUT_DICT, \
+		FMPSG_SCTN090F_MAINDICT_CMNT_DICT, \
+		FMPSG_SCTN090F_MAINDICT_DICT, \
 		FMPSG_SCTN0910_DEF3_CMNT_DICT, \
 		FMPSG_SCTN0910_DEF3_DICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
@@ -2213,106 +2304,51 @@ def parseTBGLST(FDTBGLST):
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
-#	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
-#		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-#		elif thisAX_ == FMAXPSG_SCTB0910_DUBLT_SS_DEF:
-#			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-#			if thisItemLen_ != 6:
-#				doErrorItem("not 6 items", thisItem_)
-#				continue
-#			thisValName_ = thisItem_[2]
-#			thisVal1_ = thisItem_[3]
-#			thisVal2_ = thisItem_[4]
-#			FMPSG_SCTB0910_DEF2DICT[thisValName_] = f"""{OPAREN}{DBLQT}{thisVal1_}{DBLQT}, {DBLQT}{thisVal2_}{DBLQT}{CPAREN},"""
-#			FMPSG_SCTB0910_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
-#			continue
-#			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0906_BTN_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 4:
+				doErrorItem("not 4 items", thisItem_)
+				continue
+			thisBtnElementName_ = thisItem_[2]
+			if thisBtnElementName_ not in FMPSG_SCTN0906_BTNS_DICT:
+				FMPSG_SCTN0906_BTNS_DICT[thisBtnElementName_] = ""
+			FMPSG_SCTN0906_BTNS_CMNT_DICT[thisBtnElementName_] = f"""{thisComment_}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
-#	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
-#		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-#		elif thisAX_ == FMAXPSG_SCTB0910_DUBLTSVDEF:
-#			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-#			if thisItemLen_ != 6:
-#				doErrorItem("not 6 items", thisItem_)
-#				continue
-#			thisValName_ = thisItem_[2]
-#			thisVal1_ = thisItem_[3]
-#			thisVal2_ = thisItem_[4]
-#			FMPSG_SCTB0910_DEF2DICT[thisValName_] = f"""{OPAREN}{DBLQT}{thisVal1_}{DBLQT}, {thisVal2_}{CPAREN},"""
-#			FMPSG_SCTB0910_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
-#			continue
-#			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
-#
-#	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
-#		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-#		elif thisAX_ == FMAXPSG_SCTB0910_DUBLTVSDEF:
-#			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-#			if thisItemLen_ != 6:
-#				doErrorItem("not 6 items", thisItem_)
-#				continue
-#			thisValName_ = thisItem_[2]
-#			thisVal1_ = thisItem_[3]
-#			thisVal2_ = thisItem_[4]
-#			FMPSG_SCTB0910_DEF2DICT[thisValName_] = f"""{OPAREN}{thisVal1_}, {DBLQT}{thisVal2_}{DBLQT}{CPAREN},"""
-#			FMPSG_SCTB0910_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
-#			continue
-#			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
-#
-#	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
-#		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-#		elif thisAX_ == FMAXPSG_SCTB0910_DUBLTVVDEF:
-#			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-#			if thisItemLen_ != 6:
-#				doErrorItem("not 6 items", thisItem_)
-#				continue
-#			thisValName_ = thisItem_[2]
-#			thisVal1_ = thisItem_[3]
-#			thisVal2_ = thisItem_[4]
-#			FMPSG_SCTB0910_DEF2DICT[thisValName_] = f"""{OPAREN}{thisVal1_}, {thisVal2_}{CPAREN}"""
-#			FMPSG_SCTB0910_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
-#			continue
-#			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
-#
-#	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
-#		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-#		elif thisAX_ == FMAXPSG_SCTB0910_KEY_DEF:
-#			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-#			if thisItemLen_ != 4:
-#				doErrorItem("not 4 items", thisItem_)
-#				continue
-#			thisValName_ = thisItem_[2]
-#			FMPSG_SCTB0910_DEF2DICT[thisValName_] = f"""{DBLQT}{thisValName_}{DBLQT}"""
-#			FMPSG_SCTB0910_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
-#			continue
-#			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
-#
-#	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
-#		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-#		elif thisAX_ == FMAXPSG_SCTB0910_STR_DEF:
-#			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-#			if thisItemLen_ != 5:
-#				doErrorItem("not 5 items", thisItem_)
-#				continue
-#			thisValName_ = thisItem_[2]
-#			thisVal_ = thisItem_[3]
-#			FMPSG_SCTB0910_DEF2DICT[thisValName_] = f"""{DBLQT}{thisVal_}{DBLQT}"""
-#			FMPSG_SCTB0910_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
-#			continue
-#			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
-#
-#	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
-#		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-#		elif thisAX_ == FMAXPSG_SCTB0910_VAL_DEF:
-#			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-#			if thisItemLen_ != 5:
-#				doErrorItem("not 5 items", thisItem_)
-#				continue
-#			thisValName_ = thisItem_[2]
-#			thisVal_ = thisItem_[3]
-#			FMPSG_SCTB0910_DEF2DICT[thisValName_] = f"""{thisVal_}"""
-#			FMPSG_SCTB0910_DEF2CMNTDICT[thisValName_] = f"""{thisComment_}"""
-#			continue
-#			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0906_BTN_STRADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 6:
+				doErrorItem("not 6 items", thisItem_)
+				continue
+			thisBtnElementName_ = thisItem_[2]
+			thisKey_ = thisItem_[3]
+			thisVal_ = thisItem_[4]
+			if thisBtnElementName_ not in FMPSG_SCTN0906_BTNS_DICT:
+				FMPSG_SCTN0906_BTNS_DICT[thisBtnElementName_] = ""
+			FMPSG_SCTN0906_BTNS_DICT[thisBtnElementName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0906_BTN_VALADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 6:
+				doErrorItem("not 6 items", thisItem_)
+				continue
+			thisBtnElementName_ = thisItem_[2]
+			thisKey_ = thisItem_[3]
+			thisVal_ = thisItem_[4]
+			if thisBtnElementName_ not in FMPSG_SCTN0906_BTNS_DICT:
+				FMPSG_SCTN0906_BTNS_DICT[thisBtnElementName_] = ""
+			FMPSG_SCTN0906_BTNS_DICT[thisBtnElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 

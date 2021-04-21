@@ -14,6 +14,7 @@ from sys import exit
 from time import mktime as MT
 from time import monotonic as TMT
 from time import time_ns as TNS
+from time import time as WALLSECS
 import datedelta as DD
 import datetime
 import hashlib as HL
@@ -92,7 +93,6 @@ HASH_sha3_384 = HL.sha3_384()  # 48 byte hash
 HASH_sha3_512 = HL.sha3_512()  # 64 byte hash
 HASH_sha384 = HL.sha384()  # 48 byte hash",),
 HASH_sha512 = HL.sha512()  # 64 byte hash",),
-
 
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0001 _CHR_ _CONST_
