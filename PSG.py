@@ -9,141 +9,79 @@ import CF
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-BACKGROUNDCOLOR = "#331122"  # the background of the main frames
 BLACK = "#000000"  # black
+CLOCKS_SZ_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
+CLOCKS_SZ_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
+CLOCKS_SZ_TIME_TOGO = 10  # size of the main togo clock on the clocks only floating widget
+COLOR_BACKGROUND = "#331122"  # the background of the main frames
+COLOR_CLOCK_BACKGROUND = "#221133"  # the background of the main frames
+COLOR_TEXT_HIGH = "#CC0088"  # the highlight color used in blinking bits when they are 'lit'
+COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
+COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
+COLOR_TIME_CLOCK = "#882299"  # color of the clock on any window/frame/etc.
+COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
+COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
+EDIT_SZ_CLOCK_TOGO = 10  # size of the main togo clock on the clocks only floating widget
+EDIT_SZ_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
+EDIT_SZ_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
 GRAY3 = "#333333"  # gray 3
 GRAY6 = "#666666"  # gray 6
 GRAY9 = "#999999"  # gray 9
 GRAYC = "#CCCCCC"  # gray C
-NORMALCOLOR = "#660044"  # the color the clock digits are
-NORMALHIGH = "#CC0088"  # the highlight color used in blinking bits when they are 'lit'
-NORMALLOW = "#330022"  # the color the clock digits are
+JUSTIFICATION_CENTER = "center"  # comment
+JUSTIFICATION_LEFT = "left"  # comment
+JUSTIFICATION_RIGHT = "right"  # comment
+MAIN_SZ_TIME_CLOCK = 60  # size of the main clock on the clocks only floating widget
+MAIN_SZ_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floating widget
+MAIN_SZ_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
 WHITE = "#FFFFFF"  # white
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0901 DEF2
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALPHA_CHANNEL = "alpha_channel"  #
-AUTO_CLOSE = "auto_close"  #
-AUTO_CLOSE_DURATION = "auto_close_duration"  #
-AUTO_SIZE_BUTTON = "auto_size_button"  #
-AUTO_SIZE_BUTTONS = "auto_size_buttons"  #
-AUTO_SIZE_TEXT = "auto_size_text"  #
 AVOID_MOUSE = "AVOID_MOUSE"  #
-BACKGROUND_COLOR = "background_color"  #
-BIND_RETURN_KEY = "bind_return_key"  #
-BORDER_DEPTH = "border_depth"  #
-BORDER_WIDTH = "border_width"  #
-BUTTON_COLOR = "button_color"  #
-BUTTON_TEXT = "button_text"  #
-BUTTON_TYPE = "button_type"  #
-CHANGE_SUBMITS = "change_submits"  #
-CHECKBOX_COLOR = "checkbox_color"  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
-CIRCLE_COLOR = "circle_color"  #
-CLICK_SUBMITS = "click_submits"  #
+CLOCKS_FONT_CLOCK = (DEFAULT_FONT, CLOCKS_SZ_TIME_CLOCK)  # the font for the clocks only clock
 CLOCKTIME = "CLOCKTIME"  # holds the clock value (str HH:MM:SS)
-DEBUGGER_ENABLED = "debugger_enabled"  #
-DEFAULT = "default"  #
-DEFAULT_BUTTON_ELEMENT_SIZE = "default_button_element_size"  #
-DEFAULT_ELEMENT_SIZE = "default_element_size"  #
-DEFAULT_EXTENSION = "default_extension"  #
-DEFAULT_VALUE = "default_value"  #
-DISABLE_CLOSE = "disable_close"  #
-DISABLE_MINIMIZE = "disable_minimize"  #
-DISABLED = "disabled"  #
-DISABLED_BUTTON_COLOR = "disabled_button_color"  #
+COLORS_TEXT_HIGH = (COLOR_TEXT_HIGH, COLOR_BACKGROUND)  # combined colors for a clock text element
+COLORS_TEXT_LOW = (COLOR_TEXT_LOW, COLOR_BACKGROUND)  # combined colors for a clock text element
+COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 DISMISSED = "DISMISSED"  # alarm dismissed bool
-ELEMENT_JUSTIFICATION = "element_justification"  #
-ELEMENT_PADDING = "element_padding"  #
-ENABLE_CLOSE_ATTEMPTED_EVENT = "enable_close_attempted_event"  #
-ENABLE_EVENTS = "enable_events"  #
-ENABLED = "enabled"  #
 EVENT_ENTRIES = "EVENT_ENTRIES"  #
 EVENT_MODE = "EVENT_MODE"  #
-EXPAND_X = "expand_x"  #
-EXPAND_Y = "expand_y"  #
-FILE_TYPES = "file_types"  #
-FINALIZE = "finalize"  #
-FOCUS = "focus"  #
-FONT = "font"  #
-FORCE_TOPLEVEL = "force_toplevel"  #
-GRAB = "grab"  #
-GRAB_ANYWHERE = "grab_anywhere"  #
-GROUP_ID = "group_id"  #
-HIGHLIGHT_COLORS = "highlight_colors"  #
-ICON = "icon"  #
-IMAGE_DATA = "image_data"  #
-IMAGE_FILENAME = "image_filename"  #
-IMAGE_SIZE = "image_size"  #
-IMAGE_SUBSAMPLE = "image_subsample"  #
+FONT_MAIN = "Source Code Pro"  # set the main font
+FONTSZ_CLOCKS_CLOCK_TIME = (FONT_MAIN, CLOCKS_SZ_TIME_CLOCK)  # combined colors for a clock text element
+FONTSZ_CLOCKS_ELAPSED = (FONT_MAIN, CLOCKS_SZ_TIME_ELAPSED)  # combined colors for a clock text element
+FONTSZ_CLOCKS_TOGO = (FONT_MAIN, CLOCKS_SZ_TIME_TOGO)  # combined colors for a clock text element
 INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  #
-INITIAL_FOLDER = "initial_folder"  #
-INITIAL_VALUE = "INITIAL_VALUE"  #
-JUSTIFICATION = "justification"  #
-K = "k"  #
-KEEP_ON_TOP = "keep_on_top"  #
-KEY = "key"  #
-LAYOUT = "layout"  #
-LOCATION = "location"  #
-MAIN_FONT = "Source Code Pro"  # set the main font
-MARGINS = "margins"  #
-METADATA = "metadata"  #
-MODAL = "modal"  #
+KEY_TIME_CLOCK = "KEY_TIME_CLOCK"  # key for all clocks time
+KEY_TIME_ELAPSED = "KEY_TIME_ELAPSED"  # key for all clocks elapsed
+KEY_TIME_TOGO = "KEY_TIME_TOGO"  # key for all clocks togo
 MODE_ALARM = "MODE_ALARM"  #
 MODE_ALARMREMIND = "MODE_ALARMREMIND"  #
 MODE_INTERVAL = "MODE_INTERVAL"  #
 NAME = "NAME"  #
-NO_TITLEBAR = "no_titlebar"  #
-PAD = "pad"  #
 PREDISMISSABLE = "PREDISMISSABLE"  #
-PROGRESS_BAR_COLOR = "progress_bar_color"  #
-READONLY = "readonly"  #
-RELIEF = "relief"  #
-RESIZABLE = "resizable"  #
-RETURN_KEYBOARD_EVENTS = "return_keyboard_events"  #
-RIGHT_CLICK_MENU = "right_click_menu"  #
-RIGHT_CLICK_MENU_BACKGROUND_COLOR = "right_click_menu_background_color"  #
-RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR = "right_click_menu_disabled_text_color"  #
-RIGHT_CLICK_MENU_FONT = "right_click_menu_font"  #
-RIGHT_CLICK_MENU_SELECTED_COLORS = "right_click_menu_selected_colors"  #
-RIGHT_CLICK_MENU_TEAROFF = "right_click_menu_tearoff"  #
-RIGHT_CLICK_MENU_TEXT_COLOR = "right_click_menu_text_color"  #
 RUNNING = "RUNNING"  # is this interval running or not
-S = "s"  #
-SCROLLABLE = "scrollable"  # can this column be scrolled bool
-SET_TO_INDEX = "set_to_index"  # change selection to a particular choice starting with index = 0
-SIZE = "size"  #
 SNOOZABLE = "SNOOZABLE"  #
 SNOOZED = "SNOOZED"  # snoozed bool
-TARGET = "target"  #
-TEXT = "text"  #
-TEXT_COLOR = "text_color"  #
-TEXT_JUSTIFICATION = "text_justification"  #
-TIME_ALARM = "TIME_ALARM"  #
+TIME_ALARM = "TIME_ALARM"  # the alarm time
+TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # 24 hour centric elapsed time running, can be reset, may go to 99h
 TIME_INTERVAL = "TIME_INTERVAL"  #
 TIME_OF_NEXT_EVENT = "TIME_OF_NEXT_EVENT"  # what time is the next alarm, == TIME_ALARM is tomorrow
 TIME_REMIND = "TIME_REMIND"  #
-TIME_TO_NEXT_EVENT = "TIME_TO_NEXT_EVENT"  # down counter to next event on this window/alarm/interval/reminder
-TITLE = "title"  #
-TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  #
-TITLEBAR_FONT = "titlebar_font"  #
-TITLEBAR_ICON = "titlebar_icon"  #
-TITLEBAR_TEXT_COLOR = "titlebar_text_color"  #
-TOOLTIP = "tooltip"  #
+TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 TRANSPARENT = "TRANSPARENT"  #
-TRANSPARENT_COLOR = "transparent_color"  #
 TRANSPARENT_UNDER_MOUSE = "TRANSPARENT_UNDER_MOUSE"  # is the clock transparent under mouse (ineffective if mouse is avoided)
-TTK_THEME = "ttk_theme"  #
-USE_CUSTOM_TITLEBAR = "use_custom_titlebar"  #
-USE_DEFAULT_FOCUS = "use_default_focus"  #
-USE_TTK_BUTTONS = "use_ttk_buttons"  #
-VALUE = "value"  # the value of the element
-VALUES = "values"  # list of values
-VERTICAL_ALIGNMENT = "vertical_alignment"  #
-VERTICAL_SCROLL_ONLY = "verticale_scroll_only"  #
-VISIBLE = "visible"  #
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0910 DEF3
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -178,7 +116,7 @@ EMPTY_ALARMTUP = (
 	(SNOOZED, True),  # enabled state of this entry
 	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
 	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_TO_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
 )
 
 def EMPTY_ALARMDICT():
@@ -200,11 +138,25 @@ EMPTY_ALARM_REMINDTUP = (
 	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
 	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
 	(TIME_REMIND, "00:00:00"),  # time this alarm is set for
-	(TIME_TO_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
 )
 
 def EMPTY_ALARM_REMINDDICT():
 	return dict((x, y) for x, y in EMPTY_ALARM_REMINDTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of EMPTY_CLOCKS structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+EMPTY_CLOCKSTUP = (
+	(TIME_CLOCK, "00:00:00"),  # the main clock time
+	(TIME_ELAPSED, "00:00:00"),  # the main elapsed time
+	(TIME_OF_NEXT_EVENT, "00:00:00"),  # the main count down to the next event time
+)
+
+def EMPTY_CLOCKSDICT():
+	return dict((x, y) for x, y in EMPTY_CLOCKSTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -218,7 +170,7 @@ EMPTY_INTERVALTUP = (
 	(RUNNING, True),  # running state of this entry
 	(TIME_INTERVAL, "00:00:00"),  # time this alarm is set for
 	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_TO_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
 )
 
 def EMPTY_INTERVALDICT():
@@ -692,495 +644,10 @@ def updateFromDict(windowToUpdate_, dictToUpdateFrom_):
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
-"""
- SCTN0900 | PSG | 001 | defines1
- SCTN0901 | PSG | 002 | defines2
- SCTN0902 | PSG | 003 | dictionaries
- SCTN0903 | PSG | 004 | lists
- SCTN0904 | PSG | 005 | platform equalizer
- SCTN0905 | PSG | 006 | tupdicts
- SCTN0906 | PSG | 007 | buttons dicts elements
- SCTN0907 | PSG | 008 | spin box dicts elements
- SCTN0908 | PSG | 009 | checkbox elements
- SCTN0909 | PSG | 00A | text elements
- SCTN090A | PSG | 00B | column elements
- SCTN090B | PSG | 00C | layout elements
- SCTN090C | PSG | 00D | window elements
- SCTN090D | PSG | 00E | frame elements
- SCTN090E | PSG | 00F | main frame dict:dict
-
-
-EMPTYALARM = {
-	DISMISSED: False,
-	ENABLED: True,
-	EVENTMODE: MODE_ALARM,
-	NAME: "",
-	PREDISMISSABLE: True,
-	SNOOZABLE: False,
-	SNOOZED: False,
-	TIMEALARM: "00:00:00",
-	TIMENEXTALARM: "00:00:00"
-}
-
-
-EMPTYALARMREMIND = {
-	ENABLED: True,
-	EVENTMODE: MODE_ALARM,
-	NAME: "",
-	PREDISMISSABLE: True,
-	SNOOZABLE: False,
-	TIMEALARM: "00:00:00",
-	TIMEREMIND: "00:00:00",
-}
-
-
-EMPTYINTERVAL = {
-	ENABLED: True,
-	EVENTMODE: MODE_ALARM,
-	NAME: "",
-	TIMEINTERVAL: "00:00:00",
-	TIMENEXTALARM: "00:00:00",
-}
-
-
-type of signal audio, visual, both
-audio filename
-
-EMPTYMAIN = {
-	AVOIDMOUSE: True,
-	CLOCKTIME: "00:00:00",
-	ELAPSEDTIME: "00:00:00",
-	INDEXNEXTEVENT: 0,
-	TIMENEXTEVENT: "00:00:00",
-	TIMETONEXTEVENT: "00:00:00"
-	TRANSPARENT: True,
-	EVENTENTRIES: {
-		0: {
-			ENABLED: True,
-			EVENTMODE: MODE_ALARM,
-			NAME: "",
-			PREDISMISSABLE: True,
-			SNOOZABLE: False,
-			TIMEALARM: "04:00:00",
-			TIMENEXTALARM: "00:00:00",
-
-		},
-		1: {
-			ENABLED: False,
-			EVENTMODE: MODE_ALARMREMIND,
-			NAME: "",
-			PREDISMISSABLE: True,
-			SNOOZABLE: False,
-			TIMEALARM: "00:00:00",
-			TIMEREMIND: "00:00:00",
-		},
-		2: {
-			TIMEALARM: "",
-			ENABLED: True,
-			EVENTMODE: MODE_INTERVAL,
-			TIMEINTERVAL: "00:00:00",
-			NAME: "",
-		},
-	},
-}
-
-
-
-Column(
-	layout,
-	background_color=None,
-	size=(None, None),
-	s=(None, None),
-	pad=None,
-	scrollable=False,
-	vertical_scroll_only=False,
-	right_click_menu=None,
-	key=None,
-	k=None,
-	visible=True,
-	justification=None,
-	element_justification=None,
-	vertical_alignment=None,
-	grab=None,
-	expand_x=None,
-	expand_y=None,
-	metadata=None)
-__init__(self, layout, background_color=None, size=(None, None), s=(None, None), pad=None, scrollable=False, vertical_scroll_only=False, right_click_menu=None, key=None, k=None, visible=True, justification=None, element_justification=None, vertical_alignment=None, grab=None, expand_x=None, expand_y=None, metadata=None)
-    :param layout: Layout that will be shown in the Column container
-    :type layout: List[List[Element]]
-    :param background_color: color of background of entire Column
-    :type background_color: (str)
-    :param size: (width, height) size in pixels (doesn't work quite right, sometimes only 1 dimension is set by tkinter
-    :type size: (int, int)
-    :param s: Same as size parameter.  It's an alias. If EITHER of them are set, then the one that's set will be used. If BOTH are set, size will be used
-    :type s: (int, int) | (None, None)
-    :param pad: Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
-    :type pad: (int, int) or ((int, int),(int,int)) or (int,(int,int)) or  ((int, int),int)
-    :param scrollable: if True then scrollbars will be added to the column
-    :type scrollable: (bool)
-    :param vertical_scroll_only: if Truen then no horizontal scrollbar will be shown
-    :type vertical_scroll_only: (bool)
-    :param right_click_menu: A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.
-    :type right_click_menu: List[List[ List[str] | str ]]
-    :param key: Value that uniquely identifies this element from all other elements. Used when Finding an element or in return values. Must be unique to the window
-    :type key: str | int | tuple | object
-    :param k: Same as the Key. You can use either k or key. Which ever is set will be used.
-    :type k: str | int | tuple | object
-    :param visible: set visibility state of the element
-    :type visible: (bool)
-    :param justification: set justification for the Column itself. Note entire row containing the Column will be affected
-    :type justification: (str)
-    :param element_justification: All elements inside the Column will have this justification 'left', 'right', 'center' are valid values
-    :type element_justification: (str)
-    :param vertical_alignment: Place the column at the 'top', 'center', 'bottom' of the row (can also use t,c,r). Defaults to no setting (tkinter decides)
-    :type vertical_alignment: (str)
-    :param grab: If True can grab this element and move the window around. Default is False
-    :type grab: (bool)
-    :param expand_x: If True the column will automatically expand in the X direction to fill available space
-    :type expand_x: (bool)
-    :param expand_y: If True the column will automatically expand in the Y direction to fill available space
-    :type expand_y: (bool)
-    :param metadata: User metadata that can be set to ANYTHING
-    :type metadata: (Any)
-update(self, visible=None)
-    Changes some of the settings for the Column Element. Must call `Window.Read` or `Window.Finalize` prior
-
-
-Combo(
-	auto_size_text=None,
-	background_color=None,
-	change_submits=False,
-	default_value=None,
-	disabled=False,
-	enable_events=False,
-	font=None,
-	k=None,
-	key=None,
-	metadata=None)
-	pad=None,
-	readonly=False,
-	s=(None, None),
-	size=(None, None),
-	text_color=None,
-	tooltip=None,
-	values,
-	visible=True,
-
-Update = update(
-	self,
-	value=None,
-	values=None,
-	set_to_index=None,
-	disabled=None,
-	readonly=None,
-	font=None,
-	visible=None,
-	size=(None, None))
-
-__init__(self, values, default_value=None, size=(None, None), s=(None, None), auto_size_text=None, background_color=None, text_color=None, change_submits=False, enable_events=False, disabled=False, key=None, k=None, pad=None, tooltip=None, readonly=False, font=None, visible=True, metadata=None)
-    :param values: values to choose. While displayed as text, the items returned are what the caller supplied, not text
-    :type values: List[Any] or Tuple[Any]
-    :param default_value: Choice to be displayed as initial value. Must match one of values variable contents
-    :type default_value: (Any)
-    :param size: width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
-    :type size: (int, int) | (None, None)
-    :param s: Same as size parameter.  It's an alias. If EITHER of them are set, then the one that's set will be used. If BOTH are set, size will be used
-    :type s: (int, int) | (None, None)
-    :param auto_size_text: True if element should be the same size as the contents
-    :type auto_size_text: (bool)
-    :param background_color: color of background
-    :type background_color: (str)
-    :param text_color: color of the text
-    :type text_color: (str)
-    :param change_submits: DEPRICATED DO NOT USE. Use `enable_events` instead
-    :type change_submits: (bool)
-    :param enable_events: Turns on the element specific events. Combo event is when a choice is made
-    :type enable_events: (bool)
-    :param disabled: set disable state for element
-    :type disabled: (bool)
-    :param key: Used with window.FindElement and with return values to uniquely identify this element
-    :type key: str | int | tuple | object
-    :param k: Same as the Key. You can use either k or key. Which ever is set will be used.
-    :type k: str | int | tuple | object
-    :param pad: Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
-    :type pad: (int, int) or ((int, int),(int,int)) or (int,(int,int)) or  ((int, int),int)
-    :param tooltip: text that will appear when mouse hovers over this element
-    :type tooltip: (str)
-    :param readonly: make element readonly (user can't change). True means user cannot change
-    :type readonly: (bool)
-    :param font: specifies the font family, size, etc
-    :type font: str | Tuple[str, int]
-    :param visible: set visibility state of the element
-    :type visible: (bool)
-    :param metadata: User metadata that can be set to ANYTHING
-    :type metadata: (Any)
-update(self, value=None, values=None, set_to_index=None, disabled=None, readonly=None, font=None, visible=None, size=(None, None))
-    Changes some of the settings for the Combo Element. Must call `Window.Read` or `Window.Finalize` prior.
-    Note that the state can be in 3 states only.... enabled, disabled, readonly even
-    though more combinations are available. The easy way to remember is that if you
-    change the readonly parameter then you are enabling the element.
-    :param value: change which value is current selected based on new list of previous list of choices
-    :type value: (Any)
-    :param values: change list of choices
-    :type values: List[Any]
-    :param set_to_index: change selection to a particular choice starting with index = 0
-    :type set_to_index: (int)
-    :param disabled: disable or enable state of the element
-    :type disabled: (bool)
-    :param readonly: if True make element readonly (user cannot change any choices). Enables the element if either choice are made.
-    :type readonly: (bool)
-    :param font: specifies the font family, size, etc
-    :type font: str | Tuple[str, int]
-    :param visible: control visibility of element
-    :type visible: (bool)
-    :param size: width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
-    :type size: (int, int)
-
-
-Radio(
-	text,
-	group_id,
-	default=False,
-	disabled=False,
-	size=(None, None),
-	s=(None, None),
-	auto_size_text=None,
-	background_color=None,
-	text_color=None,
-	circle_color=None,
-	font=None,
-	key=None,
-	k=None,
-	pad=None,
-	tooltip=None,
-	change_submits=False,
-	enable_events=False,
-	visible=True,
-	metadata=None)
-Update = update(
-	self,
-	value=None,
-	text=None,
-	background_color=None,
-	text_color=None,
-	circle_color=None,
-	disabled=None,
-	visible=None)
-__init__(self, text, group_id, default=False, disabled=False, size=(None, None), s=(None, None), auto_size_text=None, background_color=None, text_color=None, circle_color=None, font=None, key=None, k=None, pad=None, tooltip=None, change_submits=False, enable_events=False, visible=True, metadata=None)
-    :param text: Text to display next to button
-    :type text: (str)
-    :param group_id: Groups together multiple Radio Buttons. Any type works
-    :type group_id: (Any)
-    :param default: Set to True for the one element of the group you want initially selected
-    :type default: (bool)
-    :param disabled: set disable state
-    :type disabled: (bool)
-    :param size: (width, height) width = characters-wide, height = rows-high
-    :type size: (int, int) | (None, None)
-    :param s: Same as size parameter.  It's an alias. If EITHER of them are set, then the one that's set will be used. If BOTH are set, size will be used
-    :type s: (int, int) | (None, None)
-    :param auto_size_text: if True will size the element to match the length of the text
-    :type auto_size_text: (bool)
-    :param background_color: color of background
-    :type background_color: (str)
-    :param text_color: color of the text
-    :type text_color: (str)
-    :param circle_color: color of background of the circle that has the dot selection indicator in it
-    :type circle_color: (str)
-    :param font: specifies the font family, size, etc
-    :type font: str | Tuple[str, int]
-    :param key: Used with window.FindElement and with return values to uniquely identify this element
-    :type key: str | int | tuple | object
-    :param k: Same as the Key. You can use either k or key. Which ever is set will be used.
-    :type k: str | int | tuple | object
-    :param pad: Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
-    :type pad: (int, int) or ((int, int),(int,int)) or (int,(int,int)) or  ((int, int),int)
-    :param tooltip: text, that will appear when mouse hovers over the element
-    :type tooltip: (str)
-    :param change_submits: DO NOT USE. Only listed for backwards compat - Use enable_events instead
-    :type change_submits: (bool)
-    :param enable_events: Turns on the element specific events. Radio Button events happen when an item is selected
-    :type enable_events: (bool)
-    :param visible: set visibility state of the element
-    :type visible: (bool)
-    :param metadata: User metadata that can be set to ANYTHING
-    :type metadata: (Any)
-update(self, value=None, text=None, background_color=None, text_color=None, circle_color=None, disabled=None, visible=None)
-    Changes some of the settings for the Radio Button Element. Must call `Window.read` or `Window.finalize` prior
-    :param value: if True change to selected and set others in group to unselected
-    :type value: (bool)
-    :param text: Text to display next to radio button
-    :type text: (str)
-    :param background_color: color of background
-    :type background_color: (str)
-    :param text_color: color of the text. Note this also changes the color of the selection dot
-    :type text_color: (str)
-    :param circle_color: color of background of the circle that has the dot selection indicator in it
-    :type circle_color: (str)
-    :param disabled: disable or enable state of the element
-    :type disabled: (bool)
-    :param visible: control visibility of element
-    :type visible: (bool)
-
-Spin(
-	values,
-	initial_value=None,
-	disabled=False,
-	change_submits=False,
-	enable_events=False,
-	readonly=False,
-	size=(None, None),
-	s=(None, None),
-	auto_size_text=None,
-	font=None,
-	background_color=None,
-	text_color=None,
-	key=None,
-	k=None,
-	pad=None,
-	tooltip=None,
-	visible=True,
-	metadata=None)
-__init__(self, values, initial_value=None, disabled=False, change_submits=False, enable_events=False, readonly=False, size=(None, None), s=(None, None), auto_size_text=None, font=None, background_color=None, text_color=None, key=None, k=None, pad=None, tooltip=None, visible=True, metadata=None)
-    :param values: List of valid values
-    :type values: Tuple[Any] or List[Any]
-    :param initial_value: Initial item to show in window. Choose from list of values supplied
-    :type initial_value: (Any)
-    :param disabled: set disable state
-    :type disabled: (bool)
-    :param change_submits: DO NOT USE. Only listed for backwards compat - Use enable_events instead
-    :type change_submits: (bool)
-    :param enable_events: Turns on the element specific events. Spin events happen when an item changes
-    :type enable_events: (bool)
-    :param readonly: Turns on the element specific events. Spin events happen when an item changes
-    :type readonly: (bool)
-    :param size: (width, height) width = characters-wide, height = rows-high
-    :type size: (int, int) | (None, None)
-    :param s: Same as size parameter.  It's an alias. If EITHER of them are set, then the one that's set will be used. If BOTH are set, size will be used
-    :type s: (int, int) | (None, None)
-    :param auto_size_text: if True will size the element to match the length of the text
-    :type auto_size_text: (bool)
-    :param font: specifies the font family, size, etc
-    :type font: str | Tuple[str, int]
-    :param background_color: color of background
-    :type background_color: (str)
-    :param text_color: color of the text
-    :type text_color: (str)
-    :param key: Used with window.FindElement and with return values to uniquely identify this element
-    :type key: str | int | tuple | object
-    :param k: Same as the Key. You can use either k or key. Which ever is set will be used.
-    :type k: str | int | tuple | object
-    :param pad: Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
-    :type pad: (int, int) or ((int, int),(int,int)) or (int,(int,int)) or  ((int, int),int)
-    :param tooltip: text, that will appear when mouse hovers over the element
-    :type tooltip: (str)
-    :param visible: set visibility state of the element
-    :type visible: (bool)
-    :param metadata: User metadata that can be set to ANYTHING
-    :type metadata: (Any)
-get(self)
-    Return the current chosen value showing in spinbox.
-    This value will be the same as what was provided as list of choices.  If list items are ints, then the
-    item returned will be an int (not a string)
-    :return: The currently visible entry
-    :rtype: (Any)
-update(self, value=None, values=None, disabled=None, readonly=None, visible=None)
-    Changes some of the settings for the Spin Element. Must call `Window.Read` or `Window.Finalize` prior
-    Note that the state can be in 3 states only.... enabled, disabled, readonly even
-    though more combinations are available. The easy way to remember is that if you
-    change the readonly parameter then you are enabling the element.
-    :param value: set the current value from list of choices
-    :type value: (Any)
-    :param values: set available choices
-    :type values: List[Any]
-    :param disabled: disable. Note disabled and readonly cannot be mixed. It must be one OR the other
-    :type disabled: (bool)
-    :param readonly: make element readonly.  Note disabled and readonly cannot be mixed. It must be one OR the other
-    :type readonly: (bool)
-    :param visible: control visibility of element
-    :type visible: (bool)
-
-
-Text(
-	text='',
-	size=(None, None),
-	s=(None, None),
-	auto_size_text=None,
-	click_submits=False,
-	enable_events=False,
-	relief=None,
-	font=None,
-	text_color=None,
-	background_color=None,
-	border_width=None,
-	justification=None,
-	pad=None,
-	key=None,
-	k=None,
-	right_click_menu=None,
-	grab=None,
-	tooltip=None,
-	visible=True,
-	metadata=None)
-__init__(self, text='', size=(None, None), s=(None, None), auto_size_text=None, click_submits=False, enable_events=False, relief=None, font=None, text_color=None, background_color=None, border_width=None, justification=None, pad=None, key=None, k=None, right_click_menu=None, grab=None, tooltip=None, visible=True, metadata=None)
-    :param text: The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
-    :type text: Any
-    :param size: (width, height) width = characters-wide, height = rows-high
-    :type size: Tuple[int, int] |  Tuple[int, None] | (None, None)
-    :param s: Same as size parameter.  It's an alias. If EITHER of them are set, then the one that's set will be used. If BOTH are set, size will be used
-    :type s: (int, int) |  (int, None) | (None, None)
-    :param auto_size_text: if True size of the Text Element will be sized to fit the string provided in 'text' parm
-    :type auto_size_text: (bool)
-    :param click_submits: DO NOT USE. Only listed for backwards compat - Use enable_events instead
-    :type click_submits: (bool)
-    :param enable_events: Turns on the element specific events. Text events happen when the text is clicked
-    :type enable_events: (bool)
-    :param relief: relief style around the text. Values are same as progress meter relief values. Should be a constant that is defined at starting with "RELIEF_" - `RELIEF_RAISED, RELIEF_SUNKEN, RELIEF_FLAT, RELIEF_RIDGE, RELIEF_GROOVE, RELIEF_SOLID`
-    :type relief: (str/enum)
-    :param font: specifies the font family, size, etc
-    :type font: (str or Tuple[str, int] or None)
-    :param text_color: color of the text
-    :type text_color: (str)
-    :param background_color: color of background
-    :type background_color: (str)
-    :param border_width: number of pixels for the border (if using a relief)
-    :type border_width: (int)
-    :param justification: how string should be aligned within space provided by size. Valid choices = `left`, `right`, `center`
-    :type justification: (str)
-    :param pad: Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
-    :type pad: (int, int) or ((int, int),(int,int)) or (int,(int,int)) or  ((int, int),int)
-    :param key: Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
-    :type key: str or int or tuple or object
-    :param k: Same as the Key. You can use either k or key. Which ever is set will be used.
-    :type k: str | int | tuple | object
-    :param right_click_menu: A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.
-    :type right_click_menu: List[List[ List[str] | str ]]
-    :param grab: If True can grab this element and move the window around. Default is False
-    :type grab: (bool)
-    :param tooltip: text, that will appear when mouse hovers over the element
-    :type tooltip: (str)
-    :param visible: set visibility state of the element
-    :type visible: (bool)
-    :param metadata: User metadata that can be set to ANYTHING
-    :type metadata: (Any)
-get(self)
-    Gets the current value of the displayed text
-
-    :return: The current value
-    :rtype: (str)
-update(self, value=None, background_color=None, text_color=None, font=None, visible=None)
-    Changes some of the settings for the Text Element. Must call `Window.Read` or `Window.Finalize` prior
-    :param value: new text to show
-    :type value: (str)
-    :param background_color: color of background
-    :type background_color: (str)
-    :param text_color: color of the text
-    :type text_color: (str)
-    :param font: specifies the font family, size, etc
-    :type font: str | Tuple[str, int]
-    :param visible: set visibility state of the element
-    :type visible: (bool)
-
-
-menu, right_click_menu
-"""
+#
+#
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# end of PSG.py
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+#

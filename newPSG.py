@@ -15,15 +15,16 @@ CLOCKS_SZ_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floa
 CLOCKS_SZ_TIME_TOGO = 10  # size of the main togo clock on the clocks only floating widget
 COLOR_BACKGROUND = "#331122"  # the background of the main frames
 COLOR_CLOCK_BACKGROUND = "#221133"  # the background of the main frames
-COLOR_CLOCK_TIME = "#882299"  # color of the clock on any window/frame/etc.
 COLOR_TEXT_HIGH = "#CC0088"  # the highlight color used in blinking bits when they are 'lit'
 COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
 COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
+COLOR_TIME_CLOCK = "#882299"  # color of the clock on any window/frame/etc.
 COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 EDIT_SZ_CLOCK_TOGO = 10  # size of the main togo clock on the clocks only floating widget
 EDIT_SZ_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
 EDIT_SZ_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
+FONT_DEFAULT = "Source Code Pro"  # set the main font
 GRAY3 = "#333333"  # gray 3
 GRAY6 = "#666666"  # gray 6
 GRAY9 = "#999999"  # gray 9
@@ -38,117 +39,34 @@ WHITE = "#FFFFFF"  # white
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0910 DEF2
+# * SCTN0901 DEF2
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALPHA_CHANNEL = "alpha_channel"  # 
-AUTO_CLOSE = "auto_close"  # 
-AUTO_CLOSE_DURATION = "auto_close_duration"  # 
-AUTO_SIZE_BUTTON = "auto_size_button"  # 
-AUTO_SIZE_BUTTONS = "auto_size_buttons"  # 
-AUTO_SIZE_TEXT = "auto_size_text"  # 
 AVOID_MOUSE = "AVOID_MOUSE"  # 
-BACKGROUND_COLOR = "background_color"  # 
-BIND_RETURN_KEY = "bind_return_key"  # 
-BORDER_DEPTH = "border_depth"  # 
-BORDER_WIDTH = "border_width"  # 
-BUTTON_COLOR = "button_color"  # 
-BUTTON_TEXT = "button_text"  # 
-BUTTON_TYPE = "button_type"  # 
-CHANGE_SUBMITS = "change_submits"  # 
-CHECKBOX_COLOR = "checkbox_color"  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
-CIRCLE_COLOR = "circle_color"  # 
-CLICK_SUBMITS = "click_submits"  # 
-CLOCKS_FONT_CLOCK = (DEFAULT_FONT, CLOCKS_SZ_TIME_CLOCK)  # the font for the clocks only clock
+CLOCKS_FONTSZ_TIME_CLOCK = (FONT_DEFAULT, CLOCKS_SZ_TIME_CLOCK)  # the font for the clocks only clock
+CLOCKS_FONTSZ_TIME_ELAPSED = (FONT_DEFAULT, CLOCKS_SZ_TIME_ELAPSED)  # the font for the clocks only clock
+CLOCKS_FONTSZ_TIME_TOGO = (FONT_DEFAULT, CLOCKS_SZ_TIME_TOGO)  # the font for the clocks only clock
 CLOCKTIME = "CLOCKTIME"  # holds the clock value (str HH:MM:SS)
-COLORS_CLOCK_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-COLORS_CLOCK_TIME = (COLOR_CLOCK_TIME, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-COLORS_CLOCK_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TEXT_HIGH = (COLOR_TEXT_HIGH, COLOR_BACKGROUND)  # combined colors for a clock text element
 COLORS_TEXT_LOW = (COLOR_TEXT_LOW, COLOR_BACKGROUND)  # combined colors for a clock text element
 COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors for a clock text element
-DEBUGGER_ENABLED = "debugger_enabled"  # 
-DEFAULT = "default"  # 
-DEFAULT_BUTTON_ELEMENT_SIZE = "default_button_element_size"  # 
-DEFAULT_ELEMENT_SIZE = "default_element_size"  # 
-DEFAULT_EXTENSION = "default_extension"  # 
-DEFAULT_VALUE = "default_value"  # 
-DISABLE_CLOSE = "disable_close"  # 
-DISABLE_MINIMIZE = "disable_minimize"  # 
-DISABLED = "disabled"  # 
-DISABLED_BUTTON_COLOR = "disabled_button_color"  # 
+COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 DISMISSED = "DISMISSED"  # alarm dismissed bool
-ELEMENT_JUSTIFICATION = "element_justification"  # 
-ELEMENT_PADDING = "element_padding"  # 
-ENABLE_CLOSE_ATTEMPTED_EVENT = "enable_close_attempted_event"  # 
-ENABLE_EVENTS = "enable_events"  # 
-ENABLED = "enabled"  # 
 EVENT_ENTRIES = "EVENT_ENTRIES"  # 
 EVENT_MODE = "EVENT_MODE"  # 
-EXPAND_X = "expand_x"  # 
-EXPAND_Y = "expand_y"  # 
-FILE_TYPES = "file_types"  # 
-FINALIZE = "finalize"  # 
-FOCUS = "focus"  # 
-FONT = "font"  # 
-FONT_MAIN = "Source Code Pro"  # set the main font
-FONTSZ_CLOCKS_CLOCK_TIME = (FONT_MAIN, CLOCKS_SZ_TIME_CLOCK)  # combined colors for a clock text element
-FONTSZ_CLOCKS_ELAPSED = (FONT_MAIN, CLOCKS_SZ_TIME_ELAPSED)  # combined colors for a clock text element
-FONTSZ_CLOCKS_TOGO = (FONT_MAIN, CLOCKS_SZ_TIME_TOGO)  # combined colors for a clock text element
-FORCE_TOPLEVEL = "force_toplevel"  # 
-GRAB = "grab"  # 
-GRAB_ANYWHERE = "grab_anywhere"  # 
-GROUP_ID = "group_id"  # 
-HIGHLIGHT_COLORS = "highlight_colors"  # 
-ICON = "icon"  # 
-IMAGE_DATA = "image_data"  # 
-IMAGE_FILENAME = "image_filename"  # 
-IMAGE_SIZE = "image_size"  # 
-IMAGE_SUBSAMPLE = "image_subsample"  # 
 INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  # 
-INITIAL_FOLDER = "initial_folder"  # 
-INITIAL_VALUE = "INITIAL_VALUE"  # 
-JUSTIFICATION = "justification"  # 
-K = "k"  # 
-KEEP_ON_TOP = "keep_on_top"  # 
-KEY = "key"  # 
 KEY_TIME_CLOCK = "KEY_TIME_CLOCK"  # key for all clocks time
 KEY_TIME_ELAPSED = "KEY_TIME_ELAPSED"  # key for all clocks elapsed
 KEY_TIME_TOGO = "KEY_TIME_TOGO"  # key for all clocks togo
-LAYOUT = "layout"  # 
-LOCATION = "location"  # 
-MARGINS = "margins"  # 
-METADATA = "metadata"  # 
-MODAL = "modal"  # 
 MODE_ALARM = "MODE_ALARM"  # 
 MODE_ALARMREMIND = "MODE_ALARMREMIND"  # 
 MODE_INTERVAL = "MODE_INTERVAL"  # 
 NAME = "NAME"  # 
-NO_TITLEBAR = "no_titlebar"  # 
-PAD = "pad"  # 
 PREDISMISSABLE = "PREDISMISSABLE"  # 
-PROGRESS_BAR_COLOR = "progress_bar_color"  # 
-READONLY = "readonly"  # 
-RELIEF = "relief"  # 
-RESIZABLE = "resizable"  # 
-RETURN_KEYBOARD_EVENTS = "return_keyboard_events"  # 
-RIGHT_CLICK_MENU = "right_click_menu"  # 
-RIGHT_CLICK_MENU_BACKGROUND_COLOR = "right_click_menu_background_color"  # 
-RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR = "right_click_menu_disabled_text_color"  # 
-RIGHT_CLICK_MENU_FONT = "right_click_menu_font"  # 
-RIGHT_CLICK_MENU_SELECTED_COLORS = "right_click_menu_selected_colors"  # 
-RIGHT_CLICK_MENU_TEAROFF = "right_click_menu_tearoff"  # 
-RIGHT_CLICK_MENU_TEXT_COLOR = "right_click_menu_text_color"  # 
 RUNNING = "RUNNING"  # is this interval running or not
-S = "s"  # 
-SCROLLABLE = "scrollable"  # can this column be scrolled bool
-SET_TO_INDEX = "set_to_index"  # change selection to a particular choice starting with index = 0
-SIZE = "size"  # 
 SNOOZABLE = "SNOOZABLE"  # 
 SNOOZED = "SNOOZED"  # snoozed bool
-TARGET = "target"  # 
-TEXT = "text"  # 
-TEXT_COLOR = "text_color"  # 
-TEXT_JUSTIFICATION = "text_justification"  # 
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # 24 hour centric elapsed time running, can be reset, may go to 99h
@@ -156,29 +74,25 @@ TIME_INTERVAL = "TIME_INTERVAL"  #
 TIME_OF_NEXT_EVENT = "TIME_OF_NEXT_EVENT"  # what time is the next alarm, == TIME_ALARM is tomorrow
 TIME_REMIND = "TIME_REMIND"  # 
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
-TITLE = "title"  # 
-TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  # 
-TITLEBAR_FONT = "titlebar_font"  # 
-TITLEBAR_ICON = "titlebar_icon"  # 
-TITLEBAR_TEXT_COLOR = "titlebar_text_color"  # 
-TOOLTIP = "tooltip"  # 
 TRANSPARENT = "TRANSPARENT"  # 
-TRANSPARENT_COLOR = "transparent_color"  # 
 TRANSPARENT_UNDER_MOUSE = "TRANSPARENT_UNDER_MOUSE"  # is the clock transparent under mouse (ineffective if mouse is avoided)
-TTK_THEME = "ttk_theme"  # 
-USE_CUSTOM_TITLEBAR = "use_custom_titlebar"  # 
-USE_DEFAULT_FOCUS = "use_default_focus"  # 
-USE_TTK_BUTTONS = "use_ttk_buttons"  # 
-VALUE = "value"  # the value of the element
-VALUES = "values"  # list of values
-VERTICAL_ALIGNMENT = "vertical_alignment"  # 
-VERTICAL_SCROLL_ONLY = "verticale_scroll_only"  # 
-VISIBLE = "visible"  # visibility of elements
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0910 DEF3
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CLOCKS_DICT = {  # holds the values for the clocks frame
+	KEY_TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
+	KEY_TIME_ELAPSED: "00:00:00",  # holds the values for the clocks frame
+	KEY_TIME_TOGO: "00:00:00",  # holds the values for the clocks frame
+}
+
+
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
