@@ -732,6 +732,16 @@ CLOCKS_BTN_XPAND = {  #
 }
 
 
+CLOCKS_BTN_ZERO = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the ZERO button
+	IMAGE_FILENAME: "res/zero.png",  # filename for the button icon
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONT_DEFAULT,  # button xpand font
+	KEY: KEY_BTN_ZERO,  # button xpand key
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0907 spin box elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -781,6 +791,9 @@ CLOCKS_COLUMN = [  # the column that puts the two smaller clocks below the main 
 		),
 		SG.Button(  # add a button element to clocks column
 			CLOCKS_BTN_XPAND,  # add the xpand button to clocks
+		),
+			CLOCKS_BTN_ZERO,  # add the zero button to clocks
+		SG.Button(  # add reset button for elapsed time
 		),
 	],
 	[
