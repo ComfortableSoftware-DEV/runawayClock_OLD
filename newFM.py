@@ -451,8 +451,8 @@ FMPSG_SCTN0909_TEXT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0909_TEXT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090A_RADIO_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090A_RADIO_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090B_COLUMNS_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090B_COLUMNSCMNTDICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090B_COLUMN_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090B_COLUMN_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090C_MAINAPP_CMNT_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090C_MAINAPP_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090D_FRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
@@ -528,8 +528,8 @@ FMPSG_SCTN0911_COMBO_DICT = {}  # define the dict to hold everything in SCTN0900
 		FMPSG_SCTN0909_TEXT_DICT, \
 		FMPSG_SCTN090A_RADIO_CMNT_DICT, \
 		FMPSG_SCTN090A_RADIO_DICT, \
-		FMPSG_SCTN090B_COLUMNS_DICT, \
-		FMPSG_SCTN090B_COLUMNSCMNTDICT, \
+		FMPSG_SCTN090B_COLUMN_CMNT_DICT, \
+		FMPSG_SCTN090B_COLUMN_DICT, \
 		FMPSG_SCTN090C_MAINAPP_CMNT_DICT, \
 		FMPSG_SCTN090C_MAINAPP_DICT, \
 		FMPSG_SCTN090D_FRAME_CMNT_DICT, \
