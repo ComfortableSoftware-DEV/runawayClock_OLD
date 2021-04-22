@@ -12,6 +12,7 @@ import CF
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
+AVOID_MOUSE = "AVOID_MOUSE"  # key for avoiding the mouse bool
 BLACK = "#000000"  # black
 CLOCKS_SZ_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
 CLOCKS_SZ_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
@@ -27,15 +28,16 @@ COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 EDIT_SZ_CLOCK_TOGO = 10  # size of the main togo clock on the clocks only floating widget
 EDIT_SZ_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
 EDIT_SZ_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
+EVENT_MODE = "EVENT_MODE"  # 
+EVENT_MODE_ALARM = "EVENT_MODE_ALARM"  # 
+EVENT_MODE_ALARMREMIND = "EVENT_MODE_ALARMREMIND"  # 
+EVENT_MODE_INTERVAL = "EVENT_MODE_INTERVAL"  # 
 FONT_DEFAULT = "Source Code Pro"  # set the main font
 GRAY3 = "#333333"  # gray 3
 GRAY6 = "#666666"  # gray 6
 GRAY9 = "#999999"  # gray 9
 GRAYC = "#CCCCCC"  # gray C
-JUSTIFICATION_CENTER = "center"  # comment
-JUSTIFICATION_LEFT = "left"  # comment
-JUSTIFICATION_RIGHT = "right"  # comment
-MAIN_SZ_TIME_CLOCK = 60  # size of the main clock on the clocks only floating widget
+MAIN_SZ_KEY_TIME_CLOCK = 60  # size of the main clock on the clocks only floating widget
 MAIN_SZ_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floating widget
 MAIN_SZ_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
 WHITE = "#FFFFFF"  # white
@@ -45,7 +47,6 @@ WHITE = "#FFFFFF"  # white
 # * SCTN0901 DEF2
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 APPMODE = APPMODE_CLOCKS  # what screen are we showing APPMODE_CLOCKS or APPMODE_CLOCKS+APPMODE_MAIN[+APPMODE_EDIT]
-AVOID_MOUSE = "AVOID_MOUSE"  # key for avoiding the mouse bool
 CLOCKS_FONTSZ_TIME_CLOCK = (FONT_DEFAULT, CLOCKS_SZ_TIME_CLOCK)  # the font for the clocks only clock
 CLOCKS_FONTSZ_TIME_ELAPSED = (FONT_DEFAULT, CLOCKS_SZ_TIME_ELAPSED)  # the font for the clocks only clock
 CLOCKS_FONTSZ_TIME_TOGO = (FONT_DEFAULT, CLOCKS_SZ_TIME_TOGO)  # the font for the clocks only clock
@@ -58,31 +59,24 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-DISMISSED = "DISMISSED"  # alarm dismissed bool
-EVENT_ENTRIES = "EVENT_ENTRIES"  # 
-EVENT_MODE = "EVENT_MODE"  # 
-EVENT_MODE_ALARM = "EVENT_MODE_ALARM"  # 
-EVENT_MODE_ALARMREMIND = "EVENT_MODE_ALARMREMIND"  # 
-EVENT_MODE_INTERVAL = "EVENT_MODE_INTERVAL"  # 
-INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  # 
 KEY_BTN_XPAND = "KEY_BTN_XPAND"  # key for all of the button xpand
-KEY_TIME_CLOCK = "KEY_TIME_CLOCK"  # key for all clocks time
+KEY_DISMISSED = "KEY_DISMISSED"  # alarm dismissed bool
+KEY_EVENT_ENTRIES = "KEY_EVENT_ENTRIES"  # 
+KEY_INDEX_OF_NEXT_EVENT = "KEY_INDEX_OF_NEXT_EVENT"  # 
+KEY_NAME = "KEY_NAME"  # 
+KEY_PREDISMISSABLE = "KEY_PREDISMISSABLE"  # 
+KEY_RUNNING = "KEY_RUNNING"  # is this interval running or not
+KEY_SNOOZABLE = "KEY_SNOOZABLE"  # 
+KEY_SNOOZED = "KEY_SNOOZED"  # snoozed bool
+KEY_TIME_ALARM = "KEY_TIME_ALARM"  # the alarm time
+KEY_TIME_CLOCK = "KEY_TIME_CLOCK"  # the main clock time
 KEY_TIME_ELAPSED = "KEY_TIME_ELAPSED"  # key for all clocks elapsed
+KEY_TIME_INTERVAL = "KEY_TIME_INTERVAL"  # 
+KEY_TIME_OF_NEXT_EVENT = "KEY_TIME_OF_NEXT_EVENT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
+KEY_TIME_REMIND = "KEY_TIME_REMIND"  # 
 KEY_TIME_TOGO = "KEY_TIME_TOGO"  # key for all clocks togo
-NAME = "NAME"  # 
-PREDISMISSABLE = "PREDISMISSABLE"  # 
-RUNNING = "RUNNING"  # is this interval running or not
-SNOOZABLE = "SNOOZABLE"  # 
-SNOOZED = "SNOOZED"  # snoozed bool
-TIME_ALARM = "TIME_ALARM"  # the alarm time
-TIME_CLOCK = "TIME_CLOCK"  # the main clock time
-TIME_ELAPSED = "TIME_ELAPSED"  # 24 hour centric elapsed time running, can be reset, may go to 99h
-TIME_INTERVAL = "TIME_INTERVAL"  # 
-TIME_OF_NEXT_EVENT = "TIME_OF_NEXT_EVENT"  # what time is the next alarm, == TIME_ALARM is tomorrow
-TIME_REMIND = "TIME_REMIND"  # 
-TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
-TRANSPARENT = "TRANSPARENT"  # 
-TRANSPARENT_UNDER_MOUSE = "TRANSPARENT_UNDER_MOUSE"  # is the clock transparent under mouse (ineffective if mouse is avoided)
+KEY_TRANSPARENT = "KEY_TRANSPARENT"  # 
+KEY_TRANSPARENT_UNDER_MOUSE = "KEY_TRANSPARENT_UNDER_MOUSE"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -139,6 +133,9 @@ IMAGE_SUBSAMPLE = "image_subsample"  #
 INITIAL_FOLDER = "initial_folder"  # 
 INITIAL_VALUE = "initial_value"  # 
 JUSTIFICATION = "justification"  # 
+JUSTIFICATION_CENTER = "center"  # comment
+JUSTIFICATION_LEFT = "left"  # comment
+JUSTIFICATION_RIGHT = "right"  # comment
 K = "k"  # 
 KEEP_ON_TOP = "keep_on_top"  # 
 KEY = "key"  # 
@@ -213,16 +210,16 @@ CLOCKS_DICT = {  # holds the values for the clocks frame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 EMPTY_ALARMTUP = (
-	(DISMISSED, False),  # bool is this event dismissed already
+	(KEY_DISMISSED, False),  # bool is this event dismissed already
 	(ENABLED, True),  # enabled state of this entry
 	(EVENT_MODE, EVENT_MODE_ALARM),  # set the mode to EVENT_MODE_ALARM by default of course
-	(NAME, ""),  # name of this entry
-	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
-	(SNOOZABLE, False),  # enabled state of this entry
-	(SNOOZED, True),  # enabled state of this entry
-	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
+	(KEY_NAME, ""),  # name of this entry
+	(KEY_PREDISMISSABLE, True),  # pre-dismissable state of this entry
+	(KEY_SNOOZABLE, False),  # enabled state of this entry
+	(KEY_SNOOZED, True),  # enabled state of this entry
+	(KEY_TIME_ALARM, "00:00:00"),  # time this alarm is set for
+	(KEY_TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(KEY_TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
 )
 
 def EMPTY_ALARMDICT():
@@ -234,17 +231,17 @@ def EMPTY_ALARMDICT():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 EMPTY_ALARM_REMINDTUP = (
-	(DISMISSED, False),  # bool is this event dismissed already
+	(KEY_DISMISSED, False),  # bool is this event dismissed already
 	(ENABLED, True),  # enabled state of this entry
 	(EVENT_MODE, EVENT_MODE_ALARMREMIND),  # set the mode to EVENT_MODE_ALARM by default of course
-	(NAME, ""),  # name of this entry
-	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
-	(SNOOZABLE, False),  # enabled state of this entry
-	(SNOOZED, True),  # enabled state of this entry
-	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_REMIND, "00:00:00"),  # time this alarm is set for
-	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
+	(KEY_NAME, ""),  # name of this entry
+	(KEY_PREDISMISSABLE, True),  # pre-dismissable state of this entry
+	(KEY_SNOOZABLE, False),  # enabled state of this entry
+	(KEY_SNOOZED, True),  # enabled state of this entry
+	(KEY_TIME_ALARM, "00:00:00"),  # time this alarm is set for
+	(KEY_TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(KEY_TIME_REMIND, "00:00:00"),  # time this alarm is set for
+	(KEY_TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
 )
 
 def EMPTY_ALARM_REMINDDICT():
@@ -256,9 +253,9 @@ def EMPTY_ALARM_REMINDDICT():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 EMPTY_CLOCKSTUP = (
-	(TIME_CLOCK, "00:00:00"),  # the main clock time
+	(KEY_TIME_CLOCK, "00:00:00"),  # the main clock time
 	(TIME_ELAPSED, "00:00:00"),  # the main elapsed time
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # the main count down to the next event time
+	(KEY_TIME_OF_NEXT_EVENT, "00:00:00"),  # the main count down to the next event time
 )
 
 def EMPTY_CLOCKSDICT():
@@ -272,11 +269,11 @@ def EMPTY_CLOCKSDICT():
 EMPTY_INTERVALTUP = (
 	(ENABLED, True),  # enabled state of this entry
 	(EVENT_MODE, EVENT_MODE_INTERVAL),  # set the mode to EVENT_MODE_ALARM by default of course
-	(NAME, ""),  # name of this entry
-	(RUNNING, True),  # running state of this entry
-	(TIME_INTERVAL, "00:00:00"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
+	(KEY_NAME, ""),  # name of this entry
+	(KEY_RUNNING, True),  # running state of this entry
+	(KEY_TIME_INTERVAL, "00:00:00"),  # time this alarm is set for
+	(KEY_TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
+	(KEY_TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
 )
 
 def EMPTY_INTERVALDICT():
@@ -777,6 +774,26 @@ CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090B column elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CLOCKS_COLUMN = [  # the column that puts the two smaller clocks below the main one
+	[
+		SG.Text(  # add a new TEXT element to clocks column
+			CLOCKS_TEXT_TIME_CLOCK,  # add the main clock
+		),
+		SG.Button(  # add a button element to clocks column
+			CLOCKS_BTN_XPAND,  # add the xpand button to clocks
+		),
+	],
+	[
+		SG.Text(  # add a new text element to row01 clocks column
+			CLOCKS_TEXT_TIME_ELAPSED,  # add elapsed time
+		),
+		SG.Text(  # add a new row to clocks column
+			CLOCKS_TEXT_TIME_TOGO,  # add time to go
+		),
+	],
+]
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090E layout
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
