@@ -1574,3 +1574,59 @@ while True:  # Event Loop
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # end of biditi.proper
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+
+
+
+
+
+#        Button
+        ButtonMenu
+        Canvas
+#        Checkbox
+#        Column
+#        Combo
+        ErrorElement
+#        Frame
+        Graph
+        HorizontalSeparator
+        Image
+        Input
+        Listbox
+        Menu
+        Multiline
+        OptionMenu
+        Output
+        Pane
+        ProgressBar
+#        Radio
+        Slider
+#        Spin
+        StatusBar
+        Tab
+        TabGroup
+        Table
+#        Text
+        Tree
+        VerticalSeparator
+    QuickMeter
+    SystemTray
+    TKProgressBar
+    ToolTip
+    TreeData
+    UserSettings
+    VarHolder
+#    Window
+
+tkinter.Frame(tkinter.Widget)
+
+    TKOutput
+    TkFixedFrame
+    TkScrollableFrame
+
+tkinter.ttk.Frame(tkinter.ttk.Widget)
+
+    TKCalendar
+
+
+
+#

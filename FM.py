@@ -282,19 +282,26 @@ FMAXPSG_SCTN090B_COLUMN_RADIO_ADD = "FMAXPSG_SCTN090B_COLUMN_RADIO_ADD"  # add a
 FMAXPSG_SCTN090B_COLUMN_ROW_ADD = "FMAXPSG_SCTN090B_COLUMN_ROW_ADD"  # add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>
 FMAXPSG_SCTN090B_COLUMN_SPIN_ADD = "FMAXPSG_SCTN090B_COLUMN_SPIN_ADD"  # add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
 FMAXPSG_SCTN090B_COLUMN_TEXT_ADD = "FMAXPSG_SCTN090B_COLUMN_TEXT_ADD"  # add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_DEF = "FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_DEF"  # add a dict to the mainapp dict <NAC><DICTNAME
-FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_STR_ADD = "FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_STR_ADD"  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
-FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_VAL_ADD = "FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_VAL_ADD"  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
-FMAXPSG_SCTN090C_MAINAPP_DICT_STR_ADD = "FMAXPSG_SCTN090C_MAINAPP_DICT_STR_ADD"  # add a string to the mainapp dict <NAC><KEY><STR>
-FMAXPSG_SCTN090C_MAINAPP_DICT_VAL_ADD = "FMAXPSG_SCTN090C_MAINAPP_DICT_VAL_ADD"  # add a value to the mainapp dict <NAC><KEY><VAL>
+FMAXPSG_SCTN090C_MAINAPPDICT_DICT_DEF = "FMAXPSG_SCTN090C_MAINAPPDICT_DICT_DEF"  # add a dict to the mainapp dict <NAC><DICTNAME
+FMAXPSG_SCTN090C_MAINAPPDICT_DICT_STR_ADD = "FMAXPSG_SCTN090C_MAINAPPDICT_DICT_STR_ADD"  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
+FMAXPSG_SCTN090C_MAINAPPDICT_DICT_VAL_ADD = "FMAXPSG_SCTN090C_MAINAPPDICT_DICT_VAL_ADD"  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
+FMAXPSG_SCTN090C_MAINAPPDICT_STR_ADD = "FMAXPSG_SCTN090C_MAINAPPDICT_STR_ADD"  # add a string to the mainapp dict <NAC><KEY><STR>
+FMAXPSG_SCTN090C_MAINAPPDICT_VAL_ADD = "FMAXPSG_SCTN090C_MAINAPPDICT_VAL_ADD"  # add a value to the mainapp dict <NAC><KEY><VAL>
 FMAXPSG_SCTN090D_FRAME_DEF = "FMAXPSG_SCTN090D_FRAME_DEF"  # define a frame <NAC><FRAMENAME>
+FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD = "FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD"  # add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD = "FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD"  # add a column to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+FMAXPSG_SCTN090E_LAYOUT_COMBO_ADD = "FMAXPSG_SCTN090E_LAYOUT_COMBO_ADD"  # add a combo to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 FMAXPSG_SCTN090E_LAYOUT_DEF = "FMAXPSG_SCTN090E_LAYOUT_DEF"  # define layouts
-FMAXPSG_SCTN090F_MAINDICT_DEF = "FMAXPSG_SCTN090F_MAINDICT_DEF"  # define a main dictdict <NAC><MAINNAME>
-FMAXPSG_SCTN090F_MAINDICT_DICT_DEF = "FMAXPSG_SCTN090F_MAINDICT_DICT_DEF"  # add a str to the main dictdict
-FMAXPSG_SCTN090F_MAINDICT_DICT_STR_ADD = "FMAXPSG_SCTN090F_MAINDICT_DICT_STR_ADD"  # add a str to the main dictdict
-FMAXPSG_SCTN090F_MAINDICT_DICT_VAL_ADD = "FMAXPSG_SCTN090F_MAINDICT_DICT_VAL_ADD"  # add a str to the main dictdict
-FMAXPSG_SCTN090F_MAINDICT_STR_ADD = "FMAXPSG_SCTN090F_MAINDICT_STR_ADD"  # add a str to the main dictdict
-FMAXPSG_SCTN090F_MAINDICT_VAL_ADD = "FMAXPSG_SCTN090F_MAINDICT_VAL_ADD"  # add a str to the main dictdict
+FMAXPSG_SCTN090E_LAYOUT_KEY_ADD = "FMAXPSG_SCTN090E_LAYOUT_KEY_ADD"  # add a key to a layout element 'key=' will be added automatically <NAC><LAYOUTNAME><ROWKEY><ELEMENTKEY><VAL>
+FMAXPSG_SCTN090E_LAYOUT_PACKEDPARM_ADD = "FMAXPSG_SCTN090E_LAYOUT_PACKEDPARM_ADD"  # add packedparms to a layout entry <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+FMAXPSG_SCTN090E_LAYOUT_PARM_ADD = "FMAXPSG_SCTN090E_LAYOUT_PARM_ADD"  # add parms to a layout entry <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+FMAXPSG_SCTN090E_LAYOUT_RADIO_ADD = "FMAXPSG_SCTN090E_LAYOUT_RADIO_ADD"  # add a radio to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+FMAXPSG_SCTN090E_LAYOUT_ROW_ADD = "FMAXPSG_SCTN090E_LAYOUT_ROW_ADD"  # add a row [] to a layout <NAC><LAYOUTNAME><ROWKEY><LEVEL>
+FMAXPSG_SCTN090E_LAYOUT_SPIN_ADD = "FMAXPSG_SCTN090E_LAYOUT_SPIN_ADD"  # add a spinbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+FMAXPSG_SCTN090E_LAYOUT_TEXT_ADD = "FMAXPSG_SCTN090E_LAYOUT_TEXT_ADD"  # add a text element to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+FMAXPSG_SCTN090F_WINDOW_DEF = "FMAXPSG_SCTN090F_WINDOW_DEF"  # define a main dictdict <NAC><MAINNAME>
+FMAXPSG_SCTN090F_WINDOW_STR_ADD = "FMAXPSG_SCTN090F_WINDOW_STR_ADD"  # add a str to the main dictdict
+FMAXPSG_SCTN090F_WINDOW_VAL_ADD = "FMAXPSG_SCTN090F_WINDOW_VAL_ADD"  # add a str to the main dictdict
 FMAXPSG_SCTN0910_DUBLT_SS_DEF = "FMAXPSG_SCTN0910_DUBLT_SS_DEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
 FMAXPSG_SCTN0910_DUBLT_SV_DEF = "FMAXPSG_SCTN0910_DUBLT_SV_DEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
 FMAXPSG_SCTN0910_DUBLT_VS_DEF = "FMAXPSG_SCTN0910_DUBLT_VS_DEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
@@ -382,19 +389,26 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN090B_COLUMN_ROW_ADD,  # add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>
 	FMAXPSG_SCTN090B_COLUMN_SPIN_ADD,  # add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
 	FMAXPSG_SCTN090B_COLUMN_TEXT_ADD,  # add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_DEF,  # add a dict to the mainapp dict <NAC><DICTNAME
-	FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_STR_ADD,  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
-	FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_VAL_ADD,  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
-	FMAXPSG_SCTN090C_MAINAPP_DICT_STR_ADD,  # add a string to the mainapp dict <NAC><KEY><STR>
-	FMAXPSG_SCTN090C_MAINAPP_DICT_VAL_ADD,  # add a value to the mainapp dict <NAC><KEY><VAL>
+	FMAXPSG_SCTN090C_MAINAPPDICT_DICT_DEF,  # add a dict to the mainapp dict <NAC><DICTNAME
+	FMAXPSG_SCTN090C_MAINAPPDICT_DICT_STR_ADD,  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
+	FMAXPSG_SCTN090C_MAINAPPDICT_DICT_VAL_ADD,  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
+	FMAXPSG_SCTN090C_MAINAPPDICT_STR_ADD,  # add a string to the mainapp dict <NAC><KEY><STR>
+	FMAXPSG_SCTN090C_MAINAPPDICT_VAL_ADD,  # add a value to the mainapp dict <NAC><KEY><VAL>
 	FMAXPSG_SCTN090D_FRAME_DEF,  # define a frame <NAC><FRAMENAME>
+	FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD,  # add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+	FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD,  # add a column to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+	FMAXPSG_SCTN090E_LAYOUT_COMBO_ADD,  # add a combo to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 	FMAXPSG_SCTN090E_LAYOUT_DEF,  # define layouts
-	FMAXPSG_SCTN090F_MAINDICT_DEF,  # define a main dictdict <NAC><MAINNAME>
-	FMAXPSG_SCTN090F_MAINDICT_DICT_DEF,  # add a str to the main dictdict
-	FMAXPSG_SCTN090F_MAINDICT_DICT_STR_ADD,  # add a str to the main dictdict
-	FMAXPSG_SCTN090F_MAINDICT_DICT_VAL_ADD,  # add a str to the main dictdict
-	FMAXPSG_SCTN090F_MAINDICT_STR_ADD,  # add a str to the main dictdict
-	FMAXPSG_SCTN090F_MAINDICT_VAL_ADD,  # add a str to the main dictdict
+	FMAXPSG_SCTN090E_LAYOUT_KEY_ADD,  # add a key to a layout element 'key=' will be added automatically <NAC><LAYOUTNAME><ROWKEY><ELEMENTKEY><VAL>
+	FMAXPSG_SCTN090E_LAYOUT_PACKEDPARM_ADD,  # add packedparms to a layout entry <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+	FMAXPSG_SCTN090E_LAYOUT_PARM_ADD,  # add parms to a layout entry <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+	FMAXPSG_SCTN090E_LAYOUT_RADIO_ADD,  # add a radio to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+	FMAXPSG_SCTN090E_LAYOUT_ROW_ADD,  # add a row [] to a layout <NAC><LAYOUTNAME><ROWKEY><LEVEL>
+	FMAXPSG_SCTN090E_LAYOUT_SPIN_ADD,  # add a spinbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+	FMAXPSG_SCTN090E_LAYOUT_TEXT_ADD,  # add a text element to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+	FMAXPSG_SCTN090F_WINDOW_DEF,  # define a main dictdict <NAC><MAINNAME>
+	FMAXPSG_SCTN090F_WINDOW_STR_ADD,  # add a str to the main dictdict
+	FMAXPSG_SCTN090F_WINDOW_VAL_ADD,  # add a str to the main dictdict
 	FMAXPSG_SCTN0910_DUBLT_SS_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
 	FMAXPSG_SCTN0910_DUBLT_SV_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
 	FMAXPSG_SCTN0910_DUBLT_VS_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
@@ -462,14 +476,14 @@ FMPSG_SCTN090A_RADIO_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090A_RADIO_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090B_COLUMN_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090B_COLUMN_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090C_MAINAPP_CMNT_DICT = {}  # the main app dict for this app
-FMPSG_SCTN090C_MAINAPP_DICT = {}  # the main app dict for this app
+FMPSG_SCTN090C_MAINAPPDICT_CMNT_DICT = {}  # the main app dict for this app
+FMPSG_SCTN090C_MAINAPPDICT_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090D_FRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090D_FRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090E_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090E_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090F_MAINDICT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN090F_MAINDICT_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090F_WINDOW_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090F_WINDOW_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0910_DEF3_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0910_DEF3_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0911_COMBO_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
@@ -595,19 +609,27 @@ TBGLST = [
 	("FMAXPSG_SCTN090B_COLUMN_ROW_ADD", FMAXFM_SCTN0101_AX_DEF, "add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>",),
 	("FMAXPSG_SCTN090B_COLUMN_SPIN_ADD", FMAXFM_SCTN0101_AX_DEF, "add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
 	("FMAXPSG_SCTN090B_COLUMN_TEXT_ADD", FMAXFM_SCTN0101_AX_DEF, "add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
-	("FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_DEF", FMAXFM_SCTN0101_AX_DEF, "add a dict to the mainapp dict <NAC><DICTNAME",),
-	("FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>",),
-	("FMAXPSG_SCTN090C_MAINAPP_DICT_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>",),
-	("FMAXPSG_SCTN090C_MAINAPP_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a string to the mainapp dict <NAC><KEY><STR>",),
-	("FMAXPSG_SCTN090C_MAINAPP_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to the mainapp dict <NAC><KEY><VAL>",),
+	("FMAXPSG_SCTN090C_MAINAPPDICT_DICT_DEF", FMAXFM_SCTN0101_AX_DEF, "add a dict to the mainapp dict <NAC><DICTNAME",),
+	("FMAXPSG_SCTN090C_MAINAPPDICT_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>",),
+	("FMAXPSG_SCTN090C_MAINAPPDICT_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>",),
+	("FMAXPSG_SCTN090C_MAINAPPDICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a string to the mainapp dict <NAC><KEY><STR>",),
+	("FMAXPSG_SCTN090C_MAINAPPDICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to the mainapp dict <NAC><KEY><VAL>",),
 	("FMAXPSG_SCTN090D_FRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME>",),
+	("FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD", FMAXFM_SCTN0101_AX_DEF, "add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
+	("FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD", FMAXFM_SCTN0101_AX_DEF, "add a column to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
+	("FMAXPSG_SCTN090E_LAYOUT_COMBO_ADD", FMAXFM_SCTN0101_AX_DEF, "add a combo to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
+	("FMAXPSG_SCTN090E_LAYOUT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a layout <NAC><LAYOUTNAME>",),
 	("FMAXPSG_SCTN090E_LAYOUT_DEF", FMAXFM_SCTN0101_AX_DEF, "define layouts",),
-	("FMAXPSG_SCTN090F_MAINDICT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a main dictdict <NAC><MAINNAME>",),
-	("FMAXPSG_SCTN090F_MAINDICT_DICT_DEF", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
-	("FMAXPSG_SCTN090F_MAINDICT_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
-	("FMAXPSG_SCTN090F_MAINDICT_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
-	("FMAXPSG_SCTN090F_MAINDICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
-	("FMAXPSG_SCTN090F_MAINDICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
+	("FMAXPSG_SCTN090E_LAYOUT_KEY_ADD", FMAXFM_SCTN0101_AX_DEF, "add a key to a layout element 'key=' will be added automatically <NAC><LAYOUTNAME><ROWKEY><ELEMENTKEY><VAL>",),
+	("FMAXPSG_SCTN090E_LAYOUT_PACKEDPARM_ADD", FMAXFM_SCTN0101_AX_DEF, "add packedparms to a layout entry <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>",),
+	("FMAXPSG_SCTN090E_LAYOUT_PARM_ADD", FMAXFM_SCTN0101_AX_DEF, "add parms to a layout entry <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>",),
+	("FMAXPSG_SCTN090E_LAYOUT_RADIO_ADD", FMAXFM_SCTN0101_AX_DEF, "add a radio to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
+	("FMAXPSG_SCTN090E_LAYOUT_ROW_ADD", FMAXFM_SCTN0101_AX_DEF, "add a row [] to a layout <NAC><LAYOUTNAME><ROWKEY><LEVEL>",),
+	("FMAXPSG_SCTN090E_LAYOUT_SPIN_ADD", FMAXFM_SCTN0101_AX_DEF, "add a spinbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
+	("FMAXPSG_SCTN090E_LAYOUT_TEXT_ADD", FMAXFM_SCTN0101_AX_DEF, "add a text element to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
+	("FMAXPSG_SCTN090F_WINDOW_DEF", FMAXFM_SCTN0101_AX_DEF, "define a main dictdict <NAC><MAINNAME>",),
+	("FMAXPSG_SCTN090F_WINDOW_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
+	("FMAXPSG_SCTN090F_WINDOW_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
 	("FMAXPSG_SCTN0910_DUBLT_SS_DEF", FMAXFM_SCTN0101_AX_DEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
 	("FMAXPSG_SCTN0910_DUBLT_SV_DEF", FMAXFM_SCTN0101_AX_DEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
 	("FMAXPSG_SCTN0910_DUBLT_VS_DEF", FMAXFM_SCTN0101_AX_DEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",),
@@ -671,14 +693,14 @@ TBGLST = [
 	("FMPSG_SCTN090A_RADIO_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN090B_COLUMN_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN090B_COLUMN_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
-	("FMPSG_SCTN090C_MAINAPP_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict for this app",),
-	("FMPSG_SCTN090C_MAINAPP_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict for this app",),
+	("FMPSG_SCTN090C_MAINAPPDICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict for this app",),
+	("FMPSG_SCTN090C_MAINAPPDICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict for this app",),
 	("FMPSG_SCTN090D_FRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN090D_FRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN090E_LAYOUT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN090E_LAYOUT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
-	("FMPSG_SCTN090F_MAINDICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
-	("FMPSG_SCTN090F_MAINDICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN090F_WINDOW_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
+	("FMPSG_SCTN090F_WINDOW_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0910_DEF3_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0910_DEF3_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0911_COMBO_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
@@ -1063,8 +1085,8 @@ TBGLST = [
 	("PSGVAL__CLOCKS_COLUMN03", FMAXPSG_SCTN090B_COLUMN_PARM_ADD, "CLOCKS_COLUMN", "CLOCKS_COLUMN_ROW_00", "L03", "CLOCKS_COLUMN_E01", "CLOCKS_TEXT_TIME_CLOCK", "add the main clock",),
 	("PSGVAL__CLOCKS_COLUMN04", FMAXPSG_SCTN090B_COLUMN_BUTTON_ADD, "CLOCKS_COLUMN", "CLOCKS_COLUMN_ROW_00", "L02", "CLOCKS_COLUMN_E02", "add a button element to clocks column",),
 	("PSGVAL__CLOCKS_COLUMN05", FMAXPSG_SCTN090B_COLUMN_PARM_ADD, "CLOCKS_COLUMN", "CLOCKS_COLUMN_ROW_00", "L03", "CLOCKS_COLUMN_E02", "CLOCKS_BTN_XPAND", "add the xpand button to clocks",),
-	("PSGVAL__CLOCKS_COLUMN06", FMAXPSG_SCTN090B_COLUMN_BUTTON_ADD, "CLOCKS_COLUMN", "CLOCKS_COLUMN_ROW_00", "L02", "CLOCKS_COLUMN_E05", "add reset button for elapsed time",),
 	("PSGVAL__CLOCKS_COLUMN05", FMAXPSG_SCTN090B_COLUMN_PARM_ADD, "CLOCKS_COLUMN", "CLOCKS_COLUMN_ROW_00", "L03", "CLOCKS_COLUMN_E05", "CLOCKS_BTN_ZERO", "add the zero button to clocks",),
+	("PSGVAL__CLOCKS_COLUMN06", FMAXPSG_SCTN090B_COLUMN_BUTTON_ADD, "CLOCKS_COLUMN", "CLOCKS_COLUMN_ROW_00", "L02", "CLOCKS_COLUMN_E05", "add reset button for elapsed time",),
 	("PSGVAL__CLOCKS_COLUMN06", FMAXPSG_SCTN090B_COLUMN_ROW_ADD, "CLOCKS_COLUMN", "CLOCKS_COLUMN_ROW_01", "L01", "add a new row to clocks column",),
 	("PSGVAL__CLOCKS_COLUMN07", FMAXPSG_SCTN090B_COLUMN_TEXT_ADD, "CLOCKS_COLUMN", "CLOCKS_COLUMN_ROW_01", "L02", "CLOCKS_COLUMN_E03", "add a new text element to row01 clocks column",),
 	("PSGVAL__CLOCKS_COLUMN08", FMAXPSG_SCTN090B_COLUMN_PARM_ADD, "CLOCKS_COLUMN", "CLOCKS_COLUMN_ROW_01", "L03", "CLOCKS_COLUMN_E03", "CLOCKS_TEXT_TIME_ELAPSED", "add elapsed time",),
@@ -1079,6 +1101,11 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FONTSZ_TIME_CLOCK", FMAXPSG_SCTN0901_VAL_DEF, "CLOCKS_FONTSZ_TIME_CLOCK", "(FONT_DEFAULT, CLOCKS_SZ_TIME_CLOCK)", "the font for the clocks only clock",),
 	("PSGVAL__CLOCKS_FONTSZ_TIME_ELAPSED", FMAXPSG_SCTN0901_VAL_DEF, "CLOCKS_FONTSZ_TIME_ELAPSED", "(FONT_DEFAULT, CLOCKS_SZ_TIME_ELAPSED)", "the font for the clocks only clock",),
 	("PSGVAL__CLOCKS_FONTSZ_TIME_TOGO", FMAXPSG_SCTN0901_VAL_DEF, "CLOCKS_FONTSZ_TIME_TOGO", "(FONT_DEFAULT, CLOCKS_SZ_TIME_TOGO)", "the font for the clocks only clock",),
+	("PSGVAL__CLOCKS_LAYOUT", FMAX_NOP, "layout for APPMODE_CLOCKS",),
+	("PSGVAL__CLOCKS_LAYOUT00", FMAXPSG_SCTN090E_LAYOUT_DEF, "CLOCKS_LAYOUT", "layout for APPMODE_CLOCKS",),
+	("PSGVAL__CLOCKS_LAYOUT01", FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD, "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L02", "CLOCKS_LAYOUT_E01", "add a column",),
+	("PSGVAL__CLOCKS_LAYOUT01", FMAXPSG_SCTN090E_LAYOUT_PARM_ADD, "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L03", "CLOCKS_LAYOUT_E01", "CLOCKS_COLUMN", "comment",),
+	("PSGVAL__CLOCKS_LAYOUT01", FMAXPSG_SCTN090E_LAYOUT_ROW_ADD, "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L01", "add a row to the layout",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK", FMAX_NOP, "CLOCKS text TIME_CLOCK",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK00", FMAXPSG_SCTN0909_TEXT_DEF, "CLOCKS_TEXT_TIME_CLOCK", "define the text element for CLOCKS_CLOCK_TIME",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_CLOCK", "BACKGROUND_COLOR", "COLOR_CLOCK_BACKGROUND", "background color for the clock elements",),
@@ -1100,6 +1127,9 @@ TBGLST = [
 	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_TOGO", "JUSTIFICATION", "JUSTIFICATION_CENTER", "center everything",),
 	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_TOGO", "SIZE", "(5, 1)", "characters, lines size line",),
 	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_TOGO", "TEXT_COLOR", "COLOR_TIME_TOGO", "the text color for a clock_time element",),
+
+#	("PSGVAL__CLOCKS_WINDOW", FMAXPSG_SCTN090F, parms, "comment",),
+
 	("PSGVAL__COLORS", FMAX_NOP, "colors defines",),
 	("PSGVAL__COLORS_BTN_NORMAL", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_BTN_NORMAL", "(COLOR_TEXT_NORMAL, COLOR_BACKGROUND)", "comment",),
 	("PSGVAL__COLORS_TEXT_HIGH", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TEXT_HIGH", "(COLOR_TEXT_HIGH, COLOR_BACKGROUND)", "combined colors for a clock text element",),
@@ -1671,16 +1701,26 @@ def makePSG():
 		strToRtn_ += f"""{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
-	strToRtn_ += f"""{makeAComment("SCTN090E layout")}"""
+	strToRtn_ += f"""{makeAComment("SCTN090E layout elements")}"""
 	dictToUse_ = sortADict(FMPSG_SCTN090E_LAYOUT_DICT)
-	for thisName_, value_ in dictToUse_.items():
-		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN090E_LAYOUT_CMNT_DICT[thisName_], value_)}"""
+	for thisLayoutName_, vals1_ in FMPSG_SCTN090E_LAYOUT_DICT.items():
+		strToRtn_ += f"""{thisLayoutName_} = {OBRKT}  # {FMPSG_SCTN090E_LAYOUT_CMNT_DICT[thisLayoutName_]}{NEWLINE}"""
+		for thisRow_, vals2_ in vals1_.items():
+			thisTabLevel1_ = FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRow_][TABLEVEL]
+			strToRtn_ += f"""{NTAB(thisTabLevel1_)}{OBRKT}{NEWLINE}"""
+			for thisElementKey_, vals3_ in vals2_.items():
+				if thisElementKey_ == TABLEVEL:
+					continue
+				if vals3_ != "":
+					strToRtn_ += f"""{vals3_}{NTAB(thisTabLevel1_ + 1)}{CPAREN},{NEWLINE}"""
+			strToRtn_ += f"""{NTAB(thisTabLevel1_)}{CBRKT},{NEWLINE}"""
+		strToRtn_ += f"""{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN090F mainwindow root")}"""
-	dictToUse_ = sortADict(FMPSG_SCTN090F_MAINDICT_DICT)
+	dictToUse_ = sortADict(FMPSG_SCTN090F_WINDOW_DICT)
 	for thisName_, value_ in dictToUse_.items():
-		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN090F_MAINDICT_CMNT_DICT[thisName_], value_)}"""
+		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN090F_WINDOW_CMNT_DICT[thisName_], value_)}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN090D frame")}"""
@@ -1749,14 +1789,14 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN090A_RADIO_DICT, \
 		FMPSG_SCTN090B_COLUMN_CMNT_DICT, \
 		FMPSG_SCTN090B_COLUMN_DICT, \
-		FMPSG_SCTN090C_MAINAPP_CMNT_DICT, \
-		FMPSG_SCTN090C_MAINAPP_DICT, \
+		FMPSG_SCTN090C_MAINAPPDICT_CMNT_DICT, \
+		FMPSG_SCTN090C_MAINAPPDICT_DICT, \
 		FMPSG_SCTN090D_FRAME_CMNT_DICT, \
 		FMPSG_SCTN090D_FRAME_DICT, \
 		FMPSG_SCTN090E_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN090E_LAYOUT_DICT, \
-		FMPSG_SCTN090F_MAINDICT_CMNT_DICT, \
-		FMPSG_SCTN090F_MAINDICT_DICT, \
+		FMPSG_SCTN090F_WINDOW_CMNT_DICT, \
+		FMPSG_SCTN090F_WINDOW_DICT, \
 		FMPSG_SCTN0910_DEF3_CMNT_DICT, \
 		FMPSG_SCTN0910_DEF3_DICT, \
 		FMPSG_SCTN0911_COMBO_CMNT_DICT, \
@@ -2788,6 +2828,217 @@ def parseTBGLST(FDTBGLST):
 			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_]:
 				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] = ""
 			FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Text{OPAREN}  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN090E_LAYOUT_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 4:
+				doErrorItem("not 4 items", thisItem_)
+				continue
+			thisLayoutName_ = thisItem_[2]
+			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
+			FMPSG_SCTN090E_LAYOUT_CMNT_DICT[thisLayoutName_] = f"""{thisComment_}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 7:
+				doErrorItem("not 7 items", thisItem_)
+				continue
+			thisLayoutName_ = thisItem_[2]
+			thisRowKey_ = thisItem_[3]
+			thisTabLevel_ = thisItem_[4]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[5]
+			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 7:
+				doErrorItem("not 7 items", thisItem_)
+				continue
+			thisLayoutName_ = thisItem_[2]
+			thisRowKey_ = thisItem_[3]
+			thisTabLevel_ = thisItem_[4]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[5]
+			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Col{OPAREN}  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN090E_LAYOUT_COMBO_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 7:
+				doErrorItem("not 7 items", thisItem_)
+				continue
+			thisLayoutName_ = thisItem_[2]
+			thisRowKey_ = thisItem_[3]
+			thisTabLevel_ = thisItem_[4]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem[5]
+			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Combo{OPAREN}  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN090E_LAYOUT_PACKEDPARM_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 8:
+				doErrorItem("not 8 items", thisItem_)
+				continue
+			thisLayoutName_ = thisItem_[2]
+			thisRowKey_ = thisItem_[3]
+			thisTabLevel_ = thisItem_[4]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[5]
+			thisVal_ = thisItem_[6]
+			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}**{thisVal_},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN090E_LAYOUT_PARM_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 8:
+				doErrorItem("not 8 items", thisItem_)
+				continue
+			thisLayoutName_ = thisItem_[2]
+			thisRowKey_ = thisItem_[3]
+			thisTabLevel_ = thisItem_[4]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[5]
+			thisVal_ = thisItem_[6]
+			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}{thisVal_},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN090E_LAYOUT_RADIO_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 7:
+				doErrorItem("not 7 items", thisItem_)
+				continue
+			thisLayoutName_ = thisItem_[2]
+			thisRowKey_ = thisItem_[3]
+			thisTabLevel_ = thisItem_[4]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[5]
+			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Radio{OPAREN}  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN090E_LAYOUT_ROW_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 6:
+				doErrorItem("not 6 items", thisItem_)
+				continue
+			thisLayoutName_ = thisItem_[2]
+			thisRowKey_ = thisItem_[3]
+			thisTabLevel_ = thisItem_[4]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
+			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][TABLEVEL] = thisTabLevel_
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN090E_LAYOUT_SPIN_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 7:
+				doErrorItem("not 7 items", thisItem_)
+				continue
+			thisLayoutName_ = thisItem_[2]
+			thisRowKey_ = thisItem_[3]
+			thisTabLevel_ = thisItem_[4]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[5]
+			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Spin{OPAREN}  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN090E_LAYOUT_TEXT_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 7:
+				doErrorItem("not 7 items", thisItem_)
+				continue
+			thisLayoutName_ = thisItem_[2]
+			thisRowKey_ = thisItem_[3]
+			thisTabLevel_ = thisItem_[4]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[5]
+			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Text{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
