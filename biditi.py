@@ -1579,53 +1579,55 @@ while True:  # Event Loop
 
 
 
-#        Button
-        ButtonMenu
-        Canvas
-#        Checkbox
-#        Column
-#        Combo
-        ErrorElement
-#        Frame
-        Graph
-        HorizontalSeparator
-        Image
-        Input
-        Listbox
-        Menu
-        Multiline
-        OptionMenu
-        Output
-        Pane
-        ProgressBar
-#        Radio
-        Slider
-#        Spin
-        StatusBar
-        Tab
-        TabGroup
-        Table
-#        Text
-        Tree
-        VerticalSeparator
-    QuickMeter
-    SystemTray
-    TKProgressBar
-    ToolTip
-    TreeData
-    UserSettings
-    VarHolder
-#    Window
-
+# Button
+ButtonMenu
+Canvas
+# Checkbox
+# Column
+# Combo
+ErrorElement
+Frame
+Graph
+HorizontalSeparator
+Image
+Input
+Listbox
+Menu
+Multiline
+OptionMenu
+Output
+Pane
+ProgressBar
+# Radio
+Slider
+# Spin
+StatusBar
+Tab
+TabGroup
+Table
+# Text
+Tree
+VerticalSeparator
+QuickMeter
+SystemTray
+TKProgressBar
+ToolTip
+TreeData
+UserSettings
+VarHolder
+# Window
 tkinter.Frame(tkinter.Widget)
-
-    TKOutput
-    TkFixedFrame
-    TkScrollableFrame
-
+TKOutput
+TkFixedFrame
+TkScrollableFrame
 tkinter.ttk.Frame(tkinter.ttk.Widget)
+TKCalendar
 
-    TKCalendar
+
+#
+SCTN090C FMPSG_SCTN090C_MAPPDS_DICT |{
+'MAPPDS': {'TIME_CLOCK': '\tTIME_CLOCK: "00:00:00",  # start the clock at midnight\n', 'TIME_ELAPSED': '\tTIME_ELAPSED: "00:00:00",  # start the clock at midnight\n', 'TIME_OF_NEXT_EVENT': '\tTIME_OF_NEXT_EVENT: "00:00:00",  # holds the time of the next coming event for easy maths\n', 'TIME_TOGO': '\tTIME_TOGO: "00:00:00",  # start the clock at midnight\n', 'APPMODE': '\tAPPMODE: APPMODE_CLOCKS,  # default mode is clocks\n', 'AVOID_MOUSE': '\tAVOID_MOUSE: True,  # default to avoiding mouse\n', 'INDEX_OF_NEXT_EVENT': '\tINDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them\n', 'TRANSPARENT': '\tTRANSPARENT: False,  # default transparent to False\n', 'TRANSPARENT_UNDER_MOUSE': '\tTRANSPARENT_UNDER_MOUSE: True,  # default transparent under mouse when cornered to True\n', 'EVENT_ENTRIES': '\tEVENT_ENTRIES: {  # holds events\n'}}|
+FMPSG_SCTN090C_MAPPDSDICT_DICT|{'MAPPDS': {'EVENT_ENTRIES': '\tNAME: "go to bed",  # this entry\'s name\n\tTIME_ALARM: "04:00:00",  # time of this event\n\tTIME_TOGO: "00:00:00",  # updated only when the edit window is open with this event countdown to next event\n\tDISMISSED: False,  # is this event dismissed\n\tENABLED: False,  # is this event enabled\n\tEVENT_MODE: EVENT_MODE_ALARM,  # this entry\'s event_mode\n\tPREDISMISSABLE: True,  # is this event dismissable in advance\n\tSNOOZABLE: False,  # can this event be snoozed\n\tSNOOZED: False,  # is this event snoozed\n'}}|
 
 
 
