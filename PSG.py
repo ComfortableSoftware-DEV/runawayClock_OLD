@@ -1,6 +1,7 @@
 
 
-import PySimpleGUI as SG
+# import PySimpleGUI as SG
+import PySimpleGUIQt as SG
 
 
 import CF
