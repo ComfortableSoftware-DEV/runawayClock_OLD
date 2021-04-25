@@ -989,7 +989,7 @@ CLOCKS_WINDOW = {  # define the clocks window
 	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
 	BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
 	ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
-	FORCE_TOPLEVEL: False,  #
+	FORCE_TOPLEVEL: None,  #
 	GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
 	LAYOUT: CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
