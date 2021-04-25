@@ -18,6 +18,9 @@ oldTogo = "00:05:00"
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def handleEvents(event_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if event_ == "__TIMEOUT__":
+		return
+	print(f"""{event_}""")
 	if event_ == PSG.BTN_QUIT:
 		exit()
 
@@ -25,9 +28,9 @@ def handleEvents(event_):
 		PSG.CLOCKS_DICT_BID[PSG.TIME_ELAPSED] = CF.nrmlIntToHMS(0)
 		PSG.updateFromDict(PSG.CLOCKS_MAINFRAME, PSG.CLOCKS_DICT_BID)
 
-	elif event_ == PSG.BTN_XPAND:
-		TClocksDict = PSG.readWithDict(PSG.CLOCKS_MAINFRAME, PSG.CLOCKS_DICT_FULL)
-		print(f"""{inspect(PSG.CLOCKS_MAINFRAME[PSG.TIME_CLOCK])}""")
+#	elif event_ == PSG.BTN_XPAND:
+#		TClocksDict = PSG.readWithDict(PSG.CLOCKS_MAINFRAME, PSG.CLOCKS_DICT_FULL)
+#		print(f"""{inspect(PSG.CLOCKS_MAINFRAME[PSG.TIME_CLOCK])}""")
 #		PSG.CLOCKS_MAINFRAME.Refresh()
 #		print(f"""{PSG.CLOCKS_MAINFRAME.Location}""")
 #		PSG.CLOCKS_MAINFRAME.Move(10, 10)
