@@ -994,8 +994,9 @@ CLOCKS_WINDOW = {  # define the clocks window
 	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
 	LAYOUT: CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
 	MARGINS: SZ_MARGINS_ALL,  #
-	# NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
+	NO_TITLEBAR: False,  # no titlebar on APPMODE_CLOCKS window
 	TITLE: TITLE_CLOCKS,  #
+	USE_CUSTOM_TITLEBAR : True,
 }
 
 

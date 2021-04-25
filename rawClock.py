@@ -25,6 +25,7 @@ def handleEvents(event_):
 
 
 while True:
+	PSG.CLOCKS_MAINFRAME.bring_to_front()
 	event_, values_ = PSG.CLOCKS_MAINFRAME.Read(timeout=100)
 	now_ = CF.nowStrHMS(CF.DT.now())
 	if now_ != oldClock:
