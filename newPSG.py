@@ -207,7 +207,7 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_DICT = {  # holds the values for the clocks frame
+CLOCKS_TIMES_DICT = {  # holds the values for the clocks frame
 	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
 	TIME_ELAPSED: "00:00:00",  # holds the values for the clocks frame
 	TIME_TOGO: "00:00:00",  # holds the values for the clocks frame
@@ -742,6 +742,18 @@ def UPDATE_COMBODICT():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0906 button elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+BTN_DOWN20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the DOWN button
+	IMAGE_FILENAME: "res/down20.png",  # filename for the button icon
+	BORDER_WIDTH: 0,  # button xpand key
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_DOWN,  # button xpand key
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
 BTN_DOWN32 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the DOWN button
 	IMAGE_FILENAME: "res/down32.png",  # filename for the button icon
@@ -750,6 +762,17 @@ BTN_DOWN32 = {  #
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
 	KEY: BTN_DOWN,  # button xpand key
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_EDIT20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the EDIT button
+	IMAGE_FILENAME: "res/edit20.png",  # filename for the button icon
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_EDIT,  # button xpand key
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -765,6 +788,17 @@ BTN_EDIT32 = {  #
 }
 
 
+BTN_QUIT20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the QUIT button
+	IMAGE_FILENAME: "res/quit20.png",  # filename for the button icon
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_QUIT,  # button quit key
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
 BTN_QUIT32 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the QUIT button
 	IMAGE_FILENAME: "res/quit32.png",  # filename for the button icon
@@ -772,6 +806,17 @@ BTN_QUIT32 = {  #
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
 	KEY: BTN_QUIT,  # button quit key
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_UP20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the UP button
+	IMAGE_FILENAME: "res/up20.png",  # filename for the button icon
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_UP,  # button xpand key
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -787,6 +832,17 @@ BTN_UP32 = {  #
 }
 
 
+BTN_XPAND20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the XPAND button
+	IMAGE_FILENAME: "res/xpand20.png",  # filename for the button icon
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_XPAND,  # button xpand key
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
 BTN_XPAND32 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the XPAND button
 	IMAGE_FILENAME: "res/xpand32.png",  # filename for the button icon
@@ -794,6 +850,17 @@ BTN_XPAND32 = {  #
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
 	KEY: BTN_XPAND,  # button xpand key
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_ZERO20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the ZERO button
+	IMAGE_FILENAME: "res/zero20.png",  # filename for the button icon
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_ZERO,  # button zero key
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -880,12 +947,15 @@ CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the mai
 CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the main one
 	[
 		SG.Button(  # add a button element to clocks column
-			**BTN_QUIT32,  # add the xpand button to clocks
+			**BTN_QUIT20,  # add the xpand button to clocks
 		),
 	],
 	[
 		SG.Button(  # add reset button for elapsed time
-			**BTN_ZERO32,  # add the zero button to clocks
+			**BTN_ZERO20,  # add the zero button to clocks
+		),
+		SG.Button(  # add reset button for elapsed time
+			**BTN_XPAND20,  # add the zero button to clocks
 		),
 	],
 ]
