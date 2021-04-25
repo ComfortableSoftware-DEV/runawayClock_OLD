@@ -10,6 +10,7 @@ AllKeysDict, {
 	'BTN_ZERO': <PySimpleGUI.PySimpleGUI.Button object at 0x7fad42ad0910>,
 	'BTN_XPAND': <PySimpleGUI.PySimpleGUI.Button object at 0x7fad416f02b0>}
 
+
 AlphaChannel, 1.0
 
 AutoClose, False
