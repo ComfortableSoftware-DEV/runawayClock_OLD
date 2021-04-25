@@ -993,7 +993,7 @@ CLOCKS_WINDOW = {  # define the clocks window
 	GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
 	LAYOUT: CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
-	MARGINS: SZ_MARGINS_ALL,  #
+	# MARGINS: SZ_MARGINS_ALL,  #
 	NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
 	TITLE: TITLE_CLOCKS,  #
 }
