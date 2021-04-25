@@ -79,6 +79,7 @@ INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  #
 NAME = "NAME"  #
 PREDISMISSABLE = "PREDISMISSABLE"  #
 RUNNING = "RUNNING"  # is this interval running or not
+SCREEN_POS = "SCREEN_POS"  # can this event be snoozed
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # snoozed bool
 TIME_ALARM = "TIME_ALARM"  # the alarm time
@@ -206,7 +207,7 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_DICT = {  # holds the values for the clocks frame
+CLOCKS_TIMES_DICT = {  # holds the values for the clocks frame
 	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
 	TIME_ELAPSED: "00:00:00",  # holds the values for the clocks frame
 	TIME_TOGO: "00:00:00",  # holds the values for the clocks frame
@@ -951,6 +952,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		TIME_TOGO: "00:00:00",  # updated only when the edit window is open with this event countdown to next event
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
+	SCREEN_POS: (1000, 5),  # default transparent to False, only digits show in theory
 	TIME_CLOCK: "00:00:00",  # start the clock at midnight
 	TIME_ELAPSED: "00:00:00",  # start the clock at midnight
 	TIME_OF_NEXT_EVENT: "00:00:00",  # holds the time of the next coming event for easy maths
