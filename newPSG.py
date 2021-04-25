@@ -954,6 +954,8 @@ CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the mai
 		SG.Button(  # add reset button for elapsed time
 			**BTN_ZERO20,  # add the zero button to clocks
 		),
+	],
+	[
 		SG.Button(  # add reset button for elapsed time
 			**BTN_XPAND20,  # add the zero button to clocks
 		),
