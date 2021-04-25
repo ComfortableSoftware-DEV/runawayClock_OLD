@@ -11,4 +11,4 @@ do       | [ ] | main all seeing mode
 do       | [ ] | read mouse
 do       | [ ] | read mouse
 do       | [ ] | read position
-do       | [X] | screen position saved in MAPPDS
+do       | [X] | screen position saved in MAPPDS (added the space, and locator code)

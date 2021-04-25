@@ -1,7 +1,6 @@
 
 
 import PySimpleGUI as SG
-# import PySimpleGUIQt as SG
 
 
 import CF
@@ -208,20 +207,12 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_DICT_BID = {  # holds the values for the clocks frame
+CLOCKS_DICT = {  # holds the values for the clocks frame
 	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
 	TIME_ELAPSED: "00:00:00",  # holds the values for the clocks frame
 	TIME_TOGO: "00:00:00",  # holds the values for the clocks frame
 }
 
-CLOCKS_DICT_FULL = {
-	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
-	TIME_ELAPSED: "00:00:00",  # holds the values for the clocks frame
-	TIME_TOGO: "00:00:00",  # holds the values for the clocks frame
-	BTN_QUIT: None,
-	BTN_XPAND: None,
-	BTN_ZERO: None,
-}
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0903 lists
@@ -903,7 +894,6 @@ CLOCKS_TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
-	ENABLE_EVENTS: True,
 }
 
 
@@ -1003,9 +993,8 @@ CLOCKS_WINDOW = {  # define the clocks window
 	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
 	LAYOUT: CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
 	MARGINS: SZ_MARGINS_ALL,  #
-	NO_TITLEBAR: False,  # no titlebar on APPMODE_CLOCKS window
+	NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
 	TITLE: TITLE_CLOCKS,  #
-	USE_CUSTOM_TITLEBAR : True,
 }
 
 
@@ -1084,6 +1073,16 @@ def readWithDict(mainframeToRead_, dictToReadWith_):
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# frameLocation
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def frameLocation(mainframeToLocate_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	locationToRtn_ = mainframeToLocate_.current_location()
+	return locationToRtn_
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1097,7 +1096,8 @@ edit:
 	add new events
 	delete this event
 	TIME_s
-
-
+CLOCKS_MAINFRAME.__dict__["TKroot"].__str__
+CLOCKS_MAINFRAME[TIME_CLOCK].DisplayText}
+CLOCKS_MAINFRAME.Move(10, 10)
 
 """

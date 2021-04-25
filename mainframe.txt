@@ -1,536 +1,536 @@
-AddRow, <bound method Window.add_row of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-AddRows, <bound method Window.add_rows of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-AllKeysDict, {
-	'TIME_CLOCK': <PySimpleGUI.PySimpleGUI.Text object at 0x7fad42ad09d0>,
-	'TIME_ELAPSED': <PySimpleGUI.PySimpleGUI.Text object at 0x7fad42ad09a0>,
-	'TIME_TOGO': <PySimpleGUI.PySimpleGUI.Text object at 0x7fad42ad0970>,
-	'BTN_QUIT': <PySimpleGUI.PySimpleGUI.Button object at 0x7fad42ad0940>,
-	'BTN_ZERO': <PySimpleGUI.PySimpleGUI.Button object at 0x7fad42ad0910>,
-	'BTN_XPAND': <PySimpleGUI.PySimpleGUI.Button object at 0x7fad416f02b0>}
-
-
-AlphaChannel, 1.0
-
-AutoClose, False
-
-AutoCloseDuration, 3
-
-AutoSizeButtons, True
-
-AutoSizeText, True
-
-BackgroundColor, '#331122'
-
-BorderDepth, 0
-
-BringToFront, <bound method Window.bring_to_front of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-ButtonColor, ('#FFFFFF', '#283b5b')
-
-Close, <bound method Window.close of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-CloseNonBlocking, <bound method Window.close of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-CloseNonBlockingForm, <bound method Window.close of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-ContainerElemementNumber, 3
-
-CurrentLocation, <bound method Window.current_location of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-CurrentlyRunningMainloop, False
-
-DebuggerEnabled, True
-
-DefaultButtonElementSize, (10, 1)
-
-DefaultElementSize, (45, 1)
-
-DictionaryKeyCounter, 0
-
-Disable, <bound method Window.disable of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-DisableClose, False
-
-DisableDebugger, <bound method Window.disable_debugger of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-DisableMinimize, False
-
-Disappear, <bound method Window.disappear of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Elem, <bound method Window.find_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Element, <bound method Window.find_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-ElementJustification, 'left'
-
-ElementPadding, ((1, 1), (1, 1))
-
-Enable, <bound method Window.enable of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-EnableDebugger, <bound method Window.enable_debugger of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Fill, <bound method Window.fill of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Finalize, <bound method Window.finalize of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Find, <bound method Window.find_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-FindElement, <bound method Window.find_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-FindElementWithFocus, <bound method Window.find_element_with_focus of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-FocusSet, True
-
-Font, ('Helvetica', 10)
-
-ForceTopLevel, None
-
-FormRemainedOpen, True
-
-GetScreenDimensions, <bound method Window.get_screen_dimensions of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-GrabAnyWhereOff, <bound method Window.grab_any_where_off of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-GrabAnyWhereOn, <bound method Window.grab_any_where_on of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-GrabAnywhere, True
-
-Hide, <bound method Window.hide of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-KeepOnTop, True
-
-LastButtonClicked, None
-
-LastButtonClickedWasRealtime, False
-
-LastKeyboardEvent, None
-
-Layout, <bound method Window.layout of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-LayoutAndRead, <bound method Window.LayoutAndRead of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-LayoutAndShow, <bound method Window.LayoutAndShow of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-LoadFromDisk, <bound method Window.load_from_disk of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Location, (None, None)
-
-Margins, (0, 0)
-
-Maximize, <bound method Window.maximize of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Minimize, <bound method Window.minimize of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Move, <bound method Window.move of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-NoTitleBar, False
-
-NonBlocking, False
-
-Normal, <bound method Window.normal of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-NumCols, 2
-
-NumOpenWindows, 2
-
-NumRows, 1
-
-ParentWindow, None
-
-ProgressBarColor, (None, None)
-
-RadioDict, {}
-
-Read, <bound method Window.read of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Reappear, <bound method Window.reappear of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Refresh, <bound method Window.refresh of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Resizable, False
-
-ReturnKeyboardEvents, False
-
-ReturnValues, ('__TIMEOUT__', {})
-
-ReturnValuesDictionary, {}
-
-ReturnValuesList, []
-
-RightClickMenu, None
-
-RootNeedsDestroying, False
-
-Rows, [[<PySimpleGUI.PySimpleGUI.Column object at 0x7fad41607a90>, <PySimpleGUI.PySimpleGUI.Column object at 0x7fad41607ac0>]]
-
-SaveToDisk, <bound method Window.save_to_disk of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-SendToBack, <bound method Window.send_to_back of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-SetAlpha, <bound method Window.set_alpha of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-SetIcon, <bound method Window.set_icon of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-SetTransparentColor, <bound method Window.set_transparent_color of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-Shown, True
-
-Size, (198, 76)
-
-TKAfterID, 'after#0'
-
-TKroot, <tkinter.Toplevel object .!toplevel>
-
-TKrootDestroyed, False
-
-TextJustification, None
-
-Timeout, 1
-
-TimeoutKey, '__TIMEOUT__'
-
-TimerCancelled, True
-
-Title, 'CLOCKS'
-
-TransparentColor, None
-
-TtkTheme, 'default'
-
-UnHide, <bound method Window.un_hide of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-UniqueKeyCounter, 0
-
-UseDefaultFocus, True
-
-UseDictionary, True
-
-UseTtkButtons, None
-
-VisibilityChanged, <bound method Window.visibility_changed of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-WasClosed, False
-
-WindowIcon, <tkinter.PhotoImage object at 0x7fad413c6310>
-
-XFound, False
-
-_AlphaChannel, 1.0
-
-_AutoCloseAlarmCallback, <bound method Window._AutoCloseAlarmCallback of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_BuildKeyDict, <bound method Window._BuildKeyDict of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_BuildKeyDictForWindow, <bound method Window._BuildKeyDictForWindow of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_Close, <bound method Window._Close of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_DecrementOpenCount, <bound method Window._DecrementOpenCount of <class 'PySimpleGUI.PySimpleGUI.Window'>>
-
-_GetAContainerNumber, <bound method Window._GetAContainerNumber of <class 'PySimpleGUI.PySimpleGUI.Window'>>
-
-_GetDefaultElementSize, <bound method Window._GetDefaultElementSize of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_GetElementAtLocation, <bound method Window._GetElementAtLocation of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_Hidden, False
-
-_IncrementOpenCount, <bound method Window._IncrementOpenCount of <class 'PySimpleGUI.PySimpleGUI.Window'>>
-
-_KeyboardCallback, <bound method Window._KeyboardCallback of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_MouseWheelCallback, <bound method Window._MouseWheelCallback of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_OnClosingCallback, <bound method Window._OnClosingCallback of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_OnMotion, <bound method Window._OnMotion of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_ReadNonBlocking, <bound method Window._ReadNonBlocking of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_Show, <bound method Window._Show of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_Size, (None, None)
-
-_StartMove, <bound method Window._StartMove of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_StopMove, <bound method Window._StopMove of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_TKAfterID, None
-
-_TimeoutAlarmCallback, <bound method Window._TimeoutAlarmCallback of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-__call__, <bound method Window.__call__ of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-__class__, <class 'PySimpleGUI.PySimpleGUI.Window'>
-
-__delattr__, <method-wrapper '__delattr__' of Window object at 0x7fad41607af0>
-
-__dict__, {'_metadata': None, 'AutoSizeText': True, 'AutoSizeButtons': True, 'Title': 'CLOCKS', 'Rows': [[<PySimpleGUI.PySimpleGUI.Column object at 0x7fad41607a90>, <PySimpleGUI.PySimpleGUI.Column object at 0x7fad41607ac0>]], 'DefaultElementSize': (45, 1), 'DefaultButtonElementSize': (10, 1), 'Location': (None, None), 'ButtonColor': ('#FFFFFF', '#283b5b'), 'BackgroundColor': '#331122', 'ParentWindow': None, 'Font': ('Helvetica', 10), 'RadioDict': {}, 'BorderDepth': 0, 'WindowIcon': <tkinter.PhotoImage object at 0x7fad413c6310>, 'AutoClose': False, 'NonBlocking': False, 'TKroot': <tkinter.Toplevel object .!toplevel>, 'TKrootDestroyed': False, 'CurrentlyRunningMainloop': False, 'FormRemainedOpen': True, 'TKAfterID': 'after#0', 'ProgressBarColor': (None, None), 'AutoCloseDuration': 3, 'RootNeedsDestroying': False, 'Shown': True, 'ReturnValues': ('__TIMEOUT__', {}), 'ReturnValuesList': [], 'ReturnValuesDictionary': {}, 'DictionaryKeyCounter': 0, 'LastButtonClicked': None, 'LastButtonClickedWasRealtime': False, 'UseDictionary': True, 'UseDefaultFocus': True, 'ReturnKeyboardEvents': False, 'LastKeyboardEvent': None, 'TextJustification': None, 'NoTitleBar': False, 'GrabAnywhere': True, 'KeepOnTop': True, 'ForceTopLevel': None, 'Resizable': False, '_AlphaChannel': 1.0, 'Timeout': 1, 'TimeoutKey': '__TIMEOUT__', 'TimerCancelled': True, 'DisableClose': False, 'DisableMinimize': False, '_Hidden': False, '_Size': (None, None), 'XFound': False, 'ElementPadding': ((1, 1), (1, 1)), 'RightClickMenu': None, 'Margins': (0, 0), 'ContainerElemementNumber': 3, 'AllKeysDict': {'TIME_CLOCK': <PySimpleGUI.PySimpleGUI.Text object at 0x7fad42ad09d0>, 'TIME_ELAPSED': <PySimpleGUI.PySimpleGUI.Text object at 0x7fad42ad09a0>, 'TIME_TOGO': <PySimpleGUI.PySimpleGUI.Text object at 0x7fad42ad0970>, 'BTN_QUIT': <PySimpleGUI.PySimpleGUI.Button object at 0x7fad42ad0940>, 'BTN_ZERO': <PySimpleGUI.PySimpleGUI.Button object at 0x7fad42ad0910>, 'BTN_XPAND': <PySimpleGUI.PySimpleGUI.Button object at 0x7fad416f02b0>}, 'TransparentColor': None, 'UniqueKeyCounter': 0, 'DebuggerEnabled': True, 'WasClosed': False, 'ElementJustification': 'left', 'FocusSet': True, 'TtkTheme': 'default', 'UseTtkButtons': None, 'user_bind_dict': {}, 'user_bind_event': None, 'modal': False, 'thread_queue': <queue.Queue object at 0x7fad41607d90>, 'thread_lock': <unlocked _thread.lock object at 0x7fad41607b70>, 'thread_timer': None, 'thread_strvar': <tkinter.StringVar object at 0x7fad41607f10>, 'read_closed_window_count': 0, 'config_last_size': (None, None), 'config_last_location': (861, 502), 'starting_window_position': (861, 502), 'not_completed_initial_movement': True, 'config_count': 0, 'saw_00': False, 'maximized': False, 'right_click_menu_background_color': '#f0f3f7', 'right_click_menu_text_color': '#000000', 'right_click_menu_disabled_text_color': '1234567890', 'right_click_menu_font': ('Helvetica', 10), 'right_click_menu_tearoff': False, 'auto_close_timer_needs_starting': False, 'finalize_in_progress': True, 'close_destroys_window': True, 'override_custom_titlebar': False, 'use_custom_titlebar': False, 'titlebar_background_color': None, 'titlebar_text_color': None, 'titlebar_font': None, 'titlebar_icon': None, 'right_click_menu_selected_colors': ('#f0f3f7', '#000000'), 'NumRows': 1, 'NumCols': 2}
-
-__dir__, <built-in method __dir__ of Window object at 0x7fad41607af0>
-
-__doc__, '\n    Represents a single Window\n    '
-
-__eq__, <method-wrapper '__eq__' of Window object at 0x7fad41607af0>
-
-__format__, <built-in method __format__ of Window object at 0x7fad41607af0>
-
-__ge__, <method-wrapper '__ge__' of Window object at 0x7fad41607af0>
-
-__getattribute__, <method-wrapper '__getattribute__' of Window object at 0x7fad41607af0>
-
-__getitem__, <bound method Window.__getitem__ of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-__gt__, <method-wrapper '__gt__' of Window object at 0x7fad41607af0>
-
-__hash__, <method-wrapper '__hash__' of Window object at 0x7fad41607af0>
-
-__init__, <bound method Window.__init__ of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-__init_subclass__, <built-in method __init_subclass__ of type object at 0x557e5a139a30>
-
-__le__, <method-wrapper '__le__' of Window object at 0x7fad41607af0>
-
-__lt__, <method-wrapper '__lt__' of Window object at 0x7fad41607af0>
-
-__module__, 'PySimpleGUI.PySimpleGUI'
-
-__ne__, <method-wrapper '__ne__' of Window object at 0x7fad41607af0>
-
-__new__, <built-in method __new__ of type object at 0x7fad437caaa0>
-
-__reduce__, <built-in method __reduce__ of Window object at 0x7fad41607af0>
-
-__reduce_ex__, <built-in method __reduce_ex__ of Window object at 0x7fad41607af0>
-
-__repr__, <method-wrapper '__repr__' of Window object at 0x7fad41607af0>
-
-__setattr__, <method-wrapper '__setattr__' of Window object at 0x7fad41607af0>
-
-__sizeof__, <built-in method __sizeof__ of Window object at 0x7fad41607af0>
-
-__str__, <method-wrapper '__str__' of Window object at 0x7fad41607af0>
-
-__subclasshook__, <built-in method __subclasshook__ of type object at 0x557e5a139a30>
-
-__weakref__, None
-
-_active_windows, {<PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>: <tkinter.Tk object .>}
-
-_animated_popup_dict, {}
-
-_build_element_list, <bound method Window._build_element_list of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_build_element_list_for_form, <bound method Window._build_element_list_for_form of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_calendar_chooser_button_clicked, <bound method Window._calendar_chooser_button_clicked of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_callback_main_debugger_window_create_keystroke, <bound method Window._callback_main_debugger_window_create_keystroke of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_callback_popout_window_create_keystroke, <bound method Window._callback_popout_window_create_keystroke of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_config_callback, <bound method Window._config_callback of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_container_element_counter, 3
-
-_create_thread_queue, <bound method Window._create_thread_queue of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_find_closest_key, <bound method Window._find_closest_key of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_focus_callback, <bound method Window._focus_callback of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_has_custom_titlebar_element, <bound method Window._has_custom_titlebar_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_is_window_created, <bound method Window._is_window_created of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_metadata, None
-
-_move_all_windows, False
-
-_queued_thread_event_available, <bound method Window._queued_thread_event_available of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_queued_thread_event_read, <bound method Window._queued_thread_event_read of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_read, <bound method Window._read of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_read_call_from_debugger, False
-
-_root_running_mainloop, <tkinter.Toplevel object .!toplevel>
-
-_start_autoclose_timer, <bound method Window._start_autoclose_timer of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_timeout_0_counter, 0
-
-_timeout_key, None
-
-_user_bind_callback, <bound method Window._user_bind_callback of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-_user_defined_icon, None
-
-_window_running_mainloop, <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>
-
-_window_that_exited, None
-
-_window_tkvar_changed_callback, <bound method Window._window_tkvar_changed_callback of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-add_row, <bound method Window.add_row of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-add_rows, <bound method Window.add_rows of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-alpha_channel, 1.0
-
-auto_close_timer_needs_starting, False
-
-bind, <bound method Window.bind of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-bring_to_front, <bound method Window.bring_to_front of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-close, <bound method Window.close of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-close_destroys_window, True
-
-config_count, 0
-
-config_last_location, (861, 502)
-
-config_last_size, (None, None)
-
-current_location, <bound method Window.current_location of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-disable, <bound method Window.disable of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-disable_debugger, <bound method Window.disable_debugger of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-disappear, <bound method Window.disappear of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-element_list, <bound method Window.element_list of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-enable, <bound method Window.enable of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-enable_debugger, <bound method Window.enable_debugger of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-extend_layout, <bound method Window.extend_layout of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-fill, <bound method Window.fill of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-finalize, <bound method Window.finalize of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-finalize_in_progress, True
-
-find_element, <bound method Window.find_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-find_element_with_focus, <bound method Window.find_element_with_focus of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-force_focus, <bound method Window.force_focus of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-get_screen_dimensions, <bound method Window.get_screen_dimensions of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-get_screen_size, <bound method Window.get_screen_size of <class 'PySimpleGUI.PySimpleGUI.Window'>>
-
-grab_any_where_off, <bound method Window.grab_any_where_off of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-grab_any_where_on, <bound method Window.grab_any_where_on of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-hidden_master_root, <tkinter.Tk object .>
-
-hide, <bound method Window.hide of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-key_dict, {'TIME_CLOCK': <PySimpleGUI.PySimpleGUI.Text object at 0x7fad42ad09d0>, 'TIME_ELAPSED': <PySimpleGUI.PySimpleGUI.Text object at 0x7fad42ad09a0>, 'TIME_TOGO': <PySimpleGUI.PySimpleGUI.Text object at 0x7fad42ad0970>, 'BTN_QUIT': <PySimpleGUI.PySimpleGUI.Button object at 0x7fad42ad0940>, 'BTN_ZERO': <PySimpleGUI.PySimpleGUI.Button object at 0x7fad42ad0910>, 'BTN_XPAND': <PySimpleGUI.PySimpleGUI.Button object at 0x7fad416f02b0>}
-
-layout, <bound method Window.layout of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-load_from_disk, <bound method Window.load_from_disk of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-make_modal, <bound method Window.make_modal of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-maximize, <bound method Window.maximize of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-maximized, False
-
-metadata, None
-
-minimize, <bound method Window.minimize of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-modal, False
-
-move, <bound method Window.move of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-normal, <bound method Window.normal of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-not_completed_initial_movement, True
-
-override_custom_titlebar, False
-
-read, <bound method Window.read of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-read_closed_window_count, 0
-
-reappear, <bound method Window.reappear of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-refresh, <bound method Window.refresh of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-right_click_menu_background_color, '#f0f3f7'
-
-right_click_menu_disabled_text_color, '1234567890'
-
-right_click_menu_font, ('Helvetica', 10)
-
-right_click_menu_selected_colors, ('#f0f3f7', '#000000')
-
-right_click_menu_tearoff, False
-
-right_click_menu_text_color, '#000000'
-
-save_to_disk, <bound method Window.save_to_disk of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-saw_00, False
-
-send_to_back, <bound method Window.send_to_back of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-set_alpha, <bound method Window.set_alpha of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-set_cursor, <bound method Window.set_cursor of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-set_icon, <bound method Window.set_icon of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-set_min_size, <bound method Window.set_min_size of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-set_title, <bound method Window.set_title of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-set_transparent_color, <bound method Window.set_transparent_color of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-size, (198, 76)
-
-starting_window_position, (861, 502)
-
-thread_lock, <unlocked _thread.lock object at 0x7fad41607b70>
-
-thread_queue, <queue.Queue object at 0x7fad41607d90>
-
-thread_strvar, <tkinter.StringVar object at 0x7fad41607f10>
-
-thread_timer, None
-
-titlebar_background_color, None
-
-titlebar_font, None
-
-titlebar_icon, None
-
-titlebar_text_color, None
-
-un_hide, <bound method Window.un_hide of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-use_custom_titlebar, False
-
-user_bind_dict, {}
-
-user_bind_event, None
-
-visibility_changed, <bound method Window.visibility_changed of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-was_closed, <bound method Window.was_closed of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
-
-write_event_value, <bound method Window.write_event_value of <PySimpleGUI.PySimpleGUI.Window object at 0x7fad41607af0>>
+┌┌(will@willdesk)┌(463/pts/5:xinput1)┌(06:33:45 2021/Sun 04/25)┌-
+└(/rcr/0-utils/0-desktop/runawayClock_DEV)┌-
+(%) ./rawClock.py                                                                                                                                                                                                                      ✘ 1
+[ ( 'AddRow',
+    <bound method Window.add_row of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'AddRows',
+    <bound method Window.add_rows of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'AllKeysDict',
+    { 'BTN_QUIT': <PySimpleGUI.PySimpleGUI.Button object at 0x7ff01ebe36d0>,
+      'BTN_XPAND': <PySimpleGUI.PySimpleGUI.Button object at 0x7ff01d8b5d60>,
+      'BTN_ZERO': <PySimpleGUI.PySimpleGUI.Button object at 0x7ff01ebe3700>,
+      'TIME_CLOCK': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01ebe3640>,
+      'TIME_ELAPSED': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01ebe3670>,
+      'TIME_TOGO': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01ebe36a0>,
+      '__TITLEBAR CLOSE__': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01d7fb700>,
+      '__TITLEBAR IMAGE__': <PySimpleGUI.PySimpleGUI.Image object at 0x7ff01d7fb610>,
+      '__TITLEBAR MAXIMIZE__': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01d7fb6d0>,
+      '__TITLEBAR MINIMIZE__': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01d7fb6a0>}),
+  ('AlphaChannel', 1.0),
+  ('AutoClose', False),
+  ('AutoCloseDuration', 3),
+  ('AutoSizeButtons', True),
+  ('AutoSizeText', True),
+  ('BackgroundColor', '#331122'),
+  ('BorderDepth', 0),
+  ( 'BringToFront',
+    <bound method Window.bring_to_front of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('ButtonColor', ('#FFFFFF', '#283b5b')),
+  ( 'Close',
+    <bound method Window.close of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'CloseNonBlocking',
+    <bound method Window.close of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'CloseNonBlockingForm',
+    <bound method Window.close of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('ContainerElemementNumber', 3),
+  ( 'CurrentLocation',
+    <bound method Window.current_location of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('CurrentlyRunningMainloop', False),
+  ('DebuggerEnabled', True),
+  ('DefaultButtonElementSize', (10, 1)),
+  ('DefaultElementSize', (45, 1)),
+  ('DictionaryKeyCounter', 0),
+  ( 'Disable',
+    <bound method Window.disable of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('DisableClose', False),
+  ( 'DisableDebugger',
+    <bound method Window.disable_debugger of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('DisableMinimize', False),
+  ( 'Disappear',
+    <bound method Window.disappear of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'Elem',
+    <bound method Window.find_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'Element',
+    <bound method Window.find_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('ElementJustification', 'left'),
+  ('ElementPadding', ((1, 1), (1, 1))),
+  ( 'Enable',
+    <bound method Window.enable of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'EnableDebugger',
+    <bound method Window.enable_debugger of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'Fill',
+    <bound method Window.fill of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'Finalize',
+    <bound method Window.finalize of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'Find',
+    <bound method Window.find_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'FindElement',
+    <bound method Window.find_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'FindElementWithFocus',
+    <bound method Window.find_element_with_focus of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('FocusSet', True),
+  ('Font', ('Helvetica', 10)),
+  ('ForceTopLevel', None),
+  ('FormRemainedOpen', True),
+  ( 'GetScreenDimensions',
+    <bound method Window.get_screen_dimensions of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'GrabAnyWhereOff',
+    <bound method Window.grab_any_where_off of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'GrabAnyWhereOn',
+    <bound method Window.grab_any_where_on of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('GrabAnywhere', True),
+  ( 'Hide',
+    <bound method Window.hide of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('KeepOnTop', True),
+  ('LastButtonClicked', None),
+  ('LastButtonClickedWasRealtime', False),
+  ('LastKeyboardEvent', None),
+  ( 'Layout',
+    <bound method Window.layout of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'LayoutAndRead',
+    <bound method Window.LayoutAndRead of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'LayoutAndShow',
+    <bound method Window.LayoutAndShow of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'LoadFromDisk',
+    <bound method Window.load_from_disk of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('Location', (None, None)),
+  ('Margins', (0, 0)),
+  ( 'Maximize',
+    <bound method Window.maximize of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'Minimize',
+    <bound method Window.minimize of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'Move',
+    <bound method Window.move of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('NoTitleBar', True),
+  ('NonBlocking', False),
+  ( 'Normal',
+    <bound method Window.normal of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('NumCols', 2),
+  ('NumOpenWindows', 2),
+  ('NumRows', 2),
+  ('ParentWindow', None),
+  ('ProgressBarColor', (None, None)),
+  ('RadioDict', {}),
+  ( 'Read',
+    <bound method Window.read of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'Reappear',
+    <bound method Window.reappear of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'Refresh',
+    <bound method Window.refresh of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('Resizable', False),
+  ('ReturnKeyboardEvents', False),
+  ('ReturnValues', ('TIME_CLOCK', {})),
+  ('ReturnValuesDictionary', {}),
+  ('ReturnValuesList', []),
+  ('RightClickMenu', None),
+  ('RootNeedsDestroying', False),
+  ( 'Rows',
+    [ [<PySimpleGUI.PySimpleGUI.Column object at 0x7ff01d7fb760>],
+      [ <PySimpleGUI.PySimpleGUI.Column object at 0x7ff01d7fb580>,
+        <PySimpleGUI.PySimpleGUI.Column object at 0x7ff01d7fb5b0>]]),
+  ( 'SaveToDisk',
+    <bound method Window.save_to_disk of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'SendToBack',
+    <bound method Window.send_to_back of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'SetAlpha',
+    <bound method Window.set_alpha of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'SetIcon',
+    <bound method Window.set_icon of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'SetTransparentColor',
+    <bound method Window.set_transparent_color of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('Shown', True),
+  ('Size', (198, 99)),
+  ('TKroot', <tkinter.Toplevel object .!toplevel>),
+  ('TKrootDestroyed', False),
+  ('TextJustification', None),
+  ('Timeout', 100),
+  ('TimeoutKey', '__TIMEOUT__'),
+  ('TimerCancelled', True),
+  ('Title', 'CLOCKS'),
+  ('TransparentColor', None),
+  ('TtkTheme', 'default'),
+  ( 'UnHide',
+    <bound method Window.un_hide of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('UniqueKeyCounter', 0),
+  ('UseDefaultFocus', True),
+  ('UseDictionary', True),
+  ('UseTtkButtons', None),
+  ( 'VisibilityChanged',
+    <bound method Window.visibility_changed of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('WasClosed', False),
+  ('WindowIcon', <tkinter.PhotoImage object at 0x7ff01d7fbe80>),
+  ('XFound', False),
+  ('_AlphaChannel', 1.0),
+  ( '_AutoCloseAlarmCallback',
+    <bound method Window._AutoCloseAlarmCallback of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_BuildKeyDict',
+    <bound method Window._BuildKeyDict of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_BuildKeyDictForWindow',
+    <bound method Window._BuildKeyDictForWindow of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_Close',
+    <bound method Window._Close of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_DecrementOpenCount',
+    <bound method Window._DecrementOpenCount of <class 'PySimpleGUI.PySimpleGUI.Window'>>),
+  ( '_GetAContainerNumber',
+    <bound method Window._GetAContainerNumber of <class 'PySimpleGUI.PySimpleGUI.Window'>>),
+  ( '_GetDefaultElementSize',
+    <bound method Window._GetDefaultElementSize of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_GetElementAtLocation',
+    <bound method Window._GetElementAtLocation of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('_Hidden', False),
+  ( '_IncrementOpenCount',
+    <bound method Window._IncrementOpenCount of <class 'PySimpleGUI.PySimpleGUI.Window'>>),
+  ( '_KeyboardCallback',
+    <bound method Window._KeyboardCallback of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_MouseWheelCallback',
+    <bound method Window._MouseWheelCallback of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_OnClosingCallback',
+    <bound method Window._OnClosingCallback of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_OnMotion',
+    <bound method Window._OnMotion of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_ReadNonBlocking',
+    <bound method Window._ReadNonBlocking of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_Show',
+    <bound method Window._Show of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('_Size', (None, None)),
+  ( '_StartMove',
+    <bound method Window._StartMove of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_StopMove',
+    <bound method Window._StopMove of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('_TKAfterID', None),
+  ( '_TimeoutAlarmCallback',
+    <bound method Window._TimeoutAlarmCallback of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '__call__',
+    <bound method Window.__call__ of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('__class__', <class 'PySimpleGUI.PySimpleGUI.Window'>),
+  ( '__delattr__',
+    <method-wrapper '__delattr__' of Window object at 0x7ff01d7fb5e0>),
+  ( '__dict__',
+    { 'AllKeysDict': { 'BTN_QUIT': <PySimpleGUI.PySimpleGUI.Button object at 0x7ff01ebe36d0>,
+                       'BTN_XPAND': <PySimpleGUI.PySimpleGUI.Button object at 0x7ff01d8b5d60>,
+                       'BTN_ZERO': <PySimpleGUI.PySimpleGUI.Button object at 0x7ff01ebe3700>,
+                       'TIME_CLOCK': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01ebe3640>,
+                       'TIME_ELAPSED': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01ebe3670>,
+                       'TIME_TOGO': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01ebe36a0>,
+                       '__TITLEBAR CLOSE__': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01d7fb700>,
+                       '__TITLEBAR IMAGE__': <PySimpleGUI.PySimpleGUI.Image object at 0x7ff01d7fb610>,
+                       '__TITLEBAR MAXIMIZE__': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01d7fb6d0>,
+                       '__TITLEBAR MINIMIZE__': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01d7fb6a0>},
+      'AutoClose': False,
+      'AutoCloseDuration': 3,
+      'AutoSizeButtons': True,
+      'AutoSizeText': True,
+      'BackgroundColor': '#331122',
+      'BorderDepth': 0,
+      'ButtonColor': ('#FFFFFF', '#283b5b'),
+      'ContainerElemementNumber': 3,
+      'CurrentlyRunningMainloop': False,
+      'DebuggerEnabled': True,
+      'DefaultButtonElementSize': (10, 1),
+      'DefaultElementSize': (45, 1),
+      'DictionaryKeyCounter': 0,
+      'DisableClose': False,
+      'DisableMinimize': False,
+      'ElementJustification': 'left',
+      'ElementPadding': ((1, 1), (1, 1)),
+      'FocusSet': True,
+      'Font': ('Helvetica', 10),
+      'ForceTopLevel': None,
+      'FormRemainedOpen': True,
+      'GrabAnywhere': True,
+      'KeepOnTop': True,
+      'LastButtonClicked': None,
+      'LastButtonClickedWasRealtime': False,
+      'LastKeyboardEvent': None,
+      'Location': (None, None),
+      'Margins': (0, 0),
+      'NoTitleBar': True,
+      'NonBlocking': False,
+      'NumCols': 2,
+      'NumRows': 2,
+      'ParentWindow': None,
+      'ProgressBarColor': (None, None),
+      'RadioDict': {},
+      'Resizable': False,
+      'ReturnKeyboardEvents': False,
+      'ReturnValues': ('TIME_CLOCK', {}),
+      'ReturnValuesDictionary': {},
+      'ReturnValuesList': [],
+      'RightClickMenu': None,
+      'RootNeedsDestroying': False,
+      'Rows': [ [<PySimpleGUI.PySimpleGUI.Column object at 0x7ff01d7fb760>],
+                [ <PySimpleGUI.PySimpleGUI.Column object at 0x7ff01d7fb580>,
+                  <PySimpleGUI.PySimpleGUI.Column object at 0x7ff01d7fb5b0>]],
+      'Shown': True,
+      'TKroot': <tkinter.Toplevel object .!toplevel>,
+      'TKrootDestroyed': False,
+      'TextJustification': None,
+      'Timeout': 100,
+      'TimeoutKey': '__TIMEOUT__',
+      'TimerCancelled': True,
+      'Title': 'CLOCKS',
+      'TransparentColor': None,
+      'TtkTheme': 'default',
+      'UniqueKeyCounter': 0,
+      'UseDefaultFocus': True,
+      'UseDictionary': True,
+      'UseTtkButtons': None,
+      'WasClosed': False,
+      'WindowIcon': <tkinter.PhotoImage object at 0x7ff01d7fbe80>,
+      'XFound': False,
+      '_AlphaChannel': 1.0,
+      '_Hidden': False,
+      '_Size': (None, None),
+      '_metadata': None,
+      'auto_close_timer_needs_starting': False,
+      'close_destroys_window': True,
+      'config_count': 0,
+      'config_last_location': (861, 490),
+      'config_last_size': (None, None),
+      'finalize_in_progress': True,
+      'maximized': False,
+      'modal': False,
+      'not_completed_initial_movement': True,
+      'override_custom_titlebar': False,
+      'read_closed_window_count': 0,
+      'right_click_menu_background_color': '#f0f3f7',
+      'right_click_menu_disabled_text_color': '1234567890',
+      'right_click_menu_font': ('Helvetica', 10),
+      'right_click_menu_selected_colors': ('#f0f3f7', '#000000'),
+      'right_click_menu_tearoff': False,
+      'right_click_menu_text_color': '#000000',
+      'saw_00': False,
+      'starting_window_position': (861, 490),
+      'thread_lock': <unlocked _thread.lock object at 0x7ff01d7fb930>,
+      'thread_queue': <queue.Queue object at 0x7ff01d7fb970>,
+      'thread_strvar': <tkinter.StringVar object at 0x7ff01d7fbaf0>,
+      'thread_timer': None,
+      'titlebar_background_color': None,
+      'titlebar_font': None,
+      'titlebar_icon': None,
+      'titlebar_text_color': None,
+      'use_custom_titlebar': True,
+      'user_bind_dict': {},
+      'user_bind_event': None}),
+  ('__dir__', <built-in method __dir__ of Window object at 0x7ff01d7fb5e0>),
+  ('__doc__', '\n    Represents a single Window\n    '),
+  ('__eq__', <method-wrapper '__eq__' of Window object at 0x7ff01d7fb5e0>),
+  ( '__format__',
+    <built-in method __format__ of Window object at 0x7ff01d7fb5e0>),
+  ('__ge__', <method-wrapper '__ge__' of Window object at 0x7ff01d7fb5e0>),
+  ( '__getattribute__',
+    <method-wrapper '__getattribute__' of Window object at 0x7ff01d7fb5e0>),
+  ( '__getitem__',
+    <bound method Window.__getitem__ of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('__gt__', <method-wrapper '__gt__' of Window object at 0x7ff01d7fb5e0>),
+  ('__hash__', <method-wrapper '__hash__' of Window object at 0x7ff01d7fb5e0>),
+  ( '__init__',
+    <bound method Window.__init__ of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '__init_subclass__',
+    <built-in method __init_subclass__ of type object at 0x55b006b6b340>),
+  ('__le__', <method-wrapper '__le__' of Window object at 0x7ff01d7fb5e0>),
+  ('__lt__', <method-wrapper '__lt__' of Window object at 0x7ff01d7fb5e0>),
+  ('__module__', 'PySimpleGUI.PySimpleGUI'),
+  ('__ne__', <method-wrapper '__ne__' of Window object at 0x7ff01d7fb5e0>),
+  ('__new__', <built-in method __new__ of type object at 0x7ff01f9a2aa0>),
+  ( '__reduce__',
+    <built-in method __reduce__ of Window object at 0x7ff01d7fb5e0>),
+  ( '__reduce_ex__',
+    <built-in method __reduce_ex__ of Window object at 0x7ff01d7fb5e0>),
+  ('__repr__', <method-wrapper '__repr__' of Window object at 0x7ff01d7fb5e0>),
+  ( '__setattr__',
+    <method-wrapper '__setattr__' of Window object at 0x7ff01d7fb5e0>),
+  ( '__sizeof__',
+    <built-in method __sizeof__ of Window object at 0x7ff01d7fb5e0>),
+  ('__str__', <method-wrapper '__str__' of Window object at 0x7ff01d7fb5e0>),
+  ( '__subclasshook__',
+    <built-in method __subclasshook__ of type object at 0x55b006b6b340>),
+  ('__weakref__', None),
+  ( '_active_windows',
+    { <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>: <tkinter.Tk object .>}),
+  ('_animated_popup_dict', {}),
+  ( '_build_element_list',
+    <bound method Window._build_element_list of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_build_element_list_for_form',
+    <bound method Window._build_element_list_for_form of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_calendar_chooser_button_clicked',
+    <bound method Window._calendar_chooser_button_clicked of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_callback_main_debugger_window_create_keystroke',
+    <bound method Window._callback_main_debugger_window_create_keystroke of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_callback_popout_window_create_keystroke',
+    <bound method Window._callback_popout_window_create_keystroke of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_config_callback',
+    <bound method Window._config_callback of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('_container_element_counter', 6),
+  ( '_create_thread_queue',
+    <bound method Window._create_thread_queue of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_find_closest_key',
+    <bound method Window._find_closest_key of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_focus_callback',
+    <bound method Window._focus_callback of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_has_custom_titlebar_element',
+    <bound method Window._has_custom_titlebar_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_is_window_created',
+    <bound method Window._is_window_created of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('_metadata', None),
+  ('_move_all_windows', False),
+  ( '_queued_thread_event_available',
+    <bound method Window._queued_thread_event_available of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_queued_thread_event_read',
+    <bound method Window._queued_thread_event_read of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( '_read',
+    <bound method Window._read of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('_read_call_from_debugger', False),
+  ('_root_running_mainloop', <tkinter.Toplevel object .!toplevel>),
+  ( '_start_autoclose_timer',
+    <bound method Window._start_autoclose_timer of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('_timeout_0_counter', 0),
+  ('_timeout_key', None),
+  ( '_user_bind_callback',
+    <bound method Window._user_bind_callback of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('_user_defined_icon', None),
+  ( '_window_running_mainloop',
+    <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>),
+  ( '_window_that_exited',
+    <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>),
+  ( '_window_tkvar_changed_callback',
+    <bound method Window._window_tkvar_changed_callback of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'add_row',
+    <bound method Window.add_row of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'add_rows',
+    <bound method Window.add_rows of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('alpha_channel', 1.0),
+  ('auto_close_timer_needs_starting', False),
+  ( 'bind',
+    <bound method Window.bind of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'bring_to_front',
+    <bound method Window.bring_to_front of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'close',
+    <bound method Window.close of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('close_destroys_window', True),
+  ('config_count', 0),
+  ('config_last_location', (861, 490)),
+  ('config_last_size', (None, None)),
+  ( 'current_location',
+    <bound method Window.current_location of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'disable',
+    <bound method Window.disable of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'disable_debugger',
+    <bound method Window.disable_debugger of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'disappear',
+    <bound method Window.disappear of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'element_list',
+    <bound method Window.element_list of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'enable',
+    <bound method Window.enable of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'enable_debugger',
+    <bound method Window.enable_debugger of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'extend_layout',
+    <bound method Window.extend_layout of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'fill',
+    <bound method Window.fill of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'finalize',
+    <bound method Window.finalize of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('finalize_in_progress', True),
+  ( 'find_element',
+    <bound method Window.find_element of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'find_element_with_focus',
+    <bound method Window.find_element_with_focus of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'force_focus',
+    <bound method Window.force_focus of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'get_screen_dimensions',
+    <bound method Window.get_screen_dimensions of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'get_screen_size',
+    <bound method Window.get_screen_size of <class 'PySimpleGUI.PySimpleGUI.Window'>>),
+  ( 'grab_any_where_off',
+    <bound method Window.grab_any_where_off of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'grab_any_where_on',
+    <bound method Window.grab_any_where_on of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('hidden_master_root', <tkinter.Tk object .>),
+  ( 'hide',
+    <bound method Window.hide of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'key_dict',
+    { 'BTN_QUIT': <PySimpleGUI.PySimpleGUI.Button object at 0x7ff01ebe36d0>,
+      'BTN_XPAND': <PySimpleGUI.PySimpleGUI.Button object at 0x7ff01d8b5d60>,
+      'BTN_ZERO': <PySimpleGUI.PySimpleGUI.Button object at 0x7ff01ebe3700>,
+      'TIME_CLOCK': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01ebe3640>,
+      'TIME_ELAPSED': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01ebe3670>,
+      'TIME_TOGO': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01ebe36a0>,
+      '__TITLEBAR CLOSE__': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01d7fb700>,
+      '__TITLEBAR IMAGE__': <PySimpleGUI.PySimpleGUI.Image object at 0x7ff01d7fb610>,
+      '__TITLEBAR MAXIMIZE__': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01d7fb6d0>,
+      '__TITLEBAR MINIMIZE__': <PySimpleGUI.PySimpleGUI.Text object at 0x7ff01d7fb6a0>}),
+  ( 'layout',
+    <bound method Window.layout of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'load_from_disk',
+    <bound method Window.load_from_disk of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'make_modal',
+    <bound method Window.make_modal of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'maximize',
+    <bound method Window.maximize of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('maximized', False),
+  ('metadata', None),
+  ( 'minimize',
+    <bound method Window.minimize of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('modal', False),
+  ( 'move',
+    <bound method Window.move of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'normal',
+    <bound method Window.normal of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('not_completed_initial_movement', True),
+  ('override_custom_titlebar', False),
+  ( 'read',
+    <bound method Window.read of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('read_closed_window_count', 0),
+  ( 'reappear',
+    <bound method Window.reappear of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'refresh',
+    <bound method Window.refresh of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('right_click_menu_background_color', '#f0f3f7'),
+  ('right_click_menu_disabled_text_color', '1234567890'),
+  ('right_click_menu_font', ('Helvetica', 10)),
+  ('right_click_menu_selected_colors', ('#f0f3f7', '#000000')),
+  ('right_click_menu_tearoff', False),
+  ('right_click_menu_text_color', '#000000'),
+  ( 'save_to_disk',
+    <bound method Window.save_to_disk of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('saw_00', False),
+  ( 'send_to_back',
+    <bound method Window.send_to_back of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'set_alpha',
+    <bound method Window.set_alpha of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'set_cursor',
+    <bound method Window.set_cursor of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'set_icon',
+    <bound method Window.set_icon of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'set_min_size',
+    <bound method Window.set_min_size of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'set_title',
+    <bound method Window.set_title of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'set_transparent_color',
+    <bound method Window.set_transparent_color of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('size', (198, 99)),
+  ('starting_window_position', (861, 490)),
+  ('thread_lock', <unlocked _thread.lock object at 0x7ff01d7fb930>),
+  ('thread_queue', <queue.Queue object at 0x7ff01d7fb970>),
+  ('thread_strvar', <tkinter.StringVar object at 0x7ff01d7fbaf0>),
+  ('thread_timer', None),
+  ('titlebar_background_color', None),
+  ('titlebar_font', None),
+  ('titlebar_icon', None),
+  ('titlebar_text_color', None),
+  ( 'un_hide',
+    <bound method Window.un_hide of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ('use_custom_titlebar', True),
+  ('user_bind_dict', {}),
+  ('user_bind_event', None),
+  ( 'visibility_changed',
+    <bound method Window.visibility_changed of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'was_closed',
+    <bound method Window.was_closed of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
+  ( 'write_event_value',
+    <bound method Window.write_event_value of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>)]
+None
+┌┌(will@willdesk)┌(463/pts/5:xinput1)┌(06:33:51 2021/Sun 04/25)┌-
+└(/rcr/0-utils/0-desktop/runawayClock_DEV)┌-
+(%)
