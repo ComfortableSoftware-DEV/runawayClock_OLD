@@ -9,8 +9,8 @@ import CF
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-BLACK = "#000000"  # black
 COLOR_BACKGROUND = "#331122"  # the background of the main frames
+COLOR_BLACK = "#000000"  # black
 COLOR_BTN_BACKGROUND = "#441133"  # background color on buttons by default
 COLOR_BTN_TEXT = "#660044"  # text color on buttons by default
 COLOR_CLOCK_BACKGROUND = "#221133"  # the background of the main frames
@@ -18,15 +18,17 @@ COLOR_GRAY3 = "#333333"  # gray 3
 COLOR_GRAY6 = "#666666"  # gray 6
 COLOR_GRAY9 = "#999999"  # gray 9
 COLOR_GRAYC = "#CCCCCC"  # gray C
-COLOR_TEXT_HIGH = "#CC0088"  # the highlight color used in blinking bits when they are 'lit'
+COLOR_TEXT_HIGH = "#9900FF"  # the highlight color used in blinking bits when they are 'lit'
 COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
 COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
-COLOR_TIME_CLOCK = "#882299"  # color of the clock on any window/frame/etc.
+COLOR_TIME_CLOCK = "#9966FF"  # color of the clock on any window/frame/etc.
 COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
+COLOR_WHITE = "#FFFFFF"  # white
 FONT_DEFAULT = "Source Code Pro"  # set the main font
+SZ_BORDER_DEPTH = 0  # comment
 SZ_BTNS = 6  # size for button text
-SZ_CLOCKS_TIME_CLOCK = 28  # size of the main clock on the clocks only floating widget
+SZ_CLOCKS_TIME_CLOCK = 26  # size of the main clock on the clocks only floating widget
 SZ_CLOCKS_TIME_ELAPSED = 13  # size of the elapsed clock on the clocks only floating widget
 SZ_CLOCKS_TIME_TOGO = 13  # size of the main togo clock on the clocks only floating widget
 SZ_EDIT_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
@@ -35,10 +37,11 @@ SZ_EDIT_TIME_TOGO = 10  # size of the main togo clock on the clocks only floatin
 SZ_MAIN_TIME_CLOCK = 60  # size of the main clock on the clocks only floating widget
 SZ_MAIN_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floating widget
 SZ_MAIN_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
+SZ_MARGINS_ALL = (0, 0)  # comment
+SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
 TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
-WHITE = "#FFFFFF"  # white
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -159,6 +162,12 @@ PAD = "pad"  #
 PROGRESS_BAR_COLOR = "progress_bar_color"  #
 READONLY = "readonly"  #
 RELIEF = "relief"  #
+RELIEF_FLAT = "flat"  # comment
+RELIEF_GROOVE = "groove"  #
+RELIEF_RAISED = "raised"  #
+RELIEF_RIDGE = "ridge"  #
+RELIEF_SOLID = "solid"  #
+RELIEF_SUNKEN = "sunken"  #
 RESIZABLE = "resizable"  #
 RETURN_KEYBOARD_EVENTS = "return_keyboard_events"  #
 RIGHT_CLICK_MENU = "right_click_menu"  #
@@ -740,7 +749,7 @@ BTN_DOWN32 = {  #
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
 	KEY: BTN_DOWN,  # button xpand key
-	PAD: ((0, 0), (0, 0)),  # button xpand key
+	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
 
@@ -751,6 +760,7 @@ BTN_EDIT32 = {  #
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
 	KEY: BTN_EDIT,  # button xpand key
+	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
 
@@ -761,7 +771,7 @@ BTN_QUIT32 = {  #
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
 	KEY: BTN_QUIT,  # button quit key
-	BORDER_WIDTH: 0,
+	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
 
@@ -772,6 +782,7 @@ BTN_UP32 = {  #
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
 	KEY: BTN_UP,  # button xpand key
+	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
 
@@ -782,6 +793,7 @@ BTN_XPAND32 = {  #
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
 	KEY: BTN_XPAND,  # button xpand key
+	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
 
@@ -792,7 +804,7 @@ BTN_ZERO32 = {  #
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
 	KEY: BTN_ZERO,  # button zero key
-	BORDER_WIDTH: 0,
+	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
 
@@ -811,6 +823,7 @@ CLOCKS_TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	KEY: TIME_CLOCK,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 }
@@ -820,12 +833,11 @@ CLOCKS_TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
 	TEXT: "00:00:00",  # the text color for a clock_time element
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
-#	JUSTIFICATION: JUSTIFICATION_LEFT,  # center everything
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	KEY: TIME_ELAPSED,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
-	BORDER_WIDTH: 1,
-	RELIEF: RELIEF_FLAT,
 }
 
 
@@ -833,11 +845,11 @@ CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 	TEXT: "00:00:00",  # the text color for a clock_time element
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
-#	JUSTIFICATION: JUSTIFICATION_RIGHT,  # center everything
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	KEY: TIME_TOGO,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
-	BORDER_WIDTH: 1,
 }
 
 
@@ -885,11 +897,11 @@ CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
 	[
 		SG.Col(  # add a column
 			layout=CLOCKS_COLUMN01,  # comment
-			pad=((0, 0), (0, 0)),
+			pad=SZ_PAD_ALL,  # comment
 		),
 		SG.Col(  # add a column
 			layout=CLOCKS_COLUMN02,  # comment
-			pad=((0, 0), (0, 0)),
+			pad=SZ_PAD_ALL,  # comment
 		),
 	],
 ]
@@ -899,17 +911,17 @@ CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
 # * SCTN090F window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_WINDOW = {  # define the clocks window
-	ALPHA_CHANNEL: 0.75,  # eliminate all not useful on the floating clocks
+	ALPHA_CHANNEL: 1.0,  # eliminate all not useful on the floating clocks
 	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
+	BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
+	ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
 	FORCE_TOPLEVEL: None,  #
 	GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
 	LAYOUT: CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
+	MARGINS: SZ_MARGINS_ALL,  #
 	NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
 	TITLE: TITLE_CLOCKS,  #
-	ELEMENT_PADDING: ((0, 0), (0, 0)),
-	BORDER_DEPTH: 0,
-	MARGINS: (0, 0),
 }
 
 
