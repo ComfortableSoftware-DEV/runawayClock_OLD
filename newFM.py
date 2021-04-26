@@ -37,6 +37,7 @@ BKSLSH = "\\"  # BACKSLASH
 CBRCE = "}"  # CLOSEBRACE
 CBRKT = "]"  # CLOSEBRACKET
 CPAREN = ")"  # CLOSE PARENTHESIS
+CRSTR = "\r"  # carriage return
 DBLQT = "\""  # DOUBLE QUOTE
 ESC = "\x1b"
 NEWLINE = "\n"  # NEWLINE
@@ -172,6 +173,8 @@ MARK9STARTLN = lambda TAG_: f"""# {"9⥥ " * (CMNTLEN // 3)} {TAG_}{NEWLINE}"""
 MARKLINES_NAME = f"""{CONFIGDIR}MARKLINES.py"""
 MOVELEFT = lambda NUM_: f"""{ESC}[{NUM_}D"""
 MOVETO = lambda LN_, COL_: f"""{ESC}[{LN_};{COL_}H"""
+NCR = lambda NUM_: f"""{CRSTR * NUM_}"""
+NNL = lambda NUM_: f"""{NEWLINE * NUM_}"""
 NSPC = lambda NUM_: f"""{SPCSTR * NUM_}"""  # returns a string with NUM_ SPC
 NTAB = lambda NUM_: f"""{TABSTR * NUM_}"""  # returns a string with NUM_ TAB
 PSG_NAME = f"""newPSG.py"""
@@ -195,8 +198,6 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 	f"{ESC}[35m",  # entry for ESC-[35m
 	f"{ESC}[36m",  # entry for ESC-[36m
 ]
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN003 TYPEs and lambda
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

@@ -56,7 +56,10 @@ SZ_MAIN_TIME_CLOCK = 60  # size of the main clock on the clocks only floating wi
 SZ_MAIN_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floating widget
 SZ_MAIN_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
 SZ_MARGINS_ALL = (0, 0)  # comment
+SZ_MAX_DELTA = 30  # comment
+SZ_MOVE = 10  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
+SZ_TIME_BTWN_MOVES = 100  # comment
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
 TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
@@ -94,6 +97,7 @@ FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for 
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
 INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  #
+LAST_MOVED_MTS = CF.MTS() + SZ_TIME_BTWN_MOVES  # to throttle moves
 NAME = "NAME"  #
 PREDISMISSABLE = "PREDISMISSABLE"  #
 RUNNING = "RUNNING"  # is this interval running or not
@@ -1117,7 +1121,9 @@ def readWithDict(mainframeToRead_, dictToReadWith_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def getElementLocation(mainframeToLocate_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	locationToRtn_ = mainframeToLocate_.current_location()
+	locationToRtn_ = mainframeToLocate_.CurrentLocation()
+	# print(f"""locationToRtn_ {locationToRtn_}""")
+	# print(f"""{CF.NNL(10)}{CF.getDebugInfo()}{CF.NEWLINE}{mainframeToLocate_.CurrentLocation}""")
 	return locationToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1139,6 +1145,7 @@ def getBBox(objectToBBox_):
 	TLcnX_, TLcnY_ = getElementLocation(objectToBBox_)
 	TBBoxWest_ = TLcnX_
 	TBBoxNorth_ = TLcnY_
+	TSizeX_, TSizeY_ = getElementSize(objectToBBox_)
 	TBBoxSouth_ = TLcnY_ + TSizeY_
 	TBBoxEast_ = TLcnX_ + TSizeX_
 	return TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_
@@ -1153,8 +1160,14 @@ def getCloseBBox(objectToBBox_):
 	TLcnX_, TLcnY_ = getElementLocation(objectToBBox_)
 	TBBoxCloseWest_ = TLcnX_ - SZ_CLOSE
 	TBBoxCloseNorth_ = TLcnY_ - SZ_CLOSE
+	TSizeX_, TSizeY_ = getElementSize(objectToBBox_)
 	TBBoxCloseSouth_ = TLcnY_ + TSizeY_ + SZ_CLOSE
 	TBBoxCloseEast_ = TLcnX_ + TSizeX_ + SZ_CLOSE
+	if TBBoxCloseWest_ < 0:
+		TBBoxCloseWest_ = 0
+	if TBBoxCloseNorth_ < 0:
+		TBBoxCloseNorth_ = 0
+
 	return TBBoxCloseNorth_, TBBoxCloseWest_, TBBoxCloseSouth_, TBBoxCloseEast_
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -1174,28 +1187,37 @@ def moveFrame(mainframeToMove_, moveTo_=(0, 0)):  # remember - is N/W and + is S
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # moveRelFrame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def moveRelFrame(mainframeToMove_, moveBy_=(0, 0)):
+def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
+	global LAST_MOVED_MTS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	TLcnX_, TLcnY_ = getElementLocation(mainframeToMove_)
 	screenSZX_, screenSZY_ = getScreenDims(mainframeToMove_)
 	TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = getBBox(mainframeToMove_)
 	TSizeX_, TSizeY_ = getElementSize(mainframeToMove_)
-	moveToX_ = TLcnX_ + moveBy_[0] + SZ_MOVE
-	moveToY_ = TLcnY_ + moveBy_[1] + SZ_MOVE
 
-	if (moveToX_ + TLcnX_) < 0:
+	moveToX_ = TLcnX_ + (moveMpx[0] * SZ_MOVE)
+	moveToY_ = TLcnY_ + (moveMpx[1] * SZ_MOVE)
+
+	if moveToX_ < 0:
 		moveToX_ = 0
+	elif moveToX_ > (screenSZX_ - TSizeX_):
+		moveToX_ = (screenSZX_ - TSizeX_)
 
-	if (moveToY_ + TLcnY_) < 0:
+	if moveToY_ < 0:
 		moveToY_ = 0
+	elif moveToY_ > (screenSZY_ - TSizeY_):
+		moveToY_ = (screenSZY_ - TSizeY_)
 
-	if (moveToX_ + TLcnX_ + TSizeX_) > (screenSZX_ - TBBoxEast_):
-		moveToX_ = screenSZX_ - TSizeX_
+	if (abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA) or (abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA):
+		# print(f"""(abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA) (abs({moveToX_} - {TLcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA)}""")
+		# print(f"""(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA) (abs({moveToY_} - {TLcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA)}""")
+		return
 
-	if (moveToY_ + TLcnY_ + TSizeY_) > (screenSZY_ - TBBoxSouth_):
-		moveToY_ = screenSZY_ - TSizeY_
+	if CF.isPast(LAST_MOVED_MTS):
+		mainframeToMove_.Move(moveToX_, moveToY_)
+		LAST_MOVED_MTS = CF.MTS() + SZ_TIME_BTWN_MOVES
+		# print(f"""{CF.INDENTOUT}LAST_MOVED_MTS {LAST_MOVED_MTS}  MTS {CF.MTS()} SZ_TIME_BTWN_MOVES {SZ_TIME_BTWN_MOVES}""")
 
-	mainframeToMove_.Move((moveToX_, moveToY_))
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 

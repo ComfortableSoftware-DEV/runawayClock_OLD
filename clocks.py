@@ -51,15 +51,38 @@ while True:
 		handleEvents(event_)
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-	TMouseStatus_ = PSG.getMousePos()
+	TMouseStatus_ = PSG.checkMouse(PSG.CLOCKS_MAINFRAME)
+	# print(f"""TMouseStatus_ {TMouseStatus_}""")
 # ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	if TMouseStatus_ in PSG.CLOSE_LIST:
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 
 # ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
-		if TMouseStatus_ == PSG.MOUSE_STATUS_N:
-			PSG.moveFrameRel()
+		# print(f"""close {TMouseStatus_}""")
 
+		if TMouseStatus_ == PSG.MOUSE_STATUS_CLOSE_N:
+			PSG.moveRelFrame(PSG.CLOCKS_MAINFRAME, (0, 1))
+
+		elif TMouseStatus_ == PSG.MOUSE_STATUS_CLOSE_S:
+			PSG.moveRelFrame(PSG.CLOCKS_MAINFRAME, (0, -1))
+
+		elif TMouseStatus_ == PSG.MOUSE_STATUS_CLOSE_E:
+			PSG.moveRelFrame(PSG.CLOCKS_MAINFRAME, (-1, 0))
+
+		elif TMouseStatus_ == PSG.MOUSE_STATUS_CLOSE_W:
+			PSG.moveRelFrame(PSG.CLOCKS_MAINFRAME, (1, 0))
+
+		if TMouseStatus_ == PSG.MOUSE_STATUS_CLOSE_NW:
+			PSG.moveRelFrame(PSG.CLOCKS_MAINFRAME, (1, 1))
+
+		elif TMouseStatus_ == PSG.MOUSE_STATUS_CLOSE_SW:
+			PSG.moveRelFrame(PSG.CLOCKS_MAINFRAME, (1, -1))
+
+		elif TMouseStatus_ == PSG.MOUSE_STATUS_CLOSE_NE:
+			PSG.moveRelFrame(PSG.CLOCKS_MAINFRAME, (-1, 1))
+
+		elif TMouseStatus_ == PSG.MOUSE_STATUS_CLOSE_SE:
+			PSG.moveRelFrame(PSG.CLOCKS_MAINFRAME, (-1, -1))
 
 #
 #
