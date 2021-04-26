@@ -19,11 +19,9 @@ import datedelta as DD
 import datetime
 import hashlib as HL
 import inspect
-import inspect
 import os.path as OSPATH
 import pickle as PD
 import pprint
-
 
 ABSPATH = OSPATH.abspath
 EXISTS = OSPATH.exists
@@ -51,7 +49,6 @@ PP = pprint.PrettyPrinter(indent=2)
 # * def isPast(timeToChk_):
 # * def isPastHMS(HMS_):
 # * def mergeDicts(bigDict_, dictToAdd_, sortDict_=False):
-# * def mousepos():
 # * def MTS():
 # * def MTSclr():
 # * def MTSPlus(numToAdd_):

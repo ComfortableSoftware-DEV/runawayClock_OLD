@@ -1,11 +1,10 @@
 
 
 import PySimpleGUI as SG
+from Xlib import display as DISP
 
 
 import CF
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -26,11 +25,30 @@ COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
 FONT_DEFAULT = "Source Code Pro"  # set the main font
+MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
+MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
+MOUSE_STATUS_CLOSE_NE = "MOUSE_STATUS_CLOSE_NE"  # mouse is northeast of checked element
+MOUSE_STATUS_CLOSE_NW = "MOUSE_STATUS_CLOSE_NW"  # mouse is northwest of checked element
+MOUSE_STATUS_CLOSE_S = "MOUSE_STATUS_CLOSE_S"  # mouse is south of checked element
+MOUSE_STATUS_CLOSE_SE = "MOUSE_STATUS_CLOSE_SE"  # mouse is southeast of checked element
+MOUSE_STATUS_CLOSE_SW = "MOUSE_STATUS_CLOSE_SW"  # mouse is southwest of checked element
+MOUSE_STATUS_CLOSE_W = "MOUSE_STATUS_CLOSE_W"  # mouse is west of checked element
+MOUSE_STATUS_E = "MOUSE_STATUS_E"  # mouse is east of checked element
+MOUSE_STATUS_N = "MOUSE_STATUS_N"  # mouse is north of checked element
+MOUSE_STATUS_NE = "MOUSE_STATUS_NE"  # mouse is northeast of checked element
+MOUSE_STATUS_NW = "MOUSE_STATUS_NW"  # mouse is northwest of checked element
+MOUSE_STATUS_OVER = "MOUSE_STATUS_OVER"  # mouse is southwest of checked element
+MOUSE_STATUS_S = "MOUSE_STATUS_S"  # mouse is south of checked element
+MOUSE_STATUS_SE = "MOUSE_STATUS_SE"  # mouse is southeast of checked element
+MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
+MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
 SZ_BORDER_DEPTH = 0  # comment
 SZ_BTNS = 6  # size for button text
+SZ_CLOCKS_MOVE = 10  # how far to move each time the mouse approaches
 SZ_CLOCKS_TIME_CLOCK = 26  # size of the main clock on the clocks only floating widget
 SZ_CLOCKS_TIME_ELAPSED = 13  # size of the elapsed clock on the clocks only floating widget
 SZ_CLOCKS_TIME_TOGO = 13  # size of the main togo clock on the clocks only floating widget
+SZ_CLOSE = 50  # close enough to move from the mouse
 SZ_EDIT_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
 SZ_EDIT_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
 SZ_EDIT_TIME_TOGO = 10  # size of the main togo clock on the clocks only floating widget
@@ -211,17 +229,27 @@ CLOCKS_DICT = {  # holds the values for the clocks frame
 	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
 	TIME_ELAPSED: "00:00:00",  # holds the values for the clocks frame
 	TIME_TOGO: "00:00:00",  # holds the values for the clocks frame
-	BTN_QUIT: [],  # comment}
+}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0903 lists
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CLOSE_LIST = [  # list with close statuses
+	MOUSE_STATUS_CLOSE_E,  # easet close entry
+	MOUSE_STATUS_CLOSE_N,  # easet close entry
+	MOUSE_STATUS_CLOSE_NE,  # easet close entry
+	MOUSE_STATUS_CLOSE_NW,  # easet close entry
+	MOUSE_STATUS_CLOSE_S,  # easet close entry
+	MOUSE_STATUS_CLOSE_SE,  # easet close entry
+	MOUSE_STATUS_CLOSE_SW,  # easet close entry
+	MOUSE_STATUS_CLOSE_W,  # easet close entry
+]
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0904 platform equalizers
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0905 tupdict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -888,6 +916,7 @@ BTN_ZERO32 = {  #
 CLOCKS_TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
 	TEXT: "00:00:00",  # the text color for a clock_time element
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: True,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	KEY: TIME_CLOCK,  # comment

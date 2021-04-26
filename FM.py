@@ -723,6 +723,15 @@ TBGLST = [
 	("FMPSG_SCTN0911_COMBO_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_____", FMAX_NOP, "FMPSG_ENDS",),
 	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
+	("PSGVAL_CLOSE_LIST", FMAXPSG_SCTN0903_LIST_DEF, "CLOSE_LIST", "list with close statuses",),
+	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_E", "easet close entry",),
+	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_W", "easet close entry",),
+	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_N", "easet close entry",),
+	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_S", "easet close entry",),
+	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_NE", "easet close entry",),
+	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_NW", "easet close entry",),
+	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_SE", "easet close entry",),
+	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_SW", "easet close entry",),
 	("PSGVAL_COLOR", FMAX_NOP, "colors defined",),
 	("PSGVAL_COLOR_BACKGROUND", FMAXPSG_SCTN0900_STR_DEF, "COLOR_BACKGROUND", "#331122", "the background of the main frames",),
 	("PSGVAL_COLOR_BLACK", FMAXPSG_SCTN0900_STR_DEF, "COLOR_BLACK", "#000000", "black",),
@@ -977,6 +986,23 @@ TBGLST = [
 	("PSGVAL_FULL_WINDOW_USE_CUSTOM_TITLEBAR", FMAXPSG_SCTN0905_TUPDICT_VAL_ADD, "FULL_WINDOW", "USE_CUSTOM_TITLEBAR", "None", "If True, then a custom titlebar will be used instead of the normal titlebar",),
 	("PSGVAL_FULL_WINDOW_USE_DEFAULT_FOCUS", FMAXPSG_SCTN0905_TUPDICT_VAL_ADD, "FULL_WINDOW", "USE_DEFAULT_FOCUS", "True", "If True will use the default focus algorithm to set the focus to the 'Correct' element",),
 	("PSGVAL_FULL_WINDOW_USE_TTK_BUTTONS", FMAXPSG_SCTN0905_TUPDICT_VAL_ADD, "FULL_WINDOW", "USE_TTK_BUTTONS", "None", "Affects all buttons in window. True = use ttk buttons. False = do not use ttk buttons.  None = use ttk buttons only if on a Mac",),
+	("PSGVAL_KEY_MOUSE_STATUS_N", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_N", "mouse is north of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_S", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_S", "mouse is south of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_E", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_E", "mouse is east of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_W", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_W", "mouse is west of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_NW", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_NW", "mouse is northwest of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_NE", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_NE", "mouse is northeast of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_SE", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_SE", "mouse is southeast of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_SW", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_SW", "mouse is southwest of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_CLOSE_N", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_CLOSE_N", "mouse is north of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_CLOSE_S", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_CLOSE_S", "mouse is south of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_CLOSE_E", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_CLOSE_E", "mouse is east of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_CLOSE_W", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_CLOSE_W", "mouse is west of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_CLOSE_NW", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_CLOSE_NW", "mouse is northwest of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_CLOSE_NE", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_CLOSE_NE", "mouse is northeast of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_CLOSE_SE", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_CLOSE_SE", "mouse is southeast of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_CLOSE_SW", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_CLOSE_SW", "mouse is southwest of checked element",),
+	("PSGVAL_KEY_MOUSE_STATUS_OVER", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_OVER", "mouse is southwest of checked element",),
 	("PSGVAL_NORMAL_BUTTON", FMAXPSG_SCTN0905_TUPDICT_DEF, "NORMAL_BUTTON", "define the button empty tupdict",),
 	("PSGVAL_NORMAL_BUTTON_BUTTON_COLOR", FMAXPSG_SCTN0905_TUPDICT_VAL_ADD, "NORMAL_BUTTON", "BUTTON_COLOR", "None", "Color of button. default is from theme or the window. Easy to remember which is which if you say 'ON' between colors. 'red' on 'green'. Normally a tuple, but can be a simplified-button-color-string 'foreground on background'. Can be a single color if want to set only the background.",),
 	("PSGVAL_NORMAL_BUTTON_BUTTON_TEXT", FMAXPSG_SCTN0905_TUPDICT_STR_ADD, "NORMAL_BUTTON", "BUTTON_TEXT", "", "str text to display on the button",),
@@ -1059,7 +1085,9 @@ TBGLST = [
 	("PSGVAL_SZ_MAIN_TIME_ELAPSED", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MAIN_TIME_ELAPSED", "30", "size of the elapsed clock on the clocks only floating widget",),
 	("PSGVAL_SZ_MAIN_TIME_TOGO", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MAIN_TIME_TOGO", "30", "size of the main togo clock on the clocks only floating widget",),
 	("PSGVAL_SZ_MARGINS_ALL", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MARGINS_ALL", "(0, 0)", "comment",),
+	("PSGVAL_SZ_CLOCKS_MOVE", FMAXPSG_SCTN0900_VAL_DEF, "SZ_CLOCKS_MOVE", "10", "how far to move each time the mouse approaches",),
 	("PSGVAL_SZ_PAD_ALL", FMAXPSG_SCTN0900_VAL_DEF, "SZ_PAD_ALL", "((1, 1), (1, 1))", "add padding to all the things",),
+	("PSGVAL_SZ_CLOSE", FMAXPSG_SCTN0900_VAL_DEF, "SZ_CLOSE", "50", "close enough to move from the mouse",),
 	("PSGVAL_TITLE", FMAX_NOP, "titls start here",),
 	("PSGVAL_TITLE_CLOCKS", FMAXPSG_SCTN0900_STR_DEF, "TITLE_CLOCKS", "CLOCKS", "string with window title for APPMODE_CLOCKS",),
 	("PSGVAL_TITLE_EDIT", FMAXPSG_SCTN0900_STR_DEF, "TITLE_EDIT", "edit an event", "string with window title for APPMODE_CLOCKS",),
@@ -1225,6 +1253,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK00", FMAXPSG_SCTN0909_TEXT_DEF, "CLOCKS_TEXT_TIME_CLOCK", "define the text element for CLOCKS_CLOCK_TIME",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_STR_ADD, "CLOCKS_TEXT_TIME_CLOCK", "TEXT", "00:00:00", "the text color for a clock_time element",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_CLOCK", "BACKGROUND_COLOR", "COLOR_CLOCK_BACKGROUND", "background color for the clock elements",),
+	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_CLOCK", "ENABLE_EVENTS", "True", "this is clickable",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_CLOCK", "FONT", "FONTSZ_CLOCKS_TIME_CLOCK", "font+size line",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_CLOCK", "JUSTIFICATION", "JUSTIFICATION_CENTER", "center everything",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "CLOCKS_TEXT_TIME_CLOCK", "KEY", "TIME_CLOCK", "comment",),
@@ -1816,7 +1845,7 @@ def makePSG():
 	strToRtn_ += f"""{makeAComment("SCTN0903 lists")}"""
 	dictToUse_ = sortADict(FMPSG_SCTN0903_LIST_DICT)
 	for thisName_, value_ in dictToUse_.items():
-		strToRtn_ += f"""{makeAList(thisName_, FMPSG_SCTN0903_LIST_CMNT_DICT[thisName_], value_)}"""
+		strToRtn_ += f"""{thisName_} = {OBRKT}  # {FMPSG_SCTN0903_LIST_CMNT_DICT[thisName_]}{NEWLINE}{value_}{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN0904 platform equalizers")}"""
@@ -1824,7 +1853,6 @@ def makePSG():
 	dictToUseInner_ = sortADict(FMPSG_SCTN0904_PLATEQ_INNER_DICT)
 	for thisouterKey, outerVal_ in dictToUseOuter_.items():
 		strToRtn_ += f""""""
-	strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN0905 tupdict")}"""

@@ -33,7 +33,7 @@
   ( 'CloseNonBlockingForm',
     <bound method Window.close of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
   ('ContainerElemementNumber', 3),
-  ( 'CurrentLocation',
+  ('CurrentLocation',
     <bound method Window.current_location of <PySimpleGUI.PySimpleGUI.Window object at 0x7ff01d7fb5e0>>),
   ('CurrentlyRunningMainloop', False),
   ('DebuggerEnabled', True),
