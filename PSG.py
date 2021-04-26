@@ -1241,54 +1241,63 @@ def checkMouse(mainframeToCheck_):
 	TBBoxCloseNorth_, TBBoxCloseWest_, TBBoxCloseSouth_, TBBoxCloseEast_ = getCloseBBox(mainframeToCheck_)
 	TMouseLcnX_, TMouseLcnY_ = getMousePos()
 
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	if (TMouseLcnX_ > TBBoxWest_) and (TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_):
 		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
 			return MOUSE_STATUS_CLOSE_N
 		else:
 			return MOUSE_STATUS_N
 
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnX_ > TBBoxWest_) and (TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ > TBBoxSouth_):
 		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
 			return MOUSE_STATUS_CLOSE_S
 		else:
 			return MOUSE_STATUS_S
 
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnX_ < TBBoxWest_) and (TMouseLcnY_ > TBBoxNorth_) and (TMouseLcnY_ < TBBoxSouth_):
 		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
 			return MOUSE_STATUS_CLOSE_W
 		else:
 			return MOUSE_STATUS_W
 
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnX_ > TBBoxEast_) and (TMouseLcnY_ > TBBoxNorth_) and (TMouseLcnY_ < TBBoxSouth_):
 		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
 			return MOUSE_STATUS_CLOSE_E
 		else:
 			return MOUSE_STATUS_E
 
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ > TBBoxSouth_) and (TMouseLcnX_ < TBBoxWest_):
 		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
 			return MOUSE_STATUS_CLOSE_SW
 		else:
 			return MOUSE_STATUS_SW
 
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ > TBBoxSouth_) and (TMouseLcnX_ > TBBoxEast_):
 		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
 			return MOUSE_STATUS_CLOSE_SE
 		else:
 			return MOUSE_STATUS_SE
 
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ < TBBoxNorth_) and (TMouseLcnX_ < TBBoxWest_):
 		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
 			return MOUSE_STATUS_CLOSE_NW
 		else:
 			return MOUSE_STATUS_NW
 
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ < TBBoxNorth_) and (TMouseLcnX_ > TBBoxEast_):
 		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
 			return MOUSE_STATUS_CLOSE_NE
 		else:
 			return MOUSE_STATUS_NE
 
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnX_ > TBBoxWest_) and (TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ > TBBoxNorth_) and (TMouseLcnY_ < TBBoxSouth_):
 		return MOUSE_STATUS_OVER
 
