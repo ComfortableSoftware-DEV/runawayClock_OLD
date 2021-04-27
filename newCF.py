@@ -17,14 +17,17 @@ from time import time as WALLSECS
 from time import time_ns as TNS
 import datedelta as DD
 import datetime
+import gc
 import hashlib as HL
 import inspect
 import os.path as OSPATH
 import pickle as PD
 import pprint
 
+
 ABSPATH = OSPATH.abspath
 EXISTS = OSPATH.exists
+gc.enable()
 HOME = f"{OSPATH.expanduser('~')}"
 PP = pprint.PrettyPrinter(indent=2)
 

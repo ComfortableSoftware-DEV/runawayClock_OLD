@@ -2,12 +2,32 @@
 
 import PySimpleGUI as SG
 from Xlib import display as DISP
+import gc
 
 
 import CF
+
+
+gc.enable()
+
+
+#
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+APPMODE = "APPMODE"  # app mode key
+APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
+APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
+APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
+APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # main mode (xpand from clocks to this)
+BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
+BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
+BTN_QUIT = "BTN_QUIT"  # key for all of the button xpand
+BTN_UP = "BTN_UP"  # key for all of the button xpand
+BTN_XPAND = "BTN_XPAND"  # key for all of the button xpand
+BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
+CHECKBOX_ALPHALOW = "CHECKBOX_ALPHALOW"  # is the clock transparent under mouse (ineffective if mouse is avoided)
+CHECKBOX_RUNAWAY = "CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
 COLOR_BACKGROUND = "#331122"  # the background of the main frames
 COLOR_BLACK = "#000000"  # black
 COLOR_BTN_BACKGROUND = "#441133"  # background color on buttons by default
@@ -24,7 +44,14 @@ COLOR_TIME_CLOCK = "#9966FF"  # color of the clock on any window/frame/etc.
 COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
+DISMISSED = "DISMISSED"  # alarm dismissed bool
+EVENT_ENTRIES = "EVENT_ENTRIES"  #
+EVENT_MODE = "EVENT_MODE"  # what mode is this event
+EVENT_MODE_ALARM = "EVENT_MODE_ALARM"  #
+EVENT_MODE_ALARMREMIND = "EVENT_MODE_ALARMREMIND"  #
+EVENT_MODE_INTERVAL = "EVENT_MODE_INTERVAL"  #
 FONT_DEFAULT = "Source Code Pro"  # set the main font
+INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  #
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
 MOUSE_STATUS_CLOSE_NE = "MOUSE_STATUS_CLOSE_NE"  # mouse is northeast of checked element
@@ -42,7 +69,15 @@ MOUSE_STATUS_S = "MOUSE_STATUS_S"  # mouse is south of checked element
 MOUSE_STATUS_SE = "MOUSE_STATUS_SE"  # mouse is southeast of checked element
 MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
-SZ_BORDER_DEPTH = 0  # comment
+NAME = "NAME"  #
+PREDISMISSABLE = "PREDISMISSABLE"  #
+RUNNING = "RUNNING"  # is this interval running or not
+SCREEN_POS = "SCREEN_POS"  # can this event be snoozed
+SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
+SNOOZED = "SNOOZED"  # snoozed bool
+SZ_ALPHA_HIGH = 1.0  # high alpha
+SZ_ALPHA_LOW = 0.1  # low alpha setting
+SZ_BORDER_DEPTH = 0  # border depth
 SZ_BTNS = 6  # size for button text
 SZ_CLOCKS_MOVE = 10  # how far to move each time the mouse approaches
 SZ_CLOCKS_TIME_CLOCK = 26  # size of the main clock on the clocks only floating widget
@@ -55,55 +90,11 @@ SZ_EDIT_TIME_TOGO = 10  # size of the main togo clock on the clocks only floatin
 SZ_MAIN_TIME_CLOCK = 60  # size of the main clock on the clocks only floating widget
 SZ_MAIN_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floating widget
 SZ_MAIN_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
-SZ_MARGINS_ALL = (0, 0)  # comment
+SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 30  # comment
-SZ_MOVE = 10  # comment
+SZ_MOVE = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_TIME_BTWN_MOVES = 100  # comment
-TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
-TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
-TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0901 DEF2
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-APPMODE = "APPMODE"  # app mode key
-APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
-APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
-APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
-AVOID_MOUSE = "AVOID_MOUSE"  # key for avoiding the mouse bool
-BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
-BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
-BTN_QUIT = "BTN_QUIT"  # key for all of the button xpand
-BTN_UP = "BTN_UP"  # key for all of the button xpand
-BTN_XPAND = "BTN_XPAND"  # key for all of the button xpand
-BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
-COLORS_BTN_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # comment
-COLORS_TEXT_HIGH = (COLOR_TEXT_HIGH, COLOR_BACKGROUND)  # combined colors for a clock text element
-COLORS_TEXT_LOW = (COLOR_TEXT_LOW, COLOR_BACKGROUND)  # combined colors for a clock text element
-COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors for a clock text element
-COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-DISMISSED = "DISMISSED"  # alarm dismissed bool
-EVENT_ENTRIES = "EVENT_ENTRIES"  #
-EVENT_MODE = "EVENT_MODE"  # what mode is this event
-EVENT_MODE_ALARM = "EVENT_MODE_ALARM"  #
-EVENT_MODE_ALARMREMIND = "EVENT_MODE_ALARMREMIND"  #
-EVENT_MODE_INTERVAL = "EVENT_MODE_INTERVAL"  #
-FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
-FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
-FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
-FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
-INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  #
-LAST_MOVED_MTS = CF.MTS() + SZ_TIME_BTWN_MOVES  # to throttle moves
-NAME = "NAME"  #
-PREDISMISSABLE = "PREDISMISSABLE"  #
-RUNNING = "RUNNING"  # is this interval running or not
-SCREEN_POS = "SCREEN_POS"  # can this event be snoozed
-SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
-SNOOZED = "SNOOZED"  # snoozed bool
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
@@ -111,8 +102,27 @@ TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
 TIME_OF_NEXT_EVENT = "TIME_OF_NEXT_EVENT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
+TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
+TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
+TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
 TRANSPARENT = "TRANSPARENT"  # is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)
-TRANSPARENT_UNDER_MOUSE = "TRANSPARENT_UNDER_MOUSE"  # is the clock transparent under mouse (ineffective if mouse is avoided)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0901 DEF2
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+COLORS_BTN_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # comment
+COLORS_TEXT_HIGH = (COLOR_TEXT_HIGH, COLOR_BACKGROUND)  # combined colors for a clock text element
+COLORS_TEXT_LOW = (COLOR_TEXT_LOW, COLOR_BACKGROUND)  # combined colors for a clock text element
+COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
+FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
+FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
+FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
+LAST_MOVED_MTS = CF.MTS() + SZ_TIME_BTWN_MOVES  # to throttle moves
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -423,7 +433,7 @@ FULL_COLUMNTUP = (
 	(S, (None, None)),  # (width, height) size in pixels (doesn't work quite right, sometimes only 1 dimension is set by tkinter
 	(SCROLLABLE, False),  # if True then scrollbars will be added to the column
 	(SIZE, (None, None)),  # (width, height) size in pixels (doesn't work quite right, sometimes only 1 dimension is set by tkinter
-	(VERTICAL_SCROLL_ONLY, False),  # if Truen then no horizontal scrollbar will be shown
+	(VERTICAL_SCROLL_ONLY, False),  # if True then no horizontal scrollbar will be shown
 	(VERTICAL_ALIGNMENT, None),  # Place the column at the 'top', 'center', 'bottom' of the row (can also use t,c,r). Defaults to no setting (tkinter decides)
 	(VISIBLE, True),  # set visibility state of the element
 )
@@ -823,6 +833,7 @@ BTN_EDIT32 = {  #
 BTN_QUIT20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the QUIT button
 	IMAGE_FILENAME: "res/quit20.png",  # filename for the button icon
+	TOOLTIP: "quit the app",  # button_text empty for the QUIT button
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
@@ -834,6 +845,7 @@ BTN_QUIT20 = {  #
 BTN_QUIT32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the QUIT button
 	IMAGE_FILENAME: "res/quit32.png",  # filename for the button icon
+	TOOLTIP: "quit the app",  # button_text empty for the QUIT button
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
@@ -867,6 +879,7 @@ BTN_UP32 = {  #
 BTN_XPAND20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the XPAND button
 	IMAGE_FILENAME: "res/xpand20.png",  # filename for the button icon
+	TOOLTIP: "expand to the big window from where you can edit events",  # tooltip
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
@@ -878,6 +891,7 @@ BTN_XPAND20 = {  #
 BTN_XPAND32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the XPAND button
 	IMAGE_FILENAME: "res/xpand32.png",  # filename for the button icon
+	TOOLTIP: "expand to the big window from where you can edit events",  # tooltip
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
@@ -889,6 +903,7 @@ BTN_XPAND32 = {  #
 BTN_ZERO20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the ZERO button
 	IMAGE_FILENAME: "res/zero20.png",  # filename for the button icon
+	TOOLTIP: "zero the elapsed timer",  # tooltip
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
@@ -900,6 +915,7 @@ BTN_ZERO20 = {  #
 BTN_ZERO32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the ZERO button
 	IMAGE_FILENAME: "res/zero32.png",  # filename for the button icon
+	TOOLTIP: "zero the elapsed timer",  # tooltip
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
@@ -914,6 +930,22 @@ BTN_ZERO32 = {  #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0908 checkbox elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CHECKBOX_ALPHALOW01 = {  # checkbox for alpha under mouse
+	TEXT: "ALPHALOW",  # simple text reminder
+	TOOLTIP: "low alpha under mouse",  # comment
+	DEFAULT: True,  # leave it on by default
+	KEY: CHECKBOX_ALPHALOW,  # set the key for the checkbox
+}
+
+
+CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
+	TEXT: "RNAWY",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: True,  # leave it on by default
+	KEY: CHECKBOX_RUNAWAY,  # set the key for the checkbox
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -974,6 +1006,14 @@ CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the mai
 			**CLOCKS_TEXT_TIME_TOGO,  # add time to go
 		),
 	],
+	[
+		SG.Checkbox(  # add a new text element to row01 clocks column
+			**CHECKBOX_RUNAWAY01,  # add elapsed time
+		),
+		SG.Checkbox(  # add a new text element to row01 clocks column
+			**CHECKBOX_ALPHALOW01,  # add elapsed time
+		),
+	],
 ]
 
 
@@ -1017,7 +1057,7 @@ CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
 # * SCTN090F window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_WINDOW = {  # define the clocks window
-	ALPHA_CHANNEL: 1.0,  # eliminate all not useful on the floating clocks
+	ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
 	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
 	BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
 	ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
@@ -1044,17 +1084,31 @@ CLOCKS_MAINFRAME = SG.Window(
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
 	APPMODE: APPMODE_CLOCKS,  # default mode is clocks
-	AVOID_MOUSE: True,  # default to avoiding mouse
+	CHECKBOX_ALPHALOW: True,  # default transparent under mouse when not cornered to True
+	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
 	EVENT_ENTRIES: {  # holds events
-		DISMISSED: False,  # is this event dismissed
-		ENABLED: False,  # is this event enabled
-		EVENT_MODE: EVENT_MODE_ALARM,  # this entry's event_mode
-		NAME: "go to bed",  # this entry's name
-		PREDISMISSABLE: True,  # is this event dismissable in advance
-		SNOOZABLE: False,  # can this event be snoozed
-		SNOOZED: False,  # is this event snoozed
-		TIME_ALARM: "04:00:00",  # time of this event
-		TIME_TOGO: "00:00:00",  # updated only when the edit window is open with this event countdown to next event
+		0: {
+			DISMISSED: False,  # is this event dismissed
+			ENABLED: True,  # is this event enabled
+			EVENT_MODE: EVENT_MODE_ALARM,  # this entry's event_mode
+			NAME: "wind it up",  # this entry's name
+			PREDISMISSABLE: True,  # is this event dismissable in advance
+			SNOOZABLE: False,  # can this event be snoozed
+			SNOOZED: False,  # is this event snoozed
+			TIME_ALARM: "03:30:00",  # time of this event
+			TIME_TOGO: "00:00:00",  # updated only when the edit window is open with this event countdown to next event
+		},
+		1: {
+			DISMISSED: False,  # is this event dismissed
+			ENABLED: True,  # is this event enabled
+			EVENT_MODE: EVENT_MODE_ALARM,  # this entry's event_mode
+			NAME: "off you go then",  # this entry's name
+			PREDISMISSABLE: True,  # is this event dismissable in advance
+			SNOOZABLE: False,  # can this event be snoozed
+			SNOOZED: False,  # is this event snoozed
+			TIME_ALARM: "04:00:00",  # time of this event
+			TIME_TOGO: "00:00:00",  # updated only when the edit window is open with this event countdown to next event
+		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
 	SCREEN_POS: (1000, 5),  # default transparent to False, only digits show in theory
@@ -1063,7 +1117,6 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	TIME_OF_NEXT_EVENT: "00:00:00",  # holds the time of the next coming event for easy maths
 	TIME_TOGO: "00:00:00",  # start the clock at midnight
 	TRANSPARENT: False,  # default transparent to False, only digits show in theory
-	TRANSPARENT_UNDER_MOUSE: True,  # default transparent under mouse when not cornered to True
 }
 
 
@@ -1096,9 +1149,9 @@ def getMousePos():
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# updateFromDict
+# updateMainframeFromDict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def updateFromDict(mainframeToUpdate_, dictToUpdateFrom_):
+def updateMainframeFromDict(mainframeToUpdate_, dictToUpdateFrom_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_, val_ in dictToUpdateFrom_.items():
 		mainframeToUpdate_.FindElement(key_)(val_)
