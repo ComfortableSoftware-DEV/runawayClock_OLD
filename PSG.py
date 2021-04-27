@@ -15,6 +15,8 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
+ALPHA_LOW = "ALPHA_LOW"  # alphalow key
 APPMODE = "APPMODE"  # app mode key
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
@@ -26,7 +28,7 @@ BTN_QUIT = "BTN_QUIT"  # key for all of the button xpand
 BTN_UP = "BTN_UP"  # key for all of the button xpand
 BTN_XPAND = "BTN_XPAND"  # key for all of the button xpand
 BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
-CHECKBOX_ALPHALOW = "CHECKBOX_ALPHALOW"  # is the clock transparent under mouse (ineffective if mouse is avoided)
+CHECKBOX_ALPHA_LOW = "CHECKBOX_ALPHA_LOW"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 CHECKBOX_RUNAWAY = "CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
 COLOR_BACKGROUND = "#331122"  # the background of the main frames
 COLOR_BLACK = "#000000"  # black
@@ -105,6 +107,7 @@ TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/inter
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
 TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
+TITLE_THECLOCK = "THECLOCK"  # string with window title for APPMODE_CLOCKS
 TRANSPARENT = "TRANSPARENT"  # is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)
 
 
@@ -243,6 +246,11 @@ CLOCKS_DICT = {  # holds the values for the clocks frame
 	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
 	TIME_ELAPSED: "00:00:00",  # holds the values for the clocks frame
 	TIME_TOGO: "00:00:00",  # holds the values for the clocks frame
+}
+
+
+THECLOCK_DICT = {  # holds the values for the clocks frame
+	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
 }
 
 
@@ -930,11 +938,11 @@ BTN_ZERO32 = {  #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0908 checkbox elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CHECKBOX_ALPHALOW01 = {  # checkbox for alpha under mouse
-	TEXT: "ALPHALOW",  # simple text reminder
+CHECKBOX_ALPHA_LOW01 = {  # checkbox for alpha under mouse
+	TEXT: "ALPHA_LOW",  # simple text reminder
 	TOOLTIP: "low alpha under mouse",  # comment
 	DEFAULT: True,  # leave it on by default
-	KEY: CHECKBOX_ALPHALOW,  # set the key for the checkbox
+	KEY: CHECKBOX_ALPHA_LOW,  # set the key for the checkbox
 }
 
 
@@ -986,6 +994,19 @@ CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 }
 
 
+THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
+	TEXT: "00:00:00",  # the text color for a clock_time element
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: TIME_CLOCK,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090A radio elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1011,7 +1032,7 @@ CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the mai
 			**CHECKBOX_RUNAWAY01,  # add elapsed time
 		),
 		SG.Checkbox(  # add a new text element to row01 clocks column
-			**CHECKBOX_ALPHALOW01,  # add elapsed time
+			**CHECKBOX_ALPHA_LOW01,  # add elapsed time
 		),
 	],
 ]
@@ -1053,6 +1074,15 @@ CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
 ]
 
 
+THECLOCK_LAYOUT = [  # layout for APPMODE_THECLOCK
+	[
+		SG.Text(  # add a column
+			**THECLOCK_TEXT_TIME_CLOCK,  # comment
+		),
+	],
+]
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090F window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1071,11 +1101,31 @@ CLOCKS_WINDOW = {  # define the clocks window
 }
 
 
+THECLOCK_WINDOW = {  # define the clocks window
+	ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
+	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
+	BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
+	ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
+	FORCE_TOPLEVEL: None,  #
+	GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
+	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
+	LAYOUT: THECLOCK_LAYOUT,  # add the layout for THECLOCK_WINDOW
+	MARGINS: SZ_MARGINS_ALL,  #
+	NO_TITLEBAR: True,  # no titlebar on APPMODE_THECLOCK window
+	TITLE: TITLE_THECLOCK,  #
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090D frame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_MAINFRAME = SG.Window(
-	**CLOCKS_WINDOW,
+# CLOCKS_MAINFRAME = SG.Window(
+# 	**CLOCKS_WINDOW,
+# ).finalize()
+
+
+THECLOCK_MAINFRAME = SG.Window(
+	**THECLOCK_WINDOW,
 ).finalize()
 
 
@@ -1083,8 +1133,10 @@ CLOCKS_MAINFRAME = SG.Window(
 # * SCTN090C MAPPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
+	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
+	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
 	APPMODE: APPMODE_CLOCKS,  # default mode is clocks
-	CHECKBOX_ALPHALOW: True,  # default transparent under mouse when not cornered to True
+	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
 	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
 	EVENT_ENTRIES: {  # holds events
 		0: {

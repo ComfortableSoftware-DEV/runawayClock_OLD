@@ -15,6 +15,8 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
+ALPHA_LOW = "ALPHA_LOW"  # alphalow key
 APPMODE = "APPMODE"  # app mode key
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
@@ -26,7 +28,7 @@ BTN_QUIT = "BTN_QUIT"  # key for all of the button xpand
 BTN_UP = "BTN_UP"  # key for all of the button xpand
 BTN_XPAND = "BTN_XPAND"  # key for all of the button xpand
 BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
-CHECKBOX_ALPHALOW = "CHECKBOX_ALPHALOW"  # is the clock transparent under mouse (ineffective if mouse is avoided)
+CHECKBOX_ALPHA_LOW = "CHECKBOX_ALPHA_LOW"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 CHECKBOX_RUNAWAY = "CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
 COLOR_BACKGROUND = "#331122"  # the background of the main frames
 COLOR_BLACK = "#000000"  # black
@@ -45,13 +47,13 @@ COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
 DISMISSED = "DISMISSED"  # alarm dismissed bool
-EVENT_ENTRIES = "EVENT_ENTRIES"  # 
+EVENT_ENTRIES = "EVENT_ENTRIES"  #
 EVENT_MODE = "EVENT_MODE"  # what mode is this event
-EVENT_MODE_ALARM = "EVENT_MODE_ALARM"  # 
-EVENT_MODE_ALARMREMIND = "EVENT_MODE_ALARMREMIND"  # 
-EVENT_MODE_INTERVAL = "EVENT_MODE_INTERVAL"  # 
+EVENT_MODE_ALARM = "EVENT_MODE_ALARM"  #
+EVENT_MODE_ALARMREMIND = "EVENT_MODE_ALARMREMIND"  #
+EVENT_MODE_INTERVAL = "EVENT_MODE_INTERVAL"  #
 FONT_DEFAULT = "Source Code Pro"  # set the main font
-INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  # 
+INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  #
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
 MOUSE_STATUS_CLOSE_NE = "MOUSE_STATUS_CLOSE_NE"  # mouse is northeast of checked element
@@ -69,8 +71,8 @@ MOUSE_STATUS_S = "MOUSE_STATUS_S"  # mouse is south of checked element
 MOUSE_STATUS_SE = "MOUSE_STATUS_SE"  # mouse is southeast of checked element
 MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
-NAME = "NAME"  # 
-PREDISMISSABLE = "PREDISMISSABLE"  # 
+NAME = "NAME"  #
+PREDISMISSABLE = "PREDISMISSABLE"  #
 RUNNING = "RUNNING"  # is this interval running or not
 SCREEN_POS = "SCREEN_POS"  # can this event be snoozed
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
@@ -105,6 +107,7 @@ TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/inter
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
 TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
+TITLE_THECLOCK = "THECLOCK"  # string with window title for APPMODE_CLOCKS
 TRANSPARENT = "TRANSPARENT"  # is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)
 
 
@@ -128,111 +131,111 @@ LAST_MOVED_MTS = CF.MTS() + SZ_TIME_BTWN_MOVES  # to throttle moves
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0910 DEF3
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALPHA_CHANNEL = "alpha_channel"  # 
-AUTO_CLOSE = "auto_close"  # 
-AUTO_CLOSE_DURATION = "auto_close_duration"  # 
-AUTO_SIZE_BUTTON = "auto_size_button"  # 
-AUTO_SIZE_BUTTONS = "auto_size_buttons"  # 
-AUTO_SIZE_TEXT = "auto_size_text"  # 
-BACKGROUND_COLOR = "background_color"  # 
-BIND_RETURN_KEY = "bind_return_key"  # 
-BORDER_DEPTH = "border_depth"  # 
-BORDER_WIDTH = "border_width"  # 
-BUTTON_COLOR = "button_color"  # 
-BUTTON_TEXT = "button_text"  # 
-BUTTON_TYPE = "button_type"  # 
-CHANGE_SUBMITS = "change_submits"  # 
+ALPHA_CHANNEL = "alpha_channel"  #
+AUTO_CLOSE = "auto_close"  #
+AUTO_CLOSE_DURATION = "auto_close_duration"  #
+AUTO_SIZE_BUTTON = "auto_size_button"  #
+AUTO_SIZE_BUTTONS = "auto_size_buttons"  #
+AUTO_SIZE_TEXT = "auto_size_text"  #
+BACKGROUND_COLOR = "background_color"  #
+BIND_RETURN_KEY = "bind_return_key"  #
+BORDER_DEPTH = "border_depth"  #
+BORDER_WIDTH = "border_width"  #
+BUTTON_COLOR = "button_color"  #
+BUTTON_TEXT = "button_text"  #
+BUTTON_TYPE = "button_type"  #
+CHANGE_SUBMITS = "change_submits"  #
 CHECKBOX_COLOR = "checkbox_color"  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
-CIRCLE_COLOR = "circle_color"  # 
-CLICK_SUBMITS = "click_submits"  # 
-DEBUGGER_ENABLED = "debugger_enabled"  # 
-DEFAULT = "default"  # 
-DEFAULT_BUTTON_ELEMENT_SIZE = "default_button_element_size"  # 
-DEFAULT_ELEMENT_SIZE = "default_element_size"  # 
-DEFAULT_EXTENSION = "default_extension"  # 
-DEFAULT_VALUE = "default_value"  # 
-DISABLE_CLOSE = "disable_close"  # 
-DISABLE_MINIMIZE = "disable_minimize"  # 
-DISABLED = "disabled"  # 
-DISABLED_BUTTON_COLOR = "disabled_button_color"  # 
-ELEMENT_JUSTIFICATION = "element_justification"  # 
-ELEMENT_PADDING = "element_padding"  # 
-ENABLE_CLOSE_ATTEMPTED_EVENT = "enable_close_attempted_event"  # 
-ENABLE_EVENTS = "enable_events"  # 
-ENABLED = "enabled"  # 
-EXPAND_X = "expand_x"  # 
-EXPAND_Y = "expand_y"  # 
-FILE_TYPES = "file_types"  # 
-FINALIZE = "finalize"  # 
-FOCUS = "focus"  # 
-FONT = "font"  # 
-FORCE_TOPLEVEL = "force_toplevel"  # 
-GRAB = "grab"  # 
-GRAB_ANYWHERE = "grab_anywhere"  # 
-GROUP_ID = "group_id"  # 
-HIGHLIGHT_COLORS = "highlight_colors"  # 
-ICON = "icon"  # 
-IMAGE_DATA = "image_data"  # 
-IMAGE_FILENAME = "image_filename"  # 
-IMAGE_SIZE = "image_size"  # 
-IMAGE_SUBSAMPLE = "image_subsample"  # 
-INITIAL_FOLDER = "initial_folder"  # 
-INITIAL_VALUE = "initial_value"  # 
-JUSTIFICATION = "justification"  # 
+CIRCLE_COLOR = "circle_color"  #
+CLICK_SUBMITS = "click_submits"  #
+DEBUGGER_ENABLED = "debugger_enabled"  #
+DEFAULT = "default"  #
+DEFAULT_BUTTON_ELEMENT_SIZE = "default_button_element_size"  #
+DEFAULT_ELEMENT_SIZE = "default_element_size"  #
+DEFAULT_EXTENSION = "default_extension"  #
+DEFAULT_VALUE = "default_value"  #
+DISABLE_CLOSE = "disable_close"  #
+DISABLE_MINIMIZE = "disable_minimize"  #
+DISABLED = "disabled"  #
+DISABLED_BUTTON_COLOR = "disabled_button_color"  #
+ELEMENT_JUSTIFICATION = "element_justification"  #
+ELEMENT_PADDING = "element_padding"  #
+ENABLE_CLOSE_ATTEMPTED_EVENT = "enable_close_attempted_event"  #
+ENABLE_EVENTS = "enable_events"  #
+ENABLED = "enabled"  #
+EXPAND_X = "expand_x"  #
+EXPAND_Y = "expand_y"  #
+FILE_TYPES = "file_types"  #
+FINALIZE = "finalize"  #
+FOCUS = "focus"  #
+FONT = "font"  #
+FORCE_TOPLEVEL = "force_toplevel"  #
+GRAB = "grab"  #
+GRAB_ANYWHERE = "grab_anywhere"  #
+GROUP_ID = "group_id"  #
+HIGHLIGHT_COLORS = "highlight_colors"  #
+ICON = "icon"  #
+IMAGE_DATA = "image_data"  #
+IMAGE_FILENAME = "image_filename"  #
+IMAGE_SIZE = "image_size"  #
+IMAGE_SUBSAMPLE = "image_subsample"  #
+INITIAL_FOLDER = "initial_folder"  #
+INITIAL_VALUE = "initial_value"  #
+JUSTIFICATION = "justification"  #
 JUSTIFICATION_CENTER = "center"  # comment
 JUSTIFICATION_LEFT = "left"  # comment
 JUSTIFICATION_RIGHT = "right"  # comment
-K = "k"  # 
-KEEP_ON_TOP = "keep_on_top"  # 
-KEY = "key"  # 
-LAYOUT = "layout"  # 
-LOCATION = "location"  # 
-MARGINS = "margins"  # 
-METADATA = "metadata"  # 
-MODAL = "modal"  # 
-NO_TITLEBAR = "no_titlebar"  # 
-PAD = "pad"  # 
-PROGRESS_BAR_COLOR = "progress_bar_color"  # 
-READONLY = "readonly"  # 
-RELIEF = "relief"  # 
+K = "k"  #
+KEEP_ON_TOP = "keep_on_top"  #
+KEY = "key"  #
+LAYOUT = "layout"  #
+LOCATION = "location"  #
+MARGINS = "margins"  #
+METADATA = "metadata"  #
+MODAL = "modal"  #
+NO_TITLEBAR = "no_titlebar"  #
+PAD = "pad"  #
+PROGRESS_BAR_COLOR = "progress_bar_color"  #
+READONLY = "readonly"  #
+RELIEF = "relief"  #
 RELIEF_FLAT = "flat"  # comment
-RELIEF_GROOVE = "groove"  # 
-RELIEF_RAISED = "raised"  # 
-RELIEF_RIDGE = "ridge"  # 
-RELIEF_SOLID = "solid"  # 
-RELIEF_SUNKEN = "sunken"  # 
-RESIZABLE = "resizable"  # 
-RETURN_KEYBOARD_EVENTS = "return_keyboard_events"  # 
-RIGHT_CLICK_MENU = "right_click_menu"  # 
-RIGHT_CLICK_MENU_BACKGROUND_COLOR = "right_click_menu_background_color"  # 
-RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR = "right_click_menu_disabled_text_color"  # 
-RIGHT_CLICK_MENU_FONT = "right_click_menu_font"  # 
-RIGHT_CLICK_MENU_SELECTED_COLORS = "right_click_menu_selected_colors"  # 
-RIGHT_CLICK_MENU_TEAROFF = "right_click_menu_tearoff"  # 
-RIGHT_CLICK_MENU_TEXT_COLOR = "right_click_menu_text_color"  # 
-S = "s"  # 
+RELIEF_GROOVE = "groove"  #
+RELIEF_RAISED = "raised"  #
+RELIEF_RIDGE = "ridge"  #
+RELIEF_SOLID = "solid"  #
+RELIEF_SUNKEN = "sunken"  #
+RESIZABLE = "resizable"  #
+RETURN_KEYBOARD_EVENTS = "return_keyboard_events"  #
+RIGHT_CLICK_MENU = "right_click_menu"  #
+RIGHT_CLICK_MENU_BACKGROUND_COLOR = "right_click_menu_background_color"  #
+RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR = "right_click_menu_disabled_text_color"  #
+RIGHT_CLICK_MENU_FONT = "right_click_menu_font"  #
+RIGHT_CLICK_MENU_SELECTED_COLORS = "right_click_menu_selected_colors"  #
+RIGHT_CLICK_MENU_TEAROFF = "right_click_menu_tearoff"  #
+RIGHT_CLICK_MENU_TEXT_COLOR = "right_click_menu_text_color"  #
+S = "s"  #
 SCROLLABLE = "scrollable"  # can this column be scrolled bool
 SET_TO_INDEX = "set_to_index"  # change selection to a particular choice starting with index = 0
-SIZE = "size"  # 
-TARGET = "target"  # 
-TEXT = "text"  # 
-TEXT_COLOR = "text_color"  # 
-TEXT_JUSTIFICATION = "text_justification"  # 
-TITLE = "title"  # 
-TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  # 
-TITLEBAR_FONT = "titlebar_font"  # 
-TITLEBAR_ICON = "titlebar_icon"  # 
-TITLEBAR_TEXT_COLOR = "titlebar_text_color"  # 
-TOOLTIP = "tooltip"  # 
-TRANSPARENT_COLOR = "transparent_color"  # 
-TTK_THEME = "ttk_theme"  # 
-USE_CUSTOM_TITLEBAR = "use_custom_titlebar"  # 
-USE_DEFAULT_FOCUS = "use_default_focus"  # 
-USE_TTK_BUTTONS = "use_ttk_buttons"  # 
+SIZE = "size"  #
+TARGET = "target"  #
+TEXT = "text"  #
+TEXT_COLOR = "text_color"  #
+TEXT_JUSTIFICATION = "text_justification"  #
+TITLE = "title"  #
+TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  #
+TITLEBAR_FONT = "titlebar_font"  #
+TITLEBAR_ICON = "titlebar_icon"  #
+TITLEBAR_TEXT_COLOR = "titlebar_text_color"  #
+TOOLTIP = "tooltip"  #
+TRANSPARENT_COLOR = "transparent_color"  #
+TTK_THEME = "ttk_theme"  #
+USE_CUSTOM_TITLEBAR = "use_custom_titlebar"  #
+USE_DEFAULT_FOCUS = "use_default_focus"  #
+USE_TTK_BUTTONS = "use_ttk_buttons"  #
 VALUE = "value"  # the value of the element
 VALUES = "values"  # list of values
-VERTICAL_ALIGNMENT = "vertical_alignment"  # 
-VERTICAL_SCROLL_ONLY = "verticale_scroll_only"  # 
+VERTICAL_ALIGNMENT = "vertical_alignment"  #
+VERTICAL_SCROLL_ONLY = "verticale_scroll_only"  #
 VISIBLE = "visible"  # visibility of elements
 
 
@@ -243,6 +246,11 @@ CLOCKS_DICT = {  # holds the values for the clocks frame
 	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
 	TIME_ELAPSED: "00:00:00",  # holds the values for the clocks frame
 	TIME_TOGO: "00:00:00",  # holds the values for the clocks frame
+}
+
+
+THECLOCK_DICT = {  # holds the values for the clocks frame
+	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
 }
 
 
@@ -452,7 +460,7 @@ FULL_COMBOTUP = (
 	(CHANGE_SUBMITS, False),  # DEPRICATED DO NOT USE. Use `enable_events` instead
 	(DEFAULT_VALUE, None),  # Choice to be displayed as initial value. Must match one of values variable contents
 	(DISABLED, False),  # set disable state for element
-	(ENABLE_EVENTS, False),  # 
+	(ENABLE_EVENTS, False),  #
 	(FONT, None),  # specifies the font family, size, etc
 	(K, None),  # Used with window.FindElement and with return values to uniquely identify this element
 	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element
@@ -476,25 +484,25 @@ def FULL_COMBODICT():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 FULL_RADIOTUP = (
-	(AUTO_SIZE_TEXT, None,),  # 
-	(BACKGROUND_COLOR, None,),  # 
-	(CHANGE_SUBMITS, False,),  # 
-	(CIRCLE_COLOR, None,),  # 
-	(DEFAULT, False,),  # 
-	(DISABLED, False,),  # 
-	(ENABLE_EVENTS, False,),  # 
-	(FONT, None,),  # 
+	(AUTO_SIZE_TEXT, None,),  #
+	(BACKGROUND_COLOR, None,),  #
+	(CHANGE_SUBMITS, False,),  #
+	(CIRCLE_COLOR, None,),  #
+	(DEFAULT, False,),  #
+	(DISABLED, False,),  #
+	(ENABLE_EVENTS, False,),  #
+	(FONT, None,),  #
 	(GROUP_ID, ""),  # Groups together multiple Radio Buttons. Any type works
-	(K, None,),  # 
-	(KEY, None,),  # 
-	(METADATA, None),  # 
-	(PAD, None,),  # 
-	(S, (None, None),),  # 
-	(SIZE, (None, None),),  # 
-	(TEXT, ""),  # 
-	(TEXT_COLOR, None,),  # 
-	(TOOLTIP, None,),  # 
-	(VISIBLE, True,),  # 
+	(K, None,),  #
+	(KEY, None,),  #
+	(METADATA, None),  #
+	(PAD, None,),  #
+	(S, (None, None),),  #
+	(SIZE, (None, None),),  #
+	(TEXT, ""),  #
+	(TEXT_COLOR, None,),  #
+	(TOOLTIP, None,),  #
+	(VISIBLE, True,),  #
 )
 
 def FULL_RADIODICT():
@@ -681,15 +689,15 @@ def NORMAL_COMBODICT():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 NORMAL_RADIOTUP = (
-	(BACKGROUND_COLOR, None,),  # 
-	(CIRCLE_COLOR, None,),  # 
-	(DEFAULT, False,),  # 
-	(FONT, None,),  # 
+	(BACKGROUND_COLOR, None,),  #
+	(CIRCLE_COLOR, None,),  #
+	(DEFAULT, False,),  #
+	(FONT, None,),  #
 	(GROUP_ID, ""),  # Groups together multiple Radio Buttons. Any type works
-	(KEY, None,),  # 
-	(SIZE, (None, None),),  # 
-	(TEXT, ""),  # 
-	(TEXT_COLOR, None,),  # 
+	(KEY, None,),  #
+	(SIZE, (None, None),),  #
+	(TEXT, ""),  #
+	(TEXT_COLOR, None,),  #
 )
 
 def NORMAL_RADIODICT():
@@ -770,7 +778,7 @@ UPDATE_COMBOTUP = (
 	(DISABLED, None),  # set disable state for element
 	(FONT, None),  # specifies the font family, size, etc
 	(READONLY, None),  # make element readonly (user can't change). True means user cannot change
-	(SET_TO_INDEX, None),  # 
+	(SET_TO_INDEX, None),  #
 	(SIZE, None),  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
 	(VALUE, None),  # change which value is current selected based on new list of previous list of choices
 	(VALUES, None),  # values to choose. While displayed as text, the items returned are what the caller supplied, not text
@@ -784,7 +792,7 @@ def UPDATE_COMBODICT():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0906 button elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-BTN_DOWN20 = {  # 
+BTN_DOWN20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the DOWN button
 	IMAGE_FILENAME: "res/down20.png",  # filename for the button icon
 	BORDER_WIDTH: 0,  # button xpand key
@@ -796,7 +804,7 @@ BTN_DOWN20 = {  #
 }
 
 
-BTN_DOWN32 = {  # 
+BTN_DOWN32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the DOWN button
 	IMAGE_FILENAME: "res/down32.png",  # filename for the button icon
 	BORDER_WIDTH: 0,  # button xpand key
@@ -808,7 +816,7 @@ BTN_DOWN32 = {  #
 }
 
 
-BTN_EDIT20 = {  # 
+BTN_EDIT20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the EDIT button
 	IMAGE_FILENAME: "res/edit20.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -819,7 +827,7 @@ BTN_EDIT20 = {  #
 }
 
 
-BTN_EDIT32 = {  # 
+BTN_EDIT32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the EDIT button
 	IMAGE_FILENAME: "res/edit32.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -830,7 +838,7 @@ BTN_EDIT32 = {  #
 }
 
 
-BTN_QUIT20 = {  # 
+BTN_QUIT20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the QUIT button
 	IMAGE_FILENAME: "res/quit20.png",  # filename for the button icon
 	TOOLTIP: "quit the app",  # button_text empty for the QUIT button
@@ -842,7 +850,7 @@ BTN_QUIT20 = {  #
 }
 
 
-BTN_QUIT32 = {  # 
+BTN_QUIT32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the QUIT button
 	IMAGE_FILENAME: "res/quit32.png",  # filename for the button icon
 	TOOLTIP: "quit the app",  # button_text empty for the QUIT button
@@ -854,7 +862,7 @@ BTN_QUIT32 = {  #
 }
 
 
-BTN_UP20 = {  # 
+BTN_UP20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the UP button
 	IMAGE_FILENAME: "res/up20.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -865,7 +873,7 @@ BTN_UP20 = {  #
 }
 
 
-BTN_UP32 = {  # 
+BTN_UP32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the UP button
 	IMAGE_FILENAME: "res/up32.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -876,7 +884,7 @@ BTN_UP32 = {  #
 }
 
 
-BTN_XPAND20 = {  # 
+BTN_XPAND20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the XPAND button
 	IMAGE_FILENAME: "res/xpand20.png",  # filename for the button icon
 	TOOLTIP: "expand to the big window from where you can edit events",  # tooltip
@@ -888,7 +896,7 @@ BTN_XPAND20 = {  #
 }
 
 
-BTN_XPAND32 = {  # 
+BTN_XPAND32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the XPAND button
 	IMAGE_FILENAME: "res/xpand32.png",  # filename for the button icon
 	TOOLTIP: "expand to the big window from where you can edit events",  # tooltip
@@ -900,7 +908,7 @@ BTN_XPAND32 = {  #
 }
 
 
-BTN_ZERO20 = {  # 
+BTN_ZERO20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the ZERO button
 	IMAGE_FILENAME: "res/zero20.png",  # filename for the button icon
 	TOOLTIP: "zero the elapsed timer",  # tooltip
@@ -912,7 +920,7 @@ BTN_ZERO20 = {  #
 }
 
 
-BTN_ZERO32 = {  # 
+BTN_ZERO32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the ZERO button
 	IMAGE_FILENAME: "res/zero32.png",  # filename for the button icon
 	TOOLTIP: "zero the elapsed timer",  # tooltip
@@ -930,11 +938,11 @@ BTN_ZERO32 = {  #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0908 checkbox elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CHECKBOX_ALPHALOW01 = {  # checkbox for alpha under mouse
-	TEXT: "ALPHALOW",  # simple text reminder
+CHECKBOX_ALPHA_LOW01 = {  # checkbox for alpha under mouse
+	TEXT: "ALPHA_LOW",  # simple text reminder
 	TOOLTIP: "low alpha under mouse",  # comment
 	DEFAULT: True,  # leave it on by default
-	KEY: CHECKBOX_ALPHALOW,  # set the key for the checkbox
+	KEY: CHECKBOX_ALPHA_LOW,  # set the key for the checkbox
 }
 
 
@@ -986,6 +994,19 @@ CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 }
 
 
+THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
+	TEXT: "00:00:00",  # the text color for a clock_time element
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: TIME_CLOCK,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090A radio elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1011,7 +1032,7 @@ CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the mai
 			**CHECKBOX_RUNAWAY01,  # add elapsed time
 		),
 		SG.Checkbox(  # add a new text element to row01 clocks column
-			**CHECKBOX_ALPHALOW01,  # add elapsed time
+			**CHECKBOX_ALPHA_LOW01,  # add elapsed time
 		),
 	],
 ]
@@ -1053,6 +1074,15 @@ CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
 ]
 
 
+THECLOCK_LAYOUT = [  # layout for APPMODE_THECLOCK
+	[
+		SG.Text(  # add a column
+			**THECLOCK_TEXT_TIME_CLOCK,  # comment
+		),
+	],
+]
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090F window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1061,21 +1091,41 @@ CLOCKS_WINDOW = {  # define the clocks window
 	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
 	BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
 	ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
-	FORCE_TOPLEVEL: None,  # 
+	FORCE_TOPLEVEL: None,  #
 	GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
 	LAYOUT: CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
-	MARGINS: SZ_MARGINS_ALL,  # 
+	MARGINS: SZ_MARGINS_ALL,  #
 	NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
-	TITLE: TITLE_CLOCKS,  # 
+	TITLE: TITLE_CLOCKS,  #
+}
+
+
+THECLOCK_WINDOW = {  # define the clocks window
+	ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
+	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
+	BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
+	ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
+	FORCE_TOPLEVEL: None,  #
+	GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
+	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
+	LAYOUT: THECLOCK_LAYOUT,  # add the layout for THECLOCK_WINDOW
+	MARGINS: SZ_MARGINS_ALL,  #
+	NO_TITLEBAR: True,  # no titlebar on APPMODE_THECLOCK window
+	TITLE: TITLE_THECLOCK,  #
 }
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090D frame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_MAINFRAME = SG.Window(
-	**CLOCKS_WINDOW,
+# CLOCKS_MAINFRAME = SG.Window(
+# 	**CLOCKS_WINDOW,
+# ).finalize()
+
+
+THECLOCK_MAINFRAME = SG.Window(
+	**THECLOCK_WINDOW,
 ).finalize()
 
 
@@ -1083,8 +1133,10 @@ CLOCKS_MAINFRAME = SG.Window(
 # * SCTN090C MAPPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
+	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
+	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
 	APPMODE: APPMODE_CLOCKS,  # default mode is clocks
-	CHECKBOX_ALPHALOW: True,  # default transparent under mouse when not cornered to True
+	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
 	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
 	EVENT_ENTRIES: {  # holds events
 		0: {
@@ -1127,5 +1179,3 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
-
-
