@@ -398,6 +398,8 @@ class withPickles(object):
 		tempToPkl_ = unPickleIt(self.pklFilename_)
 		if tempToPkl_ is not None:
 			self.stuffToPkl_ = tempToPkl_
+		else:
+			pickleIt(self.stuffToPkl_, self.pklFilename_)
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	def __exit__(self, t1_, t2_, t3_):

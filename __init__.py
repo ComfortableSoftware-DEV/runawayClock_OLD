@@ -1,1 +1,1 @@
-__all__ = ["CF", "PSG", "rawClock"]
+__all__ = ["CF", "PSG", "theClock"]
