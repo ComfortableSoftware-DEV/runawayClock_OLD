@@ -316,6 +316,8 @@ FMAXPSG_SCTN0910_STR_DEF = "FMAXPSG_SCTN0910_STR_DEF"  # define a string in the 
 FMAXPSG_SCTN0910_VAL_DEF = "FMAXPSG_SCTN0910_VAL_DEF"  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
 FMAXPSG_SCTN0911_COMBO_DEF = "FMAXPSG_SCTN0911_COMBO_DEF"  # define a combo box
 FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # define a frame element
+FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
+FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
 
 
 FMAXFM_AXLST = [
@@ -429,6 +431,8 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0910_VAL_DEF,  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
 	FMAXPSG_SCTN0911_COMBO_DEF,  # define a combo box
 	FMAXPSG_SCTN0912_FRAMEELEMENT_DEF,  # define a frame element
+	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
+	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
 ]
 
 
@@ -503,6 +507,10 @@ FMPSG_SCTN0910_DEF3_CMNT_DICT = {}  # define the dict to hold everything in SCTN
 FMPSG_SCTN0910_DEF3_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0911_COMBO_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0911_COMBO_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0912_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0912_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -582,4 +590,8 @@ FMPSG_SCTN0911_COMBO_DICT = {}  # define the dict to hold everything in SCTN0900
 		FMPSG_SCTN0910_DEF3_CMNT_DICT, \
 		FMPSG_SCTN0910_DEF3_DICT, \
 		FMPSG_SCTN0911_COMBO_CMNT_DICT, \
-		FMPSG_SCTN0911_COMBO_DICT
+		FMPSG_SCTN0911_COMBO_DICT, \
+		FMPSG_SCTN0912_FRAME_CMNT_DICT, \
+		FMPSG_SCTN0912_FRAME_DICT, \
+		FMPSG_SCTN0913_RCMENU_CMNT_DICT, \
+		FMPSG_SCTN0913_RCMENU_DICT

@@ -316,6 +316,8 @@ FMAXPSG_SCTN0910_STR_DEF = "FMAXPSG_SCTN0910_STR_DEF"  # define a string in the 
 FMAXPSG_SCTN0910_VAL_DEF = "FMAXPSG_SCTN0910_VAL_DEF"  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
 FMAXPSG_SCTN0911_COMBO_DEF = "FMAXPSG_SCTN0911_COMBO_DEF"  # define a combo box
 FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # define a frame element
+FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
+FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
 
 
 FMAXFM_AXLST = [
@@ -429,6 +431,8 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0910_VAL_DEF,  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
 	FMAXPSG_SCTN0911_COMBO_DEF,  # define a combo box
 	FMAXPSG_SCTN0912_FRAMEELEMENT_DEF,  # define a frame element
+	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
+	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
 ]
 
 
@@ -503,6 +507,10 @@ FMPSG_SCTN0910_DEF3_CMNT_DICT = {}  # define the dict to hold everything in SCTN
 FMPSG_SCTN0910_DEF3_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0911_COMBO_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0911_COMBO_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0912_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0912_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1013,9 +1021,7 @@ TBGLST = [
 	("PSGVAL_KEY_BTN_UP", FMAXPSG_SCTN0900_KEY_DEF, "BTN_UP", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_XPAND", FMAXPSG_SCTN0900_KEY_DEF, "BTN_XPAND", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_ZERO", FMAXPSG_SCTN0900_KEY_DEF, "BTN_ZERO", "key for all of the button xpand",),
-	("PSGVAL_KEY_CHECKBOX_ALPHA_LOW", FMAXPSG_SCTN0900_KEY_DEF, "CHECKBOX_ALPHA_LOW", "comment",),
 	("PSGVAL_KEY_CHECKBOX_ALPHA_LOW", FMAXPSG_SCTN0900_KEY_DEF, "CHECKBOX_ALPHA_LOW", "is the clock transparent under mouse (ineffective if mouse is avoided)",),
-	("PSGVAL_KEY_CHECKBOX_RUNAWAY", FMAXPSG_SCTN0900_KEY_DEF, "CHECKBOX_RUNAWAY", "comment",),
 	("PSGVAL_KEY_CHECKBOX_RUNAWAY", FMAXPSG_SCTN0900_KEY_DEF, "CHECKBOX_RUNAWAY", "key for avoiding the mouse bool",),
 	("PSGVAL_KEY_DISMISSED", FMAXPSG_SCTN0900_KEY_DEF, "DISMISSED", "alarm dismissed bool",),
 	("PSGVAL_KEY_EVENT_ENTRIES", FMAXPSG_SCTN0900_KEY_DEF, "EVENT_ENTRIES", "",),
@@ -1429,6 +1435,10 @@ TBGLST = [
 	("PSGVAL__THECLOCK_LAYOUT03", FMAXPSG_SCTN090E_LAYOUT_PACKEDPARM_ADD, "THECLOCK_LAYOUT", "THECLOCK_LAYOUT_ROW_00", "L03", "THECLOCK_LAYOUT_E01", "THECLOCK_TEXT_TIME_CLOCK", "comment",),
 	("PSGVAL__THECLOCK_MAINFRAME", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__THECLOCK_MAINFRAME00", FMAXPSG_SCTN090D_MAINFRAME_DEF, "THECLOCK_MAINFRAME", "THECLOCK_WINDOW", "True", "the clocks frame defined and done",),
+	("PSGVAL__THECLOCK_RCMENU01", FMAXPSG_SCTN0913_RCMENU_DEF, "THECLOCK_RCMENU01", "right click to do the things",),
+	("PSGVAL__THECLOCK_RCMENU0101", FMAXPSG_SCTN0913_RCMENU_VAL_ADD, "THECLOCK_RCMENU01", "BTN_QUIT", "quit by right click",),
+	("PSGVAL__THECLOCK_RCMENU0101", FMAXPSG_SCTN0913_RCMENU_VAL_ADD, "THECLOCK_RCMENU01", "CHECKBOX_RUNAWAY", "toggle CHECKBOX_RUNAWAY",),
+	("PSGVAL__THECLOCK_RCMENU0101", FMAXPSG_SCTN0913_RCMENU_VAL_ADD, "THECLOCK_RCMENU01", "CHECKBOX_ALPHA_LOW", "toggle CHECKBOX_ALPHA_LOW",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK", FMAX_NOP, "THECLOCK text TIME_CLOCK",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK00", FMAXPSG_SCTN0909_TEXT_DEF, "THECLOCK_TEXT_TIME_CLOCK", "define the text element for THECLOCK_CLOCK_TIME",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_STR_ADD, "THECLOCK_TEXT_TIME_CLOCK", "TEXT", "00:00:00", "the text color for a clock_time element",),
@@ -1440,7 +1450,7 @@ TBGLST = [
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "PAD", "SZ_PAD_ALL", "the text color for a clock_time element",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "SIZE", "(8, 1)", "characters, lines size line",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "TEXT_COLOR", "COLOR_TIME_CLOCK", "the text color for a clock_time element",),
-	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "RIGHT_CLICK_MENU", "THECLOCK_RIGHTCLICK_MENU", "add a right click for quit, runaway, alphalow",),
+	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "RIGHT_CLICK_MENU", "THECLOCK_RCMENU01", "add a right click for quit, runaway, alphalow",),
 	("PSGVAL__THECLOCK_WINDOW", FMAX_NOP, "the window for APPMODE_THECLOCK",),
 	("PSGVAL__THECLOCK_WINDOW00", FMAXPSG_SCTN090F_WINDOW_DEF, "THECLOCK_WINDOW", "define the clocks window",),
 	("PSGVAL__THECLOCK_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "THECLOCK_WINDOW", "ALPHA_CHANNEL", "SZ_ALPHA_HIGH", "set the high alpha as the default",),
@@ -1954,6 +1964,13 @@ def makePSG():
 		strToRtn_ += f"""{makeANormalTupDict(thisName_, value_)}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN0913 right click menu options")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN0913_RCMENU_DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{thisName_} = {OBRKT}  # {FMPSG_SCTN0913_RCMENU_CMNT_DICT[thisName_]}{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(1)}{OBRKT}{CBRKT},{NEWLINE}{NTAB(1)}{OBRKT}{NEWLINE}{value_}{NTAB(1)}{CBRKT},{NEWLINE}{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN0906 button elements")}"""
 	dictToUse_ = sortADict(FMPSG_SCTN0906_BTNS_DICT)
 	for thisName_, value_ in dictToUse_.items():
@@ -2168,7 +2185,11 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0910_DEF3_CMNT_DICT, \
 		FMPSG_SCTN0910_DEF3_DICT, \
 		FMPSG_SCTN0911_COMBO_CMNT_DICT, \
-		FMPSG_SCTN0911_COMBO_DICT
+		FMPSG_SCTN0911_COMBO_DICT, \
+		FMPSG_SCTN0912_FRAME_CMNT_DICT, \
+		FMPSG_SCTN0912_FRAME_DICT, \
+		FMPSG_SCTN0913_RCMENU_CMNT_DICT, \
+		FMPSG_SCTN0913_RCMENU_DICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
@@ -3750,7 +3771,34 @@ def parseTBGLST(FDTBGLST):
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0913_RCMENU_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 4:
+				doErrorItem("not 4 items", thisItem_)
+				continue
+			thisRCMenuName_ = thisItem_[2]
+			if thisRCMenuName_ not in FMPSG_SCTN0913_RCMENU_DICT:
+				FMPSG_SCTN0913_RCMENU_DICT[thisRCMenuName_] = ""
+			FMPSG_SCTN0913_RCMENU_CMNT_DICT[thisRCMenuName_] = f"""{thisComment_}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0913_RCMENU_VAL_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 5:
+				doErrorItem("not 5 items", thisItem_)
+				continue
+			thisRCMenuName_ = thisItem_[2]
+			thisVal_ = thisItem_[3]
+			if thisRCMenuName_ not in FMPSG_SCTN0913_RCMENU_DICT:
+				FMPSG_SCTN0913_RCMENU_DICT[thisRCMenuName_] = ""
+			FMPSG_SCTN0913_RCMENU_DICT[thisRCMenuName_] += f"""{NTAB(2)}{thisVal_},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 

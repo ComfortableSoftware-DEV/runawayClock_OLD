@@ -790,6 +790,19 @@ def UPDATE_COMBODICT():
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0913 right click menu options
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+THECLOCK_RCMENU01 = [  # right click to do the things
+	[],
+	[
+		BTN_QUIT,  # quit by right click
+		CHECKBOX_ALPHA_LOW,  # toggle CHECKBOX_ALPHA_LOW
+		CHECKBOX_RUNAWAY,  # toggle CHECKBOX_RUNAWAY
+	],
+]
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0906 button elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 BTN_DOWN20 = {  #
@@ -1002,6 +1015,7 @@ THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	KEY: TIME_CLOCK,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	RIGHT_CLICK_MENU: THECLOCK_RCMENU01,  # add a right click for quit, runaway, alphalow
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 }
@@ -1119,14 +1133,43 @@ THECLOCK_WINDOW = {  # define the clocks window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090D frame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# CLOCKS_MAINFRAME = SG.Window(
-# 	**CLOCKS_WINDOW,
-# ).finalize()
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# makeCLOCKS_MAINFRAME
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CLOCKS_MAINFRAME = None
+class CLASS_CLOCKS_MAINFRAME():
+	global CLOCKS_MAINFRAME
+
+	def __enter__(self):
+		global CLOCKS_MAINFRAME
+		CLOCKS_MAINFRAME = SG.Window(
+			**CLOCKS_WINDOW,
+		).finalize()
+		return self
+
+	def __exit__(self, t1_, t2_, t3_):
+		global CLOCKS_MAINFRAME
+		CLOCKS_MAINFRAME.close()
 
 
-THECLOCK_MAINFRAME = SG.Window(
-	**THECLOCK_WINDOW,
-).finalize()
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# make_THECLOCK_MAINFRAME
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+THECLOCK_MAINFRAME = None
+class CLASS_THECLOCK_MAINFRAME():
+	global THECLOCK_MAINFRAME
+
+	def __enter__(self):
+		global THECLOCK_MAINFRAME
+		THECLOCK_MAINFRAME = SG.Window(
+			**THECLOCK_WINDOW,
+			).finalize()
+		return self
+
+	def __exit__(self, t1_, t2_, t3_):
+		global THECLOCK_MAINFRAME
+		THECLOCK_MAINFRAME.close()
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
