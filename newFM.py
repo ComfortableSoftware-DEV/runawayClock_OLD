@@ -320,6 +320,7 @@ FMAXPSG_SCTN0911_COMBO_DEF = "FMAXPSG_SCTN0911_COMBO_DEF"  # define a combo box
 FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # define a frame element
 FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
+FMPSG_SCTN0905_TUPDICT_DICT_DICT = "FMPSG_SCTN0905_TUPDICT_DICT_DICT"  # the dict holding the dict entries for tupdicts
 
 
 FMAXFM_AXLST = [
@@ -437,6 +438,7 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0912_FRAMEELEMENT_DEF,  # define a frame element
 	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
+	FMPSG_SCTN0905_TUPDICT_DICT_DICT,  # the dict holding the dict entries for tupdicts
 ]
 
 
@@ -472,18 +474,19 @@ FMFM_SCTN0104_LIST_CMNT_DICT = {}  # SCTN201 device defines
 FMFM_SCTN0104_LIST_DICT = {}  # SCTN201 device defines
 FMPSG_SCTN0900_DEF1_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0900_DEF1_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0901_DEF2_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0901_DEF2_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0902_DICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0902_DICT_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0903_LIST_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0903_LIST_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0904_PLATEQ_INNER_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0904_PLATEQ_INNER_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0904_PLATEQ_OUTER_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0904_PLATEQ_OUTER_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0905_TUPDICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0905_TUPDICT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0901_DEF2_CMNT_DICT = {}  # define the dict to hold everything in SCTN0901
+FMPSG_SCTN0901_DEF2_DICT = {}  # define the dict to hold everything in SCTN0901
+FMPSG_SCTN0902_DICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0902
+FMPSG_SCTN0902_DICT_DICT = {}  # define the dict to hold everything in SCTN0902
+FMPSG_SCTN0903_LIST_CMNT_DICT = {}  # define the dict to hold everything in SCTN0903
+FMPSG_SCTN0903_LIST_DICT = {}  # define the dict to hold everything in SCTN0903
+FMPSG_SCTN0904_PLATEQ_INNER_CMNT_DICT = {}  # define the dict to hold everything in SCTN0904
+FMPSG_SCTN0904_PLATEQ_INNER_DICT = {}  # define the dict to hold everything in SCTN0904
+FMPSG_SCTN0904_PLATEQ_OUTER_CMNT_DICT = {}  # define the dict to hold everything in SCTN0904
+FMPSG_SCTN0904_PLATEQ_OUTER_DICT = {}  # define the dict to hold everything in SCTN0904
+FMPSG_SCTN0905_TUPDICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0905
+FMPSG_SCTN0905_TUPDICT_DICT = {}  # define the dict to hold everything in SCTN0905
+FMPSG_SCTN0905_TUPDICT_TDD_DICT = {}  # define the dict to hold everything in SCTN0905
 FMPSG_SCTN0906_BTNS_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0906_BTNS_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0907_SPIN_CMNT_DICT = {}  # holds the spin element stuffs (TUPDICT)f
@@ -568,6 +571,7 @@ FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN090
 		FMPSG_SCTN0904_PLATEQ_OUTER_DICT, \
 		FMPSG_SCTN0905_TUPDICT_CMNT_DICT, \
 		FMPSG_SCTN0905_TUPDICT_DICT, \
+		FMPSG_SCTN0905_TUPDICT_TDD_DICT, \
 		FMPSG_SCTN0906_BTNS_CMNT_DICT, \
 		FMPSG_SCTN0906_BTNS_DICT, \
 		FMPSG_SCTN0907_SPIN_CMNT_DICT, \

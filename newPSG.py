@@ -301,21 +301,10 @@ def EMPTY0_BBOXDICT():
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY0_EVENT_ENTRIES structures
+# * start of EMPTY0_EVENT_ENTRY structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-EMPTY0_EVENT_ENTRIESTUP = (
-)
-
-def EMPTY0_EVENT_ENTRIESDICT():
-	return dict((x, y) for x, y in EMPTY0_EVENT_ENTRIESTUP)
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY0_EVENTS_ENTRIES structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTY0_EVENTS_ENTRIESTUP = (
+EMPTY0_EVENT_ENTRYTUP = (
 	(DISMISSED, False),  # has the event been dismissed just this once
 	(ENABLED, True),  # is the event enabled bool
 	(EVENT_MODE, EVENT_MODE_ALARM),  # which event mode is this event
@@ -328,51 +317,8 @@ EMPTY0_EVENTS_ENTRIESTUP = (
 	(TIME_REMIND, ZERO_CLOCK),  # wall time at the next alarm
 )
 
-def EMPTY0_EVENTS_ENTRIESDICT():
-	return dict((x, y) for x, y in EMPTY0_EVENTS_ENTRIESTUP)
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY_ALARM structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTY_ALARMTUP = (
-	(DISMISSED, False),  # bool is this event dismissed already
-	(ENABLED, True),  # enabled state of this entry
-	(EVENT_MODE, EVENT_MODE_ALARM),  # set the mode to EVENT_MODE_ALARM by default of course
-	(NAME, ),  # name of this entry
-	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
-	(SNOOZABLE, False),  # enabled state of this entry
-	(SNOOZED, True),  # enabled state of this entry
-	(TIME_ALARM, ZERO_CLOCK),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # post snooze or tomorrow
-	(TIME_TOGO, ZERO_CLOCK),  # post snooze or tomorrow
-)
-
-def EMPTY_ALARMDICT():
-	return dict((x, y) for x, y in EMPTY_ALARMTUP)
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY_ALARM_REMIND structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTY_ALARM_REMINDTUP = (
-	(DISMISSED, False),  # bool is this event dismissed already
-	(ENABLED, True),  # enabled state of this entry
-	(EVENT_MODE, EVENT_MODE_ALARMREMIND),  # set the mode to EVENT_MODE_ALARM by default of course
-	(NAME, ),  # name of this entry
-	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
-	(SNOOZABLE, False),  # enabled state of this entry
-	(SNOOZED, True),  # enabled state of this entry
-	(TIME_ALARM, ZERO_CLOCK),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # post snooze or tomorrow
-	(TIME_REMIND, ZERO_CLOCK),  # time this alarm is set for
-	(TIME_TOGO, ZERO_CLOCK),  # post snooze or tomorrow
-)
-
-def EMPTY_ALARM_REMINDDICT():
-	return dict((x, y) for x, y in EMPTY_ALARM_REMINDTUP)
+def EMPTY0_EVENT_ENTRYDICT():
+	return dict((x, y) for x, y in EMPTY0_EVENT_ENTRYTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -387,24 +333,6 @@ EMPTY_CLOCKSTUP = (
 
 def EMPTY_CLOCKSDICT():
 	return dict((x, y) for x, y in EMPTY_CLOCKSTUP)
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY_INTERVAL structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTY_INTERVALTUP = (
-	(ENABLED, True),  # enabled state of this entry
-	(EVENT_MODE, EVENT_MODE_INTERVAL),  # set the mode to EVENT_MODE_ALARM by default of course
-	(NAME, ""),  # name of this entry
-	(RUNNING, True),  # running state of this entry
-	(TIME_INTERVAL, ZERO_CLOCK),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # post snooze or tomorrow
-	(TIME_TOGO, ZERO_CLOCK),  # post snooze or tomorrow
-)
-
-def EMPTY_INTERVALDICT():
-	return dict((x, y) for x, y in EMPTY_INTERVALTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
