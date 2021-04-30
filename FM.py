@@ -1010,11 +1010,13 @@ TBGLST = [
 	("PSGVAL_KEY", FMAX_NOP, "keys defined",),
 	("PSGVAL_KEY_ALPHA_HIGH", FMAXPSG_SCTN0900_KEY_DEF, "ALPHA_HIGH", "alphahigh key",),
 	("PSGVAL_KEY_ALPHA_LOW", FMAXPSG_SCTN0900_KEY_DEF, "ALPHA_LOW", "alphalow key",),
+	("PSGVAL_KEY_ALPHA_MODE", FMAXPSG_SCTN0900_KEY_DEF, "ALPHA_MODE", "alpha mode key",),
 	("PSGVAL_KEY_APPMODE", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE", "app mode key",),
 	("PSGVAL_KEY_APPMODE_CLOCKS", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_CLOCKS", "mode clocks only",),
 	("PSGVAL_KEY_APPMODE_EDIT", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_EDIT", "edit mode on top of main window",),
 	("PSGVAL_KEY_APPMODE_MAIN", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_MAIN", "main mode (xpand from clocks to this)",),
 	("PSGVAL_KEY_APPMODE_MOUSE_OVER", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_MOUSE_OVER", "main mode (xpand from clocks to this)",),
+	("PSGVAL_KEY_BBOX", FMAXPSG_SCTN0900_KEY_DEF, "BBOX", "BOUNDING BOX",),
 	("PSGVAL_KEY_BTN_DOWN", FMAXPSG_SCTN0900_KEY_DEF, "BTN_DOWN", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_EDIT", FMAXPSG_SCTN0900_KEY_DEF, "BTN_EDIT", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_QUIT", FMAXPSG_SCTN0900_KEY_DEF, "BTN_QUIT", "key for all of the button xpand",),
@@ -1023,6 +1025,7 @@ TBGLST = [
 	("PSGVAL_KEY_BTN_ZERO", FMAXPSG_SCTN0900_KEY_DEF, "BTN_ZERO", "key for all of the button xpand",),
 	("PSGVAL_KEY_CHECKBOX_ALPHA_LOW", FMAXPSG_SCTN0900_KEY_DEF, "CHECKBOX_ALPHA_LOW", "is the clock transparent under mouse (ineffective if mouse is avoided)",),
 	("PSGVAL_KEY_CHECKBOX_RUNAWAY", FMAXPSG_SCTN0900_KEY_DEF, "CHECKBOX_RUNAWAY", "key for avoiding the mouse bool",),
+	("PSGVAL_KEY_CLOSE_BBOX", FMAXPSG_SCTN0900_KEY_DEF, "CLOSE_BBOX", "CLOSE BOUNDING BOX",),
 	("PSGVAL_KEY_DISMISSED", FMAXPSG_SCTN0900_KEY_DEF, "DISMISSED", "alarm dismissed bool",),
 	("PSGVAL_KEY_EVENT_ENTRIES", FMAXPSG_SCTN0900_KEY_DEF, "EVENT_ENTRIES", "",),
 	("PSGVAL_KEY_EVENT_MODE", FMAXPSG_SCTN0900_KEY_DEF, "EVENT_MODE", "what mode is this event",),
@@ -1051,6 +1054,7 @@ TBGLST = [
 	("PSGVAL_KEY_PREDISMISSABLE", FMAXPSG_SCTN0900_KEY_DEF, "PREDISMISSABLE", "",),
 	("PSGVAL_KEY_RUNNING", FMAXPSG_SCTN0900_KEY_DEF, "RUNNING", "is this interval running or not",),
 	("PSGVAL_KEY_SCREEN_POS", FMAXPSG_SCTN0900_KEY_DEF, "SCREEN_POS", "can this event be snoozed",),
+	("PSGVAL_KEY_SCREEN_SIZE", FMAXPSG_SCTN0900_KEY_DEF, "SCREEN_SIZE", "dimension of the screen",),
 	("PSGVAL_KEY_SNOOZABLE", FMAXPSG_SCTN0900_KEY_DEF, "SNOOZABLE", "can this event be snoozed",),
 	("PSGVAL_KEY_SNOOZED", FMAXPSG_SCTN0900_KEY_DEF, "SNOOZED", "snoozed bool",),
 	("PSGVAL_KEY_TIME_ALARM", FMAXPSG_SCTN0900_KEY_DEF, "TIME_ALARM", "the alarm time",),
@@ -1148,7 +1152,7 @@ TBGLST = [
 	("PSGVAL_SZ_MAIN_TIME_TOGO", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MAIN_TIME_TOGO", "30", "size of the main togo clock on the clocks only floating widget",),
 	("PSGVAL_SZ_MARGINS_ALL", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MARGINS_ALL", "(0, 0)", "all margins default",),
 	("PSGVAL_SZ_MAX_DELTA", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MAX_DELTA", "30", "comment",),
-	("PSGVAL_SZ_MOVE", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MOVE", "15", "comment",),
+	("PSGVAL_SZ_MOVE_DIST", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MOVE_DIST", "15", "comment",),
 	("PSGVAL_SZ_PAD_ALL", FMAXPSG_SCTN0900_VAL_DEF, "SZ_PAD_ALL", "((1, 1), (1, 1))", "add padding to all the things",),
 	("PSGVAL_SZ_TIME_BTWN_MOVES", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIME_BTWN_MOVES", "100", "comment",),
 	("PSGVAL_TITLE", FMAX_NOP, "titls start here",),
@@ -1398,14 +1402,18 @@ TBGLST = [
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_STR_ADD, "MAPPDS", "TIME_ELAPSED", "00:00:00", "start the clock at midnight",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_STR_ADD, "MAPPDS", "TIME_OF_NEXT_EVENT", "00:00:00", "holds the time of the next coming event for easy maths",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_STR_ADD, "MAPPDS", "TIME_TOGO", "00:00:00", "start the clock at midnight",),
+	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "ALPHA_CHANNEL", "1.0", "current AlphaChannel setting",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "ALPHA_HIGH", "1.0", "amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "ALPHA_LOW", "0.3", "amount of seethrough when mouse hovers over clocks or THECLOCK",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "APPMODE", "APPMODE_CLOCKS", "default mode is clocks",),
+	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "BBOX", "((0, 0), (0, 0))", "FILLED IN BY INIT",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "CHECKBOX_ALPHA_LOW", "True", "default transparent under mouse when not cornered to True",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "CHECKBOX_RUNAWAY", "True", "default to avoiding mouse",),
+	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "CLOSE_BBOX", "((0, 0), (0, 0))", "FILLED IN BY INIT",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "INDEX_OF_NEXT_EVENT", "0", "default to first entry as next until the app can sort through them",),
-	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "SCREEN_POS", "(1000, 5)", "default transparent to False, only digits show in theory",),
-	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "TRANSPARENT", "False", "default transparent to False, only digits show in theory",),
+	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "SCREEN_POS", "(0, 0)", "current screen position",),
+	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VAL_ADD, "MAPPDS", "SCREEN_SIZE", "(0, 0)", "current screen position",),
+	("PSGVAL__MAPPDS01", FMAX_NOP, "FMAXPSG_SCTN090C_MAPPDS_VAL_ADD", "MAPPDS", "TRANSPARENT", "False", "default transparent to False, only digits show in theory",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_DEF, "MAPPDS", "EVENT_ENTRIES", "0", "holds events",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_STR_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "NAME", "wind it up", "this entry's name",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_STR_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_ALARM", "03:30:00", "time of this event",),
@@ -1437,8 +1445,8 @@ TBGLST = [
 	("PSGVAL__THECLOCK_MAINFRAME00", FMAXPSG_SCTN090D_MAINFRAME_DEF, "THECLOCK_MAINFRAME", "THECLOCK_WINDOW", "True", "the clocks frame defined and done",),
 	("PSGVAL__THECLOCK_RCMENU01", FMAXPSG_SCTN0913_RCMENU_DEF, "THECLOCK_RCMENU01", "right click to do the things",),
 	("PSGVAL__THECLOCK_RCMENU0101", FMAXPSG_SCTN0913_RCMENU_VAL_ADD, "THECLOCK_RCMENU01", "BTN_QUIT", "quit by right click",),
-	("PSGVAL__THECLOCK_RCMENU0101", FMAXPSG_SCTN0913_RCMENU_VAL_ADD, "THECLOCK_RCMENU01", "CHECKBOX_RUNAWAY", "toggle CHECKBOX_RUNAWAY",),
 	("PSGVAL__THECLOCK_RCMENU0101", FMAXPSG_SCTN0913_RCMENU_VAL_ADD, "THECLOCK_RCMENU01", "CHECKBOX_ALPHA_LOW", "toggle CHECKBOX_ALPHA_LOW",),
+	("PSGVAL__THECLOCK_RCMENU0101", FMAXPSG_SCTN0913_RCMENU_VAL_ADD, "THECLOCK_RCMENU01", "CHECKBOX_RUNAWAY", "toggle CHECKBOX_RUNAWAY",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK", FMAX_NOP, "THECLOCK text TIME_CLOCK",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK00", FMAXPSG_SCTN0909_TEXT_DEF, "THECLOCK_TEXT_TIME_CLOCK", "define the text element for THECLOCK_CLOCK_TIME",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_STR_ADD, "THECLOCK_TEXT_TIME_CLOCK", "TEXT", "00:00:00", "the text color for a clock_time element",),
@@ -1448,9 +1456,9 @@ TBGLST = [
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "JUSTIFICATION", "JUSTIFICATION_CENTER", "center everything",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "KEY", "TIME_CLOCK", "comment",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "PAD", "SZ_PAD_ALL", "the text color for a clock_time element",),
+	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "RIGHT_CLICK_MENU", "THECLOCK_RCMENU01", "add a right click for quit, runaway, alphalow",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "SIZE", "(8, 1)", "characters, lines size line",),
 	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "TEXT_COLOR", "COLOR_TIME_CLOCK", "the text color for a clock_time element",),
-	("PSGVAL__THECLOCK_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "THECLOCK_TEXT_TIME_CLOCK", "RIGHT_CLICK_MENU", "THECLOCK_RCMENU01", "add a right click for quit, runaway, alphalow",),
 	("PSGVAL__THECLOCK_WINDOW", FMAX_NOP, "the window for APPMODE_THECLOCK",),
 	("PSGVAL__THECLOCK_WINDOW00", FMAXPSG_SCTN090F_WINDOW_DEF, "THECLOCK_WINDOW", "define the clocks window",),
 	("PSGVAL__THECLOCK_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "THECLOCK_WINDOW", "ALPHA_CHANNEL", "SZ_ALPHA_HIGH", "set the high alpha as the default",),
@@ -2042,7 +2050,11 @@ def makePSG():
 	strToRtn_ += f"""{makeAComment("SCTN090D frame")}"""
 	dictToUse_ = sortADict(FMPSG_SCTN090D_FRAME_DICT)
 	for thisName_, value_ in dictToUse_.items():
-		strToRtn_ += f"""{thisName_} = SG.Window{OPAREN}{NEWLINE}{value_}"""
+		strToRtn_ += f"""{makeAComment(f"{thisName_}_CLASS")}{thisName_} = None{NEWLINE}class {thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global {thisName_}{NEWLINE}{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global {thisName_}{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(2)}{thisName_} = SG.Window{OPAREN}{NEWLINE}{value_}"""
+		strToRtn_ += f"""{NTAB(1)}def __exit__{OPAREN}self, *args{CPAREN}:{NEWLINE}{NTAB(2)}global {thisName_}{NEWLINE}{NTAB(2)}{thisName_}.close(){NEWLINE}{NEWLINE}{NEWLINE}"""
+
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	# print(f"""SCTN090C FMPSG_SCTN090C_MAPPDS_DICT |{FMPSG_SCTN090C_MAPPDS_DICT}|{NEWLINE}FMPSG_SCTN090C_MAPPDSDICT_DICT|{FMPSG_SCTN090C_MAPPDSDICT_DICT}|""")
@@ -3457,9 +3469,9 @@ def parseTBGLST(FDTBGLST):
 			thisWindowName_ = thisItem_[3]
 			thisFinalize_ = thisItem_[4]
 			if thisFinalize_ == "True":
-				FMPSG_SCTN090D_FRAME_DICT[thisMainframeName_] = f"""{NTAB(1)}**{thisWindowName_},{NEWLINE}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NEWLINE}{NEWLINE}"""
+				FMPSG_SCTN090D_FRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NEWLINE}"""
 			else:
-				FMPSG_SCTN090D_FRAME_DICT[thisMainframeName_] = f"""{NTAB(1)}**{thisWindowName_},{NEWLINE}{CPAREN}{NEWLINE}{NEWLINE}{NEWLINE}"""
+				FMPSG_SCTN090D_FRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 

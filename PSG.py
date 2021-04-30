@@ -1,8 +1,9 @@
 
 
-import PySimpleGUI as SG
+from planar import BoundingBox as BB
 from Xlib import display as DISP
 import gc
+import PySimpleGUI as SG
 
 
 import CF
@@ -17,11 +18,13 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
 ALPHA_LOW = "ALPHA_LOW"  # alphalow key
+ALPHA_MODE = "ALPHA_MODE"  # alpha mode key
 APPMODE = "APPMODE"  # app mode key
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
 APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # main mode (xpand from clocks to this)
+BBOX = "BBOX"  # BOUNDING BOX
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
 BTN_QUIT = "BTN_QUIT"  # key for all of the button xpand
@@ -30,6 +33,7 @@ BTN_XPAND = "BTN_XPAND"  # key for all of the button xpand
 BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
 CHECKBOX_ALPHA_LOW = "CHECKBOX_ALPHA_LOW"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 CHECKBOX_RUNAWAY = "CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
+CLOSE_BBOX = "CLOSE_BBOX"  # CLOSE BOUNDING BOX
 COLOR_BACKGROUND = "#331122"  # the background of the main frames
 COLOR_BLACK = "#000000"  # black
 COLOR_BTN_BACKGROUND = "#441133"  # background color on buttons by default
@@ -75,6 +79,7 @@ NAME = "NAME"  #
 PREDISMISSABLE = "PREDISMISSABLE"  #
 RUNNING = "RUNNING"  # is this interval running or not
 SCREEN_POS = "SCREEN_POS"  # can this event be snoozed
+SCREEN_SIZE = "SCREEN_SIZE"  # dimension of the screen
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # snoozed bool
 SZ_ALPHA_HIGH = 1.0  # high alpha
@@ -94,7 +99,7 @@ SZ_MAIN_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floati
 SZ_MAIN_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
 SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 30  # comment
-SZ_MOVE = 15  # comment
+SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_TIME_BTWN_MOVES = 100  # comment
 TIME_ALARM = "TIME_ALARM"  # the alarm time
@@ -1133,12 +1138,11 @@ THECLOCK_WINDOW = {  # define the clocks window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090D frame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# makeCLOCKS_MAINFRAME
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * CLOCKS_MAINFRAME_CLASS
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_MAINFRAME = None
-class CLASS_CLOCKS_MAINFRAME():
+class CLOCKS_MAINFRAME_CLASS():
 	global CLOCKS_MAINFRAME
 
 	def __enter__(self):
@@ -1146,28 +1150,26 @@ class CLASS_CLOCKS_MAINFRAME():
 		CLOCKS_MAINFRAME = SG.Window(
 			**CLOCKS_WINDOW,
 		).finalize()
-		return self
 
-	def __exit__(self, t1_, t2_, t3_):
+	def __exit__(self, *args):
 		global CLOCKS_MAINFRAME
 		CLOCKS_MAINFRAME.close()
 
 
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# make_THECLOCK_MAINFRAME
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * THECLOCK_MAINFRAME_CLASS
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 THECLOCK_MAINFRAME = None
-class CLASS_THECLOCK_MAINFRAME():
+class THECLOCK_MAINFRAME_CLASS():
 	global THECLOCK_MAINFRAME
 
 	def __enter__(self):
 		global THECLOCK_MAINFRAME
 		THECLOCK_MAINFRAME = SG.Window(
 			**THECLOCK_WINDOW,
-			).finalize()
-		return self
+		).finalize()
 
-	def __exit__(self, t1_, t2_, t3_):
+	def __exit__(self, *args):
 		global THECLOCK_MAINFRAME
 		THECLOCK_MAINFRAME.close()
 
@@ -1176,11 +1178,14 @@ class CLASS_THECLOCK_MAINFRAME():
 # * SCTN090C MAPPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
+	ALPHA_CHANNEL: 1.0,  # current AlphaChannel setting
 	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
 	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
 	APPMODE: APPMODE_CLOCKS,  # default mode is clocks
+	BBOX: ((0, 0), (0, 0)),  # FILLED IN BY INIT
 	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
 	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
+	CLOSE_BBOX: ((0, 0), (0, 0)),  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
 			DISMISSED: False,  # is this event dismissed
@@ -1206,12 +1211,12 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
-	SCREEN_POS: (1000, 5),  # default transparent to False, only digits show in theory
+	SCREEN_POS: (0, 0),  # current screen position
+	SCREEN_SIZE: (0, 0),  # current screen position
 	TIME_CLOCK: "00:00:00",  # start the clock at midnight
 	TIME_ELAPSED: "00:00:00",  # start the clock at midnight
 	TIME_OF_NEXT_EVENT: "00:00:00",  # holds the time of the next coming event for easy maths
 	TIME_TOGO: "00:00:00",  # start the clock at midnight
-	TRANSPARENT: False,  # default transparent to False, only digits show in theory
 }
 
 
@@ -1291,43 +1296,51 @@ def getElementSize(mainframeElementToSize_):
 def getBBox(objectToBBox_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	TLcnX_, TLcnY_ = getElementLocation(objectToBBox_)
-	TBBoxWest_ = TLcnX_
-	TBBoxNorth_ = TLcnY_
 	TSizeX_, TSizeY_ = getElementSize(objectToBBox_)
-	TBBoxSouth_ = TLcnY_ + TSizeY_
-	TBBoxEast_ = TLcnX_ + TSizeX_
-	return TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_
+	# BBoxRoRtn_ = ((TLcnX_, TLcnY_), ((TLcnX_ + TSizeX= _), (TLcnY_ + TSizeY_)))
+	return (TLcnX_, TLcnY_, (TLcnX_ + TSizeX_), (TLcnY_ + TSizeY_))
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # getCloseBBox
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def getCloseBBox(objectToBBox_):
+def getCloseBBox(objectToBBox_, closeEnough_=SZ_CLOSE):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	TLcnX_, TLcnY_ = getElementLocation(objectToBBox_)
-	TBBoxCloseWest_ = TLcnX_ - SZ_CLOSE
-	TBBoxCloseNorth_ = TLcnY_ - SZ_CLOSE
 	TSizeX_, TSizeY_ = getElementSize(objectToBBox_)
-	TBBoxCloseSouth_ = TLcnY_ + TSizeY_ + SZ_CLOSE
-	TBBoxCloseEast_ = TLcnX_ + TSizeX_ + SZ_CLOSE
-	if TBBoxCloseWest_ < 0:
-		TBBoxCloseWest_ = 0
-	if TBBoxCloseNorth_ < 0:
-		TBBoxCloseNorth_ = 0
-
-	return TBBoxCloseNorth_, TBBoxCloseWest_, TBBoxCloseSouth_, TBBoxCloseEast_
-
+	return ((TLcnX_ - closeEnough_), (TLcnY_ - closeEnough_), (TLcnX_ + TSizeX_ + closeEnough_), (TLcnY_ + TSizeY_ + closeEnough_))
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# isInBBox ((x1, y1), (x2, y2))
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def isInBBox(BBoxIn_, pointIn_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if (BBoxIn_[0][0] < pointIn_ < BBoxIn_[1][0]) and (BBoxIn_[0][1] < pointIn_ < BBoxIn_[1][1]):
+		return True
+	else:
+		return False
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # moveFrame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def moveFrame(mainframeToMove_, moveTo_=(0, 0)):  # remember - is N/W and + is S/E
+def moveFrame(mainframeToMove_, moveTo_=(0, 0), szMove=SZ_MOVE_DIST):  # remember - is N/W and + is S/E
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_, TLcnY_ = PSG.getElementLocation(PSG.CLOCKS_MAINFRAME)
-	moveTo_ = ((TLcnX_ + SZ_MOVE))
+	TLcnX_, TLcnY_ = getElementLocation(mainframeToMove_)
+	TSizeX_, TSizeY_ = getElementSize(mainframeToMove_)
+	if TLcnX_ < 0:
+		TLcnX_ = 0
+	elif TLcnX_ > (MAPPDS[SCREEN_SIZE][0] - TSizeX_):
+		TLcnX_ = (MAPPDS[SCREEN_SIZE][0] - TSizeX_)
+	if TLcnY_ < 0:
+		TLcnY_ = 0
+	elif TLcnY_ > (MAPPDS[SCREEN_SIZE][1] - TSizeY_):
+		TLcnY_ = (MAPPDS[SCREEN_SIZE][1] - TSizeY_)
 	mainframeToMove_.Move(moveTo_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1340,11 +1353,11 @@ def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	TLcnX_, TLcnY_ = getElementLocation(mainframeToMove_)
 	screenSZX_, screenSZY_ = getScreenDims(mainframeToMove_)
-	TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = getBBox(mainframeToMove_)
+	(TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_) = getBBox(mainframeToMove_)
 	TSizeX_, TSizeY_ = getElementSize(mainframeToMove_)
 
-	moveToX_ = TLcnX_ + (moveMpx[0] * SZ_MOVE)
-	moveToY_ = TLcnY_ + (moveMpx[1] * SZ_MOVE)
+	moveToX_ = TLcnX_ + (moveMpx[0] * SZ_MOVE_DIST)
+	moveToY_ = TLcnY_ + (moveMpx[1] * SZ_MOVE_DIST)
 
 	if moveToX_ < 0:
 		moveToX_ = 0
@@ -1385,8 +1398,8 @@ def checkMouse(mainframeToCheck_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	TSizeX_, TSizeY_ = getElementSize(mainframeToCheck_)
 	TLcnX_, TLcnY_ = getElementLocation(mainframeToCheck_)
-	TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = getBBox(mainframeToCheck_)
-	TBBoxCloseNorth_, TBBoxCloseWest_, TBBoxCloseSouth_, TBBoxCloseEast_ = getCloseBBox(mainframeToCheck_)
+	(TBBoxNorth_, TBBoxWest_,  TBBoxSouth_, TBBoxEast_) = getBBox(mainframeToCheck_)
+	(TBBoxCloseNorth_, TBBoxCloseWest_, TBBoxCloseSouth_, TBBoxCloseEast_) = getCloseBBox(mainframeToCheck_)
 	TMouseLcnX_, TMouseLcnY_ = getMousePos()
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
@@ -1450,6 +1463,16 @@ def checkMouse(mainframeToCheck_):
 		return MOUSE_STATUS_OVER
 
 # closer than
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# doInit
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def doInit(mainframe_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	MAPPDS[SCREEN_POS] = getElementLocation(mainframe_)
+	MAPPDS[SCREEN_SIZE] = getElementSize(mainframe_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 

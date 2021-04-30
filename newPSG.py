@@ -1,8 +1,9 @@
 
 
-import PySimpleGUI as SG
+from planar import BoundingBox as BB
 from Xlib import display as DISP
 import gc
+import PySimpleGUI as SG
 
 
 import CF
@@ -17,11 +18,13 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
 ALPHA_LOW = "ALPHA_LOW"  # alphalow key
+ALPHA_MODE = "ALPHA_MODE"  # alpha mode key
 APPMODE = "APPMODE"  # app mode key
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
 APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # main mode (xpand from clocks to this)
+BBOX = "BBOX"  # BOUNDING BOX
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
 BTN_QUIT = "BTN_QUIT"  # key for all of the button xpand
@@ -30,6 +33,7 @@ BTN_XPAND = "BTN_XPAND"  # key for all of the button xpand
 BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
 CHECKBOX_ALPHA_LOW = "CHECKBOX_ALPHA_LOW"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 CHECKBOX_RUNAWAY = "CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
+CLOSE_BBOX = "CLOSE_BBOX"  # CLOSE BOUNDING BOX
 COLOR_BACKGROUND = "#331122"  # the background of the main frames
 COLOR_BLACK = "#000000"  # black
 COLOR_BTN_BACKGROUND = "#441133"  # background color on buttons by default
@@ -75,6 +79,7 @@ NAME = "NAME"  #
 PREDISMISSABLE = "PREDISMISSABLE"  # 
 RUNNING = "RUNNING"  # is this interval running or not
 SCREEN_POS = "SCREEN_POS"  # can this event be snoozed
+SCREEN_SIZE = "SCREEN_SIZE"  # dimension of the screen
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # snoozed bool
 SZ_ALPHA_HIGH = 1.0  # high alpha
@@ -94,7 +99,7 @@ SZ_MAIN_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floati
 SZ_MAIN_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
 SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 30  # comment
-SZ_MOVE = 15  # comment
+SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_TIME_BTWN_MOVES = 100  # comment
 TIME_ALARM = "TIME_ALARM"  # the alarm time
@@ -1133,25 +1138,54 @@ THECLOCK_WINDOW = {  # define the clocks window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090D frame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_MAINFRAME = SG.Window(
-	**CLOCKS_WINDOW,
-).finalize()
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * CLOCKS_MAINFRAME_CLASS
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CLOCKS_MAINFRAME = None
+class CLOCKS_MAINFRAME_CLASS():
+	global CLOCKS_MAINFRAME
+
+	def __enter__(self):
+		global CLOCKS_MAINFRAME
+		CLOCKS_MAINFRAME = SG.Window(
+			**CLOCKS_WINDOW,
+		).finalize()
+
+	def __exit__(self, *args):
+		global CLOCKS_MAINFRAME
+		CLOCKS_MAINFRAME.close()
 
 
-THECLOCK_MAINFRAME = SG.Window(
-	**THECLOCK_WINDOW,
-).finalize()
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * THECLOCK_MAINFRAME_CLASS
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+THECLOCK_MAINFRAME = None
+class THECLOCK_MAINFRAME_CLASS():
+	global THECLOCK_MAINFRAME
+
+	def __enter__(self):
+		global THECLOCK_MAINFRAME
+		THECLOCK_MAINFRAME = SG.Window(
+			**THECLOCK_WINDOW,
+		).finalize()
+
+	def __exit__(self, *args):
+		global THECLOCK_MAINFRAME
+		THECLOCK_MAINFRAME.close()
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C MAPPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
+	ALPHA_CHANNEL: 1.0,  # current AlphaChannel setting
 	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
 	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
 	APPMODE: APPMODE_CLOCKS,  # default mode is clocks
+	BBOX: ((0, 0), (0, 0)),  # FILLED IN BY INIT
 	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
 	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
+	CLOSE_BBOX: ((0, 0), (0, 0)),  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
 			DISMISSED: False,  # is this event dismissed
@@ -1177,12 +1211,12 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
-	SCREEN_POS: (1000, 5),  # default transparent to False, only digits show in theory
+	SCREEN_POS: (0, 0),  # current screen position
+	SCREEN_SIZE: (0, 0),  # current screen position
 	TIME_CLOCK: "00:00:00",  # start the clock at midnight
 	TIME_ELAPSED: "00:00:00",  # start the clock at midnight
 	TIME_OF_NEXT_EVENT: "00:00:00",  # holds the time of the next coming event for easy maths
 	TIME_TOGO: "00:00:00",  # start the clock at midnight
-	TRANSPARENT: False,  # default transparent to False, only digits show in theory
 }
 
 
