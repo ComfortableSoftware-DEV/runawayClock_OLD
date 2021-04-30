@@ -1297,8 +1297,10 @@ def getBBox(objectToBBox_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	TLcnX_, TLcnY_ = getElementLocation(objectToBBox_)
 	TSizeX_, TSizeY_ = getElementSize(objectToBBox_)
-	# BBoxRoRtn_ = ((TLcnX_, TLcnY_), ((TLcnX_ + TSizeX= _), (TLcnY_ + TSizeY_)))
-	return (TLcnX_, TLcnY_, (TLcnX_ + TSizeX_), (TLcnY_ + TSizeY_))
+	BBoxRoRtn_ = {
+		BBOX_NORTH: TLcnX_,
+		BBOX_WEST: TLcnY_,
+		 ((TLcnX_ + TSizeX_), (TLcnY_ + TSizeY_)))}
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1309,7 +1311,7 @@ def getCloseBBox(objectToBBox_, closeEnough_=SZ_CLOSE):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	TLcnX_, TLcnY_ = getElementLocation(objectToBBox_)
 	TSizeX_, TSizeY_ = getElementSize(objectToBBox_)
-	return ((TLcnX_ - closeEnough_), (TLcnY_ - closeEnough_), (TLcnX_ + TSizeX_ + closeEnough_), (TLcnY_ + TSizeY_ + closeEnough_))
+	return (((TLcnX_ - closeEnough_), (TLcnY_ - closeEnough_)), ((TLcnX_ + TSizeX_ + closeEnough_), (TLcnY_ + TSizeY_ + closeEnough_)))
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1403,7 +1405,7 @@ def checkMouse(mainframeToCheck_):
 	TMouseLcnX_, TMouseLcnY_ = getMousePos()
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	if (TMouseLcnX_ > TBBoxWest_) and (TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_):
+	if (TBBoxWest_ > TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_):
 		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
 			return MOUSE_STATUS_CLOSE_N
 		else:

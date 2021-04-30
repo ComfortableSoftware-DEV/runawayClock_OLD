@@ -44,10 +44,6 @@ def checkMouseStatus(statusToDo_):
 		elif statusToDo_ == PSG.MOUSE_STATUS_CLOSE_SE:
 			PSG.moveRelFrame(PSG.THECLOCK_MAINFRAME, (-1, -1))
 
-	elif (statusToDo_ == PSG.MOUSE_STATUS_OVER) and (PSG.MAPPDS[PSG.CHECKBOX_ALPHA_LOW] is True):
-		PSG.THECLOCK_MAINFRAME.AlphaChannel = PSG.MAPPDS[PSG.ALPHA_LOW]
-		alphaMode = True
-
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # handleEvents
@@ -73,7 +69,6 @@ def __main__():
 	global \
 		oldClock, \
 		lastMouseStatus
-		alphaMode
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	with \
 			PSG.THECLOCK_MAINFRAME_CLASS(), \
@@ -95,6 +90,8 @@ def __main__():
 				handleEvents(event_)
 
 			TMouseStatus_ = PSG.checkMouse(PSG.THECLOCK_MAINFRAME)
+
+			print(f"""TMouseStatus_ {TMouseStatus_}""")
 
 			if (TMouseStatus_ == PSG.MOUSE_STATUS_OVER) and (lastMouseStatus != PSG.MOUSE_STATUS_OVER) and (PSG.MAPPDS[PSG.CHECKBOX_ALPHA_LOW] is True):
 				PSG.THECLOCK_MAINFRAME.AlphaChannel = PSG.MAPPDS[PSG.ALPHA_LOW]

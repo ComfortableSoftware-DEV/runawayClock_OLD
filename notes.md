@@ -4,7 +4,7 @@
 status   | [ ] | item
 ---------|-----|--------------------------------------------------------------------
 consider | [ ] | clocks mode can be separated
-consider | [ ] | lowercase all parm keys
+consider | [ ] | lowercase all parm keys to match PySimpleGui conventions
 do       | [X] | avoid mouse unless cornered/walled/overrun
 do       | [ ] | edit mode
 do       | [ ] | main all seeing mode
@@ -18,4 +18,10 @@ do       | []  | make time till next event time work
 do       | []  | snoozing times and settings
 do       | []  | actually make the bool flags work
 do       | []  | make event entries work from FM.py on
-         |     |
+do       | []  | make sure empty tupdict works
+do       | []  | all the tupdict and tupdictdict ready
+do   | []    | convert all passed about things to a dict
+  |   |  sizes to dict for sure
+  |   |  pos(x, y) to dict
+  |   |  convert all tupdict here to tupdict_dict -=> the infamous TDD
+  |   |  

@@ -25,6 +25,10 @@ APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
 APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # main mode (xpand from clocks to this)
 BBOX = "BBOX"  # BOUNDING BOX
+BBOX_EAST = "BBOX_EAST"  # BOUNDING BOX_EAST
+BBOX_NORTH = "BBOX_NORTH"  # BOUNDING BOX NORTH
+BBOX_SOUTH = "BBOX_SOUTH"  # BOUNDING BOX_SOUTH
+BBOX_WEST = "BBOX_WEST"  # BOUNDING BOX_WEST
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
 BTN_QUIT = "BTN_QUIT"  # key for all of the button xpand
@@ -114,6 +118,7 @@ TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
 TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
 TITLE_THECLOCK = "THECLOCK"  # string with window title for APPMODE_CLOCKS
 TRANSPARENT = "TRANSPARENT"  # is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)
+ZERO_CLOCK = "00:00:00"  # all the zeros
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -248,14 +253,14 @@ VISIBLE = "visible"  # visibility of elements
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_DICT = {  # holds the values for the clocks frame
-	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
-	TIME_ELAPSED: "00:00:00",  # holds the values for the clocks frame
-	TIME_TOGO: "00:00:00",  # holds the values for the clocks frame
+	TIME_CLOCK: "ZERO_CLOCK",  # holds the values for the clocks frame
+	TIME_ELAPSED: "ZERO_CLOCK",  # holds the values for the clocks frame
+	TIME_TOGO: "ZERO_CLOCK",  # holds the values for the clocks frame
 }
 
 
 THECLOCK_DICT = {  # holds the values for the clocks frame
-	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
+	TIME_CLOCK: "ZERO_CLOCK",  # holds the values for the clocks frame
 }
 
 
@@ -281,6 +286,53 @@ CLOSE_LIST = [  # list with close statuses
 # * SCTN0905 tupdict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of EMPTY0_BBOX structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+EMPTY0_BBOXTUP = (
+	(BBOX_EAST, 0),  # bbox east
+	(BBOX_NORTH, 0),  # bbox north
+	(BBOX_SOUTH, 0),  # bbox south
+	(BBOX_WEST, 0),  # bbox west
+)
+
+def EMPTY0_BBOXDICT():
+	return dict((x, y) for x, y in EMPTY0_BBOXTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of EMPTY0_EVENT_ENTRIES structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+EMPTY0_EVENT_ENTRIESTUP = (
+)
+
+def EMPTY0_EVENT_ENTRIESDICT():
+	return dict((x, y) for x, y in EMPTY0_EVENT_ENTRIESTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of EMPTY0_EVENTS_ENTRIES structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+EMPTY0_EVENTS_ENTRIESTUP = (
+	(DISMISSED, False),  # has the event been dismissed just this once
+	(ENABLED, True),  # is the event enabled bool
+	(EVENT_MODE, EVENT_MODE_ALARM),  # which event mode is this event
+	(NAME, alarm),  # the name of this event
+	(PREDISMISSABLE, False),  # can the event be dismissed prior to on time
+	(SNOOZABLE, False),  # can the alarm be snoozed
+	(SNOOZED, False),  # is the event snoozed
+	(TIME_ALARM, ZERO_CLOCK),  # in an alarm mode event, what time is the alarm
+	(TIME_INTERVAL, ZERO_CLOCK),  # how much time to add to an interval mode event
+	(TIME_REMIND, ZERO_CLOCK),  # wall time at the next alarm
+)
+
+def EMPTY0_EVENTS_ENTRIESDICT():
+	return dict((x, y) for x, y in EMPTY0_EVENTS_ENTRIESTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of EMPTY_ALARM structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
@@ -292,9 +344,9 @@ EMPTY_ALARMTUP = (
 	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
 	(SNOOZABLE, False),  # enabled state of this entry
 	(SNOOZED, True),  # enabled state of this entry
-	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
+	(TIME_ALARM, "ZERO_CLOCK"),  # time this alarm is set for
+	(TIME_OF_NEXT_EVENT, "ZERO_CLOCK"),  # post snooze or tomorrow
+	(TIME_TOGO, "ZERO_CLOCK"),  # post snooze or tomorrow
 )
 
 def EMPTY_ALARMDICT():
@@ -313,10 +365,10 @@ EMPTY_ALARM_REMINDTUP = (
 	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
 	(SNOOZABLE, False),  # enabled state of this entry
 	(SNOOZED, True),  # enabled state of this entry
-	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_REMIND, "00:00:00"),  # time this alarm is set for
-	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
+	(TIME_ALARM, "ZERO_CLOCK"),  # time this alarm is set for
+	(TIME_OF_NEXT_EVENT, "ZERO_CLOCK"),  # post snooze or tomorrow
+	(TIME_REMIND, "ZERO_CLOCK"),  # time this alarm is set for
+	(TIME_TOGO, "ZERO_CLOCK"),  # post snooze or tomorrow
 )
 
 def EMPTY_ALARM_REMINDDICT():
@@ -328,9 +380,9 @@ def EMPTY_ALARM_REMINDDICT():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 EMPTY_CLOCKSTUP = (
-	(TIME_CLOCK, "00:00:00"),  # the main clock time
-	(TIME_ELAPSED, "00:00:00"),  # the main elapsed time
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # the main count down to the next event time
+	(TIME_CLOCK, "ZERO_CLOCK"),  # the main clock time
+	(TIME_ELAPSED, "ZERO_CLOCK"),  # the main elapsed time
+	(TIME_OF_NEXT_EVENT, "ZERO_CLOCK"),  # the main count down to the next event time
 )
 
 def EMPTY_CLOCKSDICT():
@@ -346,13 +398,35 @@ EMPTY_INTERVALTUP = (
 	(EVENT_MODE, EVENT_MODE_INTERVAL),  # set the mode to EVENT_MODE_ALARM by default of course
 	(NAME, ""),  # name of this entry
 	(RUNNING, True),  # running state of this entry
-	(TIME_INTERVAL, "00:00:00"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
+	(TIME_INTERVAL, "ZERO_CLOCK"),  # time this alarm is set for
+	(TIME_OF_NEXT_EVENT, "ZERO_CLOCK"),  # post snooze or tomorrow
+	(TIME_TOGO, "ZERO_CLOCK"),  # post snooze or tomorrow
 )
 
 def EMPTY_INTERVALDICT():
 	return dict((x, y) for x, y in EMPTY_INTERVALTUP)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of EMPTY_MAPPDS structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+EMPTY_MAPPDSTUP = (
+	(ALPHA_CHANNEL, 1.0),  # fully opaque
+	(ALPHA_HIGH, 1.0),  # fully opaque
+	(ALPHA_LOW, 0.3),  # almost fully alpha
+	(APPMODE, APPMODE_CLOCKS),  # default to clocks mode
+	(CHECKBOX_ALPHA_LOW, True),  # the checkbox bool for ALPHA high/low mode
+	(CHECKBOX_RUNAWAY, True),  # checkbox bool for RUNAWAY mode
+	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
+	(TIME_CLOCK, ZERO_CLOCK),  # time wall clock
+	(TIME_ELAPSED, ZERO_CLOCK),  # time elapsed empty
+	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # time of next event
+	(TIME_TOGO, ZERO_CLOCK),  # time till next event empty clock
+)
+
+def EMPTY_MAPPDSDICT():
+	return dict((x, y) for x, y in EMPTY_MAPPDSTUP)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -976,7 +1050,7 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
-	TEXT: "00:00:00",  # the text color for a clock_time element
+	TEXT: "ZERO_CLOCK",  # the text color for a clock_time element
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: True,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
@@ -989,7 +1063,7 @@ CLOCKS_TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
 
 
 CLOCKS_TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
-	TEXT: "00:00:00",  # the text color for a clock_time element
+	TEXT: "ZERO_CLOCK",  # the text color for a clock_time element
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
@@ -1001,7 +1075,7 @@ CLOCKS_TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
 
 
 CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
-	TEXT: "00:00:00",  # the text color for a clock_time element
+	TEXT: "ZERO_CLOCK",  # the text color for a clock_time element
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
@@ -1013,7 +1087,7 @@ CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 
 
 THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
-	TEXT: "00:00:00",  # the text color for a clock_time element
+	TEXT: "ZERO_CLOCK",  # the text color for a clock_time element
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
@@ -1196,7 +1270,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: "03:30:00",  # time of this event
-			TIME_TOGO: "00:00:00",  # updated only when the edit window is open with this event countdown to next event
+			TIME_TOGO: "ZERO_CLOCK",  # updated only when the edit window is open with this event countdown to next event
 		},
 		1: {
 			DISMISSED: False,  # is this event dismissed
@@ -1207,16 +1281,16 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: "04:00:00",  # time of this event
-			TIME_TOGO: "00:00:00",  # updated only when the edit window is open with this event countdown to next event
+			TIME_TOGO: "ZERO_CLOCK",  # updated only when the edit window is open with this event countdown to next event
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
 	SCREEN_POS: (0, 0),  # current screen position
 	SCREEN_SIZE: (0, 0),  # current screen position
-	TIME_CLOCK: "00:00:00",  # start the clock at midnight
-	TIME_ELAPSED: "00:00:00",  # start the clock at midnight
-	TIME_OF_NEXT_EVENT: "00:00:00",  # holds the time of the next coming event for easy maths
-	TIME_TOGO: "00:00:00",  # start the clock at midnight
+	TIME_CLOCK: "ZERO_CLOCK",  # start the clock at midnight
+	TIME_ELAPSED: "ZERO_CLOCK",  # start the clock at midnight
+	TIME_OF_NEXT_EVENT: "ZERO_CLOCK",  # holds the time of the next coming event for easy maths
+	TIME_TOGO: "ZERO_CLOCK",  # start the clock at midnight
 }
 
 
