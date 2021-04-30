@@ -340,13 +340,13 @@ EMPTY_ALARMTUP = (
 	(DISMISSED, False),  # bool is this event dismissed already
 	(ENABLED, True),  # enabled state of this entry
 	(EVENT_MODE, EVENT_MODE_ALARM),  # set the mode to EVENT_MODE_ALARM by default of course
-	(NAME, ""),  # name of this entry
+	(NAME, ),  # name of this entry
 	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
 	(SNOOZABLE, False),  # enabled state of this entry
 	(SNOOZED, True),  # enabled state of this entry
-	(TIME_ALARM, "ZERO_CLOCK"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "ZERO_CLOCK"),  # post snooze or tomorrow
-	(TIME_TOGO, "ZERO_CLOCK"),  # post snooze or tomorrow
+	(TIME_ALARM, ZERO_CLOCK),  # time this alarm is set for
+	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # post snooze or tomorrow
+	(TIME_TOGO, ZERO_CLOCK),  # post snooze or tomorrow
 )
 
 def EMPTY_ALARMDICT():
@@ -361,14 +361,14 @@ EMPTY_ALARM_REMINDTUP = (
 	(DISMISSED, False),  # bool is this event dismissed already
 	(ENABLED, True),  # enabled state of this entry
 	(EVENT_MODE, EVENT_MODE_ALARMREMIND),  # set the mode to EVENT_MODE_ALARM by default of course
-	(NAME, ""),  # name of this entry
+	(NAME, ),  # name of this entry
 	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
 	(SNOOZABLE, False),  # enabled state of this entry
 	(SNOOZED, True),  # enabled state of this entry
-	(TIME_ALARM, "ZERO_CLOCK"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "ZERO_CLOCK"),  # post snooze or tomorrow
-	(TIME_REMIND, "ZERO_CLOCK"),  # time this alarm is set for
-	(TIME_TOGO, "ZERO_CLOCK"),  # post snooze or tomorrow
+	(TIME_ALARM, ZERO_CLOCK),  # time this alarm is set for
+	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # post snooze or tomorrow
+	(TIME_REMIND, ZERO_CLOCK),  # time this alarm is set for
+	(TIME_TOGO, ZERO_CLOCK),  # post snooze or tomorrow
 )
 
 def EMPTY_ALARM_REMINDDICT():
@@ -380,9 +380,9 @@ def EMPTY_ALARM_REMINDDICT():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 EMPTY_CLOCKSTUP = (
-	(TIME_CLOCK, "ZERO_CLOCK"),  # the main clock time
-	(TIME_ELAPSED, "ZERO_CLOCK"),  # the main elapsed time
-	(TIME_OF_NEXT_EVENT, "ZERO_CLOCK"),  # the main count down to the next event time
+	(TIME_CLOCK, ZERO_CLOCK),  # the main clock time
+	(TIME_ELAPSED, ZERO_CLOCK),  # the main elapsed time
+	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # the main count down to the next event time
 )
 
 def EMPTY_CLOCKSDICT():
@@ -398,9 +398,9 @@ EMPTY_INTERVALTUP = (
 	(EVENT_MODE, EVENT_MODE_INTERVAL),  # set the mode to EVENT_MODE_ALARM by default of course
 	(NAME, ""),  # name of this entry
 	(RUNNING, True),  # running state of this entry
-	(TIME_INTERVAL, "ZERO_CLOCK"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "ZERO_CLOCK"),  # post snooze or tomorrow
-	(TIME_TOGO, "ZERO_CLOCK"),  # post snooze or tomorrow
+	(TIME_INTERVAL, ZERO_CLOCK),  # time this alarm is set for
+	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # post snooze or tomorrow
+	(TIME_TOGO, ZERO_CLOCK),  # post snooze or tomorrow
 )
 
 def EMPTY_INTERVALDICT():
@@ -1256,10 +1256,10 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
 	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
 	APPMODE: APPMODE_CLOCKS,  # default mode is clocks
-	BBOX: ((0, 0), (0, 0)),  # FILLED IN BY INIT
+	BBOX: EMPTY_BBOX_DICT,  # FILLED IN BY INIT
 	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
 	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
-	CLOSE_BBOX: ((0, 0), (0, 0)),  # FILLED IN BY INIT
+	CLOSE_BBOX: EMPTY_BBOX_DICT,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
 			DISMISSED: False,  # is this event dismissed
@@ -1269,7 +1269,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: "03:30:00",  # time of this event
+			TIME_ALARM: "ZERO_CLOCK",  # time of this event
 			TIME_TOGO: "ZERO_CLOCK",  # updated only when the edit window is open with this event countdown to next event
 		},
 		1: {
@@ -1280,13 +1280,13 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: "04:00:00",  # time of this event
+			TIME_ALARM: "ZERO_CLOCK",  # time of this event
 			TIME_TOGO: "ZERO_CLOCK",  # updated only when the edit window is open with this event countdown to next event
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
-	SCREEN_POS: (0, 0),  # current screen position
-	SCREEN_SIZE: (0, 0),  # current screen position
+	SCREEN_POS: EMPTY_XY,  # current screen position
+	SCREEN_SIZE: EMPTY_XY,  # current screen position
 	TIME_CLOCK: "ZERO_CLOCK",  # start the clock at midnight
 	TIME_ELAPSED: "ZERO_CLOCK",  # start the clock at midnight
 	TIME_OF_NEXT_EVENT: "ZERO_CLOCK",  # holds the time of the next coming event for easy maths
