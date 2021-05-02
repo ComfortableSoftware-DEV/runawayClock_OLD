@@ -1989,6 +1989,7 @@ def checkMouseLcn(mainframeToCheck_):
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	# print(f"""if (TBBoxWest_ < TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_) ({TBBoxWest_} < {TMouseLcnX_} < {TBBoxEast_}) and ({TMouseLcnY_} < {TBBoxNorth_})""")
+	print(f"""if (TBBoxWest_ < TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_):  if ({TBBoxWest_} < {TMouseLcnX_} < {TBBoxEast_}) and ({TMouseLcnY_} < {TBBoxNorth_}): {(TBBoxWest_ < TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_)}""")
 	if (TBBoxWest_ < TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_):
 		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_N
