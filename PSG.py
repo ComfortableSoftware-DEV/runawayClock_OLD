@@ -1,6 +1,5 @@
 
 
-from planar import BoundingBox as BB
 from Xlib import display as DISP
 import gc
 import PySimpleGUI as SG
@@ -25,6 +24,10 @@ APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
 APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # main mode (xpand from clocks to this)
 BBOX = "BBOX"  # BOUNDING BOX
+BBOX_EAST = "BBOX_EAST"  # BOUNDING BOX_EAST
+BBOX_NORTH = "BBOX_NORTH"  # BOUNDING BOX NORTH
+BBOX_SOUTH = "BBOX_SOUTH"  # BOUNDING BOX_SOUTH
+BBOX_WEST = "BBOX_WEST"  # BOUNDING BOX_WEST
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
 BTN_QUIT = "BTN_QUIT"  # key for all of the button xpand
@@ -58,6 +61,7 @@ EVENT_MODE_ALARMREMIND = "EVENT_MODE_ALARMREMIND"  #
 EVENT_MODE_INTERVAL = "EVENT_MODE_INTERVAL"  #
 FONT_DEFAULT = "Source Code Pro"  # set the main font
 INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  #
+MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
 MOUSE_STATUS_CLOSE_NE = "MOUSE_STATUS_CLOSE_NE"  # mouse is northeast of checked element
@@ -78,8 +82,8 @@ MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
 NAME = "NAME"  #
 PREDISMISSABLE = "PREDISMISSABLE"  #
 RUNNING = "RUNNING"  # is this interval running or not
+SCREEN_DIMS = "SCREEN_DIMS"  # dimension of the screen
 SCREEN_POS = "SCREEN_POS"  # can this event be snoozed
-SCREEN_SIZE = "SCREEN_SIZE"  # dimension of the screen
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # snoozed bool
 SZ_ALPHA_HIGH = 1.0  # high alpha
@@ -103,6 +107,9 @@ SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_TIME_BTWN_MOVES = 100  # comment
 TIME_ALARM = "TIME_ALARM"  # the alarm time
+TIME_AT_LAST_ZERO_CHECK = "00:00:00"  # holds the time used to keep intervals accurate
+TIME_AT_ZERO = "TIME_AT_ZERO"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
+TIME_BETWEEN_ZERO_CHECKS = "01:00:00"  # comment
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
 TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
@@ -114,6 +121,9 @@ TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
 TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
 TITLE_THECLOCK = "THECLOCK"  # string with window title for APPMODE_CLOCKS
 TRANSPARENT = "TRANSPARENT"  # is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)
+VAL_X = "VAL_X"  # size and position X value (these may be a pita so keep tuples around just in case)
+VAL_Y = "VAL_Y"  # size and position Y value (these may be a pita so keep tuples around just in case)
+ZERO_CLOCK = "00:00:00"  # all the zeros
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -248,14 +258,15 @@ VISIBLE = "visible"  # visibility of elements
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_DICT = {  # holds the values for the clocks frame
-	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
-	TIME_ELAPSED: "00:00:00",  # holds the values for the clocks frame
-	TIME_TOGO: "00:00:00",  # holds the values for the clocks frame
+	TIME_AT_ZERO: ZERO_CLOCK,  # holds the values for the clocks frame
+	TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
+	TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
+	TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
 }
 
 
-THECLOCK_DICT = {  # holds the values for the clocks frame
-	TIME_CLOCK: "00:00:00",  # holds the values for the clocks frame
+THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
+	TIME_CLOCK: ZERO_CLOCK,  # comment
 }
 
 
@@ -281,46 +292,80 @@ CLOSE_LIST = [  # list with close statuses
 # * SCTN0905 tupdict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY_ALARM structures
+# * start of EMPTY0_BBOX structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-EMPTY_ALARMTUP = (
-	(DISMISSED, False),  # bool is this event dismissed already
-	(ENABLED, True),  # enabled state of this entry
-	(EVENT_MODE, EVENT_MODE_ALARM),  # set the mode to EVENT_MODE_ALARM by default of course
-	(NAME, ""),  # name of this entry
-	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
-	(SNOOZABLE, False),  # enabled state of this entry
-	(SNOOZED, True),  # enabled state of this entry
-	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
+EMPTY0_BBOXTUP = (
+	(BBOX_EAST, 0),  # bbox east
+	(BBOX_NORTH, 0),  # bbox north
+	(BBOX_SOUTH, 0),  # bbox south
+	(BBOX_WEST, 0),  # bbox west
 )
 
-def EMPTY_ALARMDICT():
-	return dict((x, y) for x, y in EMPTY_ALARMTUP)
+def EMPTY0_BBOXDICT():
+	return dict((x, y) for x, y in EMPTY0_BBOXTUP)
+
+
+EMPTY0_BBOX_TDD = {
+	BBOX_EAST: 0,  # bbox east
+	BBOX_NORTH: 0,  # bbox north
+	BBOX_SOUTH: 0,  # bbox south
+	BBOX_WEST: 0,  # bbox west
+}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY_ALARM_REMIND structures
+# * start of EMPTY0_EVENT_ENTRY structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-EMPTY_ALARM_REMINDTUP = (
-	(DISMISSED, False),  # bool is this event dismissed already
-	(ENABLED, True),  # enabled state of this entry
-	(EVENT_MODE, EVENT_MODE_ALARMREMIND),  # set the mode to EVENT_MODE_ALARM by default of course
-	(NAME, ""),  # name of this entry
-	(PREDISMISSABLE, True),  # pre-dismissable state of this entry
-	(SNOOZABLE, False),  # enabled state of this entry
-	(SNOOZED, True),  # enabled state of this entry
-	(TIME_ALARM, "00:00:00"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_REMIND, "00:00:00"),  # time this alarm is set for
-	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
+EMPTY0_EVENT_ENTRYTUP = (
+	(DISMISSED, False),  # has the event been dismissed just this once
+	(ENABLED, True),  # is the event enabled bool
+	(EVENT_MODE, EVENT_MODE_ALARM),  # which event mode is this event
+	(NAME, "alarm"),  # the name of this event
+	(PREDISMISSABLE, False),  # can the event be dismissed prior to on time
+	(SNOOZABLE, False),  # can the alarm be snoozed
+	(SNOOZED, False),  # is the event snoozed
+	(TIME_ALARM, ZERO_CLOCK),  # in an alarm mode event, what time is the alarm
+	(TIME_INTERVAL, ZERO_CLOCK),  # how much time to add to an interval mode event
+	(TIME_REMIND, ZERO_CLOCK),  # wall time at the next alarm
 )
 
-def EMPTY_ALARM_REMINDDICT():
-	return dict((x, y) for x, y in EMPTY_ALARM_REMINDTUP)
+def EMPTY0_EVENT_ENTRYDICT():
+	return dict((x, y) for x, y in EMPTY0_EVENT_ENTRYTUP)
+
+
+EMPTY0_EVENT_ENTRY_TDD = {
+	DISMISSED: False,  # has the event been dismissed just this once
+	ENABLED: True,  # is the event enabled bool
+	EVENT_MODE: EVENT_MODE_ALARM,  # which event mode is this event
+	NAME: "alarm",  # the name of this event
+	PREDISMISSABLE: False,  # can the event be dismissed prior to on time
+	SNOOZABLE: False,  # can the alarm be snoozed
+	SNOOZED: False,  # is the event snoozed
+	TIME_ALARM: ZERO_CLOCK,  # in an alarm mode event, what time is the alarm
+	TIME_INTERVAL: ZERO_CLOCK,  # how much time to add to an interval mode event
+	TIME_REMIND: ZERO_CLOCK,  # wall time at the next alarm
+}
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of EMPTY0_XY structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+EMPTY0_XYTUP = (
+	(VAL_X, 0),  # empty XY dict
+	(VAL_Y, 0),  # empty XY dict
+)
+
+def EMPTY0_XYDICT():
+	return dict((x, y) for x, y in EMPTY0_XYTUP)
+
+
+EMPTY0_XY_TDD = {
+	VAL_X: 0,  # empty XY dict
+	VAL_Y: 0,  # empty XY dict
+}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -328,31 +373,73 @@ def EMPTY_ALARM_REMINDDICT():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 EMPTY_CLOCKSTUP = (
-	(TIME_CLOCK, "00:00:00"),  # the main clock time
-	(TIME_ELAPSED, "00:00:00"),  # the main elapsed time
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # the main count down to the next event time
+	(TIME_AT_ZERO, ZERO_CLOCK),  # the main clock time
+	(TIME_CLOCK, ZERO_CLOCK),  # the main clock time
+	(TIME_ELAPSED, ZERO_CLOCK),  # the main elapsed time
+	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # the main count down to the next event time
 )
 
 def EMPTY_CLOCKSDICT():
 	return dict((x, y) for x, y in EMPTY_CLOCKSTUP)
 
 
+EMPTY_CLOCKS_TDD = {
+	TIME_AT_ZERO: ZERO_CLOCK,  # the main clock time
+	TIME_CLOCK: ZERO_CLOCK,  # the main clock time
+	TIME_ELAPSED: ZERO_CLOCK,  # the main elapsed time
+	TIME_OF_NEXT_EVENT: ZERO_CLOCK,  # the main count down to the next event time
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY_INTERVAL structures
+# * start of EMPTY_MAPPDS structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-EMPTY_INTERVALTUP = (
-	(ENABLED, True),  # enabled state of this entry
-	(EVENT_MODE, EVENT_MODE_INTERVAL),  # set the mode to EVENT_MODE_ALARM by default of course
-	(NAME, ""),  # name of this entry
-	(RUNNING, True),  # running state of this entry
-	(TIME_INTERVAL, "00:00:00"),  # time this alarm is set for
-	(TIME_OF_NEXT_EVENT, "00:00:00"),  # post snooze or tomorrow
-	(TIME_TOGO, "00:00:00"),  # post snooze or tomorrow
+EMPTY_MAPPDSTUP = (
+	(ALPHA_CHANNEL, 1.0),  # fully opaque
+	(ALPHA_HIGH, 1.0),  # fully opaque
+	(ALPHA_LOW, 0.3),  # almost fully alpha
+	(APPMODE, APPMODE_CLOCKS),  # default to clocks mode
+	(BBOX, EMPTY0_BBOX_TDD),  # empty bbox entry
+	(CHECKBOX_ALPHA_LOW, True),  # the checkbox bool for ALPHA high/low mode
+	(CHECKBOX_RUNAWAY, True),  # checkbox bool for RUNAWAY mode
+	(CLOSE_BBOX, EMPTY0_BBOX_TDD),  # empty BBOX dict
+	(EVENT_ENTRIES, EMPTY0_EVENT_ENTRY_TDD),  # an empty event
+	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
+	(MAINFRAME_SIZE, EMPTY0_XY_TDD),  # which event number is upcoming
+	(SCREEN_POS, EMPTY0_XY_TDD),  # holds the screen position
+	(SCREEN_DIMS, EMPTY0_XY_TDD),  #
+	(TIME_AT_ZERO, ZERO_CLOCK),  # holds time at last zero for keeping elapsed on time
+	(TIME_CLOCK, ZERO_CLOCK),  # time wall clock
+	(TIME_ELAPSED, ZERO_CLOCK),  # time elapsed empty
+	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # time of next event
+	(TIME_TOGO, ZERO_CLOCK),  # time till next event empty clock
 )
 
-def EMPTY_INTERVALDICT():
-	return dict((x, y) for x, y in EMPTY_INTERVALTUP)
+def EMPTY_MAPPDSDICT():
+	return dict((x, y) for x, y in EMPTY_MAPPDSTUP)
+
+
+EMPTY_MAPPDS_TDD = {
+	ALPHA_CHANNEL: 1.0,  # fully opaque
+	ALPHA_HIGH: 1.0,  # fully opaque
+	ALPHA_LOW: 0.3,  # almost fully alpha
+	APPMODE: APPMODE_CLOCKS,  # default to clocks mode
+	BBOX: EMPTY0_BBOX_TDD,  # empty bbox entry
+	CHECKBOX_ALPHA_LOW: True,  # the checkbox bool for ALPHA high/low mode
+	CHECKBOX_RUNAWAY: True,  # checkbox bool for RUNAWAY mode
+	CLOSE_BBOX: EMPTY0_BBOX_TDD,  # empty BBOX dict
+	EVENT_ENTRIES: EMPTY0_EVENT_ENTRY_TDD,  # an empty event
+	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
+	MAINFRAME_SIZE: EMPTY0_XY_TDD,  # which event number is upcoming
+	SCREEN_POS: EMPTY0_XY_TDD,  # holds the screen position
+	SCREEN_DIMS: EMPTY0_XY_TDD,  #
+	TIME_AT_ZERO: ZERO_CLOCK,  # holds time at last zero for keeping elapsed on time
+	TIME_CLOCK: ZERO_CLOCK,  # time wall clock
+	TIME_ELAPSED: ZERO_CLOCK,  # time elapsed empty
+	TIME_OF_NEXT_EVENT: ZERO_CLOCK,  # time of next event
+	TIME_TOGO: ZERO_CLOCK,  # time till next event empty clock
+}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -397,6 +484,41 @@ def FULL_BUTTONDICT():
 	return dict((x, y) for x, y in FULL_BUTTONTUP)
 
 
+FULL_BUTTON_TDD = {
+	AUTO_SIZE_BUTTON: None,  # if True the button size is sized to fit the text
+	BIND_RETURN_KEY: False,  # If True the return key will cause this button to be pressed
+	BORDER_WIDTH: None,  # width of border around button in pixels
+	BUTTON_COLOR: None,  # Color of button. default is from theme or the window. Easy to remember which is which if you say 'ON' between colors. 'red' on 'green'. Normally a tuple, but can be a simplified-button-color-string 'foreground on background'. Can be a single color if want to set only the background.
+	BUTTON_TEXT: "",  # str text to display on the button
+	BUTTON_TYPE: 7,  # You  should NOT be setting this directly. ONLY the shortcut functions set this
+	CHANGE_SUBMITS: False,  # DO NOT USE. Only listed for backwards compat - Use enable_events instead
+	DEFAULT_EXTENSION: "",  # If no extension entered by user, add this to filename (only used in saveas dialogs)
+	DISABLED: False,  # If True button will be created disabled. If FULL_BUTTON_DISABLED_MEANS_IGNORE then the button will be ignored rather than disabled using tkinter
+	DISABLED_BUTTON_COLOR: None,  # colors to use when button is disabled (text, background). Use None for a color if don't want to change. Only ttk buttons support both text and background colors. tk buttons only support changing text color
+	ENABLE_EVENTS: False,  # Turns on the element specific events. If this button is a target, should it generate an event when filled in
+	FILE_TYPES: (('ALL FILES', '*.*'),),  # the filetypes that will be used to match files. To indicate all files: (('ALL Files', '*.*'),).  Note - NOT SUPPORTED ON MAC
+	FOCUS: False,  # if True, initial focus will be put on this button
+	FONT: None,  # specifies the font family, size, etc
+	HIGHLIGHT_COLORS: None,  # colors to use when button has focus (highlight, background). None will use computed colors. Only used by Linux and only for non-TTK button
+	IMAGE_DATA: None,  # Raw or Base64 representation of the image to put on button. Choose either filename or data
+	IMAGE_FILENAME: None,  # image filename if there is a button image. GIFs and PNGs only.
+	IMAGE_SIZE: (None, None),  # Size of the image in pixels (width, height)
+	IMAGE_SUBSAMPLE: None,  # amount to reduce the size of the image. Divides the size by this number. 2=1/2, 3=1/3, 4=1/4, etc
+	INITIAL_FOLDER: None,  # starting path for folders and files
+	K: None,  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
+	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
+	METADATA: None,  # User metadata that can be set to ANYTHING
+	PAD: None,  # Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
+	RIGHT_CLICK_MENU: None,  # A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.
+	S: (None, None),  # (width, height) of the button in characters wide, rows high
+	SIZE: (None, None),  # (width, height) of the button in characters wide, rows high
+	TARGET: (None, None),  # str | Tuple[int, int] key or (row,col) target for the button. Note that -1 for column means 1 element to the left of this one. The constant ThisRow is used to indicate the current row. The Button itself is a valid target for some types of button
+	TOOLTIP: None,  # text, that will appear when mouse hovers over the element
+	USE_TTK_BUTTONS: None,  # True = use ttk buttons. False = do not use ttk buttons.  None (Default) = use ttk buttons only if on a Mac and not with button images
+	VISIBLE: True,  # set visibility state of the element
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of FULL_CHECKBOX structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -424,6 +546,28 @@ FULL_CHECKBOXTUP = (
 
 def FULL_CHECKBOXDICT():
 	return dict((x, y) for x, y in FULL_CHECKBOXTUP)
+
+
+FULL_CHECKBOX_TDD = {
+	AUTO_SIZE_TEXT: None,  # if True will size the element to match the length of the text
+	BACKGROUND_COLOR: None,  # color of background
+	CHANGE_SUBMITS: False,  # DO NOT USE. Only listed for backwards compat - Use enable_events instead
+	CHECKBOX_COLOR: None,  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
+	DEFAULT: False,  # Set to True if you want this checkbox initially checked
+	DISABLED: False,  # set disable state
+	ENABLE_EVENTS: False,  # Turns on the element specific events. Checkbox events happen when an item changes
+	FONT: None,  # specifies the font family, size, etc
+	K: None,  # Used with window.FindElement and with return values to uniquely identify this element
+	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element
+	METADATA: None,  # User metadata that can be set to ANYTHING
+	PAD: None,  # Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
+	S: (None, None),  # (width, height) width = characters-wide, height = rows-high
+	SIZE: (None, None),  # (width, height) width = characters-wide, height = rows-high
+	TEXT: "",  # Window to display next to checkbox
+	TEXT_COLOR: None,  # color of the text
+	TOOLTIP: None,  # that will appear when mouse hovers over the element
+	VISIBLE: True,  # set visibility state of the element
+}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -455,6 +599,28 @@ def FULL_COLUMNDICT():
 	return dict((x, y) for x, y in FULL_COLUMNTUP)
 
 
+FULL_COLUMN_TDD = {
+	BACKGROUND_COLOR: None,  # color of background of entire Column
+	ELEMENT_JUSTIFICATION: None,  # All elements inside the Column will have this justification 'left', 'right', 'center' are valid values
+	EXPAND_X: None,  # If True the column will automatically expand in the X direction to fill available space
+	EXPAND_Y: None,  # If True the column will automatically expand in the X direction to fill available space
+	GRAB: None,  # If True can grab this element and move the window around. Default is False
+	JUSTIFICATION: None,  # set justification for the Column itself. Note entire row containing the Column will be affected
+	K: None,  # Value that uniquely identifies this element from all other elements. Used when Finding an element or in return values. Must be unique to the window
+	KEY: None,  # Value that uniquely identifies this element from all other elements. Used when Finding an element or in return values. Must be unique to the window
+	LAYOUT: [],  # Layout that will be shown in the Column container
+	METADATA: None,  # User metadata that can be set to ANYTHING
+	PAD: None,  # Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
+	RIGHT_CLICK_MENU: None,  # A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.
+	S: (None, None),  # (width, height) size in pixels (doesn't work quite right, sometimes only 1 dimension is set by tkinter
+	SCROLLABLE: False,  # if True then scrollbars will be added to the column
+	SIZE: (None, None),  # (width, height) size in pixels (doesn't work quite right, sometimes only 1 dimension is set by tkinter
+	VERTICAL_SCROLL_ONLY: False,  # if True then no horizontal scrollbar will be shown
+	VERTICAL_ALIGNMENT: None,  # Place the column at the 'top', 'center', 'bottom' of the row (can also use t,c,r). Defaults to no setting (tkinter decides)
+	VISIBLE: True,  # set visibility state of the element
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of FULL_COMBO structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -484,34 +650,79 @@ def FULL_COMBODICT():
 	return dict((x, y) for x, y in FULL_COMBOTUP)
 
 
+FULL_COMBO_TDD = {
+	AUTO_SIZE_TEXT: None,  # True if element should be the same size as the contents
+	BACKGROUND_COLOR: None,  # color of background
+	CHANGE_SUBMITS: False,  # DEPRICATED DO NOT USE. Use `enable_events` instead
+	DEFAULT_VALUE: None,  # Choice to be displayed as initial value. Must match one of values variable contents
+	DISABLED: False,  # set disable state for element
+	ENABLE_EVENTS: False,  #
+	FONT: None,  # specifies the font family, size, etc
+	K: None,  # Used with window.FindElement and with return values to uniquely identify this element
+	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element
+	METADATA: None,  # User metadata that can be set to ANYTHING
+	PAD: None,  # Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
+	READONLY: False,  # make element readonly (user can't change). True means user cannot change
+	S: (None, None),  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
+	SIZE: (None, None),  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
+	TEXT_COLOR: None,  # color of the text
+	TOOLTIP: None,  # text that will appear when mouse hovers over this element
+	VALUES: [],  # values to choose. While displayed as text, the items returned are what the caller supplied, not text
+	VISIBLE: True,  # set visibility state of the element
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of FULL_RADIO structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 FULL_RADIOTUP = (
-	(AUTO_SIZE_TEXT, None,),  #
-	(BACKGROUND_COLOR, None,),  #
-	(CHANGE_SUBMITS, False,),  #
-	(CIRCLE_COLOR, None,),  #
-	(DEFAULT, False,),  #
-	(DISABLED, False,),  #
-	(ENABLE_EVENTS, False,),  #
-	(FONT, None,),  #
+	(AUTO_SIZE_TEXT, None),  #
+	(BACKGROUND_COLOR, None),  #
+	(CHANGE_SUBMITS, False),  #
+	(CIRCLE_COLOR, None),  #
+	(DEFAULT, False),  #
+	(DISABLED, False),  #
+	(ENABLE_EVENTS, False),  #
+	(FONT, None),  #
 	(GROUP_ID, ""),  # Groups together multiple Radio Buttons. Any type works
-	(K, None,),  #
-	(KEY, None,),  #
+	(K, None),  #
+	(KEY, None),  #
 	(METADATA, None),  #
-	(PAD, None,),  #
-	(S, (None, None),),  #
-	(SIZE, (None, None),),  #
+	(PAD, None),  #
+	(S, (None, None)),  #
+	(SIZE, (None, None)),  #
 	(TEXT, ""),  #
-	(TEXT_COLOR, None,),  #
-	(TOOLTIP, None,),  #
-	(VISIBLE, True,),  #
+	(TEXT_COLOR, None),  #
+	(TOOLTIP, None),  #
+	(VISIBLE, True),  #
 )
 
 def FULL_RADIODICT():
 	return dict((x, y) for x, y in FULL_RADIOTUP)
+
+
+FULL_RADIO_TDD = {
+	AUTO_SIZE_TEXT: None,  #
+	BACKGROUND_COLOR: None,  #
+	CHANGE_SUBMITS: False,  #
+	CIRCLE_COLOR: None,  #
+	DEFAULT: False,  #
+	DISABLED: False,  #
+	ENABLE_EVENTS: False,  #
+	FONT: None,  #
+	GROUP_ID: "",  # Groups together multiple Radio Buttons. Any type works
+	K: None,  #
+	KEY: None,  #
+	METADATA: None,  #
+	PAD: None,  #
+	S: (None, None),  #
+	SIZE: (None, None),  #
+	TEXT: "",  #
+	TEXT_COLOR: None,  #
+	TOOLTIP: None,  #
+	VISIBLE: True,  #
+}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -543,6 +754,28 @@ def FULL_SPINDICT():
 	return dict((x, y) for x, y in FULL_SPINTUP)
 
 
+FULL_SPIN_TDD = {
+	AUTO_SIZE_TEXT: None,  # if True will size the element to match the length of the text
+	BACKGROUND_COLOR: None,  # color of background
+	CHANGE_SUBMITS: False,  # DO NOT USE. Only listed for backwards compat - Use enable_events instead
+	DISABLED: False,  # set disable state
+	ENABLE_EVENTS: False,  # Turns on the element specific events. Spin events happen when an item changes
+	FONT: None,  # specifies the font family, size, etc
+	INITIAL_VALUE: None,  # Initial item to show in window. Choose from list of values supplied
+	K: None,  # Used with window.FindElement and with return values to uniquely identify this element
+	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element
+	METADATA: None,  # User metadata that can be set to ANYTHING
+	PAD: None,  # Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
+	READONLY: False,  # readonly bool
+	S: (None, None),  # (width, height) width = characters-wide, height = rows-high
+	SIZE: (None, None),  # (width, height) width = characters-wide, height = rows-high
+	TEXT_COLOR: None,  # color of the text
+	TOOLTIP: None,  # text, that will appear when mouse hovers over the element
+	VALUES: [],  # List of valid values
+	VISIBLE: True,  # set visibility state of the element
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of FULL_TEXT structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -564,7 +797,7 @@ FULL_TEXTTUP = (
 	(RIGHT_CLICK_MENU, None),  # A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.
 	(S, (None, None)),  # Same as size parameter.  It's an alias. If EITHER of them are set, then the one that's set will be used. If BOTH are set, size will be used
 	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
-	(TEXT, ),  # The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
+	(TEXT, ""),  # The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
 	(TEXT_COLOR, None),  # color of the text
 	(TOOLTIP, None),  # text, that will appear when mouse hovers over the element
 	(VISIBLE, True),  # set visibility state of the element
@@ -572,6 +805,30 @@ FULL_TEXTTUP = (
 
 def FULL_TEXTDICT():
 	return dict((x, y) for x, y in FULL_TEXTTUP)
+
+
+FULL_TEXT_TDD = {
+	AUTO_SIZE_TEXT: None,  # if True size of the Window Element will be sized to fit the string provided in 'text' parm
+	BACKGROUND_COLOR: None,  # color of background
+	BORDER_WIDTH: None,  # number of pixels for the border (if using a relief)
+	CLICK_SUBMITS: False,  # DO NOT USE. Only listed for backwards compat - Use enable_events instead
+	ENABLE_EVENTS: False,  # Turns on the element specific events. Window events happen when the text is clicked
+	FONT: None,  # specifies the font family, size, etc
+	GRAB: None,  # If True can grab this element and move the window around. Default is False
+	JUSTIFICATION: None,  # how string should be aligned within space provided by size. Valid choices = `left`, `right`, `center`
+	K: None,  # Same as the Key. You can use either k or key. Which ever is set will be used.
+	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
+	METADATA: None,  # User metadata that can be set to ANYTHING
+	PAD: None,  # Amount of padding to put around element (left/right, top/bottom) or ((left, right), (top, bottom))
+	RELIEF: None,  # relief style around the text. Values are same as progress meter relief values. Should be a constant that is defined at starting with 'RELIEF_' - `RELIEF_RAISED, RELIEF_SUNKEN, RELIEF_FLAT, RELIEF_RIDGE, RELIEF_GROOVE, RELIEF_SOLID`
+	RIGHT_CLICK_MENU: None,  # A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.
+	S: (None, None),  # Same as size parameter.  It's an alias. If EITHER of them are set, then the one that's set will be used. If BOTH are set, size will be used
+	SIZE: (None, None),  # (width, height) width = characters-wide, height = rows-high
+	TEXT: "",  # The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
+	TEXT_COLOR: None,  # color of the text
+	TOOLTIP: None,  # text, that will appear when mouse hovers over the element
+	VISIBLE: True,  # set visibility state of the element
+}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -635,6 +892,60 @@ def FULL_WINDOWDICT():
 	return dict((x, y) for x, y in FULL_WINDOWTUP)
 
 
+FULL_WINDOW_TDD = {
+	ALPHA_CHANNEL: 1,  # Sets the opacity of the window. 0 = invisible 1 = completely visible. Values bewteen 0 & 1 will produce semi-transparent windows in SOME environments (The Raspberry Pi always has this value at 1 and cannot change.
+	AUTO_CLOSE: False,  # If True, the window will automatically close itself
+	AUTO_CLOSE_DURATION: 3,  # Number of seconds to wait before closing the window
+	AUTO_SIZE_BUTTONS: None,  # True if Buttons in this Window should be sized to exactly fit the text on this.
+	AUTO_SIZE_TEXT: None,  # True if Elements in Window should be sized to exactly fir the length of text
+	BACKGROUND_COLOR: None,  # color of background
+	BORDER_DEPTH: None,  # Default border depth (width) for all elements in the window
+	BUTTON_COLOR: None,  # Default button colors for all buttons in the window
+	DEBUGGER_ENABLED: True,  # Default border depth (width) for all elements in the window
+	DEFAULT_BUTTON_ELEMENT_SIZE: (None, None),  # (width, height) size in characters (wide) and rows (high) for all Button elements in this window
+	DEFAULT_ELEMENT_SIZE: (45, 1),  # size in characters (wide) and rows (high) for all elements in this window
+	DISABLE_CLOSE: False,  # If True, the X button in the top right corner of the window will no work.  Use with caution and always give a way out toyour users
+	DISABLE_MINIMIZE: False,  # if True the user won't be able to minimize window.  Good for taking over entire screen and staying that way.
+	ELEMENT_JUSTIFICATION: "left",  # All elements in the Window itself will have this justification 'left', 'right', 'center' are valid values
+	ELEMENT_PADDING: None,  # Default amount of padding to put around elements in window (left/right, top/bottom) or ((left, right), (top, bottom))
+	ENABLE_CLOSE_ATTEMPTED_EVENT: False,  # If True then the window will not close when 'X' clicked. Instead an event FULL_WINDOW_CLOSE_ATTEMPTED_EVENT if returned from window.read
+	FINALIZE: False,  # If True then the Finalize method will be called. Use this rather than chaining .Finalize for cleaner code
+	FONT: None,  # specifies the font family, size, etc
+	FORCE_TOPLEVEL: False,  # If True will cause this window to skip the normal use of a hidden master window
+	GRAB_ANYWHERE: False,  # If True can use mouse to click and drag to move the window. Almost every location of the window will work except input fields on some systems
+	ICON: None,  # Can be either a filename or Base64 value. For Windows if filename, it MUST be ICO format. For Linux, must NOT be ICO
+	KEEP_ON_TOP: False,  # If True, window will be created on top of all other windows on screen. It can be bumped down if another window created with this parm
+	LAYOUT: None,  # The layout for the window. Can also be specified in the Layout method
+	LOCATION: (None, None),  # (x,y) location, in pixels, to locate the upper left corner of the window on the screen. Default is to center on screen.
+	MARGINS: (None, None),  # (left/right, top/bottom) Amount of pixels to leave inside the window's frame around the edges before your elements are shown.
+	METADATA: None,  # User metadata that can be set to ANYTHING
+	MODAL: False,  # If True then this window will be the only window a user can interact with until it is closed
+	NO_TITLEBAR: False,  # If true, no titlebar nor frame will be shown on window. This means you cannot minimize the window and it will not show up on the taskbar
+	PROGRESS_BAR_COLOR: (None, None),  # (bar color, background color) Sets the default colors for all progress bars in the window
+	RESIZABLE: False,  # If True, allows the user to resize the window. Note the not all Elements will change size or location when resizing.
+	RETURN_KEYBOARD_EVENTS: False,  # if True key presses on the keyboard will be returned as Events from Read calls
+	RIGHT_CLICK_MENU: None,  # A list of lists of Menu items to show when this element is right clicked. See user docs for exact format.
+	RIGHT_CLICK_MENU_BACKGROUND_COLOR: None,  # Background color for right click menus
+	RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR: None,  # Window color for disabled right click menu items
+	RIGHT_CLICK_MENU_FONT: None,  # Font for right click menus
+	RIGHT_CLICK_MENU_SELECTED_COLORS: (None, None),  # Window AND background colors for a selected item. Can be a Tuple OR a color string. simplified-button-color-string 'foreground on background'. Can be a single color if want to set only the background.
+	RIGHT_CLICK_MENU_TEAROFF: False,  # If True then all right click menus can be torn off
+	RIGHT_CLICK_MENU_TEXT_COLOR: None,  # Window color for right click menus
+	SIZE: (None, None),  # (width, height) size in pixels for this window. Normally the window is autosized to fit contents, not set to an absolute size by the user
+	TEXT_JUSTIFICATION: None,  # Default text justification for all Window Elements in window
+	TITLE: "",  # The title that will be displayed in the Titlebar and on the Taskbar
+	TITLEBAR_BACKGROUND_COLOR: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as background color
+	TITLEBAR_FONT: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as title font
+	TITLEBAR_ICON: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as the icon (file or base64 bytes)
+	TITLEBAR_TEXT_COLOR: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as text color
+	TRANSPARENT_COLOR: None,  # Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.
+	TTK_THEME: None,  # Set the tkinter ttk 'theme' of the window.  Default = DEFAULT_TTK_THEME.  Sets all ttk widgets to this theme as their default
+	USE_CUSTOM_TITLEBAR: None,  # If True, then a custom titlebar will be used instead of the normal titlebar
+	USE_DEFAULT_FOCUS: True,  # If True will use the default focus algorithm to set the focus to the 'Correct' element
+	USE_TTK_BUTTONS: None,  # Affects all buttons in window. True = use ttk buttons. False = do not use ttk buttons.  None = use ttk buttons only if on a Mac
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of NORMAL_BUTTON structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -651,6 +962,17 @@ NORMAL_BUTTONTUP = (
 
 def NORMAL_BUTTONDICT():
 	return dict((x, y) for x, y in NORMAL_BUTTONTUP)
+
+
+NORMAL_BUTTON_TDD = {
+	BUTTON_COLOR: None,  # Color of button. default is from theme or the window. Easy to remember which is which if you say 'ON' between colors. 'red' on 'green'. Normally a tuple, but can be a simplified-button-color-string 'foreground on background'. Can be a single color if want to set only the background.
+	BUTTON_TEXT: "",  # str text to display on the button
+	FOCUS: False,  # if True, initial focus will be put on this button
+	FONT: None,  # specifies the font family, size, etc
+	IMAGE_DATA: None,  # Raw or Base64 representation of the image to put on button. Choose either filename or data
+	IMAGE_FILENAME: None,  # image filename if there is a button image. GIFs and PNGs only.
+	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
+}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -671,6 +993,17 @@ def NORMAL_CHECKBOXDICT():
 	return dict((x, y) for x, y in NORMAL_CHECKBOXTUP)
 
 
+NORMAL_CHECKBOX_TDD = {
+	BACKGROUND_COLOR: None,  # color of background
+	CHECKBOX_COLOR: None,  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
+	DEFAULT: False,  # Set to True if you want this checkbox initially checked
+	FONT: None,  # specifies the font family, size, etc
+	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element
+	TEXT: "",  # Window to display next to checkbox
+	TEXT_COLOR: None,  # color of the text
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of NORMAL_COMBO structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -689,24 +1022,48 @@ def NORMAL_COMBODICT():
 	return dict((x, y) for x, y in NORMAL_COMBOTUP)
 
 
+NORMAL_COMBO_TDD = {
+	BACKGROUND_COLOR: None,  # color of background
+	DEFAULT_VALUE: None,  # Choice to be displayed as initial value. Must match one of values variable contents
+	FONT: None,  # specifies the font family, size, etc
+	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element
+	SIZE: None,  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
+	TEXT_COLOR: None,  # color of the text
+	VALUES: [],  # values to choose. While displayed as text, the items returned are what the caller supplied, not text
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of NORMAL_RADIO structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 NORMAL_RADIOTUP = (
-	(BACKGROUND_COLOR, None,),  #
-	(CIRCLE_COLOR, None,),  #
-	(DEFAULT, False,),  #
-	(FONT, None,),  #
+	(BACKGROUND_COLOR, None),  #
+	(CIRCLE_COLOR, None),  #
+	(DEFAULT, False),  #
+	(FONT, None),  #
 	(GROUP_ID, ""),  # Groups together multiple Radio Buttons. Any type works
-	(KEY, None,),  #
-	(SIZE, (None, None),),  #
+	(KEY, None),  #
+	(SIZE, (None, None)),  #
 	(TEXT, ""),  #
-	(TEXT_COLOR, None,),  #
+	(TEXT_COLOR, None),  #
 )
 
 def NORMAL_RADIODICT():
 	return dict((x, y) for x, y in NORMAL_RADIOTUP)
+
+
+NORMAL_RADIO_TDD = {
+	BACKGROUND_COLOR: None,  #
+	CIRCLE_COLOR: None,  #
+	DEFAULT: False,  #
+	FONT: None,  #
+	GROUP_ID: "",  # Groups together multiple Radio Buttons. Any type works
+	KEY: None,  #
+	SIZE: (None, None),  #
+	TEXT: "",  #
+	TEXT_COLOR: None,  #
+}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -727,6 +1084,17 @@ def NORMAL_SPINDICT():
 	return dict((x, y) for x, y in NORMAL_SPINTUP)
 
 
+NORMAL_SPIN_TDD = {
+	BACKGROUND_COLOR: None,  # color of background
+	FONT: None,  # specifies the font family, size, etc
+	INITIAL_VALUE: None,  # Initial item to show in window. Choose from list of values supplied
+	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element
+	SIZE: (None, None),  # (width, height) width = characters-wide, height = rows-high
+	TEXT_COLOR: None,  # color of the text
+	VALUES: [],  # List of valid values
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of NORMAL_TEXT structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -740,12 +1108,26 @@ NORMAL_TEXTTUP = (
 	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
 	(RELIEF, None),  # relief style around the text. Values are same as progress meter relief values. Should be a constant that is defined at starting with 'RELIEF_' - `RELIEF_RAISED, RELIEF_SUNKEN, RELIEF_FLAT, RELIEF_RIDGE, RELIEF_GROOVE, RELIEF_SOLID`
 	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
-	(TEXT, ),  # The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
+	(TEXT, ""),  # The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
 	(TEXT_COLOR, None),  # color of the text
 )
 
 def NORMAL_TEXTDICT():
 	return dict((x, y) for x, y in NORMAL_TEXTTUP)
+
+
+NORMAL_TEXT_TDD = {
+	BACKGROUND_COLOR: None,  # color of background
+	BORDER_WIDTH: None,  # number of pixels for the border (if using a relief)
+	FONT: None,  # specifies the font family, size, etc
+	GRAB: None,  # If True can grab this element and move the window around. Default is False
+	JUSTIFICATION: None,  # how string should be aligned within space provided by size. Valid choices = `left`, `right`, `center`
+	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
+	RELIEF: None,  # relief style around the text. Values are same as progress meter relief values. Should be a constant that is defined at starting with 'RELIEF_' - `RELIEF_RAISED, RELIEF_SUNKEN, RELIEF_FLAT, RELIEF_RIDGE, RELIEF_GROOVE, RELIEF_SOLID`
+	SIZE: (None, None),  # (width, height) width = characters-wide, height = rows-high
+	TEXT: "",  # The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
+	TEXT_COLOR: None,  # color of the text
+}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -775,6 +1157,26 @@ def NORMAL_WINDOWDICT():
 	return dict((x, y) for x, y in NORMAL_WINDOWTUP)
 
 
+NORMAL_WINDOW_TDD = {
+	BACKGROUND_COLOR: None,  # color of background
+	FINALIZE: False,  # If True then the Finalize method will be called. Use this rather than chaining .Finalize for cleaner code
+	FONT: None,  # specifies the font family, size, etc
+	GRAB_ANYWHERE: False,  # If True can use mouse to click and drag to move the window. Almost every location of the window will work except input fields on some systems
+	ICON: None,  # Can be either a filename or Base64 value. For Windows if filename, it MUST be ICO format. For Linux, must NOT be ICO
+	KEEP_ON_TOP: False,  # If True, window will be created on top of all other windows on screen. It can be bumped down if another window created with this parm
+	LAYOUT: None,  # The layout for the window. Can also be specified in the Layout method
+	LOCATION: (None, None),  # (x,y) location, in pixels, to locate the upper left corner of the window on the screen. Default is to center on screen.
+	MODAL: False,  # If True then this window will be the only window a user can interact with until it is closed
+	NO_TITLEBAR: False,  # If true, no titlebar nor frame will be shown on window. This means you cannot minimize the window and it will not show up on the taskbar
+	TITLE: "",  # The title that will be displayed in the Titlebar and on the Taskbar
+	TITLEBAR_BACKGROUND_COLOR: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as background color
+	TITLEBAR_FONT: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as title font
+	TITLEBAR_ICON: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as the icon (file or base64 bytes)
+	TITLEBAR_TEXT_COLOR: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as text color
+	TRANSPARENT_COLOR: None,  # Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of UPDATE_COMBO structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -792,6 +1194,18 @@ UPDATE_COMBOTUP = (
 
 def UPDATE_COMBODICT():
 	return dict((x, y) for x, y in UPDATE_COMBOTUP)
+
+
+UPDATE_COMBO_TDD = {
+	DISABLED: None,  # set disable state for element
+	FONT: None,  # specifies the font family, size, etc
+	READONLY: None,  # make element readonly (user can't change). True means user cannot change
+	SET_TO_INDEX: None,  #
+	SIZE: None,  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
+	VALUE: None,  # change which value is current selected based on new list of previous list of choices
+	VALUES: None,  # values to choose. While displayed as text, the items returned are what the caller supplied, not text
+	VISIBLE: None,  # set visibility state of the element
+}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -975,8 +1389,21 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CLOCKS_TEXT_TIME_AT_ZERO = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: TIME_AT_ZERO,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+	VISIBLE: False,  # comment
+}
+
+
 CLOCKS_TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
-	TEXT: "00:00:00",  # the text color for a clock_time element
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: True,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
@@ -984,44 +1411,45 @@ CLOCKS_TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
 	KEY: TIME_CLOCK,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 }
 
 
 CLOCKS_TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
-	TEXT: "00:00:00",  # the text color for a clock_time element
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	KEY: TIME_ELAPSED,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
 }
 
 
 CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
-	TEXT: "00:00:00",  # the text color for a clock_time element
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	KEY: TIME_TOGO,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 }
 
 
 THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
-	TEXT: "00:00:00",  # the text color for a clock_time element
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-	ENABLE_EVENTS: False,  # this is clickable
+	ENABLE_EVENTS: True,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	KEY: TIME_CLOCK,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-	RIGHT_CLICK_MENU: THECLOCK_RCMENU01,  # add a right click for quit, runaway, alphalow
+	RIGHT_CLICK_MENU: THECLOCK_RCMENU01,  # set up the right click menu
 	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 }
 
@@ -1182,10 +1610,10 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
 	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
 	APPMODE: APPMODE_CLOCKS,  # default mode is clocks
-	BBOX: ((0, 0), (0, 0)),  # FILLED IN BY INIT
+	BBOX: EMPTY0_BBOX_TDD,  # FILLED IN BY INIT
 	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
 	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
-	CLOSE_BBOX: ((0, 0), (0, 0)),  # FILLED IN BY INIT
+	CLOSE_BBOX: EMPTY0_BBOX_TDD,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
 			DISMISSED: False,  # is this event dismissed
@@ -1195,8 +1623,8 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: "03:30:00",  # time of this event
-			TIME_TOGO: "00:00:00",  # updated only when the edit window is open with this event countdown to next event
+			TIME_ALARM: ZERO_CLOCK,  # time of this event
+			TIME_TOGO: ZERO_CLOCK,  # updated only when the edit window is open with this event countdown to next event
 		},
 		1: {
 			DISMISSED: False,  # is this event dismissed
@@ -1206,17 +1634,19 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: "04:00:00",  # time of this event
-			TIME_TOGO: "00:00:00",  # updated only when the edit window is open with this event countdown to next event
+			TIME_ALARM: ZERO_CLOCK,  # time of this event
+			TIME_TOGO: ZERO_CLOCK,  # updated only when the edit window is open with this event countdown to next event
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
-	SCREEN_POS: (0, 0),  # current screen position
-	SCREEN_SIZE: (0, 0),  # current screen position
-	TIME_CLOCK: "00:00:00",  # start the clock at midnight
-	TIME_ELAPSED: "00:00:00",  # start the clock at midnight
-	TIME_OF_NEXT_EVENT: "00:00:00",  # holds the time of the next coming event for easy maths
-	TIME_TOGO: "00:00:00",  # start the clock at midnight
+	MAINFRAME_SIZE: EMPTY0_XY_TDD,  # current screen position
+	SCREEN_DIMS: EMPTY0_XY_TDD,  # current screen position
+	SCREEN_POS: EMPTY0_XY_TDD,  # current screen position
+	TIME_AT_ZERO: ZERO_CLOCK,  # the time at last zero for time elapsed correction periodically
+	TIME_CLOCK: ZERO_CLOCK,  # start the clock at midnight
+	TIME_ELAPSED: ZERO_CLOCK,  # start the clock at midnight
+	TIME_OF_NEXT_EVENT: ZERO_CLOCK,  # holds the time of the next coming event for easy maths
+	TIME_TOGO: ZERO_CLOCK,  # start the clock at midnight
 }
 
 
@@ -1232,7 +1662,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# start of unmanaged sections of PSG.py
+# start of unmanaged sections of py
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
@@ -1244,7 +1674,71 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 def getMousePos():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	mseData_ = DISP.Display().screen().root.query_pointer()._data
-	return mseData_["root_x"], mseData_["root_y"]
+	return {
+		VAL_X: mseData_["root_x"],
+		VAL_Y: mseData_["root_y"],
+	}
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# getElementLocation
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def getElementLocation(mainframeToLocate_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	locationToRtn_ = mainframeToLocate_.CurrentLocation()
+	# print(f"""locationToRtn_ {locationToRtn_}""")
+	# print(f"""{CF.NNL(10)}{CF.getDebugInfo()}{CF.NEWLINE}{mainframeToLocate_.CurrentLocation}""")
+	return {
+		VAL_X: locationToRtn_[0],
+		VAL_Y: locationToRtn_[1],
+	}
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# getElementSize
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def getElementSize(mainframeElementToSize_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	return {
+		VAL_X: mainframeElementToSize_.Size[0],
+		VAL_Y: mainframeElementToSize_.Size[1],
+	}
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# compareXY
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def compareXY(XY1_, XY2_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if (XY1[VAL_X] == XY2_[VAL_X]) and (XY1[VAL_Y] == XY2_[VAL_Y]):
+		return True
+	else:
+		return False
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# compareBBox
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def compareBBox(BBox1_, BBox2_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if ((BBox1_[BBOX_NORTH] == BBox2_[BBOX_NORTH]) and (BBox1_[BBOX_WEST] == BBox2_[BBOX_WEST]) and (BBox1_[BBOX_SOUTH] == BBox2_[BBOX_SOUTH]) and (BBox1_[BBOX_EAST] == BBox2_[BBOX_EAST])):
+		return True
+	else:
+		return False
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# hasMoved
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def hasMoved(mainframeToCheck_, locationXY_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	TLcn_ = getElementLocation(mainframeToCheck_)
+	return compareXY(TLcn_, MAPPDS[SCREEN_POS])
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1270,23 +1764,90 @@ def readWithDict(mainframeToRead_, dictToReadWith_):
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# frameLocation
+# splitBBoxToRaw
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def getElementLocation(mainframeToLocate_):
+def splitBBoxToRaw(BBoxToSplit_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	locationToRtn_ = mainframeToLocate_.CurrentLocation()
-	# print(f"""locationToRtn_ {locationToRtn_}""")
-	# print(f"""{CF.NNL(10)}{CF.getDebugInfo()}{CF.NEWLINE}{mainframeToLocate_.CurrentLocation}""")
-	return locationToRtn_
+	# print(f"""BBoxToSplit_ {BBoxToSplit_}""")
+	return BBoxToSplit_[BBOX_NORTH], BBoxToSplit_[BBOX_WEST], BBoxToSplit_[BBOX_SOUTH], BBoxToSplit_[BBOX_EAST]
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# getFrameSize
+# splitBBoxtoTuple
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def getElementSize(mainframeElementToSize_):
+def splitBBoxtoTuple(BBoxToSplit_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	return mainframeElementToSize_.Size
+	return (
+		# (
+		BBoxToSplit_[BBOX_NORTH],
+		BBoxToSplit_[BBOX_WEST],
+		# ),
+		# (
+		BBoxToSplit_[BBOX_SOUTH],
+		BBoxToSplit_[BBOX_EAST],
+		# ),
+	)
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# combineBBox
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def combineBBox(BBoxTuple_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	return {
+		BBOX_NORTH: BBoxTuple_[0],
+		BBOX_WEST: BBoxTuple_[1],
+		BBOX_SOUTH: BBoxTuple_[2],
+		BBOX_EAST: BBoxTuple_[3]
+	}
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# combineRawToXY
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def combineRawToXY(TX_, TY_, ):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	return {
+		VAL_X: TX_,
+		VAL_Y: TY_,
+	}
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# splitXYToTuple
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def splitXYToTuple(XYToSplit_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	return (
+		XYToSplit_[VAL_X],
+		XYToSplit_[VAL_Y],
+	)
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# splitXYToTuple
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def splitXYToRaw(XYToSplit_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	# print(f"""XYToSplit_ {XYToSplit_} {XYToSplit_[VAL_X]}""")
+	return XYToSplit_[VAL_X], XYToSplit_[VAL_Y]
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# tupleToXY
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def tupleToXY(tupleToXY_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	return {
+		VAL_X: tupleToXY_[0],
+		VAL_Y: tupleToXY_[1],
+	}
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1295,12 +1856,14 @@ def getElementSize(mainframeElementToSize_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def getBBox(objectToBBox_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_, TLcnY_ = getElementLocation(objectToBBox_)
-	TSizeX_, TSizeY_ = getElementSize(objectToBBox_)
-	BBoxRoRtn_ = {
+	TLcnX_, TLcnY_ = splitXYToRaw(getElementLocation(objectToBBox_))
+	TSizeX_, TSizeY_ = splitXYToRaw(getElementSize(objectToBBox_))
+	return {
 		BBOX_NORTH: TLcnX_,
 		BBOX_WEST: TLcnY_,
-		 ((TLcnX_ + TSizeX_), (TLcnY_ + TSizeY_)))}
+		BBOX_SOUTH: (TLcnX_ + TSizeX_),
+		BBOX_EAST: (TLcnY_ + TSizeY_),
+	}
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1309,40 +1872,46 @@ def getBBox(objectToBBox_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def getCloseBBox(objectToBBox_, closeEnough_=SZ_CLOSE):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_, TLcnY_ = getElementLocation(objectToBBox_)
-	TSizeX_, TSizeY_ = getElementSize(objectToBBox_)
-	return (((TLcnX_ - closeEnough_), (TLcnY_ - closeEnough_)), ((TLcnX_ + TSizeX_ + closeEnough_), (TLcnY_ + TSizeY_ + closeEnough_)))
+	TLcnX_, TLcnY_ = splitXYToRaw(getElementLocation(objectToBBox_))
+	TSizeX_, TSizeY_ = splitXYToRaw(getElementSize(objectToBBox_))
+	return {
+		BBOX_NORTH: (TLcnX_ - closeEnough_),
+		BBOX_WEST: (TLcnY_ - closeEnough_),
+		BBOX_SOUTH: (TLcnX_ + TSizeX_ + closeEnough_),
+		BBOX_EAST: (TLcnY_ + TSizeY_ + closeEnough_)
+	}
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# isInBBox ((x1, y1), (x2, y2))
+# isInBBox
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def isInBBox(BBoxIn_, pointIn_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	if (BBoxIn_[0][0] < pointIn_ < BBoxIn_[1][0]) and (BBoxIn_[0][1] < pointIn_ < BBoxIn_[1][1]):
+	if (BBoxIn_[BBOX_NORTH] < pointIn_[0] < BBoxIn_[BBOX_SOUTH]) and (BBoxIn_[BBOX_WEST] < pointIn_[1] < BBoxIn_[BBOX_EAST]):
 		return True
 	else:
 		return False
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # moveFrame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def moveFrame(mainframeToMove_, moveTo_=(0, 0), szMove=SZ_MOVE_DIST):  # remember - is N/W and + is S/E
+def moveFrame(mainframeToMove_, moveTo_=(0, 0)):  # remember - is N/W and + is S/E
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_, TLcnY_ = getElementLocation(mainframeToMove_)
-	TSizeX_, TSizeY_ = getElementSize(mainframeToMove_)
+	if isinstance(moveTo_, dict):
+		moveTo_ = (moveTo_[VAL_X], moveTo_(VAL_Y))
+	TLcnX_, TLcnY_ = splitXYToRaw(getElementLocation(mainframeToMove_))
+	TSizeX_, TSizeY_ = splitXYToRaw(getElementSize(mainframeToMove_))
 	if TLcnX_ < 0:
 		TLcnX_ = 0
-	elif TLcnX_ > (MAPPDS[SCREEN_SIZE][0] - TSizeX_):
-		TLcnX_ = (MAPPDS[SCREEN_SIZE][0] - TSizeX_)
+	elif TLcnX_ > (MAPPDS[SCREEN_DIMS][0] - TSizeX_):
+		TLcnX_ = (MAPPDS[SCREEN_DIMS][0] - TSizeX_)
 	if TLcnY_ < 0:
 		TLcnY_ = 0
-	elif TLcnY_ > (MAPPDS[SCREEN_SIZE][1] - TSizeY_):
-		TLcnY_ = (MAPPDS[SCREEN_SIZE][1] - TSizeY_)
+	elif TLcnY_ > (MAPPDS[SCREEN_DIMS][1] - TSizeY_):
+		TLcnY_ = (MAPPDS[SCREEN_DIMS][1] - TSizeY_)
 	mainframeToMove_.Move(moveTo_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1353,10 +1922,10 @@ def moveFrame(mainframeToMove_, moveTo_=(0, 0), szMove=SZ_MOVE_DIST):  # remembe
 def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 	global LAST_MOVED_MTS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_, TLcnY_ = getElementLocation(mainframeToMove_)
-	screenSZX_, screenSZY_ = getScreenDims(mainframeToMove_)
+	TLcnX_, TLcnY_ = splitXYToRaw(getElementLocation(mainframeToMove_))
+	screenSZX_, screenSZY_ = splitXYToRaw(getScreenDims(mainframeToMove_))
 	(TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_) = getBBox(mainframeToMove_)
-	TSizeX_, TSizeY_ = getElementSize(mainframeToMove_)
+	TSizeX_, TSizeY_ = splitXYToRaw(getElementSize(mainframeToMove_))
 
 	moveToX_ = TLcnX_ + (moveMpx[0] * SZ_MOVE_DIST)
 	moveToY_ = TLcnY_ + (moveMpx[1] * SZ_MOVE_DIST)
@@ -1371,14 +1940,15 @@ def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 	elif moveToY_ > (screenSZY_ - TSizeY_):
 		moveToY_ = (screenSZY_ - TSizeY_)
 
-	if (abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA) or (abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA):
+		# avoid trouble with spurious moves caused by a process delaying anything here too far
+	if ((moveToX_ - TLcnX_) > SZ_MAX_DELTA) or ((moveToY_ - TLcnY_) > SZ_MAX_DELTA):
 		# print(f"""(abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA) (abs({moveToX_} - {TLcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA)}""")
 		# print(f"""(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA) (abs({moveToY_} - {TLcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA)}""")
 		return
 
-	if CF.isPast(LAST_MOVED_MTS):
+	if CF.isPast(LAST_MOVED_MTS + SZ_TIME_BTWN_MOVES):
 		mainframeToMove_.Move(moveToX_, moveToY_)
-		LAST_MOVED_MTS = CF.MTS() + SZ_TIME_BTWN_MOVES
+		LAST_MOVED_MTS = CF.MTS()
 		# print(f"""{CF.INDENTOUT}LAST_MOVED_MTS {LAST_MOVED_MTS}  MTS {CF.MTS()} SZ_TIME_BTWN_MOVES {SZ_TIME_BTWN_MOVES}""")
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -1389,79 +1959,93 @@ def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def getScreenDims(mainframeToUse_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	return mainframeToUse_.GetScreenDimensions()
+	TDim_ = mainframeToUse_.GetScreenDimensions()
+	return {
+		VAL_X: TDim_[0],
+		VAL_Y: TDim_[1],
+	}
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# checkMouse
+# checkMouseLcn
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def checkMouse(mainframeToCheck_):
+def checkMouseLcn(mainframeToCheck_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TSizeX_, TSizeY_ = getElementSize(mainframeToCheck_)
-	TLcnX_, TLcnY_ = getElementLocation(mainframeToCheck_)
-	(TBBoxNorth_, TBBoxWest_,  TBBoxSouth_, TBBoxEast_) = getBBox(mainframeToCheck_)
-	(TBBoxCloseNorth_, TBBoxCloseWest_, TBBoxCloseSouth_, TBBoxCloseEast_) = getCloseBBox(mainframeToCheck_)
-	TMouseLcnX_, TMouseLcnY_ = getMousePos()
+	TLcn_ = getElementLocation(mainframeToCheck_)
+	if TLcn_ != MAPPDS[SCREEN_POS]:
+		TLcn_ = getElementLocation(mainframeToCheck_)
+		TBBox_ = getBBox(mainframeToCheck_)
+		TCloseBBox_ = getCloseBBox(mainframeToCheck_)
+	else:
+		TBBox_ = MAPPDS[BBOX]
+		TCloseBBox_ = MAPPDS[CLOSE_BBOX]
+
+	TSize_ = MAPPDS[MAINFRAME_SIZE]
+	TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = splitBBoxToRaw(TBBox_)
+	# print(f"""TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = splitBBoxToRaw(TBBox_) {TBBoxNorth_}, {TBBoxWest_}, {TBBoxSouth_}, {TBBoxEast_} = {splitBBoxToRaw(TBBox_)}""")
+	TMouseLcnX_, TMouseLcnY_ = splitXYToRaw(getMousePos())
+	isInCloseBBox_ = isInBBox(TCloseBBox_, (TMouseLcnX_, TMouseLcnY_))
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	if (TBBoxWest_ > TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_):
-		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
+	# print(f"""if (TBBoxWest_ < TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_) ({TBBoxWest_} < {TMouseLcnX_} < {TBBoxEast_}) and ({TMouseLcnY_} < {TBBoxNorth_})""")
+	if (TBBoxWest_ < TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_):
+		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_N
 		else:
 			return MOUSE_STATUS_N
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	elif (TMouseLcnX_ > TBBoxWest_) and (TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ > TBBoxSouth_):
-		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
+	elif ( TBBoxWest_ < TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ > TBBoxSouth_):
+		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_S
 		else:
 			return MOUSE_STATUS_S
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	elif (TMouseLcnX_ < TBBoxWest_) and (TMouseLcnY_ > TBBoxNorth_) and (TMouseLcnY_ < TBBoxSouth_):
-		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
+	elif (TMouseLcnX_ < TBBoxWest_) and (TBBoxNorth_< TMouseLcnY_ < TBBoxSouth_):
+		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_W
 		else:
 			return MOUSE_STATUS_W
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	elif (TMouseLcnX_ > TBBoxEast_) and (TMouseLcnY_ > TBBoxNorth_) and (TMouseLcnY_ < TBBoxSouth_):
-		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
+	elif (TMouseLcnX_ > TBBoxEast_) and (TBBoxNorth_< TMouseLcnY_ < TBBoxSouth_):
+		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_E
 		else:
 			return MOUSE_STATUS_E
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ > TBBoxSouth_) and (TMouseLcnX_ < TBBoxWest_):
-		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
+		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_SW
 		else:
 			return MOUSE_STATUS_SW
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ > TBBoxSouth_) and (TMouseLcnX_ > TBBoxEast_):
-		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
+		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_SE
 		else:
 			return MOUSE_STATUS_SE
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ < TBBoxNorth_) and (TMouseLcnX_ < TBBoxWest_):
-		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
+		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_NW
 		else:
 			return MOUSE_STATUS_NW
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ < TBBoxNorth_) and (TMouseLcnX_ > TBBoxEast_):
-		if (TMouseLcnX_ > TBBoxCloseWest_) and (TMouseLcnX_ < TBBoxCloseEast_) and (TMouseLcnY_ > TBBoxCloseNorth_) and (TMouseLcnY_ < TBBoxCloseSouth_):
+		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_NE
 		else:
 			return MOUSE_STATUS_NE
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	elif (TMouseLcnX_ > TBBoxWest_) and (TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ > TBBoxNorth_) and (TMouseLcnY_ < TBBoxSouth_):
+	elif isInBBox(TBBox_, (TMouseLcnX_, TMouseLcnY_)) is True:
 		return MOUSE_STATUS_OVER
 
 # closer than
@@ -1469,19 +2053,112 @@ def checkMouse(mainframeToCheck_):
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# setClocks
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+timeLastSet_ = ZERO_CLOCK
+def setClocks():
+	global CLOCKS_DICT, ZERO_CLOCK
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	nowHMS_ = CF.nowStrHMS(CF.DT.now())
+	if nowHMS_ == timeLastSet_:
+		return
+	timeLastSet_ = nowHMS_
+	CLOCKS_DICT[TIME_ELAPSED] = CF.subtractHMS(nowHMS_, CLOCKS_DICT[TIME_AT_ZERO])
+	CLOCKS_DICT[TIME_CLOCK] = nowHMS_
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# updateClocks
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def updateClocks(MAPPDSToUse_=MAPPDS):
+	global CLOCKS_DICT, THECLOCK_DICT
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	nowHMS_ = CF.nowStrHMS(CF.DT.now())
+	TTL_ = CF.addHMS(nowHMS_, TIME_BETWEEN_ZERO_CHECKS)
+	if CF.isPastHMS(TTL_) is True:
+		CLOCKS_DICT[TIME_CLOCK] = nowHMS_
+		CLOCKS_DICT[TIME_ELAPSED] = CF.subtractHMS(nowHMS_, CLOCKS_DICT[TIME_AT_ZERO])
+		CLOCKS_DICT[TIME_TOGO] = CF.subtractHMS(MAPPDSToUse_[TIME_OF_NEXT_EVENT], nowHMS_)
+		THECLOCK_DICT[TIME_CLOCK] = nowHMS_
+		MAPPDS_MODE = MAPPDSToUse_[APP_MODE]
+		if MAPPDS_MODE == APPMODE_THECLOCK:
+			updateMainframeFromDict(MAPPDSToUse_, THECLOCK_DICT)
+		elif MAPPDS_MODE == APPMODE_CLOCKS:
+			updateMainframeFromDict(MAPPDSToUse_, CLOCKS_DICT)
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # doInit
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def doInit(mainframe_):
+def doInit1(mainframe_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	mainframe_.AlphaChannel = SZ_ALPHA_HIGH
+	MAPPDS[ALPHA_CHANNEL] = SZ_ALPHA_HIGH
+	MAPPDS[BBOX] = getBBox(mainframe_)
+	MAPPDS[CLOSE_BBOX] = getCloseBBox(mainframe_)
+	MAPPDS[MAINFRAME_SIZE] = getElementSize(mainframe_)
+	MAPPDS[SCREEN_DIMS] = getScreenDims(mainframe_)
 	MAPPDS[SCREEN_POS] = getElementLocation(mainframe_)
-	MAPPDS[SCREEN_SIZE] = getElementSize(mainframe_)
+	CLOCKS_DICT[TIME_CLOCK] = CF.nowStrHMS()
+	CLOCKS_DICT[TIME_AT_ZERO] = CF.nowStrHMS()
+	TIME_AT_LAST_ZERO_CHECK = CF.nowStrHMS()
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# doReadAMainframe
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def doReadAMainframe(mainframeToRead_, timeout_=100):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	event_, values_ = mainframeToRead_.Read()
+	return event_, values_
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# checkMouseStatus
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# @profile
+def checkMouseStatus(mainframeToUse_, statusToDo_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+
+	if (statusToDo_ in CLOSE_LIST) and (MAPPDS[CHECKBOX_RUNAWAY] is True):
+
+		if statusToDo_ == MOUSE_STATUS_CLOSE_N:
+			moveRelFrame(mainframeToUse_, (0, 1))
+
+		elif statusToDo_ == MOUSE_STATUS_CLOSE_S:
+			moveRelFrame(mainframeToUse_, (0, -1))
+
+		elif statusToDo_ == MOUSE_STATUS_CLOSE_E:
+			moveRelFrame(mainframeToUse_, (-1, 0))
+
+		elif statusToDo_ == MOUSE_STATUS_CLOSE_W:
+			moveRelFrame(mainframeToUse_, (1, 0))
+
+		elif statusToDo_ == MOUSE_STATUS_CLOSE_NW:
+			moveRelFrame(mainframeToUse_, (1, 1))
+
+		elif statusToDo_ == MOUSE_STATUS_CLOSE_SW:
+			moveRelFrame(mainframeToUse_, (1, -1))
+
+		elif statusToDo_ == MOUSE_STATUS_CLOSE_NE:
+			moveRelFrame(mainframeToUse_, (-1, 1))
+
+		elif statusToDo_ == MOUSE_STATUS_CLOSE_SE:
+			moveRelFrame(mainframeToUse_, (-1, -1))
+
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# end of PSG.py
+# end of py
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #

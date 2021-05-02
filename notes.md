@@ -20,8 +20,11 @@ do       | []  | actually make the bool flags work
 do       | []  | make event entries work from FM.py on
 do       | []  | make sure empty tupdict works
 do       | []  | all the tupdict and tupdictdict ready
-do   | []    | convert all passed about things to a dict
-  |   |  sizes to dict for sure
-  |   |  pos(x, y) to dict
-  |   |  convert all tupdict here to tupdict_dict -=> the infamous TDD
+do       | []  | convert all passed about things to a dict
+         | []  | sizes to dict for sure
+         | []  | pos(x, y) to dict
+         | []  | convert all tupdict here to tupdict_dict -=> the infamous TDD
+         | []  | check for dict or tdd data in MAPPDS before updating it, translate them back to tuples
+  |   |  add TIME_AT_ZERO to CLOCKS_MAINFRAME
+  |   |  mv PSG.py PSG_TIME.py to make sure these special modifications to PSG earn their keep
   |   |  
