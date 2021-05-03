@@ -108,14 +108,13 @@ SZ_MAX_DELTA = 30  # comment
 SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 TIME_ALARM = "TIME_ALARM"  # the alarm time
+TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
 TIME_AT_ZERO = "TIME_AT_ZERO"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
 TIME_BETWEEN_MOVES = 100  # comment
-TIME_BETWEEN_TRUE_CHECKS = ZERO_CLOCK  # comment
+TIME_BETWEEN_UPDATES = 100  # comment
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
 TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
-TIME_LAST_TRUE_CHECK = ZERO_CLOCK  # holds the time used to keep intervals accurate
-TIME_OF_NEXT_EVENT = "TIME_OF_NEXT_EVENT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
@@ -142,8 +141,8 @@ FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
-TIME_LAST_MOVED_MTSMS = ZERO_CLOCK  # to throttle moves
-TIME_NEXT_MOVED_MTSMS = ZERO_CLOCK  # to throttle moves
+TIME_LAST_MOVED = ZERO_CLOCK  # to throttle moves
+TIME_LAST_UPDATED = ZERO_CLOCK  # holds the time used to keep intervals accurate
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -261,6 +260,7 @@ VISIBLE = "visible"  # visibility of elements
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_DICT = {  # holds the values for the clocks frame
+	TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_AT_ZERO: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -334,10 +334,10 @@ EMPTY0_EVENT_ENTRY_TDD = {
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 EMPTY_CLOCKSTUP = (
+	(TIME_AT_NEXT, ZERO_CLOCK),  # the main count down to the next event time
 	(TIME_AT_ZERO, ZERO_CLOCK),  # the main clock time
 	(TIME_CLOCK, ZERO_CLOCK),  # the main clock time
 	(TIME_ELAPSED, ZERO_CLOCK),  # the main elapsed time
-	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # the main count down to the next event time
 )
 
 def EMPTY_CLOCKSDICT():
@@ -345,10 +345,10 @@ def EMPTY_CLOCKSDICT():
 
 
 EMPTY_CLOCKS_TDD = {
+	TIME_AT_NEXT: ZERO_CLOCK,  # the main count down to the next event time
 	TIME_AT_ZERO: ZERO_CLOCK,  # the main clock time
 	TIME_CLOCK: ZERO_CLOCK,  # the main clock time
 	TIME_ELAPSED: ZERO_CLOCK,  # the main elapsed time
-	TIME_OF_NEXT_EVENT: ZERO_CLOCK,  # the main count down to the next event time
 }
 
 
@@ -370,10 +370,10 @@ EMPTY_MAPPDSTUP = (
 	(MAINFRAME_SIZE, EMPTY0_XY_TDD),  # which event number is upcoming
 	(SCREEN_POS, EMPTY0_XY_TDD),  # holds the screen position
 	(SCREEN_DIMS, EMPTY0_XY_TDD),  # 
+	(TIME_AT_NEXT, ZERO_CLOCK),  # time of next event
 	(TIME_AT_ZERO, ZERO_CLOCK),  # holds time at last zero for keeping elapsed on time
 	(TIME_CLOCK, ZERO_CLOCK),  # time wall clock
 	(TIME_ELAPSED, ZERO_CLOCK),  # time elapsed empty
-	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # time of next event
 	(TIME_TOGO, ZERO_CLOCK),  # time till next event empty clock
 )
 
@@ -395,10 +395,10 @@ EMPTY_MAPPDS_TDD = {
 	MAINFRAME_SIZE: EMPTY0_XY_TDD,  # which event number is upcoming
 	SCREEN_POS: EMPTY0_XY_TDD,  # holds the screen position
 	SCREEN_DIMS: EMPTY0_XY_TDD,  # 
+	TIME_AT_NEXT: ZERO_CLOCK,  # time of next event
 	TIME_AT_ZERO: ZERO_CLOCK,  # holds time at last zero for keeping elapsed on time
 	TIME_CLOCK: ZERO_CLOCK,  # time wall clock
 	TIME_ELAPSED: ZERO_CLOCK,  # time elapsed empty
-	TIME_OF_NEXT_EVENT: ZERO_CLOCK,  # time of next event
 	TIME_TOGO: ZERO_CLOCK,  # time till next event empty clock
 }
 
@@ -1350,6 +1350,20 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: TIME_AT_NEXT,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+	VISIBLE: False,  # comment
+}
+
+
 CLOCKS_TEXT_TIME_AT_ZERO = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
@@ -1585,7 +1599,8 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: ZERO_CLOCK,  # time of this event
-			TIME_TOGO: ZERO_CLOCK,  # updated only when the edit window is open with this event countdown to next event
+			TIME_INTERVAL: ZERO_CLOCK,  # time of this event
+			TIME_REMIND: ZERO_CLOCK,  # time of this event
 		},
 		1: {
 			DISMISSED: False,  # is this event dismissed
@@ -1596,18 +1611,14 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: ZERO_CLOCK,  # time of this event
-			TIME_TOGO: ZERO_CLOCK,  # updated only when the edit window is open with this event countdown to next event
+			TIME_INTERVAL: ZERO_CLOCK,  # time of this event
+			TIME_REMIND: ZERO_CLOCK,  # time of this event
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
 	MAINFRAME_SIZE: EMPTY0_XY_TDD,  # current screen position
 	SCREEN_DIMS: EMPTY0_XY_TDD,  # current screen position
 	SCREEN_POS: EMPTY0_XY_TDD,  # current screen position
-	TIME_AT_ZERO: ZERO_CLOCK,  # the time at last zero for time elapsed correction periodically
-	TIME_CLOCK: ZERO_CLOCK,  # start the clock at midnight
-	TIME_ELAPSED: ZERO_CLOCK,  # start the clock at midnight
-	TIME_OF_NEXT_EVENT: ZERO_CLOCK,  # holds the time of the next coming event for easy maths
-	TIME_TOGO: ZERO_CLOCK,  # start the clock at midnight
 }
 
 

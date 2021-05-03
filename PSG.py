@@ -24,10 +24,6 @@ APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
 APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # main mode (xpand from clocks to this)
 BBOX = "BBOX"  # BOUNDING BOX
-BBOX_EAST = "BBOX_EAST"  # BOUNDING BOX_EAST
-BBOX_NORTH = "BBOX_NORTH"  # BOUNDING BOX NORTH
-BBOX_SOUTH = "BBOX_SOUTH"  # BOUNDING BOX_SOUTH
-BBOX_WEST = "BBOX_WEST"  # BOUNDING BOX_WEST
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
 BTN_QUIT = "BTN_QUIT"  # key for all of the button xpand
@@ -60,7 +56,13 @@ EVENT_MODE_ALARM = "EVENT_MODE_ALARM"  #
 EVENT_MODE_ALARMREMIND = "EVENT_MODE_ALARMREMIND"  #
 EVENT_MODE_INTERVAL = "EVENT_MODE_INTERVAL"  #
 FONT_DEFAULT = "Source Code Pro"  # set the main font
+INDEX_EAST = 3  # EAST
+INDEX_NORTH = 0  # NORTH
 INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  #
+INDEX_SOUTH = 2  # SOUTH
+INDEX_WEST = 1  # WEST
+INDEX_X = 0  # X
+INDEX_Y = 1  # Y
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
@@ -82,7 +84,7 @@ MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
 NAME = "NAME"  #
 PREDISMISSABLE = "PREDISMISSABLE"  #
 RUNNING = "RUNNING"  # is this interval running or not
-SCREEN_SIZE = "SCREEN_SIZE"  # dimension of the screen
+SCREEN_DIMS = "SCREEN_DIMS"  # dimension of the screen
 SCREEN_POS = "SCREEN_POS"  # can this event be snoozed
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # snoozed bool
@@ -105,15 +107,14 @@ SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 30  # comment
 SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
-SZ_TIME_BTWN_MOVES = 100  # comment
 TIME_ALARM = "TIME_ALARM"  # the alarm time
-TIME_AT_LAST_ZERO_CHECK = 0  # holds the time used to keep intervals accurate
+TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
 TIME_AT_ZERO = "TIME_AT_ZERO"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
-TIME_BETWEEN_ZERO_CHECKS = 0  # comment
+TIME_BETWEEN_MOVES = 100  # comment
+TIME_BETWEEN_UPDATES = 100  # comment
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
 TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
-TIME_OF_NEXT_EVENT = "TIME_OF_NEXT_EVENT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
@@ -121,8 +122,6 @@ TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
 TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
 TITLE_THECLOCK = "THECLOCK"  # string with window title for APPMODE_CLOCKS
 TRANSPARENT = "TRANSPARENT"  # is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)
-VAL_X = "VAL_X"  # size and position X value (these may be a pita so keep tuples around just in case)
-VAL_Y = "VAL_Y"  # size and position Y value (these may be a pita so keep tuples around just in case)
 ZERO_CLOCK = 0  # all the zeros
 
 
@@ -136,12 +135,14 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+EMPTY0_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
+EMPTY0_XY = (0, 0)  # empty XY dict
 FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
-TIME_LAST_MOVED_MTSMS = ZERO_CLOCK  # to throttle moves
-TIME_NEXT_MOVED_MTSMS = ZERO_CLOCK  # to throttle moves
+TIME_LAST_MOVED = ZERO_CLOCK  # to throttle moves
+TIME_LAST_UPDATED = ZERO_CLOCK  # holds the time used to keep intervals accurate
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -259,6 +260,7 @@ VISIBLE = "visible"  # visibility of elements
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_DICT = {  # holds the values for the clocks frame
+	TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_AT_ZERO: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -292,29 +294,6 @@ CLOSE_LIST = [  # list with close statuses
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0905 tupdict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY0_BBOX structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTY0_BBOXTUP = (
-	(BBOX_EAST, 0),  # bbox east
-	(BBOX_NORTH, 0),  # bbox north
-	(BBOX_SOUTH, 0),  # bbox south
-	(BBOX_WEST, 0),  # bbox west
-)
-
-def EMPTY0_BBOXDICT():
-	return dict((x, y) for x, y in EMPTY0_BBOXTUP)
-
-
-EMPTY0_BBOX_TDD = {
-	BBOX_EAST: 0,  # bbox east
-	BBOX_NORTH: 0,  # bbox north
-	BBOX_SOUTH: 0,  # bbox south
-	BBOX_WEST: 0,  # bbox west
-}
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of EMPTY0_EVENT_ENTRY structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -351,33 +330,14 @@ EMPTY0_EVENT_ENTRY_TDD = {
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY0_XY structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTY0_XYTUP = (
-	(VAL_X, 0),  # empty XY dict
-	(VAL_Y, 0),  # empty XY dict
-)
-
-def EMPTY0_XYDICT():
-	return dict((x, y) for x, y in EMPTY0_XYTUP)
-
-
-EMPTY0_XY_TDD = {
-	VAL_X: 0,  # empty XY dict
-	VAL_Y: 0,  # empty XY dict
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of EMPTY_CLOCKS structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 EMPTY_CLOCKSTUP = (
+	(TIME_AT_NEXT, ZERO_CLOCK),  # the main count down to the next event time
 	(TIME_AT_ZERO, ZERO_CLOCK),  # the main clock time
 	(TIME_CLOCK, ZERO_CLOCK),  # the main clock time
 	(TIME_ELAPSED, ZERO_CLOCK),  # the main elapsed time
-	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # the main count down to the next event time
 )
 
 def EMPTY_CLOCKSDICT():
@@ -385,10 +345,10 @@ def EMPTY_CLOCKSDICT():
 
 
 EMPTY_CLOCKS_TDD = {
+	TIME_AT_NEXT: ZERO_CLOCK,  # the main count down to the next event time
 	TIME_AT_ZERO: ZERO_CLOCK,  # the main clock time
 	TIME_CLOCK: ZERO_CLOCK,  # the main clock time
 	TIME_ELAPSED: ZERO_CLOCK,  # the main elapsed time
-	TIME_OF_NEXT_EVENT: ZERO_CLOCK,  # the main count down to the next event time
 }
 
 
@@ -409,11 +369,11 @@ EMPTY_MAPPDSTUP = (
 	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
 	(MAINFRAME_SIZE, EMPTY0_XY_TDD),  # which event number is upcoming
 	(SCREEN_POS, EMPTY0_XY_TDD),  # holds the screen position
-	(SCREEN_SIZE, EMPTY0_XY_TDD),  #
+	(SCREEN_DIMS, EMPTY0_XY_TDD),  #
+	(TIME_AT_NEXT, ZERO_CLOCK),  # time of next event
 	(TIME_AT_ZERO, ZERO_CLOCK),  # holds time at last zero for keeping elapsed on time
 	(TIME_CLOCK, ZERO_CLOCK),  # time wall clock
 	(TIME_ELAPSED, ZERO_CLOCK),  # time elapsed empty
-	(TIME_OF_NEXT_EVENT, ZERO_CLOCK),  # time of next event
 	(TIME_TOGO, ZERO_CLOCK),  # time till next event empty clock
 )
 
@@ -434,11 +394,11 @@ EMPTY_MAPPDS_TDD = {
 	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
 	MAINFRAME_SIZE: EMPTY0_XY_TDD,  # which event number is upcoming
 	SCREEN_POS: EMPTY0_XY_TDD,  # holds the screen position
-	SCREEN_SIZE: EMPTY0_XY_TDD,  #
+	SCREEN_DIMS: EMPTY0_XY_TDD,  #
+	TIME_AT_NEXT: ZERO_CLOCK,  # time of next event
 	TIME_AT_ZERO: ZERO_CLOCK,  # holds time at last zero for keeping elapsed on time
 	TIME_CLOCK: ZERO_CLOCK,  # time wall clock
 	TIME_ELAPSED: ZERO_CLOCK,  # time elapsed empty
-	TIME_OF_NEXT_EVENT: ZERO_CLOCK,  # time of next event
 	TIME_TOGO: ZERO_CLOCK,  # time till next event empty clock
 }
 
@@ -1390,6 +1350,20 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: TIME_AT_NEXT,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+	VISIBLE: False,  # comment
+}
+
+
 CLOCKS_TEXT_TIME_AT_ZERO = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
@@ -1625,7 +1599,8 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: ZERO_CLOCK,  # time of this event
-			TIME_TOGO: ZERO_CLOCK,  # updated only when the edit window is open with this event countdown to next event
+			TIME_INTERVAL: ZERO_CLOCK,  # time of this event
+			TIME_REMIND: ZERO_CLOCK,  # time of this event
 		},
 		1: {
 			DISMISSED: False,  # is this event dismissed
@@ -1636,18 +1611,14 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: ZERO_CLOCK,  # time of this event
-			TIME_TOGO: ZERO_CLOCK,  # updated only when the edit window is open with this event countdown to next event
+			TIME_INTERVAL: ZERO_CLOCK,  # time of this event
+			TIME_REMIND: ZERO_CLOCK,  # time of this event
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
 	MAINFRAME_SIZE: EMPTY0_XY_TDD,  # current screen position
-	SCREEN_SIZE: EMPTY0_XY_TDD,  # current screen position
+	SCREEN_DIMS: EMPTY0_XY_TDD,  # current screen position
 	SCREEN_POS: EMPTY0_XY_TDD,  # current screen position
-	TIME_AT_ZERO: ZERO_CLOCK,  # the time at last zero for time elapsed correction periodically
-	TIME_CLOCK: ZERO_CLOCK,  # start the clock at midnight
-	TIME_ELAPSED: ZERO_CLOCK,  # start the clock at midnight
-	TIME_OF_NEXT_EVENT: ZERO_CLOCK,  # holds the time of the next coming event for easy maths
-	TIME_TOGO: ZERO_CLOCK,  # start the clock at midnight
 }
 
 
@@ -1723,7 +1694,7 @@ def compareXY(XY1_, XY2_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def compareBBox(BBox1_, BBox2_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	if ((BBox1_[BBOX_NORTH] == BBox2_[BBOX_NORTH]) and (BBox1_[BBOX_WEST] == BBox2_[BBOX_WEST]) and (BBox1_[BBOX_SOUTH] == BBox2_[BBOX_SOUTH]) and (BBox1_[BBOX_EAST] == BBox2_[BBOX_EAST])):
+	if ((BBox1_[INDEX_NORTH] == BBox2_[INDEX_NORTH]) and (BBox1_[INDEX_WEST] == BBox2_[INDEX_WEST]) and (BBox1_[INDEX_SOUTH] == BBox2_[INDEX_SOUTH]) and (BBox1_[INDEX_EAST] == BBox2_[INDEX_EAST])):
 		return True
 	else:
 		return False
@@ -1767,7 +1738,7 @@ def readWithDict(mainframeToRead_, dictToReadWith_):
 def splitBBoxToRaw(BBoxToSplit_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	# print(f"""BBoxToSplit_ {BBoxToSplit_}""")
-	return BBoxToSplit_[BBOX_NORTH], BBoxToSplit_[BBOX_WEST], BBoxToSplit_[BBOX_SOUTH], BBoxToSplit_[BBOX_EAST]
+	return BBoxToSplit_[INDEX_NORTH], BBoxToSplit_[INDEX_WEST], BBoxToSplit_[INDEX_SOUTH], BBoxToSplit_[INDEX_EAST]
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1778,12 +1749,12 @@ def splitBBoxtoTuple(BBoxToSplit_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	return (
 		# (
-		BBoxToSplit_[BBOX_NORTH],
-		BBoxToSplit_[BBOX_WEST],
+		BBoxToSplit_[INDEX_NORTH],
+		BBoxToSplit_[INDEX_WEST],
 		# ),
 		# (
-		BBoxToSplit_[BBOX_SOUTH],
-		BBoxToSplit_[BBOX_EAST],
+		BBoxToSplit_[INDEX_SOUTH],
+		BBoxToSplit_[INDEX_EAST],
 		# ),
 	)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -1872,7 +1843,7 @@ def getCloseBBox(objectToBBox_, closeEnough_=SZ_CLOSE):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def isInBBox(BBoxIn_, pointIn_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	if (BBoxIn_[BBOX_NORTH] < pointIn_[VAL_X] < BBoxIn_[BBOX_SOUTH]) and (BBoxIn_[BBOX_WEST] < pointIn_[VAL_Y] < BBoxIn_[BBOX_EAST]):
+	if (BBoxIn_[INDEX_NORTH] < pointIn_[VAL_X] < BBoxIn_[INDEX_SOUTH]) and (BBoxIn_[INDEX_WEST] < pointIn_[VAL_Y] < BBoxIn_[INDEX_EAST]):
 		return True
 	else:
 		return False
@@ -1964,10 +1935,10 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 		TBBox_ = MAPPDS[BBOX]
 		TCloseBBox_ = MAPPDS[CLOSE_BBOX]
 
-	TBBoxNorth_ = TBBox_[BBOX_NORTH]
-	TBBoxWest_ = TBBox_[BBOX_WEST]
-	TBBoxSouth_ = TBBox_[BBOX_SOUTH]
-	TBBoxEast_ = TBBox_[BBOX_EAST]
+	TBBoxNorth_ = TBBox_[INDEX_NORTH]
+	TBBoxWest_ = TBBox_[INDEX_WEST]
+	TBBoxSouth_ = TBBox_[INDEX_SOUTH]
+	TBBoxEast_ = TBBox_[INDEX_EAST]
 	TSize_ = MAPPDS[MAINFRAME_SIZE]
 	# print(f"""TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = splitBBoxToRaw(TBBox_) {TBBoxNorth_}, {TBBoxWest_}, {TBBoxSouth_}, {TBBoxEast_} = {splitBBoxToRaw(TBBox_)}""")
 	TMouseLcn = getMousePos()
@@ -2042,14 +2013,14 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 timeLastSet_ = ZERO_CLOCK
 def setClocks():
-	global CLOCKS_DICT, ZERO_CLOCK
+	global CLOCKS_DICT, timeLastSet_
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	nowSecsI_ = CF.nowStrHMS(CF.DT.now())
-	if nowSecsI_ == timeLastSet_:
+	now_ = CF.MTSMS()
+	if now_ > (timeLastSet_ + TIME_BETWEEN_TRUE_CHECKS):
 		return
-	timeLastSet_ = nowSecsI_
-	CLOCKS_DICT[TIME_ELAPSED] = CF.subtractHMS(nowSecsI_, CLOCKS_DICT[TIME_AT_ZERO])
-	CLOCKS_DICT[TIME_CLOCK] = nowSecsI_
+	timeLastSet_ = now_
+	CLOCKS_DICT[TIME_ELAPSED] = (now_ - CLOCKS_DICT[TIME_AT_ZERO])
+	CLOCKS_DICT[TIME_CLOCK] = now_
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2060,13 +2031,13 @@ def setClocks():
 def updateClocks(MAPPDSToUse_=MAPPDS):
 	global CLOCKS_DICT, THECLOCK_DICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	nowSecsI_ = CF.MTS()
-	TTL_ = CF.addHMS(nowSecsI_, TIME_BETWEEN_ZERO_CHECKS)
-	if CF.isPastHMS(TTL_) is True:
-		CLOCKS_DICT[TIME_CLOCK] = nowSecsI_
-		CLOCKS_DICT[TIME_ELAPSED] = CF.subtractHMS(nowSecsI_, CLOCKS_DICT[TIME_AT_ZERO])
-		CLOCKS_DICT[TIME_TOGO] = CF.subtractHMS(MAPPDSToUse_[TIME_OF_NEXT_EVENT], nowSecsI_)
-		THECLOCK_DICT[TIME_CLOCK] = nowSecsI_
+	now_ = CF.MTSMS()
+	then_ = TIME_LAST_TRUE_CHECK + TIME_BETWEEN_UPDATES
+	if now_ > then_:
+		CLOCKS_DICT[TIME_CLOCK] = now_
+		CLOCKS_DICT[TIME_ELAPSED] = now_ - CLOCKS_DICT[TIME_AT_ZERO])
+		CLOCKS_DICT[TIME_TOGO] = MAPPDSToUse_[TIME_OF_NEXT_EVENT] - now_)
+		THECLOCK_DICT[TIME_CLOCK] = now_
 		MAPPDS_MODE = MAPPDSToUse_[APP_MODE]
 		if MAPPDS_MODE == APPMODE_THECLOCK:
 			updateMainframeFromDict(MAPPDSToUse_, THECLOCK_DICT)
