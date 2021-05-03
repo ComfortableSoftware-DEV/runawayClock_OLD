@@ -369,9 +369,9 @@ EMPTY_MAPPDSTUP = (
 	(CLOSE_BBOX, EMPTY_BBOX),  # empty BBOX dict
 	(EVENT_ENTRIES, EMPTY0_EVENT_ENTRY_TDD),  # an empty event
 	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
-	(MAINFRAME_SIZE, EMPTY0_XY_TDD),  # which event number is upcoming
-	(SCREEN_POS, EMPTY0_XY_TDD),  # holds the screen position
-	(SCREEN_DIMS, EMPTY0_XY_TDD),  # 
+	(MAINFRAME_SIZE, EMPTY_XY),  # which event number is upcoming
+	(SCREEN_POS, EMPTY_XY),  # holds the screen position
+	(SCREEN_DIMS, EMPTY_XY),  # 
 )
 
 def EMPTY_MAPPDSDICT():
@@ -389,9 +389,9 @@ EMPTY_MAPPDS_TDD = {
 	CLOSE_BBOX: EMPTY_BBOX,  # empty BBOX dict
 	EVENT_ENTRIES: EMPTY0_EVENT_ENTRY_TDD,  # an empty event
 	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
-	MAINFRAME_SIZE: EMPTY0_XY_TDD,  # which event number is upcoming
-	SCREEN_POS: EMPTY0_XY_TDD,  # holds the screen position
-	SCREEN_DIMS: EMPTY0_XY_TDD,  # 
+	MAINFRAME_SIZE: EMPTY_XY,  # which event number is upcoming
+	SCREEN_POS: EMPTY_XY,  # holds the screen position
+	SCREEN_DIMS: EMPTY_XY,  # 
 }
 
 
@@ -1608,9 +1608,9 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
-	MAINFRAME_SIZE: EMPTY0_XY_TDD,  # current screen position
-	SCREEN_DIMS: EMPTY0_XY_TDD,  # current screen position
-	SCREEN_POS: EMPTY0_XY_TDD,  # current screen position
+	MAINFRAME_SIZE: EMPTY_XY,  # current screen position
+	SCREEN_DIMS: EMPTY_XY,  # current screen position
+	SCREEN_POS: EMPTY_XY,  # current screen position
 }
 
 
