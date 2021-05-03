@@ -41,7 +41,8 @@ def __main__():
 	global \
 		oldClock, \
 		lastMouseStatus, \
-		myMainframe
+		myMainframe,
+		myClockDict
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	with \
 			PSG.THECLOCK_MAINFRAME_CLASS(), \
@@ -65,16 +66,16 @@ def __main__():
 				handleEvents(event_)
 
 			TMouseStatus_ = PSG.checkMouseLcn(myMainframe)
-
 			print(f"""TMouseStatus_ {TMouseStatus_}""")
 
 			if (TMouseStatus_ == PSG.MOUSE_STATUS_OVER) and (lastMouseStatus != PSG.MOUSE_STATUS_OVER) and (PSG.MAPPDS[PSG.CHECKBOX_ALPHA_LOW] is True):
 				myMainframe.AlphaChannel = PSG.MAPPDS[PSG.ALPHA_LOW]
 				alphaMode = True
 
-			elif (TMouseStatus_ != PSG.MOUSE_STATUS_OVER) and (lastMouseStatus != PSG.MOUSE_STATUS_OVER):
+			elif (TMouseStatus_ != PSG.MOUSE_STATUS_OVER) and (lastMouseStatus == PSG.MOUSE_STATUS_OVER):
 				myMainframe.AlphaChannel = PSG.MAPPDS[PSG.ALPHA_HIGH]
 				alphaMode = False
+				
 			PSG.checkMouseStatus(myMainframe, TMouseStatus_)
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1

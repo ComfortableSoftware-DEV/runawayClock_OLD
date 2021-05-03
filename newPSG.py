@@ -24,10 +24,6 @@ APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
 APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # main mode (xpand from clocks to this)
 BBOX = "BBOX"  # BOUNDING BOX
-BBOX_EAST = "BBOX_EAST"  # BOUNDING BOX_EAST
-BBOX_NORTH = "BBOX_NORTH"  # BOUNDING BOX NORTH
-BBOX_SOUTH = "BBOX_SOUTH"  # BOUNDING BOX_SOUTH
-BBOX_WEST = "BBOX_WEST"  # BOUNDING BOX_WEST
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
 BTN_QUIT = "BTN_QUIT"  # key for all of the button xpand
@@ -60,7 +56,13 @@ EVENT_MODE_ALARM = "EVENT_MODE_ALARM"  #
 EVENT_MODE_ALARMREMIND = "EVENT_MODE_ALARMREMIND"  # 
 EVENT_MODE_INTERVAL = "EVENT_MODE_INTERVAL"  # 
 FONT_DEFAULT = "Source Code Pro"  # set the main font
+INDEX_EAST = 3  # EAST
+INDEX_NORTH = 0  # NORTH
 INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  # 
+INDEX_SOUTH = 2  # SOUTH
+INDEX_WEST = 1  # WEST
+INDEX_X = 0  # X
+INDEX_Y = 1  # Y
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
@@ -105,14 +107,14 @@ SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 30  # comment
 SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
-SZ_TIME_BTWN_MOVES = 100  # comment
 TIME_ALARM = "TIME_ALARM"  # the alarm time
-TIME_AT_LAST_ZERO_CHECK = 0  # holds the time used to keep intervals accurate
 TIME_AT_ZERO = "TIME_AT_ZERO"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
-TIME_BETWEEN_ZERO_CHECKS = 0  # comment
+TIME_BETWEEN_MOVES = 100  # comment
+TIME_BETWEEN_TRUE_CHECKS = ZERO_CLOCK  # comment
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
 TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
+TIME_LAST_TRUE_CHECK = ZERO_CLOCK  # holds the time used to keep intervals accurate
 TIME_OF_NEXT_EVENT = "TIME_OF_NEXT_EVENT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
@@ -121,8 +123,6 @@ TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
 TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
 TITLE_THECLOCK = "THECLOCK"  # string with window title for APPMODE_CLOCKS
 TRANSPARENT = "TRANSPARENT"  # is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)
-VAL_X = "VAL_X"  # size and position X value (these may be a pita so keep tuples around just in case)
-VAL_Y = "VAL_Y"  # size and position Y value (these may be a pita so keep tuples around just in case)
 ZERO_CLOCK = 0  # all the zeros
 
 
@@ -136,12 +136,14 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+EMPTY0_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
+EMPTY0_XY = (0, 0)  # empty XY dict
 FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
-LAST_MOVED_HMSS = ZERO_CLOCK  # to throttle moves
-NEXT_MOVED_HMSS = ZERO_CLOCK  # to throttle moves
+TIME_LAST_MOVED_MTSMS = ZERO_CLOCK  # to throttle moves
+TIME_NEXT_MOVED_MTSMS = ZERO_CLOCK  # to throttle moves
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -293,29 +295,6 @@ CLOSE_LIST = [  # list with close statuses
 # * SCTN0905 tupdict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY0_BBOX structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTY0_BBOXTUP = (
-	(BBOX_EAST, 0),  # bbox east
-	(BBOX_NORTH, 0),  # bbox north
-	(BBOX_SOUTH, 0),  # bbox south
-	(BBOX_WEST, 0),  # bbox west
-)
-
-def EMPTY0_BBOXDICT():
-	return dict((x, y) for x, y in EMPTY0_BBOXTUP)
-
-
-EMPTY0_BBOX_TDD = {
-	BBOX_EAST: 0,  # bbox east
-	BBOX_NORTH: 0,  # bbox north
-	BBOX_SOUTH: 0,  # bbox south
-	BBOX_WEST: 0,  # bbox west
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of EMPTY0_EVENT_ENTRY structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
@@ -347,25 +326,6 @@ EMPTY0_EVENT_ENTRY_TDD = {
 	TIME_ALARM: ZERO_CLOCK,  # in an alarm mode event, what time is the alarm
 	TIME_INTERVAL: ZERO_CLOCK,  # how much time to add to an interval mode event
 	TIME_REMIND: ZERO_CLOCK,  # wall time at the next alarm
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY0_XY structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTY0_XYTUP = (
-	(VAL_X, 0),  # empty XY dict
-	(VAL_Y, 0),  # empty XY dict
-)
-
-def EMPTY0_XYDICT():
-	return dict((x, y) for x, y in EMPTY0_XYTUP)
-
-
-EMPTY0_XY_TDD = {
-	VAL_X: 0,  # empty XY dict
-	VAL_Y: 0,  # empty XY dict
 }
 
 
