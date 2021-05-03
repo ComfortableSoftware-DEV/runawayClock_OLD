@@ -141,7 +141,7 @@ FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
-TIME_LAST_MOVED = ZERO_CLOCK  # to throttle moves
+TIME_LAST_MOVED_MTSMS = ZERO_CLOCK  # to throttle moves
 TIME_LAST_UPDATED = ZERO_CLOCK  # holds the time used to keep intervals accurate
 
 
@@ -1639,8 +1639,8 @@ def getMousePos():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	mseData_ = DISP.Display().screen().root.query_pointer()._data
 	return {
-		VAL_X: mseData_["root_x"],
-		VAL_Y: mseData_["root_y"],
+		INDEX_X: mseData_["root_x"],
+		INDEX_Y: mseData_["root_y"],
 	}
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1654,8 +1654,8 @@ def getElementLocation(mainframeToLocate_):
 	# print(f"""locationToRtn_ {locationToRtn_}""")
 	# print(f"""{CF.NNL(10)}{CF.getDebugInfo()}{CF.NEWLINE}{mainframeToLocate_.CurrentLocation}""")
 	return {
-		VAL_X: locationToRtn_[0],
-		VAL_Y: locationToRtn_[1],
+		INDEX_X: locationToRtn_[0],
+		INDEX_Y: locationToRtn_[1],
 	}
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1674,7 +1674,7 @@ def getElementSize(mainframeElementToSize_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def compareXY(XY1_, XY2_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	if (XY1[VAL_X] == XY2_[VAL_X]) and (XY1[VAL_Y] == XY2_[VAL_Y]):
+	if (XY1[INDEX_X] == XY2_[INDEX_X]) and (XY1[INDEX_Y] == XY2_[INDEX_Y]):
 		return True
 	else:
 		return False
@@ -1761,8 +1761,8 @@ def splitBBoxtoTuple(BBoxToSplit_):
 def combineRawToXY(TX_, TY_, ):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	return {
-		VAL_X: TX_,
-		VAL_Y: TY_,
+		INDEX_X: TX_,
+		INDEX_Y: TY_,
 	}
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1773,8 +1773,8 @@ def combineRawToXY(TX_, TY_, ):
 def splitXYToTuple(XYToSplit_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	return (
-		XYToSplit_[VAL_X],
-		XYToSplit_[VAL_Y],
+		XYToSplit_[INDEX_X],
+		XYToSplit_[INDEX_Y],
 	)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1784,8 +1784,8 @@ def splitXYToTuple(XYToSplit_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def splitXYToRaw(XYToSplit_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	# print(f"""XYToSplit_ {XYToSplit_} {XYToSplit_[VAL_X]}""")
-	return XYToSplit_[VAL_X], XYToSplit_[VAL_Y]
+	# print(f"""XYToSplit_ {XYToSplit_} {XYToSplit_[INDEX_X]}""")
+	return XYToSplit_[INDEX_X], XYToSplit_[INDEX_Y]
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1795,8 +1795,8 @@ def splitXYToRaw(XYToSplit_):
 def tupleToXY(tupleToXY_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	return {
-		VAL_X: tupleToXY_[0],
-		VAL_Y: tupleToXY_[1],
+		INDEX_X: tupleToXY_[0],
+		INDEX_Y: tupleToXY_[1],
 	}
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1838,7 +1838,7 @@ def getCloseBBox(objectToBBox_, closeEnough_=SZ_CLOSE):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def isInBBox(BBoxIn_, pointIn_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	if (BBoxIn_[INDEX_NORTH] < pointIn_[VAL_X] < BBoxIn_[INDEX_SOUTH]) and (BBoxIn_[INDEX_WEST] < pointIn_[VAL_Y] < BBoxIn_[INDEX_EAST]):
+	if (BBoxIn_[INDEX_NORTH] < pointIn_[INDEX_X] < BBoxIn_[INDEX_SOUTH]) and (BBoxIn_[INDEX_WEST] < pointIn_[INDEX_Y] < BBoxIn_[INDEX_EAST]):
 		return True
 	else:
 		return False
@@ -1854,12 +1854,12 @@ def moveFrame(mainframeToMove_, moveTo_=(0, 0)):  # remember - is N/W and + is S
 	TSizeX_, TSizeY_ = splitXYToRaw(getElementSize(mainframeToMove_))
 	if TLcnX_ < 0:
 		TLcnX_ = 0
-	elif TLcnX_ > (MAPPDS[SCREEN_SIZE][VAL_X] - TSizeX_):
-		TLcnX_ = (MAPPDS[SCREEN_SIZE][VAL_X] - TSizeX_)
+	elif TLcnX_ > (MAPPDS[SCREEN_DIMS][INDEX_X] - TSizeX_):
+		TLcnX_ = (MAPPDS[SCREEN_DIMS][INDEX_X] - TSizeX_)
 	if TLcnY_ < 0:
 		TLcnY_ = 0
-	elif TLcnY_ > (MAPPDS[SCREEN_SIZE][VAL_Y] - TSizeY_):
-		TLcnY_ = (MAPPDS[SCREEN_SIZE][VAL_Y] - TSizeY_)
+	elif TLcnY_ > (MAPPDS[SCREEN_DIMS][INDEX_Y] - TSizeY_):
+		TLcnY_ = (MAPPDS[SCREEN_DIMS][INDEX_Y] - TSizeY_)
 	mainframeToMove_.Move(moveTo_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1868,10 +1868,10 @@ def moveFrame(mainframeToMove_, moveTo_=(0, 0)):  # remember - is N/W and + is S
 # moveRelFrame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
-	global TIME_LAST_MOVED_MTSMS, NEXT_MOVED_TIME
+	global TIME_LAST_MOVED_MTSMS_MTSMS, NEXT_MOVED_TIME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	if CF.MTSMS() < (TIME_LAST_MOVED_MTSMS + SZ_TIME_BTWN_MOVES):
+	if CF.MTSMS() < (TIME_LAST_MOVED_MTSMS_MTSMS + SZ_TIME_BTWN_MOVES):
 		return  # only move at minimum  SZ_TIME_BTWN_MOVES apart
 
 	if hasMoved(mainframeToMove_):
@@ -1880,10 +1880,10 @@ def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 		TSizeX_, TSizeY_ = splitXYToRaw(getElementSize(mainframeToMove_))
 		TLcnX_, TLcnY_ = splitXYToRaw(getElementLocation(mainframeToMove_))
 	else:
-		screenSZX_, screenSZY_ = MAPPDS[SCREEN_SIZE]
+		screenSZX_, screenSZY_ = MAPPDS[SCREEN_DIMS]
 
-	moveToX_ = TLcnX_ + (moveMpx[0] * SZ_MOVE_DIST)
-	moveToY_ = TLcnY_ + (moveMpx[1] * SZ_MOVE_DIST)
+	moveToX_ = TLcnX_ + (moveMpx[INDEX_X] * SZ_MOVE_DIST)
+	moveToY_ = TLcnY_ + (moveMpx[INDEX_Y] * SZ_MOVE_DIST)
 
 	if moveToX_ < 0:
 		moveToX_ = 0
@@ -1912,7 +1912,7 @@ def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 def getScreenDims(mainframeToUse_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	TDim_ = mainframeToUse_.GetScreenDimensions()
-	return (TDim_)
+	return TDim_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1922,7 +1922,7 @@ def getScreenDims(mainframeToUse_):
 def checkMouseLcn(mainframeToCheck_, oldLocation_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	if hasMoved(mainframeToCheck_, oldLocation_):
+	if hasMoved(mainframeToCheck_, oldLocation_) is True:
 		TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = getBBox(mainframeToCheck_)
 		# TBBox_ = getBBox(mainframeToCheck_)
 		TCloseBBox_ = getCloseBBox(mainframeToCheck_)
@@ -2039,7 +2039,7 @@ def doInit1(mainframe_):
 	MAPPDS[BBOX] = getBBox(mainframe_)
 	MAPPDS[CLOSE_BBOX] = getCloseBBox(mainframe_)
 	MAPPDS[MAINFRAME_SIZE] = getElementSize(mainframe_)
-	MAPPDS[SCREEN_SIZE] = getScreenDims(mainframe_)
+	MAPPDS[SCREEN_DIMS] = getScreenDims(mainframe_)
 	MAPPDS[SCREEN_POS] = getElementLocation(mainframe_)
 	CLOCKS_DICT[TIME_CLOCK] = now_
 	CLOCKS_DICT[TIME_AT_UPDATE] = now_
