@@ -107,9 +107,9 @@ SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_TIME_BTWN_MOVES = 100  # comment
 TIME_ALARM = "TIME_ALARM"  # the alarm time
-TIME_AT_LAST_ZERO_CHECK = "00:00:00"  # holds the time used to keep intervals accurate
+TIME_AT_LAST_ZERO_CHECK = 0  # holds the time used to keep intervals accurate
 TIME_AT_ZERO = "TIME_AT_ZERO"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
-TIME_BETWEEN_ZERO_CHECKS = "01:00:00"  # comment
+TIME_BETWEEN_ZERO_CHECKS = 0  # comment
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
 TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
@@ -123,7 +123,7 @@ TITLE_THECLOCK = "THECLOCK"  # string with window title for APPMODE_CLOCKS
 TRANSPARENT = "TRANSPARENT"  # is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)
 VAL_X = "VAL_X"  # size and position X value (these may be a pita so keep tuples around just in case)
 VAL_Y = "VAL_Y"  # size and position Y value (these may be a pita so keep tuples around just in case)
-ZERO_CLOCK = "00:00:00"  # all the zeros
+ZERO_CLOCK = 0  # all the zeros
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -140,7 +140,8 @@ FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
-LAST_MOVED_MTS = CF.MTS() + SZ_TIME_BTWN_MOVES  # to throttle moves
+LAST_MOVED_HMSS = ZERO_CLOCK  # to throttle moves
+NEXT_MOVED_HMSS = ZERO_CLOCK  # to throttle moves
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1920,12 +1921,17 @@ def moveFrame(mainframeToMove_, moveTo_=(0, 0)):  # remember - is N/W and + is S
 # moveRelFrame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
-	global LAST_MOVED_MTS
+	global LAST_MOVED_MTS, NEXT_MOVED_TIME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_, TLcnY_ = splitXYToRaw(getElementLocation(mainframeToMove_))
+
+	if CF.MTS() < (LAST_MOVED_MTS + SZ_TIME_BTWN_MOVES):
+		return  # only move at minimum 1 sec apart
+
+	if hasMoved(mainframeToMove_)
 	screenSZX_, screenSZY_ = splitXYToRaw(getScreenDims(mainframeToMove_))
 	(TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_) = getBBox(mainframeToMove_)
 	TSizeX_, TSizeY_ = splitXYToRaw(getElementSize(mainframeToMove_))
+	TLcnX_, TLcnY_ = splitXYToRaw(getElementLocation(mainframeToMove_))
 
 	moveToX_ = TLcnX_ + (moveMpx[0] * SZ_MOVE_DIST)
 	moveToY_ = TLcnY_ + (moveMpx[1] * SZ_MOVE_DIST)
@@ -1941,15 +1947,12 @@ def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 		moveToY_ = (screenSZY_ - TSizeY_)
 
 		# avoid trouble with spurious moves caused by a process delaying anything here too far
-	if ((moveToX_ - TLcnX_) > SZ_MAX_DELTA) or ((moveToY_ - TLcnY_) > SZ_MAX_DELTA):
+	if (abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA) or (abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA):
 		# print(f"""(abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA) (abs({moveToX_} - {TLcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA)}""")
 		# print(f"""(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA) (abs({moveToY_} - {TLcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA)}""")
 		return
 
-	if CF.isPast(LAST_MOVED_MTS + SZ_TIME_BTWN_MOVES):
-		mainframeToMove_.Move(moveToX_, moveToY_)
-		LAST_MOVED_MTS = CF.MTS()
-		# print(f"""{CF.INDENTOUT}LAST_MOVED_MTS {LAST_MOVED_MTS}  MTS {CF.MTS()} SZ_TIME_BTWN_MOVES {SZ_TIME_BTWN_MOVES}""")
+	mainframeToMove_.Move(moveToX_, moveToY_)
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1973,8 +1976,9 @@ def getScreenDims(mainframeToUse_):
 def checkMouseLcn(mainframeToCheck_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	TLcn_ = getElementLocation(mainframeToCheck_)
-	if TLcn_ != MAPPDS[SCREEN_POS]:
-		TLcn_ = getElementLocation(mainframeToCheck_)
+
+	if hasMoved(TLcn_, MAPPDS[SCREEN_POS]):
+		# TLcn_ = getElementLocation(mainframeToCheck_)
 		TBBox_ = getBBox(mainframeToCheck_)
 		TCloseBBox_ = getCloseBBox(mainframeToCheck_)
 	else:
@@ -2060,12 +2064,12 @@ timeLastSet_ = ZERO_CLOCK
 def setClocks():
 	global CLOCKS_DICT, ZERO_CLOCK
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	nowHMS_ = CF.nowStrHMS(CF.DT.now())
-	if nowHMS_ == timeLastSet_:
+	nowSecsI_ = CF.nowStrHMS(CF.DT.now())
+	if nowSecsI_ == timeLastSet_:
 		return
-	timeLastSet_ = nowHMS_
-	CLOCKS_DICT[TIME_ELAPSED] = CF.subtractHMS(nowHMS_, CLOCKS_DICT[TIME_AT_ZERO])
-	CLOCKS_DICT[TIME_CLOCK] = nowHMS_
+	timeLastSet_ = nowSecsI_
+	CLOCKS_DICT[TIME_ELAPSED] = CF.subtractHMS(nowSecsI_, CLOCKS_DICT[TIME_AT_ZERO])
+	CLOCKS_DICT[TIME_CLOCK] = nowSecsI_
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2076,13 +2080,13 @@ def setClocks():
 def updateClocks(MAPPDSToUse_=MAPPDS):
 	global CLOCKS_DICT, THECLOCK_DICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	nowHMS_ = CF.nowStrHMS(CF.DT.now())
-	TTL_ = CF.addHMS(nowHMS_, TIME_BETWEEN_ZERO_CHECKS)
+	nowSecsI_ = CF.MTS()
+	TTL_ = CF.addHMS(nowSecsI_, TIME_BETWEEN_ZERO_CHECKS)
 	if CF.isPastHMS(TTL_) is True:
-		CLOCKS_DICT[TIME_CLOCK] = nowHMS_
-		CLOCKS_DICT[TIME_ELAPSED] = CF.subtractHMS(nowHMS_, CLOCKS_DICT[TIME_AT_ZERO])
-		CLOCKS_DICT[TIME_TOGO] = CF.subtractHMS(MAPPDSToUse_[TIME_OF_NEXT_EVENT], nowHMS_)
-		THECLOCK_DICT[TIME_CLOCK] = nowHMS_
+		CLOCKS_DICT[TIME_CLOCK] = nowSecsI_
+		CLOCKS_DICT[TIME_ELAPSED] = CF.subtractHMS(nowSecsI_, CLOCKS_DICT[TIME_AT_ZERO])
+		CLOCKS_DICT[TIME_TOGO] = CF.subtractHMS(MAPPDSToUse_[TIME_OF_NEXT_EVENT], nowSecsI_)
+		THECLOCK_DICT[TIME_CLOCK] = nowSecsI_
 		MAPPDS_MODE = MAPPDSToUse_[APP_MODE]
 		if MAPPDS_MODE == APPMODE_THECLOCK:
 			updateMainframeFromDict(MAPPDSToUse_, THECLOCK_DICT)

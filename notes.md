@@ -32,7 +32,7 @@ do       | []  | convert all passed about things to a dict
          |     | also for incrementing, pre cache int for all times, and do everything with raw int seconds
          |     | all times int + HMS, only using HMS when it's time to zero check the main clock
   |   |  convert back to all tuples instead of dicts (x, y) (north, west, south, east)
-  |   |  #
+  |   |  github for android and see how this works on android
   |   |  #
   |   |  #
   |   |  

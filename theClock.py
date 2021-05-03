@@ -7,7 +7,7 @@ import PSG
 
 
 gc.enable()
-oldClock = CF.nowStrHMS(CF.DT.now())
+oldClock = CF.MTSS()
 lastMouseStatus = None
 alphaMode = None
 myMainframe = None
@@ -54,7 +54,7 @@ def __main__():
 
 		while True:
 			event_, values_ = PSG.doReadAMainframe(myMainframe)
-			now_ = CF.nowStrHMS(CF.DT.now())
+			now_ = CF.MTSS()
 
 			if now_ != oldClock:
 				oldClock = now_
