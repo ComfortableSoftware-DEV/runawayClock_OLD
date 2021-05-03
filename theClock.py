@@ -63,7 +63,7 @@ def __main__():
 			if now_ != oldClock:
 				oldClock = now_
 				myClockDict[PSG.TIME_CLOCK] = oldClock
-				PSG.updateMainframeFromDict(myMainframe, myClockDict)
+				PSG.updateMainframeFromDict(myMainframe, myClockDict, True)
 
 			if event_ != "__TIMEOUT__":
 				handleEvents(event_)
