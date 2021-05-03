@@ -1,8 +1,10 @@
 #!/usr/bin/env /usr/bin/python
 
 
-import CF
 import gc
+
+
+import CF
 import PSG
 
 
@@ -42,7 +44,8 @@ def __main__():
 		oldClock, \
 		lastMouseStatus, \
 		myMainframe, \
-		myClockDict
+		myClockDict, \
+		alphaMode
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	with \
 			PSG.THECLOCK_MAINFRAME_CLASS(), \

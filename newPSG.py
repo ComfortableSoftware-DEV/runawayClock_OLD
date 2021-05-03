@@ -135,8 +135,8 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-EMPTY0_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
-EMPTY0_XY = (0, 0)  # empty XY dict
+EMPTY_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
+EMPTY_XY = (0, 0)  # empty XY dict
 FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
@@ -363,10 +363,10 @@ EMPTY_MAPPDSTUP = (
 	(ALPHA_HIGH, 1.0),  # fully opaque
 	(ALPHA_LOW, 0.3),  # almost fully alpha
 	(APPMODE, APPMODE_CLOCKS),  # default to clocks mode
-	(BBOX, EMPTY0_BBOX_TDD),  # empty bbox entry
+	(BBOX, EMPTY_BBOX),  # empty bbox entry
 	(CHECKBOX_ALPHA_LOW, True),  # the checkbox bool for ALPHA high/low mode
 	(CHECKBOX_RUNAWAY, True),  # checkbox bool for RUNAWAY mode
-	(CLOSE_BBOX, EMPTY0_BBOX_TDD),  # empty BBOX dict
+	(CLOSE_BBOX, EMPTY_BBOX),  # empty BBOX dict
 	(EVENT_ENTRIES, EMPTY0_EVENT_ENTRY_TDD),  # an empty event
 	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
 	(MAINFRAME_SIZE, EMPTY0_XY_TDD),  # which event number is upcoming
@@ -383,10 +383,10 @@ EMPTY_MAPPDS_TDD = {
 	ALPHA_HIGH: 1.0,  # fully opaque
 	ALPHA_LOW: 0.3,  # almost fully alpha
 	APPMODE: APPMODE_CLOCKS,  # default to clocks mode
-	BBOX: EMPTY0_BBOX_TDD,  # empty bbox entry
+	BBOX: EMPTY_BBOX,  # empty bbox entry
 	CHECKBOX_ALPHA_LOW: True,  # the checkbox bool for ALPHA high/low mode
 	CHECKBOX_RUNAWAY: True,  # checkbox bool for RUNAWAY mode
-	CLOSE_BBOX: EMPTY0_BBOX_TDD,  # empty BBOX dict
+	CLOSE_BBOX: EMPTY_BBOX,  # empty BBOX dict
 	EVENT_ENTRIES: EMPTY0_EVENT_ENTRY_TDD,  # an empty event
 	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
 	MAINFRAME_SIZE: EMPTY0_XY_TDD,  # which event number is upcoming
@@ -1577,10 +1577,10 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
 	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
 	APPMODE: APPMODE_CLOCKS,  # default mode is clocks
-	BBOX: EMPTY0_BBOX_TDD,  # FILLED IN BY INIT
+	BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
 	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
-	CLOSE_BBOX: EMPTY0_BBOX_TDD,  # FILLED IN BY INIT
+	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
 			DISMISSED: False,  # is this event dismissed

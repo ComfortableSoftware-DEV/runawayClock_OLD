@@ -135,8 +135,8 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-EMPTY0_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
-EMPTY0_XY = (0, 0)  # empty XY dict
+EMPTY_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
+EMPTY_XY = (0, 0)  # empty XY dict
 FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
@@ -338,6 +338,7 @@ EMPTY_CLOCKSTUP = (
 	(TIME_AT_UPDATE, ZERO_CLOCK),  # the main clock time
 	(TIME_CLOCK, ZERO_CLOCK),  # the main clock time
 	(TIME_ELAPSED, ZERO_CLOCK),  # the main elapsed time
+	(TIME_TOGO, ZERO_CLOCK),  # the main count down to the next event time
 )
 
 def EMPTY_CLOCKSDICT():
@@ -349,6 +350,7 @@ EMPTY_CLOCKS_TDD = {
 	TIME_AT_UPDATE: ZERO_CLOCK,  # the main clock time
 	TIME_CLOCK: ZERO_CLOCK,  # the main clock time
 	TIME_ELAPSED: ZERO_CLOCK,  # the main elapsed time
+	TIME_TOGO: ZERO_CLOCK,  # the main count down to the next event time
 }
 
 
@@ -361,20 +363,15 @@ EMPTY_MAPPDSTUP = (
 	(ALPHA_HIGH, 1.0),  # fully opaque
 	(ALPHA_LOW, 0.3),  # almost fully alpha
 	(APPMODE, APPMODE_CLOCKS),  # default to clocks mode
-	(BBOX, EMPTY0_BBOX_TDD),  # empty bbox entry
+	(BBOX, EMPTY_BBOX),  # empty bbox entry
 	(CHECKBOX_ALPHA_LOW, True),  # the checkbox bool for ALPHA high/low mode
 	(CHECKBOX_RUNAWAY, True),  # checkbox bool for RUNAWAY mode
-	(CLOSE_BBOX, EMPTY0_BBOX_TDD),  # empty BBOX dict
+	(CLOSE_BBOX, EMPTY_BBOX),  # empty BBOX dict
 	(EVENT_ENTRIES, EMPTY0_EVENT_ENTRY_TDD),  # an empty event
 	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
 	(MAINFRAME_SIZE, EMPTY0_XY_TDD),  # which event number is upcoming
 	(SCREEN_POS, EMPTY0_XY_TDD),  # holds the screen position
 	(SCREEN_DIMS, EMPTY0_XY_TDD),  #
-	(TIME_AT_NEXT, ZERO_CLOCK),  # time of next event
-	(TIME_AT_UPDATE, ZERO_CLOCK),  # holds time at last zero for keeping elapsed on time
-	(TIME_CLOCK, ZERO_CLOCK),  # time wall clock
-	(TIME_ELAPSED, ZERO_CLOCK),  # time elapsed empty
-	(TIME_TOGO, ZERO_CLOCK),  # time till next event empty clock
 )
 
 def EMPTY_MAPPDSDICT():
@@ -386,20 +383,15 @@ EMPTY_MAPPDS_TDD = {
 	ALPHA_HIGH: 1.0,  # fully opaque
 	ALPHA_LOW: 0.3,  # almost fully alpha
 	APPMODE: APPMODE_CLOCKS,  # default to clocks mode
-	BBOX: EMPTY0_BBOX_TDD,  # empty bbox entry
+	BBOX: EMPTY_BBOX,  # empty bbox entry
 	CHECKBOX_ALPHA_LOW: True,  # the checkbox bool for ALPHA high/low mode
 	CHECKBOX_RUNAWAY: True,  # checkbox bool for RUNAWAY mode
-	CLOSE_BBOX: EMPTY0_BBOX_TDD,  # empty BBOX dict
+	CLOSE_BBOX: EMPTY_BBOX,  # empty BBOX dict
 	EVENT_ENTRIES: EMPTY0_EVENT_ENTRY_TDD,  # an empty event
 	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
 	MAINFRAME_SIZE: EMPTY0_XY_TDD,  # which event number is upcoming
 	SCREEN_POS: EMPTY0_XY_TDD,  # holds the screen position
 	SCREEN_DIMS: EMPTY0_XY_TDD,  #
-	TIME_AT_NEXT: ZERO_CLOCK,  # time of next event
-	TIME_AT_UPDATE: ZERO_CLOCK,  # holds time at last zero for keeping elapsed on time
-	TIME_CLOCK: ZERO_CLOCK,  # time wall clock
-	TIME_ELAPSED: ZERO_CLOCK,  # time elapsed empty
-	TIME_TOGO: ZERO_CLOCK,  # time till next event empty clock
 }
 
 
@@ -1585,10 +1577,10 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
 	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
 	APPMODE: APPMODE_CLOCKS,  # default mode is clocks
-	BBOX: EMPTY0_BBOX_TDD,  # FILLED IN BY INIT
+	BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
 	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
-	CLOSE_BBOX: EMPTY0_BBOX_TDD,  # FILLED IN BY INIT
+	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
 			DISMISSED: False,  # is this event dismissed
@@ -1880,7 +1872,7 @@ def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	if CF.MTSMS() < (TIME_LAST_MOVED_MTSMS + SZ_TIME_BTWN_MOVES):
-		return  # only move at minimum 1 sec apart
+		return  # only move at minimum  SZ_TIME_BTWN_MOVES apart
 
 	if hasMoved(mainframeToMove_):
 		screenSZX_, screenSZY_ = splitXYToRaw(getScreenDims(mainframeToMove_))
@@ -1931,17 +1923,18 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	if hasMoved(mainframeToCheck_, oldLocation_):
-		TBBox_ = getBBox(mainframeToCheck_)
+		TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = getBBox(mainframeToCheck_)
+		# TBBox_ = getBBox(mainframeToCheck_)
 		TCloseBBox_ = getCloseBBox(mainframeToCheck_)
 
 	else:
 		TBBox_ = MAPPDS[BBOX]
 		TCloseBBox_ = MAPPDS[CLOSE_BBOX]
 
-	TBBoxNorth_ = TBBox_[INDEX_NORTH]
-	TBBoxWest_ = TBBox_[INDEX_WEST]
-	TBBoxSouth_ = TBBox_[INDEX_SOUTH]
-	TBBoxEast_ = TBBox_[INDEX_EAST]
+	# TBBoxNorth_ = TBBox_[INDEX_NORTH]
+	# TBBoxWest_ = TBBox_[INDEX_WEST]
+	# TBBoxSouth_ = TBBox_[INDEX_SOUTH]
+	# TBBoxEast_ = TBBox_[INDEX_EAST]
 	TSize_ = MAPPDS[MAINFRAME_SIZE]
 	# print(f"""TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = splitBBoxToRaw(TBBox_) {TBBoxNorth_}, {TBBoxWest_}, {TBBoxSouth_}, {TBBoxEast_} = {splitBBoxToRaw(TBBox_)}""")
 	TMouseLcn = getMousePos()
@@ -2012,34 +2005,17 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# setClocks
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-timeLastSet_ = ZERO_CLOCK
-def setClocks():
-	global CLOCKS_DICT, timeLastSet_
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	now_ = CF.MTSMS()
-	if now_ > (timeLastSet_ + TIME_BETWEEN_TRUE_CHECKS):
-		return
-	timeLastSet_ = now_
-	CLOCKS_DICT[TIME_ELAPSED] = (now_ - CLOCKS_DICT[TIME_AT_UPDATE])
-	CLOCKS_DICT[TIME_CLOCK] = now_
-
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # updateClocks
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def updateClocks(mappdsToUse_=MAPPDS):
 	global CLOCKS_DICT, THECLOCK_DICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	now_ = CF.MTSMS()
+	now_ = CF.MTSS()
 	clocksDict_ = CLOCKS_DICT
 	then_ = TIME_AT_UPDATE + TIME_BETWEEN_UPDATES
 	if now_ > then_:
 		clocksDict_[TIME_CLOCK] = now_
-		clocksDict_[TIME_ELAPSED] = now_ - clocksDict_[TIME_AT_UPDATE])
+		clocksDict_[TIME_ELAPSED] = now_ - clocksDict_[TIME_AT_UPDATE]
 		clocksDict_[TIME_TOGO] = clocksDict_[TIME_AT_NEXT] - now_
 		CLOCKS_DICT = clocksDict_
 		THECLOCK_DICT[TIME_CLOCK] = now_
@@ -2057,7 +2033,7 @@ def updateClocks(mappdsToUse_=MAPPDS):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doInit1(mainframe_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	now_ = CF.MTSMS()
+	now_ = CF.MTSS()
 	mainframe_.AlphaChannel = SZ_ALPHA_HIGH
 	MAPPDS[ALPHA_CHANNEL] = SZ_ALPHA_HIGH
 	MAPPDS[BBOX] = getBBox(mainframe_)
