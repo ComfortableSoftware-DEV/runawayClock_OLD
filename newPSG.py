@@ -109,7 +109,7 @@ SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
-TIME_AT_ZERO = "TIME_AT_ZERO"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
+TIME_AT_UPDATE = "TIME_AT_UPDATE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
 TIME_BETWEEN_MOVES = 100  # comment
 TIME_BETWEEN_UPDATES = 100  # comment
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
@@ -261,7 +261,7 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_DICT = {  # holds the values for the clocks frame
 	TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
-	TIME_AT_ZERO: ZERO_CLOCK,  # holds the values for the clocks frame
+	TIME_AT_UPDATE: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -335,9 +335,10 @@ EMPTY0_EVENT_ENTRY_TDD = {
 
 EMPTY_CLOCKSTUP = (
 	(TIME_AT_NEXT, ZERO_CLOCK),  # the main count down to the next event time
-	(TIME_AT_ZERO, ZERO_CLOCK),  # the main clock time
+	(TIME_AT_UPDATE, ZERO_CLOCK),  # the main clock time
 	(TIME_CLOCK, ZERO_CLOCK),  # the main clock time
 	(TIME_ELAPSED, ZERO_CLOCK),  # the main elapsed time
+	(TIME_TOGO, ZERO_CLOCK),  # the main count down to the next event time
 )
 
 def EMPTY_CLOCKSDICT():
@@ -346,9 +347,10 @@ def EMPTY_CLOCKSDICT():
 
 EMPTY_CLOCKS_TDD = {
 	TIME_AT_NEXT: ZERO_CLOCK,  # the main count down to the next event time
-	TIME_AT_ZERO: ZERO_CLOCK,  # the main clock time
+	TIME_AT_UPDATE: ZERO_CLOCK,  # the main clock time
 	TIME_CLOCK: ZERO_CLOCK,  # the main clock time
 	TIME_ELAPSED: ZERO_CLOCK,  # the main elapsed time
+	TIME_TOGO: ZERO_CLOCK,  # the main count down to the next event time
 }
 
 
@@ -370,11 +372,6 @@ EMPTY_MAPPDSTUP = (
 	(MAINFRAME_SIZE, EMPTY0_XY_TDD),  # which event number is upcoming
 	(SCREEN_POS, EMPTY0_XY_TDD),  # holds the screen position
 	(SCREEN_DIMS, EMPTY0_XY_TDD),  # 
-	(TIME_AT_NEXT, ZERO_CLOCK),  # time of next event
-	(TIME_AT_ZERO, ZERO_CLOCK),  # holds time at last zero for keeping elapsed on time
-	(TIME_CLOCK, ZERO_CLOCK),  # time wall clock
-	(TIME_ELAPSED, ZERO_CLOCK),  # time elapsed empty
-	(TIME_TOGO, ZERO_CLOCK),  # time till next event empty clock
 )
 
 def EMPTY_MAPPDSDICT():
@@ -395,11 +392,6 @@ EMPTY_MAPPDS_TDD = {
 	MAINFRAME_SIZE: EMPTY0_XY_TDD,  # which event number is upcoming
 	SCREEN_POS: EMPTY0_XY_TDD,  # holds the screen position
 	SCREEN_DIMS: EMPTY0_XY_TDD,  # 
-	TIME_AT_NEXT: ZERO_CLOCK,  # time of next event
-	TIME_AT_ZERO: ZERO_CLOCK,  # holds time at last zero for keeping elapsed on time
-	TIME_CLOCK: ZERO_CLOCK,  # time wall clock
-	TIME_ELAPSED: ZERO_CLOCK,  # time elapsed empty
-	TIME_TOGO: ZERO_CLOCK,  # time till next event empty clock
 }
 
 
@@ -1364,12 +1356,12 @@ CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 }
 
 
-CLOCKS_TEXT_TIME_AT_ZERO = {  # define the text element for CLOCKS_CLOCK_TIME
+CLOCKS_TEXT_TIME_AT_UPDATE = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_AT_ZERO,  # comment
+	KEY: TIME_AT_UPDATE,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element

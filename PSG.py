@@ -109,7 +109,7 @@ SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
-TIME_AT_ZERO = "TIME_AT_ZERO"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
+TIME_AT_UPDATE = "TIME_AT_UPDATE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
 TIME_BETWEEN_MOVES = 100  # comment
 TIME_BETWEEN_UPDATES = 100  # comment
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
@@ -261,7 +261,7 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_DICT = {  # holds the values for the clocks frame
 	TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
-	TIME_AT_ZERO: ZERO_CLOCK,  # holds the values for the clocks frame
+	TIME_AT_UPDATE: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -335,7 +335,7 @@ EMPTY0_EVENT_ENTRY_TDD = {
 
 EMPTY_CLOCKSTUP = (
 	(TIME_AT_NEXT, ZERO_CLOCK),  # the main count down to the next event time
-	(TIME_AT_ZERO, ZERO_CLOCK),  # the main clock time
+	(TIME_AT_UPDATE, ZERO_CLOCK),  # the main clock time
 	(TIME_CLOCK, ZERO_CLOCK),  # the main clock time
 	(TIME_ELAPSED, ZERO_CLOCK),  # the main elapsed time
 )
@@ -346,7 +346,7 @@ def EMPTY_CLOCKSDICT():
 
 EMPTY_CLOCKS_TDD = {
 	TIME_AT_NEXT: ZERO_CLOCK,  # the main count down to the next event time
-	TIME_AT_ZERO: ZERO_CLOCK,  # the main clock time
+	TIME_AT_UPDATE: ZERO_CLOCK,  # the main clock time
 	TIME_CLOCK: ZERO_CLOCK,  # the main clock time
 	TIME_ELAPSED: ZERO_CLOCK,  # the main elapsed time
 }
@@ -371,7 +371,7 @@ EMPTY_MAPPDSTUP = (
 	(SCREEN_POS, EMPTY0_XY_TDD),  # holds the screen position
 	(SCREEN_DIMS, EMPTY0_XY_TDD),  #
 	(TIME_AT_NEXT, ZERO_CLOCK),  # time of next event
-	(TIME_AT_ZERO, ZERO_CLOCK),  # holds time at last zero for keeping elapsed on time
+	(TIME_AT_UPDATE, ZERO_CLOCK),  # holds time at last zero for keeping elapsed on time
 	(TIME_CLOCK, ZERO_CLOCK),  # time wall clock
 	(TIME_ELAPSED, ZERO_CLOCK),  # time elapsed empty
 	(TIME_TOGO, ZERO_CLOCK),  # time till next event empty clock
@@ -396,7 +396,7 @@ EMPTY_MAPPDS_TDD = {
 	SCREEN_POS: EMPTY0_XY_TDD,  # holds the screen position
 	SCREEN_DIMS: EMPTY0_XY_TDD,  #
 	TIME_AT_NEXT: ZERO_CLOCK,  # time of next event
-	TIME_AT_ZERO: ZERO_CLOCK,  # holds time at last zero for keeping elapsed on time
+	TIME_AT_UPDATE: ZERO_CLOCK,  # holds time at last zero for keeping elapsed on time
 	TIME_CLOCK: ZERO_CLOCK,  # time wall clock
 	TIME_ELAPSED: ZERO_CLOCK,  # time elapsed empty
 	TIME_TOGO: ZERO_CLOCK,  # time till next event empty clock
@@ -1364,12 +1364,12 @@ CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 }
 
 
-CLOCKS_TEXT_TIME_AT_ZERO = {  # define the text element for CLOCKS_CLOCK_TIME
+CLOCKS_TEXT_TIME_AT_UPDATE = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_AT_ZERO,  # comment
+	KEY: TIME_AT_UPDATE,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1714,10 +1714,13 @@ def hasMoved(mainframeToCheck_, locationXY_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # updateMainframeFromDict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def updateMainframeFromDict(mainframeToUpdate_, dictToUpdateFrom_):
+def updateMainframeFromDict(mainframeToUpdate_, dictToUpdateFrom_, isTimeUpdate_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_, val_ in dictToUpdateFrom_.items():
-		mainframeToUpdate_.FindElement(key_)(val_)
+		if isTimeUpdate_ is True:
+			mainframeToUpdate_.FindElement(key_)(CF.nrmlIntToHMS(val_))
+		else:
+			mainframeToUpdate_.FindElement(key_)(val_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2019,7 +2022,7 @@ def setClocks():
 	if now_ > (timeLastSet_ + TIME_BETWEEN_TRUE_CHECKS):
 		return
 	timeLastSet_ = now_
-	CLOCKS_DICT[TIME_ELAPSED] = (now_ - CLOCKS_DICT[TIME_AT_ZERO])
+	CLOCKS_DICT[TIME_ELAPSED] = (now_ - CLOCKS_DICT[TIME_AT_UPDATE])
 	CLOCKS_DICT[TIME_CLOCK] = now_
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2028,21 +2031,23 @@ def setClocks():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # updateClocks
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def updateClocks(MAPPDSToUse_=MAPPDS):
+def updateClocks(mappdsToUse_=MAPPDS):
 	global CLOCKS_DICT, THECLOCK_DICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	now_ = CF.MTSMS()
-	then_ = TIME_LAST_TRUE_CHECK + TIME_BETWEEN_UPDATES
+	clocksDict_ = CLOCKS_DICT
+	then_ = TIME_AT_UPDATE + TIME_BETWEEN_UPDATES
 	if now_ > then_:
-		CLOCKS_DICT[TIME_CLOCK] = now_
-		CLOCKS_DICT[TIME_ELAPSED] = now_ - CLOCKS_DICT[TIME_AT_ZERO])
-		CLOCKS_DICT[TIME_TOGO] = MAPPDSToUse_[TIME_OF_NEXT_EVENT] - now_)
+		clocksDict_[TIME_CLOCK] = now_
+		clocksDict_[TIME_ELAPSED] = now_ - clocksDict_[TIME_AT_UPDATE])
+		clocksDict_[TIME_TOGO] = clocksDict_[TIME_AT_NEXT] - now_
+		CLOCKS_DICT = clocksDict_
 		THECLOCK_DICT[TIME_CLOCK] = now_
-		MAPPDS_MODE = MAPPDSToUse_[APP_MODE]
-		if MAPPDS_MODE == APPMODE_THECLOCK:
-			updateMainframeFromDict(MAPPDSToUse_, THECLOCK_DICT)
-		elif MAPPDS_MODE == APPMODE_CLOCKS:
-			updateMainframeFromDict(MAPPDSToUse_, CLOCKS_DICT)
+		mappdsMode = mappdsToUse_[APP_MODE]
+		if mappdsMode == APPMODE_THECLOCK:
+			updateMainframeFromDict(mappdsToUse_, THECLOCK_DICT)
+		elif mappdsMode == APPMODE_CLOCKS:
+			updateMainframeFromDict(mappdsToUse_, CLOCKS_DICT)
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2052,6 +2057,7 @@ def updateClocks(MAPPDSToUse_=MAPPDS):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doInit1(mainframe_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	now_ = CF.MTSMS()
 	mainframe_.AlphaChannel = SZ_ALPHA_HIGH
 	MAPPDS[ALPHA_CHANNEL] = SZ_ALPHA_HIGH
 	MAPPDS[BBOX] = getBBox(mainframe_)
@@ -2059,9 +2065,9 @@ def doInit1(mainframe_):
 	MAPPDS[MAINFRAME_SIZE] = getElementSize(mainframe_)
 	MAPPDS[SCREEN_SIZE] = getScreenDims(mainframe_)
 	MAPPDS[SCREEN_POS] = getElementLocation(mainframe_)
-	CLOCKS_DICT[TIME_CLOCK] = CF.nowStrHMS()
-	CLOCKS_DICT[TIME_AT_ZERO] = CF.nowStrHMS()
-	TIME_AT_LAST_ZERO_CHECK = CF.nowStrHMS()
+	CLOCKS_DICT[TIME_CLOCK] = now_
+	CLOCKS_DICT[TIME_AT_UPDATE] = now_
+	TIME_AT_LAST_ZERO_CHECK = now_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
