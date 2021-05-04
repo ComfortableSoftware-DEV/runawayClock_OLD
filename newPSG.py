@@ -57,13 +57,14 @@ EVENT_MODE_ALARM = "EVENT_MODE_ALARM"  #
 EVENT_MODE_ALARMREMIND = "EVENT_MODE_ALARMREMIND"  # 
 EVENT_MODE_INTERVAL = "EVENT_MODE_INTERVAL"  # 
 FONT_DEFAULT = "Source Code Pro"  # set the main font
-INDEX_EAST = 3  # EAST
-INDEX_NORTH = 0  # NORTH
+INDEX_EAST = 2  # EAST
+INDEX_NORTH = 1  # NORTH
 INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  # 
-INDEX_SOUTH = 2  # SOUTH
-INDEX_WEST = 1  # WEST
+INDEX_SOUTH = 3  # SOUTH
+INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
+MAINFRAME_POS = "MAINFRAME_POS"  # can this event be snoozed
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
@@ -86,7 +87,6 @@ NAME = "NAME"  #
 PREDISMISSABLE = "PREDISMISSABLE"  # 
 RUNNING = "RUNNING"  # is this interval running or not
 SCREEN_DIMS = "SCREEN_DIMS"  # dimension of the screen
-SCREEN_POS = "SCREEN_POS"  # can this event be snoozed
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # snoozed bool
 SZ_ALPHA_HIGH = 1.0  # high alpha
@@ -373,9 +373,9 @@ EMPTY_MAPPDSTUP = (
 	(CLOSE_BBOX, EMPTY_BBOX),  # empty BBOX dict
 	(EVENT_ENTRIES, EMPTY0_EVENT_ENTRY_TDD),  # an empty event
 	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
+	(MAINFRAME_POS, EMPTY_XY),  # holds the screen position
 	(MAINFRAME_SIZE, EMPTY_XY),  # which event number is upcoming
 	(SCREEN_DIMS, EMPTY_XY),  # 
-	(SCREEN_POS, EMPTY_XY),  # holds the screen position
 )
 
 def EMPTY_MAPPDSDICT():
@@ -393,9 +393,9 @@ EMPTY_MAPPDS_TDD = {
 	CLOSE_BBOX: EMPTY_BBOX,  # empty BBOX dict
 	EVENT_ENTRIES: EMPTY0_EVENT_ENTRY_TDD,  # an empty event
 	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
+	MAINFRAME_POS: EMPTY_XY,  # holds the screen position
 	MAINFRAME_SIZE: EMPTY_XY,  # which event number is upcoming
 	SCREEN_DIMS: EMPTY_XY,  # 
-	SCREEN_POS: EMPTY_XY,  # holds the screen position
 }
 
 
@@ -1612,9 +1612,9 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
+	MAINFRAME_POS: EMPTY_XY,  # current screen position
 	MAINFRAME_SIZE: EMPTY_XY,  # current screen position
 	SCREEN_DIMS: EMPTY_XY,  # current screen position
-	SCREEN_POS: EMPTY_XY,  # current screen position
 }
 
 

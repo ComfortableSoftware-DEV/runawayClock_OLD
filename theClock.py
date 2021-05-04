@@ -48,18 +48,22 @@ def __main__():
 		myClockDict, \
 		alphaMode, \
 		myMappds
+#	while True:
+#		print(f"""{CF.MTSS()} {CF.nrmlIntToHMS(CF.MTSS())}""")
+#	CF.exit()
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	with \
 			PSG.THECLOCK_MAINFRAME_CLASS(), \
 			CF.withPickles("theClock.pkl", PSG.MAPPDS):
 		myMainframe = PSG.THECLOCK_MAINFRAME
 		PSG.doInit1(myMainframe)
+		print(f"""{CF.CLRALL}""")
 
 		alphaMode = False
 		lastMouseStatus = None
 
 		while True:
-			print(f"""loop {CF.MTSMS()}""")
+			# print(f"""loop {CF.MTSMS()}""")
 			event_, values_ = PSG.doReadAMainframe(myMainframe)
 			now_ = CF.MTSS()
 
@@ -71,7 +75,7 @@ def __main__():
 			if event_ != "__TIMEOUT__":
 				handleEvents(event_)
 
-			TMouseStatus_ = PSG.checkMouseLcn(myMainframe, myMappds[PSG.SCREEN_POS])
+			TMouseStatus_ = PSG.checkMouseLcn(myMainframe, myMappds[PSG.MAINFRAME_POS])
 			# print(f"""TMouseStatus_ {TMouseStatus_}""")
 
 			if (TMouseStatus_ == PSG.MOUSE_STATUS_OVER) and (lastMouseStatus != PSG.MOUSE_STATUS_OVER) and (PSG.MAPPDS[PSG.CHECKBOX_ALPHA_LOW] is True):
