@@ -22,7 +22,8 @@ APPMODE = "APPMODE"  # app mode key
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
-APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # main mode (xpand from clocks to this)
+APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # mouseOver mode (xpand from clocks to this)
+APPMODE_THECLOCK = "APPMODE_THECLOCK"  # theClock mode (xpand from clocks to this)
 BBOX = "BBOX"  # BOUNDING BOX
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
@@ -107,14 +108,17 @@ SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 30  # comment
 SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
+SZ_TIME_BETWEEN_MOVES = 100  # comment
+SZ_TIME_BETWEEN_UPDATES = 100  # comment
+SZ_TIMEOUT_MS = 100  # timeout for PSG
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
 TIME_AT_UPDATE = "TIME_AT_UPDATE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
-TIME_BETWEEN_MOVES = 100  # comment
-TIME_BETWEEN_UPDATES = 100  # comment
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
 TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
+TIME_LAST_MOVED = 0  # comment
+TIME_LAST_UPDATED = 0  # comment
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
@@ -370,8 +374,8 @@ EMPTY_MAPPDSTUP = (
 	(EVENT_ENTRIES, EMPTY0_EVENT_ENTRY_TDD),  # an empty event
 	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
 	(MAINFRAME_SIZE, EMPTY_XY),  # which event number is upcoming
-	(SCREEN_POS, EMPTY_XY),  # holds the screen position
 	(SCREEN_DIMS, EMPTY_XY),  #
+	(SCREEN_POS, EMPTY_XY),  # holds the screen position
 )
 
 def EMPTY_MAPPDSDICT():
@@ -390,8 +394,8 @@ EMPTY_MAPPDS_TDD = {
 	EVENT_ENTRIES: EMPTY0_EVENT_ENTRY_TDD,  # an empty event
 	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
 	MAINFRAME_SIZE: EMPTY_XY,  # which event number is upcoming
-	SCREEN_POS: EMPTY_XY,  # holds the screen position
 	SCREEN_DIMS: EMPTY_XY,  #
+	SCREEN_POS: EMPTY_XY,  # holds the screen position
 }
 
 
@@ -1356,7 +1360,7 @@ CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 }
 
 
-CLOCKS_TEXT_TIME_AT_UPDATE = {  # define the text element for CLOCKS_CLOCK_TIME
+CLOCKS_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
@@ -1576,7 +1580,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	ALPHA_CHANNEL: 1.0,  # current AlphaChannel setting
 	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
 	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
-	APPMODE: APPMODE_CLOCKS,  # default mode is clocks
+	APPMODE: APPMODE_THECLOCK,  # default mode is clocks
 	BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
 	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
@@ -1674,7 +1678,7 @@ def getElementSize(mainframeElementToSize_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def compareXY(XY1_, XY2_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	if (XY1[INDEX_X] == XY2_[INDEX_X]) and (XY1[INDEX_Y] == XY2_[INDEX_Y]):
+	if (XY1_[INDEX_X] == XY2_[INDEX_X]) and (XY1_[INDEX_Y] == XY2_[INDEX_Y]):
 		return True
 	else:
 		return False
@@ -1709,6 +1713,7 @@ def hasMoved(mainframeToCheck_, locationXY_):
 def updateMainframeFromDict(mainframeToUpdate_, dictToUpdateFrom_, isTimeUpdate_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_, val_ in dictToUpdateFrom_.items():
+		print(f"""key_ {key_} val_ {val_}""")
 		if isTimeUpdate_ is True:
 			mainframeToUpdate_.FindElement(key_)(CF.nrmlIntToHMS(val_))
 		else:
@@ -1806,8 +1811,8 @@ def tupleToXY(tupleToXY_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def getBBox(objectToBBox_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_, TLcnY_ = splitXYToRaw(getElementLocation(objectToBBox_))
-	TSizeX_, TSizeY_ = splitXYToRaw(getElementSize(objectToBBox_))
+	TLcnX_, TLcnY_ = getElementLocation(objectToBBox_)
+	TSizeX_, TSizeY_ = getElementSize(objectToBBox_)
 	return (
 		TLcnX_,
 		TLcnY_,
@@ -1822,8 +1827,8 @@ def getBBox(objectToBBox_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def getCloseBBox(objectToBBox_, closeEnough_=SZ_CLOSE):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_, TLcnY_ = splitXYToRaw(getElementLocation(objectToBBox_))
-	TSizeX_, TSizeY_ = splitXYToRaw(getElementSize(objectToBBox_))
+	TLcnX_, TLcnY_ = getElementLocation(objectToBBox_)
+	TSizeX_, TSizeY_ = getElementSize(objectToBBox_)
 	return (
 		(TLcnX_ - closeEnough_),
 		(TLcnY_ - closeEnough_),
@@ -1848,18 +1853,18 @@ def isInBBox(BBoxIn_, pointIn_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # moveFrame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def moveFrame(mainframeToMove_, moveTo_=(0, 0)):  # remember - is N/W and + is S/E
+def moveFrame(mainframeToMove_, thisMappds_=MAPPDS, moveTo_=(0, 0)):  # remember - is N/W and + is S/E
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	TLcnX_, TLcnY_ = splitXYToRaw(getElementLocation(mainframeToMove_))
 	TSizeX_, TSizeY_ = splitXYToRaw(getElementSize(mainframeToMove_))
 	if TLcnX_ < 0:
 		TLcnX_ = 0
-	elif TLcnX_ > (MAPPDS[SCREEN_DIMS][INDEX_X] - TSizeX_):
-		TLcnX_ = (MAPPDS[SCREEN_DIMS][INDEX_X] - TSizeX_)
+	elif TLcnX_ > (thisMappds_[SCREEN_DIMS][INDEX_X] - TSizeX_):
+		TLcnX_ = (thisMappds_[SCREEN_DIMS][INDEX_X] - TSizeX_)
 	if TLcnY_ < 0:
 		TLcnY_ = 0
-	elif TLcnY_ > (MAPPDS[SCREEN_DIMS][INDEX_Y] - TSizeY_):
-		TLcnY_ = (MAPPDS[SCREEN_DIMS][INDEX_Y] - TSizeY_)
+	elif TLcnY_ > (thisMappds_[SCREEN_DIMS][INDEX_Y] - TSizeY_):
+		TLcnY_ = (thisMappds_[SCREEN_DIMS][INDEX_Y] - TSizeY_)
 	mainframeToMove_.Move(moveTo_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1867,20 +1872,21 @@ def moveFrame(mainframeToMove_, moveTo_=(0, 0)):  # remember - is N/W and + is S
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # moveRelFrame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
-	global TIME_LAST_MOVED_MTSMS_MTSMS, NEXT_MOVED_TIME
+def moveRelFrame(mainframeToMove_, moveMpx=(0, 0), thisMappds_=MAPPDS):  # multiplier +/- 0-5
+	global TIME_LAST_MOVED
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	if CF.MTSMS() < (TIME_LAST_MOVED_MTSMS_MTSMS + SZ_TIME_BTWN_MOVES):
-		return  # only move at minimum  SZ_TIME_BTWN_MOVES apart
+	if CF.MTSMS() < (TIME_LAST_MOVED_MTSMS + SZ_TIME_BETWEEN_MOVES):
+		return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
-	if hasMoved(mainframeToMove_):
-		screenSZX_, screenSZY_ = splitXYToRaw(getScreenDims(mainframeToMove_))
+	if hasMoved(mainframeToMove_, thisMappds_[SCREEN_POS]):
+		screenSZX_, screenSZY_ = getScreenDims(mainframeToMove_)
 		(TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_) = getBBox(mainframeToMove_)
-		TSizeX_, TSizeY_ = splitXYToRaw(getElementSize(mainframeToMove_))
-		TLcnX_, TLcnY_ = splitXYToRaw(getElementLocation(mainframeToMove_))
+		TSizeX_, TSizeY_ = getElementSize(mainframeToMove_)
+		TLcnX_, TLcnY_ = getElementLocation(mainframeToMove_)
+
 	else:
-		screenSZX_, screenSZY_ = MAPPDS[SCREEN_DIMS]
+		screenSZX_, screenSZY_ = splitBBoxToRaw(thisMappds_[SCREEN_DIMS])
 
 	moveToX_ = TLcnX_ + (moveMpx[INDEX_X] * SZ_MOVE_DIST)
 	moveToY_ = TLcnY_ + (moveMpx[INDEX_Y] * SZ_MOVE_DIST)
@@ -1902,6 +1908,7 @@ def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 		return
 
 	mainframeToMove_.Move(moveToX_, moveToY_)
+	TIME_LAST_MOVED = CF.MTSMS()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1919,16 +1926,16 @@ def getScreenDims(mainframeToUse_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # checkMouseLcn
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def checkMouseLcn(mainframeToCheck_, oldLocation_):
+def checkMouseLcn(mainframeToCheck_, oldFrameLocation_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	if hasMoved(mainframeToCheck_, oldLocation_) is True:
-		TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = getBBox(mainframeToCheck_)
+	if hasMoved(mainframeToCheck_, oldFrameLocation_) is True:
+		TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = TBBox = getBBox(mainframeToCheck_)
 		# TBBox_ = getBBox(mainframeToCheck_)
 		TCloseBBox_ = getCloseBBox(mainframeToCheck_)
 
 	else:
-		TBBox_ = MAPPDS[BBOX]
+		TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = splitBBoxToRaw(MAPPDS[BBOX])
 		TCloseBBox_ = MAPPDS[CLOSE_BBOX]
 
 	# TBBoxNorth_ = TBBox_[INDEX_NORTH]
@@ -1937,11 +1944,19 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 	# TBBoxEast_ = TBBox_[INDEX_EAST]
 	TSize_ = MAPPDS[MAINFRAME_SIZE]
 	# print(f"""TBBoxNorth_, TBBoxWest_, TBBoxSouth_, TBBoxEast_ = splitBBoxToRaw(TBBox_) {TBBoxNorth_}, {TBBoxWest_}, {TBBoxSouth_}, {TBBoxEast_} = {splitBBoxToRaw(TBBox_)}""")
-	TMouseLcn = getMousePos()
+	TMouseLcn_ = getMousePos()
+	TMouseLcnX_ = TMouseLcn_[INDEX_X]
+	TMouseLcnY_ = TMouseLcn_[INDEX_Y]
+
 	isInCloseBBox_ = isInBBox(TCloseBBox_, TMouseLcn_)
+	print(f"""
+	TMouseLcn_ {TMouseLcn_}
+	TBBoxNorth_ {TBBoxNorth_}, TBBoxWest_ {TBBoxWest_}, TBBoxSouth_ {TBBoxSouth_}, TBBoxEast_ {TBBoxEast_}
+	isInCloseBBox_ {isInCloseBBox_}""")
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	if (TBBoxWest_ < TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_):
+		print("north")
 		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_N
 		else:
@@ -1949,6 +1964,7 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif ( TBBoxWest_ < TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ > TBBoxSouth_):
+		print("south")
 		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_S
 		else:
@@ -1956,6 +1972,7 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnX_ < TBBoxWest_) and (TBBoxNorth_< TMouseLcnY_ < TBBoxSouth_):
+		print("west")
 		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_W
 		else:
@@ -1963,6 +1980,7 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnX_ > TBBoxEast_) and (TBBoxNorth_< TMouseLcnY_ < TBBoxSouth_):
+		print("east")
 		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_E
 		else:
@@ -1970,6 +1988,7 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ > TBBoxSouth_) and (TMouseLcnX_ < TBBoxWest_):
+		print("southwest")
 		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_SW
 		else:
@@ -1977,6 +1996,7 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ > TBBoxSouth_) and (TMouseLcnX_ > TBBoxEast_):
+		print("southeast")
 		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_SE
 		else:
@@ -1984,6 +2004,7 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ < TBBoxNorth_) and (TMouseLcnX_ < TBBoxWest_):
+		print("northwest")
 		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_NW
 		else:
@@ -1991,6 +2012,7 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif (TMouseLcnY_ < TBBoxNorth_) and (TMouseLcnX_ > TBBoxEast_):
+		print("northeast")
 		if isInCloseBBox_ is True:
 			return MOUSE_STATUS_CLOSE_NE
 		else:
@@ -1998,6 +2020,7 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	elif isInBBox(TBBox_, (TMouseLcnX_, TMouseLcnY_)) is True:
+		print("over")
 		return MOUSE_STATUS_OVER
 
 	return None
@@ -2007,23 +2030,27 @@ def checkMouseLcn(mainframeToCheck_, oldLocation_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # updateClocks
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def updateClocks(mappdsToUse_=MAPPDS):
-	global CLOCKS_DICT, THECLOCK_DICT
+def updateClocks(mainframeToUse_, mappdsToUse_=MAPPDS):
+	global CLOCKS_DICT, THECLOCK_DICT, TIME_LAST_UPDATED
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	now_ = CF.MTSS()
 	clocksDict_ = CLOCKS_DICT
-	then_ = TIME_AT_UPDATE + TIME_BETWEEN_UPDATES
+	then_ = TIME_LAST_UPDATED + SZ_TIME_BETWEEN_UPDATES
+	print(f"""updateClocks now_ {now_} then_ {then_}""")
 	if now_ > then_:
+		print(f"""updating""")
 		clocksDict_[TIME_CLOCK] = now_
+		TIME_LAST_UPDATED = now_
 		clocksDict_[TIME_ELAPSED] = now_ - clocksDict_[TIME_AT_UPDATE]
 		clocksDict_[TIME_TOGO] = clocksDict_[TIME_AT_NEXT] - now_
 		CLOCKS_DICT = clocksDict_
 		THECLOCK_DICT[TIME_CLOCK] = now_
-		mappdsMode = mappdsToUse_[APP_MODE]
-		if mappdsMode == APPMODE_THECLOCK:
-			updateMainframeFromDict(mappdsToUse_, THECLOCK_DICT)
-		elif mappdsMode == APPMODE_CLOCKS:
-			updateMainframeFromDict(mappdsToUse_, CLOCKS_DICT)
+		mappdsMode_ = mappdsToUse_[APPMODE]
+		print(f"""mappdsMode_ {mappdsMode_}""")
+		if mappdsMode_ == APPMODE_THECLOCK:
+			updateMainframeFromDict(mainframeToUse_, THECLOCK_DICT, True)
+		elif mappdsMode_ == APPMODE_CLOCKS:
+			updateMainframeFromDict(mainframeToUse_, CLOCKS_DICT, True)
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2050,9 +2077,9 @@ def doInit1(mainframe_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # doReadAMainframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def doReadAMainframe(mainframeToRead_, timeout_=100):
+def doReadAMainframe(mainframeToRead_, timeout_=SZ_TIMEOUT_MS):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	event_, values_ = mainframeToRead_.Read()
+	event_, values_ = mainframeToRead_.Read(timeout=timeout_)
 	return event_, values_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2065,6 +2092,8 @@ def checkMouseStatus(mainframeToUse_, statusToDo_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	if (statusToDo_ in CLOSE_LIST) and (MAPPDS[CHECKBOX_RUNAWAY] is True):
+		print(f"""mouse status {statusToDo_}""")
+		return
 
 		if statusToDo_ == MOUSE_STATUS_CLOSE_N:
 			moveRelFrame(mainframeToUse_, (0, 1))

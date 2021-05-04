@@ -22,7 +22,8 @@ APPMODE = "APPMODE"  # app mode key
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
-APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # main mode (xpand from clocks to this)
+APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # mouseOver mode (xpand from clocks to this)
+APPMODE_THECLOCK = "APPMODE_THECLOCK"  # theClock mode (xpand from clocks to this)
 BBOX = "BBOX"  # BOUNDING BOX
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
@@ -107,14 +108,17 @@ SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 30  # comment
 SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
+SZ_TIME_BETWEEN_MOVES = 100  # comment
+SZ_TIME_BETWEEN_UPDATES = 100  # comment
+SZ_TIMEOUT_MS = 100  # timeout for PSG
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
 TIME_AT_UPDATE = "TIME_AT_UPDATE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
-TIME_BETWEEN_MOVES = 100  # comment
-TIME_BETWEEN_UPDATES = 100  # comment
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
 TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
+TIME_LAST_MOVED = 0  # comment
+TIME_LAST_UPDATED = 0  # comment
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
@@ -141,7 +145,7 @@ FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
-TIME_LAST_MOVED = ZERO_CLOCK  # to throttle moves
+TIME_LAST_MOVED_MTSMS = ZERO_CLOCK  # to throttle moves
 TIME_LAST_UPDATED = ZERO_CLOCK  # holds the time used to keep intervals accurate
 
 
@@ -370,8 +374,8 @@ EMPTY_MAPPDSTUP = (
 	(EVENT_ENTRIES, EMPTY0_EVENT_ENTRY_TDD),  # an empty event
 	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
 	(MAINFRAME_SIZE, EMPTY_XY),  # which event number is upcoming
-	(SCREEN_POS, EMPTY_XY),  # holds the screen position
 	(SCREEN_DIMS, EMPTY_XY),  # 
+	(SCREEN_POS, EMPTY_XY),  # holds the screen position
 )
 
 def EMPTY_MAPPDSDICT():
@@ -390,8 +394,8 @@ EMPTY_MAPPDS_TDD = {
 	EVENT_ENTRIES: EMPTY0_EVENT_ENTRY_TDD,  # an empty event
 	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
 	MAINFRAME_SIZE: EMPTY_XY,  # which event number is upcoming
-	SCREEN_POS: EMPTY_XY,  # holds the screen position
 	SCREEN_DIMS: EMPTY_XY,  # 
+	SCREEN_POS: EMPTY_XY,  # holds the screen position
 }
 
 
@@ -1356,7 +1360,7 @@ CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 }
 
 
-CLOCKS_TEXT_TIME_AT_UPDATE = {  # define the text element for CLOCKS_CLOCK_TIME
+CLOCKS_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
@@ -1576,7 +1580,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	ALPHA_CHANNEL: 1.0,  # current AlphaChannel setting
 	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
 	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
-	APPMODE: APPMODE_CLOCKS,  # default mode is clocks
+	APPMODE: APPMODE_THECLOCK,  # default mode is clocks
 	BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
 	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
