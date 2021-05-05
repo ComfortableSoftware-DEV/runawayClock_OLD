@@ -1361,7 +1361,6 @@ CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
-	VISIBLE: False,  # comment
 }
 
 
@@ -1375,7 +1374,6 @@ CLOCKS_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_T
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
-	VISIBLE: False,  # comment
 }
 
 
@@ -1443,11 +1441,19 @@ CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the mai
 		),
 	],
 	[
+		SG.Text(  # add a new row to clocks column
+			**CLOCKS_TEXT_TIME_AT_ZEROELAPSE,  # add time to go
+		),
 		SG.Text(  # add a new text element to row01 clocks column
 			**CLOCKS_TEXT_TIME_ELAPSED,  # add elapsed time
 		),
+	],
+	[
+		SG.Text(  # add a new text element to row01 clocks column
+			**CLOCKS_TEXT_TIME_TOGO,  # add elapsed time
+		),
 		SG.Text(  # add a new row to clocks column
-			**CLOCKS_TEXT_TIME_TOGO,  # add time to go
+			**CLOCKS_TEXT_TIME_AT_NEXT,  # add time to go
 		),
 	],
 	[
@@ -2098,7 +2104,7 @@ def doIt():
 				MAPPDS[CHECKBOX_ALPHA_LOW] = not MAPPDS[CHECKBOX_ALPHA_LOW]
 
 			elif event_ == BTN_ZERO:
-				CLOCKS_DICT[TIME_AT_ZERO] = CF.MTSS()
+				CLOCKS_DICT[TIME_AT_ZEROELAPSE] = CF.MTSS()
 				updateClocks()
 
 		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
