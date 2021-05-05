@@ -1354,26 +1354,26 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	KEY: TIME_AT_NEXT,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 }
 
 
 CLOCKS_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	KEY: TIME_AT_ZEROELAPSE,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
 }
 
 
