@@ -192,7 +192,7 @@ FILE_TYPES = "file_types"  #
 FINALIZE = "finalize"  #
 FOCUS = "focus"  #
 FONT = "font"  #
-FORCE_TOPLEVEL = "force_toplevel"  # 
+FORCE_TOPLEVEL = "force_toplevel"  #
 GRAB = "grab"  #
 GRAB_ANYWHERE = "grab_anywhere"  #
 GROUP_ID = "group_id"  #
@@ -1542,19 +1542,18 @@ THECLOCK_WINDOW = {  # define the clocks window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * CLOCKS_MAINFRAME_CLASS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_MAINFRAME = None
 class CLOCKS_MAINFRAME_CLASS():
-	global CLOCKS_MAINFRAME
+	global MAINFRAME
 
 	def __enter__(self):
-		global CLOCKS_MAINFRAME
-		CLOCKS_MAINFRAME = SG.Window(
+		global MAINFRAME
+		MAINFRAME = SG.Window(
 			**CLOCKS_WINDOW,
 		).finalize()
 
 	def __exit__(self, *args):
-		global CLOCKS_MAINFRAME
-		CLOCKS_MAINFRAME.close()
+		global MAINFRAME
+		MAINFRAME.close()
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1562,17 +1561,17 @@ class CLOCKS_MAINFRAME_CLASS():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 THECLOCK_MAINFRAME = None
 class THECLOCK_MAINFRAME_CLASS():
-	global THECLOCK_MAINFRAME
+	global MAINFRAME
 
 	def __enter__(self):
-		global THECLOCK_MAINFRAME
-		THECLOCK_MAINFRAME = SG.Window(
+		global MAINFRAME
+		MAINFRAME = SG.Window(
 			**THECLOCK_WINDOW,
 		).finalize()
 
 	def __exit__(self, *args):
-		global THECLOCK_MAINFRAME
-		THECLOCK_MAINFRAME.close()
+		global MAINFRAME
+		MAINFRAME.close()
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1673,11 +1672,12 @@ def getMousePos():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # getElementLocation
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def getElementLocation(mainframeToLocate_):
+def getElementLocation():
+	global MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	locationToRtn_ = mainframeToLocate_.CurrentLocation()
+	locationToRtn_ = MAINFRAME.CurrentLocation()
 	# print(f"""locationToRtn_ {locationToRtn_}""")
-	# print(f"""{CF.NNL(10)}{CF.getDebugInfo()}{CF.NEWLINE}{mainframeToLocate_.CurrentLocation}""")
+	# print(f"""{CF.NNL(10)}{CF.getDebugInfo()}{CF.NEWLINE}{MAINFRAME.CurrentLocation}""")
 	return (
 		locationToRtn_[INDEX_X],
 		locationToRtn_[INDEX_Y],
@@ -1769,24 +1769,26 @@ def getCloseBBox(location_, size_, closeEnough_=SZ_CLOSE):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # updateMainframeFromDict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def updateMainframeFromDict(mainframeToUpdate_, dictToUpdateFrom_, isTimeUpdate_=True):
+def updateMainframeFromDict(dictToUpdateFrom_, isTimeUpdate_=True):
+	global MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_, val_ in dictToUpdateFrom_.items():
-		print(f"""key_ {key_} val_ {val_}""")
+		# print(f"""key_ {key_} val_ {val_}""")
 		if isTimeUpdate_ is True:
-			mainframeToUpdate_.Element(key_).Update(value=CF.nrmlIntToHMS(val_))
+			MAINFRAME.Element(key_).Update(value=CF.nrmlIntToHMS(val_))
 		else:
-			mainframeToUpdate_.Element(key_).Update(value=val_)
+			MAINFRAME.Element(key_).Update(value=val_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # readWithDict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def readWithDict(mainframeToRead_, dictToReadWith_):
+def readWithDict(dictToReadWith_):
+	global MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_ in dictToReadWith_:
-		dictToReadWith_[key_] = mainframeToRead_[key_]
+		dictToReadWith_[key_] = MAINFRAME[key_]
 	return dictToReadWith_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1806,10 +1808,11 @@ def isInBBox(BBoxIn_, pointIn_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # moveFrame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def moveFrame(mainframeToMove_, moveTo_=(0, 0)):  # remember - is N/W and + is S/E
+def moveFrame(moveTo_=(0, 0)):  # remember - is N/W and + is S/E
+	global MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_, TLcnY_ = getElementLocation(mainframeToMove_)
-	TSizeX_, TSizeY_ = getElementSize(mainframeToMove_)
+	TLcnX_, TLcnY_ = getElementLocation(MAINFRAME)
+	TSizeX_, TSizeY_ = getElementSize(MAINFRAME)
 	if TLcnX_ < 0:
 		TLcnX_ = 0
 	elif TLcnX_ > (MAPPDS[SCREEN_DIMS][INDEX_X] - TSizeX_):
@@ -1818,15 +1821,15 @@ def moveFrame(mainframeToMove_, moveTo_=(0, 0)):  # remember - is N/W and + is S
 		TLcnY_ = 0
 	elif TLcnY_ > (MAPPDS[SCREEN_DIMS][INDEX_Y] - TSizeY_):
 		TLcnY_ = (MAPPDS[SCREEN_DIMS][INDEX_Y] - TSizeY_)
-	mainframeToMove_.Move(moveTo_)
+	MAINFRAME.Move(moveTo_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # moveRelFrame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
-	global TIME_LAST_MOVED, MAPPDS
+def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
+	global TIME_LAST_MOVED, MAPPDS, MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	if CF.MTSMS() < (TIME_LAST_MOVED_MTSMS + SZ_TIME_BETWEEN_MOVES):
@@ -1835,8 +1838,8 @@ def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 	screenSZX_, screenSZY_ = splitXYToRaw(MAPPDS[SCREEN_DIMS])
 	TSizeX_, TSizeY_ = splitXYToRaw(MAPPDS[MAINFRAME_SIZE])
 	TLcnX_, TLcnY_ = splitXYToRaw(MAPPDS[MAINFRAME_POS])
-	moveToX_ = TLcnX_ + (moveMpx[INDEX_X] * SZ_MOVE_DIST)
-	moveToY_ = TLcnY_ + (moveMpx[INDEX_Y] * SZ_MOVE_DIST)
+	moveToX_ = TLcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
+	moveToY_ = TLcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
 
 	if moveToX_ < 0:
 		moveToX_ = 0
@@ -1854,7 +1857,7 @@ def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 		# print(f"""(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA) (abs({moveToY_} - {TLcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA)}""")
 		return
 
-	mainframeToMove_.Move(moveToX_, moveToY_)
+	MAINFRAME.Move(moveToX_, moveToY_)
 	TIME_LAST_MOVED = CF.MTSMS()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -1863,9 +1866,9 @@ def moveRelFrame(mainframeToMove_, moveMpx=(0, 0)):  # multiplier +/- 0-5
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # getScreenDims
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def getScreenDims(mainframeToUse_):
+def getScreenDims():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TDim_ = mainframeToUse_.GetScreenDimensions()
+	TDim_ = MAINFRAME.GetScreenDimensions()
 	return TDim_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1886,12 +1889,12 @@ def updateMappds(mainframeLocation_):
 # checkMouseLcn
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 @profile
-def checkMouseLcn(mainframeToCheck_, oldFrameLocation_):
-	global MAPPDS, LAST_MOUSE_STATUS
+def checkMouseLcn(oldFrameLocation_):
+	global MAPPDS, LAST_MOUSE_STATUS, MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	statusToRtn_ = None
-	TLcn_ = getElementLocation(mainframeToCheck_)
+	TLcn_ = getElementLocation()
 	TMouseLcnX_, TMouseLcnY_ = TMouseLcn_ = getMousePos()
 	TBBoxWest_, TBBoxNorth_, TBBoxEast_, TBBoxSouth_ = TBBox_ = getBBox(TLcn_, MAPPDS[MAINFRAME_SIZE])
 	TCloseBBox_ = getCloseBBox(TLcn_, MAPPDS[MAINFRAME_SIZE])
@@ -1962,11 +1965,11 @@ def checkMouseLcn(mainframeToCheck_, oldFrameLocation_):
 		statusToRtn_ = MOUSE_STATUS_OVER
 
 	if (statusToRtn_ == MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS != MOUSE_STATUS_OVER) and (MAPPDS[CHECKBOX_ALPHA_LOW] is True):
-		mainframeToCheck_.AlphaChannel = MAPPDS[ALPHA_LOW]
+		MAINFRAME.AlphaChannel = MAPPDS[ALPHA_LOW]
 		alphaMode = True
 
 	elif (statusToRtn_ != MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS == MOUSE_STATUS_OVER):
-		mainframeToCheck_.AlphaChannel = MAPPDS[ALPHA_HIGH]
+		MAINFRAME.AlphaChannel = MAPPDS[ALPHA_HIGH]
 		alphaMode = False
 
 	LAST_MOUSE_STATUS = statusToRtn_
@@ -1979,8 +1982,8 @@ def checkMouseLcn(mainframeToCheck_, oldFrameLocation_):
 # updateClocks
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 @profile
-def updateClocks(mainframeToUse_):
-	global CLOCKS_DICT, THECLOCK_DICT, TIME_LAST_UPDATED, MAPPDS
+def updateClocks():
+	global CLOCKS_DICT, THECLOCK_DICT, TIME_LAST_UPDATED, MAPPDS, MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	now_ = CF.MTSS()
 	clocksDict_ = CLOCKS_DICT
@@ -1997,9 +2000,9 @@ def updateClocks(mainframeToUse_):
 		mappdsMode_ = MAPPDS[APPMODE]
 		# print(f"""mappdsMode_ {mappdsMode_}""")
 		if mappdsMode_ == APPMODE_THECLOCK:
-			updateMainframeFromDict(mainframeToUse_, THECLOCK_DICT, True)
+			updateMainframeFromDict(MAINFRAME, THECLOCK_DICT, True)
 		elif mappdsMode_ == APPMODE_CLOCKS:
-			updateMainframeFromDict(mainframeToUse_, CLOCKS_DICT, True)
+			updateMainframeFromDict(MAINFRAME, CLOCKS_DICT, True)
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2007,14 +2010,14 @@ def updateClocks(mainframeToUse_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # doInit
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def doInit1(mainframe_):
-	global MAPPDS
+def doInit1():
+	global MAPPDS, MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	now_ = CF.MTSS()
-	mainframe_.AlphaChannel = SZ_ALPHA_HIGH
-	MAPPDS[MAINFRAME_POS] = getElementLocation(mainframe_)
-	MAPPDS[SCREEN_DIMS] = getScreenDims(mainframe_)
-	MAPPDS[MAINFRAME_SIZE] = getElementSize(mainframe_)
+	MAINFRAME.AlphaChannel = SZ_ALPHA_HIGH
+	MAPPDS[MAINFRAME_POS] = getElementLocation()
+	MAPPDS[SCREEN_DIMS] = getScreenDims()
+	MAPPDS[MAINFRAME_SIZE] = getElementSize(MAINFRAME)
 
 	MAPPDS[ALPHA_CHANNEL] = SZ_ALPHA_HIGH
 	MAPPDS[BBOX] = getBBox(MAPPDS[MAINFRAME_POS], MAPPDS[MAINFRAME_SIZE])
@@ -2028,9 +2031,9 @@ def doInit1(mainframe_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # doReadAMainframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def doReadAMainframe(mainframeToRead_, timeout_=SZ_TIMEOUT_MS):
+def doReadAMainframe(timeout_=SZ_TIMEOUT_MS):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	event_, values_ = mainframeToRead_.Read(timeout=timeout_)
+	event_, values_ = MAINFRAME.Read(timeout=timeout_)
 	return event_, values_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2039,34 +2042,35 @@ def doReadAMainframe(mainframeToRead_, timeout_=SZ_TIMEOUT_MS):
 # checkMouseStatus
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 @profile
-def checkMouseStatus(mainframeToUse_, statusToDo_):
+def checkMouseStatus(statusToDo_):
+	global MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	if (statusToDo_ in CLOSE_LIST) and (MAPPDS[CHECKBOX_RUNAWAY] is True):
 
 		if statusToDo_ == MOUSE_STATUS_CLOSE_N:
-			moveRelFrame(mainframeToUse_, (0, 1))
+			moveRelFrame(moveMpx_=(0, 1))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_S:
-			moveRelFrame(mainframeToUse_, (0, -1))
+			moveRelFrame(moveMpx_=(0, -1))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_E:
-			moveRelFrame(mainframeToUse_, (-1, 0))
+			moveRelFrame(moveMpx_=(-1, 0))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_W:
-			moveRelFrame(mainframeToUse_, (1, 0))
+			moveRelFrame(moveMpx_=(1, 0))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_NW:
-			moveRelFrame(mainframeToUse_, (1, 1))
+			moveRelFrame(moveMpx_=(1, 1))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_SW:
-			moveRelFrame(mainframeToUse_, (1, -1))
+			moveRelFrame(moveMpx_=(1, -1))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_NE:
-			moveRelFrame(mainframeToUse_, (-1, 1))
+			moveRelFrame(moveMpx_=(-1, 1))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_SE:
-			moveRelFrame(mainframeToUse_, (-1, -1))
+			moveRelFrame(moveMpx_=(-1, -1))
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 

@@ -1,4 +1,0 @@
-#!/usr/bin/#!/usr/bin/env zsh
-
-
-python -m py_compile $1

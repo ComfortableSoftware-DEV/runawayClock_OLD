@@ -14,7 +14,6 @@ lastMouseStatus = None
 alphaMode = None
 myMainframe = None
 myClockDict = PSG.THECLOCK_DICT
-myMainframe = PSG.THECLOCK_MAINFRAME
 myMappds = PSG.MAPPDS
 
 
@@ -44,7 +43,6 @@ def __main__():
 	global \
 		oldClock, \
 		lastMouseStatus, \
-		myMainframe, \
 		myClockDict, \
 		alphaMode, \
 		myMappds
@@ -55,37 +53,26 @@ def __main__():
 	with \
 			PSG.THECLOCK_MAINFRAME_CLASS(), \
 			CF.withPickles("theClock.pkl", PSG.MAPPDS):
-		myMainframe = PSG.THECLOCK_MAINFRAME
-		PSG.doInit1(myMainframe)
+		PSG.doInit1()
 
 		alphaMode = False
 		lastMouseStatus = None
 
 		while True:
 			# print(f"""loop {CF.MTSMS()}""")
-			event_, values_ = PSG.doReadAMainframe(myMainframe)
+			event_, values_ = PSG.doReadAMainframe()
 			now_ = CF.MTSS()
 
 			if now_ != oldClock:
 				oldClock = now_
 				myClockDict[PSG.TIME_CLOCK] = oldClock
-				PSG.updateMainframeFromDict(myMainframe, myClockDict, True)
+				PSG.updateMainframeFromDict(myClockDict, True)
 
 			if event_ != "__TIMEOUT__":
 				handleEvents(event_)
 
-			TMouseStatus_ = PSG.checkMouseLcn(myMainframe, myMappds[PSG.MAINFRAME_POS])
-			# print(f"""TMouseStatus_ {TMouseStatus_}""")
-
-#			if (TMouseStatus_ == PSG.MOUSE_STATUS_OVER) and (lastMouseStatus != PSG.MOUSE_STATUS_OVER) and (PSG.MAPPDS[PSG.CHECKBOX_ALPHA_LOW] is True):
-#				myMainframe.AlphaChannel = PSG.MAPPDS[PSG.ALPHA_LOW]
-#				alphaMode = True
-#
-#			elif (TMouseStatus_ != PSG.MOUSE_STATUS_OVER) and (lastMouseStatus == PSG.MOUSE_STATUS_OVER):
-#				myMainframe.AlphaChannel = PSG.MAPPDS[PSG.ALPHA_HIGH]
-#				alphaMode = False
-
-			PSG.checkMouseStatus(myMainframe, TMouseStatus_)
+			TMouseStatus_ = PSG.checkMouseLcn(myMappds[PSG.MAINFRAME_POS])
+			PSG.checkMouseStatus(TMouseStatus_)
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
