@@ -108,7 +108,7 @@ SZ_MAIN_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floati
 SZ_MAIN_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
 SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 30  # comment
-SZ_MOVE_DIST = 30  # comment
+SZ_MOVE_DIST = 50  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 120  # throttle mouse checking
 SZ_TIMEMS_BETWEEN_MOVES = 300  # comment
@@ -116,7 +116,7 @@ SZ_TIMEMS_BETWEEN_UPDATES = 800  # comment
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
-TIME_AT_UPDATE = "TIME_AT_UPDATE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
+TIME_AT_ZEROELAPSE = "TIME_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
 TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
@@ -270,7 +270,7 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_DICT = {  # holds the values for the clocks frame
 	TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
-	TIME_AT_UPDATE: ZERO_CLOCK,  # holds the values for the clocks frame
+	TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -344,7 +344,7 @@ EMPTY0_EVENT_ENTRY_TDD = {
 
 EMPTY_CLOCKSTUP = (
 	(TIME_AT_NEXT, ZERO_CLOCK),  # the main count down to the next event time
-	(TIME_AT_UPDATE, ZERO_CLOCK),  # the main clock time
+	(TIME_AT_ZEROELAPSE, ZERO_CLOCK),  # the main clock time
 	(TIME_CLOCK, ZERO_CLOCK),  # the main clock time
 	(TIME_ELAPSED, ZERO_CLOCK),  # the main elapsed time
 	(TIME_TOGO, ZERO_CLOCK),  # the main count down to the next event time
@@ -356,7 +356,7 @@ def EMPTY_CLOCKSDICT():
 
 EMPTY_CLOCKS_TDD = {
 	TIME_AT_NEXT: ZERO_CLOCK,  # the main count down to the next event time
-	TIME_AT_UPDATE: ZERO_CLOCK,  # the main clock time
+	TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # the main clock time
 	TIME_CLOCK: ZERO_CLOCK,  # the main clock time
 	TIME_ELAPSED: ZERO_CLOCK,  # the main elapsed time
 	TIME_TOGO: ZERO_CLOCK,  # the main count down to the next event time
@@ -1370,7 +1370,7 @@ CLOCKS_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_T
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_AT_UPDATE,  # comment
+	KEY: TIME_AT_ZEROELAPSE,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1543,36 +1543,38 @@ THECLOCK_WINDOW = {  # define the clocks window
 # * SCTN090D frame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * CLOCKS_MAINFRAME_CLASS
+# * CLOCKS_CLASS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-class CLOCKS_MAINFRAME_CLASS():
-	global MAINFRAME
+class CLOCKS_CLASS():
+	global MAINFRAME, MAPPDS
 
 	def __enter__(self):
-		global MAINFRAME
+		global MAINFRAME, MAPPDS
 		MAINFRAME = SG.Window(
 			**CLOCKS_WINDOW,
 		).finalize()
+		MAPPDS[APPMODE] = APPMODE_CLOCKS
 
 	def __exit__(self, *args):
-		global MAINFRAME
+		global MAINFRAME, MAPPDS
 		MAINFRAME.close()
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * THECLOCK_MAINFRAME_CLASS
+# * THECLOCK_CLASS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-class THECLOCK_MAINFRAME_CLASS():
-	global MAINFRAME
+class THECLOCK_CLASS():
+	global MAINFRAME, MAPPDS
 
 	def __enter__(self):
-		global MAINFRAME
+		global MAINFRAME, MAPPDS
 		MAINFRAME = SG.Window(
 			**THECLOCK_WINDOW,
 		).finalize()
+		MAPPDS[APPMODE] = APPMODE_THECLOCK
 
 	def __exit__(self, *args):
-		global MAINFRAME
+		global MAINFRAME, MAPPDS
 		MAINFRAME.close()
 
 
