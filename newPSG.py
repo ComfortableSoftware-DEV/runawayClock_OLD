@@ -46,7 +46,7 @@ COLOR_GRAYC = "#CCCCCC"  # gray C
 COLOR_TEXT_HIGH = "#9900FF"  # the highlight color used in blinking bits when they are 'lit'
 COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
 COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
-COLOR_TIME_CLOCK = "#9966FF"  # color of the clock on any window/frame/etc.
+COLOR_TIME_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
 COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
@@ -64,7 +64,8 @@ INDEX_SOUTH = 3  # SOUTH
 INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
-MAINFRAME_POS = "MAINFRAME_POS"  # can this event be snoozed
+LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
+MAINFRAME_POS = "MAINFRAME_POS"  # screen position of the mainframe
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
@@ -145,6 +146,7 @@ FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
+MAINFRAME = None  # mainframe so everything passes together always
 TIME_LAST_MOVED_MTSMS = ZERO_CLOCK  # to throttle moves
 TIME_LAST_UPDATED = ZERO_CLOCK  # holds the time used to keep intervals accurate
 
@@ -1612,6 +1614,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
+	MAINFRAME: None,  # current screen position
 	MAINFRAME_POS: EMPTY_XY,  # current screen position
 	MAINFRAME_SIZE: EMPTY_XY,  # current screen position
 	SCREEN_DIMS: EMPTY_XY,  # current screen position

@@ -11,6 +11,7 @@ from dateutil import tz as TZ
 from dateutil.relativedelta import relativedelta as RD
 from sys import argv
 from sys import exit
+from time import localtime as LT
 from time import mktime as MT
 from time import monotonic as TMT
 from time import time as WALLSECS
@@ -30,6 +31,8 @@ EXISTS = OSPATH.exists
 gc.enable()
 HOME = f"{OSPATH.expanduser('~')}"
 PP = pprint.PrettyPrinter(indent=2)
+TMTSS = DT.timestamp
+GMTOFFSET = LT().tm_gmtoff
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#

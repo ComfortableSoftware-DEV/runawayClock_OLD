@@ -57,7 +57,6 @@ def __main__():
 			CF.withPickles("theClock.pkl", PSG.MAPPDS):
 		myMainframe = PSG.THECLOCK_MAINFRAME
 		PSG.doInit1(myMainframe)
-		print(f"""{CF.CLRALL}""")
 
 		alphaMode = False
 		lastMouseStatus = None
@@ -78,13 +77,13 @@ def __main__():
 			TMouseStatus_ = PSG.checkMouseLcn(myMainframe, myMappds[PSG.MAINFRAME_POS])
 			# print(f"""TMouseStatus_ {TMouseStatus_}""")
 
-			if (TMouseStatus_ == PSG.MOUSE_STATUS_OVER) and (lastMouseStatus != PSG.MOUSE_STATUS_OVER) and (PSG.MAPPDS[PSG.CHECKBOX_ALPHA_LOW] is True):
-				myMainframe.AlphaChannel = PSG.MAPPDS[PSG.ALPHA_LOW]
-				alphaMode = True
-
-			elif (TMouseStatus_ != PSG.MOUSE_STATUS_OVER) and (lastMouseStatus == PSG.MOUSE_STATUS_OVER):
-				myMainframe.AlphaChannel = PSG.MAPPDS[PSG.ALPHA_HIGH]
-				alphaMode = False
+#			if (TMouseStatus_ == PSG.MOUSE_STATUS_OVER) and (lastMouseStatus != PSG.MOUSE_STATUS_OVER) and (PSG.MAPPDS[PSG.CHECKBOX_ALPHA_LOW] is True):
+#				myMainframe.AlphaChannel = PSG.MAPPDS[PSG.ALPHA_LOW]
+#				alphaMode = True
+#
+#			elif (TMouseStatus_ != PSG.MOUSE_STATUS_OVER) and (lastMouseStatus == PSG.MOUSE_STATUS_OVER):
+#				myMainframe.AlphaChannel = PSG.MAPPDS[PSG.ALPHA_HIGH]
+#				alphaMode = False
 
 			PSG.checkMouseStatus(myMainframe, TMouseStatus_)
 
