@@ -64,9 +64,9 @@ INDEX_SOUTH = 3  # SOUTH
 INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
-MAINFRAME_LCN = "MAINFRAME_LCN"  # screen position of the mainframe
+LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
+MAINFRAME_POS = "MAINFRAME_POS"  # screen position of the mainframe
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
-MOUSE_LCN = "MOUSE_LCN"  # track mouse location to ease load a bit
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
 MOUSE_STATUS_CLOSE_NE = "MOUSE_STATUS_CLOSE_NE"  # mouse is northeast of checked element
@@ -78,7 +78,6 @@ MOUSE_STATUS_CLOSE_W = "MOUSE_STATUS_CLOSE_W"  # mouse is west of checked elemen
 MOUSE_STATUS_E = "MOUSE_STATUS_E"  # mouse is east of checked element
 MOUSE_STATUS_N = "MOUSE_STATUS_N"  # mouse is north of checked element
 MOUSE_STATUS_NE = "MOUSE_STATUS_NE"  # mouse is northeast of checked element
-MOUSE_STATUS_NONE = "MOUSE_STATUS_NONE"  # mouse is northeast of checked element
 MOUSE_STATUS_NW = "MOUSE_STATUS_NW"  # mouse is northwest of checked element
 MOUSE_STATUS_OVER = "MOUSE_STATUS_OVER"  # mouse is southwest of checked element
 MOUSE_STATUS_S = "MOUSE_STATUS_S"  # mouse is south of checked element
@@ -95,11 +94,11 @@ SZ_ALPHA_HIGH = 1.0  # high alpha
 SZ_ALPHA_LOW = 0.1  # low alpha setting
 SZ_BORDER_DEPTH = 0  # border depth
 SZ_BTNS = 6  # size for button text
-SZ_CLOCKS_MOVE = 15  # how far to move each time the mouse approaches
+SZ_CLOCKS_MOVE = 10  # how far to move each time the mouse approaches
 SZ_CLOCKS_TIME_CLOCK = 26  # size of the main clock on the clocks only floating widget
 SZ_CLOCKS_TIME_ELAPSED = 13  # size of the elapsed clock on the clocks only floating widget
 SZ_CLOCKS_TIME_TOGO = 13  # size of the main togo clock on the clocks only floating widget
-SZ_CLOSE = 80  # close enough to move from the mouse
+SZ_CLOSE = 50  # close enough to move from the mouse
 SZ_EDIT_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
 SZ_EDIT_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
 SZ_EDIT_TIME_TOGO = 10  # size of the main togo clock on the clocks only floating widget
@@ -110,9 +109,8 @@ SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 30  # comment
 SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
-SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 120  # throttle mouse checking
-SZ_TIMEMS_BETWEEN_MOVES = 120  # comment
-SZ_TIMEMS_BETWEEN_UPDATES = 800  # comment
+SZ_TIME_BETWEEN_MOVES = 100  # comment
+SZ_TIME_BETWEEN_UPDATES = 100  # comment
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
@@ -120,6 +118,8 @@ TIME_AT_UPDATE = "TIME_AT_UPDATE"  # the time at last zero to keep elapsed time 
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
 TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
+TIME_LAST_MOVED = 0  # comment
+TIME_LAST_UPDATED = 0  # comment
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
@@ -146,12 +146,9 @@ FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
-LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
 MAINFRAME = None  # mainframe so everything passes together always
-MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
-TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
-TIMEMS_NEXT_MOVED = 0  # comment
-TIMEMS_NEXT_UPDATED = 0  # comment
+TIME_LAST_MOVED_MTSMS = ZERO_CLOCK  # to throttle moves
+TIME_LAST_UPDATED = ZERO_CLOCK  # holds the time used to keep intervals accurate
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -378,7 +375,7 @@ EMPTY_MAPPDSTUP = (
 	(CLOSE_BBOX, EMPTY_BBOX),  # empty BBOX dict
 	(EVENT_ENTRIES, EMPTY0_EVENT_ENTRY_TDD),  # an empty event
 	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
-	(MAINFRAME_LCN, EMPTY_XY),  # holds the screen position
+	(MAINFRAME_POS, EMPTY_XY),  # holds the screen position
 	(MAINFRAME_SIZE, EMPTY_XY),  # which event number is upcoming
 	(SCREEN_DIMS, EMPTY_XY),  #
 )
@@ -398,7 +395,7 @@ EMPTY_MAPPDS_TDD = {
 	CLOSE_BBOX: EMPTY_BBOX,  # empty BBOX dict
 	EVENT_ENTRIES: EMPTY0_EVENT_ENTRY_TDD,  # an empty event
 	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
-	MAINFRAME_LCN: EMPTY_XY,  # holds the screen position
+	MAINFRAME_POS: EMPTY_XY,  # holds the screen position
 	MAINFRAME_SIZE: EMPTY_XY,  # which event number is upcoming
 	SCREEN_DIMS: EMPTY_XY,  #
 }
@@ -1616,9 +1613,8 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
 	MAINFRAME: None,  # current screen position
-	MAINFRAME_LCN: EMPTY_XY,  # current screen position
+	MAINFRAME_POS: EMPTY_XY,  # current screen position
 	MAINFRAME_SIZE: EMPTY_XY,  # current screen position
-	MOUSE_LCN: (0, 0),  # track mouse location
 	SCREEN_DIMS: EMPTY_XY,  # current screen position
 }
 
@@ -1664,11 +1660,11 @@ def splitXYToRaw(XYToSplit_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*def mousepos():
 @profile
 def getMousePos():
-	global TIMEMS_NEXT_MOUSE_CHECK
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-
+	# mseData_ = DISP.Display().screen().root.query_pointer()._data
 	mseData_ = MLCN()._data
-	MAPPDS[MOUSE_LCN] = locationToRtn_ = (mseData_["root_x"], mseData_["root_y"])
+	locationToRtn_ = (mseData_["root_x"], mseData_["root_y"])
+	# el(mseData_)
 	return locationToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1753,6 +1749,17 @@ def getCloseBBox(location_, size_, closeEnough_=SZ_CLOSE):
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
+# # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# # hasMoved
+# # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# def hasMoved(mainframeToCheck_, locationXY_):
+# 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+# 	TLcn_ = getElementLocation(mainframeToCheck_)
+# 	result_ = compareXY(TLcn_, locationXY_)
+# 	return result_
+# 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # updateMainframeFromDict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1816,17 +1823,15 @@ def moveFrame(moveTo_=(0, 0)):  # remember - is N/W and + is S/E
 # moveRelFrame
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
-	global TIMEMS_NEXT_MOVED, MAPPDS, MAINFRAME
+	global TIME_LAST_MOVED, MAPPDS, MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	now_ = CF.MTSMS()
-	if now_ < TIMEMS_NEXT_MOVED:
+	if CF.MTSMS() < (TIME_LAST_MOVED_MTSMS + SZ_TIME_BETWEEN_MOVES):
 		return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
-	TIMEMS_NEXT_MOVED = now_ + SZ_TIMEMS_BETWEEN_MOUSE_CHECKS
 	screenSZX_, screenSZY_ = splitXYToRaw(MAPPDS[SCREEN_DIMS])
 	TSizeX_, TSizeY_ = splitXYToRaw(MAPPDS[MAINFRAME_SIZE])
-	TLcnX_, TLcnY_ = splitXYToRaw(MAPPDS[MAINFRAME_LCN])
+	TLcnX_, TLcnY_ = splitXYToRaw(MAPPDS[MAINFRAME_POS])
 	moveToX_ = TLcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
 	moveToY_ = TLcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
 
@@ -1847,7 +1852,7 @@ def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
 		return
 
 	MAINFRAME.Move(moveToX_, moveToY_)
-	TIMEMS_NEXT_MOVED = CF.MTSMS()
+	TIME_LAST_MOVED = CF.MTSMS()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1868,9 +1873,9 @@ def getScreenDims():
 def updateMappds(mainframeLocation_):
 	global MAPPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	MAPPDS[MAINFRAME_LCN] = mainframeLocation_
-	MAPPDS[BBOX] = getBBox(MAPPDS[MAINFRAME_LCN], MAPPDS[MAINFRAME_SIZE])
-	MAPPDS[CLOSE_BBOX] = getCloseBBox(MAPPDS[MAINFRAME_LCN], MAPPDS[MAINFRAME_SIZE])
+	MAPPDS[MAINFRAME_POS] = mainframeLocation_
+	MAPPDS[BBOX] = getBBox(MAPPDS[MAINFRAME_POS], MAPPDS[MAINFRAME_SIZE])
+	MAPPDS[CLOSE_BBOX] = getCloseBBox(MAPPDS[MAINFRAME_POS], MAPPDS[MAINFRAME_SIZE])
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1879,17 +1884,8 @@ def updateMappds(mainframeLocation_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 @profile
 def checkMouseLcn(oldFrameLocation_):
-	global \
-		LAST_MOUSE_STATUS, \
-		MAINFRAME, \
-		MAPPDS, \
-		TIMEMS_NEXT_MOUSE_CHECK
+	global MAPPDS, LAST_MOUSE_STATUS, MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-
-	now_ = CF.MTSMS()
-	if now_ < TIMEMS_NEXT_MOUSE_CHECK:
-		return MOUSE_STATUS_NONE
-	TIMEMS_NEXT_MOUSE_CHECK = now_ + SZ_TIMEMS_BETWEEN_MOUSE_CHECKS
 
 	statusToRtn_ = None
 	TLcn_ = getElementLocation()
@@ -1981,28 +1977,26 @@ def checkMouseLcn(oldFrameLocation_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 @profile
 def updateClocks():
-	global CLOCKS_DICT, THECLOCK_DICT, TIMEMS_NEXT_UPDATED, MAPPDS, MAINFRAME
+	global CLOCKS_DICT, THECLOCK_DICT, TIME_LAST_UPDATED, MAPPDS, MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	nowMS_ = CF.MTSMS()
 	now_ = CF.MTSS()
 	clocksDict_ = CLOCKS_DICT
+	then_ = TIME_LAST_UPDATED + SZ_TIME_BETWEEN_UPDATES
 	# print(f"""updateClocks now_ {now_} then_ {then_}""")
-	if nowMS_ > TIMEMS_NEXT_UPDATED:
+	if now_ > then_:
 		# print(f"""updating""")
 		clocksDict_[TIME_CLOCK] = now_
-		TIMEMS_NEXT_UPDATED = nowMS_ + SZ_TIMEMS_BETWEEN_UPDATES
+		TIME_LAST_UPDATED = now_
 		clocksDict_[TIME_ELAPSED] = now_ - clocksDict_[TIME_AT_UPDATE]
 		clocksDict_[TIME_TOGO] = clocksDict_[TIME_AT_NEXT] - now_
 		CLOCKS_DICT = clocksDict_
 		THECLOCK_DICT[TIME_CLOCK] = now_
 		mappdsMode_ = MAPPDS[APPMODE]
 		# print(f"""mappdsMode_ {mappdsMode_}""")
-
 		if mappdsMode_ == APPMODE_THECLOCK:
-			updateMainframeFromDict(THECLOCK_DICT, True)
-
+			updateMainframeFromDict(MAINFRAME, THECLOCK_DICT, True)
 		elif mappdsMode_ == APPMODE_CLOCKS:
-			updateMainframeFromDict(CLOCKS_DICT, True)
+			updateMainframeFromDict(MAINFRAME, CLOCKS_DICT, True)
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2015,13 +2009,13 @@ def doInit1():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	now_ = CF.MTSS()
 	MAINFRAME.AlphaChannel = SZ_ALPHA_HIGH
-	MAPPDS[MAINFRAME_LCN] = getElementLocation()
+	MAPPDS[MAINFRAME_POS] = getElementLocation()
 	MAPPDS[SCREEN_DIMS] = getScreenDims()
 	MAPPDS[MAINFRAME_SIZE] = getElementSize(MAINFRAME)
 
 	MAPPDS[ALPHA_CHANNEL] = SZ_ALPHA_HIGH
-	MAPPDS[BBOX] = getBBox(MAPPDS[MAINFRAME_LCN], MAPPDS[MAINFRAME_SIZE])
-	MAPPDS[CLOSE_BBOX] = getCloseBBox(MAPPDS[MAINFRAME_LCN], MAPPDS[MAINFRAME_SIZE])
+	MAPPDS[BBOX] = getBBox(MAPPDS[MAINFRAME_POS], MAPPDS[MAINFRAME_SIZE])
+	MAPPDS[CLOSE_BBOX] = getCloseBBox(MAPPDS[MAINFRAME_POS], MAPPDS[MAINFRAME_SIZE])
 	CLOCKS_DICT[TIME_CLOCK] = now_
 	CLOCKS_DICT[TIME_AT_UPDATE] = now_
 	TIME_AT_LAST_ZERO_CHECK = now_
@@ -2074,41 +2068,6 @@ def checkMouseStatus(statusToDo_):
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# __main__
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# @profile
-def doIt():
-	global MAPPDS
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	while True:
-		event_, values_ = doReadAMainframe()
-
-		if event_ != "__TIMEOUT__":
-
-			if event_ == BTN_QUIT:
-				break
-
-			elif event_ == CHECKBOX_RUNAWAY:
-				MAPPDS[CHECKBOX_RUNAWAY] = not MAPPDS[CHECKBOX_RUNAWAY]
-
-			elif event_ == CHECKBOX_ALPHA_LOW:
-				MAPPDS[CHECKBOX_ALPHA_LOW] = not MAPPDS[CHECKBOX_ALPHA_LOW]
-
-		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
-		updateClocks()
-
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-#
-#
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# end of clocks.py
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-#
-#
 
 #
 #

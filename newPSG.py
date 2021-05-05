@@ -64,9 +64,9 @@ INDEX_SOUTH = 3  # SOUTH
 INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
-LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
-MAINFRAME_POS = "MAINFRAME_POS"  # screen position of the mainframe
+MAINFRAME_LCN = "MAINFRAME_LCN"  # screen position of the mainframe
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
+MOUSE_LCN = "MOUSE_LCN"  # track mouse location to ease load a bit
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
 MOUSE_STATUS_CLOSE_NE = "MOUSE_STATUS_CLOSE_NE"  # mouse is northeast of checked element
@@ -78,6 +78,7 @@ MOUSE_STATUS_CLOSE_W = "MOUSE_STATUS_CLOSE_W"  # mouse is west of checked elemen
 MOUSE_STATUS_E = "MOUSE_STATUS_E"  # mouse is east of checked element
 MOUSE_STATUS_N = "MOUSE_STATUS_N"  # mouse is north of checked element
 MOUSE_STATUS_NE = "MOUSE_STATUS_NE"  # mouse is northeast of checked element
+MOUSE_STATUS_NONE = "MOUSE_STATUS_NONE"  # mouse is northeast of checked element
 MOUSE_STATUS_NW = "MOUSE_STATUS_NW"  # mouse is northwest of checked element
 MOUSE_STATUS_OVER = "MOUSE_STATUS_OVER"  # mouse is southwest of checked element
 MOUSE_STATUS_S = "MOUSE_STATUS_S"  # mouse is south of checked element
@@ -94,11 +95,11 @@ SZ_ALPHA_HIGH = 1.0  # high alpha
 SZ_ALPHA_LOW = 0.1  # low alpha setting
 SZ_BORDER_DEPTH = 0  # border depth
 SZ_BTNS = 6  # size for button text
-SZ_CLOCKS_MOVE = 10  # how far to move each time the mouse approaches
+SZ_CLOCKS_MOVE = 15  # how far to move each time the mouse approaches
 SZ_CLOCKS_TIME_CLOCK = 26  # size of the main clock on the clocks only floating widget
 SZ_CLOCKS_TIME_ELAPSED = 13  # size of the elapsed clock on the clocks only floating widget
 SZ_CLOCKS_TIME_TOGO = 13  # size of the main togo clock on the clocks only floating widget
-SZ_CLOSE = 50  # close enough to move from the mouse
+SZ_CLOSE = 80  # close enough to move from the mouse
 SZ_EDIT_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
 SZ_EDIT_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
 SZ_EDIT_TIME_TOGO = 10  # size of the main togo clock on the clocks only floating widget
@@ -109,8 +110,9 @@ SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 30  # comment
 SZ_MOVE_DIST = 15  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
-SZ_TIME_BETWEEN_MOVES = 100  # comment
-SZ_TIME_BETWEEN_UPDATES = 100  # comment
+SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 120  # throttle mouse checking
+SZ_TIMEMS_BETWEEN_MOVES = 120  # comment
+SZ_TIMEMS_BETWEEN_UPDATES = 800  # comment
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
@@ -118,8 +120,6 @@ TIME_AT_UPDATE = "TIME_AT_UPDATE"  # the time at last zero to keep elapsed time 
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
 TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
-TIME_LAST_MOVED = 0  # comment
-TIME_LAST_UPDATED = 0  # comment
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
@@ -146,9 +146,12 @@ FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
+LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
 MAINFRAME = None  # mainframe so everything passes together always
-TIME_LAST_MOVED_MTSMS = ZERO_CLOCK  # to throttle moves
-TIME_LAST_UPDATED = ZERO_CLOCK  # holds the time used to keep intervals accurate
+MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
+TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
+TIMEMS_NEXT_MOVED = 0  # comment
+TIMEMS_NEXT_UPDATED = 0  # comment
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -375,7 +378,7 @@ EMPTY_MAPPDSTUP = (
 	(CLOSE_BBOX, EMPTY_BBOX),  # empty BBOX dict
 	(EVENT_ENTRIES, EMPTY0_EVENT_ENTRY_TDD),  # an empty event
 	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
-	(MAINFRAME_POS, EMPTY_XY),  # holds the screen position
+	(MAINFRAME_LCN, EMPTY_XY),  # holds the screen position
 	(MAINFRAME_SIZE, EMPTY_XY),  # which event number is upcoming
 	(SCREEN_DIMS, EMPTY_XY),  # 
 )
@@ -395,7 +398,7 @@ EMPTY_MAPPDS_TDD = {
 	CLOSE_BBOX: EMPTY_BBOX,  # empty BBOX dict
 	EVENT_ENTRIES: EMPTY0_EVENT_ENTRY_TDD,  # an empty event
 	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
-	MAINFRAME_POS: EMPTY_XY,  # holds the screen position
+	MAINFRAME_LCN: EMPTY_XY,  # holds the screen position
 	MAINFRAME_SIZE: EMPTY_XY,  # which event number is upcoming
 	SCREEN_DIMS: EMPTY_XY,  # 
 }
@@ -1542,37 +1545,35 @@ THECLOCK_WINDOW = {  # define the clocks window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * CLOCKS_MAINFRAME_CLASS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_MAINFRAME = None
 class CLOCKS_MAINFRAME_CLASS():
-	global CLOCKS_MAINFRAME
+	global MAINFRAME
 
 	def __enter__(self):
-		global CLOCKS_MAINFRAME
-		CLOCKS_MAINFRAME = SG.Window(
+		global MAINFRAME
+		MAINFRAME = SG.Window(
 			**CLOCKS_WINDOW,
 		).finalize()
 
 	def __exit__(self, *args):
-		global CLOCKS_MAINFRAME
-		CLOCKS_MAINFRAME.close()
+		global MAINFRAME
+		MAINFRAME.close()
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * THECLOCK_MAINFRAME_CLASS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-THECLOCK_MAINFRAME = None
 class THECLOCK_MAINFRAME_CLASS():
-	global THECLOCK_MAINFRAME
+	global MAINFRAME
 
 	def __enter__(self):
-		global THECLOCK_MAINFRAME
-		THECLOCK_MAINFRAME = SG.Window(
+		global MAINFRAME
+		MAINFRAME = SG.Window(
 			**THECLOCK_WINDOW,
 		).finalize()
 
 	def __exit__(self, *args):
-		global THECLOCK_MAINFRAME
-		THECLOCK_MAINFRAME.close()
+		global MAINFRAME
+		MAINFRAME.close()
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1615,8 +1616,9 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
 	MAINFRAME: None,  # current screen position
-	MAINFRAME_POS: EMPTY_XY,  # current screen position
+	MAINFRAME_LCN: EMPTY_XY,  # current screen position
 	MAINFRAME_SIZE: EMPTY_XY,  # current screen position
+	MOUSE_LCN: (0, 0),  # track mouse location
 	SCREEN_DIMS: EMPTY_XY,  # current screen position
 }
 
