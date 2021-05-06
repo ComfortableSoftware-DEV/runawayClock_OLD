@@ -326,6 +326,7 @@ FMAXPSG_SCTN0911_COMBO_DEF = "FMAXPSG_SCTN0911_COMBO_DEF"  # define a combo box
 FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # define a frame element
 FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
+FMAXPSG_SCTN0914_POPUPFRAME_DEF = "FMAXPSG_SCTN0914_POPUPFRAME_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 FMPSG_SCTN0905_TUPDICT_DICT_DICT = "FMPSG_SCTN0905_TUPDICT_DICT_DICT"  # the dict holding the dict entries for tupdicts
 
 
@@ -446,6 +447,7 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0912_FRAMEELEMENT_DEF,  # define a frame element
 	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
+	FMAXPSG_SCTN0914_POPUPFRAME_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 	FMPSG_SCTN0905_TUPDICT_DICT_DICT,  # the dict holding the dict entries for tupdicts
 ]
 
@@ -512,8 +514,8 @@ FMPSG_SCTN090B_COLUMN_PARMS_DICT = {}  # holds all of the button entriess (TUPDI
 FMPSG_SCTN090C_MAPPDS_CMNT_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090C_MAPPDS_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090C_MAPPDSDICT_DICT = {}  # the main app dict+dict for this app
-FMPSG_SCTN090D_FRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN090D_FRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090D_MAINFRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090D_MAINFRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090E_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090E_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090F_WINDOW_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
@@ -524,6 +526,8 @@ FMPSG_SCTN0911_COMBO_CMNT_DICT = {}  # define the dict to hold everything in SCT
 FMPSG_SCTN0911_COMBO_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0912_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0912_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0912_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN0912_POPUPFRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
 
@@ -597,8 +601,8 @@ FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN090
 		FMPSG_SCTN090C_MAPPDS_CMNT_DICT, \
 		FMPSG_SCTN090C_MAPPDS_DICT, \
 		FMPSG_SCTN090C_MAPPDSDICT_DICT, \
-		FMPSG_SCTN090D_FRAME_CMNT_DICT, \
-		FMPSG_SCTN090D_FRAME_DICT, \
+		FMPSG_SCTN090D_MAINFRAME_CMNT_DICT, \
+		FMPSG_SCTN090D_MAINFRAME_DICT, \
 		FMPSG_SCTN090E_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN090E_LAYOUT_DICT, \
 		FMPSG_SCTN090F_WINDOW_CMNT_DICT, \
@@ -609,5 +613,7 @@ FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN090
 		FMPSG_SCTN0911_COMBO_DICT, \
 		FMPSG_SCTN0912_FRAME_CMNT_DICT, \
 		FMPSG_SCTN0912_FRAME_DICT, \
+		FMPSG_SCTN0912_POPUPFRAME_CMNT_DICT, \
+		FMPSG_SCTN0912_POPUPFRAME_DICT, \
 		FMPSG_SCTN0913_RCMENU_CMNT_DICT, \
 		FMPSG_SCTN0913_RCMENU_DICT

@@ -512,8 +512,8 @@ FMPSG_SCTN090B_COLUMN_PARMS_DICT = {}  # holds all of the button entriess (TUPDI
 FMPSG_SCTN090C_MAPPDS_CMNT_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090C_MAPPDS_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090C_MAPPDSDICT_DICT = {}  # the main app dict+dict for this app
-FMPSG_SCTN090D_FRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN090D_FRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090D_MAINFRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090D_MAINFRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090E_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090E_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090F_WINDOW_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
@@ -660,6 +660,7 @@ TBGLST = [
 	("FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN090C_MAPPDS_VS_ADD", FMAXFM_SCTN0101_AX_DEF, "add a string to the mainapp dict <NAC><KEY><STR>",),
 	("FMAXPSG_SCTN090C_MAPPDS_VV_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to the mainapp dict <NAC><KEY><VAL>",),
+	("FMAXPSG_SCTN0914_POPUPFRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
 	("FMAXPSG_SCTN090D_MAINFRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
 	("FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD", FMAXFM_SCTN0101_AX_DEF, "add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
 	("FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD", FMAXFM_SCTN0101_AX_DEF, "add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
@@ -749,8 +750,8 @@ TBGLST = [
 	("FMPSG_SCTN090C_MAPPDSDICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict+dict for this app",),
 	("FMPSG_SCTN090C_MAPPDS_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict for this app",),
 	("FMPSG_SCTN090C_MAPPDS_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict for this app",),
-	("FMPSG_SCTN090D_FRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
-	("FMPSG_SCTN090D_FRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN090D_MAINFRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
+	("FMPSG_SCTN090D_MAINFRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN090E_LAYOUT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN090E_LAYOUT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN090F_WINDOW_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
@@ -763,6 +764,8 @@ TBGLST = [
 	("FMPSG_SCTN0912_FRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0913_RCMENU_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0913_RCMENU_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0912_POPUPFRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
+	("FMPSG_SCTN0912_POPUPFRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_____", FMAX_NOP, "FMPSG_ENDS",),
 	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
 	("PSGVAL_CLOSE_LIST", FMAXPSG_SCTN0903_LIST_DEF, "CLOSE_LIST", "list with close statuses",),
@@ -2150,7 +2153,7 @@ def makePSG():
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN090D frame")}"""
-	dictToUse_ = sortADict(FMPSG_SCTN090D_FRAME_DICT)
+	dictToUse_ = sortADict(FMPSG_SCTN090D_MAINFRAME_DICT)
 	for thisName_, value_ in dictToUse_.items():
 		strToRtn_ += f"""{makeAComment(f"{thisName_}_CLASS")}class {thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global MAINFRAME, MAPPDS{NEWLINE}{NEWLINE}"""
 		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global MAINFRAME, MAPPDS{NEWLINE}"""
@@ -2291,8 +2294,8 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN090C_MAPPDS_CMNT_DICT, \
 		FMPSG_SCTN090C_MAPPDS_DICT, \
 		FMPSG_SCTN090C_MAPPDSDICT_DICT, \
-		FMPSG_SCTN090D_FRAME_CMNT_DICT, \
-		FMPSG_SCTN090D_FRAME_DICT, \
+		FMPSG_SCTN090D_MAINFRAME_CMNT_DICT, \
+		FMPSG_SCTN090D_MAINFRAME_DICT, \
 		FMPSG_SCTN090E_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN090E_LAYOUT_DICT, \
 		FMPSG_SCTN090F_WINDOW_CMNT_DICT, \
@@ -3579,9 +3582,9 @@ def parseTBGLST(FDTBGLST):
 			thisWindowName_ = thisItem_[3]
 			thisFinalize_ = thisItem_[4]
 			if thisFinalize_ == "True":
-				FMPSG_SCTN090D_FRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NEWLINE}"""
+				FMPSG_SCTN090D_MAINFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NEWLINE}"""
 			else:
-				FMPSG_SCTN090D_FRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
+				FMPSG_SCTN090D_MAINFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 

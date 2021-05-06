@@ -1353,7 +1353,7 @@ CHECKBOX_ALPHA_LOW01 = {  # checkbox for alpha under mouse
 CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 	TEXT: "RNAWY",  # text label
 	TOOLTIP: "run away from mouse when checked",  # tooltip
-	DEFAULT: True,  # leave it on by default
+	DEFAULT: False,  # leave it on by default
 	KEY: CHECKBOX_RUNAWAY,  # set the key for the checkbox
 }
 

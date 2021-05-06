@@ -38,3 +38,15 @@ do       | [X] | convert all passed about things to a dict (ended up going back 
          |     |
          | []  |
          | []  |
+
+
+
+
+POPUPFRAME BringToFront bool
+POPUPFRAME maximize bool
+
+# eof
+#
+#
+#
+#
