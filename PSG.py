@@ -1831,7 +1831,7 @@ def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
 	if now_ < TIMEMS_NEXT_MOVED:
 		return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
-	TIMEMS_NEXT_MOVED = now_ + SZ_TIMEMS_BETWEEN_MOUSE_CHECKS
+	TIMEMS_NEXT_MOVED = now_ + SZ_TIMEMS_BETWEEN_MOVES
 	screenSZX_, screenSZY_ = splitXYToRaw(MAPPDS[SCREEN_DIMS])
 	TSizeX_, TSizeY_ = splitXYToRaw(MAPPDS[MAINFRAME_SIZE])
 	TLcnX_, TLcnY_ = splitXYToRaw(MAPPDS[MAINFRAME_LCN])
