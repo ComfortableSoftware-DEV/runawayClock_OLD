@@ -2225,7 +2225,7 @@ def doInit1():
 	now_ = CF.MTSS()
 	MAINFRAME.AlphaChannel = SZ_ALPHA_HIGH
 	# MAINFRAME.Maximize()
-	# ssMAINFRAME.BringToFront()
+	# MAINFRAME.BringToFront()
 	MAPPDS[MAINFRAME_LCN] = getElementLocation()
 	MAPPDS[SCREEN_DIMS] = getScreenDims()
 	MAPPDS[MAINFRAME_SIZE] = getElementSize(MAINFRAME)
