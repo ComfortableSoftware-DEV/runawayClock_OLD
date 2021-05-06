@@ -34,6 +34,7 @@ do       | [X] | convert all passed about things to a dict (ended up going back 
          |     | convert back to all tuples instead of dicts (x, y) (north, west, south, east)
          |     | github for android and see how this works on android
          | []  | fix elapsed after midnight
-  |   |  
+         |     | start and stop times for intervals
+         |     |
          | []  | #
          | []  |

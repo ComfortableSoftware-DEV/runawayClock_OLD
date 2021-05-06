@@ -2256,7 +2256,7 @@ def doInit1():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # @profile
 def doIt():
-	global MAPPDS, CLOCKS_DICT
+	global MAPPDS, CLOCKS_DICT, TIMES_NEXT_PERIODIC_JOB, TIMES_NEXT_EVENT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	oldValues_ = None
 	while True:
@@ -2265,12 +2265,13 @@ def doIt():
 			doMidnightWork()
 		event_, values_ = doReadAMainframe()
 
-#		if now_ > TIMES_NEXT_PERIODIC_JOB:
-#			fixNextTimes()
-#			findNextAlarmEvent()
-#
-#		if now_ > TIMES_NEXT_EVENT:
-#			doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT)
+		if now_ > TIMES_NEXT_PERIODIC_JOB:
+			TIMES_NEXT_PERIODIC_JOB = now_ + SZ_TIMES_BTWN_PERIODIC_JOB
+			fixNextTimes()
+			findNextAlarmEvent()
+
+		if now_ > TIMES_NEXT_EVENT:
+			doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT)
 
 		if oldValues_ != values_:
 			MAPPDS = CF.mergeDicts(MAPPDS, values_)
