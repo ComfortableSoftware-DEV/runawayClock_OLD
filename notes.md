@@ -31,10 +31,10 @@ do       | [X] | convert all passed about things to a dict (ended up going back 
          | [x] | only switching to text to display
          |     | also for incrementing, pre cache int for all times, and do everything with raw int seconds
          |     | all times int + HMS, only using HMS when it's time to zero check the main clock, ended up with MTSS and MTSMS
-         |     | convert back to all tuples instead of dicts (x, y) (north, west, south, east)
+         |     | convert back to all tuples instead of dicts (x, y) (west, north, east, south)
          |     | github for android and see how this works on android
          | []  | fix elapsed after midnight
-         |     | start and stop times for intervals
+         | []  | start and stop times for intervals
          |     |
-         | []  | #
+         | []  |
          | []  |
