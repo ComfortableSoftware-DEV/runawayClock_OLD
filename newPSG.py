@@ -156,6 +156,7 @@ SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
 TIMEMS_NEXT_MOVED = 0  # comment
 TIMEMS_NEXT_UPDATED = 0  # comment
+TIMES_NEXT_EVENT = 0  # comment
 TIMES_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
 
 
@@ -1352,7 +1353,7 @@ CHECKBOX_ALPHA_LOW01 = {  # checkbox for alpha under mouse
 CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 	TEXT: "RNAWY",  # text label
 	TOOLTIP: "run away from mouse when checked",  # tooltip
-	DEFAULT: True,  # leave it on by default
+	DEFAULT: False,  # leave it on by default
 	KEY: CHECKBOX_RUNAWAY,  # set the key for the checkbox
 }
 
