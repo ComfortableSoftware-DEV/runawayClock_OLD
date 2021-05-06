@@ -112,7 +112,7 @@ SZ_MOVE_DIST = 50  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 120  # throttle mouse checking
 SZ_TIMEMS_BETWEEN_MOVES = 300  # comment
-SZ_TIMEMS_BETWEEN_UPDATES = 800  # comment
+SZ_TIMEMS_BETWEEN_UPDATES = 200  # comment
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
@@ -1670,7 +1670,7 @@ def splitXYToRaw(XYToSplit_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # getMousePos
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*def mousepos():
-@profile
+# @profile
 def getMousePos():
 	global TIMEMS_NEXT_MOUSE_CHECK
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
@@ -1885,7 +1885,7 @@ def updateMappds(mainframeLocation_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # checkMouseLcn
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-@profile
+# @profile
 def checkMouseLcn(oldFrameLocation_):
 	global \
 		LAST_MOUSE_STATUS, \
@@ -1974,7 +1974,7 @@ def checkMouseLcn(oldFrameLocation_):
 		MAINFRAME.AlphaChannel = MAPPDS[ALPHA_LOW]
 		alphaMode = True
 
-	elif (statusToRtn_ != MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS == MOUSE_STATUS_OVER):
+	elif ((statusToRtn_ != MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS == MOUSE_STATUS_OVER)) or ((LAST_MOUSE_STATUS == MOUSE_STATUS_OVER) and (ALPHA_MODE is True) and (MAPPDS[CHECKBOX_ALPHA_LOW] is False)):
 		MAINFRAME.AlphaChannel = MAPPDS[ALPHA_HIGH]
 		alphaMode = False
 
@@ -1987,24 +1987,23 @@ def checkMouseLcn(oldFrameLocation_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # updateClocks
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-@profile
+#  @profile
 def updateClocks():
 	global CLOCKS_DICT, THECLOCK_DICT, TIMEMS_NEXT_UPDATED, MAPPDS, MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	nowMS_ = CF.MTSMS()
 	now_ = CF.MTSS()
-	clocksDict_ = CLOCKS_DICT
-	# print(f"""updateClocks now_ {now_} then_ {then_}""")
-	if nowMS_ > TIMEMS_NEXT_UPDATED:
-		# print(f"""updating""")
-		clocksDict_[TIME_CLOCK] = now_
+	print(f"""updateClocks nowMS_ {nowMS_} TIMEMS_NEXT_UPDATED {TIMEMS_NEXT_UPDATED}""")
+	if nowMS_ >= TIMEMS_NEXT_UPDATED:
+		print(f"""updating""")
+		CLOCKS_DICT[TIME_CLOCK] = now_
 		TIMEMS_NEXT_UPDATED = nowMS_ + SZ_TIMEMS_BETWEEN_UPDATES
 		CLOCKS_DICT[TIME_ELAPSED] = now_ - CLOCKS_DICT[TIME_AT_ZEROELAPSE]
 		CLOCKS_DICT[TIME_TOGO] = CLOCKS_DICT[TIME_AT_NEXT] - now_
 
-		if CLOCKS_DICT[TIME_TOGO] < 0:
+		if CLOCKS_DICT[TIME_TOGO] < 1:
 			CLOCKS_DICT[TIME_TOGO] += 86400
-			
+
 		THECLOCK_DICT[TIME_CLOCK] = now_
 		mappdsMode_ = MAPPDS[APPMODE]
 		# print(f"""mappdsMode_ {mappdsMode_}""")
@@ -2052,7 +2051,7 @@ def doReadAMainframe(timeout_=SZ_TIMEOUT_MS):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # checkMouseStatus
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-@profile
+# @profile
 def checkMouseStatus(statusToDo_):
 	global MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
@@ -2089,7 +2088,7 @@ def checkMouseStatus(statusToDo_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # __main__
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-@profile
+# @profile
 def doIt():
 	global MAPPDS, CLOCKS_DICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
@@ -2117,6 +2116,7 @@ def doIt():
 				updateClocks()
 
 		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
+		CF.whirl()
 		updateClocks()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
