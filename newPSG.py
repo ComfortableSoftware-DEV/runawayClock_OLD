@@ -52,10 +52,10 @@ COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
 DISMISSED = "DISMISSED"  # alarm dismissed bool
 EVENT_ENTRIES = "EVENT_ENTRIES"  # 
-EVENT_MODE = "EVENT_MODE"  # what mode is this event
-EVENT_MODE_ALARM = "EVENT_MODE_ALARM"  # 
-EVENT_MODE_ALARMREMIND = "EVENT_MODE_ALARMREMIND"  # 
-EVENT_MODE_INTERVAL = "EVENT_MODE_INTERVAL"  # 
+EVENTMODE = "EVENTMODE"  # what mode is this event
+EVENTMODE_ALARM = "EVENTMODE_ALARM"  # 
+EVENTMODE_ALARMREMIND = "EVENTMODE_ALARMREMIND"  # 
+EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  # 
 FONT_DEFAULT = "Source Code Pro"  # set the main font
 INDEX_EAST = 2  # EAST
 INDEX_NORTH = 1  # NORTH
@@ -64,6 +64,7 @@ INDEX_SOUTH = 3  # SOUTH
 INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
+LAST_RUN = "LAST_RUN"  # timeS of last alarm 
 MAINFRAME_LCN = "MAINFRAME_LCN"  # screen position of the mainframe
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 MOUSE_LCN = "MOUSE_LCN"  # track mouse location to ease load a bit
@@ -87,7 +88,7 @@ MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
 NAME = "NAME"  # 
 PREDISMISSABLE = "PREDISMISSABLE"  # 
-RUNNING = "RUNNING"  # is this interval running or not
+REMIND_DISMISSED = "REMIND_DISMISSED"  # alarm dismissed bool
 SCREEN_DIMS = "SCREEN_DIMS"  # dimension of the screen
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # snoozed bool
@@ -310,9 +311,11 @@ CLOSE_LIST = [  # list with close statuses
 EMPTY0_EVENT_ENTRYTUP = (
 	(DISMISSED, False),  # has the event been dismissed just this once
 	(ENABLED, True),  # is the event enabled bool
-	(EVENT_MODE, EVENT_MODE_ALARM),  # which event mode is this event
+	(EVENTMODE, EVENTMODE_ALARM),  # which event mode is this event
+	(LAST_RUN, 0),  # has the event been dismissed just this once
 	(NAME, "alarm"),  # the name of this event
 	(PREDISMISSABLE, False),  # can the event be dismissed prior to on time
+	(REMIND_DISMISSED, False),  # has the event been dismissed just this once
 	(SNOOZABLE, False),  # can the alarm be snoozed
 	(SNOOZED, False),  # is the event snoozed
 	(TIME_ALARM, ZERO_CLOCK),  # in an alarm mode event, what time is the alarm
@@ -327,9 +330,11 @@ def EMPTY0_EVENT_ENTRYDICT():
 EMPTY0_EVENT_ENTRY_TDD = {
 	DISMISSED: False,  # has the event been dismissed just this once
 	ENABLED: True,  # is the event enabled bool
-	EVENT_MODE: EVENT_MODE_ALARM,  # which event mode is this event
+	EVENTMODE: EVENTMODE_ALARM,  # which event mode is this event
+	LAST_RUN: 0,  # has the event been dismissed just this once
 	NAME: "alarm",  # the name of this event
 	PREDISMISSABLE: False,  # can the event be dismissed prior to on time
+	REMIND_DISMISSED: False,  # has the event been dismissed just this once
 	SNOOZABLE: False,  # can the alarm be snoozed
 	SNOOZED: False,  # is the event snoozed
 	TIME_ALARM: ZERO_CLOCK,  # in an alarm mode event, what time is the alarm
@@ -1600,24 +1605,30 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		0: {
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
-			EVENT_MODE: EVENT_MODE_ALARM,  # this entry's event_mode
+			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
+			LAST_RUN: 0,  # is this event dismissed
 			NAME: "wind it up",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
+			REMIND_DISMISSED: False,  # is this event dismissed
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: ZERO_CLOCK,  # time of this event
+			TIME_ALARM: "03:30:00",  # time of this event
+			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL: ZERO_CLOCK,  # time of this event
 			TIME_REMIND: ZERO_CLOCK,  # time of this event
 		},
 		1: {
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
-			EVENT_MODE: EVENT_MODE_ALARM,  # this entry's event_mode
+			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
+			LAST_RUN: 0,  # is this event dismissed
 			NAME: "off you go then",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
+			REMIND_DISMISSED: False,  # is this event reminder dismissed
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: ZERO_CLOCK,  # time of this event
+			TIME_ALARM: "04:00:00",  # time of this event
+			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL: ZERO_CLOCK,  # time of this event
 			TIME_REMIND: ZERO_CLOCK,  # time of this event
 		},
