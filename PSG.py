@@ -107,7 +107,7 @@ SZ_MAIN_TIME_CLOCK = 60  # size of the main clock on the clocks only floating wi
 SZ_MAIN_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floating widget
 SZ_MAIN_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
 SZ_MARGINS_ALL = (0, 0)  # all margins default
-SZ_MAX_DELTA = 30  # comment
+SZ_MAX_DELTA = 100  # comment
 SZ_MOVE_DIST = 50  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
@@ -1827,11 +1827,12 @@ def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
 	global TIMEMS_NEXT_MOVED, MAPPDS, MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	now_ = CF.MTSMS()
-	if now_ < TIMEMS_NEXT_MOVED:
+	nowMS_ = CF.MTSMS()
+	# print(f"""moveRelFrame {nowMS_}  TIMEMS_NEXT_MOVED {TIMEMS_NEXT_MOVED}""")
+	if nowMS_ < TIMEMS_NEXT_MOVED:
 		return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
-	TIMEMS_NEXT_MOVED = now_ + SZ_TIMEMS_BETWEEN_MOVES
+	TIMEMS_NEXT_MOVED = nowMS_ + SZ_TIMEMS_BETWEEN_MOVES
 	screenSZX_, screenSZY_ = splitXYToRaw(MAPPDS[SCREEN_DIMS])
 	TSizeX_, TSizeY_ = splitXYToRaw(MAPPDS[MAINFRAME_SIZE])
 	TLcnX_, TLcnY_ = splitXYToRaw(MAPPDS[MAINFRAME_LCN])
@@ -1848,6 +1849,7 @@ def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
 	elif moveToY_ > (screenSZY_ - TSizeY_):
 		moveToY_ = (screenSZY_ - TSizeY_)
 
+	# print(f"""likely moving abs(moveToX_ - TLcnX_) {abs(moveToX_ - TLcnX_)} abs(moveToY_ - TLcnY_) {abs(moveToY_ - TLcnY_)} SZ_MAX_DELTA {SZ_MAX_DELTA}""")
 		# avoid trouble with spurious moves caused by a process delaying anything here too far
 	if (abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA) or (abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA):
 		# print(f"""(abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA) (abs({moveToX_} - {TLcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA)}""")
@@ -2055,8 +2057,10 @@ def doReadAMainframe(timeout_=SZ_TIMEOUT_MS):
 def checkMouseStatus(statusToDo_):
 	global MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	# print(f"""checkMouseStatus statusToDo_ {statusToDo_} """)
 
 	if (statusToDo_ in CLOSE_LIST) and (MAPPDS[CHECKBOX_RUNAWAY] is True):
+		# print(f"""close enough to move""")
 
 		if statusToDo_ == MOUSE_STATUS_CLOSE_N:
 			moveRelFrame(moveMpx_=(0, 1))
@@ -2116,7 +2120,7 @@ def doIt():
 				updateClocks()
 
 		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
-		CF.whirl()
+		# CF.whirl()
 		updateClocks()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
