@@ -33,6 +33,7 @@ do       | [X] | convert all passed about things to a dict (ended up going back 
          |     | all times int + HMS, only using HMS when it's time to zero check the main clock, ended up with MTSS and MTSMS
          |     | convert back to all tuples instead of dicts (x, y) (north, west, south, east)
          |     | github for android and see how this works on android
-         | []  | #
+         | []  | fix elapsed after midnight
+  |   |  
          | []  | #
          | []  |

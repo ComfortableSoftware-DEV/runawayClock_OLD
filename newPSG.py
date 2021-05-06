@@ -120,7 +120,9 @@ TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM 
 TIME_AT_ZEROELAPSE = "TIME_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
-TIME_INTERVAL = "TIME_INTERVAL"  # interval timer
+TIME_INTERVAL = "TIME_INTERVAL"  # interval timer starting time, reset each time the interval goes off
+TIME_INTERVAL_START = "TIME_INTERVAL_START"  # interval timer starting time, reset each time the interval goes off
+TIME_LEN_RING = "TIME_LEN_RING"  # length of ringing
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
@@ -150,9 +152,11 @@ FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for th
 LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
 MAINFRAME = None  # mainframe so everything passes together always
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
+SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
 TIMEMS_NEXT_MOVED = 0  # comment
 TIMEMS_NEXT_UPDATED = 0  # comment
+TIMES_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1615,6 +1619,8 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			TIME_ALARM: "03:30:00",  # time of this event
 			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL: ZERO_CLOCK,  # time of this event
+			TIME_INTERVAL_START: ZERO_CLOCK,  # time of this event
+			TIME_LEN_RING: ZERO_CLOCK,  # time of this event
 			TIME_REMIND: ZERO_CLOCK,  # time of this event
 		},
 		1: {
@@ -1630,6 +1636,8 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			TIME_ALARM: "04:00:00",  # time of this event
 			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL: ZERO_CLOCK,  # time of this event
+			TIME_INTERVAL_START: ZERO_CLOCK,  # time of this event
+			TIME_LEN_RING: ZERO_CLOCK,  # time of this event
 			TIME_REMIND: ZERO_CLOCK,  # time of this event
 		},
 	},
