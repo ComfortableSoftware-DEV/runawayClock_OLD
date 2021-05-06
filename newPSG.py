@@ -110,9 +110,9 @@ SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 30  # comment
 SZ_MOVE_DIST = 50  # comment
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
-SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 120  # throttle mouse checking
-SZ_TIMEMS_BETWEEN_MOVES = 300  # comment
-SZ_TIMEMS_BETWEEN_UPDATES = 800  # comment
+SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
+SZ_TIMEMS_BETWEEN_MOVES = 500  # comment
+SZ_TIMEMS_BETWEEN_UPDATES = 500  # comment
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
