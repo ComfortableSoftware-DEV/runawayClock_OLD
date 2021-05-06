@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17in"
+   height="11in"
+   viewBox="0 0 68 44"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   sodipodi:docname="mockup01.svg"
+   inkscape:export-filename="/rcr/0-utils/0-desktop/runawayClock_DEV/res/mockup01.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2">
+    <rect
+       x="12.999988"
+       y="-33.800001"
+       width="48"
+       height="21"
+       id="rect50" />
+    <rect
+       x="62.999988"
+       y="-16.800001"
+       width="56"
+       height="15"
+       id="rect955" />
+    <rect
+       x="13.999988"
+       y="-30.800001"
+       width="43"
+       height="10"
+       id="rect949" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#232323"
+     bordercolor="#ff912c"
+     borderopacity="0.64705882"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.48173696"
+     inkscape:cx="1040.0401"
+     inkscape:cy="168.95556"
+     inkscape:document-units="in"
+     inkscape:current-layer="layer2"
+     showgrid="true"
+     units="in"
+     showguides="false"
+     objecttolerance="6"
+     gridtolerance="10000"
+     guidetolerance="1"
+     inkscape:showpageshadow="false"
+     borderlayer="false"
+     inkscape:snap-global="true"
+     inkscape:pagecheckerboard="false"
+     inkscape:snap-perpendicular="true"
+     inkscape:snap-tangential="true"
+     pageopacity="0.94901961"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="0"
+     inkscape:window-y="34"
+     inkscape:window-maximized="1"
+     inkscape:snap-text-baseline="false"
+     width="17in"
+     scale-x="4"
+     inkscape:document-rotation="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid13044"
+       color="#ff9250"
+       opacity="0.45098039"
+       empcolor="#a7cfad"
+       empopacity="0.4"
+       units="in"
+       spacingx="1"
+       spacingy="1"
+       empspacing="4"
+       originx="0"
+       originy="0"
+       dotted="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>ALOB</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="cuts"
+     transform="translate(1.1592155e-5,50.800001)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:1.57243px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#b300c3;fill-opacity:1;stroke:#b300c3;stroke-width:0.12;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="29.766775"
+       y="-32.167809"
+       id="text927"><tspan
+         sodipodi:role="line"
+         id="tspan925"
+         x="29.766775"
+         y="-32.167809"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:1.57243px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#b300c3;fill-opacity:1;stroke-width:0.12;stroke-miterlimit:4;stroke-dasharray:none">ALARMS  QUIT  [] TRANSPARENT</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text947"
+       style="-inkscape-font-specification:'Source Code Pro, Medium';font-family:'Source Code Pro';font-weight:500;font-size:1.57242997px;fill:#b300c3;stroke:#b300c3;stroke-width:0.12;text-align:center;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;white-space:pre;shape-inside:url(#rect949);" />
+    <text
+       xml:space="preserve"
+       id="text953"
+       style="-inkscape-font-specification:'Source Code Pro, Medium';font-family:'Source Code Pro';font-weight:500;font-size:1.57242997px;fill:#b300c3;stroke:#b300c3;stroke-width:0.12;text-align:center;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;white-space:pre;shape-inside:url(#rect955);" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#b300c3;fill-opacity:1;stroke:#b300c3;stroke-width:0.12;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="27.567009"
+       y="-25.862946"
+       id="text961"><tspan
+         sodipodi:role="line"
+         id="tspan959"
+         x="27.567009"
+         y="-25.862946"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.12">88:88</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#b300c3;fill-opacity:1;stroke:#b300c3;stroke-width:0.12;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="27.99999"
+       y="-22.799999"
+       id="text965"><tspan
+         sodipodi:role="line"
+         id="tspan963"
+         x="27.99999"
+         y="-22.799999"
+         style="stroke-width:0.12" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#b300c3;fill-opacity:1;stroke:#b300c3;stroke-width:0.12;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="42.858616"
+       y="-25.91258"
+       id="text969"><tspan
+         sodipodi:role="line"
+         id="tspan967"
+         x="42.858616"
+         y="-25.91258"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:4px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.12">:88</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.11111px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#b300c3;fill-opacity:1;stroke:#b300c3;stroke-width:0.12;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="30.675711"
+       y="-22.789656"
+       id="text973"><tspan
+         sodipodi:role="line"
+         id="tspan971"
+         x="30.675711"
+         y="-22.789656"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.11111px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.12">ELAPSED 88:88:88</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.22222px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#b300c3;fill-opacity:1;stroke:#b300c3;stroke-width:0.12;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="32.750763"
+       y="-20.358307"
+       id="text977"><tspan
+         sodipodi:role="line"
+         id="tspan975"
+         x="32.750763"
+         y="-20.358307"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2.22222px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.12">NEXT EVENT TIME 88:88:88</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:1.55556px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#b300c3;fill-opacity:1;stroke:#b300c3;stroke-width:0.12;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="41.960182"
+       y="-30.656937"
+       id="text981"><tspan
+         sodipodi:role="line"
+         id="tspan979"
+         x="41.960182"
+         y="-30.656937"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:1.55556px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.12">AVOID</tspan><tspan
+         sodipodi:role="line"
+         x="41.960182"
+         y="-28.712486"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:1.55556px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.12"
+         id="tspan983">MOUSE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:1.55555px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#b300c3;fill-opacity:1;stroke:#b300c3;stroke-width:0.12;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="47.026611"
+       y="-30.750051"
+       id="text987"><tspan
+         sodipodi:role="line"
+         id="tspan985"
+         x="47.026611"
+         y="-30.750051"
+         style="stroke-width:0.12">STAY</tspan><tspan
+         sodipodi:role="line"
+         x="47.026611"
+         y="-28.805613"
+         style="stroke-width:0.12"
+         id="tspan989">PUT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:1.55555px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#b300c3;fill-opacity:1;stroke:#b300c3;stroke-width:0.12;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="48.367714"
+       y="-22.779299"
+       id="text993"><tspan
+         sodipodi:role="line"
+         id="tspan991"
+         x="48.367714"
+         y="-22.779299"
+         style="stroke-width:0.12">RESET</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#b300c3;fill-opacity:1;stroke:#b300c3;stroke-width:0.12;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="44.227016"
+       y="-20.313055"
+       id="text997"><tspan
+         sodipodi:role="line"
+         id="tspan995"
+         x="44.227016"
+         y="-20.313055"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:2px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.12">+ -</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:2px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';text-align:start;text-anchor:start;fill:#b300c3;stroke:#b300c3;stroke-width:0.12"
+       x="17.551523"
+       y="-47.994938"
+       id="text37"><tspan
+         sodipodi:role="line"
+         id="tspan35"
+         x="17.551523"
+         y="-47.994938"
+         style="text-align:start;text-anchor:start;stroke-width:0.12">[select current alarm]</tspan><tspan
+         sodipodi:role="line"
+         x="17.551523"
+         y="-45.494938"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan46">()interval ()alarm (*)alarm+reminder</tspan><tspan
+         sodipodi:role="line"
+         x="17.551523"
+         y="-42.994938"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan49">___NAME___</tspan><tspan
+         sodipodi:role="line"
+         x="17.551523"
+         y="-40.494938"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan45">88:88:88 ALARM TIME [COPY]</tspan><tspan
+         sodipodi:role="line"
+         x="17.551523"
+         y="-37.994938"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan39">88:88:88 REMINDER  [DELETE]</tspan><tspan
+         sodipodi:role="line"
+         x="17.551523"
+         y="-35.494938"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan43">[]dismissable []snoozable</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:2px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';fill:#b300c3;stroke:#b300c3;stroke-width:0.12"
+       x="17.99999"
+       y="-50.799999"
+       id="text43"><tspan
+         sodipodi:role="line"
+         id="tspan41"
+         x="17.99999"
+         y="-50.799999"
+         style="stroke-width:0.12" /></text>
+    <text
+       xml:space="preserve"
+       id="text48"
+       style="-inkscape-font-specification:'Source Code Pro, Medium';font-family:'Source Code Pro';font-weight:500;font-size:2px;fill:#b300c3;stroke:#b300c3;stroke-width:0.12;white-space:pre;shape-inside:url(#rect50);" />
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:2px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';text-align:start;text-anchor:start;fill:#b300c3;stroke:#b300c3;stroke-width:0.12"
+       x="18.369518"
+       y="-65.940918"
+       id="text66"><tspan
+         sodipodi:role="line"
+         id="tspan54"
+         x="18.369518"
+         y="-65.940918"
+         style="text-align:start;text-anchor:start;stroke-width:0.12">[select current alarm]</tspan><tspan
+         sodipodi:role="line"
+         x="18.369518"
+         y="-63.440914"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan56">()interval ()alarm (*)alarm+reminder</tspan><tspan
+         sodipodi:role="line"
+         x="18.369518"
+         y="-60.940914"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan58">___NAME___</tspan><tspan
+         sodipodi:role="line"
+         x="18.369518"
+         y="-58.440914"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan60">88:88:88 ALARM TIME [COPY]</tspan><tspan
+         sodipodi:role="line"
+         x="18.369518"
+         y="-55.940914"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan62">88:88:88 REMINDER  [DELETE]</tspan><tspan
+         sodipodi:role="line"
+         x="18.369518"
+         y="-53.440914"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan64">[]dismissable []snoozable</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:500;font-size:2px;font-family:'Source Code Pro';-inkscape-font-specification:'Source Code Pro, Medium';text-align:start;text-anchor:start;fill:#b300c3;stroke:#b300c3;stroke-width:0.12"
+       x="17.998962"
+       y="-92.026955"
+       id="text80"><tspan
+         sodipodi:role="line"
+         id="tspan68"
+         x="17.998962"
+         y="-92.026955"
+         style="text-align:start;text-anchor:start;stroke-width:0.12">[select current alarm]</tspan><tspan
+         sodipodi:role="line"
+         x="17.998962"
+         y="-89.526955"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan70">(*)interval ()alarm ()alarm+reminder</tspan><tspan
+         sodipodi:role="line"
+         x="17.998962"
+         y="-87.026955"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan72">___NAME___</tspan><tspan
+         sodipodi:role="line"
+         x="17.998962"
+         y="-84.526955"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan82">UP UP UP</tspan><tspan
+         sodipodi:role="line"
+         x="17.998962"
+         y="-82.026955"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan74">88:88:88 repeat every [COPY]</tspan><tspan
+         sodipodi:role="line"
+         x="17.998962"
+         y="-79.526955"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan84">DN DN DN</tspan><tspan
+         sodipodi:role="line"
+         x="17.998962"
+         y="-77.026955"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan76">[DELETE]</tspan><tspan
+         sodipodi:role="line"
+         x="17.998962"
+         y="-74.526955"
+         style="text-align:start;text-anchor:start;stroke-width:0.12"
+         id="tspan78">[]dismissable []snoozable</tspan></text>
+  </g>
+  <g
+     inkscape:label="measurement"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.3810116,33.581033)" />
+  <inkscape:templateinfo>
+    <inkscape:name>DEFAULT</inkscape:name>
+    <inkscape:date>2021-01-09</inkscape:date>
+  </inkscape:templateinfo>
+</svg>
