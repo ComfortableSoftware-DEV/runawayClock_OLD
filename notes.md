@@ -35,7 +35,7 @@ do       | [X] | convert all passed about things to a dict (ended up going back 
          |     | github for android and see how this works on android
          | []  | fix elapsed after midnight
          | []  | start and stop times for intervals
-         |     |
+         | []  | don't forget to manage rewrite of the mainframe class to the ALARMPOPUP class
          | []  |
          | []  |
 

@@ -25,6 +25,7 @@ APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
 APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # mouseOver mode (xpand from clocks to this)
 APPMODE_THECLOCK = "APPMODE_THECLOCK"  # theClock mode (xpand from clocks to this)
 BBOX = "BBOX"  # BOUNDING BOX
+BTN_DISMISS = "BTN_DISMISS"  # key for all of the button xpand
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
 BTN_QUIT = "BTN_QUIT"  # key for all of the button xpand
@@ -34,6 +35,8 @@ BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
 CHECKBOX_ALPHA_LOW = "CHECKBOX_ALPHA_LOW"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 CHECKBOX_RUNAWAY = "CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
 CLOSE_BBOX = "CLOSE_BBOX"  # CLOSE BOUNDING BOX
+COLOR_ALERT_BACKGROUND = "#662244"  # alert background color
+COLOR_ALERT_TEXT = "#CC4466"  # color of text on alert popup
 COLOR_BACKGROUND = "#331122"  # the background of the main frames
 COLOR_BLACK = "#000000"  # black
 COLOR_BTN_BACKGROUND = "#441133"  # background color on buttons by default
@@ -92,6 +95,7 @@ REMIND_DISMISSED = "REMIND_DISMISSED"  # alarm dismissed bool
 SCREEN_DIMS = "SCREEN_DIMS"  # dimension of the screen
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # snoozed bool
+SZ_ALERT_TEXT = 20  # high alpha
 SZ_ALPHA_HIGH = 1.0  # high alpha
 SZ_ALPHA_LOW = 0.1  # low alpha setting
 SZ_BORDER_DEPTH = 0  # border depth
@@ -125,6 +129,7 @@ TIME_INTERVAL_START = "TIME_INTERVAL_START"  # interval timer starting time, res
 TIME_LEN_RING = "TIME_LEN_RING"  # length of ringing
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
+TITLE_ALARMPOPUP = "ALERT"  # string with window title for APPMODE_CLOCKS
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
 TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
@@ -145,6 +150,7 @@ COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined c
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 EMPTY_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
 EMPTY_XY = (0, 0)  # empty XY dict
+FONTSZ_ALERT_TEXT = (FONT_DEFAULT, SZ_ALERT_TEXT)  # the font for the clocks only clock
 FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
@@ -1196,6 +1202,18 @@ THECLOCK_RCMENU01 = [  # right click to do the things
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0906 button elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+BTN_DISMISS20 = {  #
+	BUTTON_TEXT: "",  # button_text empty for the DOWN button
+	IMAGE_FILENAME: "res/dismiss20.png",  # filename for the button icon
+	BORDER_WIDTH: 0,  # button xpand key
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_DISMISS,  # button xpand key
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
 BTN_DOWN20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the DOWN button
 	IMAGE_FILENAME: "res/down20.png",  # filename for the button icon
@@ -1361,6 +1379,23 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALARMPOPUP_COLUMN = {  # the test that will be added to the popup
+}
+
+
+ALARMPOPUP_TEXT = {  # define the text element for CLOCKS_CLOCK_TIME
+	TEXT: "",  # the text
+	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_ALERT_TEXT,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: BTN_DISMISS,  # button dismiss for alerts
+	PAD: SZ_PAD_ALL,  # pad size
+	SIZE: (40 , 4),  # characters, lines size line
+	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for a clock_time element
+}
+
+
 CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
@@ -1444,6 +1479,20 @@ THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090B column elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALARMPOPUP_COLUMN01 = [  # the column that puts the two smaller clocks below the main one
+	[
+		SG.Text(  # add a new TEXT element to clocks column
+			**ALARMPOPUP_TEXT,  # add the main clock
+		),
+	],
+	[
+		SG.Button(  # add a new button to clocks column
+			**BTN_DISMISS20,  # add time to go
+		),
+	],
+]
+
+
 CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the main one
 	[
 		SG.Text(  # add a new TEXT element to clocks column
@@ -1499,6 +1548,16 @@ CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the mai
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090E layout elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALARMPOPUP_LAYOUT = [  # layout for APPMODE_ALARMPOPUP
+	[
+		SG.Col(  # add a column
+			layout=ALARMPOPUP_COLUMN01,  # the column with all of the things in it
+			pad=SZ_PAD_ALL,  # comment
+		),
+	],
+]
+
+
 CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
 	[
 		SG.Col(  # add a column
@@ -1525,6 +1584,22 @@ THECLOCK_LAYOUT = [  # layout for APPMODE_THECLOCK
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090F window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALARMPOPUP_WINDOW = {  # define the clocks window
+	ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
+	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
+	BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
+	ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
+	FORCE_TOPLEVEL: None,  #
+	GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
+	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
+	LAYOUT: ALARMPOPUP_LAYOUT,  # add the layout for ALARMPOPUP_WINDOW
+	MARGINS: SZ_MARGINS_ALL,  #
+	MODAL: True,  # comment
+	NO_TITLEBAR: True,  # no titlebar on APPMODE_ALARMPOPUP window
+	TITLE: TITLE_ALARMPOPUP,  #
+}
+
+
 CLOCKS_WINDOW = {  # define the clocks window
 	ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
 	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
@@ -1556,7 +1631,7 @@ THECLOCK_WINDOW = {  # define the clocks window
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN090D frame
+# * SCTN090D mainframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * CLOCKS_CLASS
@@ -1594,6 +1669,9 @@ class THECLOCK_CLASS():
 		MAINFRAME.close()
 
 
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0914 popupframe
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C MAPPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -2026,7 +2104,7 @@ def updateClocks():
 		CLOCKS_DICT[TIME_ELAPSED] = now_ - CLOCKS_DICT[TIME_AT_ZEROELAPSE]
 		CLOCKS_DICT[TIME_TOGO] = CLOCKS_DICT[TIME_AT_NEXT] - now_
 
-		if CLOCKS_DICT[TIME_TOGO] < 1:
+		if CLOCKS_DICT[TIME_TOGO] < 0:
 			CLOCKS_DICT[TIME_TOGO] += 86400
 
 		THECLOCK_DICT[TIME_CLOCK] = now_
@@ -2191,7 +2269,7 @@ def findNextAlarmEvent():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # doMidnightWork
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def doMidnightWork(parms):
+def doMidnightWork():
 	"""
 	deal with intervals that have +DAYSECONDS
 	deal with alarms over midnight

@@ -530,6 +530,8 @@ FMPSG_SCTN0912_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entries (TUP
 FMPSG_SCTN0912_POPUPFRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0914_POPUPFRAME_DICT = {}
+FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT = {}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -664,7 +666,6 @@ TBGLST = [
 	("FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN090C_MAPPDS_VS_ADD", FMAXFM_SCTN0101_AX_DEF, "add a string to the mainapp dict <NAC><KEY><STR>",),
 	("FMAXPSG_SCTN090C_MAPPDS_VV_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to the mainapp dict <NAC><KEY><VAL>",),
-	("FMAXPSG_SCTN0914_POPUPFRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
 	("FMAXPSG_SCTN090D_MAINFRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
 	("FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD", FMAXFM_SCTN0101_AX_DEF, "add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
 	("FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD", FMAXFM_SCTN0101_AX_DEF, "add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
@@ -692,6 +693,7 @@ TBGLST = [
 	("FMAXPSG_SCTN0912_FRAMEELEMENT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame element",),
 	("FMAXPSG_SCTN0913_RCMENU_DEF", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
 	("FMAXPSG_SCTN0913_RCMENU_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
+	("FMAXPSG_SCTN0914_POPUPFRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
 	("FMAXPSG_____", FMAX_NOP, "FMAXPSG_ENDS",),
 	("FMAX_NOP", FMAXFM_SCTN0101_AX_DEF, "skip this entry",),
 	("FMCF", FMAX_NOP, "FMCF_BEGINS",),
@@ -735,7 +737,6 @@ TBGLST = [
 	("FMPSG_SCTN0904_PLATEQ_OUTER_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0904",),
 	("FMPSG_SCTN0905_TUPDICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0905",),
 	("FMPSG_SCTN0905_TUPDICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0905",),
-	("FMPSG_SCTN0905_TUPDICT_DICT_DICT", FMAXFM_SCTN0101_AX_DEF, "the dict holding the dict entries for tupdicts",),
 	("FMPSG_SCTN0905_TUPDICT_TDD_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0905",),
 	("FMPSG_SCTN0906_BTNS_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0906_BTNS_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
@@ -768,8 +769,8 @@ TBGLST = [
 	("FMPSG_SCTN0912_FRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0913_RCMENU_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0913_RCMENU_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
-	("FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
-	("FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT_POPUPFRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN0914_POPUPFRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_____", FMAX_NOP, "FMPSG_ENDS",),
 	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
 	("PSGVAL_CLOSE_LIST", FMAXPSG_SCTN0903_LIST_DEF, "CLOSE_LIST", "list with close statuses",),
@@ -782,6 +783,8 @@ TBGLST = [
 	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_SW", "easet close entry",),
 	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_W", "easet close entry",),
 	("PSGVAL_COLOR", FMAX_NOP, "colors defined",),
+	("PSGVAL_COLOR_ALERT_BACKGROUND", FMAXPSG_SCTN0900_STR_DEF, "COLOR_ALERT_BACKGROUND", "#662244", "alert background color",),
+	("PSGVAL_COLOR_ALERT_TEXT", FMAXPSG_SCTN0900_STR_DEF, "COLOR_ALERT_TEXT", "#CC4466", "color of text on alert popup",),
 	("PSGVAL_COLOR_BACKGROUND", FMAXPSG_SCTN0900_STR_DEF, "COLOR_BACKGROUND", "#331122", "the background of the main frames",),
 	("PSGVAL_COLOR_BLACK", FMAXPSG_SCTN0900_STR_DEF, "COLOR_BLACK", "#000000", "black",),
 	("PSGVAL_COLOR_BTN_BACKGROUND", FMAXPSG_SCTN0900_STR_DEF, "COLOR_BTN_BACKGROUND", "#441133", "background color on buttons by default",),
@@ -1051,6 +1054,7 @@ TBGLST = [
 	("PSGVAL_KEY_APPMODE_MOUSE_OVER", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_MOUSE_OVER", "mouseOver mode (xpand from clocks to this)",),
 	("PSGVAL_KEY_APPMODE_THECLOCK", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_THECLOCK", "theClock mode (xpand from clocks to this)",),
 	("PSGVAL_KEY_BBOX", FMAXPSG_SCTN0900_KEY_DEF, "BBOX", "BOUNDING BOX",),
+	("PSGVAL_KEY_BTN_DISMISS", FMAXPSG_SCTN0900_KEY_DEF, "BTN_DISMISS", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_DOWN", FMAXPSG_SCTN0900_KEY_DEF, "BTN_DOWN", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_EDIT", FMAXPSG_SCTN0900_KEY_DEF, "BTN_EDIT", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_QUIT", FMAXPSG_SCTN0900_KEY_DEF, "BTN_QUIT", "key for all of the button xpand",),
@@ -1176,6 +1180,7 @@ TBGLST = [
 	("PSGVAL_NORMAL_WINDOW_TITLEBAR_ICON", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TITLEBAR_ICON", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as the icon (file or base64 bytes)",),
 	("PSGVAL_NORMAL_WINDOW_TITLEBAR_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TITLEBAR_TEXT_COLOR", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as text color",),
 	("PSGVAL_NORMAL_WINDOW_TRANSPARENT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TRANSPARENT_COLOR", "None", "Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.",),
+	("PSGVAL_SZ_ALERT_TEXT", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALERT_TEXT", "20", "high alpha",),
 	("PSGVAL_SZ_ALPHA_HIGH", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_HIGH", "1.0", "high alpha",),
 	("PSGVAL_SZ_ALPHA_LOW", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_LOW", "0.1", "low alpha setting",),
 	("PSGVAL_SZ_BORDER_DEPTH", FMAXPSG_SCTN0900_VAL_DEF, "SZ_BORDER_DEPTH", "0", "border depth",),
@@ -1195,12 +1200,13 @@ TBGLST = [
 	("PSGVAL_SZ_MAX_DELTA", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MAX_DELTA", "100", "comment",),
 	("PSGVAL_SZ_MOVE_DIST", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MOVE_DIST", "50", "comment",),
 	("PSGVAL_SZ_PAD_ALL", FMAXPSG_SCTN0900_VAL_DEF, "SZ_PAD_ALL", "((1, 1), (1, 1))", "add padding to all the things",),
-	("PSGVAL_SZ_TIMES_BETWEEN_PERIODIC_JOB", FMAXPSG_SCTN0901_VAL_DEF, "SZ_TIMES_BTWN_PERIODIC_JOB", "900", "time between periodic job runnings",),
 	("PSGVAL_SZ_TIMEMS_BETWEEN_MOUSE_CHECKS", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMEMS_BETWEEN_MOUSE_CHECKS", "300", "throttle mouse checking",),
 	("PSGVAL_SZ_TIMEMS_BETWEEN_MOVES", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMEMS_BETWEEN_MOVES", "500", "comment",),
 	("PSGVAL_SZ_TIMEMS_BETWEEN_UPDATES", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMEMS_BETWEEN_UPDATES", "500", "comment",),
 	("PSGVAL_SZ_TIMEOUT_MS", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMEOUT_MS", "100", "timeout for PSG",),
+	("PSGVAL_SZ_TIMES_BETWEEN_PERIODIC_JOB", FMAXPSG_SCTN0901_VAL_DEF, "SZ_TIMES_BTWN_PERIODIC_JOB", "900", "time between periodic job runnings",),
 	("PSGVAL_TITLE", FMAX_NOP, "titls start here",),
+	("PSGVAL_TITLE_ALARMPOPUP", FMAXPSG_SCTN0900_STR_DEF, "TITLE_ALARMPOPUP", "ALERT", "string with window title for APPMODE_CLOCKS",),
 	("PSGVAL_TITLE_CLOCKS", FMAXPSG_SCTN0900_STR_DEF, "TITLE_CLOCKS", "CLOCKS", "string with window title for APPMODE_CLOCKS",),
 	("PSGVAL_TITLE_EDIT", FMAXPSG_SCTN0900_STR_DEF, "TITLE_EDIT", "edit an event", "string with window title for APPMODE_CLOCKS",),
 	("PSGVAL_TITLE_MAIN", FMAXPSG_SCTN0900_STR_DEF, "TITLE_MAIN", "Main window which is xpanded from CLOCKS window and pops up EDIT windows", "string with window title for APPMODE_CLOCKS",),
@@ -1215,14 +1221,57 @@ TBGLST = [
 	("PSGVAL_UPDATE_COMBO_VALUES", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "UPDATE_COMBO", "VALUES", "None", "values to choose. While displayed as text, the items returned are what the caller supplied, not text",),
 	("PSGVAL_UPDATE_COMBO_VISIBLE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "UPDATE_COMBO", "VISIBLE", "None", "set visibility state of the element",),
 	("PSGVAL_ZERO_CLOCK", FMAXPSG_SCTN0900_VAL_DEF, "ZERO_CLOCK", "0", "all the zeros",),
-
 	("PSGVAL__ALARMPOPUP", FMAX_NOP, "start of the popup alarm alert",),
-	("PSGVAL__BTN_DISMISS", FMAX, parms, "comment",),
-	("PSGVAL__ALARMPOPUP_WINDOW", FMAX, parms, "comment",),
-	("PSGVAL__ALARMPOPUP_LAYOUT", FMAX, parms, "comment",),
-	("PSGVAL__ALARMPOPUP_TEXT", FMAX, parms, "comment",),
-
-
+	("PSGVAL__ALARMPOPUP_COLUMN", FMAXPSG_SCTN0909_TEXT_DEF, "ALARMPOPUP_COLUMN", "the test that will be added to the popup",),
+	("PSGVAL__ALARMPOPUP_COLUMN0100", FMAXPSG_SCTN090B_COLUMN_DEF, "ALARMPOPUP_COLUMN01", "the column that puts the two smaller clocks below the main one",),
+	("PSGVAL__ALARMPOPUP_COLUMN0101", FMAXPSG_SCTN090B_COLUMN_ROW_ADD, "ALARMPOPUP_COLUMN01", "ALARMPOPUP_COLUMN01_ROW_00", "L01", "add a new row to clocks column",),
+	("PSGVAL__ALARMPOPUP_COLUMN0102", FMAXPSG_SCTN090B_COLUMN_TEXT_ADD, "ALARMPOPUP_COLUMN01", "ALARMPOPUP_COLUMN01_ROW_00", "L02", "ALARMPOPUP_COLUMN01_E01", "add a new TEXT element to clocks column",),
+	("PSGVAL__ALARMPOPUP_COLUMN0103", FMAXPSG_SCTN090B_COLUMN_PARM_ADD, "ALARMPOPUP_COLUMN01", "ALARMPOPUP_COLUMN01_ROW_00", "L03", "ALARMPOPUP_COLUMN01_E01", "**ALARMPOPUP_TEXT", "add the main clock",),
+	("PSGVAL__ALARMPOPUP_COLUMN0104", FMAXPSG_SCTN090B_COLUMN_ROW_ADD, "ALARMPOPUP_COLUMN01", "ALARMPOPUP_COLUMN01_ROW_01", "L01", "add a new row to clocks column",),
+	("PSGVAL__ALARMPOPUP_COLUMN0105", FMAXPSG_SCTN090B_COLUMN_BUTTON_ADD, "ALARMPOPUP_COLUMN01", "ALARMPOPUP_COLUMN01_ROW_01", "L02", "ALARMPOPUP_COLUMN01_E02", "add a new button to clocks column",),
+	("PSGVAL__ALARMPOPUP_COLUMN0106", FMAXPSG_SCTN090B_COLUMN_PARM_ADD, "ALARMPOPUP_COLUMN01", "ALARMPOPUP_COLUMN01_ROW_01", "L03", "ALARMPOPUP_COLUMN01_E02", "**BTN_DISMISS20", "add time to go",),
+	("PSGVAL__ALARMPOPUP_LAYOUT", FMAX_NOP, "the layout for ALARMPOPUPS",),
+	("PSGVAL__ALARMPOPUP_LAYOUT00", FMAXPSG_SCTN090E_LAYOUT_DEF, "ALARMPOPUP_LAYOUT", "layout for APPMODE_ALARMPOPUP",),
+	("PSGVAL__ALARMPOPUP_LAYOUT01", FMAXPSG_SCTN090E_LAYOUT_ROW_ADD, "ALARMPOPUP_LAYOUT", "ALARMPOPUP_LAYOUT_ROW_00", "L01", "add a row to the layout",),
+	("PSGVAL__ALARMPOPUP_LAYOUT02", FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD, "ALARMPOPUP_LAYOUT", "ALARMPOPUP_LAYOUT_ROW_00", "L02", "ALARMPOPUP_LAYOUT_E01", "add a column",),
+	("PSGVAL__ALARMPOPUP_LAYOUT03", FMAXPSG_SCTN090E_LAYOUT_PARM_VAL_ADD, "ALARMPOPUP_LAYOUT", "ALARMPOPUP_LAYOUT_ROW_00", "L03", "ALARMPOPUP_LAYOUT_E01", "layout", "ALARMPOPUP_COLUMN01", "the column with all of the things in it",),
+	("PSGVAL__ALARMPOPUP_LAYOUT04", FMAXPSG_SCTN090E_LAYOUT_PARM_VAL_ADD, "ALARMPOPUP_LAYOUT", "ALARMPOPUP_LAYOUT_ROW_00", "L03", "ALARMPOPUP_LAYOUT_E01", "pad", "SZ_PAD_ALL", "comment",),
+	("PSGVAL__ALARMPOPUP_TEXT", FMAXPSG_SCTN0909_TEXT_DEF, "ALARMPOPUP_TEXT", "the text element of ALARMPOPUP",),
+	("PSGVAL__ALARMPOPUP_TEXT00", FMAXPSG_SCTN0909_TEXT_DEF, "ALARMPOPUP_TEXT", "define the text element for CLOCKS_CLOCK_TIME",),
+	("PSGVAL__ALARMPOPUP_TEXT01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "ALARMPOPUP_TEXT", "BACKGROUND_COLOR", "COLOR_ALERT_BACKGROUND", "background color for the clock elements",),
+	("PSGVAL__ALARMPOPUP_TEXT01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "ALARMPOPUP_TEXT", "ENABLE_EVENTS", "False", "this is clickable",),
+	("PSGVAL__ALARMPOPUP_TEXT01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "ALARMPOPUP_TEXT", "FONT", "FONTSZ_ALERT_TEXT", "font+size line",),
+	("PSGVAL__ALARMPOPUP_TEXT01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "ALARMPOPUP_TEXT", "JUSTIFICATION", "JUSTIFICATION_CENTER", "center everything",),
+	("PSGVAL__ALARMPOPUP_TEXT01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "ALARMPOPUP_TEXT", "KEY", "BTN_DISMISS", "button dismiss for alerts",),
+	("PSGVAL__ALARMPOPUP_TEXT01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "ALARMPOPUP_TEXT", "PAD", "SZ_PAD_ALL", "pad size",),
+	("PSGVAL__ALARMPOPUP_TEXT01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "ALARMPOPUP_TEXT", "SIZE", "(40 , 4)", "characters, lines size line",),
+	("PSGVAL__ALARMPOPUP_TEXT01", FMAXPSG_SCTN0909_TEXT_STR_ADD, "ALARMPOPUP_TEXT", "TEXT", "", "the text ",),
+	("PSGVAL__ALARMPOPUP_TEXT01", FMAXPSG_SCTN0909_TEXT_VAL_ADD, "ALARMPOPUP_TEXT", "TEXT_COLOR", "COLOR_ALERT_TEXT", "the text color for a clock_time element",),
+	("PSGVAL__ALARMPOPUP_WINDOW", FMAXPSG_SCTN090F_WINDOW_DEF, "ALARMPOPUP_WINDOW", "window def for ALARMPOPUPS",),
+	("PSGVAL__ALARMPOPUP_WINDOW", FMAX_NOP, "the window for APPMODE_ALARMPOPUP",),
+	("PSGVAL__ALARMPOPUP_WINDOW00", FMAXPSG_SCTN090F_WINDOW_DEF, "ALARMPOPUP_WINDOW", "define the clocks window",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "ALPHA_CHANNEL", "SZ_ALPHA_HIGH", "set the high alpha as the default",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "BACKGROUND_COLOR", "COLOR_BACKGROUND", "eliminate all not useful on the floating clocks",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "BORDER_DEPTH", "SZ_BORDER_DEPTH", "border depth to zero",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "ELEMENT_PADDING", "SZ_PAD_ALL", "all padding for elements ((1, 1), (1, 1)) by default",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "FORCE_TOPLEVEL", "None", "",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "GRAB_ANYWHERE", "True", "eliminate all not useful on the floating clocks",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "KEEP_ON_TOP", "True", "eliminate all not useful on the floating clocks",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "LAYOUT", "ALARMPOPUP_LAYOUT", "add the layout for ALARMPOPUP_WINDOW",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "MARGINS", "SZ_MARGINS_ALL", "",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "MODAL", "True", "comment",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "NO_TITLEBAR", "True", "no titlebar on APPMODE_ALARMPOPUP window",),
+	("PSGVAL__ALARMPOPUP_WINDOW01", FMAXPSG_SCTN090F_WINDOW_VAL_ADD, "ALARMPOPUP_WINDOW", "TITLE", "TITLE_ALARMPOPUP", "",),
+	("PSGVAL__BTN_DISMISS20", FMAX_NOP, "start of the dismiss button for alarms",),
+	("PSGVAL__BTN_DISMISS2000", FMAXPSG_SCTN0906_BTN_DEF, "BTN_DISMISS20", "",),
+	("PSGVAL__BTN_DISMISS2001", FMAXPSG_SCTN0906_BTN_STR_ADD, "BTN_DISMISS20", "BUTTON_TEXT", "", "button_text empty for the DOWN button",),
+	("PSGVAL__BTN_DISMISS2001", FMAXPSG_SCTN0906_BTN_STR_ADD, "BTN_DISMISS20", "IMAGE_FILENAME", "res/dismiss20.png", "filename for the button icon",),
+	("PSGVAL__BTN_DISMISS2001", FMAXPSG_SCTN0906_BTN_VAL_ADD, "BTN_DISMISS20", "BORDER_WIDTH", "0", "button xpand key",),
+	("PSGVAL__BTN_DISMISS2001", FMAXPSG_SCTN0906_BTN_VAL_ADD, "BTN_DISMISS20", "BUTTON_COLOR", "COLORS_BTN_NORMAL", "default button color",),
+	("PSGVAL__BTN_DISMISS2001", FMAXPSG_SCTN0906_BTN_VAL_ADD, "BTN_DISMISS20", "FOCUS", "True", "focus on click",),
+	("PSGVAL__BTN_DISMISS2001", FMAXPSG_SCTN0906_BTN_VAL_ADD, "BTN_DISMISS20", "FONT", "FONTSZ_BTNS", "button xpand font",),
+	("PSGVAL__BTN_DISMISS2001", FMAXPSG_SCTN0906_BTN_VAL_ADD, "BTN_DISMISS20", "KEY", "BTN_DISMISS", "button xpand key",),
+	("PSGVAL__BTN_DISMISS2001", FMAXPSG_SCTN0906_BTN_VAL_ADD, "BTN_DISMISS20", "PAD", "SZ_PAD_ALL", "button xpand key",),
 	("PSGVAL__BTN_DOWN20", FMAX_NOP, "clocks down20 button",),
 	("PSGVAL__BTN_DOWN2000", FMAXPSG_SCTN0906_BTN_DEF, "BTN_DOWN20", "",),
 	("PSGVAL__BTN_DOWN2001", FMAXPSG_SCTN0906_BTN_STR_ADD, "BTN_DOWN20", "BUTTON_TEXT", "", "button_text empty for the DOWN button",),
@@ -1475,6 +1524,7 @@ TBGLST = [
 	("PSGVAL__COLORS_TIME_ELAPSED", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TIME_ELAPSED", "(COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)", "combined colors for a clock text element",),
 	("PSGVAL__COLORS_TIME_TOGO", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TIME_TOGO", "(COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)", "combined colors for a clock text element",),
 	("PSGVAL__FONTSZ_BTNS", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_BTNS", "(FONT_DEFAULT, SZ_BTNS)", "comment",),
+	("PSGVAL__FONTSZ_ALERT_TEXT", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_ALERT_TEXT", "(FONT_DEFAULT, SZ_ALERT_TEXT)", "the font for the clocks only clock",),
 	("PSGVAL__FONTSZ_CLOCKS_TIME_CLOCK", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_CLOCKS_TIME_CLOCK", "(FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)", "the font for the clocks only clock",),
 	("PSGVAL__FONTSZ_CLOCKS_TIME_ELAPSED", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_CLOCKS_TIME_ELAPSED", "(FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)", "the font for the clocks only clock",),
 	("PSGVAL__FONTSZ_CLOCKS_TIME_TOGO", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_CLOCKS_TIME_TOGO", "(FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)", "the font for the clocks only clock",),
@@ -1567,9 +1617,9 @@ TBGLST = [
 	("PSGVAL__VMAINFRAME", FMAXPSG_SCTN0901_VAL_DEF, "MAINFRAME", "None", "mainframe so everything passes together always",),
 	("PSGVAL__VMLCN", FMAXPSG_SCTN0901_VAL_DEF, "MLCN", "DISP.Display().screen().root.query_pointer", "short cut to get mouse position",),
 	("PSGVAL__VTIMEMS_NEXT_MOUSE_CHECK", FMAXPSG_SCTN0901_VAL_DEF, "TIMEMS_NEXT_MOUSE_CHECK", "0", "comment",),
-	("PSGVAL__VTIMES_NEXT_EVENT", FMAXPSG_SCTN0901_VAL_DEF, "TIMES_NEXT_EVENT", "0", "comment",),
 	("PSGVAL__VTIMEMS_NEXT_MOVED", FMAXPSG_SCTN0901_VAL_DEF, "TIMEMS_NEXT_MOVED", "0", "comment",),
 	("PSGVAL__VTIMEMS_NEXT_UPDATED", FMAXPSG_SCTN0901_VAL_DEF, "TIMEMS_NEXT_UPDATED", "0", "comment",),
+	("PSGVAL__VTIMES_NEXT_EVENT", FMAXPSG_SCTN0901_VAL_DEF, "TIMES_NEXT_EVENT", "0", "comment",),
 	("PSGVAL__VTIMES_NEXT_PERIODIC_JOB", FMAXPSG_SCTN0901_VAL_DEF, "TIMES_NEXT_PERIODIC_JOB", "0", "seconds till next housekeeping, check for next times, etc.",),
 	("PSGVAL___", FMAX_NOP, "start of PySimpleGui keys",),
 	("PSGVAL___ALPHA_CHANNEL", FMAXPSG_SCTN0910_STR_DEF, "ALPHA_CHANNEL", "alpha_channel", "",),
@@ -2164,7 +2214,7 @@ def makePSG():
 		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN090F_WINDOW_CMNT_DICT[thisName_], value_)}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
-	strToRtn_ += f"""{makeAComment("SCTN090D frame")}"""
+	strToRtn_ += f"""{makeAComment("SCTN090D mainframe")}"""
 	dictToUse_ = sortADict(FMPSG_SCTN090D_MAINFRAME_DICT)
 	for thisName_, value_ in dictToUse_.items():
 		strToRtn_ += f"""{makeAComment(f"{thisName_}_CLASS")}class {thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global MAINFRAME, MAPPDS{NEWLINE}{NEWLINE}"""
@@ -2172,6 +2222,16 @@ def makePSG():
 		strToRtn_ += f"""{NTAB(2)}MAINFRAME = SG.Window{OPAREN}{NEWLINE}{value_}"""
 		strToRtn_ = strToRtn_[:-1] + f"""{NTAB(2)}MAPPDS{OBRKT}APPMODE{CBRKT} = APPMODE_{thisName_}{NEWLINE}{NEWLINE}"""
 		strToRtn_ += f"""{NTAB(1)}def __exit__{OPAREN}self, *args{CPAREN}:{NEWLINE}{NTAB(2)}global MAINFRAME, MAPPDS{NEWLINE}{NTAB(2)}MAINFRAME.close(){NEWLINE}{NEWLINE}{NEWLINE}"""
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+	strToRtn_ += f"""{makeAComment("SCTN0914 popupframe")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN0914_POPUPFRAME_DICT)
+	for thisName_, value_ in dictToUse_.items():
+		strToRtn_ += f"""{makeAComment(f"{thisName_}_CLASS")}class {thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global POPUPFRAME{NEWLINE}{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global POPUPFRAME{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(2)}POPUPFRAME = SG.Window{OPAREN}{NEWLINE}{value_}"""
+		strToRtn_ = strToRtn_[:-1] + f"""{NTAB(2)}MAPPDS{OBRKT}APPMODE{CBRKT} = APPMODE_{thisName_}{NEWLINE}{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(1)}def __exit__{OPAREN}self, *args{CPAREN}:{NEWLINE}{NTAB(2)}global POPUPFRAME{NEWLINE}{NTAB(2)}POPUPFRAME.close(){NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	# print(f"""SCTN090C FMPSG_SCTN090C_MAPPDS_DICT |{FMPSG_SCTN090C_MAPPDS_DICT}|{NEWLINE}FMPSG_SCTN090C_MAPPDSDICT_DICT|{FMPSG_SCTN090C_MAPPDSDICT_DICT}|""")
@@ -3936,6 +3996,23 @@ def parseTBGLST(FDTBGLST):
 			if thisRCMenuName_ not in FMPSG_SCTN0913_RCMENU_DICT:
 				FMPSG_SCTN0913_RCMENU_DICT[thisRCMenuName_] = ""
 			FMPSG_SCTN0913_RCMENU_DICT[thisRCMenuName_] += f"""{NTAB(2)}{thisVal_},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0914_POPUPFRAME_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 6:
+				doErrorItem("not 6 items", thisItem_)
+				continue
+			thisMainframeName_ = thisItem_[2]
+			thisWindowName_ = thisItem_[3]
+			thisFinalize_ = thisItem_[4]
+			if thisFinalize_ == "True":
+				FMPSG_SCTN0914_POPUPFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NEWLINE}"""
+			else:
+				FMPSG_SCTN0914_POPUPFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 

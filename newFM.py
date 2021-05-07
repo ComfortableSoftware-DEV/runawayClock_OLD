@@ -327,7 +327,6 @@ FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # defin
 FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
 FMAXPSG_SCTN0914_POPUPFRAME_DEF = "FMAXPSG_SCTN0914_POPUPFRAME_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
-FMPSG_SCTN0905_TUPDICT_DICT_DICT = "FMPSG_SCTN0905_TUPDICT_DICT_DICT"  # the dict holding the dict entries for tupdicts
 
 
 FMAXFM_AXLST = [
@@ -448,7 +447,6 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
 	FMAXPSG_SCTN0914_POPUPFRAME_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
-	FMPSG_SCTN0905_TUPDICT_DICT_DICT,  # the dict holding the dict entries for tupdicts
 ]
 
 
@@ -526,10 +524,10 @@ FMPSG_SCTN0911_COMBO_CMNT_DICT = {}  # define the dict to hold everything in SCT
 FMPSG_SCTN0911_COMBO_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0912_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0912_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0912_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN0912_POPUPFRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN0914_POPUPFRAME_DICT = {}  # holds all of the button entries (TUPDICT)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -613,7 +611,7 @@ FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN090
 		FMPSG_SCTN0911_COMBO_DICT, \
 		FMPSG_SCTN0912_FRAME_CMNT_DICT, \
 		FMPSG_SCTN0912_FRAME_DICT, \
-		FMPSG_SCTN0912_POPUPFRAME_CMNT_DICT, \
-		FMPSG_SCTN0912_POPUPFRAME_DICT, \
 		FMPSG_SCTN0913_RCMENU_CMNT_DICT, \
-		FMPSG_SCTN0913_RCMENU_DICT
+		FMPSG_SCTN0913_RCMENU_DICT, \
+		FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT, \
+		FMPSG_SCTN0914_POPUPFRAME_DICT
