@@ -1789,6 +1789,8 @@ def updateMainframeFromDict(dictToUpdateFrom_, isTimeUpdate_=True):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_, val_ in dictToUpdateFrom_.items():
 		# print(f"""key_ {key_} val_ {val_}""")
+		if val_ > CF.DAYSECONDS:
+			val_ -= CF.DAYSECONDS
 		if isTimeUpdate_ is True:
 			MAINFRAME.Element(key_).Update(value=CF.nrmlIntToHMS(val_))
 		else:
@@ -2017,6 +2019,7 @@ def updateClocks():
 	now_ = CF.MTSS()
 	# print(f"""updateClocks nowMS_ {nowMS_} TIMEMS_NEXT_UPDATED {TIMEMS_NEXT_UPDATED}""")
 	if nowMS_ >= TIMEMS_NEXT_UPDATED:
+		CF.whirl()
 		TIMEMS_NEXT_UPDATED = nowMS_ + SZ_TIMEMS_BETWEEN_UPDATES
 		# print(f"""CLOCKS_DICT {CLOCKS_DICT} now_ {now_}""")
 		CLOCKS_DICT[TIME_CLOCK] = now_
@@ -2271,7 +2274,7 @@ def doIt():
 			findNextAlarmEvent()
 
 		if now_ > TIMES_NEXT_EVENT:
-			doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT)
+			doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
 
 		if oldValues_ != values_:
 			MAPPDS = CF.mergeDicts(MAPPDS, values_)

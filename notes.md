@@ -45,6 +45,11 @@ do       | [X] | convert all passed about things to a dict (ended up going back 
 POPUPFRAME BringToFront bool
 POPUPFRAME maximize bool
 
+
+# execution notes
+
+stopped after 21 hours or so, just like previously, no updating clocks
+
 # eof
 #
 #

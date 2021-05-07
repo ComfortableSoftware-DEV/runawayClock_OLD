@@ -326,6 +326,7 @@ FMAXPSG_SCTN0911_COMBO_DEF = "FMAXPSG_SCTN0911_COMBO_DEF"  # define a combo box
 FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # define a frame element
 FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
+FMAXPSG_SCTN0914_POPUPFRAME_DEF = "FMAXPSG_SCTN0914_POPUPFRAME_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 FMPSG_SCTN0905_TUPDICT_DICT_DICT = "FMPSG_SCTN0905_TUPDICT_DICT_DICT"  # the dict holding the dict entries for tupdicts
 
 
@@ -446,6 +447,7 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0912_FRAMEELEMENT_DEF,  # define a frame element
 	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
+	FMAXPSG_SCTN0914_POPUPFRAME_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 	FMPSG_SCTN0905_TUPDICT_DICT_DICT,  # the dict holding the dict entries for tupdicts
 ]
 
@@ -524,6 +526,8 @@ FMPSG_SCTN0911_COMBO_CMNT_DICT = {}  # define the dict to hold everything in SCT
 FMPSG_SCTN0911_COMBO_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0912_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0912_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0912_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN0912_POPUPFRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
 
@@ -542,7 +546,7 @@ FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN090
 #
 
 
-#
+# <<>>
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of unmanaged sections of FM.py
@@ -764,8 +768,8 @@ TBGLST = [
 	("FMPSG_SCTN0912_FRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0913_RCMENU_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0913_RCMENU_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
-	("FMPSG_SCTN0912_POPUPFRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
-	("FMPSG_SCTN0912_POPUPFRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
+	("FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT_POPUPFRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_____", FMAX_NOP, "FMPSG_ENDS",),
 	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
 	("PSGVAL_CLOSE_LIST", FMAXPSG_SCTN0903_LIST_DEF, "CLOSE_LIST", "list with close statuses",),
@@ -1211,6 +1215,14 @@ TBGLST = [
 	("PSGVAL_UPDATE_COMBO_VALUES", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "UPDATE_COMBO", "VALUES", "None", "values to choose. While displayed as text, the items returned are what the caller supplied, not text",),
 	("PSGVAL_UPDATE_COMBO_VISIBLE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "UPDATE_COMBO", "VISIBLE", "None", "set visibility state of the element",),
 	("PSGVAL_ZERO_CLOCK", FMAXPSG_SCTN0900_VAL_DEF, "ZERO_CLOCK", "0", "all the zeros",),
+
+	("PSGVAL__ALARMPOPUP", FMAX_NOP, "start of the popup alarm alert",),
+	("PSGVAL__BTN_DISMISS", FMAX, parms, "comment",),
+	("PSGVAL__ALARMPOPUP_WINDOW", FMAX, parms, "comment",),
+	("PSGVAL__ALARMPOPUP_LAYOUT", FMAX, parms, "comment",),
+	("PSGVAL__ALARMPOPUP_TEXT", FMAX, parms, "comment",),
+
+
 	("PSGVAL__BTN_DOWN20", FMAX_NOP, "clocks down20 button",),
 	("PSGVAL__BTN_DOWN2000", FMAXPSG_SCTN0906_BTN_DEF, "BTN_DOWN20", "",),
 	("PSGVAL__BTN_DOWN2001", FMAXPSG_SCTN0906_BTN_STR_ADD, "BTN_DOWN20", "BUTTON_TEXT", "", "button_text empty for the DOWN button",),
@@ -2306,6 +2318,8 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0911_COMBO_DICT, \
 		FMPSG_SCTN0912_FRAME_CMNT_DICT, \
 		FMPSG_SCTN0912_FRAME_DICT, \
+		FMPSG_SCTN0912_POPUPFRAME_CMNT_DICT, \
+		FMPSG_SCTN0912_POPUPFRAME_DICT, \
 		FMPSG_SCTN0913_RCMENU_CMNT_DICT, \
 		FMPSG_SCTN0913_RCMENU_DICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
