@@ -51,7 +51,62 @@ POPUPFRAME maximize bool
 stopped after 21 hours or so, just like previously, no updating clocks
 stopped again, right after 18:00 both times
 restarted service at 18:27:45
+restarted after upgrades at 19:30:50
 
+
+file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2347, function doMidnightWork
+ event_ |{
+	 'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed',
+	 'DISMISSED': False,
+	 'enabled': True,
+	 'EVENTMODE': 'EVENTMODE_ALARM',
+	 'FIRSTRUN': True,
+	 'LAST_RUN': None,
+	 'NAME': 'wind it up',
+	 'PREDISMISSABLE': True,
+	 'REMIND_DISMISSED': False,
+	 'SNOOZABLE': False,
+	 'SNOOZED': False,
+	 'TIME_ALARM': 12600,
+	 'TIME_AT_NEXT': 99000,
+	 'TIME_INTERVAL': 0,
+	 'TIME_INTERVAL__BEGIN': 0,
+	 'TIME_INTERVAL__END': 0,
+	 'TIME_INTERVAL_START': 0,
+	 'TIME_LEN_RING': 0,
+	 'TIME_REMIND': 0
+}|
+
+
+
+file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2363, function doMidnightWork
+ event_ |
+ {
+	 'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed',
+	 'DISMISSED': False,
+	 'enabled': True,
+	 'EVENTMODE': 'EVENTMODE_ALARM',
+	 'FIRSTRUN': True,
+	 'LAST_RUN': None,
+	 'NAME': 'wind it up',
+	 'PREDISMISSABLE': True,
+	 'REMIND_DISMISSED': False,
+	 'SNOOZABLE': False,
+	 'SNOOZED': False,
+	 'TIME_ALARM': 12600,
+	 'TIME_AT_NEXT': 99000,
+	 'TIME_INTERVAL': 0,
+	 'TIME_INTERVAL__BEGIN': 0,
+	 'TIME_INTERVAL__END': 0,
+	 'TIME_INTERVAL_START': 0,
+	 'TIME_LEN_RING': 0,
+	 'TIME_REMIND': 0
+	}|
+                MAPPDS[EVENT_ENTRIES] |
+	{0: {'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed', 'DISMISSED': False, 'enabled': True, 'EVENTMODE': 'EVENTMODE_ALARM', 'FIRSTRUN': True, 'LAST_RUN': None, 'NAME': 'wind it up', 'PREDISMISSABLE': True, 'REMIND_DISMISSED': False, 'SNOOZABLE': False, 'SNOOZED': False, 'TIME_ALARM': 12600, 'TIME_AT_NEXT': 99000, 'TIME_INTERVAL': 0, 'TIME_INTERVAL__BEGIN': 0, 'TIME_INTERVAL__END': 0, 'TIME_INTERVAL_START': 0, 'TIME_LEN_RING': 0, 'TIME_REMIND': 0}, 1: None}|
+file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2363, function doMidnightWork
+ event_ |None|
+                MAPPDS[EVENT_ENTRIES] |{0: {'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed', 'DISMISSED': False, 'enabled': True, 'EVENTMODE': 'EVENTMODE_ALARM', 'FIRSTRUN': True, 'LAST_RUN': None, 'NAME': 'wind it up', 'PREDISMISSABLE': True, 'REMIND_DISMISSED': False, 'SNOOZABLE': False, 'SNOOZED': False, 'TIME_ALARM': 12600, 'TIME_AT_NEXT': 99000, 'TIME_INTERVAL': 0, 'TIME_INTERVAL__BEGIN': 0, 'TIME_INTERVAL__END': 0, 'TIME_INTERVAL_START': 0, 'TIME_LEN_RING': 0, 'TIME_REMIND': 0}, 1: None}|
 
 # eof
 #

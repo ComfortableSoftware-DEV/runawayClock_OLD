@@ -75,8 +75,6 @@ CLRALL = f"""{ESC}[2J"""
 CLRDOWN = f"""{ESC}[J"""
 CLREOL = f"""{ESC}[K"""
 CMNTLINE = f"""# * {"#*" * (CMNTLEN // 2)}"""
-DAYMS = (60 * 60 * 24 * 1000)  # 86400000
-DAYSECONDS = (60 * 60 * 24)  # 86400
 DBSQLT_NAME = "newDBSQLT.py"
 DICTMODE_KEYSTR = "DICTMODE_KEYSTR"  # define dictmode 'key':val
 DICTMODE_KEYVAL = "DICTMODE_KEYVAL"  # define dictmode key:val
@@ -111,7 +109,6 @@ HEX08 = lambda X_: f"""{X_:02H}"""  # {thisComment_}
 HEX16 = lambda X_: f"""{X_:04H}"""  # {thisComment_}
 HEX32 = lambda X_: f"""{X_:08H}"""  # {thisComment_}
 HEX64 = lambda X_: f"""{X_:016H}"""  # {thisComment_}
-HOURSECONDS = (60 * 60)  # 3600
 IMPORTANTSTR = f"""# * {"!-" * (CMNTLEN // 2)}"""  # important line marker
 INDENTIN = " -=> "  # display arrow RIGHT
 INDENTOUT = " <=- "  # display arrow LEFT
@@ -177,7 +174,6 @@ MARKLINES_NAME = f"""{CONFIGDIR}MARKLINES.py"""
 MOVELEFT = lambda NUM_: f"""{ESC}[{NUM_}D"""
 MOVETO = lambda LN_, COL_: f"""{ESC}[{LN_};{COL_}H"""
 NCR = lambda NUM_: f"""{CRSTR * NUM_}"""
-NINETYNINE5959SEC = (60 * 60 * 100)  # 360000
 NNL = lambda NUM_: f"""{NEWLINE * NUM_}"""
 NSPC = lambda NUM_: f"""{SPCSTR * NUM_}"""  # returns a string with NUM_ SPC
 NTAB = lambda NUM_: f"""{TABSTR * NUM_}"""  # returns a string with NUM_ TAB
@@ -193,6 +189,17 @@ VO_NAME = "newVO.py"
 VOTOP_NAME = f"""{CONFIGDIR}VOTOP.py"""
 WHIRLCOUNT = 0
 WHIRLSTR = f"""-{BKSLSH}|/*"""
+
+
+DAYMS = (60 * 60 * 24 * 1000)  # 86400000
+DAYSECS = (60 * 60 * 24)  # 86400
+HALFDAY = (60 * 60 * 12)  # 43200
+HALFHOUR = (60 * 30)  # 1800
+HOURSECONDS = (60 * 60)  # 3600
+MINUTESECONDS = 60 # 60
+NINETYNINE5959SEC = (60 * 60 * 100)  # 360000
+QUARTERDAYSECS = (60 * 60 * 6)
+QUARTERHOURSECS = (60 * 15)  # 900
 
 
 CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from 'text' strings like color codes"}
@@ -327,7 +334,6 @@ FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # defin
 FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
 FMAXPSG_SCTN0914_POPUPFRAME_DEF = "FMAXPSG_SCTN0914_POPUPFRAME_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
-FMPSG_SCTN0905_TUPDICT_DICT_DICT = "FMPSG_SCTN0905_TUPDICT_DICT_DICT"  # the dict holding the dict entries for tupdicts
 
 
 FMAXFM_AXLST = [
@@ -448,7 +454,6 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
 	FMAXPSG_SCTN0914_POPUPFRAME_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
-	FMPSG_SCTN0905_TUPDICT_DICT_DICT,  # the dict holding the dict entries for tupdicts
 ]
 
 
@@ -526,12 +531,10 @@ FMPSG_SCTN0911_COMBO_CMNT_DICT = {}  # define the dict to hold everything in SCT
 FMPSG_SCTN0911_COMBO_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0912_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0912_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0912_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN0912_POPUPFRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0914_POPUPFRAME_DICT = {}
-FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT = {}
+FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN0914_POPUPFRAME_DICT = {}  # holds all of the button entries (TUPDICT)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1049,11 +1052,12 @@ TBGLST = [
 	("PSGVAL_KEY_ALPHA_LOW", FMAXPSG_SCTN0900_KEY_DEF, "ALPHA_LOW", "alphalow key",),
 	("PSGVAL_KEY_ALPHA_MODE", FMAXPSG_SCTN0900_KEY_DEF, "ALPHA_MODE", "alpha mode key",),
 	("PSGVAL_KEY_APPMODE", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE", "app mode key",),
-	("PSGVAL_KEY_APPMODE_CLOCKS", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_CLOCKS", "mode clocks only",),
 	("PSGVAL_KEY_APPMODE_ALARMPOPUP", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_ALARMPOPUP", "main mode (xpand from clocks to this)",),
+	("PSGVAL_KEY_APPMODE_CLOCKS", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_CLOCKS", "mode clocks only",),
 	("PSGVAL_KEY_APPMODE_EDIT", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_EDIT", "edit mode on top of main window",),
 	("PSGVAL_KEY_APPMODE_MAIN", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_MAIN", "main mode (xpand from clocks to this)",),
 	("PSGVAL_KEY_APPMODE_MOUSE_OVER", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_MOUSE_OVER", "mouseOver mode (xpand from clocks to this)",),
+	("PSGVAL_KEY_APPMODE_NONE", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_NONE", "NONE mode",),
 	("PSGVAL_KEY_APPMODE_THECLOCK", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_THECLOCK", "theClock mode (xpand from clocks to this)",),
 	("PSGVAL_KEY_BBOX", FMAXPSG_SCTN0900_KEY_DEF, "BBOX", "BOUNDING BOX",),
 	("PSGVAL_KEY_BTN_DISMISS", FMAXPSG_SCTN0900_KEY_DEF, "BTN_DISMISS", "key for all of the button xpand",),
@@ -1072,6 +1076,7 @@ TBGLST = [
 	("PSGVAL_KEY_EVENTMODE_ALARMREMIND", FMAXPSG_SCTN0900_KEY_DEF, "EVENTMODE_ALARMREMIND", "",),
 	("PSGVAL_KEY_EVENTMODE_INTERVAL", FMAXPSG_SCTN0900_KEY_DEF, "EVENTMODE_INTERVAL", "",),
 	("PSGVAL_KEY_EVENT_ENTRIES", FMAXPSG_SCTN0900_KEY_DEF, "EVENT_ENTRIES", "",),
+	("PSGVAL_KEY_FIRSTRUN", FMAXPSG_SCTN0900_KEY_DEF, "FIRSTRUN", "True if just started, false after init1()",),
 	("PSGVAL_KEY_INDEX_OF_NEXT_EVENT", FMAXPSG_SCTN0900_KEY_DEF, "INDEX_OF_NEXT_EVENT", "",),
 	("PSGVAL_KEY_LAST_RUN", FMAXPSG_SCTN0900_KEY_DEF, "LAST_RUN", "timeS of last alarm ",),
 	("PSGVAL_KEY_MAINFRAME_LCN", FMAXPSG_SCTN0900_KEY_DEF, "MAINFRAME_LCN", "screen position of the mainframe",),
@@ -1108,6 +1113,8 @@ TBGLST = [
 	("PSGVAL_KEY_TIME_ELAPSED", FMAXPSG_SCTN0900_KEY_DEF, "TIME_ELAPSED", "key for all clocks elapsed",),
 	("PSGVAL_KEY_TIME_INTERVAL", FMAXPSG_SCTN0900_KEY_DEF, "TIME_INTERVAL", "interval timer starting time, reset each time the interval goes off",),
 	("PSGVAL_KEY_TIME_INTERVAL_START", FMAXPSG_SCTN0900_KEY_DEF, "TIME_INTERVAL_START", "interval timer starting time, reset each time the interval goes off",),
+	("PSGVAL_KEY_TIME_INTERVAL__BEGIN", FMAXPSG_SCTN0900_KEY_DEF, "TIME_INTERVAL__BEGIN", "key for time interval starts alerting",),
+	("PSGVAL_KEY_TIME_INTERVAL__END", FMAXPSG_SCTN0900_KEY_DEF, "TIME_INTERVAL__END", "key for time an interval goes to leep and stops alerting",),
 	("PSGVAL_KEY_TIME_LEN_RING", FMAXPSG_SCTN0900_KEY_DEF, "TIME_LEN_RING", "length of ringing",),
 	("PSGVAL_KEY_TIME_REMIND", FMAXPSG_SCTN0900_KEY_DEF, "TIME_REMIND", "time yo send reminder",),
 	("PSGVAL_KEY_TIME_TOGO", FMAXPSG_SCTN0900_KEY_DEF, "TIME_TOGO", "down counter to next event on this window/alarm/interval/reminder",),
@@ -1539,7 +1546,7 @@ TBGLST = [
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "ALPHA_CHANNEL", "1.0", "current AlphaChannel setting",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "ALPHA_HIGH", "1.0", "amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "ALPHA_LOW", "0.3", "amount of seethrough when mouse hovers over clocks or THECLOCK",),
-	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "APPMODE", "APPMODE_THECLOCK", "default mode is clocks",),
+	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "APPMODE", "APPMODE_NONE", "default mode is clocks",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "BBOX", "EMPTY_BBOX", "FILLED IN BY INIT",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "CHECKBOX_ALPHA_LOW", "True", "default transparent under mouse when not cornered to True",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "CHECKBOX_RUNAWAY", "True", "default to avoiding mouse",),
@@ -1551,12 +1558,13 @@ TBGLST = [
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "MOUSE_LCN", "(0, 0)", "track mouse location",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "SCREEN_DIMS", "EMPTY_XY", "current screen position",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_DEF, "MAPPDS", "EVENT_ENTRIES", "0", "holds events",),
+	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "ALARMPOPUP_TEXT_TEXT", "time to start toward bed", "time of this event",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "NAME", "wind it up", "this entry's name",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_ALARM", "03:30:00", "time of this event",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "DISMISSED", "False", "is this event dismissed",),
-	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "ALARMPOPUP_TEXT_TEXT", "time to start toward bed", "time of this event",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "ENABLED", "True", "is this event enabled",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "EVENTMODE", "EVENTMODE_ALARM", "this entry's event_mode",),
+	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "FIRSTRUN", "True", "are we initializing or not",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "LAST_RUN", "None", "is this event dismissed",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "PREDISMISSABLE", "True", "is this event dismissable in advance",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "REMIND_DISMISSED", "False", "is this event dismissed",),
@@ -1565,22 +1573,27 @@ TBGLST = [
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_AT_NEXT", "ZERO_CLOCK", "time of this event",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_INTERVAL", "ZERO_CLOCK", "time of this event",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_INTERVAL_START", "ZERO_CLOCK", "time of this event",),
+	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_INTERVAL__BEGIN", "ZERO_CLOCK", "time of this event",),
+	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_INTERVAL__END", "ZERO_CLOCK", "time of this event",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_LEN_RING", "ZERO_CLOCK", "time of this event",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_REMIND", "ZERO_CLOCK", "time of this event",),
+	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_INTERVAL__BEGIN", "ZERO_CLOCK", "time of this event",),
+	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_INTERVAL__END", "ZERO_CLOCK", "time of this event",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_DEF, "MAPPDS", "EVENT_ENTRIES", "1", "holds events",),
+	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "ALARMPOPUP_TEXT_TEXT", "MOVE", "time of this event",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "NAME", "off you go then", "this entry's name",),
-	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_ALARM", "04:00:00", "time of this event",),
+	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_ALARM", "00:00:00", "time of this event",),
+	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_INTERVAL", "00:01:00", "time of this event",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "DISMISSED", "False", "is this event dismissed",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "ENABLED", "True", "is this event enabled",),
-	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "EVENTMODE", "EVENTMODE_ALARM", "this entry's event_mode",),
+	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
+	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "FIRSTRUN", "True", "are we initializing or not",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "LAST_RUN", "None", "is this event dismissed",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "PREDISMISSABLE", "True", "is this event dismissable in advance",),
-	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "ALARMPOPUP_TEXT_TEXT", "GO TO BED", "time of this event",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "REMIND_DISMISSED", "False", "is this event reminder dismissed",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "SNOOZABLE", "False", "can this event be snoozed",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "SNOOZED", "False", "is this event snoozed",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_AT_NEXT", "ZERO_CLOCK", "time of this event",),
-	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_INTERVAL", "ZERO_CLOCK", "time of this event",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_INTERVAL_START", "ZERO_CLOCK", "time of this event",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_LEN_RING", "ZERO_CLOCK", "time of this event",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_REMIND", "ZERO_CLOCK", "time of this event",),
@@ -1624,6 +1637,7 @@ TBGLST = [
 	("PSGVAL__VLAST_MOUSE_STATUS", FMAXPSG_SCTN0901_VAL_DEF, "LAST_MOUSE_STATUS", "None", "last returned mouse status to deal with hover events",),
 	("PSGVAL__VMAINFRAME", FMAXPSG_SCTN0901_VAL_DEF, "MAINFRAME", "None", "mainframe so everything passes together always",),
 	("PSGVAL__VMLCN", FMAXPSG_SCTN0901_VAL_DEF, "MLCN", "DISP.Display().screen().root.query_pointer", "short cut to get mouse position",),
+	("PSGVAL__VPREVIOUS_APPMODE", FMAXPSG_SCTN0901_VAL_DEF, "PREVIOUS_APPMODE", "APPMODE_NONE", "comment",),
 	("PSGVAL__VTIMEMS_NEXT_MOUSE_CHECK", FMAXPSG_SCTN0901_VAL_DEF, "TIMEMS_NEXT_MOUSE_CHECK", "0", "comment",),
 	("PSGVAL__VTIMEMS_NEXT_MOVED", FMAXPSG_SCTN0901_VAL_DEF, "TIMEMS_NEXT_MOVED", "0", "comment",),
 	("PSGVAL__VTIMEMS_NEXT_UPDATED", FMAXPSG_SCTN0901_VAL_DEF, "TIMEMS_NEXT_UPDATED", "0", "comment",),
@@ -2235,11 +2249,12 @@ def makePSG():
 	strToRtn_ += f"""{makeAComment("SCTN0914 popupframe")}"""
 	dictToUse_ = sortADict(FMPSG_SCTN0914_POPUPFRAME_DICT)
 	for thisName_, value_ in dictToUse_.items():
-		strToRtn_ += f"""{makeAComment(f"{thisName_}_CLASS")}class {thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global POPUPFRAME, MAPPDS{NEWLINE}{NEWLINE}"""
-		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global POPUPFRAME, MAPPDS{NEWLINE}"""
-		strToRtn_ += f"""{NTAB(2)}MAPPDS{OBRKT}APPMODE{CBRKT} = APPMODE_{thisName_}{NEWLINE}"""
+		strToRtn_ += f"""{makeAComment(f"{thisName_}_CLASS")}class {thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global POPUPFRAME, MAPPDS, PREVIOUS_APPMODE{NEWLINE}{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global POPUPFRAME, MAPPDS, PREVIOUS_APPMODE{NEWLINE}"""
+		# strToRtn_ += f"""{NTAB(2)}MAPPDS{OBRKT}APPMODE{CBRKT} = APPMODE_{thisName_}{NEWLINE}"""
 		strToRtn_ += f"""{NTAB(2)}POPUPFRAME = SG.Window{OPAREN}{NEWLINE}{value_}"""
-		strToRtn_ += f"""{NTAB(1)}def __exit__{OPAREN}self, *args{CPAREN}:{NEWLINE}{NTAB(2)}global POPUPFRAME{NEWLINE}{NTAB(2)}POPUPFRAME.close(){NEWLINE}{NEWLINE}{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(1)}def __exit__{OPAREN}self, *args{CPAREN}:{NEWLINE}{NTAB(2)}global POPUPFRAME, PREVIOUS_APPMODE, MAPPDS{NEWLINE}{NTAB(2)}POPUPFRAME.close(){NEWLINE}"""
+		strToRtn_ += f"""{NTAB(2)}MAPPDS{OBRKT}APPMODE{CBRKT} = PREVIOUS_APPMODE{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	# print(f"""SCTN090C FMPSG_SCTN090C_MAPPDS_DICT |{FMPSG_SCTN090C_MAPPDS_DICT}|{NEWLINE}FMPSG_SCTN090C_MAPPDSDICT_DICT|{FMPSG_SCTN090C_MAPPDSDICT_DICT}|""")
@@ -2386,10 +2401,10 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0911_COMBO_DICT, \
 		FMPSG_SCTN0912_FRAME_CMNT_DICT, \
 		FMPSG_SCTN0912_FRAME_DICT, \
-		FMPSG_SCTN0912_POPUPFRAME_CMNT_DICT, \
-		FMPSG_SCTN0912_POPUPFRAME_DICT, \
 		FMPSG_SCTN0913_RCMENU_CMNT_DICT, \
-		FMPSG_SCTN0913_RCMENU_DICT
+		FMPSG_SCTN0913_RCMENU_DICT, \
+		FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT, \
+		FMPSG_SCTN0914_POPUPFRAME_DICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
