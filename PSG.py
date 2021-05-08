@@ -15,10 +15,12 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALARMPOPUP_TEXT_TEXT = "ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
 ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
 ALPHA_LOW = "ALPHA_LOW"  # alphalow key
 ALPHA_MODE = "ALPHA_MODE"  # alpha mode key
 APPMODE = "APPMODE"  # app mode key
+APPMODE_ALARMPOPUP = "APPMODE_ALARMPOPUP"  # main mode (xpand from clocks to this)
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
@@ -280,6 +282,11 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALARMPOPUP_DICT = {  # the dict to update popups from
+	ALARMPOPUP_TEXT_TEXT: "",  # values dict to update the popup from for alerts
+}
+
+
 CLOCKS_DICT = {  # holds the values for the clocks frame
 	TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -1389,7 +1396,7 @@ ALARMPOPUP_TEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_ALERT_TEXT,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: BTN_DISMISS,  # button dismiss for alerts
+	KEY: ALARMPOPUP_TEXT_TEXT,  # button dismiss for alerts
 	PAD: SZ_PAD_ALL,  # pad size
 	SIZE: (40 , 4),  # characters, lines size line
 	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for a clock_time element
@@ -1680,12 +1687,12 @@ class ALARMPOPUP_CLASS():
 
 	def __enter__(self):
 		global POPUPFRAME
+		MAPPDS[APPMODE] = APPMODE_ALARMPOPUP
 		POPUPFRAME = SG.Window(
 			**ALARMPOPUP_WINDOW,
 		).finalize()
 		POPUPFRAME.Maximize()
 		POPUPFRAME.BringToFront()
-		MAPPDS[APPMODE] = APPMODE_ALARMPOPUP
 
 	def __exit__(self, *args):
 		global POPUPFRAME
@@ -1706,10 +1713,11 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
+			ALARMPOPUP_TEXT_TEXT: "time to start toward bed",  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
-			LAST_RUN: 0,  # is this event dismissed
+			LAST_RUN: None,  # is this event dismissed
 			NAME: "wind it up",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			REMIND_DISMISSED: False,  # is this event dismissed
@@ -1723,10 +1731,11 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			TIME_REMIND: ZERO_CLOCK,  # time of this event
 		},
 		1: {
+			ALARMPOPUP_TEXT_TEXT: "GO TO BED",  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
-			LAST_RUN: 0,  # is this event dismissed
+			LAST_RUN: None,  # is this event dismissed
 			NAME: "off you go then",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			REMIND_DISMISSED: False,  # is this event reminder dismissed
@@ -1887,12 +1896,24 @@ def updateMainframeFromDict(dictToUpdateFrom_, isTimeUpdate_=True):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_, val_ in dictToUpdateFrom_.items():
 		# print(f"""key_ {key_} val_ {val_}""")
-		if val_ > CF.DAYSECONDS:
-			val_ -= CF.DAYSECONDS
 		if isTimeUpdate_ is True:
+			if val_ > CF.DAYSECONDS:
+				val_ -= CF.DAYSECONDS
 			MAINFRAME.Element(key_).Update(value=CF.nrmlIntToHMS(val_))
 		else:
 			MAINFRAME.Element(key_).Update(value=val_)
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# updateMainframeFromDict
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def updatePopupframeFromDict(dictToUpdateFrom_):
+	global POPUPFRAME
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	for key_, val_ in dictToUpdateFrom_.items():
+		# print(f"""key_ {key_} val_ {val_}""")
+		POPUPFRAME.Element(key_).Update(value=val_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2145,7 +2166,13 @@ def updateClocks():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doReadAMainframe(timeout_=SZ_TIMEOUT_MS):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	event_, values_ = MAINFRAME.Read(timeout=timeout_)
+	if MAPPDS[APPMODE] == APPMODE_ALARMPOPUP:
+		whatzit_ = SG.read_all_windows(timeout=timeout_)
+
+		event_ = ""
+		values_ = []
+	else:
+		event_, values_ = MAINFRAME.Read(timeout=timeout_)
 	return event_, values_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2296,7 +2323,7 @@ def doMidnightWork():
 	general daily handiwork
 	"""
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	pass
+
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2304,6 +2331,7 @@ def doMidnightWork():
 # doAlarmEvent
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doAlarmEvent(eventToDo_):
+	global MAINFRAME, POPUPFRAME, MAPPDS
 	"""
 	type of event
 	popup appropriate window
@@ -2312,6 +2340,19 @@ def doAlarmEvent(eventToDo_):
 	reset for next
 	"""
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if MAPPDS[APPMODE] == APPMODE_ALARMPOPUP:
+		return
+	event_ = MAPPDS[EVENT_ENTRIES][eventToDo_]
+	alarmText_ = event_[ALARMPOPUP_TEXT_TEXT]
+	MAINFRAME.hide()
+	with ALARMPOPUP_CLASS() as POPUP:
+		# MAPPDS[APPMODE] = APPMODE_ALARMPOPUP # technically handled by the class for obvious reasons
+		ALARMPOPUP_DICT[ALARMPOPUP_TEXT_TEXT] = alarmText_
+		updatePopupframeFromDict(ALARMPOPUP_DICT)
+
+
+	MAINFRAME.un_hide()
+
 
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2339,6 +2380,7 @@ def doInit1():
 	TIME_AT_LAST_ZERO_CHECK = now_
 
 	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
+		MAPPDS[EVENT_ENTRIES][index_][LAST_RUN] = None
 
 		if isinstance(event_[TIME_ALARM], str):
 			MAPPDS[EVENT_ENTRIES][index_][TIME_ALARM] = CF.HMSToNrmlInt(event_[TIME_ALARM])
@@ -2361,18 +2403,20 @@ def doIt():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	oldValues_ = None
 	while True:
-		now_ = CF.MTSS()
-		if 0 < now_ < 10:  # ten seconds of "midnight"
+		nowS_ = CF.MTSS()
+		if 0 < nowS_ < 10:  # ten seconds of "midnight" processing
 			doMidnightWork()
 		event_, values_ = doReadAMainframe()
 
-		if now_ > TIMES_NEXT_PERIODIC_JOB:
-			TIMES_NEXT_PERIODIC_JOB = now_ + SZ_TIMES_BTWN_PERIODIC_JOB
+		if nowS_ == TIMES_NEXT_PERIODIC_JOB:
+			TIMES_NEXT_PERIODIC_JOB = nowS_ + SZ_TIMES_BTWN_PERIODIC_JOB
 			fixNextTimes()
 			findNextAlarmEvent()
 
-		if now_ > TIMES_NEXT_EVENT:
+		if (TIMES_NEXT_EVENT <= nowS_ < (TIMES_NEXT_EVENT + 5)) and (MAPPDS[EVENT_ENTRIES][MAPPDS][INDEX_OF_NEXT_EVENT][LAST_RUN] is None):
 			doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
+			fixNextTimes()
+			findNextAlarmEvent()
 
 		if oldValues_ != values_:
 			MAPPDS = CF.mergeDicts(MAPPDS, values_)

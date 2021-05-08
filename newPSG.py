@@ -15,10 +15,12 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALARMPOPUP_TEXT_TEXT = "ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
 ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
 ALPHA_LOW = "ALPHA_LOW"  # alphalow key
 ALPHA_MODE = "ALPHA_MODE"  # alpha mode key
 APPMODE = "APPMODE"  # app mode key
+APPMODE_ALARMPOPUP = "APPMODE_ALARMPOPUP"  # main mode (xpand from clocks to this)
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
@@ -280,6 +282,11 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALARMPOPUP_DICT = {  # the dict to update popups from
+	ALARMPOPUP_TEXT_TEXT: "",  # values dict to update the popup from for alerts
+}
+
+
 CLOCKS_DICT = {  # holds the values for the clocks frame
 	TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -1389,7 +1396,7 @@ ALARMPOPUP_TEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_ALERT_TEXT,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: BTN_DISMISS,  # button dismiss for alerts
+	KEY: ALARMPOPUP_TEXT_TEXT,  # button dismiss for alerts
 	PAD: SZ_PAD_ALL,  # pad size
 	SIZE: (40 , 4),  # characters, lines size line
 	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for a clock_time element
@@ -1676,17 +1683,16 @@ class THECLOCK_CLASS():
 # * ALARMPOPUP_CLASS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 class ALARMPOPUP_CLASS():
-	global POPUPFRAME
+	global POPUPFRAME, MAPPDS
 
 	def __enter__(self):
-		global POPUPFRAME
+		global POPUPFRAME, MAPPDS
+		MAPPDS[APPMODE] = APPMODE_ALARMPOPUP
 		POPUPFRAME = SG.Window(
 			**ALARMPOPUP_WINDOW,
 		).finalize()
 		POPUPFRAME.Maximize()
 		POPUPFRAME.BringToFront()
-		MAPPDS[APPMODE] = APPMODE_ALARMPOPUP
-
 	def __exit__(self, *args):
 		global POPUPFRAME
 		POPUPFRAME.close()
@@ -1706,10 +1712,11 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
+			ALARMPOPUP_TEXT_TEXT: "time to start toward bed",  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
-			LAST_RUN: 0,  # is this event dismissed
+			LAST_RUN: None,  # is this event dismissed
 			NAME: "wind it up",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			REMIND_DISMISSED: False,  # is this event dismissed
@@ -1723,10 +1730,11 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			TIME_REMIND: ZERO_CLOCK,  # time of this event
 		},
 		1: {
+			ALARMPOPUP_TEXT_TEXT: "GO TO BED",  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
-			LAST_RUN: 0,  # is this event dismissed
+			LAST_RUN: None,  # is this event dismissed
 			NAME: "off you go then",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			REMIND_DISMISSED: False,  # is this event reminder dismissed
