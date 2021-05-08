@@ -1751,7 +1751,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: "00:00:00",  # time of this event
 			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
-			TIME_INTERVAL: "00:01:00",  # time of this event
+			TIME_INTERVAL: "00:02:00",  # time of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL__END: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL_START: ZERO_CLOCK,  # time of this event
@@ -2360,8 +2360,8 @@ def doMidnightWork():
 	global MAPPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
-		print(f"""{CF.getDebugInfo()}{CF.NEWLINE} {CF.frameIt("event_", event_)}
-		{CF.frameIt("MAPPDS[EVENT_ENTRIES]", MAPPDS[EVENT_ENTRIES])}""")
+#		print(f"""{CF.getDebugInfo()}{CF.NEWLINE} {CF.frameIt("event_", event_)}
+#		{CF.frameIt("MAPPDS[EVENT_ENTRIES]", MAPPDS[EVENT_ENTRIES])}""")
 		if (event_ is not None) and (event_[EVENTMODE] in [EVENTMODE_ALARM, EVENTMODE_ALARMREMIND]):
 			MAPPDS[EVENT_ENTRIES][index_][LAST_RUN] = None
 			MAPPDS[EVENT_ENTRIES][index_][DISMISSED] = False
@@ -2429,7 +2429,7 @@ def updateInterval(eventIndexToDo_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # doAlarmEvent
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def doAlarmEvent(eventToDo_):
+def doAlarmEvent(eventIndexToDo_):
 	global MAINFRAME, POPUPFRAME, MAPPDS, PREVIOUS_APPMODE
 	return
 	"""
@@ -2441,12 +2441,13 @@ def doAlarmEvent(eventToDo_):
 	"""
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	print(f"""{CF.getDebugInfo()}APPMODE {MAPPDS[APPMODE]}""")
+
 	if MAPPDS[APPMODE] == APPMODE_ALARMPOPUP:
 		return
-	print(f"""alerting""")
+	print(f"""making popup happen""")
 	PREVIOUS_APPMODE = MAPPDS[APPMODE]
 	MAPPDS[APPMODE] = APPMODE_ALARMPOPUP
-	event_ = MAPPDS[EVENT_ENTRIES][eventToDo_]
+	event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
 	alarmText_ = event_[ALARMPOPUP_TEXT_TEXT]
 	MAINFRAME.hide()
 	with ALARMPOPUP_CLASS() as POPUP:
@@ -2454,6 +2455,7 @@ def doAlarmEvent(eventToDo_):
 		ALARMPOPUP_DICT[ALARMPOPUP_TEXT_TEXT] = alarmText_
 		updatePopupframeFromDict(ALARMPOPUP_DICT)
 
+	MAPPDS[APPMODE] = PREVIOUS_APPMODE
 	MAINFRAME.un_hide()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2548,7 +2550,7 @@ def doIt():
 			fixNextTimes()
 			findNextAlarmEvent()
 
-		if (TIMES_NEXT_EVENT <= nowS_ < (TIMES_NEXT_EVENT + 5)) and (MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][LAST_RUN] is None):
+		if (TIMES_NEXT_EVENT == nowS_) and (MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][LAST_RUN] is None):
 			doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
 			fixNextTimes()
 			findNextAlarmEvent()
