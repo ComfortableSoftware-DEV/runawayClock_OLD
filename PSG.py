@@ -1876,7 +1876,12 @@ def localMTSMS(hrs_=None, mins_=None):
 	if mins_ is None:
 		mins_ = TIMEM_ADJUST_MINS
 
-	nowMS_ = CF.MTSMS() - (TIMES_ADJUST_VALUE(hrs_, mins_) * 1000)
+	nowMS_ = (CF.MTSMS() - (TIMES_ADJUST_VALUE(hrs_, mins_) * 1000)) % CF.DAYMS
+
+#	print(f"""{CF.getDebugInfo()}
+#	{CF.frameItMS("nowMS_", nowMS_)}
+#	{CF.frameItMS("TIMES_ADJUST_VALUE(hrs_, mins_)", TIMES_ADJUST_VALUE(hrs_, mins_))}""")
+
 	return nowMS_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2202,10 +2207,11 @@ def updateClocks():
 #	print(f"""{CF.getDebugInfo()}
 #	{CF.frameItHMS("nowS_", nowS_)}
 #	{CF.frameIt("nowMS_", nowMS_)}""")
-	# print(f"""updateClocks nowMS_ {nowMS_} TIMEMS_NEXT_UPDATED {TIMEMS_NEXT_UPDATED}""")
-	if nowMS_ >= TIMEMS_NEXT_UPDATED:
+#	print(f"""{CF.getDebugInfo()}
+#	{CF.frameItMS("nowMS_", nowMS_)}) {CF.frameItMS("TIMEMS_NEXT_UPDATED", TIMEMS_NEXT_UPDATED)}""")
+	if (nowMS_ >= TIMEMS_NEXT_UPDATED):
 		CF.whirl()
-		TIMEMS_NEXT_UPDATED = nowMS_ + SZ_TIMEMS_BETWEEN_UPDATES
+		TIMEMS_NEXT_UPDATED = (nowMS_ + SZ_TIMEMS_BETWEEN_UPDATES) % CF.DAYMS
 		# print(f"""CLOCKS_DICT {CLOCKS_DICT} nowS_ {nowS_}""")
 		CLOCKS_DICT[TIME_CLOCK] = nowS_
 		CLOCKS_DICT[TIME_ELAPSED] = nowS_ - CLOCKS_DICT[TIME_AT_ZEROELAPSE]
