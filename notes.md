@@ -52,7 +52,7 @@ stopped after 21 hours or so, just like previously, no updating clocks
 stopped again, right after 18:00 both times
 restarted service at 18:27:45
 restarted after upgrades at 19:30:50
-
+stops again at 1800-ish
 
 file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2347, function doMidnightWork
  event_ |{

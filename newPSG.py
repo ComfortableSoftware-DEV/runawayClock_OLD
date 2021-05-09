@@ -1697,6 +1697,7 @@ class ALARMPOPUP_CLASS():
 		).finalize()
 		POPUPFRAME.Maximize()
 		POPUPFRAME.BringToFront()
+
 	def __exit__(self, *args):
 		global POPUPFRAME, PREVIOUS_APPMODE, MAPPDS
 		POPUPFRAME.close()

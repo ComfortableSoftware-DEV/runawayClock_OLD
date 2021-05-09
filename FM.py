@@ -2253,7 +2253,7 @@ def makePSG():
 		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global POPUPFRAME, MAPPDS, PREVIOUS_APPMODE{NEWLINE}"""
 		# strToRtn_ += f"""{NTAB(2)}MAPPDS{OBRKT}APPMODE{CBRKT} = APPMODE_{thisName_}{NEWLINE}"""
 		strToRtn_ += f"""{NTAB(2)}POPUPFRAME = SG.Window{OPAREN}{NEWLINE}{value_}"""
-		strToRtn_ += f"""{NTAB(1)}def __exit__{OPAREN}self, *args{CPAREN}:{NEWLINE}{NTAB(2)}global POPUPFRAME, PREVIOUS_APPMODE, MAPPDS{NEWLINE}{NTAB(2)}POPUPFRAME.close(){NEWLINE}"""
+		strToRtn_ += f"""{NEWLINE}{NTAB(1)}def __exit__{OPAREN}self, *args{CPAREN}:{NEWLINE}{NTAB(2)}global POPUPFRAME, PREVIOUS_APPMODE, MAPPDS{NEWLINE}{NTAB(2)}POPUPFRAME.close(){NEWLINE}"""
 		strToRtn_ += f"""{NTAB(2)}MAPPDS{OBRKT}APPMODE{CBRKT} = PREVIOUS_APPMODE{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣

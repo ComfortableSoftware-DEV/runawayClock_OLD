@@ -1695,8 +1695,9 @@ class ALARMPOPUP_CLASS():
 		POPUPFRAME = SG.Window(
 			**ALARMPOPUP_WINDOW,
 		).finalize()
-		POPUPFRAME.Maximize()
+		# POPUPFRAME.Maximize()
 		POPUPFRAME.BringToFront()
+
 	def __exit__(self, *args):
 		global POPUPFRAME, PREVIOUS_APPMODE, MAPPDS
 		POPUPFRAME.close()
@@ -1751,7 +1752,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: "00:00:00",  # time of this event
 			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
-			TIME_INTERVAL: "00:02:00",  # time of this event
+			TIME_INTERVAL: "00:01:00",  # time of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL__END: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL_START: ZERO_CLOCK,  # time of this event
@@ -2181,9 +2182,11 @@ def updateClocks():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doReadAMainframe(timeout_=SZ_TIMEOUT_MS):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	print(f"""{CF.getDebugInfo()}""")
 	if MAPPDS[APPMODE] == APPMODE_ALARMPOPUP:
-		whatzit_ = SG.read_all_windows(timeout=timeout_)
-
+		whatzit_ = POPUPFRAME.Read(timeout=timeout_)
+		print(f"""{CF.getDebugInfo}
+		{CF.frameIt("whatzit_", whatzit)}""")
 		event_ = ""
 		values_ = []
 	else:
@@ -2305,10 +2308,10 @@ def fixNextTimes():
 # findNextEvent
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def findNextAlarmEvent():
-	global MAPPDS
+	global MAPPDS, TIMES_NEXT_EVENT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	nextEventList_ = []  # (time, index, mode)
-	now_ = CF.MTSS()
+	nowS_ = CF.MTSS()
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -2327,24 +2330,36 @@ def findNextAlarmEvent():
 					EVENTMODE_INTERVAL,
 					EVENTMODE_ALARM,
 					EVENTMODE_ALARMREMIND
-				]:
+			]:
 				continue
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 			# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
 			if (event_[DISMISSED] is False) and (event_[ENABLED] is True):
+				# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
 
-				if TTimeAtNext_ < now_:
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+			# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+				# ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥
+				if TTimeAtNext_ < nowS_:
 					nextEventList_.append(((TTimeAtNext_ + CF.DAYSECS), index_))
+
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+			# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+				# ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥
 				else:
 					nextEventList_.append((TTimeAtNext_, index_))
 
+				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 	nextEventList_.sort()
 	CLOCKS_DICT[TIME_AT_NEXT] = nextEventList_[0][0]
+	TIMES_NEXT_EVENT = CLOCKS_DICT[TIME_AT_NEXT]
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2382,6 +2397,7 @@ def updateInterval(eventIndexToDo_):
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	if eventToDo_[FIRSTRUN] is True:
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		print(f"""updating new interval{CF.NEWLINE}{CF.frameIt("eventToDo_", eventToDo_)}""")
 		MAPPDS[EVENT_ENTRIES][eventIndexToDo_][FIRSTRUN] = False
 		TInterval_ = eventToDo_[TIME_INTERVAL]
 		TIntervalBegan_ = CF.loseTheSecs(eventToDo_[TIME_INTERVAL__BEGIN])
@@ -2397,9 +2413,10 @@ def updateInterval(eventIndexToDo_):
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	else:
-		TTimeAtNext_ += eventToDo_[TIME_INTERVAL]
-		TTimeAtStart_ += eventToDo_[TIME_INTERVAL]
+	else:  # if eventToDo_[FIRSTRUN] is True:
+		print(f"""updating previously fired interval{CF.NEWLINE}{CF.getDebugInfo()}""")
+		TTimeAtNext_ = eventToDo_[TIME_AT_NEXT] + eventToDo_[TIME_INTERVAL]
+		TTimeAtStart_ = eventToDo_[TIME_INTERVAL_START] + eventToDo_[TIME_INTERVAL]
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -2413,15 +2430,18 @@ def updateInterval(eventIndexToDo_):
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_INTERVAL_START] = TTimeAtStart_
 	fixNextTimes()
 	findNextAlarmEvent()
-# 	print(f"""{CF.getDebugInfo()}
-# 	{CF.frameIt("TInterval_", TInterval_)}
-# 	{CF.frameIt("TIntervalBegan_", TIntervalBegan_)}
-# 	{CF.frameIt("TTimeBetween_", TTimeBetween_)} {CF.nrmlIntToHMS(TTimeBetween_)} = {CF.frameIt("nowNoS_", nowNoS_)} {CF.nrmlIntToHMS(nowNoS_)} - {CF.frameIt("TIntervalBegan_", TIntervalBegan_)} {CF.nrmlIntToHMS(TIntervalBegan_)}
-# 	{CF.frameIt("TTimeRemaining_", TTimeRemaining_)} {CF.nrmlIntToHMS(TTimeRemaining_)} = {CF.frameIt("TTimeBetween_", TTimeBetween_)} {CF.nrmlIntToHMS(TTimeBetween_)} % {CF.frameIt("TInterval_", TInterval_)} {CF.nrmlIntToHMS(TInterval_)}
-# 	{CF.frameIt("TTimeAtNext_", TTimeAtNext_)} {CF.nrmlIntToHMS(TTimeAtNext_)} = {CF.frameIt("nowNoS_", nowNoS_)} {CF.nrmlIntToHMS(nowNoS_)} + {CF.frameIt("TTimeRemaining_", TTimeRemaining_)} {CF.nrmlIntToHMS(TTimeRemaining_)}
-# 	{CF.frameIt("TTimeAtStart_", TTimeAtStart_)} {CF.nrmlIntToHMS(TTimeAtStart_)} = {CF.frameIt("nowNoS_", nowNoS_)} {CF.nrmlIntToHMS(nowNoS_)} - {CF.frameIt("TTimeRemaining_", TTimeRemaining_)} {CF.nrmlIntToHMS(TTimeRemaining_)}
-# 	{CF.frameIt("MAPPDS[EVENT_ENTRIES]", MAPPDS[EVENT_ENTRIES])}
-# 	""")
+	print(f"""{CF.getDebugInfo()}
+	{CF.frameIt("MAPPDS[EVENT_ENTRIES]", MAPPDS[EVENT_ENTRIES])}""")
+#	print(f"""updated event info
+#	{CF.getDebugInfo()}
+#	{CF.frameIt("TInterval_", TInterval_)}
+#	{CF.frameIt("TIntervalBegan_", TIntervalBegan_)}
+#	{CF.frameIt("TTimeBetween_", TTimeBetween_)} {CF.nrmlIntToHMS(TTimeBetween_)} = {CF.frameIt("nowNoS_", nowNoS_)} {CF.nrmlIntToHMS(nowNoS_)} - {CF.frameIt("TIntervalBegan_", TIntervalBegan_)} {CF.nrmlIntToHMS(TIntervalBegan_)}
+#	{CF.frameIt("TTimeRemaining_", TTimeRemaining_)} {CF.nrmlIntToHMS(TTimeRemaining_)} = {CF.frameIt("TTimeBetween_", TTimeBetween_)} {CF.nrmlIntToHMS(TTimeBetween_)} % {CF.frameIt("TInterval_", TInterval_)} {CF.nrmlIntToHMS(TInterval_)}
+#	{CF.frameIt("TTimeAtNext_", TTimeAtNext_)} {CF.nrmlIntToHMS(TTimeAtNext_)} = {CF.frameIt("nowNoS_", nowNoS_)} {CF.nrmlIntToHMS(nowNoS_)} + {CF.frameIt("TTimeRemaining_", TTimeRemaining_)} {CF.nrmlIntToHMS(TTimeRemaining_)}
+#	{CF.frameIt("TTimeAtStart_", TTimeAtStart_)} {CF.nrmlIntToHMS(TTimeAtStart_)} = {CF.frameIt("nowNoS_", nowNoS_)} {CF.nrmlIntToHMS(nowNoS_)} - {CF.frameIt("TTimeRemaining_", TTimeRemaining_)} {CF.nrmlIntToHMS(TTimeRemaining_)}
+#	{CF.frameIt("MAPPDS[EVENT_ENTRIES]", MAPPDS[EVENT_ENTRIES])}
+#	""")
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2431,7 +2451,6 @@ def updateInterval(eventIndexToDo_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doAlarmEvent(eventIndexToDo_):
 	global MAINFRAME, POPUPFRAME, MAPPDS, PREVIOUS_APPMODE
-	return
 	"""
 	type of event
 	popup appropriate window
@@ -2448,15 +2467,17 @@ def doAlarmEvent(eventIndexToDo_):
 	PREVIOUS_APPMODE = MAPPDS[APPMODE]
 	MAPPDS[APPMODE] = APPMODE_ALARMPOPUP
 	event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
+	if event_[EVENTMODE] == EVENTMODE_INTERVAL:
+		updateInterval(eventIndexToDo_)
 	alarmText_ = event_[ALARMPOPUP_TEXT_TEXT]
 	MAINFRAME.hide()
 	with ALARMPOPUP_CLASS() as POPUP:
-		# MAPPDS[APPMODE] = APPMODE_ALARMPOPUP # technically handled by the class for obvious reasons
+		# MAPPDS[APPMODE] = APPMODE_ALARMPOPUP # technically handled by the class
 		ALARMPOPUP_DICT[ALARMPOPUP_TEXT_TEXT] = alarmText_
 		updatePopupframeFromDict(ALARMPOPUP_DICT)
 
-	MAPPDS[APPMODE] = PREVIOUS_APPMODE
-	MAINFRAME.un_hide()
+	# MAPPDS[APPMODE] = PREVIOUS_APPMODE
+	# MAINFRAME.un_hide()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2550,7 +2571,10 @@ def doIt():
 			fixNextTimes()
 			findNextAlarmEvent()
 
+		# print(f"""{CF.getDebugInfo()}{CF.NEWLINE}{CF.frameIt("TIMES_NEXT_EVENT", TIMES_NEXT_EVENT)} MAPPDS[EVENT_ENTRIES][{MAPPDS[INDEX_OF_NEXT_EVENT]}][LAST_RUN] {MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][LAST_RUN]}""")
 		if (TIMES_NEXT_EVENT == nowS_) and (MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][LAST_RUN] is None):
+			MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][LAST_RUN] = nowS_
+
 			doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
 			fixNextTimes()
 			findNextAlarmEvent()
