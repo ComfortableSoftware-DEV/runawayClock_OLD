@@ -135,8 +135,8 @@ TIME_INTERVAL_START = "TIME_INTERVAL_START"  # interval timer starting time, res
 TIME_LEN_RING = "TIME_LEN_RING"  # length of ringing
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
-TIMEH_ADJUST_HRS = 2  # comment
-TIMEM_ADJUST_MINS = 55  # comment
+TIMEH_ADJUST_HRS = 0  # comment
+TIMEM_ADJUST_MINS = 0  # comment
 TITLE_ALARMPOPUP = "ALERT"  # string with window title for APPMODE_CLOCKS
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
@@ -163,6 +163,7 @@ FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
+FOR_REAL = False  # comment
 LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
 MAINFRAME = None  # mainframe so everything passes together always
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
@@ -171,7 +172,7 @@ SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
 TIMEMS_NEXT_MOVED = 0  # comment
 TIMEMS_NEXT_UPDATED = 0  # comment
-TIMES_ADJUST_VALUE = lambda H_, M_: - ((60 * 60 * H_) + (M_ * 60))  # comment
+TIMES_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
 TIMES_NEXT_EVENT = 0  # comment
 TIMES_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
 
@@ -1854,10 +1855,13 @@ def localMTSS(hrs_=None, mins_=None):
 
 	nowS_ = CF.MTSS()
 	adjSecs_ = nowS_ - TIMES_ADJUST_VALUE(hrs_, mins_)
-	print(f"""{CF.getDebugInfo()}
-	{CF.frameIt("adjSecs_", adjSecs_)}
-	{CF.frameIt("TIMES_ADJUST_VALUE(hrs_, mins_)", TIMES_ADJUST_VALUE(hrs_, mins_))}""")
-	return nowS_, CF.loseTheSecs(nowS_)
+	if adjSecs_ < 0:
+		adjSecs_ += CF.DAYSECS
+	adjSecs_ = adjSecs_ % CF.DAYSECS
+#	print(f"""{CF.getDebugInfo()}
+#	{CF.frameItHMS("adjSecs_", adjSecs_)}
+#	{CF.frameItHMS("TIMES_ADJUST_VALUE(hrs_, mins_)", TIMES_ADJUST_VALUE(hrs_, mins_))}""")
+	return adjSecs_, CF.loseTheSecs(adjSecs_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1949,8 +1953,12 @@ def updateMainframeFromDict(dictToUpdateFrom_, isTimeUpdate_=True):
 		if isTimeUpdate_ is True:
 			if val_ > CF.DAYSECS:
 				val_ -= CF.DAYSECS
+#			print(f"""{CF.getDebugInfo()}
+#			{CF.frameItHMS(key_, val_)}""")
 			MAINFRAME.Element(key_).Update(value=CF.nrmlIntToHMS(val_))
 		else:
+#			print(f"""{CF.getDebugInfo()}
+#			{CF.frameItHMS(key_, val_)}""")
 			MAINFRAME.Element(key_).Update(value=val_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2191,6 +2199,9 @@ def updateClocks():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	nowMS_ = localMTSMS()
 	nowS_, nowNoS_ = localMTSS()
+#	print(f"""{CF.getDebugInfo()}
+#	{CF.frameItHMS("nowS_", nowS_)}
+#	{CF.frameIt("nowMS_", nowMS_)}""")
 	# print(f"""updateClocks nowMS_ {nowMS_} TIMEMS_NEXT_UPDATED {TIMEMS_NEXT_UPDATED}""")
 	if nowMS_ >= TIMEMS_NEXT_UPDATED:
 		CF.whirl()
@@ -2201,7 +2212,7 @@ def updateClocks():
 		CLOCKS_DICT[TIME_TOGO] = CLOCKS_DICT[TIME_AT_NEXT] - nowS_
 
 		if CLOCKS_DICT[TIME_TOGO] < 0:
-			CLOCKS_DICT[TIME_TOGO] += 86400
+			CLOCKS_DICT[TIME_TOGO] += CF.DAYSECS
 
 		THECLOCK_DICT[TIME_CLOCK] = nowS_
 		mappdsMode_ = MAPPDS[APPMODE]
@@ -2436,7 +2447,7 @@ def updateInterval(eventIndexToDo_):
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	if eventToDo_[FIRSTRUN] is True:
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		print(f"""updating new interval{CF.NEWLINE}{CF.frameIt("eventToDo_", eventToDo_)}""")
+		# print(f"""updating new interval{CF.NEWLINE}{CF.frameIt("eventToDo_", eventToDo_)}""")
 		MAPPDS[EVENT_ENTRIES][eventIndexToDo_][FIRSTRUN] = False
 		TInterval_ = eventToDo_[TIME_INTERVAL]
 		TIntervalBegan_ = CF.loseTheSecs(eventToDo_[TIME_INTERVAL__BEGIN])
@@ -2506,7 +2517,7 @@ def doAlarmEvent(eventIndexToDo_):
 	print(f"""making popup happen""")
 	PREVIOUS_APPMODE = MAPPDS[APPMODE]
 	MAPPDS[APPMODE] = APPMODE_ALARMPOPUP
-	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][LAST_RUN] = nowNS_()
+	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][LAST_RUN] = nowS_
 	event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
 	if event_[EVENTMODE] == EVENTMODE_INTERVAL:
 		updateInterval(eventIndexToDo_)
@@ -2605,7 +2616,7 @@ def doIt():
 	while True:
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		nowS_, nowNoS_ = localMTSS()
-		nowM_ = CF.MTSM()
+		# nowM_ = CF.MTSM()
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -2629,7 +2640,8 @@ def doIt():
 		# print(f"""{CF.getDebugInfo()}{CF.NEWLINE}{CF.frameIt("TIMES_NEXT_EVENT", TIMES_NEXT_EVENT)} MAPPDS[EVENT_ENTRIES][{MAPPDS[INDEX_OF_NEXT_EVENT]}][LAST_RUN] {MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][LAST_RUN]}""")
 		if (TIMES_NEXT_EVENT == nowS_) and (MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][LAST_RUN] is None):
 			MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][LAST_RUN] = nowS_
-			doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
+			if FOR_REAL is True:
+				doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
 			fixNextTimes()
 			findNextAlarmEvent()
 

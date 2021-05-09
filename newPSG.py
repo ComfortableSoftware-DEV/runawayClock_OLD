@@ -135,8 +135,8 @@ TIME_INTERVAL_START = "TIME_INTERVAL_START"  # interval timer starting time, res
 TIME_LEN_RING = "TIME_LEN_RING"  # length of ringing
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
-TIMEH_ADJUST_HRS = 20  # comment
-TIMEM_ADJUST_MINS = 27  # comment
+TIMEH_ADJUST_HRS = 4  # comment
+TIMEM_ADJUST_MINS = 0  # comment
 TITLE_ALARMPOPUP = "ALERT"  # string with window title for APPMODE_CLOCKS
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
@@ -163,6 +163,7 @@ FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
+FOR_REAL = False  # comment
 LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
 MAINFRAME = None  # mainframe so everything passes together always
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
@@ -171,7 +172,7 @@ SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
 TIMEMS_NEXT_MOVED = 0  # comment
 TIMEMS_NEXT_UPDATED = 0  # comment
-TIMES_ADJUST_VALUE = lambda H_, M_: - ((60 * 60 * H_) + (M_ * 60))  # comment
+TIMES_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
 TIMES_NEXT_EVENT = 0  # comment
 TIMES_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
 
