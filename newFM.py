@@ -75,8 +75,6 @@ CLRALL = f"""{ESC}[2J"""
 CLRDOWN = f"""{ESC}[J"""
 CLREOL = f"""{ESC}[K"""
 CMNTLINE = f"""# * {"#*" * (CMNTLEN // 2)}"""
-DAYMS = (60 * 60 * 24 * 1000)  # 86400000
-DAYSECONDS = (60 * 60 * 24)  # 86400
 DBSQLT_NAME = "newDBSQLT.py"
 DICTMODE_KEYSTR = "DICTMODE_KEYSTR"  # define dictmode 'key':val
 DICTMODE_KEYVAL = "DICTMODE_KEYVAL"  # define dictmode key:val
@@ -111,7 +109,6 @@ HEX08 = lambda X_: f"""{X_:02H}"""  # {thisComment_}
 HEX16 = lambda X_: f"""{X_:04H}"""  # {thisComment_}
 HEX32 = lambda X_: f"""{X_:08H}"""  # {thisComment_}
 HEX64 = lambda X_: f"""{X_:016H}"""  # {thisComment_}
-HOURSECONDS = (60 * 60)  # 3600
 IMPORTANTSTR = f"""# * {"!-" * (CMNTLEN // 2)}"""  # important line marker
 INDENTIN = " -=> "  # display arrow RIGHT
 INDENTOUT = " <=- "  # display arrow LEFT
@@ -177,7 +174,6 @@ MARKLINES_NAME = f"""{CONFIGDIR}MARKLINES.py"""
 MOVELEFT = lambda NUM_: f"""{ESC}[{NUM_}D"""
 MOVETO = lambda LN_, COL_: f"""{ESC}[{LN_};{COL_}H"""
 NCR = lambda NUM_: f"""{CRSTR * NUM_}"""
-NINETYNINE5959SEC = (60 * 60 * 100)  # 360000
 NNL = lambda NUM_: f"""{NEWLINE * NUM_}"""
 NSPC = lambda NUM_: f"""{SPCSTR * NUM_}"""  # returns a string with NUM_ SPC
 NTAB = lambda NUM_: f"""{TABSTR * NUM_}"""  # returns a string with NUM_ TAB
@@ -193,6 +189,17 @@ VO_NAME = "newVO.py"
 VOTOP_NAME = f"""{CONFIGDIR}VOTOP.py"""
 WHIRLCOUNT = 0
 WHIRLSTR = f"""-{BKSLSH}|/*"""
+
+
+DAYMS = (60 * 60 * 24 * 1000)  # 86400000
+DAYSECS = (60 * 60 * 24)  # 86400
+HALFDAY = (60 * 60 * 12)  # 43200
+HALFHOUR = (60 * 30)  # 1800
+HOURSECONDS = (60 * 60)  # 3600
+MINUTESECONDS = 60 # 60
+NINETYNINE5959SEC = (60 * 60 * 100)  # 360000
+QUARTERDAYSECS = (60 * 60 * 6)
+QUARTERHOURSECS = (60 * 15)  # 900
 
 
 CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from 'text' strings like color codes"}
@@ -326,7 +333,7 @@ FMAXPSG_SCTN0911_COMBO_DEF = "FMAXPSG_SCTN0911_COMBO_DEF"  # define a combo box
 FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # define a frame element
 FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
-FMPSG_SCTN0905_TUPDICT_DICT_DICT = "FMPSG_SCTN0905_TUPDICT_DICT_DICT"  # the dict holding the dict entries for tupdicts
+FMAXPSG_SCTN0914_POPUPFRAME_DEF = "FMAXPSG_SCTN0914_POPUPFRAME_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 
 
 FMAXFM_AXLST = [
@@ -446,7 +453,7 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0912_FRAMEELEMENT_DEF,  # define a frame element
 	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
-	FMPSG_SCTN0905_TUPDICT_DICT_DICT,  # the dict holding the dict entries for tupdicts
+	FMAXPSG_SCTN0914_POPUPFRAME_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 ]
 
 
@@ -512,8 +519,8 @@ FMPSG_SCTN090B_COLUMN_PARMS_DICT = {}  # holds all of the button entriess (TUPDI
 FMPSG_SCTN090C_MAPPDS_CMNT_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090C_MAPPDS_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090C_MAPPDSDICT_DICT = {}  # the main app dict+dict for this app
-FMPSG_SCTN090D_FRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN090D_FRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090D_MAINFRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090D_MAINFRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090E_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090E_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090F_WINDOW_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
@@ -526,6 +533,8 @@ FMPSG_SCTN0912_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCT
 FMPSG_SCTN0912_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN0914_POPUPFRAME_DICT = {}  # holds all of the button entries (TUPDICT)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -597,8 +606,8 @@ FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN090
 		FMPSG_SCTN090C_MAPPDS_CMNT_DICT, \
 		FMPSG_SCTN090C_MAPPDS_DICT, \
 		FMPSG_SCTN090C_MAPPDSDICT_DICT, \
-		FMPSG_SCTN090D_FRAME_CMNT_DICT, \
-		FMPSG_SCTN090D_FRAME_DICT, \
+		FMPSG_SCTN090D_MAINFRAME_CMNT_DICT, \
+		FMPSG_SCTN090D_MAINFRAME_DICT, \
 		FMPSG_SCTN090E_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN090E_LAYOUT_DICT, \
 		FMPSG_SCTN090F_WINDOW_CMNT_DICT, \
@@ -610,4 +619,6 @@ FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN090
 		FMPSG_SCTN0912_FRAME_CMNT_DICT, \
 		FMPSG_SCTN0912_FRAME_DICT, \
 		FMPSG_SCTN0913_RCMENU_CMNT_DICT, \
-		FMPSG_SCTN0913_RCMENU_DICT
+		FMPSG_SCTN0913_RCMENU_DICT, \
+		FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT, \
+		FMPSG_SCTN0914_POPUPFRAME_DICT
