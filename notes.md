@@ -54,62 +54,17 @@ restarted service at 18:27:45
 restarted after upgrades at 19:30:50
 stops again at 1800-ish
 
-file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2347, function doMidnightWork
- event_ |{
-	 'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed',
-	 'DISMISSED': False,
-	 'enabled': True,
-	 'EVENTMODE': 'EVENTMODE_ALARM',
-	 'FIRSTRUN': True,
-	 'LAST_RUN': None,
-	 'NAME': 'wind it up',
-	 'PREDISMISSABLE': True,
-	 'REMIND_DISMISSED': False,
-	 'SNOOZABLE': False,
-	 'SNOOZED': False,
-	 'TIME_ALARM': 12600,
-	 'TIME_AT_NEXT': 99000,
-	 'TIME_INTERVAL': 0,
-	 'TIME_INTERVAL__BEGIN': 0,
-	 'TIME_INTERVAL__END': 0,
-	 'TIME_INTERVAL_START': 0,
-	 'TIME_LEN_RING': 0,
-	 'TIME_REMIND': 0
-}|
-
-
-
-file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2363, function doMidnightWork
- event_ |
- {
-	 'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed',
-	 'DISMISSED': False,
-	 'enabled': True,
-	 'EVENTMODE': 'EVENTMODE_ALARM',
-	 'FIRSTRUN': True,
-	 'LAST_RUN': None,
-	 'NAME': 'wind it up',
-	 'PREDISMISSABLE': True,
-	 'REMIND_DISMISSED': False,
-	 'SNOOZABLE': False,
-	 'SNOOZED': False,
-	 'TIME_ALARM': 12600,
-	 'TIME_AT_NEXT': 99000,
-	 'TIME_INTERVAL': 0,
-	 'TIME_INTERVAL__BEGIN': 0,
-	 'TIME_INTERVAL__END': 0,
-	 'TIME_INTERVAL_START': 0,
-	 'TIME_LEN_RING': 0,
-	 'TIME_REMIND': 0
-	}|
-                MAPPDS[EVENT_ENTRIES] |
-	{0: {'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed', 'DISMISSED': False, 'enabled': True, 'EVENTMODE': 'EVENTMODE_ALARM', 'FIRSTRUN': True, 'LAST_RUN': None, 'NAME': 'wind it up', 'PREDISMISSABLE': True, 'REMIND_DISMISSED': False, 'SNOOZABLE': False, 'SNOOZED': False, 'TIME_ALARM': 12600, 'TIME_AT_NEXT': 99000, 'TIME_INTERVAL': 0, 'TIME_INTERVAL__BEGIN': 0, 'TIME_INTERVAL__END': 0, 'TIME_INTERVAL_START': 0, 'TIME_LEN_RING': 0, 'TIME_REMIND': 0}, 1: None}|
-file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2363, function doMidnightWork
- event_ |None|
-                MAPPDS[EVENT_ENTRIES] |{0: {'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed', 'DISMISSED': False, 'enabled': True, 'EVENTMODE': 'EVENTMODE_ALARM', 'FIRSTRUN': True, 'LAST_RUN': None, 'NAME': 'wind it up', 'PREDISMISSABLE': True, 'REMIND_DISMISSED': False, 'SNOOZABLE': False, 'SNOOZED': False, 'TIME_ALARM': 12600, 'TIME_AT_NEXT': 99000, 'TIME_INTERVAL': 0, 'TIME_INTERVAL__BEGIN': 0, 'TIME_INTERVAL__END': 0, 'TIME_INTERVAL_START': 0, 'TIME_LEN_RING': 0, 'TIME_REMIND': 0}, 1: None}|
-
 # eof
 #
 #
 #
 #
+
+
+file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2499, function updateInterval
+                TIntervalBegan_ |1119|00:18:39 =
+									(NOWS |63553|17:39:13 // TInterval_ |60|00:01:00) + TInterval_ |60|00:01:00
+                TTimeBetween_ |62434|17:20:34 = NOWS |63553|17:39:13 - TIntervalBegan_ |1119|00:18:39
+                TTimeRemaining_ |34|00:00:34 = (TTimeBetween_ |62434|17:20:34 % TInterval_ |60|00:01:00)
+                TTimeAtStart_ |63480|17:38:00 = ('CF.loseTheSecs(NOWS - TTimeRemaining_)', 63480)
+                TTimeAtNext_ |63540|17:39:00 = (TTimeAtStart_ |63480|17:38:00 + TInterval_ |60|00:01:00)
