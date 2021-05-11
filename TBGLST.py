@@ -1089,7 +1089,7 @@ TBGLST = [
 	("PSGVAL__VLAST_MOUSE_STATUS", FMAXPSG_SCTN0901_VAL_DEF, "LAST_MOUSE_STATUS", "None", "last returned mouse status to deal with hover events",),
 	("PSGVAL__VMAINFRAME", FMAXPSG_SCTN0901_VAL_DEF, "MAINFRAME", "None", "mainframe so everything passes together always",),
 	("PSGVAL__VMLCN", FMAXPSG_SCTN0901_VAL_DEF, "MLCN", "DISP.Display().screen().root.query_pointer", "short cut to get mouse position",),
-	("PSGVAL__VNAME_NEXT_EVENT", FMAXPSG_SCTN0901_STR_DEF, "NAME_NEXT_EVENT", "", "name of the next event",),
+	("PSGVAL__VNAME_NEXT_EVENT_STR", FMAXPSG_SCTN0901_STR_DEF, "NAME_NEXT_EVENT_STR", "", "name of the next event",),
 	("PSGVAL__VNOWM", FMAXPSG_SCTN0901_VAL_DEF, "NOWM", "0", "comment",),
 	("PSGVAL__VNOWMS", FMAXPSG_SCTN0901_VAL_DEF, "NOWMS", "0", "comment",),
 	("PSGVAL__VNOWS", FMAXPSG_SCTN0901_VAL_DEF, "NOWS", "0", "comment",),

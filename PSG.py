@@ -170,7 +170,7 @@ IS_ALERTING_NOWV = False  # comment
 LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
 MAINFRAME = None  # mainframe so everything passes together always
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
-NAME_NEXT_EVENT = ""  # name of the next event
+NAME_NEXT_EVENT_STR = ""  # name of the next event
 NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
@@ -2423,7 +2423,7 @@ def fixNextTimes():
 			event_[TIME_AT_NEXT] = fixTimeAtNext(timeAtNext_)
 			MAPPDS[EVENT_ENTRIES][index_] = event_
 			MAPPDS[INDEX_OF_NEXT_EVENT] = index_
-			NAME_NEXT_EVENT = event_[NAME]
+			NAME_NEXT_EVENT_STR = event_[NAME]
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2464,8 +2464,8 @@ def findNextAlarmEvent():
 	nextEventList_.sort()
 	CLOCKS_DICT[TIME_AT_NEXT] = fixTimeAtNext(nextEventList_[0][0])
 	TIMES_NEXT_EVENT = CLOCKS_DICT[TIME_AT_NEXT]
-	NAME_NEXT_EVENT = nextEventList_[0][3]
-	CLOCKS_TEXT_DICT[NEXT_NAME] = NAME_NEXT_EVENT
+	NAME_NEXT_EVENT_STR = nextEventList_[0][3]
+	CLOCKS_TEXT_DICT[NEXT_NAME] = NAME_NEXT_EVENT_STR
 	updateMainframeFromDict(CLOCKS_TEXT_DICT)
 	print(f"""{CF.getDebugInfo()}
 	{CF.frameItHMS("NOWS updated next event", NOWS)}
@@ -2473,6 +2473,7 @@ def findNextAlarmEvent():
 	""")
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # doMidnightWork
