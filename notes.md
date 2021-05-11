@@ -66,16 +66,51 @@ stops again at 1800-ish
 #
 
 
-file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2499, function updateInterval
-                TIntervalBegan_ |1119|00:18:39 =
-									(NOWS |63553|17:39:13 // TInterval_ |60|00:01:00) + TInterval_ |60|00:01:00
-                TTimeBetween_ |62434|17:20:34 = NOWS |63553|17:39:13 - TIntervalBegan_ |1119|00:18:39
-                TTimeRemaining_ |34|00:00:34 = (TTimeBetween_ |62434|17:20:34 % TInterval_ |60|00:01:00)
-                TTimeAtStart_ |63480|17:38:00 = ('CF.loseTheSecs(NOWS - TTimeRemaining_)', 63480)
-                TTimeAtNext_ |63540|17:39:00 = (TTimeAtStart_ |63480|17:38:00 + TInterval_ |60|00:01:00)
-
-
 {
 	0:
 	{
-		'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed', 'DISMISSED': False, 'enabled': False, 'EVENTMODE': 'EVENTMODE_INTERVAL', 'FIRSTRUN': False, 'IS_ALERTING_NOW': False, 'TIME_AT_LAST_RUN': 7080, 'NAME': 'wind it up', 'PREDISMISSABLE': True, 'REMIND_DISMISSED': False, 'SNOOZABLE': False, 'SNOOZED': False, 'TIME_ALARM': 0, 'TIME_AT_NEXT': 86400, 'TIME_INTERVAL': 120, 'TIME_INTERVAL__BEGIN': 0, 'TIME_INTERVAL__END': 0, 'TIME_INTERVAL_START': 7080, 'TIME_LEN_RING': 0, 'TIME_REMIND': 0}, 1: {'ALARMPOPUP_TEXT_TEXT': 'MOVE', 'DISMISSED': False, 'enabled': True, 'EVENTMODE': 'EVENTMODE_INTERVAL', 'FIRSTRUN': False, 'IS_ALERTING_NOW': False, 'TIME_AT_LAST_RUN': 7200, 'NAME': 'off you go then', 'PREDISMISSABLE': True, 'REMIND_DISMISSED': False, 'SNOOZABLE': False, 'SNOOZED': False, 'TIME_ALARM': 0, 'TIME_AT_NEXT': 7290, 'TIME_INTERVAL': 90, 'TIME_INTERVAL__BEGIN': 0, 'TIME_INTERVAL__END': 0, 'TIME_INTERVAL_START': 7200, 'TIME_LEN_RING': 0, 'TIME_REMIND': 0}}
+		'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed',
+		'DISMISSED': False,
+		'enabled': False,
+		'EVENTMODE': 'EVENTMODE_INTERVAL',
+		'FIRSTRUN': False,
+		'IS_ALERTING_NOW': False,
+		'NAME': 'wind it up',
+		'PREDISMISSABLE': True,
+		'REMIND_DISMISSED': False,
+		'SNOOZABLE': False,
+		'SNOOZED': False,
+		'TIME_ALARM': 12600,
+		'TIME_AT_LAST_RUN': 84720,
+		'TIME_AT_NEXT': 86400,
+		'TIME_INTERVAL': 240,
+		'TIME_INTERVAL__BEGIN': 0,
+		'TIME_INTERVAL__END': 0,
+		'TIME_INTERVAL_START': 84720,
+		'TIME_LEN_RING': 0,
+		'TIME_REMIND': 0
+	},
+	1:
+	{
+		'ALARMPOPUP_TEXT_TEXT': 'MOVE',
+		'DISMISSED': False,
+		'enabled': True,
+		'EVENTMODE': 'EVENTMODE_INTERVAL',
+		'FIRSTRUN': False,
+		'IS_ALERTING_NOW': False,
+		'NAME': 'off you go then',
+		'PREDISMISSABLE': True,
+		'REMIND_DISMISSED': False,
+		'SNOOZABLE': False,
+		'SNOOZED': False,
+		'TIME_ALARM': 0,
+		'TIME_AT_LAST_RUN': 84900,
+		'TIME_AT_NEXT': 84960,
+		'TIME_INTERVAL': 60,
+		'TIME_INTERVAL__BEGIN': 0,
+		'TIME_INTERVAL__END': 0,
+		'TIME_INTERVAL_START': 84900,
+		'TIME_LEN_RING': 0,
+		'TIME_REMIND': 0
+	}
+}
