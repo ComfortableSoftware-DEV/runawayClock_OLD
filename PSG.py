@@ -72,7 +72,6 @@ INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
 IS_ALERTING_NOW = "IS_ALERTING_NOW"  # is the event currently alerting
-TIME_AT_LAST_RUN = "TIME_AT_LAST_RUN"  # timeS of last alarm
 MAINFRAME_LCN = "MAINFRAME_LCN"  # screen position of the mainframe
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 MOUSE_LCN = "MOUSE_LCN"  # track mouse location to ease load a bit
@@ -94,7 +93,8 @@ MOUSE_STATUS_S = "MOUSE_STATUS_S"  # mouse is south of checked element
 MOUSE_STATUS_SE = "MOUSE_STATUS_SE"  # mouse is southeast of checked element
 MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
-NAME = "NAME"  #
+NAME = "NAME"  # name of the event
+NEXT_NAME = "NEXT_NAME"  # name of the next event up
 PREDISMISSABLE = "PREDISMISSABLE"  #
 REMIND_DISMISSED = "REMIND_DISMISSED"  # alarm dismissed bool
 SCREEN_DIMS = "SCREEN_DIMS"  # dimension of the screen
@@ -125,6 +125,7 @@ SZ_TIMEMS_BETWEEN_MOVES = 500  # comment
 SZ_TIMEMS_BETWEEN_UPDATES = 500  # comment
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 TIME_ALARM = "TIME_ALARM"  # the alarm time
+TIME_AT_LAST_RUN = "TIME_AT_LAST_RUN"  # timeS of last alarm
 TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
 TIME_AT_ZEROELAPSE = "TIME_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
@@ -136,7 +137,7 @@ TIME_INTERVAL_START = "TIME_INTERVAL_START"  # interval timer starting time, res
 TIME_LEN_RING = "TIME_LEN_RING"  # length of ringing
 TIME_REMIND = "TIME_REMIND"  # time yo send reminder
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
-TIMEH_ADJUST_HRS = 0  # comment
+TIMEH_ADJUST_HRS = 4  # comment
 TIMEM_ADJUST_MINS = 0  # comment
 TITLE_ALARMPOPUP = "ALERT"  # string with window title for APPMODE_CLOCKS
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
@@ -164,12 +165,13 @@ FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
-FOR_REAL = True  # comment
+FOR_REAL = False  # comment
 IS_ALERTING_NOWV = False  # comment
 LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
 MAINFRAME = None  # mainframe so everything passes together always
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
-NOW_NOMS = 0
+NAME_NEXT_EVENT = ""  # name of the next event
+NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
@@ -345,13 +347,13 @@ EMPTY0_EVENT_ENTRYTUP = (
 	(DISMISSED, False),  # has the event been dismissed just this once
 	(ENABLED, True),  # is the event enabled bool
 	(EVENTMODE, EVENTMODE_ALARM),  # which event mode is this event
-	(TIME_AT_LAST_RUN, 0),  # has the event been dismissed just this once
 	(NAME, "alarm"),  # the name of this event
 	(PREDISMISSABLE, False),  # can the event be dismissed prior to on time
 	(REMIND_DISMISSED, False),  # has the event been dismissed just this once
 	(SNOOZABLE, False),  # can the alarm be snoozed
 	(SNOOZED, False),  # is the event snoozed
 	(TIME_ALARM, ZERO_CLOCK),  # in an alarm mode event, what time is the alarm
+	(TIME_AT_LAST_RUN, 0),  # has the event been dismissed just this once
 	(TIME_INTERVAL, ZERO_CLOCK),  # how much time to add to an interval mode event
 	(TIME_REMIND, ZERO_CLOCK),  # wall time at the next alarm
 )
@@ -364,13 +366,13 @@ EMPTY0_EVENT_ENTRY_TDD = {
 	DISMISSED: False,  # has the event been dismissed just this once
 	ENABLED: True,  # is the event enabled bool
 	EVENTMODE: EVENTMODE_ALARM,  # which event mode is this event
-	TIME_AT_LAST_RUN: 0,  # has the event been dismissed just this once
 	NAME: "alarm",  # the name of this event
 	PREDISMISSABLE: False,  # can the event be dismissed prior to on time
 	REMIND_DISMISSED: False,  # has the event been dismissed just this once
 	SNOOZABLE: False,  # can the alarm be snoozed
 	SNOOZED: False,  # is the event snoozed
 	TIME_ALARM: ZERO_CLOCK,  # in an alarm mode event, what time is the alarm
+	TIME_AT_LAST_RUN: 0,  # has the event been dismissed just this once
 	TIME_INTERVAL: ZERO_CLOCK,  # how much time to add to an interval mode event
 	TIME_REMIND: ZERO_CLOCK,  # wall time at the next alarm
 }
@@ -1728,26 +1730,26 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
-			ALARMPOPUP_TEXT_TEXT: "time to start toward bed",  # time of this event
+			ALARMPOPUP_TEXT_TEXT: "time to start toward bed",  # alarm text for this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: False,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
-			IS_ALERTING_NOW: False,  # is this event dismissed
-			TIME_AT_LAST_RUN: None,  # is this event dismissed
+			IS_ALERTING_NOW: False,  # is this event alerting right now
 			NAME: "wind it up",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
-			REMIND_DISMISSED: False,  # is this event dismissed
+			REMIND_DISMISSED: False,  # is this event reminder dismissed
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: "00:00:00",  # time of this event
-			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
-			TIME_INTERVAL: "00:02:00",  # time of this event
-			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of this event
-			TIME_INTERVAL__END: ZERO_CLOCK,  # time of this event
-			TIME_INTERVAL_START: ZERO_CLOCK,  # time of this event
-			TIME_LEN_RING: ZERO_CLOCK,  # time of this event
-			TIME_REMIND: ZERO_CLOCK,  # time of this event
+			TIME_ALARM: "03:30:00",  # time of this event if it an alarm
+			TIME_AT_LAST_RUN: None,  # time this alarm last ran, now if running
+			TIME_AT_NEXT: ZERO_CLOCK,  # time next time this alarm goes off
+			TIME_INTERVAL: "00:04:00",  # interval of this event
+			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
+			TIME_REMIND: ZERO_CLOCK,  # what time to remind about this alarm
 		},
 		1: {
 			ALARMPOPUP_TEXT_TEXT: "MOVE",  # time of this event
@@ -1756,15 +1758,15 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
 			IS_ALERTING_NOW: False,  # is this event dismissed
-			TIME_AT_LAST_RUN: None,  # is this event dismissed
 			NAME: "off you go then",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			REMIND_DISMISSED: False,  # is this event reminder dismissed
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: "00:00:00",  # time of this event
+			TIME_AT_LAST_RUN: None,  # is this event dismissed
 			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
-			TIME_INTERVAL: "00:01:30",  # time of this event
+			TIME_INTERVAL: "00:01:00",  # time of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL__END: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL_START: ZERO_CLOCK,  # time of this event
