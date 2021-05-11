@@ -34,9 +34,14 @@ do       | [X] | (abandoned) convert all passed about things to a dict (ended up
          |     | convert back to all tuples instead of dicts (x, y) (west, north, east, south)
          |     | github for android and see how this works on android
          | [X] | fix elapsed after midnight
-         | []  | start and stop times for intervals
+         | [X] | start and stop times for intervals
          | [X] | manage rewrite of the mainframe class to the ALARMPOPUP class
-         | []  |
+         | []  | length of alarms
+         | []  | auto dismiss
+         | []  | time until dismissed
+         | []  | intervals working
+         | []  | alarms working
+         | []  | alarm+reminder working
          | []  |
 
 
