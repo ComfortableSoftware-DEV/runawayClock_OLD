@@ -165,7 +165,7 @@ FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
-FOR_REAL = False  # comment
+FOR_REAL = True  # comment
 IS_ALERTING_NOWV = False  # comment
 LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
 MAINFRAME = None  # mainframe so everything passes together always
@@ -310,6 +310,11 @@ CLOCKS_DICT = {  # holds the values for the clocks frame
 	TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
+}
+
+
+CLOCKS_TEXT_DICT = {  # holds the values for the text elements
+	NAME_NEXT_EVENT: "",  # holds the values for the clocks frame
 }
 
 
@@ -1420,6 +1425,19 @@ ALARMPOPUP_TEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 }
 
 
+CLOCKS_TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCKS_CLOCK_TIME
+	TEXT: "",  # the text to fill in
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: NAME_NEXT_EVENT,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (16, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+}
+
+
 CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
@@ -1537,6 +1555,11 @@ CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the mai
 		),
 		SG.Text(  # add a new row to clocks column
 			**CLOCKS_TEXT_TIME_AT_NEXT,  # add time to go
+		),
+	],
+	[
+		SG.Text(  # add a new text element to row01 clocks column
+			**CLOCKS_TEXT_NAME_NEXT_EVENT,  # add the main clock
 		),
 	],
 	[
