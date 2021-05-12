@@ -249,6 +249,7 @@ MARGINS = "margins"  #
 METADATA = "metadata"  # 
 MODAL = "modal"  # 
 NO_TITLEBAR = "no_titlebar"  # 
+NON_BLOCKING = "non_blocking"  # 
 PAD = "pad"  # 
 PROGRESS_BAR_COLOR = "progress_bar_color"  # 
 READONLY = "readonly"  # 
@@ -1668,6 +1669,21 @@ class THECLOCK_CLASS():
 # * SCTN0914 popupframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0915 popups
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+POPUP_INTERVAL = {  # the dialog when an interval goes off
+	TITLE: "",  # title of the alert window
+	AUTO_CLOSE: True,  # interval timers get auto dismiss by default
+	AUTO_CLOSE_DURATION: 5,  # 5 seconds before auto closing an interval alert
+	GRAB_ANYWHERE: True,  # grab anywhere on our popup
+	KEEP_ON_TOP: True,  # keep our popup on top
+	MODAL: True,  # grab anywhere on our popup
+	NON_BLOCKING: True,  # carry on with everything else
+	NO_TITLEBAR: True,  # no title bar on our popup
+}
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C MAPPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
@@ -1692,7 +1708,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: "03:30:00",  # time of this event if it an alarm
-			TIME_AT_LAST_RUN: None,  # time this alarm last ran, now if running
+			TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			TIME_AT_NEXT: ZERO_CLOCK,  # time next time this alarm goes off
 			TIME_INTERVAL: "00:04:00",  # interval of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
@@ -1712,7 +1728,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: "00:00:00",  # time of this event
-			TIME_AT_LAST_RUN: None,  # is this event dismissed
+			TIME_AT_LAST_RUN: 0,  # is this event dismissed
 			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL: "00:02:15",  # time of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of this event

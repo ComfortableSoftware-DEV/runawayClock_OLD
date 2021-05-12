@@ -46,3 +46,41 @@ file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2393, function findNex
 nextEventList_ |[
 	(73845, 1, 'EVENTMODE_INTERVAL', 'off you go then'),
 	(73920, 0, 'EVENTMODE_INTERVAL', 'wind it up')]|
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# SCTN0915 POPUPDIALOG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+class CLASS_POPUP_INTERVAL(object):
+
+	def __init__(self, title_, count_, splatArgs_=[]):
+		self.POPUP_INTERVAL_DICT = {
+			title: title_,
+			auto_close: True,
+			auto_close_duration: 5,
+			non_blocking: True,
+			no_titlebar: True,
+			grab_anywhere: True,
+			keep_on_top: True,
+			modal: True,
+		}
+
+		self.POPUP_INTERVAL_LIST = [
+			f"""INTERVAL {title_} has expired {count_} times""",
+			f"""clock OK to dismiss now or wait {self.POPUP_INTERVAL_DICT[auto_close_duration]}""",
+		]
+
+
+	def __enter__(self):
+		SG.PopupAutoClose(
+			*self.POPUP_INTERVAL_LIST,
+			**self.POPUP_INTERVAL_DICT,
+		)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+#

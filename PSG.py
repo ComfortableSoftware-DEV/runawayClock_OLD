@@ -94,6 +94,8 @@ MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
 NAME = "NAME"  # name of the event
 NAME_NEXT_EVENT = "NAME_NEXT_EVENT"  # name of the next event up
+POPUPTYPE = "POPUPTYPE"  # which type of popup are we defining
+POPUPTYPE_AUTO_CLOSE = "POPUPTYPE_AUTO_CLOSE"  # for intervals auto close
 PREDISMISSABLE = "PREDISMISSABLE"  #
 SCREEN_DIMS = "SCREEN_DIMS"  # dimension of the screen
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
@@ -247,6 +249,7 @@ MARGINS = "margins"  #
 METADATA = "metadata"  #
 MODAL = "modal"  #
 NO_TITLEBAR = "no_titlebar"  #
+NON_BLOCKING = "non_blocking"  #
 PAD = "pad"  #
 PROGRESS_BAR_COLOR = "progress_bar_color"  #
 READONLY = "readonly"  #
@@ -1666,6 +1669,54 @@ class THECLOCK_CLASS():
 # * SCTN0914 popupframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0915 popups
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+POPUP_INTERVAL = {  # the dialog when an interval goes off
+	TITLE: "",  # title of the alert window
+	AUTO_CLOSE: True,  # interval timers get auto dismiss by default
+	AUTO_CLOSE_DURATION: 5,  # 5 seconds before auto closing an interval alert
+	GRAB_ANYWHERE: True,  # grab anywhere on our popup
+	KEEP_ON_TOP: True,  # keep our popup on top
+	MODAL: True,  # grab anywhere on our popup
+	NON_BLOCKING: True,  # carry on with everything else
+	NO_TITLEBAR: True,  # no title bar on our popup
+}
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# SCTN0915 POPUPDIALOG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+class CLASS_POPUP_INTERVAL(object):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+
+	def __init__(self, title_, count_, splatArgs_=[]):
+		self.POPUP_INTERVAL_DICT = {
+			title: title_,
+			auto_close: True,
+			auto_close_duration: 5,
+			non_blocking: True,
+			no_titlebar: True,
+			grab_anywhere: True,
+			keep_on_top: True,
+			modal: True,
+		}
+
+		self.POPUP_INTERVAL_LIST = [
+			f"""INTERVAL {title_} has expired {count_} times""",
+			f"""click OK to dismiss now or wait {self.POPUP_INTERVAL_DICT[auto_close_duration]}""",
+		]
+
+		return self
+
+
+	def __enter__(self):
+		SG.PopupAutoClose(
+			*self.POPUP_INTERVAL_LIST,
+			**self.POPUP_INTERVAL_DICT,
+		)
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C MAPPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
@@ -1690,7 +1741,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: "03:30:00",  # time of this event if it an alarm
-			TIME_AT_LAST_RUN: None,  # time this alarm last ran, now if running
+			TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			TIME_AT_NEXT: ZERO_CLOCK,  # time next time this alarm goes off
 			TIME_INTERVAL: "00:04:00",  # interval of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
@@ -1710,7 +1761,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: "00:00:00",  # time of this event
-			TIME_AT_LAST_RUN: None,  # is this event dismissed
+			TIME_AT_LAST_RUN: 0,  # is this event dismissed
 			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL: "00:02:15",  # time of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of this event
@@ -2320,6 +2371,10 @@ def doMidnightWork():
 			MAPPDS[EVENT_ENTRIES][index_][TIME_AT_LAST_RUN] = None
 			MAPPDS[EVENT_ENTRIES][index_][DISMISSED] = False
 			for index1_ in TIMES_LIST:
+				print(f"""{CF.getDebugInfo()}
+				{CF.frameIt("index1_", index1_)}
+				{CF.frameIt("MAPPDS[EVENT_ENTRIES][index_]", MAPPDS[EVENT_ENTRIES][index_])}
+				""")
 				if MAPPDS[EVENT_ENTRIES][index_][index1_] >= CF.DAYSECS:
 					MAPPDS[EVENT_ENTRIES][index_][index1_] -= CF.DAYSECS
 	findNextAlarmEvent()

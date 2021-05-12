@@ -43,6 +43,7 @@ do       | [X] | (abandoned) convert all passed about things to a dict (ended up
          | []  | auto dismiss time 0 for no auto dismiss
          | []  | default intervals to 5 seconds to start
          | []  |add a counter of intervals, and a reset when counter clicked
+  |   |  flash clocks or theclock instead of popup for intervals
   |   |  
 
 
