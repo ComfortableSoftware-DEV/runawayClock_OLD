@@ -29,20 +29,17 @@ do       | [X] | (abandoned) convert all passed about things to a dict (ended up
          | []  | mv PSG.py PSG_TIME.py to make sure these special modifications to PSG earn their keep
          | [X] | switch all times to int seconds MTSS and MTSMS from strings
          | [x] | only switching to text to display
-         |     | also for incrementing, pre cache int for all times, and do everything with raw int seconds
-         |     | all times int + HMS, only using HMS when it's time to zero check the main clock, ended up with MTSS and MTSMS
-         |     | convert back to all tuples instead of dicts (x, y) (west, north, east, south)
-         |     | github for android and see how this works on android
          | [X] | fix elapsed after midnight
          | [X] | start and stop times for intervals
          | [X] | manage rewrite of the mainframe class to the ALARMPOPUP class
          | []  | length of alarms
          | []  | auto dismiss
          | []  | time until dismissed
-         | []  | intervals working
+         | [X]  | intervals working
          | []  | alarms working
-         | []  | alarm+reminder working
-         | []  |
+         | [X]  | (alarm+reminder working)
+         | [X]  |remove reminders
+  |   |  
 
 
 

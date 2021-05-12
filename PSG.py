@@ -2330,30 +2330,32 @@ def checkMouseStatus(statusToDo_):
 def updateInterval(eventIndexToDo_, isAlertingNow_=False):
 	global MAPPDS, IS_ALERTING_NOWV
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	if isAlertingNow_ is True:
+	if (isAlertingNow_ is True):
 		IS_ALERTING_NOWV = True
-		print("alerting")
+#		print("alerting")
 
 	eventToDo_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
 	TInterval_ = eventToDo_[TIME_INTERVAL]
-	TTimeAtNext_ = eventToDo_[TIME_AT_NEXT]
-	TTimeAtStart_ = eventToDo_[TIME_INTERVAL_START]
+	# TTimeAtNext_ = eventToDo_[TIME_AT_NEXT]
+	# TTimeAtStart_ = eventToDo_[TIME_INTERVAL_START]
 	TTimeAtBegin_ = eventToDo_[TIME_INTERVAL__BEGIN]
 	TTimeSinceBegin_ = NOWS - TTimeAtBegin_
 	TTimeAtEnd_ = eventToDo_[TIME_INTERVAL__END]
 	TTimeAtLastRun_ = eventToDo_[TIME_AT_LAST_RUN]
+	TTimeAtStart_ = int(TTimeSinceBegin_ // TInterval_) * TInterval_
+	TTimeAtNext_ = fixTimeAtNext(TTimeAtStart_ + TInterval_)
 
 	if TTimeAtEnd_ < 1:
 		TTimeAtEnd_ += CF.DAYSECS
 
 	if eventToDo_[FIRSTRUN] is True:
-		TTimeAtStart_ = int(TTimeSinceBegin_ // TInterval_) * TInterval_
-		TTimeAtNext_ = fixTimeAtNext(TTimeAtStart_ + TInterval_)
+#		TTimeAtStart_ = int(TTimeSinceBegin_ // TInterval_) * TInterval_
+#		TTimeAtNext_ = fixTimeAtNext(TTimeAtStart_ + TInterval_)
 		MAPPDS[EVENT_ENTRIES][eventIndexToDo_][FIRSTRUN] = False
 		MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_LAST_RUN] = TTimeAtLastRun_ = TTimeAtStart_
 
 	if isAlertingNow_ is True:
-		print("next round setup")
+#		print("next round setup")
 		TTimeAtStart_ = NOWS
 		TTimeAtNext_ = fixTimeAtNext(TTimeAtStart_ + TInterval_)
 
@@ -2402,11 +2404,11 @@ def findNextAlarmEvent():
 	NAME_NEXT_EVENT_STR = nextEventList_[0][3]# (time, index, mode, name)
 	CLOCKS_TEXT_DICT[NAME_NEXT_EVENT] = NAME_NEXT_EVENT_STR
 	updateMainframeFromDict(CLOCKS_TEXT_DICT)
-	print(f"""{CF.getDebugInfo()}
-	{CF.frameItHMS("NOWS updated next event", NOWS)}
-	{CF.frameIt("EVENT_ENTRIES", MAPPDS[EVENT_ENTRIES])}
-	{CF.frameIt("nextEventList_", nextEventList_)}
-	""")
+#	print(f"""{CF.getDebugInfo()}
+#	{CF.frameItHMS("NOWS updated next event", NOWS)}
+#	{CF.frameIt("EVENT_ENTRIES", MAPPDS[EVENT_ENTRIES])}
+#	{CF.frameIt("nextEventList_", nextEventList_)}
+#	""")
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2459,8 +2461,9 @@ def doAlarmEvent(eventIndexToDo_):
 	print(f"""{CF.getDebugInfo()}
 	event_ {event_}""")
 	if event_[EVENTMODE] == EVENTMODE_INTERVAL:
-		updateInterval(eventIndexToDo_, True)
+		updateInterval(eventIndexToDo_, isAlertingNow_=True)
 	alarmText_ = event_[ALARMPOPUP_TEXT_TEXT]
+	
 #	MAINFRAME.hide()
 #	with ALARMPOPUP_CLASS() as POPUP:
 #		# MAPPDS[APPMODE] = APPMODE_ALARMPOPUP # technically handled by the class
@@ -2499,37 +2502,9 @@ def doInit1():
 	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		MAPPDS[EVENT_ENTRIES][index_][TIME_AT_LAST_RUN] = None
-		# MAPPDS[EVENT_ENTRIES][index_]["************************************************************"] = None
-
-	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-		if isinstance(event_[TIME_ALARM], str):
-			# print(f"""MAPPDS[{EVENT_ENTRIES}][{index_}][TIME_ALARM] = CF.HMSToNrmlInt(event_[TIME_ALARM])""")
-			MAPPDS[EVENT_ENTRIES][index_][TIME_ALARM] = CF.HMSToNrmlInt(event_[TIME_ALARM])
-
-	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-		if isinstance(event_[TIME_INTERVAL], str):
-			MAPPDS[EVENT_ENTRIES][index_][TIME_INTERVAL] = CF.HMSToNrmlInt(event_[TIME_INTERVAL])
-
-	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-		if isinstance(event_[TIME_INTERVAL__BEGIN], str):
-			MAPPDS[EVENT_ENTRIES][index_][TIME_INTERVAL__BEGIN] = CF.HMSToNrmlInt(event_[TIME_INTERVAL__BEGIN])
-
-	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-		if isinstance(event_[TIME_INTERVAL__END], str):
-			MAPPDS[EVENT_ENTRIES][index_][TIME_INTERVAL__END] = CF.HMSToNrmlInt(event_[TIME_INTERVAL__END])
-
-	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-		if MAPPDS[EVENT_ENTRIES][index_][EVENTMODE] == EVENTMODE_INTERVAL:
-			updateInterval(index_)
-
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
-
+		for timeKey_ in TIMES_LIST:
+			if isinstance(event_[timeKey_], str):
+				MAPPDS[EVENT_ENTRIES][index_][timeKey_] = CF.HMSToNrmlInt(event_[timeKey_])
 	doMidnightWork()
 	findNextAlarmEvent()
 
