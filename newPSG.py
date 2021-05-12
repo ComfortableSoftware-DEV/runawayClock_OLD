@@ -338,6 +338,18 @@ CLOSE_LIST = [  # list with close statuses
 ]
 
 
+TIMES_LIST = [  # list of all keys to times for midnight etc. processing
+	TIME_ALARM,  # alarm time entry in TIMES_LIST
+	TIME_AT_LAST_RUN,  # alarm time entry in TIMES_LIST
+	TIME_AT_NEXT,  # alarm time entry in TIMES_LIST
+	TIME_INTERVAL,  # alarm time entry in TIMES_LIST
+	TIME_INTERVAL_START,  # alarm time entry in TIMES_LIST
+	TIME_INTERVAL__BEGIN,  # alarm time entry in TIMES_LIST
+	TIME_INTERVAL__END,  # alarm time entry in TIMES_LIST
+	TIME_LEN_RING,  # alarm time entry in TIMES_LIST
+]
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0904 platform equalizers
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

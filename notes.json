@@ -1,0 +1,48 @@
+file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2393, function findNextAlarmEvent
+        NOWS updated next event |73795|20:29:55
+        EVENT_ENTRIES |
+{
+	0: {
+		'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed',
+		'DISMISSED': False,
+		'enabled': True,
+		'EVENTMODE': 'EVENTMODE_INTERVAL',
+		'FIRSTRUN': False,
+		'IS_ALERTING_NOW': False,
+		'NAME': 'wind it up',
+		'PREDISMISSABLE': True,
+		'SNOOZABLE': False,
+		'SNOOZED': False,
+		'TIME_ALARM': 12600,
+		'TIME_AT_LAST_RUN': None,
+		'TIME_AT_NEXT': 73920,
+		'TIME_INTERVAL': 240,
+		'TIME_INTERVAL__BEGIN': 0,
+		'TIME_INTERVAL__END': 0,
+		'TIME_INTERVAL_START': 73680,
+		'TIME_LEN_RING': 0
+	},
+	1: {
+		'ALARMPOPUP_TEXT_TEXT': 'MOVE',
+		'DISMISSED': False,
+		'enabled': True,
+		'EVENTMODE': 'EVENTMODE_INTERVAL',
+		'FIRSTRUN': False,
+		'IS_ALERTING_NOW': False,
+		'NAME': 'off you go then',
+		'PREDISMISSABLE': True,
+		'SNOOZABLE': False,
+		'SNOOZED': False,
+		'TIME_ALARM': 0,
+		'TIME_AT_LAST_RUN': None,
+		'TIME_AT_NEXT': 73845,
+		'TIME_INTERVAL': 135,
+		'TIME_INTERVAL__BEGIN': 0,
+		'TIME_INTERVAL__END': 0,
+		'TIME_INTERVAL_START': 73710,
+		'TIME_LEN_RING': 0
+	}
+}|
+nextEventList_ |[
+	(73845, 1, 'EVENTMODE_INTERVAL', 'off you go then'),
+	(73920, 0, 'EVENTMODE_INTERVAL', 'wind it up')]|
