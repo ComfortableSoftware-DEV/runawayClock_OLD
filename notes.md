@@ -114,3 +114,50 @@ stops again at 1800-ish
 		'TIME_REMIND': 0
 	}
 }
+
+Popup = popup(*args, title=None, button_color=None, background_color=None, text_color=None, button_type=0, auto_close=False, auto_close_duration=None, custom_text=(None, None), non_blocking=False, icon=None, line_width=None, font=None, no_titlebar=False, grab_anywhere=False, keep_on_top=False, location=(None, None), any_key_closes=False, image=None, modal=True)
+    Popup - Display a popup Window with as many parms as you wish to include.  This is the GUI equivalent of the
+    "print" statement.  It's also great for "pausing" your program's flow until the user can read some error messages.
+
+    :param *args:  Variable number of your arguments.  Load up the call with stuff to see!
+    :type *args: (Any)
+    :param title: Optional title for the window. If none provided, the first arg will be used instead.
+    :type title: (str)
+    :param button_color: Color of the buttons shown (text color, button color)
+    :type button_color: Tuple[str, str] | None
+    :param background_color: Window's background color
+    :type background_color: (str)
+    :param text_color: text color
+    :type text_color: (str)
+    :param button_type: NOT USER SET!  Determines which pre-defined buttons will be shown (Default value = POPUP_BUTTONS_OK). There are many Popup functions and they call Popup, changing this parameter to get the desired effect.
+    :type button_type: (int)
+    :param auto_close: If True the window will automatically close
+    :type auto_close: (bool)
+    :param auto_close_duration: time in seconds to keep window open before closing it automatically
+    :type auto_close_duration: (int)
+    :param custom_text: A string or pair of strings that contain the text to display on the buttons
+    :type custom_text: Tuple[str, str] | str
+    :param non_blocking: If True then will immediately return from the function without waiting for the user's input.
+    :type non_blocking: (bool)
+    :param icon: icon to display on the window. Same format as a Window call
+    :type icon: str | bytes
+    :param line_width: Width of lines in characters.  Defaults to MESSAGE_BOX_LINE_WIDTH
+    :type line_width: (int)
+    :param font: specifies the font family, size, etc
+    :type font: str | Tuple[font_name, size, modifiers]
+    :param no_titlebar: If True will not show the frame around the window and the titlebar across the top
+    :type no_titlebar: (bool)
+    :param grab_anywhere: If True can grab anywhere to move the window. If no_titlebar is True, grab_anywhere should likely be enabled too
+    :type grab_anywhere: (bool)
+    :param location: Location on screen to display the top left corner of window. Defaults to window centered on screen
+    :type location: Tuple[int, int]
+    :param keep_on_top: If True the window will remain above all current windows
+    :type keep_on_top: (bool)
+    :param any_key_closes: If True then will turn on return_keyboard_events for the window which will cause window to close as soon as any key is pressed.  Normally the return key only will close the window.  Default is false.
+    :type any_key_closes: (bool)
+    :param image: Image to include at the top of the popup window
+    :type image: (str) or (bytes)
+    :param modal: If True then makes the popup will behave like a Modal window... all other windows are non-operational until this one is closed. Default = True
+    :type modal: bool
+    :return: Returns text of the button that was pressed.  None will be returned if user closed window with X
+    :rtype: str | None

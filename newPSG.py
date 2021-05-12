@@ -1755,7 +1755,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		0: {
 			ALARMPOPUP_TEXT_TEXT: "time to start toward bed",  # alarm text for this event
 			DISMISSED: False,  # is this event dismissed
-			ENABLED: False,  # is this event enabled
+			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
 			IS_ALERTING_NOW: False,  # is this event alerting right now
