@@ -2,7 +2,7 @@
 
 
 status   | [ ] | item
----------|-----|--------------------------------------------------------------------------------------------------------------
+---------|-----|-------------------------------------------------------------------------------------------------------
 consider | [ ] | clocks mode can be separated
 consider | [ ] | lowercase all parm keys to match PySimpleGui conventions
 do       | [X] | avoid mouse unless cornered/walled/overrun
@@ -35,10 +35,14 @@ do       | [X] | (abandoned) convert all passed about things to a dict (ended up
          | []  | length of alarms
          | []  | auto dismiss
          | []  | time until dismissed
-         | [X]  | intervals working
+         | [X] | intervals working
          | []  | alarms working
-         | [X]  | (alarm+reminder working)
-         | [X]  |remove reminders
+         | [X] | (alarm+reminder working)
+         | [X] | remove reminders
+         | []  | make the clocks mode able to invisible all except when over
+         | []  | auto dismiss time 0 for no auto dismiss
+         | []  | default intervals to 5 seconds to start
+         | []  |add a counter of intervals, and a reset when counter clicked
   |   |  
 
 
@@ -158,3 +162,46 @@ Popup = popup(*args, title=None, button_color=None, background_color=None, text_
     :type modal: bool
     :return: Returns text of the button that was pressed.  None will be returned if user closed window with X
     :rtype: str | None
+
+
+PopupAutoClose = popup_auto_close(*args, title=None, button_type=0, button_color=None, background_color=None, text_color=None, auto_close=True, auto_close_duration=None, non_blocking=False, icon=None, line_width=None, font=None, no_titlebar=False, grab_anywhere=False, keep_on_top=False, location=(None, None), image=None, modal=True)
+    Popup that closes itself after some time period
+
+    :param *args: Variable number of items to display
+    :type *args: (Any)
+    :param title: Title to display in the window.
+    :type title: (str)
+    :param button_type: Determines which pre-defined buttons will be shown (Default value = POPUP_BUTTONS_OK).
+    :type button_type: (int)
+    :param button_color: button color (foreground, background)
+    :type button_color: Tuple[str, str] or str
+    :param background_color: color of background
+    :type background_color: (str)
+    :param text_color: color of the text
+    :type text_color: (str)
+    :param auto_close: if True window will close itself
+    :type auto_close: (bool)
+    :param auto_close_duration: Older versions only accept int. Time in seconds until window will close
+    :type auto_close_duration: int | float
+    :param non_blocking: if True the call will immediately return rather than waiting on user input
+    :type non_blocking: (bool)
+    :param icon: filename or base64 string to be used for the window's icon
+    :type icon: bytes | str
+    :param line_width: Width of lines in characters
+    :type line_width: (int)
+    :param font: specifies the font family, size, etc
+    :type font: str | Tuple[str, int]
+    :param no_titlebar: If True no titlebar will be shown
+    :type no_titlebar: (bool)
+    :param grab_anywhere: If True: can grab anywhere to move the window (Default = False)
+    :type grab_anywhere: (bool)
+    :param keep_on_top: If True the window will remain above all current windows
+    :type keep_on_top: (bool)
+    :param location: Location of upper left corner of the window
+    :type location: Tuple[int, int]
+    :param image: Image to include at the top of the popup window
+    :type image: (str) or (bytes)
+    :param modal: If True then makes the popup will behave like a Modal window... all other windows are non-operational until this one is closed. Default = True
+    :type modal: bool
+    :return: Returns text of the button that was pressed.  None will be returned if user closed window with X
+    :rtype: str | None | TIMEOUT_KEY

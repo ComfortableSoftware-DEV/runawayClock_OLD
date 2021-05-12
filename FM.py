@@ -334,6 +334,9 @@ FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # defin
 FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
 FMAXPSG_SCTN0914_POPUPFRAME_DEF = "FMAXPSG_SCTN0914_POPUPFRAME_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+FMAXPSG_SCTN0915_POPUPDIALOG_DEF = "FMAXPSG_SCTN0915_POPUPDIALOG_DEF"  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
+FMAXPSG_SCTN0915_POPUPDIALOG_STR_ADD = "FMAXPSG_SCTN0915_POPUPDIALOG_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD = "FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
 
 
 FMAXFM_AXLST = [
@@ -454,6 +457,9 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
 	FMAXPSG_SCTN0914_POPUPFRAME_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+	FMAXPSG_SCTN0915_POPUPDIALOG_DEF,  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
+	FMAXPSG_SCTN0915_POPUPDIALOG_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+	FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
 ]
 
 
@@ -534,7 +540,10 @@ FMPSG_SCTN0912_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN0914_POPUPFRAME_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN0914_POPUPFRAME_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
+FMPSG_SCTN0915_POPUPDIALOG_CMNT_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
+FMPSG_SCTN0915_POPUPDIALOG_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
+FMPSG_SCTN0915_POPUPDIALOG_TYPE_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -697,6 +706,9 @@ TBGLST = [
 	("FMAXPSG_SCTN0913_RCMENU_DEF", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
 	("FMAXPSG_SCTN0913_RCMENU_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
 	("FMAXPSG_SCTN0914_POPUPFRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
+	("FMAXPSG_SCTN0915_POPUPDIALOG_DEF", FMAXFM_SCTN0101_AX_DEF, "define a popup dialog <NAC><POPUPNAME><POPUPTYPE>",),
+	("FMAXPSG_SCTN0915_POPUPDIALOG_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to a text element <NAC><POPUPNAME><KEY><VAL>",),
+	("FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",),
 	("FMAXPSG_____", FMAX_NOP, "FMAXPSG_ENDS",),
 	("FMAX_NOP", FMAXFM_SCTN0101_AX_DEF, "skip this entry",),
 	("FMCF", FMAX_NOP, "FMCF_BEGINS",),
@@ -773,7 +785,10 @@ TBGLST = [
 	("FMPSG_SCTN0913_RCMENU_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0913_RCMENU_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
-	("FMPSG_SCTN0914_POPUPFRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
+	("FMPSG_SCTN0914_POPUPFRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
+	("FMPSG_SCTN0915_POPUPDIALOG_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
+	("FMPSG_SCTN0915_POPUPDIALOG_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
+	("FMPSG_SCTN0915_POPUPDIALOG_TYPE_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
 	("FMPSG_____", FMAX_NOP, "FMPSG_ENDS",),
 	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
 	("PSGVAL_ALERTING_LIST", FMAXPSG_SCTN0903_LIST_DEF, "ALERTING_LIST", "list that holds all currently alarming events",),
@@ -1046,6 +1061,8 @@ TBGLST = [
 	("PSGVAL_INDEX_X", FMAXPSG_SCTN0900_VAL_DEF, "INDEX_X", "0", "X",),
 	("PSGVAL_INDEX_Y", FMAXPSG_SCTN0900_VAL_DEF, "INDEX_Y", "1", "Y",),
 	("PSGVAL_KEY", FMAX_NOP, "keys defined",),
+	("PSGVAL_KEY_POPUPTYPE", FMAXPSG_SCTN0900_KEY_DEF, "POPUPTYPE", "which type of popup are we defining",),
+	("PSGVAL_KEY_POPUPTYPE_AUTO_CLOSE", FMAXPSG_SCTN0900_KEY_DEF, "POPUPTYPE_AUTO_CLOSE", "for intervals auto close",),
 	("PSGVAL_KEY_ALARMPOPUP_TEXT_TEXT", FMAXPSG_SCTN0900_KEY_DEF, "ALARMPOPUP_TEXT_TEXT", "key for the text on a popup",),
 	("PSGVAL_KEY_ALPHA_HIGH", FMAXPSG_SCTN0900_KEY_DEF, "ALPHA_HIGH", "alphahigh key",),
 	("PSGVAL_KEY_ALPHA_LOW", FMAXPSG_SCTN0900_KEY_DEF, "ALPHA_LOW", "alphalow key",),
@@ -1187,6 +1204,15 @@ TBGLST = [
 	("PSGVAL_NORMAL_WINDOW_TITLEBAR_ICON", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TITLEBAR_ICON", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as the icon (file or base64 bytes)",),
 	("PSGVAL_NORMAL_WINDOW_TITLEBAR_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TITLEBAR_TEXT_COLOR", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as text color",),
 	("PSGVAL_NORMAL_WINDOW_TRANSPARENT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TRANSPARENT_COLOR", "None", "Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.",),
+	("PSGVAL_POPUP_INTERVAL", FMAXPSG_SCTN0915_POPUPDIALOG_DEF, "POPUP_INTERVAL", "POPUPTYPE_AUTO_CLOSE", "the dialog when an interval goes off",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_STR_ADD, "POPUP_INTERVAL", "TITLE", "", "title of the alert window",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD, "POPUP_INTERVAL", "AUTO_CLOSE", "True", "interval timers get auto dismiss by default",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD, "POPUP_INTERVAL", "AUTO_CLOSE_DURATION", "5", "5 seconds before auto closing an interval alert",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD, "POPUP_INTERVAL", "NON_BLOCKING", "True", "carry on with everything else",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD, "POPUP_INTERVAL", "NO_TITLEBAR", "True", "no title bar on our popup",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD, "POPUP_INTERVAL", "GRAB_ANYWHERE", "True", "grab anywhere on our popup",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD, "POPUP_INTERVAL", "KEEP_ON_TOP", "True", "keep our popup on top",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD, "POPUP_INTERVAL", "MODAL", "True", "grab anywhere on our popup",),
 	("PSGVAL_SZ_ALERT_TEXT", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALERT_TEXT", "20", "high alpha",),
 	("PSGVAL_SZ_ALPHA_HIGH", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_HIGH", "1.0", "high alpha",),
 	("PSGVAL_SZ_ALPHA_LOW", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_LOW", "0.1", "low alpha setting",),
@@ -2390,7 +2416,10 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0913_RCMENU_CMNT_DICT, \
 		FMPSG_SCTN0913_RCMENU_DICT, \
 		FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT, \
-		FMPSG_SCTN0914_POPUPFRAME_DICT
+		FMPSG_SCTN0914_POPUPFRAME_DICT, \
+		FMPSG_SCTN0915_POPUPDIALOG_CMNT_DICT, \
+		FMPSG_SCTN0915_POPUPDIALOG_DICT, \
+		FMPSG_SCTN0915_POPUPDIALOG_TYPE_DICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
@@ -4022,6 +4051,54 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0914_POPUPFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NTAB(2)}POPUPFRAME.Maximize{OPAREN}{CPAREN}{NEWLINE}{NTAB(2)}POPUPFRAME.BringToFront{OPAREN}{CPAREN}{NEWLINE}"""
 			else:
 				FMPSG_SCTN0914_POPUPFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0915_POPUPDIALOG_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 5:
+				doErrorItem("not 5 items", thisItem_)
+				continue
+			thisPopupName_ = thisItem_[2]
+			thisPopupType_ = thisItem_[3]
+			if thisPopupName_ not in FMPSG_SCTN0915_POPUPDIALOG_DICT:
+				FMPSG_SCTN0915_POPUPDIALOG_DICT[thisPopupName_] = ""
+			FMPSG_SCTN0915_POPUPDIALOG_CMNT_DICT[thisPopupName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0915_POPUPDIALOG_TYPE_DICT[thisPopupName_] = thisPopupType_
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0915_POPUPDIALOG_STR_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 6:
+				doErrorItem("not 6 items", thisItem_)
+				continue
+			thisPopupName_ = thisItem_[2]
+			thisKey_ = thisItem_[3]
+			thisVal_ = thisItem_[4]
+			if thisPopupName_ not in FMPSG_SCTN0915_POPUPDIALOG_DICT:
+				FMPSG_SCTN0915_POPUPDIALOG_DICT[thisPopupName_] = ""
+			FMPSG_SCTN0915_POPUPDIALOG_DICT[thisPopupName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 6:
+				doErrorItem("not 6 items", thisItem_)
+				continue
+			thisPopupName_ = thisItem_[2]
+			thisKey_ = thisItem_[3]
+			thisVal_ = thisItem_[4]
+			if thisPopupName_ not in FMPSG_SCTN0915_POPUPDIALOG_DICT:
+				FMPSG_SCTN0915_POPUPDIALOG_DICT[thisPopupName_] = ""
+			FMPSG_SCTN0915_POPUPDIALOG_DICT[thisPopupName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 

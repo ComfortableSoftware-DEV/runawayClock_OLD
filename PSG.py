@@ -295,11 +295,6 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALARMPOPUP_DICT = {  # the dict to update popups from
-	ALARMPOPUP_TEXT_TEXT: "",  # values dict to update the popup from for alerts
-}
-
-
 CLOCKS_DICT = {  # holds the values for the clocks frame
 	TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
 	TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -1416,23 +1411,6 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALARMPOPUP_COLUMN = {  # the test that will be added to the popup
-}
-
-
-ALARMPOPUP_TEXT = {  # define the text element for CLOCKS_CLOCK_TIME
-	TEXT: "",  # the text
-	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the clock elements
-	ENABLE_EVENTS: False,  # this is clickable
-	FONT: FONTSZ_ALERT_TEXT,  # font+size line
-	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: ALARMPOPUP_TEXT_TEXT,  # button dismiss for alerts
-	PAD: SZ_PAD_ALL,  # pad size
-	SIZE: (40 , 4),  # characters, lines size line
-	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for a clock_time element
-}
-
-
 CLOCKS_TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCKS_CLOCK_TIME
 	TEXT: "",  # the text to fill in
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
@@ -1529,20 +1507,6 @@ THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090B column elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALARMPOPUP_COLUMN01 = [  # the column that puts the two smaller clocks below the main one
-	[
-		SG.Text(  # add a new TEXT element to clocks column
-			**ALARMPOPUP_TEXT,  # add the main clock
-		),
-	],
-	[
-		SG.Button(  # add a new button to clocks column
-			**BTN_DISMISS20,  # add time to go
-		),
-	],
-]
-
-
 CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the main one
 	[
 		SG.Text(  # add a new TEXT element to clocks column
@@ -1603,16 +1567,6 @@ CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the mai
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090E layout elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALARMPOPUP_LAYOUT = [  # layout for APPMODE_ALARMPOPUP
-	[
-		SG.Col(  # add a column
-			layout=ALARMPOPUP_COLUMN01,  # the column with all of the things in it
-			pad=SZ_PAD_ALL,  # comment
-		),
-	],
-]
-
-
 CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
 	[
 		SG.Col(  # add a column
@@ -1639,22 +1593,6 @@ THECLOCK_LAYOUT = [  # layout for APPMODE_THECLOCK
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090F window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALARMPOPUP_WINDOW = {  # define the clocks window
-	ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
-	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
-	BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
-	ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
-	FORCE_TOPLEVEL: None,  #
-	GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
-	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
-	LAYOUT: ALARMPOPUP_LAYOUT,  # add the layout for ALARMPOPUP_WINDOW
-	MARGINS: SZ_MARGINS_ALL,  #
-	MODAL: True,  # comment
-	NO_TITLEBAR: True,  # no titlebar on APPMODE_ALARMPOPUP window
-	TITLE: TITLE_ALARMPOPUP,  #
-}
-
-
 CLOCKS_WINDOW = {  # define the clocks window
 	ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
 	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
@@ -1727,26 +1665,6 @@ class THECLOCK_CLASS():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0914 popupframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * ALARMPOPUP_CLASS
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-class ALARMPOPUP_CLASS():
-	global POPUPFRAME, MAPPDS, PREVIOUS_APPMODE
-
-	def __enter__(self):
-		global POPUPFRAME, MAPPDS, PREVIOUS_APPMODE
-		POPUPFRAME = SG.Window(
-			**ALARMPOPUP_WINDOW,
-		).finalize()
-		POPUPFRAME.Maximize()
-		POPUPFRAME.BringToFront()
-
-	def __exit__(self, *args):
-		global POPUPFRAME, PREVIOUS_APPMODE, MAPPDS
-		POPUPFRAME.close()
-		MAPPDS[APPMODE] = PREVIOUS_APPMODE
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C MAPPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -2393,12 +2311,6 @@ def findNextAlarmEvent():
 # doMidnightWork
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doMidnightWork():
-	"""
-	deal with intervals that have +DAYSECS
-	deal with alarms over midnight
-	general daily handiwork
-	reset everything +1d now that it is today
-	"""
 	global MAPPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
@@ -2407,8 +2319,10 @@ def doMidnightWork():
 		if (event_ is not None):  # and (event_[EVENTMODE] in [EVENTMODE_ALARM]):
 			MAPPDS[EVENT_ENTRIES][index_][TIME_AT_LAST_RUN] = None
 			MAPPDS[EVENT_ENTRIES][index_][DISMISSED] = False
-			if event_[TIME_AT_NEXT] >= CF.DAYSECS:
-				MAPPDS[EVENT_ENTRIES][index_][TIME_AT_NEXT] -= CF.DAYSECS
+			for index1_ in TIMES_LIST:
+				if MAPPDS[EVENT_ENTRIES][index_][index1_] >= CF.DAYSECS:
+					MAPPDS[EVENT_ENTRIES][index_][index1_] -= CF.DAYSECS
+	findNextAlarmEvent()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2490,7 +2404,12 @@ def doIt():
 
 	while True:
 		localTimes()
+
+		if (NOWS == 0):
+			doMidnightWork()
+
 		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
+
 		if NOWS == NOW_NOMS:
 			if (TIMES_NEXT_EVENT == NOWS):
 				MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][TIME_AT_LAST_RUN] = NOWS
@@ -2498,9 +2417,6 @@ def doIt():
 				doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
 			findNextAlarmEvent()
 			updateClocks()
-
-		if (NOWS == 0):
-			doMidnightWork()
 
 		event_, values_ = doReadAMainframe()
 #		print(f"""{CF.getDebugInfo()}

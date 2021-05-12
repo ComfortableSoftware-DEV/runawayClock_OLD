@@ -334,6 +334,9 @@ FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # defin
 FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
 FMAXPSG_SCTN0914_POPUPFRAME_DEF = "FMAXPSG_SCTN0914_POPUPFRAME_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+FMAXPSG_SCTN0915_POPUPDIALOG_DEF = "FMAXPSG_SCTN0915_POPUPDIALOG_DEF"  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
+FMAXPSG_SCTN0915_POPUPDIALOG_STR_ADD = "FMAXPSG_SCTN0915_POPUPDIALOG_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD = "FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
 
 
 FMAXFM_AXLST = [
@@ -454,6 +457,9 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
 	FMAXPSG_SCTN0914_POPUPFRAME_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+	FMAXPSG_SCTN0915_POPUPDIALOG_DEF,  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
+	FMAXPSG_SCTN0915_POPUPDIALOG_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+	FMAXPSG_SCTN0915_POPUPDIALOG_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
 ]
 
 
@@ -534,7 +540,10 @@ FMPSG_SCTN0912_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN0914_POPUPFRAME_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN0914_POPUPFRAME_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
+FMPSG_SCTN0915_POPUPDIALOG_CMNT_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
+FMPSG_SCTN0915_POPUPDIALOG_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
+FMPSG_SCTN0915_POPUPDIALOG_TYPE_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -621,4 +630,7 @@ FMPSG_SCTN0914_POPUPFRAME_DICT = {}  # holds all of the button entries (TUPDICT)
 		FMPSG_SCTN0913_RCMENU_CMNT_DICT, \
 		FMPSG_SCTN0913_RCMENU_DICT, \
 		FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT, \
-		FMPSG_SCTN0914_POPUPFRAME_DICT
+		FMPSG_SCTN0914_POPUPFRAME_DICT, \
+		FMPSG_SCTN0915_POPUPDIALOG_CMNT_DICT, \
+		FMPSG_SCTN0915_POPUPDIALOG_DICT, \
+		FMPSG_SCTN0915_POPUPDIALOG_TYPE_DICT
