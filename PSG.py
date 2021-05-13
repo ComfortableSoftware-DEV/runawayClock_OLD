@@ -51,6 +51,7 @@ COLOR_GRAY6 = "#666666"  # gray 6
 COLOR_GRAY9 = "#999999"  # gray 9
 COLOR_GRAYC = "#CCCCCC"  # gray C
 COLOR_TEXT_HIGH = "#9900FF"  # the highlight color used in blinking bits when they are 'lit'
+COLOR_TEXT_INTERVAL_COUNT_INACTIVE = "#999988"  # the GRAY color used when the next event is not an interval
 COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
 COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
 COLOR_TIME_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
@@ -115,6 +116,7 @@ SZ_CLOSE = 80  # close enough to move from the mouse
 SZ_EDIT_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
 SZ_EDIT_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
 SZ_EDIT_TIME_TOGO = 10  # size of the main togo clock on the clocks only floating widget
+SZ_INTERVAL_COUNT = 10  # size of the main togo clock on the clocks only floating widget
 SZ_MAIN_TIME_CLOCK = 60  # size of the main clock on the clocks only floating widget
 SZ_MAIN_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floating widget
 SZ_MAIN_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
@@ -159,10 +161,12 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+CURRENT_INTERVAL_COUNT = 0  # comment
 EMPTY_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
 EMPTY_XY = (0, 0)  # empty XY dict
 FONTSZ_ALERT_TEXT = (FONT_DEFAULT, SZ_ALERT_TEXT)  # the font for the clocks only clock
 FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
+FONTSZ_CLOCKS_INTERVAL_COUNT = (FONT_DEFAULT, SZ_INTERVAL_COUNT)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
@@ -1417,6 +1421,19 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
+	TEXT: "",  # the text to fill in
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: INTERVAL_COUNT,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (4, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+}
+
+
 CLOCKS_TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCKS_CLOCK_TIME
 	TEXT: "",  # the text to fill in
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
@@ -1565,6 +1582,11 @@ CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the mai
 	[
 		SG.Button(  # add reset button for elapsed time
 			**BTN_XPAND20,  # add the zero button to clocks
+		),
+	],
+	[
+		SG.Text(  # add reset button for elapsed time
+			**CLOCKS_TEXT_INTERVAL_COUNT,  # add the zero button to clocks
 		),
 	],
 ]

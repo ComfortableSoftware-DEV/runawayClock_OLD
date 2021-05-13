@@ -116,6 +116,7 @@ SZ_CLOSE = 80  # close enough to move from the mouse
 SZ_EDIT_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
 SZ_EDIT_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
 SZ_EDIT_TIME_TOGO = 10  # size of the main togo clock on the clocks only floating widget
+SZ_INTERVAL_COUNT = 10  # size of the main togo clock on the clocks only floating widget
 SZ_MAIN_TIME_CLOCK = 60  # size of the main clock on the clocks only floating widget
 SZ_MAIN_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floating widget
 SZ_MAIN_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
@@ -165,6 +166,7 @@ EMPTY_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as d
 EMPTY_XY = (0, 0)  # empty XY dict
 FONTSZ_ALERT_TEXT = (FONT_DEFAULT, SZ_ALERT_TEXT)  # the font for the clocks only clock
 FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
+FONTSZ_CLOCKS_INTERVAL_COUNT = (FONT_DEFAULT, SZ_INTERVAL_COUNT)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
@@ -1423,7 +1425,7 @@ CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
 	TEXT: "",  # the text to fill in
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+	FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	KEY: INTERVAL_COUNT,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
@@ -1580,6 +1582,11 @@ CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the mai
 	[
 		SG.Button(  # add reset button for elapsed time
 			**BTN_XPAND20,  # add the zero button to clocks
+		),
+	],
+	[
+		SG.Text(  # add reset button for elapsed time
+			**CLOCKS_TEXT_INTERVAL_COUNT,  # add the zero button to clocks
 		),
 	],
 ]
