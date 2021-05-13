@@ -2443,7 +2443,13 @@ def doMidnightWork():
 # doAlarmEvent
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doAlarmEvent(eventIndexToDo_):
-	global MAINFRAME, POPUPFRAME, MAPPDS, PREVIOUS_APPMODE, NUMBER_ACTIVE_ALARMS
+	global \
+			ALERTING_LIST, \
+			MAINFRAME, \
+			MAPPDS, \
+			NUMBER_ACTIVE_ALARMS, \
+			POPUPFRAME, \
+			PREVIOUS_APPMODE
 	"""
 	type of event
 	popup appropriate window
@@ -2524,11 +2530,10 @@ def doIt():
 
 		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
 
-		if NOWS == NOW_NOMS:
-			if (TIMES_NEXT_EVENT == NOWS):
-				MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][TIME_AT_LAST_RUN] = NOWS
-				MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][IS_ALERTING_NOW] = True
-				doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
+		if (TIMES_NEXT_EVENT == NOW_NOMS):
+			MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][TIME_AT_LAST_RUN] = NOWS
+			MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][IS_ALERTING_NOW] = True
+			doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
 			findNextAlarmEvent()
 			updateClocks()
 
