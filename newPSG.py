@@ -63,6 +63,7 @@ EVENT_ENTRIES = "EVENT_ENTRIES"  #
 EVENTMODE = "EVENTMODE"  # what mode is this event
 EVENTMODE_ALARM = "EVENTMODE_ALARM"  # 
 EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  # 
+EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
 FIRSTRUN = "FIRSTRUN"  # True if just started, false after init1()
 FONT_DEFAULT = "Source Code Pro"  # set the main font
 INDEX_EAST = 2  # EAST
@@ -161,6 +162,8 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+CURRENT_ALARM_NAME = None  # last returned mouse status to deal with hover events
+CURRENT_ALARM_TYPE = EVENTMODE_NONE  # last returned mouse status to deal with hover events
 CURRENT_INTERVAL_COUNT = 0  # comment
 EMPTY_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
 EMPTY_XY = (0, 0)  # empty XY dict
@@ -180,6 +183,7 @@ NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
 NUMBER_ACTIVE_ALARMS = 0  # number of alarms with not dismissed state
+PREV_ALARM_TYPE = EVENTMODE_NONE  # previous alarm type
 PREVIOUS_APPMODE = APPMODE_NONE  # comment
 SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
@@ -315,7 +319,8 @@ CLOCKS_DICT = {  # holds the values for the clocks frame
 
 
 CLOCKS_TEXT_DICT = {  # holds the values for the text elements
-	NAME_NEXT_EVENT: "",  # holds the values for the clocks frame
+	NAME_NEXT_EVENT: "",  # name of next event
+	INTERVAL_COUNT: 0,  # interval count
 }
 
 
@@ -340,6 +345,10 @@ CLOSE_LIST = [  # list with close statuses
 	MOUSE_STATUS_CLOSE_SE,  # easet close entry
 	MOUSE_STATUS_CLOSE_SW,  # easet close entry
 	MOUSE_STATUS_CLOSE_W,  # easet close entry
+]
+
+
+INTERVALLING_LIST = [  # list that holds all currently alarming events
 ]
 
 
@@ -1422,7 +1431,7 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
-	TEXT: "",  # the text to fill in
+	TEXT: "0000",  # the text to fill in
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
@@ -1730,6 +1739,7 @@ class CLASS_POPUP_INTERVAL(object):
 			*self.POPUP_INTERVAL_LIST,
 			**self.POPUP_INTERVAL_DICT,
 		)
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
