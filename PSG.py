@@ -15,6 +15,7 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALARMPOPUP_PROPER = "ALARMPOPUP_PROPER"  # key for the button return for the popup
 ALARMPOPUP_TEXT_TEXT = "ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
 ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
 ALPHA_LOW = "ALPHA_LOW"  # alphalow key
@@ -70,6 +71,7 @@ INDEX_SOUTH = 3  # SOUTH
 INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
+INTERVAL_COUNT = "INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
 IS_ALERTING_NOW = "IS_ALERTING_NOW"  # is the event currently alerting
 MAINFRAME_LCN = "MAINFRAME_LCN"  # screen position of the mainframe
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
@@ -173,6 +175,7 @@ NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
+NUMBER_ACTIVE_ALARMS = 0  # number of alarms with not dismissed state
 PREVIOUS_APPMODE = APPMODE_NONE  # comment
 SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
@@ -1721,12 +1724,13 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
+			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
-			IS_ALERTING_NOW: False,  # is this event alerting right now
+			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			NAME: "MOVE",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
@@ -1741,11 +1745,13 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 		1: {
+			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "start winding down",  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
+			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			IS_ALERTING_NOW: False,  # is this event dismissed
 			NAME: "wind down",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
@@ -1761,11 +1767,13 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			TIME_LEN_RING: ZERO_CLOCK,  # time of this event
 		},
 		2: {
+			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "next interval",  # alarm text for this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
+			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			IS_ALERTING_NOW: False,  # is this event alerting right now
 			NAME: "test interval",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
@@ -1782,6 +1790,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
+	IS_ALERTING_NOW: False,  # is any event alerting right now
 	MAINFRAME: None,  # current screen position
 	MAINFRAME_LCN: EMPTY_XY,  # current screen position
 	MAINFRAME_SIZE: EMPTY_XY,  # current screen position
@@ -2412,7 +2421,7 @@ def doMidnightWork():
 # doAlarmEvent
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doAlarmEvent(eventIndexToDo_):
-	global MAINFRAME, POPUPFRAME, MAPPDS, PREVIOUS_APPMODE
+	global MAINFRAME, POPUPFRAME, MAPPDS, PREVIOUS_APPMODE, NUMBER_ACTIVE_ALARMS
 	"""
 	type of event
 	popup appropriate window
@@ -2425,11 +2434,15 @@ def doAlarmEvent(eventIndexToDo_):
 	if event_[IS_ALERTING_NOW] is True:
 		return
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][IS_ALERTING_NOW] = True
+	NUMBER_ACTIVE_ALARMS += 1
+	ALERTING_LIST.append(eventIndexToDo_)
 	print(f"""{CF.getDebugInfo()}
 	event_ {event_}""")
 	if event_[EVENTMODE] == EVENTMODE_INTERVAL:
 		updateInterval(eventIndexToDo_)
-	alarmText_ = event_[ALARMPOPUP_TEXT_TEXT]
+	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][INTERVAL_COUNT] += 1
+	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER] = CLASS_POPUP_INTERVAL(event_[NAME], event_[INTERVAL_COUNT], [event_[ALARMPOPUP_TEXT_TEXT]])
+
 
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1

@@ -15,6 +15,7 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALARMPOPUP_PROPER = "ALARMPOPUP_PROPER"  # key for the button return for the popup
 ALARMPOPUP_TEXT_TEXT = "ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
 ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
 ALPHA_LOW = "ALPHA_LOW"  # alphalow key
@@ -50,6 +51,7 @@ COLOR_GRAY6 = "#666666"  # gray 6
 COLOR_GRAY9 = "#999999"  # gray 9
 COLOR_GRAYC = "#CCCCCC"  # gray C
 COLOR_TEXT_HIGH = "#9900FF"  # the highlight color used in blinking bits when they are 'lit'
+COLOR_TEXT_INTERVAL_COUNT_INACTIVE = "#999988"  # the GRAY color used when the next event is not an interval
 COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
 COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
 COLOR_TIME_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
@@ -70,6 +72,7 @@ INDEX_SOUTH = 3  # SOUTH
 INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
+INTERVAL_COUNT = "INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
 IS_ALERTING_NOW = "IS_ALERTING_NOW"  # is the event currently alerting
 MAINFRAME_LCN = "MAINFRAME_LCN"  # screen position of the mainframe
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
@@ -157,6 +160,7 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+CURRENT_INTERVAL_COUNT = 0  # comment
 EMPTY_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
 EMPTY_XY = (0, 0)  # empty XY dict
 FONTSZ_ALERT_TEXT = (FONT_DEFAULT, SZ_ALERT_TEXT)  # the font for the clocks only clock
@@ -173,6 +177,7 @@ NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
+NUMBER_ACTIVE_ALARMS = 0  # number of alarms with not dismissed state
 PREVIOUS_APPMODE = APPMODE_NONE  # comment
 SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
@@ -1414,6 +1419,19 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
+	TEXT: "",  # the text to fill in
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: INTERVAL_COUNT,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (4, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+}
+
+
 CLOCKS_TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCKS_CLOCK_TIME
 	TEXT: "",  # the text to fill in
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
@@ -1721,12 +1739,13 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
+			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
-			IS_ALERTING_NOW: False,  # is this event alerting right now
+			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			NAME: "MOVE",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
@@ -1741,11 +1760,13 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 		1: {
+			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "start winding down",  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
+			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			IS_ALERTING_NOW: False,  # is this event dismissed
 			NAME: "wind down",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
@@ -1761,11 +1782,13 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			TIME_LEN_RING: ZERO_CLOCK,  # time of this event
 		},
 		2: {
+			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "next interval",  # alarm text for this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
+			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			IS_ALERTING_NOW: False,  # is this event alerting right now
 			NAME: "test interval",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
@@ -1782,6 +1805,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
+	IS_ALERTING_NOW: False,  # is any event alerting right now
 	MAINFRAME: None,  # current screen position
 	MAINFRAME_LCN: EMPTY_XY,  # current screen position
 	MAINFRAME_SIZE: EMPTY_XY,  # current screen position
