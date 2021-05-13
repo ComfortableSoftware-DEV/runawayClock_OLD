@@ -1669,52 +1669,43 @@ class THECLOCK_CLASS():
 # * SCTN0914 popupframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0915 popups
+# * SCTN0915 popup dialogs
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-POPUP_INTERVAL = {  # the dialog when an interval goes off
-	TITLE: "",  # title of the alert window
-	AUTO_CLOSE: True,  # interval timers get auto dismiss by default
-	AUTO_CLOSE_DURATION: 5,  # 5 seconds before auto closing an interval alert
-	GRAB_ANYWHERE: True,  # grab anywhere on our popup
-	KEEP_ON_TOP: True,  # keep our popup on top
-	MODAL: True,  # grab anywhere on our popup
-	NON_BLOCKING: True,  # carry on with everything else
-	NO_TITLEBAR: True,  # no title bar on our popup
-}
 
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# SCTN0915 POPUPDIALOG
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * POPUP_INTERVAL PUDLG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
 class CLASS_POPUP_INTERVAL(object):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	def __init__(self, title_, count_, splatArgs_=[]):
 		self.POPUP_INTERVAL_DICT = {
-			title: title_,
-			auto_close: True,
-			auto_close_duration: 5,
-			non_blocking: True,
-			no_titlebar: True,
-			grab_anywhere: True,
-			keep_on_top: True,
-			modal: True,
+			TITLE: "",  # title of the alert window
+			AUTO_CLOSE: True,  # interval timers get auto dismiss by default
+			AUTO_CLOSE_DURATION: 5,  # 5 seconds before auto closing an interval alert
+			FONT: FONTSZ_ALERT_TEXT,  # no title bar on our popup
+			GRAB_ANYWHERE: True,  # grab anywhere on our popup
+			KEEP_ON_TOP: True,  # keep our popup on top
+			MODAL: True,  # grab anywhere on our popup
+			NON_BLOCKING: True,  # carry on with everything else
+			NO_TITLEBAR: True,  # no title bar on our popup
 		}
 
 		self.POPUP_INTERVAL_LIST = [
 			f"""INTERVAL {title_} has expired {count_} times""",
-			f"""click OK to dismiss now or wait {self.POPUP_INTERVAL_DICT[auto_close_duration]}""",
-		]
+			f"""click OK to dismiss, or wait {self.POPUP_INTERVAL_DICT[auto_close_duration]}seconds from alarm""",
+		].append(*splatArgs_)
 
 		return self
 
-
 	def __enter__(self):
-		SG.PopupAutoClose(
+		SG.POPUPTYPE_AUTO_CLOSE(
 			*self.POPUP_INTERVAL_LIST,
 			**self.POPUP_INTERVAL_DICT,
 		)
 
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C MAPPDS
@@ -1730,44 +1721,64 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
-			ALARMPOPUP_TEXT_TEXT: "time to start toward bed",  # alarm text for this event
+			ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
 			IS_ALERTING_NOW: False,  # is this event alerting right now
-			NAME: "wind it up",  # this entry's name
+			NAME: "MOVE",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: "03:30:00",  # time of this event if it an alarm
 			TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			TIME_AT_NEXT: ZERO_CLOCK,  # time next time this alarm goes off
-			TIME_INTERVAL: "00:04:00",  # interval of this event
+			TIME_INTERVAL: "00:30:00",  # interval of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
 			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 		1: {
-			ALARMPOPUP_TEXT_TEXT: "MOVE",  # time of this event
+			ALARMPOPUP_TEXT_TEXT: "start winding down",  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
-			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
+			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
 			IS_ALERTING_NOW: False,  # is this event dismissed
-			NAME: "off you go then",  # this entry's name
+			NAME: "wind down",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: "00:00:00",  # time of this event
+			TIME_ALARM: "03:30:00",  # time of this event
 			TIME_AT_LAST_RUN: 0,  # is this event dismissed
 			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
-			TIME_INTERVAL: "00:02:15",  # time of this event
+			TIME_INTERVAL: "00:00:00",  # time of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL__END: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL_START: ZERO_CLOCK,  # time of this event
 			TIME_LEN_RING: ZERO_CLOCK,  # time of this event
+		},
+		2: {
+			ALARMPOPUP_TEXT_TEXT: "next interval",  # alarm text for this event
+			DISMISSED: False,  # is this event dismissed
+			ENABLED: True,  # is this event enabled
+			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
+			FIRSTRUN: True,  # are we initializing or not
+			IS_ALERTING_NOW: False,  # is this event alerting right now
+			NAME: "test interval",  # this entry's name
+			PREDISMISSABLE: True,  # is this event dismissable in advance
+			SNOOZABLE: False,  # can this event be snoozed
+			SNOOZED: False,  # is this event snoozed
+			TIME_ALARM: "00:00:00",  # time of this event if it an alarm
+			TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
+			TIME_AT_NEXT: ZERO_CLOCK,  # time next time this alarm goes off
+			TIME_INTERVAL: "00:00:30",  # interval of this event
+			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
@@ -2362,19 +2373,34 @@ def findNextAlarmEvent():
 # doMidnightWork
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doMidnightWork():
-	global MAPPDS
+	global \
+			MAPPDS, \
+			TIMEMS_NEXT_MOUSE_CHECK, \
+			TIMEMS_NEXT_MOVED, \
+			TIMEMS_NEXT_UPDATED, \
+			TIMES_NEXT_EVENT, \
+			TIMES_NEXT_PERIODIC_JOB
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	TIMEMS_NEXT_MOUSE_CHECK = TIMEMS_NEXT_MOUSE_CHECK % CF.DAYMS
+	TIMEMS_NEXT_MOVED = TIMEMS_NEXT_MOVED % CF.DAYMS
+	TIMEMS_NEXT_UPDATED = TIMEMS_NEXT_UPDATED % CF.DAYMS
+	TIMES_NEXT_EVENT = TIMES_NEXT_EVENT % CF.DAYMS
+	TIMES_NEXT_PERIODIC_JOB = TIMES_NEXT_PERIODIC_JOB % CF.DAYMS
+
 	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
 #		print(f"""{CF.getDebugInfo()}{CF.NEWLINE} {CF.frameIt("event_", event_)}
 #		{CF.frameIt("MAPPDS[EVENT_ENTRIES]", MAPPDS[EVENT_ENTRIES])}""")
+
 		if (event_ is not None):  # and (event_[EVENTMODE] in [EVENTMODE_ALARM]):
-			MAPPDS[EVENT_ENTRIES][index_][TIME_AT_LAST_RUN] = None
+#			MAPPDS[EVENT_ENTRIES][index_][TIME_AT_LAST_RUN] = None
 			MAPPDS[EVENT_ENTRIES][index_][DISMISSED] = False
+
 			for index1_ in TIMES_LIST:
 				print(f"""{CF.getDebugInfo()}
 				{CF.frameIt("index1_", index1_)}
 				{CF.frameIt("MAPPDS[EVENT_ENTRIES][index_]", MAPPDS[EVENT_ENTRIES][index_])}
 				""")
+
 				if MAPPDS[EVENT_ENTRIES][index_][index1_] >= CF.DAYSECS:
 					MAPPDS[EVENT_ENTRIES][index_][index1_] -= CF.DAYSECS
 	findNextAlarmEvent()
@@ -2395,12 +2421,10 @@ def doAlarmEvent(eventIndexToDo_):
 	reset for next
 	"""
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	print(f"""{CF.getDebugInfo()}APPMODE {MAPPDS[APPMODE]}""")
-
-	if MAPPDS[APPMODE] == APPMODE_ALARMPOPUP:
-		return
-
 	event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
+	if event_[IS_ALERTING_NOW] is True:
+		return
+	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][IS_ALERTING_NOW] = True
 	print(f"""{CF.getDebugInfo()}
 	event_ {event_}""")
 	if event_[EVENTMODE] == EVENTMODE_INTERVAL:
@@ -2436,7 +2460,7 @@ def doInit1():
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		MAPPDS[EVENT_ENTRIES][index_][TIME_AT_LAST_RUN] = None
+#		MAPPDS[EVENT_ENTRIES][index_][TIME_AT_LAST_RUN] = None
 		for timeKey_ in TIMES_LIST:
 			if isinstance(event_[timeKey_], str):
 				MAPPDS[EVENT_ENTRIES][index_][timeKey_] = CF.HMSToNrmlInt(event_[timeKey_])

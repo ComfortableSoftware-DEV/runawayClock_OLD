@@ -63,6 +63,7 @@ class CLASS_POPUP_INTERVAL(object):
 			grab_anywhere: True,
 			keep_on_top: True,
 			modal: True,
+			font: FONTSZ_ALERT_TEXT,
 		}
 
 		self.POPUP_INTERVAL_LIST = [
@@ -80,6 +81,39 @@ class CLASS_POPUP_INTERVAL(object):
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# SCTN0915 POPUPDIALOG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+class CLASS_POPUP_INTERVAL(object):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+
+	def __init__(self, title_, count_, splatArgs_=[]):
+		self.POPUP_INTERVAL_DICT = {
+			title: title_,
+			auto_close: True,
+			auto_close_duration: 5,
+			non_blocking: True,
+			no_titlebar: True,
+			grab_anywhere: True,
+			keep_on_top: True,
+			modal: True,
+		}
+
+		self.POPUP_INTERVAL_LIST = [
+			f"""INTERVAL {title_} has expired {count_} times""",
+			f"""click OK to dismiss now or wait {self.POPUP_INTERVAL_DICT[auto_close_duration]}""",
+		].append(*splatArgs_)
+
+		return self
+
+
+	def __enter__(self):
+		SG.PopupAutoClose(
+			*self.POPUP_INTERVAL_LIST,
+			**self.POPUP_INTERVAL_DICT,
+		)
+
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #

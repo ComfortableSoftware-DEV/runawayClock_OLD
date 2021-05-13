@@ -1669,18 +1669,42 @@ class THECLOCK_CLASS():
 # * SCTN0914 popupframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0915 popups
+# * SCTN0915 popup dialogs
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-POPUP_INTERVAL = {  # the dialog when an interval goes off
-	TITLE: "",  # title of the alert window
-	AUTO_CLOSE: True,  # interval timers get auto dismiss by default
-	AUTO_CLOSE_DURATION: 5,  # 5 seconds before auto closing an interval alert
-	GRAB_ANYWHERE: True,  # grab anywhere on our popup
-	KEEP_ON_TOP: True,  # keep our popup on top
-	MODAL: True,  # grab anywhere on our popup
-	NON_BLOCKING: True,  # carry on with everything else
-	NO_TITLEBAR: True,  # no title bar on our popup
-}
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * POPUP_INTERVAL PUDLG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+class CLASS_POPUP_INTERVAL(object):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+
+	def __init__(self, title_, count_, splatArgs_=[]):
+		self.POPUP_INTERVAL_DICT = {
+			TITLE: "",  # title of the alert window
+			AUTO_CLOSE: True,  # interval timers get auto dismiss by default
+			AUTO_CLOSE_DURATION: 5,  # 5 seconds before auto closing an interval alert
+			FONT: FONTSZ_ALERT_TEXT,  # no title bar on our popup
+			GRAB_ANYWHERE: True,  # grab anywhere on our popup
+			KEEP_ON_TOP: True,  # keep our popup on top
+			MODAL: True,  # grab anywhere on our popup
+			NON_BLOCKING: True,  # carry on with everything else
+			NO_TITLEBAR: True,  # no title bar on our popup
+		}
+
+		self.POPUP_INTERVAL_LIST = [
+			f"""INTERVAL {title_} has expired {count_} times""",
+			f"""click OK to dismiss, or wait {self.POPUP_INTERVAL_DICT[auto_close_duration]}seconds from alarm""",
+		].append(*splatArgs_)
+
+		return self
+
+	def __enter__(self):
+		SG.POPUPTYPE_AUTO_CLOSE(
+			*self.POPUP_INTERVAL_LIST,
+			**self.POPUP_INTERVAL_DICT,
+		)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1697,44 +1721,64 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
-			ALARMPOPUP_TEXT_TEXT: "time to start toward bed",  # alarm text for this event
+			ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
 			IS_ALERTING_NOW: False,  # is this event alerting right now
-			NAME: "wind it up",  # this entry's name
+			NAME: "MOVE",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
 			TIME_ALARM: "03:30:00",  # time of this event if it an alarm
 			TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			TIME_AT_NEXT: ZERO_CLOCK,  # time next time this alarm goes off
-			TIME_INTERVAL: "00:04:00",  # interval of this event
+			TIME_INTERVAL: "00:30:00",  # interval of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
 			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 		1: {
-			ALARMPOPUP_TEXT_TEXT: "MOVE",  # time of this event
+			ALARMPOPUP_TEXT_TEXT: "start winding down",  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
-			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
+			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
 			IS_ALERTING_NOW: False,  # is this event dismissed
-			NAME: "off you go then",  # this entry's name
+			NAME: "wind down",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: "00:00:00",  # time of this event
+			TIME_ALARM: "03:30:00",  # time of this event
 			TIME_AT_LAST_RUN: 0,  # is this event dismissed
 			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
-			TIME_INTERVAL: "00:02:15",  # time of this event
+			TIME_INTERVAL: "00:00:00",  # time of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL__END: ZERO_CLOCK,  # time of this event
 			TIME_INTERVAL_START: ZERO_CLOCK,  # time of this event
 			TIME_LEN_RING: ZERO_CLOCK,  # time of this event
+		},
+		2: {
+			ALARMPOPUP_TEXT_TEXT: "next interval",  # alarm text for this event
+			DISMISSED: False,  # is this event dismissed
+			ENABLED: True,  # is this event enabled
+			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
+			FIRSTRUN: True,  # are we initializing or not
+			IS_ALERTING_NOW: False,  # is this event alerting right now
+			NAME: "test interval",  # this entry's name
+			PREDISMISSABLE: True,  # is this event dismissable in advance
+			SNOOZABLE: False,  # can this event be snoozed
+			SNOOZED: False,  # is this event snoozed
+			TIME_ALARM: "00:00:00",  # time of this event if it an alarm
+			TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
+			TIME_AT_NEXT: ZERO_CLOCK,  # time next time this alarm goes off
+			TIME_INTERVAL: "00:00:30",  # interval of this event
+			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them

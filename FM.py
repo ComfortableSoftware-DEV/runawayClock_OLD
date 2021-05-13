@@ -334,11 +334,11 @@ FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # defin
 FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
 FMAXPSG_SCTN0914_POPUPFRAME_DEF = "FMAXPSG_SCTN0914_POPUPFRAME_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
-FMAXPSG_SCTN0915_POPUPDIALOG_DEF = "FMAXPSG_SCTN0915_POPUPDIALOG_DEF"  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
-FMAXPSG_SCTN0915_POPUPDIALOG_DICT_STR_ADD = "FMAXPSG_SCTN0915_POPUPDIALOG_DICT_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
-FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD = "FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
-FMAXPSG_SCTN0915_POPUPDIALOG_LIST_STR_ADD = "FMAXPSG_SCTN0915_POPUPDIALOG_LIST_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
-FMAXPSG_SCTN0915_POPUPDIALOG_LIST_VAL_ADD = "FMAXPSG_SCTN0915_POPUPDIALOG_LIST_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+FMAXPSG_SCTN0915_PUDLG_DEF = "FMAXPSG_SCTN0915_PUDLG_DEF"  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
+FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD = "FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD = "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD = "FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD = "FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
 
 
 FMAXFM_AXLST = [
@@ -459,11 +459,11 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
 	FMAXPSG_SCTN0914_POPUPFRAME_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
-	FMAXPSG_SCTN0915_POPUPDIALOG_DEF,  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
-	FMAXPSG_SCTN0915_POPUPDIALOG_DICT_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
-	FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
-	FMAXPSG_SCTN0915_POPUPDIALOG_LIST_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
-	FMAXPSG_SCTN0915_POPUPDIALOG_LIST_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+	FMAXPSG_SCTN0915_PUDLG_DEF,  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
+	FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+	FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+	FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+	FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
 ]
 
 
@@ -545,10 +545,10 @@ FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SC
 FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0914_POPUPFRAME_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
-FMPSG_SCTN0915_POPUPDIALOG_CMNT_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
-FMPSG_SCTN0915_POPUPDIALOG_DICT_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
-FMPSG_SCTN0915_POPUPDIALOG_LIST_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
-FMPSG_SCTN0915_POPUPDIALOG_TYPE_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
+FMPSG_SCTN0915_PUDLG_CMNT_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
+FMPSG_SCTN0915_PUDLG_DICT_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
+FMPSG_SCTN0915_PUDLG_LIST_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
+FMPSG_SCTN0915_PUDLG_TYPE_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -711,11 +711,11 @@ TBGLST = [
 	("FMAXPSG_SCTN0913_RCMENU_DEF", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
 	("FMAXPSG_SCTN0913_RCMENU_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
 	("FMAXPSG_SCTN0914_POPUPFRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
-	("FMAXPSG_SCTN0915_POPUPDIALOG_DEF", FMAXFM_SCTN0101_AX_DEF, "define a popup dialog <NAC><POPUPNAME><POPUPTYPE>",),
-	("FMAXPSG_SCTN0915_POPUPDIALOG_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to a text element <NAC><POPUPNAME><KEY><VAL>",),
-	("FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",),
-	("FMAXPSG_SCTN0915_POPUPDIALOG_LIST_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to a text element <NAC><POPUPNAME><KEY><VAL>",),
-	("FMAXPSG_SCTN0915_POPUPDIALOG_LIST_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",),
+	("FMAXPSG_SCTN0915_PUDLG_DEF", FMAXFM_SCTN0101_AX_DEF, "define a popup dialog <NAC><POPUPNAME><POPUPTYPE>",),
+	("FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to a text element <NAC><POPUPNAME><KEY><VAL>",),
+	("FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",),
+	("FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to a text element <NAC><POPUPNAME><KEY><VAL>",),
+	("FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",),
 	("FMAXPSG_____", FMAX_NOP, "FMAXPSG_ENDS",),
 	("FMAX_NOP", FMAXFM_SCTN0101_AX_DEF, "skip this entry",),
 	("FMCF", FMAX_NOP, "FMCF_BEGINS",),
@@ -793,10 +793,10 @@ TBGLST = [
 	("FMPSG_SCTN0913_RCMENU_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0914_POPUPFRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
-	("FMPSG_SCTN0915_POPUPDIALOG_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
-	("FMPSG_SCTN0915_POPUPDIALOG_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
-	("FMPSG_SCTN0915_POPUPDIALOG_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
-	("FMPSG_SCTN0915_POPUPDIALOG_TYPE_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
+	("FMPSG_SCTN0915_PUDLG_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
+	("FMPSG_SCTN0915_PUDLG_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
+	("FMPSG_SCTN0915_PUDLG_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
+	("FMPSG_SCTN0915_PUDLG_TYPE_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
 	("FMPSG_____", FMAX_NOP, "FMPSG_ENDS",),
 	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
 	("PSGVAL_ALERTING_LIST", FMAXPSG_SCTN0903_LIST_DEF, "ALERTING_LIST", "list that holds all currently alarming events",),
@@ -1212,15 +1212,18 @@ TBGLST = [
 	("PSGVAL_NORMAL_WINDOW_TITLEBAR_ICON", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TITLEBAR_ICON", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as the icon (file or base64 bytes)",),
 	("PSGVAL_NORMAL_WINDOW_TITLEBAR_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TITLEBAR_TEXT_COLOR", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as text color",),
 	("PSGVAL_NORMAL_WINDOW_TRANSPARENT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TRANSPARENT_COLOR", "None", "Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.",),
-	("PSGVAL_POPUP_INTERVAL", FMAXPSG_SCTN0915_POPUPDIALOG_DEF, "POPUP_INTERVAL", "POPUPTYPE_AUTO_CLOSE", "the dialog when an interval goes off",),
-	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_DICT_STR_ADD, "POPUP_INTERVAL", "TITLE", "", "title of the alert window",),
-	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD, "POPUP_INTERVAL", "AUTO_CLOSE", "True", "interval timers get auto dismiss by default",),
-	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD, "POPUP_INTERVAL", "AUTO_CLOSE_DURATION", "5", "5 seconds before auto closing an interval alert",),
-	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD, "POPUP_INTERVAL", "GRAB_ANYWHERE", "True", "grab anywhere on our popup",),
-	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD, "POPUP_INTERVAL", "KEEP_ON_TOP", "True", "keep our popup on top",),
-	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD, "POPUP_INTERVAL", "MODAL", "True", "grab anywhere on our popup",),
-	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD, "POPUP_INTERVAL", "NON_BLOCKING", "True", "carry on with everything else",),
-	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD, "POPUP_INTERVAL", "NO_TITLEBAR", "True", "no title bar on our popup",),
+	("PSGVAL_POPUP_INTERVAL", FMAXPSG_SCTN0915_PUDLG_DEF, "POPUP_INTERVAL", "POPUPTYPE_AUTO_CLOSE", "the dialog when an interval goes off",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD, "POPUP_INTERVAL", "TITLE", "", "title of the alert window",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD, "POPUP_INTERVAL", "AUTO_CLOSE", "True", "interval timers get auto dismiss by default",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD, "POPUP_INTERVAL", "AUTO_CLOSE_DURATION", "5", "5 seconds before auto closing an interval alert",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD, "POPUP_INTERVAL", "GRAB_ANYWHERE", "True", "grab anywhere on our popup",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD, "POPUP_INTERVAL", "KEEP_ON_TOP", "True", "keep our popup on top",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD, "POPUP_INTERVAL", "MODAL", "True", "grab anywhere on our popup",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD, "POPUP_INTERVAL", "NON_BLOCKING", "True", "carry on with everything else",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD, "POPUP_INTERVAL", "NO_TITLEBAR", "True", "no title bar on our popup",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD, "POPUP_INTERVAL", "FONT", "FONTSZ_ALERT_TEXT", "no title bar on our popup",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD, "POPUP_INTERVAL", "INTERVAL %title_% has expired %count_% times", "line of text",),
+	("PSGVAL_POPUP_INTERVAL01", FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD, "POPUP_INTERVAL", "click OK to dismiss or wait %self.POPUP_INTERVAL_DICT[auto_close_duration]% seconds or so", "line of text",),
 	("PSGVAL_SZ_ALERT_TEXT", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALERT_TEXT", "20", "high alpha",),
 	("PSGVAL_SZ_ALPHA_HIGH", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_HIGH", "1.0", "high alpha",),
 	("PSGVAL_SZ_ALPHA_LOW", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_LOW", "0.1", "low alpha setting",),
@@ -1573,10 +1576,10 @@ TBGLST = [
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "MOUSE_LCN", "(0, 0)", "track mouse location",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "SCREEN_DIMS", "EMPTY_XY", "current screen position",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_DEF, "MAPPDS", "EVENT_ENTRIES", "0", "holds events",),
-	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "ALARMPOPUP_TEXT_TEXT", "time to start toward bed", "alarm text for this event",),
-	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "NAME", "wind it up", "this entry's name",),
+	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "ALARMPOPUP_TEXT_TEXT", "get up, move around", "alarm text for this event",),
+	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "NAME", "MOVE", "this entry's name",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_ALARM", "03:30:00", "time of this event if it an alarm",),
-	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_INTERVAL", "00:04:00", "interval of this event",),
+	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_INTERVAL", "00:30:00", "interval of this event",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "DISMISSED", "False", "is this event dismissed",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "ENABLED", "True", "is this event enabled",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
@@ -1592,13 +1595,13 @@ TBGLST = [
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_INTERVAL__END", "ZERO_CLOCK", "time of the day this interval is no longer active",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "0", "TIME_LEN_RING", "ZERO_CLOCK", "length of time to alert this event before auto closing it",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_DEF, "MAPPDS", "EVENT_ENTRIES", "1", "holds events",),
-	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "ALARMPOPUP_TEXT_TEXT", "MOVE", "time of this event",),
-	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "NAME", "off you go then", "this entry's name",),
-	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_ALARM", "00:00:00", "time of this event",),
-	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_INTERVAL", "00:02:15", "time of this event",),
+	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "ALARMPOPUP_TEXT_TEXT", "start winding down", "time of this event",),
+	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "NAME", "wind down", "this entry's name",),
+	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_ALARM", "03:30:00", "time of this event",),
+	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_INTERVAL", "00:00:00", "time of this event",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "DISMISSED", "False", "is this event dismissed",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "ENABLED", "True", "is this event enabled",),
-	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
+	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "EVENTMODE", "EVENTMODE_ALARM", "this entry's event_mode",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "FIRSTRUN", "True", "are we initializing or not",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "IS_ALERTING_NOW", "False", "is this event dismissed",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "PREDISMISSABLE", "True", "is this event dismissable in advance",),
@@ -1610,6 +1613,25 @@ TBGLST = [
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_INTERVAL__BEGIN", "ZERO_CLOCK", "time of this event",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_INTERVAL__END", "ZERO_CLOCK", "time of this event",),
 	("PSGVAL__MAPPDS03", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "1", "TIME_LEN_RING", "ZERO_CLOCK", "time of this event",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_DEF, "MAPPDS", "EVENT_ENTRIES", "2", "holds events",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "ALARMPOPUP_TEXT_TEXT", "next interval", "alarm text for this event",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "NAME", "test interval", "this entry's name",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "TIME_ALARM", "00:00:00", "time of this event if it an alarm",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "TIME_INTERVAL", "00:00:30", "interval of this event",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "DISMISSED", "False", "is this event dismissed",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "ENABLED", "True", "is this event enabled",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "FIRSTRUN", "True", "are we initializing or not",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "IS_ALERTING_NOW", "False", "is this event alerting right now",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "PREDISMISSABLE", "True", "is this event dismissable in advance",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "SNOOZABLE", "False", "can this event be snoozed",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "SNOOZED", "False", "is this event snoozed",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "TIME_AT_LAST_RUN", "0", "time this alarm last ran, now if running",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "TIME_AT_NEXT", "ZERO_CLOCK", "time next time this alarm goes off",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "TIME_INTERVAL_START", "ZERO_CLOCK", "time of the day this round of interval started",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "TIME_INTERVAL__BEGIN", "ZERO_CLOCK", "time of the day this interval is made active",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "TIME_INTERVAL__END", "ZERO_CLOCK", "time of the day this interval is no longer active",),
+	("PSGVAL__MAPPDS04", FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD, "MAPPDS", "EVENT_ENTRIES", "2", "TIME_LEN_RING", "ZERO_CLOCK", "length of time to alert this event before auto closing it",),
 	("PSGVAL__THECLOCK_DICT", FMAXPSG_SCTN0902_DICT_DEF, "THECLOCK_DICT", "set up the mainframe update dict for theclock mode",),
 	("PSGVAL__THECLOCK_DICT01", FMAXPSG_SCTN0902_DICT_VV_ADD, "THECLOCK_DICT", "TIME_CLOCK", "ZERO_CLOCK", "comment",),
 	("PSGVAL__THECLOCK_LAYOUT00", FMAXPSG_SCTN090E_LAYOUT_DEF, "THECLOCK_LAYOUT", "layout for APPMODE_THECLOCK",),
@@ -2278,12 +2300,34 @@ def makePSG():
 		strToRtn_ += f"""{NTAB(2)}MAPPDS{OBRKT}APPMODE{CBRKT} = PREVIOUS_APPMODE{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
-	strToRtn_ += f"""{makeAComment("SCTN0915 popups")}"""
-	dictToUse_ = sortADict(FMPSG_SCTN0915_POPUPDIALOG_DICT)
+	strToRtn_ += f"""{makeAComment("SCTN0915 popup dialogs")}"""
+	dictToUse_ = sortADict(FMPSG_SCTN0915_PUDLG_DICT_DICT)
 	for thisName_, value_ in dictToUse_.items():
-		strToRtn_ += f"""{makeADict(thisName_, FMPSG_SCTN0915_POPUPDIALOG_CMNT_DICT[thisName_], value_)}"""
+		strToRtn_ += f"""{NEWLINE}{NEWLINE}{makeAComment(f"{thisName_} PUDLG")}
+class CLASS_{thisName_}{OPAREN}object{CPAREN}:
+{NTAB(1)}{FOLD1STARTHERELN}
+{NTAB(1)}def __init__{OPAREN}self, title_, count_, splatArgs_={OBRKT}{CBRKT}{CPAREN}:
+{NTAB(2)}self.{thisName_}_DICT = {OBRCE}
+{value_}{NTAB(2)}{CBRCE}{NEWLINE}
+{NTAB(2)}self.{thisName_}_LIST = {OBRKT}
+{NTAB(3)}f{TRIQT}INTERVAL {OBRCE}title_{CBRCE} has expired {OBRCE}count_{CBRCE} times{TRIQT},
+{NTAB(3)}f{TRIQT}click OK to dismiss, or wait {OBRCE}self.POPUP_INTERVAL_DICT[auto_close_duration]{CBRCE}seconds from alarm{TRIQT},
+{NTAB(2)}{CBRKT}.append{OPAREN}*splatArgs_{CPAREN}{NEWLINE}
+{NTAB(2)}return self{NEWLINE}
+{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:
+{NTAB(2)}SG.{FMPSG_SCTN0915_PUDLG_TYPE_DICT[thisName_]}{OPAREN}
+{NTAB(3)}*self.{thisName_}_LIST,
+{NTAB(3)}**self.{thisName_}_DICT,
+{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}
+"""
 
-	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+#
+#
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# keep MAPPDS last
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+#	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	# print(f"""SCTN090C FMPSG_SCTN090C_MAPPDS_DICT |{FMPSG_SCTN090C_MAPPDS_DICT}|{NEWLINE}FMPSG_SCTN090C_MAPPDSDICT_DICT|{FMPSG_SCTN090C_MAPPDSDICT_DICT}|""")
 	strToRtn_ += f"""{makeAComment("SCTN090C MAPPDS")}"""
 	dictToUse_ = sortADict(FMPSG_SCTN090C_MAPPDS_DICT)
@@ -2432,10 +2476,10 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0913_RCMENU_DICT, \
 		FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT, \
 		FMPSG_SCTN0914_POPUPFRAME_DICT, \
-		FMPSG_SCTN0915_POPUPDIALOG_CMNT_DICT, \
-		FMPSG_SCTN0915_POPUPDIALOG_DICT_DICT, \
-		FMPSG_SCTN0915_POPUPDIALOG_LIST_DICT, \
-		FMPSG_SCTN0915_POPUPDIALOG_TYPE_DICT
+		FMPSG_SCTN0915_PUDLG_CMNT_DICT, \
+		FMPSG_SCTN0915_PUDLG_DICT_DICT, \
+		FMPSG_SCTN0915_PUDLG_LIST_DICT, \
+		FMPSG_SCTN0915_PUDLG_TYPE_DICT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
@@ -4072,23 +4116,23 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-		elif thisAX_ == FMAXPSG_SCTN0915_POPUPDIALOG_DEF:
+		elif thisAX_ == FMAXPSG_SCTN0915_PUDLG_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if thisItemLen_ != 5:
 				doErrorItem("not 5 items", thisItem_)
 				continue
 			thisPopupName_ = thisItem_[2]
 			thisPopupType_ = thisItem_[3]
-			if thisPopupName_ not in FMPSG_SCTN0915_POPUPDIALOG_DICT:
-				FMPSG_SCTN0915_POPUPDIALOG_DICT[thisPopupName_] = ""
-			FMPSG_SCTN0915_POPUPDIALOG_CMNT_DICT[thisPopupName_] = f"""{thisComment_}"""
-			FMPSG_SCTN0915_POPUPDIALOG_TYPE_DICT[thisPopupName_] = thisPopupType_
+			if thisPopupName_ not in FMPSG_SCTN0915_PUDLG_DICT_DICT:
+				FMPSG_SCTN0915_PUDLG_DICT_DICT[thisPopupName_] = ""
+			FMPSG_SCTN0915_PUDLG_CMNT_DICT[thisPopupName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0915_PUDLG_TYPE_DICT[thisPopupName_] = thisPopupType_
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-		elif thisAX_ == FMAXPSG_SCTN0915_POPUPDIALOG_DICT_STR_ADD:
+		elif thisAX_ == FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
@@ -4096,15 +4140,15 @@ def parseTBGLST(FDTBGLST):
 			thisPopupName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisPopupName_ not in FMPSG_SCTN0915_POPUPDIALOG_DICT:
-				FMPSG_SCTN0915_POPUPDIALOG_DICT[thisPopupName_] = ""
-			FMPSG_SCTN0915_POPUPDIALOG_DICT[thisPopupName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			if thisPopupName_ not in FMPSG_SCTN0915_PUDLG_DICT_DICT:
+				FMPSG_SCTN0915_PUDLG_DICT_DICT[thisPopupName_] = ""
+			FMPSG_SCTN0915_PUDLG_DICT_DICT[thisPopupName_] += f"""{NTAB(3)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-		elif thisAX_ == FMAXPSG_SCTN0915_POPUPDIALOG_DICT_VAL_ADD:
+		elif thisAX_ == FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
@@ -4112,9 +4156,9 @@ def parseTBGLST(FDTBGLST):
 			thisPopupName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisPopupName_ not in FMPSG_SCTN0915_POPUPDIALOG_DICT:
-				FMPSG_SCTN0915_POPUPDIALOG_DICT[thisPopupName_] = ""
-			FMPSG_SCTN0915_POPUPDIALOG_DICT[thisPopupName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			if thisPopupName_ not in FMPSG_SCTN0915_PUDLG_DICT_DICT:
+				FMPSG_SCTN0915_PUDLG_DICT_DICT[thisPopupName_] = ""
+			FMPSG_SCTN0915_PUDLG_DICT_DICT[thisPopupName_] += f"""{NTAB(3)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
