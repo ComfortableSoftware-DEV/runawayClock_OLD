@@ -288,6 +288,7 @@ TARGET = "target"  #
 TEXT = "text"  #
 TEXT_COLOR = "text_color"  #
 TEXT_JUSTIFICATION = "text_justification"  #
+TIMEOUT_KEY = "timeout_key"  #
 TITLE = "title"  #
 TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  #
 TITLEBAR_FONT = "titlebar_font"  #
@@ -320,7 +321,7 @@ CLOCKS_DICT = {  # holds the values for the clocks frame
 
 CLOCKS_TEXT_DICT = {  # holds the values for the text elements
 	NAME_NEXT_EVENT: "",  # name of next event
-	INTERVAL_COUNT: "0000",  # interval count
+	INTERVAL_COUNT: 0,  # interval count
 }
 
 
@@ -1713,6 +1714,9 @@ class THECLOCK_CLASS():
 
 class CLASS_POPUP_INTERVAL(object):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	POPUP_INTERVAL_DICT = None
+	POPUP_INTERVAL_LIST = None
+	POPUP_INTERVAL_OBJ = None
 
 	def __init__(self, title_, count_, splatArgs_=[]):
 		self.POPUP_INTERVAL_DICT = {
@@ -1729,16 +1733,18 @@ class CLASS_POPUP_INTERVAL(object):
 
 		self.POPUP_INTERVAL_LIST = [
 			f"""INTERVAL {title_} has expired {count_} times""",
-			f"""click OK to dismiss, or wait {self.POPUP_INTERVAL_DICT[auto_close_duration]}seconds from alarm""",
-		].append(*splatArgs_)
+			f"""click OK to dismiss, or wait {self.POPUP_INTERVAL_DICT[AUTO_CLOSE_DURATION]}seconds from alarm""",
+		]
 
-		return self
-
-	def __enter__(self):
-		SG.POPUPTYPE_AUTO_CLOSE(
+		self.POPUP_INTERVAL_LIST.append(splatArgs_)
+		self.POPUP_INTERVAL_OBJ = SG.popup_auto_close(
 			*self.POPUP_INTERVAL_LIST,
 			**self.POPUP_INTERVAL_DICT,
 		)
+		print(f"""{CF.NEWLINE}{CF.getDebugInfo()}
+		{CF.IGMPP(self)}""")
+
+
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1758,6 +1764,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		0: {
 			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
+			AUTO_CLOSE_DURATION: 10,  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
@@ -1779,6 +1786,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		1: {
 			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "start winding down",  # time of this event
+			AUTO_CLOSE_DURATION: 10,  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
@@ -1801,6 +1809,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		2: {
 			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "next interval",  # alarm text for this event
+			AUTO_CLOSE_DURATION: 10,  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
@@ -2454,7 +2463,7 @@ def findNextAlarmEvent():
 			elif (TEventMode_ == EVENTMODE_ALARM):
 				event_[TIME_AT_NEXT] = event_[TIME_ALARM]
 
-			if (event_[DISMISSED] is False) and (event_[ENABLED] is True):
+			if (event_[DISMISSED] is False) and (event_[ENABLED] is True) and (event_[TIME_INTERVAL__BEGIN] <= NOWS < fixTimeAtNext(event_[TIME_INTERVAL__END])):
 				nextEventList_.append((fixTimeAtNext(event_[TIME_AT_NEXT]), index_, event_[EVENTMODE], event_[NAME]))
 
 	nextEventList_.sort()
@@ -2462,9 +2471,10 @@ def findNextAlarmEvent():
 	TIMES_NEXT_EVENT = CLOCKS_DICT[TIME_AT_NEXT]
 	NAME_NEXT_EVENT_STR = nextEventList_[0][3]# (time, index, mode, name)
 	CLOCKS_TEXT_DICT[NAME_NEXT_EVENT] = NAME_NEXT_EVENT_STR
-	CURRENT_EVENTMODE = EVENTMODE_INTERVAL
-	if ()
-		CURRENT_INTERVAL_COUNT
+	CURRENT_EVENTMODE = nextEventList_[0][2]# (time, index, mode, name)
+	if (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
+		CURRENT_INTERVAL_COUNT = MAPPDS[EVENT_ENTRIES][nextEventList_[0][1]]
+		updateIntervalCount()
 	updateMainframeFromDict(CLOCKS_TEXT_DICT)
 #	print(f"""{CF.getDebugInfo()}
 #	{CF.frameItHMS("NOWS updated next event", NOWS)}
@@ -2500,12 +2510,13 @@ def doMidnightWork():
 		if (event_ is not None):  # and (event_[EVENTMODE] in [EVENTMODE_ALARM]):
 #			MAPPDS[EVENT_ENTRIES][index_][TIME_AT_LAST_RUN] = None
 			MAPPDS[EVENT_ENTRIES][index_][DISMISSED] = False
+			MAPPDS[EVENT_ENTRIES][index_][IS_ALERTING_NOW] = False
 
 			for index1_ in TIMES_LIST:
-				print(f"""{CF.getDebugInfo()}
-				{CF.frameIt("index1_", index1_)}
-				{CF.frameIt("MAPPDS[EVENT_ENTRIES][index_]", MAPPDS[EVENT_ENTRIES][index_])}
-				""")
+#				print(f"""{CF.getDebugInfo()}
+#				{CF.frameIt("index1_", index1_)}
+#				{CF.frameIt("MAPPDS[EVENT_ENTRIES][index_]", MAPPDS[EVENT_ENTRIES][index_])}
+#				""")
 
 				if MAPPDS[EVENT_ENTRIES][index_][index1_] >= CF.DAYSECS:
 					MAPPDS[EVENT_ENTRIES][index_][index1_] -= CF.DAYSECS
@@ -2535,8 +2546,14 @@ def doAlarmEvent(eventIndexToDo_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
 	if event_[IS_ALERTING_NOW] is True:
+		print(f"""{CF.getDebugInfo}
+		already alerting
+		{CF.frameIt("event_", event_)}
+		""")
 		return
+	print("fresh alert")
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][IS_ALERTING_NOW] = True
+	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_LAST_RUN] = NOW_NOMS
 	NUMBER_ACTIVE_ALARMS += 1
 	ALERTING_LIST.append(eventIndexToDo_)
 	print(f"""{CF.getDebugInfo()}
@@ -2546,7 +2563,10 @@ def doAlarmEvent(eventIndexToDo_):
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][INTERVAL_COUNT] += 1
 	event_[INTERVAL_COUNT] += 1
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER] = CLASS_POPUP_INTERVAL(event_[NAME], event_[INTERVAL_COUNT], [event_[ALARMPOPUP_TEXT_TEXT]])
-
+	print(f"""{CF.getDebugInfo()}
+{CF.frameIt("event_", event_)}
+{CF.IGMPP(MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER])}
+	""")
 
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2590,6 +2610,17 @@ def doInit1():
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# checkAlertPopupStatus
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def checkAlertPopupStatus(eventIndexToDo_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	print(f"""{CF.getDebugInfo()}
+{CF.IGMPP(MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER])}
+""")
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # __main__
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # @profile
@@ -2616,8 +2647,8 @@ def doIt():
 		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
 
 		if (TIMES_NEXT_EVENT == NOW_NOMS):
-			MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][TIME_AT_LAST_RUN] = NOWS
-			MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][IS_ALERTING_NOW] = True
+			# MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][TIME_AT_LAST_RUN] = NOWS
+			# MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][IS_ALERTING_NOW] = True
 			doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
 
 		findNextAlarmEvent()
@@ -2633,10 +2664,11 @@ def doIt():
 			updateInterval()
 
 		event_, values_ = doReadAMainframe()
-#		print(f"""{CF.getDebugInfo()}
-#		{CF.frameIt("event_", event_)}
-#		{CF.frameIt("values_", values_)}
-#		""")
+		print(f"""{CF.getDebugInfo()}
+		{CF.frameIt("event_", event_)}
+		{CF.frameIt("values_", values_)}
+		""")
+
 
 		if (oldValues_ != values_) and (values_ is not None):
 			print(f"""{CF.getDebugInfo()}
@@ -2644,8 +2676,14 @@ def doIt():
 			MAPPDS = CF.mergeDicts(MAPPDS, values_)
 			oldValues_ = values_
 
+		if event_ != "__TIMEOUT__":
+			print(f"""{CF.NEWLINE}{CF.getDebugInfo()}
+			{CF.frameIt("event_", event_)}""")
+
 		if event_ == "__TIMEOUT__":
 			checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
+			for eventIndex_ in INTERVALLING_LIST:
+				checkAlertPopupStatus(eventIndex_)
 			# CF.whirl()
 			# updateClocks()
 			continue

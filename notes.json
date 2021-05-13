@@ -115,6 +115,49 @@ class CLASS_POPUP_INTERVAL(object):
 		)
 
 
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * POPUP_INTERVAL PUDLG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+class CLASS_POPUP_INTERVAL(object):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	POPUP_INTERVAL_DICT = None
+	POPUP_INTERVAL_LIST = None
+	POPUP_INTERVAL_OBJ = None
+
+	def __init__(self, title_, count_, splatArgs_=[]):
+		self.POPUP_INTERVAL_DICT = {
+			TITLE: "",  # title of the alert window
+			AUTO_CLOSE: True,  # interval timers get auto dismiss by default
+			AUTO_CLOSE_DURATION: 5,  # 5 seconds before auto closing an interval alert
+			FONT: FONTSZ_ALERT_TEXT,  # no title bar on our popup
+			GRAB_ANYWHERE: True,  # grab anywhere on our popup
+			KEEP_ON_TOP: True,  # keep our popup on top
+			MODAL: True,  # grab anywhere on our popup
+			NON_BLOCKING: True,  # carry on with everything else
+			NO_TITLEBAR: True,  # no title bar on our popup
+			TIMEOUT_KEY: "__DISMISSED__",
+		}
+
+		self.POPUP_INTERVAL_LIST = [
+			f"""INTERVAL {title_} has expired {count_} times""",
+			f"""click OK to dismiss, or wait {self.POPUP_INTERVAL_DICT[AUTO_CLOSE_DURATION]}seconds from alarm""",
+		]
+
+		self.POPUP_INTERVAL_LIST.append(splatArgs_)
+		self.POPUP_INTERVAL_OBJ = SG.popup_auto_close(
+			*self.POPUP_INTERVAL_LIST,
+			**self.POPUP_INTERVAL_DICT,
+		)
+		print(f"""{CF.NEWLINE}{CF.getDebugInfo()}
+		{CF.IGMPP(self)}""")
+
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #

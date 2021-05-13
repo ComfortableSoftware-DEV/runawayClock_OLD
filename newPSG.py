@@ -163,7 +163,7 @@ COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined color
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 CURRENT_ALARM_NAME = None  # last returned mouse status to deal with hover events
-CURRENT_ALARM_TYPE = EVENTMODE_NONE  # last returned mouse status to deal with hover events
+CURRENT_EVENTMODE = EVENTMODE_NONE  # last returned mouse status to deal with hover events
 CURRENT_INTERVAL_COUNT = 0  # comment
 EMPTY_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
 EMPTY_XY = (0, 0)  # empty XY dict
@@ -288,6 +288,7 @@ TARGET = "target"  #
 TEXT = "text"  # 
 TEXT_COLOR = "text_color"  # 
 TEXT_JUSTIFICATION = "text_justification"  # 
+TIMEOUT_KEY = "timeout_key"  # 
 TITLE = "title"  # 
 TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  # 
 TITLEBAR_FONT = "titlebar_font"  # 
@@ -1758,6 +1759,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		0: {
 			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
+			AUTO_CLOSE_DURATION: 10,  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
@@ -1779,6 +1781,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		1: {
 			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "start winding down",  # time of this event
+			AUTO_CLOSE_DURATION: 10,  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
@@ -1801,6 +1804,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 		2: {
 			ALARMPOPUP_PROPER: None,  # time of this event
 			ALARMPOPUP_TEXT_TEXT: "next interval",  # alarm text for this event
+			AUTO_CLOSE_DURATION: 10,  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
