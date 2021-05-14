@@ -3504,10 +3504,10 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 4:
 				doErrorItem("not 4 items", thisItem_)
 				continue
-			thisBtnElementName_ = thisItem_[2]
-			if thisBtnElementName_ not in FMPSG_SCTN0906_BTNS_DICT:
-				FMPSG_SCTN0906_BTNS_DICT[thisBtnElementName_] = ""
-			FMPSG_SCTN0906_BTNS_CMNT_DICT[thisBtnElementName_] = f"""{thisComment_}"""
+			thisElementName_ = thisItem_[2]
+			if thisElementName_ not in FMPSG_SCTN0906_BTNS_DICT:
+				FMPSG_SCTN0906_BTNS_DICT[thisElementName_] = ""
+			FMPSG_SCTN0906_BTNS_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3518,12 +3518,12 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisBtnElementName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisBtnElementName_ not in FMPSG_SCTN0906_BTNS_DICT:
-				FMPSG_SCTN0906_BTNS_DICT[thisBtnElementName_] = ""
-			FMPSG_SCTN0906_BTNS_DICT[thisBtnElementName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN0906_BTNS_DICT:
+				FMPSG_SCTN0906_BTNS_DICT[thisElementName_] = ""
+			FMPSG_SCTN0906_BTNS_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3534,12 +3534,12 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisBtnElementName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisBtnElementName_ not in FMPSG_SCTN0906_BTNS_DICT:
-				FMPSG_SCTN0906_BTNS_DICT[thisBtnElementName_] = ""
-			FMPSG_SCTN0906_BTNS_DICT[thisBtnElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN0906_BTNS_DICT:
+				FMPSG_SCTN0906_BTNS_DICT[thisElementName_] = ""
+			FMPSG_SCTN0906_BTNS_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3550,12 +3550,12 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 4:
 				doErrorItem("not 4 items", thisItem_)
 				continue
-			thisSpinName_ = thisItem_[2]
-			if thisSpinName_ not in FMPSG_SCTN0907_SPIN_DICT:
-				FMPSG_SCTN0907_SPIN_DICT[thisSpinName_] = ""
-			if thisSpinName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
+			thisElementName_ = thisItem_[2]
+			if thisElementName_ not in FMPSG_SCTN0907_SPIN_DICT:
+				FMPSG_SCTN0907_SPIN_DICT[thisElementName_] = ""
+			if thisElementName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
 				FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = ""
-			FMPSG_SCTN0907_SPIN_CMNT_DICT[thisSpinName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0907_SPIN_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3566,14 +3566,14 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisSpinName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisSpinName_ not in FMPSG_SCTN0907_SPIN_DICT:
-				FMPSG_SCTN0907_SPIN_DICT[thisSpinName_] = ""
-			if thisSpinName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
+			if thisElementName_ not in FMPSG_SCTN0907_SPIN_DICT:
+				FMPSG_SCTN0907_SPIN_DICT[thisElementName_] = ""
+			if thisElementName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
 				FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = ""
-			FMPSG_SCTN0907_SPIN_DICT[thisSpinName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0907_SPIN_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3584,14 +3584,14 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisSpinName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisSpinName_ not in FMPSG_SCTN0907_SPIN_DICT:
-				FMPSG_SCTN0907_SPIN_DICT[thisSpinName_] = ""
-			if thisSpinName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
+			if thisElementName_ not in FMPSG_SCTN0907_SPIN_DICT:
+				FMPSG_SCTN0907_SPIN_DICT[thisElementName_] = ""
+			if thisElementName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
 				FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = ""
-			FMPSG_SCTN0907_SPIN_DICT[thisSpinName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0907_SPIN_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3602,13 +3602,13 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 5:
 				doErrorItem("not 5 items", thisItem_)
 				continue
-			thisSpinName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisVal_ = thisItem_[3]
-			if thisSpinName_ not in FMPSG_SCTN0907_SPIN_DICT:
-				FMPSG_SCTN0907_SPIN_DICT[thisSpinName_] = ""
-			if thisSpinName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
+			if thisElementName_ not in FMPSG_SCTN0907_SPIN_DICT:
+				FMPSG_SCTN0907_SPIN_DICT[thisElementName_] = ""
+			if thisElementName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
 				FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = ""
-			FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT[thisSpinName_] += f"""{NTAB(1)}{DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT[thisElementName_] += f"""{NTAB(1)}{DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3619,13 +3619,13 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 5:
 				doErrorItem("not 5 items", thisItem_)
 				continue
-			thisSpinName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisVal_ = thisItem_[3]
-			if thisSpinName_ not in FMPSG_SCTN0907_SPIN_DICT:
-				FMPSG_SCTN0907_SPIN_DICT[thisSpinName_] = ""
-			if thisSpinName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
+			if thisElementName_ not in FMPSG_SCTN0907_SPIN_DICT:
+				FMPSG_SCTN0907_SPIN_DICT[thisElementName_] = ""
+			if thisElementName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
 				FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = ""
-			FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT[thisSpinName_] += f"""{NTAB(1)}{thisVal_},  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT[thisElementName_] += f"""{NTAB(1)}{thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3682,10 +3682,10 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 4:
 				doErrorItem("not 4 items", thisItem_)
 				continue
-			thisBtnElementName_ = thisItem_[2]
-			if thisBtnElementName_ not in FMPSG_SCTN0909_TEXT_DICT:
-				FMPSG_SCTN0909_TEXT_DICT[thisBtnElementName_] = ""
-			FMPSG_SCTN0909_TEXT_CMNT_DICT[thisBtnElementName_] = f"""{thisComment_}"""
+			thisElementName_ = thisItem_[2]
+			if thisElementName_ not in FMPSG_SCTN0909_TEXT_DICT:
+				FMPSG_SCTN0909_TEXT_DICT[thisElementName_] = ""
+			FMPSG_SCTN0909_TEXT_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3696,12 +3696,12 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisBtnElementName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisBtnElementName_ not in FMPSG_SCTN0909_TEXT_DICT:
-				FMPSG_SCTN0909_TEXT_DICT[thisBtnElementName_] = ""
-			FMPSG_SCTN0909_TEXT_DICT[thisBtnElementName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN0909_TEXT_DICT:
+				FMPSG_SCTN0909_TEXT_DICT[thisElementName_] = ""
+			FMPSG_SCTN0909_TEXT_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3712,12 +3712,12 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisBtnElementName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisBtnElementName_ not in FMPSG_SCTN0909_TEXT_DICT:
-				FMPSG_SCTN0909_TEXT_DICT[thisBtnElementName_] = ""
-			FMPSG_SCTN0909_TEXT_DICT[thisBtnElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN0909_TEXT_DICT:
+				FMPSG_SCTN0909_TEXT_DICT[thisElementName_] = ""
+			FMPSG_SCTN0909_TEXT_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4555,20 +4555,20 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-		elif thisAX_ == FMAXPSG_SCTN0906_CLASS_BTN_DEF:
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_BTN_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if thisItemLen_ != 5:
 				doErrorItem("not 5 items", thisItem_)
 				continue
 			thisClassName_ = thisItem_[2]
-			thisBtnElementName_ = thisItem_[3]
+			thisElementName_ = thisItem_[3]
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT:
 				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_] = {}
-			if thisBtnElementName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisBtnElementName_] = ""
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisElementName_] = ""
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT[thisClassName_] = {}
-			FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT[thisClassName_][thisBtnElementName_] = f"""{thisComment_}"""
+			FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT[thisClassName_][thisElementName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4580,14 +4580,14 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 7 items", thisItem_)
 				continue
 			thisClassName_ = thisItem_[2]
-			thisBtnElementName_ = thisItem_[3]
+			thisElementName_ = thisItem_[3]
 			thisKey_ = thisItem_[4]
 			thisVal_ = thisItem_[5]
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT:
 				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_] = {}
-			if thisBtnElementName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisBtnElementName_] = ""
-			FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisBtnElementName_] += f"""{NTAB(3)}{thisKey_}: {DBLQT}thisVal_{DBLQT},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisElementName_] = ""
+			FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {DBLQT}thisVal_{DBLQT},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4599,17 +4599,119 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 7 items", thisItem_)
 				continue
 			thisClassName_ = thisItem_[2]
-			thisBtnElementName_ = thisItem_[3]
+			thisElementName_ = thisItem_[3]
 			thisKey_ = thisItem_[4]
 			thisVal_ = thisItem_[5]
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT:
 				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_] = {}
-			if thisBtnElementName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisBtnElementName_] = ""
-			FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisBtnElementName_] += f"""{NTAB(3)}{thisKey_}: thisVal_,  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisElementName_] = ""
+			FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: thisVal_,  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_SPIN_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 5:
+				doErrorItem("not 5 items", thisItem_)
+				continue
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
+				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT:
+				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName][thisElementName_] = ""
+
+			FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_SPIN_DICT_STR_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 7:
+				doErrorItem("not 7 items", thisItem_)
+				continue
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+			thisKey_ = thisItem_[4]
+			thisVal_ = thisItem_[5]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
+				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT:
+				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName][thisElementName_] = ""
+
+			FMPSG_SCTB0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VAL_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 6:
+				doErrorItem("not 6 items", thisItem_)
+				continue
+			thisElementName_ = thisItem_[2]
+			thisKey_ = thisItem_[3]
+			thisVal_ = thisItem_[4]
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
+				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisElementName_] = ""
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT:
+				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT = ""
+			FMPSG_SCTN0916_CLASS_SPIN_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_SPIN_VALUES_STR_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 5:
+				doErrorItem("not 5 items", thisItem_)
+				continue
+			thisElementName_ = thisItem_[2]
+			thisVal_ = thisItem_[3]
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
+				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisElementName_] = ""
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT:
+				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT = ""
+			FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisElementName_] += f"""{NTAB(1)}{DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_SPIN_VALUES_VAL_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 5:
+				doErrorItem("not 5 items", thisItem_)
+				continue
+			thisElementName_ = thisItem_[2]
+			thisVal_ = thisItem_[3]
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
+				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisElementName_] = ""
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT:
+				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT = ""
+			FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisElementName_] += f"""{NTAB(1)}{thisVal_},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 
 #
