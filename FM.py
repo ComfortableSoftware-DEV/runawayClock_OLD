@@ -378,8 +378,8 @@ FMAXPSG_SCTN0916_CLASS_RADIO_DEF = "FMAXPSG_SCTN0916_CLASS_RADIO_DEF"  # define 
 FMAXPSG_SCTN0916_CLASS_RCMENU_DEF = "FMAXPSG_SCTN0916_CLASS_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD"  # define a right click menu
 FMAXPSG_SCTN0916_CLASS_SPIN_DEF = "FMAXPSG_SCTN0916_CLASS_SPIN_DEF"  # define a spin box entry <NAC><CLASSNAME><SPINNAME>
-FMAXPSG_SCTN0916_CLASS_SPIN_DICT_STR_ADD = "FMAXPSG_SCTN0916_CLASS_SPIN_DICT_STR_ADD"  # add a STR to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><STR>
-FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VAL_ADD"  # add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>
+FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VS_ADD = "FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VS_ADD"  # add a STR to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><STR>
+FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD = "FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD"  # add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>
 FMAXPSG_SCTN0916_CLASS_SPIN_LIST_STR_ADD = "FMAXPSG_SCTN0916_CLASS_SPIN_LIST_STR_ADD"  # add a STR to the values list <NAC><CLASSNAME><SPINNAME><STR>
 FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD"  # add a VAL to the values list <NAC><CLASSNAME><SPINNAME><VAL>
 FMAXPSG_SCTN0916_CLASS_TEXT_DEF = "FMAXPSG_SCTN0916_CLASS_TEXT_DEF"  # define a text <NAC><TEXTNAME>
@@ -561,8 +561,8 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0916_CLASS_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD,  # define a right click menu
 	FMAXPSG_SCTN0916_CLASS_SPIN_DEF,  # define a spin box entry <NAC><CLASSNAME><SPINNAME>
-	FMAXPSG_SCTN0916_CLASS_SPIN_DICT_STR_ADD,  # add a STR to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><STR>
-	FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VAL_ADD,  # add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>
+	FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VS_ADD,  # add a STR to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><STR>
+	FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD,  # add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>
 	FMAXPSG_SCTN0916_CLASS_SPIN_LIST_STR_ADD,  # add a STR to the values list <NAC><CLASSNAME><SPINNAME><STR>
 	FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD,  # add a VAL to the values list <NAC><CLASSNAME><SPINNAME><VAL>
 	FMAXPSG_SCTN0916_CLASS_TEXT_DEF,  # define a text <NAC><TEXTNAME>
@@ -687,7 +687,7 @@ FMPSG_SCTN0916_CLASS_RCMENU_CMNT_DICT = {}  # define the dict to hold everything
 FMPSG_SCTN0916_CLASS_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT = {}  # holds the spin element stuffs (TUPDICT)f
 FMPSG_SCTN0916_CLASS_SPIN_DICT = {}  # holds the spin element stuffs (TUPDICT)
-FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
+FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
 FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_TEXT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
@@ -909,8 +909,8 @@ TBGLST = [
 	("FMAXPSG_SCTN0916_CLASS_RCMENU_DEF", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
 	("FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
 	("FMAXPSG_SCTN0916_CLASS_SPIN_DEF", FMAXFM_SCTN0101_AX_DEF, "define a spin box entry <NAC><CLASSNAME><SPINNAME>",),
-	("FMAXPSG_SCTN0916_CLASS_SPIN_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a STR to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><STR>",),
-	("FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>",),
+	("FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VS_ADD", FMAXFM_SCTN0101_AX_DEF, "add a STR to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><STR>",),
+	("FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD", FMAXFM_SCTN0101_AX_DEF, "add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_SPIN_LIST_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a STR to the values list <NAC><CLASSNAME><SPINNAME><STR>",),
 	("FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a VAL to the values list <NAC><CLASSNAME><SPINNAME><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_TEXT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a text <NAC><TEXTNAME>",),
@@ -1021,7 +1021,7 @@ TBGLST = [
 	("FMPSG_SCTN0916_CLASS_RCMENU_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)f",),
 	("FMPSG_SCTN0916_CLASS_SPIN_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
-	("FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
+	("FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_TEXT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
@@ -1863,6 +1863,14 @@ TBGLST = [
 	("PSGVAL__C_CLOCKS_LAYOUT07", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "C_CLOCKS", "C_CLOCKS_LAYOUT", "C_CLOCKS_LAYOUT_ROW_00", "L03", "CLOCKS_LAYOUT_E02", "pad", "SZ_PAD_ALL", "comment",),
 	("PSGVAL__C_CLOCKS_MAINFRAME", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__C_CLOCKS_MAINFRAME00", FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF, "C_CLOCKS", "C_CLOCKS_WINDOW", "True", "the clocks frame defined and done",),
+	("PSGVAL__C_CLOCKS_SPIN01_00", FMAXPSG_SCTN0916_CLASS_SPIN_DEF, "C_CLOCKS", "C_CLOCKS_SPIN01", "define the alarm en/dis/able spinbox",),
+	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "VALUES", "%LIST%", "comment",),
+	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "BACKGROUND_COLOR", "COLOR_ALERT_BACKGROUND", "comment",),
+	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "FONT", "FONTSZ_ALERT_TEXT", "comment",),
+	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "SIZE", "(16, 1)", "comment",),
+	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "TEXT", "SPIN_TEXT", "comment",),
+	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "TEXT_COLOR", "COLOR_ALERT_TEXT", "comment",),
+
 	("PSGVAL__C_CLOCKS_TEXT_DICT", FMAX_NOP, "dict with the root source for clocks values, updated both directions as appropriate",),
 	("PSGVAL__C_CLOCKS_TEXT_DICT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "C_CLOCKS", "C_CLOCKS_TEXT_DICT", "C_holds the values for the text elements",),
 	("PSGVAL__C_CLOCKS_TEXT_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "C_CLOCKS", "C_CLOCKS_TEXT_DICT", "C_NAME_NEXT_EVENT", "", "name of next event",),
@@ -2604,7 +2612,9 @@ def makePSGClasses():
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		if thisClass_ in FMPSG_SCTN0916_CLASS_SPIN_DICT:
 			for thisElementName_, thisElementVals_ in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClass_].items():
-				strToRtn_ += f"""{NTAB(2)}self.{thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[thisClass_][thisElementName_]}
+				strToRtn_ += f"""{NTAB(2)}self.{thisElementName_}_SPIN_LIST = {OBRKT}
+{FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClass_][thisElementName_]}{NTAB(2)}{CBRKT}{NEWLINE}
+{NTAB(2)}self.{thisElementName_}_SPIN_DICT = {OBRCE}  # {FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[thisClass_][thisElementName_]}
 {thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
 """
 
@@ -3026,7 +3036,7 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0916_CLASS_RCMENU_DICT, \
 		FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_SPIN_DICT, \
-		FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT, \
+		FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT, \
 		FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_TEXT_DICT, \
 		FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT, \
@@ -4878,10 +4888,10 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
 
-			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT:
-				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_] = {}
-			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName][thisElementName_] = ""
+			if thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
+				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
+				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] = ""
 
 			FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
 			continue
@@ -4889,7 +4899,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_SPIN_DICT_STR_ADD:
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VS_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
@@ -4904,19 +4914,19 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
 
-			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT:
-				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_] = {}
-			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName][thisElementName_] = ""
+			if thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
+				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
+				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName][thisElementName_] = ""
 
-			FMPSG_SCTB0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}"""
+			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VAL_ADD:
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
@@ -4931,12 +4941,12 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
 
-			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT:
-				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_] = {}
-			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName][thisElementName_] = ""
+			if thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
+				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
+				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName][thisElementName_] = ""
 
-			FMPSG_SCTB0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisVal_},  # {thisComment_}"""
+			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisVal_},  # {thisComment_}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4957,12 +4967,12 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
 
-			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT:
-				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_] = {}
-			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName][thisElementName_] = ""
+			if thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
+				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
+				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName][thisElementName_] = ""
 
-			FMPSG_SCTB0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{DBLQT}{thisVal_}{DBLQT},  # {thisComment_}"""
+			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{DBLQT}{thisVal_}{DBLQT},  # {thisComment_}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4983,12 +4993,12 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
 
-			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT:
-				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_] = {}
-			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName][thisElementName_] = ""
+			if thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
+				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
+				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName][thisElementName_] = ""
 
-			FMPSG_SCTB0916_CLASS_SPIN_VALUES_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisVal_},  # {thisComment_}"""
+			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisVal_},  # {thisComment_}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
