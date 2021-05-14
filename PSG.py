@@ -1706,46 +1706,141 @@ class THECLOCK_CLASS():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0915 popup dialogs
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * POPUP_INTERVAL PUDLG
+# * SCTN0916 classes
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-class CLASS_POPUP_INTERVAL(object):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	POPUP_INTERVAL_DICT = None
-	POPUP_INTERVAL_LIST = None
-	POPUP_INTERVAL_OBJ = None
 
-	def __init__(self, title_, count_, splatArgs_=[]):
-		self.POPUP_INTERVAL_DICT = {
-			TITLE: "",  # title of the alert window
-			AUTO_CLOSE: True,  # interval timers get auto dismiss by default
-			AUTO_CLOSE_DURATION: 5,  # 5 seconds before auto closing an interval alert
-			FONT: FONTSZ_ALERT_TEXT,  # no title bar on our popup
-			GRAB_ANYWHERE: True,  # grab anywhere on our popup
-			KEEP_ON_TOP: True,  # keep our popup on top
-			MODAL: True,  # grab anywhere on our popup
-			NON_BLOCKING: True,  # carry on with everything else
-			NO_TITLEBAR: True,  # no title bar on our popup
+class CLASS_C_CLOCKS(object):
+	global \
+			MAINFRAME, \
+			MAPPDS, \
+			POPUPFRAME
+
+	def __init__(self, {}, thisWindow_=None):
+		THIS_WINDOW = thisWindow_
+		self.C_BTN_DISMISS20 = {  #
+			BUTTON_TEXT: "",  # button_text empty for the DOWN button
+			IMAGE_FILENAME: "res/dismiss20.png",  # filename for the button icon
+			BORDER_WIDTH: 0,  # button xpand key
+			BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+			FOCUS: True,  # focus on click
+			FONT: FONTSZ_BTNS,  # button xpand font
+			KEY: BTN_DISMISS%KEY%,  # button xpand key
+			PAD: SZ_PAD_ALL,  # button xpand key
 		}
 
-		self.POPUP_INTERVAL_LIST = [
-			f"""INTERVAL {title_} has expired {count_} times""",
-			f"""click OK to dismiss, or wait {self.POPUP_INTERVAL_DICT[AUTO_CLOSE_DURATION]}seconds from alarm""",
-		]
+		self.C_CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
+			TEXT: "0000",  # the text to fill in
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: False,  # this is clickable
+			FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: INTERVAL_COUNT%KEY%,  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (4, 1),  # characters, lines size line
+			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+		}
 
-		self.POPUP_INTERVAL_LIST.append(splatArgs_)
-		self.POPUP_INTERVAL_OBJ = SG.popup_auto_close(
-			*self.POPUP_INTERVAL_LIST,
-			**self.POPUP_INTERVAL_DICT,
-		)
-		print(f"""{CF.NEWLINE}{CF.getDebugInfo()}
-		{CF.IGMPP(self)}""")
+		self.C_CLOCKS_TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCKS_CLOCK_TIME
+			TEXT: "",  # the text to fill in
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: False,  # this is clickable
+			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: NAME_NEXT_EVENT%KEY%,  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (16, 1),  # characters, lines size line
+			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+		}
 
+		self.C_CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: False,  # this is clickable
+			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: TIME_AT_NEXT%KEY%,  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+		}
 
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+		self.C_CLOCKS_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: False,  # this is clickable
+			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: TIME_AT_ZEROELAPSE%KEY%,  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
+		}
+
+		self.C_CLOCKS_TEXT_TIME_CLOCK = {  # C_define the text element for CLOCKS_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: True,  # this is clickable
+			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: TIME_CLOCK%KEY%,  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+		}
+
+		self.C_CLOCKS_TEXT_TIME_ELAPSED = {  # C_define the text element for CLOCKS_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: TIME_ELAPSED%KEY%,  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
+		}
+
+		self.C_CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: TIME_TOGO%KEY%,  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+		}
+
+	def __enter__(self):
+		global \
+				MAINFRAME, \
+				MAPPDS, \
+				POPUPFRAME
+
+		if (MAINFRAME is None):
+			MAINFRAME = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
+			self.THIS_WINDOW = MAINFRAME
+		elif (POPUPFRAME is None):
+			POPUPFRAME = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
+
+			self.THIS_WINDOW = POPUPFRAME
+		elif (self.THIS_WINDOW is not None):
+			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
+
+		def __exit__(self, *args_):
+		global \
+				MAINFRAME, \
+				MAPPDS, \
+				POPUPFRAME
+
+		self.THIS_WINDOW.close()
+		if (self.THIS_WINDOW == MAINFRAME):
+			MAINFRAME = None
+		elif (self.THIS_WINDOW == POPUPFRAME):
+			POPUPFRAME = None
+
+		self.THIS_WINDOW = None
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

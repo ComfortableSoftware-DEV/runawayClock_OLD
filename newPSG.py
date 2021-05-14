@@ -1719,7 +1719,7 @@ class CLASS_C_CLOCKS(object):
 
 	def __init__(self, {}, thisWindow_=None):
 		THIS_WINDOW = thisWindow_
-		self.BTN_DISMISS20 = {  # 
+		self.C_BTN_DISMISS20 = {  # 
 			BUTTON_TEXT: "",  # button_text empty for the DOWN button
 			IMAGE_FILENAME: "res/dismiss20.png",  # filename for the button icon
 			BORDER_WIDTH: 0,  # button xpand key
