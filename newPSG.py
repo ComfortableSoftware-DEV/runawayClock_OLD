@@ -1730,6 +1730,21 @@ class CLASS_C_CLOCKS(object):
 			PAD: SZ_PAD_ALL,  # button xpand key
 		}
 
+		self.C_CLOCKS_SPIN01_SPIN_LIST = [
+			0,  # index 0
+			1,  # index 1
+			2,  # index 2
+		]
+
+		self.C_CLOCKS_SPIN01_SPIN_DICT = {  # define the alarm en/dis/able spinbox
+			BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # comment
+			FONT: FONTSZ_ALERT_TEXT,  # comment
+			SIZE: (16, 1),  # comment
+			TEXT: SPIN_TEXT,  # comment
+			TEXT_COLOR: COLOR_ALERT_TEXT,  # comment
+			VALUES: %LIST%,  # comment
+		}
+
 		self.C_CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
 			TEXT: "0000",  # the text to fill in
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements

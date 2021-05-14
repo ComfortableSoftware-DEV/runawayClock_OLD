@@ -1870,7 +1870,9 @@ TBGLST = [
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "SIZE", "(16, 1)", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "TEXT", "SPIN_TEXT", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "TEXT_COLOR", "COLOR_ALERT_TEXT", "comment",),
-
+	("PSGVAL__C_CLOCKS_SPIN01_02", FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "0", "index 0",),
+	("PSGVAL__C_CLOCKS_SPIN01_02", FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "1", "index 1",),
+	("PSGVAL__C_CLOCKS_SPIN01_02", FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "2", "index 2",),
 	("PSGVAL__C_CLOCKS_TEXT_DICT", FMAX_NOP, "dict with the root source for clocks values, updated both directions as appropriate",),
 	("PSGVAL__C_CLOCKS_TEXT_DICT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "C_CLOCKS", "C_CLOCKS_TEXT_DICT", "C_holds the values for the text elements",),
 	("PSGVAL__C_CLOCKS_TEXT_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "C_CLOCKS", "C_CLOCKS_TEXT_DICT", "C_NAME_NEXT_EVENT", "", "name of next event",),
@@ -2610,6 +2612,9 @@ def makePSGClasses():
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		print(f"""thisClass_ {thisClass_}
+FMPSG_SCTN0916_CLASS_SPIN_DICT {FMPSG_SCTN0916_CLASS_SPIN_DICT}
+""")
 		if thisClass_ in FMPSG_SCTN0916_CLASS_SPIN_DICT:
 			for thisElementName_, thisElementVals_ in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClass_].items():
 				strToRtn_ += f"""{NTAB(2)}self.{thisElementName_}_SPIN_LIST = {OBRKT}
@@ -3070,6 +3075,7 @@ def parseTBGLST(FDTBGLST):
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	# FMCF_PARSE_BEGINS
+	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
 		elif thisAX_ == FMAXCF_SCTN0003_LAMBDA_DEF:
@@ -3255,9 +3261,11 @@ def parseTBGLST(FDTBGLST):
 			FMCF_SCTN0204_LIST_DICT[thisListName_] += f"{NTAB(1)}{thisVal_},  # {thisComment_}{NEWLINE}"
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 	# FMCF_PARSE_ENDS
 
 	# FMFM_PARSE_BEGINS
+	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
 		elif thisAX_ == FMAXFM_SCTN0101_AX_DEF:
@@ -3321,6 +3329,7 @@ def parseTBGLST(FDTBGLST):
 			FMFM_SCTN0104_LIST_CMNT_DICT[thisName_] = f"{thisComment_}"
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 	# FMFM_PARSE_ENDS
 
 	# FMAXPSG_PARSE_BEGINS
@@ -4893,7 +4902,9 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] = ""
 
-			FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT:
+				FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[thisClassName_] = {}
+			FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[thisClassName_][thisElementName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4919,7 +4930,10 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName][thisElementName_] = ""
 
-			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}"""
+			FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			print(f"""thisAX_ {thisAX_}
+FMPSG_SCTN0916_CLASS_SPIN_DICT {FMPSG_SCTN0916_CLASS_SPIN_DICT}
+""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4939,14 +4953,17 @@ def parseTBGLST(FDTBGLST):
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
 				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
+				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_][thisElementName_] = ""
 
 			if thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_] = {}
 			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName][thisElementName_] = ""
 
-			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisVal_},  # {thisComment_}"""
+			FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			print(f"""thisAX_ {thisAX_}
+FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT {FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT}
+""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4972,7 +4989,10 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName][thisElementName_] = ""
 
-			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{DBLQT}{thisVal_}{DBLQT},  # {thisComment_}"""
+			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			print(f"""thisAX_ {thisAX_}
+FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT {FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT}
+""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4998,7 +5018,7 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName][thisElementName_] = ""
 
-			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisVal_},  # {thisComment_}"""
+			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisVal_},  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
