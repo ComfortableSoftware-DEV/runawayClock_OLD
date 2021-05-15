@@ -957,6 +957,7 @@ TBGLST = [
 	("FMFM_SCTN0104_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN201 device defines",),
 	("FMFM_____", FMAX_NOP, "FMFM_ENDS",),
 	("FMPSG", FMAX_NOP, "FMPSG_BEGINS",),
+	("FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
 	("FMPSG_SCTN0900_DEF1_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0900_DEF1_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0901_DEF2_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0901",),
@@ -1020,21 +1021,20 @@ TBGLST = [
 	("FMPSG_SCTN0916_CLASS_COMBO_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_COMBO_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
-	("FMPSG_SCTN0916_CLASS_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
-	("FMPSG_SCTN0916_CLASS_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
-	("FMPSG_SCTN0916_CLASS_LIST_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_FRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_LAYOUT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN0916_CLASS_LIST_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_RADIO_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_RADIO_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_RCMENU_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_RCMENU_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)f",),
 	("FMPSG_SCTN0916_CLASS_SPIN_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
-	("FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_TEXT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
@@ -1500,18 +1500,30 @@ TBGLST = [
 	("PSGVAL_TIMEH_ADJUST_HRS", FMAXPSG_SCTN0900_VAL_DEF, "TIMEH_ADJUST_HRS", "0", "comment",),
 	("PSGVAL_TIMEM_ADJUST_MINS", FMAXPSG_SCTN0900_VAL_DEF, "TIMEM_ADJUST_MINS", "0", "comment",),
 	("PSGVAL_TIMES_LIST", FMAXPSG_SCTN0903_LIST_DEF, "TIMES_LIST", "list of all keys to times for midnight etc. processing",),
+	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_ALARM", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_AT_LAST_RUN", "time at last run entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_AT_NEXT", "time at next event entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_AT_ZEROELAPSE", "time the elapsed timer was reset in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_ALARM", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_CLOCK", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_ELAPSED", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_TOGO", "alarm time entry in TIMES_LIST",),
+	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL", "alarm time entry in TIMES_LIST",),
+	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL_START", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL__BEGIN", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL__END", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL_START", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_LEN_RING", "alarm time entry in TIMES_LIST",),
+	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_TOGO", "alarm time entry in TIMES_LIST",),
+
+	("PSGVAL_MAPPDS_TIMES_LIST", FMAXPSG_SCTN0903_LIST_DEF, "MAPPDS_TIMES_LIST", "list of all keys to times for midnight etc. processing",),
+	("PSGVAL_MAPPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "MAPPDS_TIMES_LIST", "TIME_ALARM", "",),
+	("PSGVAL_MAPPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "MAPPDS_TIMES_LIST", "TIME_AT_LAST_RUN", "",),
+	("PSGVAL_MAPPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "MAPPDS_TIMES_LIST", "TIME_AT_NEXT", "",),
+	("PSGVAL_MAPPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "MAPPDS_TIMES_LIST", "TIME_INTERVAL", "",),
+	("PSGVAL_MAPPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "MAPPDS_TIMES_LIST", "TIME_INTERVAL__BEGIN", "",),
+	("PSGVAL_MAPPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "MAPPDS_TIMES_LIST", "TIME_INTERVAL__END", "",),
+	("PSGVAL_MAPPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "MAPPDS_TIMES_LIST", "TIME_INTERVAL_START", "",),
+	("PSGVAL_MAPPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "MAPPDS_TIMES_LIST", "TIME_LEN_RING", "",),
+
+
 	("PSGVAL_TITLE", FMAX_NOP, "titles start here",),
 	("PSGVAL_TITLE_ALARMPOPUP", FMAXPSG_SCTN0900_STR_DEF, "TITLE_ALARMPOPUP", "ALERT", "string with window title for APPMODE_CLOCKS",),
 	("PSGVAL_TITLE_CLOCKS", FMAXPSG_SCTN0900_STR_DEF, "TITLE_CLOCKS", "CLOCKS", "string with window title for APPMODE_CLOCKS",),
@@ -1821,6 +1833,7 @@ TBGLST = [
 	("PSGVAL__COLORS_TIME_CLOCK", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TIME_CLOCK", "(COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)", "combined colors for a clock text element",),
 	("PSGVAL__COLORS_TIME_ELAPSED", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TIME_ELAPSED", "(COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)", "combined colors for a clock text element",),
 	("PSGVAL__COLORS_TIME_TOGO", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TIME_TOGO", "(COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)", "combined colors for a clock text element",),
+	("PSGVAL__C_CLOCKS", FMAXPSG_SCTN0916_CLASS_DEF, "C_CLOCKS", "comment",),
 	("PSGVAL__C_CLOCKS_BTN_DISMISS20", FMAX_NOP, "start of the dismiss button for alarms",),
 	("PSGVAL__C_CLOCKS_BTN_DISMISS2000", FMAXPSG_SCTN0916_CLASS_BTN_DEF, "C_CLOCKS", "C_BTN_DISMISS20", "",),
 	("PSGVAL__C_CLOCKS_BTN_DISMISS2001", FMAXPSG_SCTN0916_CLASS_BTN_STR_ADD, "C_CLOCKS", "C_BTN_DISMISS20", "BUTTON_TEXT", "", "button_text empty for the DOWN button",),
@@ -1831,7 +1844,6 @@ TBGLST = [
 	("PSGVAL__C_CLOCKS_BTN_DISMISS2001", FMAXPSG_SCTN0916_CLASS_BTN_VAL_ADD, "C_CLOCKS", "C_BTN_DISMISS20", "FONT", "FONTSZ_BTNS", "button xpand font",),
 	("PSGVAL__C_CLOCKS_BTN_DISMISS2001", FMAXPSG_SCTN0916_CLASS_BTN_VAL_ADD, "C_CLOCKS", "C_BTN_DISMISS20", "KEY", "BTN_DISMISS%KEY%", "button xpand key",),
 	("PSGVAL__C_CLOCKS_BTN_DISMISS2001", FMAXPSG_SCTN0916_CLASS_BTN_VAL_ADD, "C_CLOCKS", "C_BTN_DISMISS20", "PAD", "SZ_PAD_ALL", "button xpand key",),
-	("PSGVAL__C_CLOCKS", FMAXPSG_SCTN0916_CLASS_DEF, "C_CLOCKS", "comment",),
 	("PSGVAL__C_CLOCKS_COLUMN01", FMAX_NOP, "the column for APPMODE_CLOCKS",),
 	("PSGVAL__C_CLOCKS_COLUMN0100", FMAXPSG_SCTN0916_CLASS_COLUMN_DEF, "C_CLOCKS", "C_CLOCKS_COLUMN01", "C_the column that puts the two smaller clocks below the main one",),
 	("PSGVAL__C_CLOCKS_COLUMN0101", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "C_CLOCKS", "C_CLOCKS_COLUMN01", "C_CLOCKS_COLUMN01_ROW_00", "L01", "add a new row to clocks column",),
@@ -1881,12 +1893,12 @@ TBGLST = [
 	("PSGVAL__C_CLOCKS_MAINFRAME", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__C_CLOCKS_MAINFRAME00", FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF, "C_CLOCKS", "C_CLOCKS_WINDOW", "True", "the clocks frame defined and done",),
 	("PSGVAL__C_CLOCKS_SPIN01_00", FMAXPSG_SCTN0916_CLASS_SPIN_DEF, "C_CLOCKS", "C_CLOCKS_SPIN01", "define the alarm en/dis/able spinbox",),
-	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "VALUES", "%LIST%", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "BACKGROUND_COLOR", "COLOR_ALERT_BACKGROUND", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "FONT", "FONTSZ_ALERT_TEXT", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "SIZE", "(16, 1)", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "TEXT", "SPIN_TEXT", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "TEXT_COLOR", "COLOR_ALERT_TEXT", "comment",),
+	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "VALUES", "%LIST%", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_02", FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "0", "index 0",),
 	("PSGVAL__C_CLOCKS_SPIN01_02", FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "1", "index 1",),
 	("PSGVAL__C_CLOCKS_SPIN01_02", FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "2", "index 2",),
@@ -1969,6 +1981,15 @@ TBGLST = [
 	("PSGVAL__C_CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "C_CLOCKS", "C_CLOCKS_TEXT_TIME_TOGO", "SIZE", "(8, 1)", "characters, lines size line",),
 	("PSGVAL__C_CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "C_CLOCKS", "C_CLOCKS_TEXT_TIME_TOGO", "TEXT", "ZERO_CLOCK", "the text color for a clock_time element",),
 	("PSGVAL__C_CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "C_CLOCKS", "C_CLOCKS_TEXT_TIME_TOGO", "TEXT_COLOR", "COLOR_TIME_TOGO", "the text color for a clock_time element",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST", FMAXPSG_SCTN0916_CLASS_LIST_DEF, "C_CLOCKS", "TIMES_LIST", "list of all keys to times for midnight etc. processing",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_ALARM%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_AT_LAST_RUN%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_AT_NEXT%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL_START%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL__BEGIN%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL__END%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_LEN_RING%KEY%", "alarm time entry in TIMES_LIST",),
 	("PSGVAL__C_CLOCKS_WINDOW", FMAX_NOP, "the window for APPMODE_CLOCKS",),
 	("PSGVAL__C_CLOCKS_WINDOW00", FMAXPSG_SCTN0916_CLASS_WINDOW_DEF, "C_CLOCKS", "C_CLOCKS_WINDOW", "define the clocks window",),
 	("PSGVAL__C_CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "C_CLOCKS", "C_CLOCKS_WINDOW", "ALPHA_CHANNEL", "SZ_ALPHA_HIGH", "set the high alpha as the default",),
@@ -1982,15 +2003,6 @@ TBGLST = [
 	("PSGVAL__C_CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "C_CLOCKS", "C_CLOCKS_WINDOW", "MARGINS", "SZ_MARGINS_ALL", "",),
 	("PSGVAL__C_CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "C_CLOCKS", "C_CLOCKS_WINDOW", "NO_TITLEBAR", "True", "no titlebar on APPMODE_CLOCKS window",),
 	("PSGVAL__C_CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "C_CLOCKS", "C_CLOCKS_WINDOW", "TITLE", "TITLE_C_CLOCKS", "",),
-	("PSGVAL__C_CLOCKS_TIMES_LIST", FMAXPSG_SCTN0916_CLASS_LIST_DEF, "C_CLOCKS", "TIMES_LIST", "list of all keys to times for midnight etc. processing",),
-	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_ALARM%KEY%", "alarm time entry in TIMES_LIST",),
-	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_AT_LAST_RUN%KEY%", "alarm time entry in TIMES_LIST",),
-	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_AT_NEXT%KEY%", "alarm time entry in TIMES_LIST",),
-	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL%KEY%", "alarm time entry in TIMES_LIST",),
-	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL_START%KEY%", "alarm time entry in TIMES_LIST",),
-	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL__BEGIN%KEY%", "alarm time entry in TIMES_LIST",),
-	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL__END%KEY%", "alarm time entry in TIMES_LIST",),
-	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_LEN_RING%KEY%", "alarm time entry in TIMES_LIST",),
 	("PSGVAL__FONTSZ_ALERT_TEXT", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_ALERT_TEXT", "(FONT_DEFAULT, SZ_ALERT_TEXT)", "the font for the clocks only clock",),
 	("PSGVAL__FONTSZ_BTNS", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_BTNS", "(FONT_DEFAULT, SZ_BTNS)", "comment",),
 	("PSGVAL__FONTSZ_CLOCKS_INTERVAL_COUNT", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_CLOCKS_INTERVAL_COUNT", "(FONT_DEFAULT, SZ_INTERVAL_COUNT)", "the font for the clocks only clock",),
@@ -2620,7 +2632,7 @@ def makePSGClasses():
 {NTAB(3)}MAINFRAME, {BKSLSH}
 {NTAB(3)}MAPPDS, {BKSLSH}
 {NTAB(3)}POPUPFRAME{NEWLINE}
-{NTAB(1)}def __init__{OPAREN}self, thisWindow_=None{CPAREN}:
+{NTAB(1)}def __init__{OPAREN}self, key_, thisWindow_=None{CPAREN}:
 {NTAB(2)}THIS_WINDOW = thisWindow_
 """
 
@@ -2693,7 +2705,7 @@ def makePSGClasses():
 {NTAB(3)}self.THIS_WINDOW = POPUPFRAME
 {NTAB(2)}elif {OPAREN}self.THIS_WINDOW is not None{CPAREN}:
 {NTAB(3)}self.THIS_WINDOW = SG.Window{OPAREN}**self.{thisClass_}_WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}
-{NTAB(2)}def __exit__{OPAREN}self, *args_{CPAREN}:
+{NTAB(1)}def __exit__{OPAREN}self, *args_{CPAREN}:
 {NTAB(2)}global {BKSLSH}
 {NTAB(4)}MAINFRAME, {BKSLSH}
 {NTAB(4)}MAPPDS, {BKSLSH}
@@ -4820,11 +4832,19 @@ def parseTBGLST(FDTBGLST):
 			thisElementName_ = thisItem_[3]
 			thisKey_ = thisItem_[4]
 			thisVal_ = thisItem_[5]
+
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT:
 				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_] = {}
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisElementName_] = ""
-			FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+
+			if (thisKey_ == "KEY") and (thisVal_.find("%KEY%") > -1):
+				thisVal_ = thisVal_.replace("%KEY%", "")
+				thisValStr_ = f"""f{TRIQT}{thisVal_}{OBRCE}key_{CBRCE}{TRIQT}"""
+			else:
+				thisValStr_ = f"""{DBLQT}{thisVal_}{DBLQT}"""
+
+			FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisValStr_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4839,11 +4859,19 @@ def parseTBGLST(FDTBGLST):
 			thisElementName_ = thisItem_[3]
 			thisKey_ = thisItem_[4]
 			thisVal_ = thisItem_[5]
+
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT:
 				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_] = {}
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisElementName_] = ""
-			FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+
+			if (thisKey_ == "KEY") and (thisVal_.find("%KEY%") > -1):
+				thisVal_ = thisVal_.replace("%KEY%", "")
+				thisValStr_ = f"""f{TRIQT}{OBRCE}{thisVal_}{CBRCE}{OBRCE}key_{CBRCE}{TRIQT}"""
+			else:
+				thisValStr_ = f"""{thisVal_}"""
+			FMPSG_SCTN0916_CLASS_BTNS_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisValStr_},  # {thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -5118,7 +5146,12 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] = ""
 
-			FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			if (thisKey_ == "VALUES") and (thisVal_ == "%LIST%"):
+				thisValStr_ = f"""self.{thisClassName_}{thisElementName_}_LIST"""
+			else:
+				thisValStr_ = f"""{DBLQT}{thisVal_}{DBLQT}"""
+
+			FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisValStr_},  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5145,7 +5178,12 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] = ""
 
-			FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			if (thisKey_ == "VALUES") and (thisVal_ == "%LIST%"):
+				thisValStr_ = f"""self.{thisElementName_}_SPIN_LIST"""
+			else:
+				thisValStr_ = f"""{thisVal_}"""
+
+			FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisValStr_},  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5236,11 +5274,19 @@ def parseTBGLST(FDTBGLST):
 			thisElementName_ = thisItem_[3]
 			thisKey_ = thisItem_[4]
 			thisVal_ = thisItem_[5]
+
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT:
 				FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_] = {}
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] = ""
-			FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+
+			if (thisKey_ == "KEY") and (thisVal_.find("%KEY%") > -1):
+				thisVal_ = thisVal_.replace("%KEY%", "")
+				thisValStr_ = f"""f{TRIQT}{OBRCE}{thisVal_}{CBRCE}{OBRCE}key_{CBRCE}{TRIQT}"""
+			else:
+				thisValStr_ = f"""{DBLQT}{thisVal_}{DBLQT}"""
+			FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisValStr_},  # {thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -5255,11 +5301,19 @@ def parseTBGLST(FDTBGLST):
 			thisElementName_ = thisItem_[3]
 			thisKey_ = thisItem_[4]
 			thisVal_ = thisItem_[5]
+
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT:
 				FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_] = {}
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] = ""
-			FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+
+			if (thisKey_ == "KEY") and (thisVal_.find("%KEY%") > -1):
+				thisVal_ = thisVal_.replace("%KEY%", "")
+				thisValStr_ = f"""f{TRIQT}{OBRCE}{thisVal_}{CBRCE}{OBRCE}key_{CBRCE}{TRIQT}"""
+			else:
+				thisValStr_ = f"""{thisVal_}"""
+			FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisValStr_},  # {thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3

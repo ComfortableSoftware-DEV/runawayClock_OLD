@@ -353,6 +353,18 @@ INTERVALLING_LIST = [  # list that holds all currently alarming events
 ]
 
 
+MAPPDS_TIMES_LIST = [  # list of all keys to times for midnight etc. processing
+	TIME_ALARM,  #
+	TIME_AT_LAST_RUN,  #
+	TIME_AT_NEXT,  #
+	TIME_INTERVAL,  #
+	TIME_INTERVAL_START,  #
+	TIME_INTERVAL__BEGIN,  #
+	TIME_INTERVAL__END,  #
+	TIME_LEN_RING,  #
+]
+
+
 TIMES_LIST = [  # list of all keys to times for midnight etc. processing
 	TIME_ALARM,  # alarm time entry in TIMES_LIST
 	TIME_AT_LAST_RUN,  # time at last run entry in TIMES_LIST
@@ -1721,7 +1733,7 @@ class CLASS_C_CLOCKS(object):
 			MAPPDS, \
 			POPUPFRAME
 
-	def __init__(self, thisWindow_=None):
+	def __init__(self, key_, thisWindow_=None):
 		THIS_WINDOW = thisWindow_
 		self.C_BTN_DISMISS20 = {  #
 			BUTTON_TEXT: "",  # button_text empty for the DOWN button
@@ -1730,7 +1742,7 @@ class CLASS_C_CLOCKS(object):
 			BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 			FOCUS: True,  # focus on click
 			FONT: FONTSZ_BTNS,  # button xpand font
-			KEY: BTN_DISMISS%KEY%,  # button xpand key
+			KEY: f"""{BTN_DISMISS}{key_}""",  # button xpand key
 			PAD: SZ_PAD_ALL,  # button xpand key
 		}
 
@@ -1746,7 +1758,7 @@ class CLASS_C_CLOCKS(object):
 			SIZE: (16, 1),  # comment
 			TEXT: SPIN_TEXT,  # comment
 			TEXT_COLOR: COLOR_ALERT_TEXT,  # comment
-			VALUES: %LIST%,  # comment
+			VALUES: self.C_CLOCKS_SPIN01_SPIN_LIST,  # comment
 		}
 
 		self.C_CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
@@ -1755,7 +1767,7 @@ class CLASS_C_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: INTERVAL_COUNT%KEY%,  # comment
+			KEY: f"""{INTERVAL_COUNT}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (4, 1),  # characters, lines size line
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
@@ -1767,7 +1779,7 @@ class CLASS_C_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: NAME_NEXT_EVENT%KEY%,  # comment
+			KEY: f"""{NAME_NEXT_EVENT}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (16, 1),  # characters, lines size line
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
@@ -1778,7 +1790,7 @@ class CLASS_C_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: TIME_AT_NEXT%KEY%,  # comment
+			KEY: f"""{TIME_AT_NEXT}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1790,7 +1802,7 @@ class CLASS_C_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: TIME_AT_ZEROELAPSE%KEY%,  # comment
+			KEY: f"""{TIME_AT_ZEROELAPSE}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1802,7 +1814,7 @@ class CLASS_C_CLOCKS(object):
 			ENABLE_EVENTS: True,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: TIME_CLOCK%KEY%,  # comment
+			KEY: f"""{TIME_CLOCK}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1813,7 +1825,7 @@ class CLASS_C_CLOCKS(object):
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: TIME_ELAPSED%KEY%,  # comment
+			KEY: f"""{TIME_ELAPSED}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1824,7 +1836,7 @@ class CLASS_C_CLOCKS(object):
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: TIME_TOGO%KEY%,  # comment
+			KEY: f"""{TIME_TOGO}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1847,7 +1859,7 @@ class CLASS_C_CLOCKS(object):
 		elif (self.THIS_WINDOW is not None):
 			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
 
-		def __exit__(self, *args_):
+	def __exit__(self, *args_):
 		global \
 				MAINFRAME, \
 				MAPPDS, \
@@ -1868,7 +1880,7 @@ class CLASS_C_CLOCKS_TEXT_DICT(object):
 			MAPPDS, \
 			POPUPFRAME
 
-	def __init__(self, thisWindow_=None):
+	def __init__(self, key_, thisWindow_=None):
 		THIS_WINDOW = thisWindow_
 	def __enter__(self):
 		global \
@@ -1886,7 +1898,7 @@ class CLASS_C_CLOCKS_TEXT_DICT(object):
 		elif (self.THIS_WINDOW is not None):
 			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
 
-		def __exit__(self, *args_):
+	def __exit__(self, *args_):
 		global \
 				MAINFRAME, \
 				MAPPDS, \
@@ -2175,11 +2187,11 @@ def updateMainframeFromDict(dictToUpdateFrom_):
 			MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_, val_ in dictToUpdateFrom_.items():
-		print(f"""key_ {key_} val_ {val_}""")
+
 		if (key_ in TIMES_LIST):
-			print(f"""is a time""")
+
 			if (val_ >= CF.DAYSECS):
-				print("is tomorrow")
+
 				val_ -= CF.DAYSECS
 			MAINFRAME.Element(key_).Update(value=CF.nrmlIntToHMS(val_))
 
@@ -2695,7 +2707,7 @@ def doMidnightWork():
 			MAPPDS[EVENT_ENTRIES][index_][DISMISSED] = False
 			MAPPDS[EVENT_ENTRIES][index_][IS_ALERTING_NOW] = False
 
-			for index1_ in TIMES_LIST:
+			for index1_ in MAPPDS_TIMES_LIST:
 #				print(f"""{CF.getDebugInfo()}
 #				{CF.frameIt("index1_", index1_)}
 #				{CF.frameIt("MAPPDS[EVENT_ENTRIES][index_]", MAPPDS[EVENT_ENTRIES][index_])}
@@ -2784,7 +2796,7 @@ def doInit1():
 	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 #		MAPPDS[EVENT_ENTRIES][index_][TIME_AT_LAST_RUN] = None
-		for timeKey_ in TIMES_LIST:
+		for timeKey_ in MAPPDS_TIMES_LIST:
 			if isinstance(event_[timeKey_], str):
 				MAPPDS[EVENT_ENTRIES][index_][timeKey_] = CF.HMSToNrmlInt(event_[timeKey_])
 	doMidnightWork()
