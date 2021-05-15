@@ -1072,38 +1072,6 @@ TBGLST = [
 	("PSGVAL_COLOR_TIME_ELAPSED", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TIME_ELAPSED", "#447733", "color of the clock on any window/frame/etc.",),
 	("PSGVAL_COLOR_TIME_TOGO", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TIME_TOGO", "#AA6600", "color of the clock on any window/frame/etc.",),
 	("PSGVAL_COLOR_WHITE", FMAXPSG_SCTN0900_STR_DEF, "COLOR_WHITE", "#FFFFFF", "white",),
-	("PSGVAL_EMPTY0_EVENT_ENTRY", FMAXPSG_SCTN0905_TUPDICT_DEF, "EMPTY0_EVENT_ENTRY", "define the empty event entries for MAPPDS",),
-	("PSGVAL_EMPTY0_EVENT_ENTRY_DISMISSED", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY0_EVENT_ENTRY", "DISMISSED", "False", "has the event been dismissed just this once",),
-	("PSGVAL_EMPTY0_EVENT_ENTRY_ENABLED", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY0_EVENT_ENTRY", "ENABLED", "True", "is the event enabled bool",),
-	("PSGVAL_EMPTY0_EVENT_ENTRY_EVENTMODE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY0_EVENT_ENTRY", "EVENTMODE", "EVENTMODE_ALARM", "which event mode is this event",),
-	("PSGVAL_EMPTY0_EVENT_ENTRY_NAME", FMAXPSG_SCTN0905_TUPDICT_VS_ADD, "EMPTY0_EVENT_ENTRY", "NAME", "alarm", "the name of this event",),
-	("PSGVAL_EMPTY0_EVENT_ENTRY_PREDISMISSABLE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY0_EVENT_ENTRY", "PREDISMISSABLE", "False", "can the event be dismissed prior to on time",),
-	("PSGVAL_EMPTY0_EVENT_ENTRY_SNOOZABLE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY0_EVENT_ENTRY", "SNOOZABLE", "False", "can the alarm be snoozed",),
-	("PSGVAL_EMPTY0_EVENT_ENTRY_SNOOZED", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY0_EVENT_ENTRY", "SNOOZED", "False", "is the event snoozed",),
-	("PSGVAL_EMPTY0_EVENT_ENTRY_TIME_ALARM", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY0_EVENT_ENTRY", "TIME_ALARM", "ZERO_CLOCK", "in an alarm mode event, what time is the alarm",),
-	("PSGVAL_EMPTY0_EVENT_ENTRY_TIME_AT_LAST_RUN", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY0_EVENT_ENTRY", "TIME_AT_LAST_RUN", "0", "has the event been dismissed just this once",),
-	("PSGVAL_EMPTY0_EVENT_ENTRY_TIME_INTERVAL", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY0_EVENT_ENTRY", "TIME_INTERVAL", "ZERO_CLOCK", "how much time to add to an interval mode event",),
-	("PSGVAL_EMPTY_BBOX", FMAXPSG_SCTN0901_VAL_DEF, "EMPTY_BBOX", "(0, 0, 0, 0)", "create as needed dict for values passed around as dict",),
-	("PSGVAL_EMPTY_CLOCKS", FMAXPSG_SCTN0905_TUPDICT_DEF, "EMPTY_CLOCKS", "just the clocks window",),
-	("PSGVAL_EMPTY_CLOCKS_TIME_AT_NEXT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_CLOCKS", "TIME_AT_NEXT", "ZERO_CLOCK", "the main count down to the next event time",),
-	("PSGVAL_EMPTY_CLOCKS_TIME_AT_ZEROELAPSE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_CLOCKS", "TIME_AT_ZEROELAPSE", "ZERO_CLOCK", "the main clock time",),
-	("PSGVAL_EMPTY_CLOCKS_TIME_CLOCK", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_CLOCKS", "TIME_CLOCK", "ZERO_CLOCK", "the main clock time",),
-	("PSGVAL_EMPTY_CLOCKS_TIME_ELAPSED", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_CLOCKS", "TIME_ELAPSED", "ZERO_CLOCK", "the main elapsed time",),
-	("PSGVAL_EMPTY_CLOCKS_TIME_TOGO", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_CLOCKS", "TIME_TOGO", "ZERO_CLOCK", "the main count down to the next event time",),
-	("PSGVAL_EMPTY_MAPPDS", FMAXPSG_SCTN0905_TUPDICT_DEF, "EMPTY_MAPPDS", "holds the empty tupt dict for the root MAPPDS",),
-	("PSGVAL_EMPTY_MAPPDS01_ALPHA_CHANNEL", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "ALPHA_CHANNEL", "1.0", "fully opaque",),
-	("PSGVAL_EMPTY_MAPPDS01_ALPHA_HIGH", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "ALPHA_HIGH", "1.0", "fully opaque",),
-	("PSGVAL_EMPTY_MAPPDS01_ALPHA_LOW", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "ALPHA_LOW", "0.3", "almost fully alpha",),
-	("PSGVAL_EMPTY_MAPPDS01_APPMODE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "APPMODE", "APPMODE_CLOCKS", "default to clocks mode",),
-	("PSGVAL_EMPTY_MAPPDS01_BBOX", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "BBOX", "EMPTY_BBOX", "empty bbox entry",),
-	("PSGVAL_EMPTY_MAPPDS01_CHECKBOX_ALPHA_LOW", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "CHECKBOX_ALPHA_LOW", "True", "the checkbox bool for ALPHA high/low mode",),
-	("PSGVAL_EMPTY_MAPPDS01_CHECKBOX_RUNAWAY", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "CHECKBOX_RUNAWAY", "True", "checkbox bool for RUNAWAY mode",),
-	("PSGVAL_EMPTY_MAPPDS01_CLOSE_BBOX", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "CLOSE_BBOX", "EMPTY_BBOX", "empty BBOX dict",),
-	("PSGVAL_EMPTY_MAPPDS01_EVENT_ENTRIES", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "EVENT_ENTRIES", "EMPTY0_EVENT_ENTRY_TDD", "an empty event",),
-	("PSGVAL_EMPTY_MAPPDS01_INDEX_OF_NEXT_EVENT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "INDEX_OF_NEXT_EVENT", "0", "which event number is upcoming",),
-	("PSGVAL_EMPTY_MAPPDS01_MAINFRAME_LCN", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "MAINFRAME_LCN", "EMPTY_XY", "holds the screen position",),
-	("PSGVAL_EMPTY_MAPPDS01_MAINFRAME_SIZE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "MAINFRAME_SIZE", "EMPTY_XY", "which event number is upcoming",),
-	("PSGVAL_EMPTY_MAPPDS01_SCREEN_DIMS", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_MAPPDS", "SCREEN_DIMS", "EMPTY_XY", "",),
 	("PSGVAL_EMPTY_XY", FMAXPSG_SCTN0901_VAL_DEF, "EMPTY_XY", "(0, 0)", "empty XY dict",),
 	("PSGVAL_FONT_DEFAULT", FMAXPSG_SCTN0900_STR_DEF, "FONT_DEFAULT", "Source Code Pro", "set the main font",),
 	("PSGVAL_FULL_BUTTON", FMAXPSG_SCTN0905_TUPDICT_DEF, "FULL_BUTTON", "define the button empty tupdict",),
@@ -1400,76 +1368,6 @@ TBGLST = [
 	("PSGVAL_MAPPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "MAPPDS_TIMES_LIST", "TIME_INTERVAL__BEGIN", "",),
 	("PSGVAL_MAPPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "MAPPDS_TIMES_LIST", "TIME_INTERVAL__END", "",),
 	("PSGVAL_MAPPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "MAPPDS_TIMES_LIST", "TIME_LEN_RING", "",),
-	("PSGVAL_NORMAL_BUTTON", FMAXPSG_SCTN0905_TUPDICT_DEF, "NORMAL_BUTTON", "define the button empty tupdict",),
-	("PSGVAL_NORMAL_BUTTON_BUTTON_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_BUTTON", "BUTTON_COLOR", "None", "Color of button. default is from theme or the window. Easy to remember which is which if you say 'ON' between colors. 'red' on 'green'. Normally a tuple, but can be a simplified-button-color-string 'foreground on background'. Can be a single color if want to set only the background.",),
-	("PSGVAL_NORMAL_BUTTON_BUTTON_TEXT", FMAXPSG_SCTN0905_TUPDICT_VS_ADD, "NORMAL_BUTTON", "BUTTON_TEXT", "", "str text to display on the button",),
-	("PSGVAL_NORMAL_BUTTON_FOCUS", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_BUTTON", "FOCUS", "False", "if True, initial focus will be put on this button",),
-	("PSGVAL_NORMAL_BUTTON_FONT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_BUTTON", "FONT", "None", "specifies the font family, size, etc",),
-	("PSGVAL_NORMAL_BUTTON_IMAGE_DATA", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_BUTTON", "IMAGE_DATA", "None", "Raw or Base64 representation of the image to put on button. Choose either filename or data",),
-	("PSGVAL_NORMAL_BUTTON_IMAGE_FILENAME", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_BUTTON", "IMAGE_FILENAME", "None", "image filename if there is a button image. GIFs and PNGs only.",),
-	("PSGVAL_NORMAL_BUTTON_KEY", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_BUTTON", "KEY", "None", "Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element",),
-	("PSGVAL_NORMAL_CHECKBOX", FMAXPSG_SCTN0905_TUPDICT_DEF, "NORMAL_CHECKBOX", "set a checkbox in motion",),
-	("PSGVAL_NORMAL_CHECKBOX_BACKGROUND_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_CHECKBOX", "BACKGROUND_COLOR", "None", "color of background",),
-	("PSGVAL_NORMAL_CHECKBOX_CHECKBOX_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_CHECKBOX", "CHECKBOX_COLOR", "None", "color of background of the box that has the check mark in it. The checkmark is the same color as the text",),
-	("PSGVAL_NORMAL_CHECKBOX_DEFAULT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_CHECKBOX", "DEFAULT", "False", "Set to True if you want this checkbox initially checked",),
-	("PSGVAL_NORMAL_CHECKBOX_FONT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_CHECKBOX", "FONT", "None", "specifies the font family, size, etc",),
-	("PSGVAL_NORMAL_CHECKBOX_KEY", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_CHECKBOX", "KEY", "None", "Used with window.FindElement and with return values to uniquely identify this element",),
-	("PSGVAL_NORMAL_CHECKBOX_TEXT", FMAXPSG_SCTN0905_TUPDICT_VS_ADD, "NORMAL_CHECKBOX", "TEXT", "", "Window to display next to checkbox",),
-	("PSGVAL_NORMAL_CHECKBOX_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_CHECKBOX", "TEXT_COLOR", "None", "color of the text",),
-	("PSGVAL_NORMAL_COMBO", FMAXPSG_SCTN0905_TUPDICT_DEF, "NORMAL_COMBO", "a full combo tupdict",),
-	("PSGVAL_NORMAL_COMBO_BACKGROUND_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_COMBO", "BACKGROUND_COLOR", "None", "color of background",),
-	("PSGVAL_NORMAL_COMBO_DEFAULT_VALUE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_COMBO", "DEFAULT_VALUE", "None", "Choice to be displayed as initial value. Must match one of values variable contents",),
-	("PSGVAL_NORMAL_COMBO_FONT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_COMBO", "FONT", "None", "specifies the font family, size, etc",),
-	("PSGVAL_NORMAL_COMBO_KEY", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_COMBO", "KEY", "None", "Used with window.FindElement and with return values to uniquely identify this element",),
-	("PSGVAL_NORMAL_COMBO_SIZE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_COMBO", "SIZE", "None", "width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list",),
-	("PSGVAL_NORMAL_COMBO_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_COMBO", "TEXT_COLOR", "None", "color of the text",),
-	("PSGVAL_NORMAL_COMBO_VALUES", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_COMBO", "VALUES", "[]", "values to choose. While displayed as text, the items returned are what the caller supplied, not text",),
-	("PSGVAL_NORMAL_RADIO", FMAXPSG_SCTN0905_TUPDICT_DEF, "NORMAL_RADIO", "define a full radio button entity",),
-	("PSGVAL_NORMAL_RADIO_BACKGROUND_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_RADIO", "BACKGROUND_COLOR", "None", "",),
-	("PSGVAL_NORMAL_RADIO_CIRCLE_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_RADIO", "CIRCLE_COLOR", "None", "",),
-	("PSGVAL_NORMAL_RADIO_DEFAULT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_RADIO", "DEFAULT", "False", "",),
-	("PSGVAL_NORMAL_RADIO_FONT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_RADIO", "FONT", "None", "",),
-	("PSGVAL_NORMAL_RADIO_GROUP_ID", FMAXPSG_SCTN0905_TUPDICT_VS_ADD, "NORMAL_RADIO", "GROUP_ID", "", "Groups together multiple Radio Buttons. Any type works",),
-	("PSGVAL_NORMAL_RADIO_KEY", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_RADIO", "KEY", "None", "",),
-	("PSGVAL_NORMAL_RADIO_SIZE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_RADIO", "SIZE", "(None, None)", "",),
-	("PSGVAL_NORMAL_RADIO_TEXT", FMAXPSG_SCTN0905_TUPDICT_VS_ADD, "NORMAL_RADIO", "TEXT", "", "",),
-	("PSGVAL_NORMAL_RADIO_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_RADIO", "TEXT_COLOR", "None", "",),
-	("PSGVAL_NORMAL_SPIN", FMAXPSG_SCTN0905_TUPDICT_DEF, "NORMAL_SPIN", "full spin dict",),
-	("PSGVAL_NORMAL_SPIN_BACKGROUND_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "BACKGROUND_COLOR", "None", "color of background",),
-	("PSGVAL_NORMAL_SPIN_FONT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "FONT", "None", "specifies the font family, size, etc",),
-	("PSGVAL_NORMAL_SPIN_INITIAL_VALUE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "INITIAL_VALUE", "None", "Initial item to show in window. Choose from list of values supplied",),
-	("PSGVAL_NORMAL_SPIN_KEY", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "KEY", "None", "Used with window.FindElement and with return values to uniquely identify this element",),
-	("PSGVAL_NORMAL_SPIN_SIZE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "SIZE", "(None, None)", "(width, height) width = characters-wide, height = rows-high",),
-	("PSGVAL_NORMAL_SPIN_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "COLOR_TEXT_SPIN", "None", "color of the text",),
-	("PSGVAL_NORMAL_SPIN_VALUES", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "VALUES", "[]", "List of valid values",),
-	("PSGVAL_NORMAL_TEXT", FMAXPSG_SCTN0905_TUPDICT_DEF, "NORMAL_TEXT", "the full monty for text elements",),
-	("PSGVAL_NORMAL_TEXT_BACKGROUND_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_TEXT", "BACKGROUND_COLOR", "None", "color of background",),
-	("PSGVAL_NORMAL_TEXT_BORDER_WIDTH", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_TEXT", "BORDER_WIDTH", "None", "number of pixels for the border (if using a relief)",),
-	("PSGVAL_NORMAL_TEXT_FONT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_TEXT", "FONT", "None", "specifies the font family, size, etc",),
-	("PSGVAL_NORMAL_TEXT_GRAB", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_TEXT", "GRAB", "None", "If True can grab this element and move the window around. Default is False",),
-	("PSGVAL_NORMAL_TEXT_JUSTIFICATION", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_TEXT", "JUSTIFICATION", "None", "how string should be aligned within space provided by size. Valid choices = `left`, `right`, `center`",),
-	("PSGVAL_NORMAL_TEXT_KEY", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_TEXT", "KEY", "None", "Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element",),
-	("PSGVAL_NORMAL_TEXT_RELIEF", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_TEXT", "RELIEF", "None", "relief style around the text. Values are same as progress meter relief values. Should be a constant that is defined at starting with 'RELIEF_' - `RELIEF_RAISED, RELIEF_SUNKEN, RELIEF_FLAT, RELIEF_RIDGE, RELIEF_GROOVE, RELIEF_SOLID`",),
-	("PSGVAL_NORMAL_TEXT_SIZE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_TEXT", "SIZE", "(None, None)", "(width, height) width = characters-wide, height = rows-high",),
-	("PSGVAL_NORMAL_TEXT_TEXT", FMAXPSG_SCTN0905_TUPDICT_VS_ADD, "NORMAL_TEXT", "TEXT", "", "The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string",),
-	("PSGVAL_NORMAL_TEXT_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_TEXT", "TEXT_COLOR", "None", "color of the text",),
-	("PSGVAL_NORMAL_WINDOW", FMAXPSG_SCTN0905_TUPDICT_DEF, "NORMAL_WINDOW", "define the NORMAL_WINDOW tupdict",),
-	("PSGVAL_NORMAL_WINDOW_BACKGROUND_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "BACKGROUND_COLOR", "None", "color of background",),
-	("PSGVAL_NORMAL_WINDOW_FINALIZE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "FINALIZE", "False", "If True then the Finalize method will be called. Use this rather than chaining .Finalize for cleaner code",),
-	("PSGVAL_NORMAL_WINDOW_FONT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "FONT", "None", "specifies the font family, size, etc",),
-	("PSGVAL_NORMAL_WINDOW_GRAB_ANYWHERE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "GRAB_ANYWHERE", "False", "If True can use mouse to click and drag to move the window. Almost every location of the window will work except input fields on some systems",),
-	("PSGVAL_NORMAL_WINDOW_ICON", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "ICON", "None", "Can be either a filename or Base64 value. For Windows if filename, it MUST be ICO format. For Linux, must NOT be ICO",),
-	("PSGVAL_NORMAL_WINDOW_KEEP_ON_TOP", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "KEEP_ON_TOP", "False", "If True, window will be created on top of all other windows on screen. It can be bumped down if another window created with this parm",),
-	("PSGVAL_NORMAL_WINDOW_LAYOUT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "LAYOUT", "None", "The layout for the window. Can also be specified in the Layout method",),
-	("PSGVAL_NORMAL_WINDOW_LOCATION", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "LOCATION", "(None, None)", "(x,y) location, in pixels, to locate the upper left corner of the window on the screen. Default is to center on screen.",),
-	("PSGVAL_NORMAL_WINDOW_MODAL", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "MODAL", "False", "If True then this window will be the only window a user can interact with until it is closed",),
-	("PSGVAL_NORMAL_WINDOW_NO_TITLEBAR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "NO_TITLEBAR", "False", "If true, no titlebar nor frame will be shown on window. This means you cannot minimize the window and it will not show up on the taskbar",),
-	("PSGVAL_NORMAL_WINDOW_TITLE", FMAXPSG_SCTN0905_TUPDICT_VS_ADD, "NORMAL_WINDOW", "TITLE", "", "The title that will be displayed in the Titlebar and on the Taskbar",),
-	("PSGVAL_NORMAL_WINDOW_TITLEBAR_BACKGROUND_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TITLEBAR_BACKGROUND_COLOR", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as background color",),
-	("PSGVAL_NORMAL_WINDOW_TITLEBAR_FONT", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TITLEBAR_FONT", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as title font",),
-	("PSGVAL_NORMAL_WINDOW_TITLEBAR_ICON", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TITLEBAR_ICON", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as the icon (file or base64 bytes)",),
-	("PSGVAL_NORMAL_WINDOW_TITLEBAR_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TITLEBAR_TEXT_COLOR", "None", "If custom titlebar indicated by use_custom_titlebar, then use this as text color",),
-	("PSGVAL_NORMAL_WINDOW_TRANSPARENT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_WINDOW", "TRANSPARENT_COLOR", "None", "Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.",),
 	("PSGVAL_POPUP_INTERVAL", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DEF", "POPUP_INTERVAL", "POPUPTYPE_AUTO_CLOSE", "the dialog when an interval goes off",),
 	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD", "POPUP_INTERVAL", "TITLE", "", "title of the alert window",),
 	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", "POPUP_INTERVAL", "AUTO_CLOSE", "True", "interval timers get auto dismiss by default",),
@@ -1538,8 +1436,6 @@ TBGLST = [
 	("PSGVAL_UPDATE_COMBO_VALUE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "UPDATE_COMBO", "VALUE", "None", "change which value is current selected based on new list of previous list of choices",),
 	("PSGVAL_UPDATE_COMBO_VALUES", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "UPDATE_COMBO", "VALUES", "None", "values to choose. While displayed as text, the items returned are what the caller supplied, not text",),
 	("PSGVAL_UPDATE_COMBO_VISIBLE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "UPDATE_COMBO", "VISIBLE", "None", "set visibility state of the element",),
-	("PSGVAL_VMAINFRAME", FMAXPSG_SCTN0900_VAL_DEF, "MAINFRAME", "None", "set up the mainframe",),
-	("PSGVAL_VPOPUPFRAME", FMAXPSG_SCTN0900_VAL_DEF, "POPUPFRAME", "None", "set up the mainframe",),
 	("PSGVAL_ZERO_CLOCK", FMAXPSG_SCTN0900_VAL_DEF, "ZERO_CLOCK", "0", "all the zeros",),
 	("PSGVAL__BTN_DISMISS20", FMAX_NOP, "start of the dismiss button for alarms",),
 	("PSGVAL__BTN_DISMISS2000", FMAXPSG_SCTN0906_BTN_DEF, "BTN_DISMISS20", "",),
@@ -1678,7 +1574,7 @@ TBGLST = [
 	("PSGVAL__CHECKBOX_RUNAWAY0100", FMAXPSG_SCTN0908_CHECKBOX_DEF, "CHECKBOX_RUNAWAY01", "checkbox for runaway from mouse behavior",),
 	("PSGVAL__CHECKBOX_RUNAWAY0101", FMAXPSG_SCTN0908_CHECKBOX_STR_ADD, "CHECKBOX_RUNAWAY01", "TEXT", "RNAWY", "text label",),
 	("PSGVAL__CHECKBOX_RUNAWAY0101", FMAXPSG_SCTN0908_CHECKBOX_STR_ADD, "CHECKBOX_RUNAWAY01", "TOOLTIP", "run away from mouse when checked", "tooltip",),
-	("PSGVAL__CHECKBOX_RUNAWAY0101", FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD, "CHECKBOX_RUNAWAY01", "DEFAULT", "False", "leave it on by default",),
+	("PSGVAL__CHECKBOX_RUNAWAY0101", FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD, "CHECKBOX_RUNAWAY01", "DEFAULT", "False", "leave it off by default",),
 	("PSGVAL__CHECKBOX_RUNAWAY0101", FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD, "CHECKBOX_RUNAWAY01", "ENABLE_EVENTS", "True", "set the key for the checkbox",),
 	("PSGVAL__CHECKBOX_RUNAWAY0101", FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD, "CHECKBOX_RUNAWAY01", "KEY", "CHECKBOX_RUNAWAY", "set the key for the checkbox",),
 	("PSGVAL__CLOCKS_COLUMN01", FMAX_NOP, "the column for APPMODE_CLOCKS",),
@@ -1850,7 +1746,7 @@ TBGLST = [
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "APPMODE", "APPMODE_NONE", "default mode is clocks",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "BBOX", "EMPTY_BBOX", "FILLED IN BY INIT",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "CHECKBOX_ALPHA_LOW", "True", "default transparent under mouse when not cornered to True",),
-	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "CHECKBOX_RUNAWAY", "True", "default to avoiding mouse",),
+	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "CHECKBOX_RUNAWAY", "False", "default to avoiding mouse",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "CLOSE_BBOX", "EMPTY_BBOX", "FILLED IN BY INIT",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "INDEX_OF_NEXT_EVENT", "0", "default to first entry as next until the app can sort through them",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "MAINFRAME", "None", "current screen position",),
@@ -2830,10 +2726,10 @@ def makePSG():
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN090B column elements")}"""
 	dictToUse_ = sortADict(FMPSG_SCTN090B_COLUMN_DICT)
-	for thisColumnName_, vals1_ in FMPSG_SCTN090B_COLUMN_DICT.items():
-		strToRtn_ += f"""{thisColumnName_} = {OBRKT}  # {FMPSG_SCTN090B_COLUMN_CMNT_DICT[thisColumnName_]}{NEWLINE}"""
+	for thisElementName_, vals1_ in FMPSG_SCTN090B_COLUMN_DICT.items():
+		strToRtn_ += f"""{thisElementName_} = {OBRKT}  # {FMPSG_SCTN090B_COLUMN_CMNT_DICT[thisElementName_]}{NEWLINE}"""
 		for thisRow_, vals2_ in vals1_.items():
-			thisTabLevel1_ = FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRow_][TABLEVEL]
+			thisTabLevel1_ = FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRow_][TABLEVEL]
 			strToRtn_ += f"""{NTAB(thisTabLevel1_)}{OBRKT}{NEWLINE}"""
 			for thisElementKey_, vals3_ in vals2_.items():
 				if thisElementKey_ == TABLEVEL:
@@ -2846,10 +2742,10 @@ def makePSG():
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN090E layout elements")}"""
 	dictToUse_ = sortADict(FMPSG_SCTN090E_LAYOUT_DICT)
-	for thisLayoutName_, vals1_ in FMPSG_SCTN090E_LAYOUT_DICT.items():
-		strToRtn_ += f"""{thisLayoutName_} = {OBRKT}  # {FMPSG_SCTN090E_LAYOUT_CMNT_DICT[thisLayoutName_]}{NEWLINE}"""
+	for thisElementName_, vals1_ in FMPSG_SCTN090E_LAYOUT_DICT.items():
+		strToRtn_ += f"""{thisElementName_} = {OBRKT}  # {FMPSG_SCTN090E_LAYOUT_CMNT_DICT[thisElementName_]}{NEWLINE}"""
 		for thisRow_, vals2_ in vals1_.items():
-			thisTabLevel1_ = FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRow_][TABLEVEL]
+			thisTabLevel1_ = FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRow_][TABLEVEL]
 			strToRtn_ += f"""{NTAB(thisTabLevel1_)}{OBRKT}{NEWLINE}"""
 			for thisElementKey_, vals3_ in vals2_.items():
 				if thisElementKey_ == TABLEVEL:
@@ -3891,10 +3787,10 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 4:
 				doErrorItem("not 4 items", thisItem_)
 				continue
-			thisCheckboxElementName_ = thisItem_[2]
-			if thisCheckboxElementName_ not in FMPSG_SCTN0908_CHECKBOX_DICT:
-				FMPSG_SCTN0908_CHECKBOX_DICT[thisCheckboxElementName_] = ""
-			FMPSG_SCTN0908_CHECKBOX_CMNT_DICT[thisCheckboxElementName_] = f"""{thisComment_}"""
+			thisElementName_ = thisItem_[2]
+			if thisElementName_ not in FMPSG_SCTN0908_CHECKBOX_DICT:
+				FMPSG_SCTN0908_CHECKBOX_DICT[thisElementName_] = ""
+			FMPSG_SCTN0908_CHECKBOX_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3905,12 +3801,12 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisCheckboxElementName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisCheckboxElementName_ not in FMPSG_SCTN0908_CHECKBOX_DICT:
-				FMPSG_SCTN0908_CHECKBOX_DICT[thisCheckboxElementName_] = ""
-			FMPSG_SCTN0908_CHECKBOX_DICT[thisCheckboxElementName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN0908_CHECKBOX_DICT:
+				FMPSG_SCTN0908_CHECKBOX_DICT[thisElementName_] = ""
+			FMPSG_SCTN0908_CHECKBOX_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3921,12 +3817,12 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisCheckboxElementName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisCheckboxElementName_ not in FMPSG_SCTN0908_CHECKBOX_DICT:
-				FMPSG_SCTN0908_CHECKBOX_DICT[thisCheckboxElementName_] = ""
-			FMPSG_SCTN0908_CHECKBOX_DICT[thisCheckboxElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN0908_CHECKBOX_DICT:
+				FMPSG_SCTN0908_CHECKBOX_DICT[thisElementName_] = ""
+			FMPSG_SCTN0908_CHECKBOX_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3983,10 +3879,10 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 4:
 				doErrorItem("not 4 items", thisItem_)
 				continue
-			thisWindowName_ = thisItem_[2]
-			if thisWindowName_ not in FMPSG_SCTN090F_WINDOW_DICT:
-				FMPSG_SCTN090F_WINDOW_DICT[thisWindowName_] = ""
-			FMPSG_SCTN090F_WINDOW_CMNT_DICT[thisWindowName_] = f"""{thisComment_}"""
+			thisElementName_ = thisItem_[2]
+			if thisElementName_ not in FMPSG_SCTN090F_WINDOW_DICT:
+				FMPSG_SCTN090F_WINDOW_DICT[thisElementName_] = ""
+			FMPSG_SCTN090F_WINDOW_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3997,12 +3893,12 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisWindowName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisWindowName_ not in FMPSG_SCTN090F_WINDOW_DICT:
-				FMPSG_SCTN090F_WINDOW_DICT[thisWindowName_] = ""
-			FMPSG_SCTN090F_WINDOW_DICT[thisWindowName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090F_WINDOW_DICT:
+				FMPSG_SCTN090F_WINDOW_DICT[thisElementName_] = ""
+			FMPSG_SCTN090F_WINDOW_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4013,12 +3909,12 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisWindowName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisWindowName_ not in FMPSG_SCTN090F_WINDOW_DICT:
-				FMPSG_SCTN090F_WINDOW_DICT[thisWindowName_] = ""
-			FMPSG_SCTN090F_WINDOW_DICT[thisWindowName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090F_WINDOW_DICT:
+				FMPSG_SCTN090F_WINDOW_DICT[thisElementName_] = ""
+			FMPSG_SCTN090F_WINDOW_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4029,10 +3925,10 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 4:
 				doErrorItem("not 4 items", thisItem_)
 				continue
-			thisColumnName_ = thisItem_[2]
-			if thisColumnName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_] = {}
-			FMPSG_SCTN090B_COLUMN_CMNT_DICT[thisColumnName_] = f"""{thisComment_}"""
+			thisElementName_ = thisItem_[2]
+			if thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_] = {}
+			FMPSG_SCTN090B_COLUMN_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4043,18 +3939,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisColumnName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisColumnName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4065,18 +3961,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisColumnName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisColumnName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Checkbox{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Checkbox{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4087,18 +3983,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisColumnName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisColumnName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Col{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Col{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4109,18 +4005,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisColumnName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem[5]
-			if thisColumnName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Combo{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Combo{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4131,19 +4027,19 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 8:
 				doErrorItem("not 8 items", thisItem_)
 				continue
-			thisColumnName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
 			thisVal_ = thisItem_[6]
-			if thisColumnName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}**{thisVal_},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}**{thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4154,19 +4050,19 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 8:
 				doErrorItem("not 8 items", thisItem_)
 				continue
-			thisColumnName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
 			thisVal_ = thisItem_[6]
-			if thisColumnName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}{thisVal_},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}{thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4177,18 +4073,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisColumnName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisColumnName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Radio{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Radio{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4199,15 +4095,15 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisColumnName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
-			if thisColumnName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_] = {}
-			FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][TABLEVEL] = thisTabLevel_
+			if thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_] = {}
+			FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][TABLEVEL] = thisTabLevel_
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4218,18 +4114,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisColumnName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisColumnName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Spin{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Spin{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4240,18 +4136,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisColumnName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisColumnName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Text{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090B_COLUMN_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Text{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4375,12 +4271,12 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 6 items", thisItem_)
 				continue
 			thisMainframeName_ = thisItem_[2]
-			thisWindowName_ = thisItem_[3]
+			thisElementName_ = thisItem_[3]
 			thisFinalize_ = thisItem_[4]
 			if thisFinalize_ == "True":
-				FMPSG_SCTN090D_MAINFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NEWLINE}"""
+				FMPSG_SCTN090D_MAINFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NEWLINE}"""
 			else:
-				FMPSG_SCTN090D_MAINFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
+				FMPSG_SCTN090D_MAINFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4391,10 +4287,10 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 4:
 				doErrorItem("not 4 items", thisItem_)
 				continue
-			thisLayoutName_ = thisItem_[2]
-			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
-			FMPSG_SCTN090E_LAYOUT_CMNT_DICT[thisLayoutName_] = f"""{thisComment_}"""
+			thisElementName_ = thisItem_[2]
+			if thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_] = {}
+			FMPSG_SCTN090E_LAYOUT_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4405,18 +4301,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisLayoutName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4427,18 +4323,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisLayoutName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Checkbox{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Checkbox{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4449,18 +4345,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisLayoutName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Col{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Col{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4471,18 +4367,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisLayoutName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem[5]
-			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Combo{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Combo{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4493,19 +4389,19 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 8:
 				doErrorItem("not 8 items", thisItem_)
 				continue
-			thisLayoutName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
 			thisVal_ = thisItem_[6]
-			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}**{thisVal_},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}**{thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4516,20 +4412,20 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 9:
 				doErrorItem("not 9 items", thisItem_)
 				continue
-			thisLayoutName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
 			thisKey_ = thisItem_[6]
 			thisVal_ = thisItem_[7]
-			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}{thisKey_}={thisVal_},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}{thisKey_}={thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4540,18 +4436,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisLayoutName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Radio{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Radio{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4562,15 +4458,15 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisLayoutName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
-			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
-			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][TABLEVEL] = thisTabLevel_
+			if thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_] = {}
+			FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][TABLEVEL] = thisTabLevel_
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4581,18 +4477,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisLayoutName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Spin{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Spin{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4603,18 +4499,18 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 7:
 				doErrorItem("not 7 items", thisItem_)
 				continue
-			thisLayoutName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisRowKey_ = thisItem_[3]
 			thisTabLevel_ = thisItem_[4]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[5]
-			if thisLayoutName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_] = {}
-			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_] = {}
-			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Text{OPAREN}  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_] = {}
+			if thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_] = {}
+			if thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_]:
+				FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] = ""
+			FMPSG_SCTN090E_LAYOUT_DICT[thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Text{OPAREN}  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4625,10 +4521,10 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 4:
 				doErrorItem("not 4 items", thisItem_)
 				continue
-			thisWindowName_ = thisItem_[2]
-			if thisWindowName_ not in FMPSG_SCTN090F_WINDOW_DICT:
-				FMPSG_SCTN090F_WINDOW_DICT[thisWindowName_] = ""
-			FMPSG_SCTN090F_WINDOW_CMNT_DICT[thisWindowName_] = f"""{thisComment_}"""
+			thisElementName_ = thisItem_[2]
+			if thisElementName_ not in FMPSG_SCTN090F_WINDOW_DICT:
+				FMPSG_SCTN090F_WINDOW_DICT[thisElementName_] = ""
+			FMPSG_SCTN090F_WINDOW_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4639,12 +4535,12 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisWindowName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisWindowName_ not in FMPSG_SCTN090F_WINDOW_DICT:
-				FMPSG_SCTN090F_WINDOW_DICT[thisWindowName_] = ""
-			FMPSG_SCTN090F_WINDOW_DICT[thisWindowName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090F_WINDOW_DICT:
+				FMPSG_SCTN090F_WINDOW_DICT[thisElementName_] = ""
+			FMPSG_SCTN090F_WINDOW_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4655,12 +4551,12 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
 				continue
-			thisWindowName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisKey_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-			if thisWindowName_ not in FMPSG_SCTN090F_WINDOW_DICT:
-				FMPSG_SCTN090F_WINDOW_DICT[thisWindowName_] = ""
-			FMPSG_SCTN090F_WINDOW_DICT[thisWindowName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN090F_WINDOW_DICT:
+				FMPSG_SCTN090F_WINDOW_DICT[thisElementName_] = ""
+			FMPSG_SCTN090F_WINDOW_DICT[thisElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4699,10 +4595,10 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 4:
 				doErrorItem("not 4 items", thisItem_)
 				continue
-			thisRCMenuName_ = thisItem_[2]
-			if thisRCMenuName_ not in FMPSG_SCTN0913_RCMENU_DICT:
-				FMPSG_SCTN0913_RCMENU_DICT[thisRCMenuName_] = ""
-			FMPSG_SCTN0913_RCMENU_CMNT_DICT[thisRCMenuName_] = f"""{thisComment_}"""
+			thisElementName_ = thisItem_[2]
+			if thisElementName_ not in FMPSG_SCTN0913_RCMENU_DICT:
+				FMPSG_SCTN0913_RCMENU_DICT[thisElementName_] = ""
+			FMPSG_SCTN0913_RCMENU_CMNT_DICT[thisElementName_] = f"""{thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4713,11 +4609,11 @@ def parseTBGLST(FDTBGLST):
 			if thisItemLen_ != 5:
 				doErrorItem("not 5 items", thisItem_)
 				continue
-			thisRCMenuName_ = thisItem_[2]
+			thisElementName_ = thisItem_[2]
 			thisVal_ = thisItem_[3]
-			if thisRCMenuName_ not in FMPSG_SCTN0913_RCMENU_DICT:
-				FMPSG_SCTN0913_RCMENU_DICT[thisRCMenuName_] = ""
-			FMPSG_SCTN0913_RCMENU_DICT[thisRCMenuName_] += f"""{NTAB(2)}{thisVal_},  # {thisComment_}{NEWLINE}"""
+			if thisElementName_ not in FMPSG_SCTN0913_RCMENU_DICT:
+				FMPSG_SCTN0913_RCMENU_DICT[thisElementName_] = ""
+			FMPSG_SCTN0913_RCMENU_DICT[thisElementName_] += f"""{NTAB(2)}{thisVal_},  # {thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4729,12 +4625,12 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 6 items", thisItem_)
 				continue
 			thisMainframeName_ = thisItem_[2]
-			thisWindowName_ = thisItem_[3]
+			thisElementName_ = thisItem_[3]
 			thisFinalize_ = thisItem_[4]
 			if thisFinalize_ == "True":
-				FMPSG_SCTN0914_POPUPFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NTAB(2)}POPUPFRAME.Maximize{OPAREN}{CPAREN}{NEWLINE}{NTAB(2)}POPUPFRAME.BringToFront{OPAREN}{CPAREN}{NEWLINE}"""
+				FMPSG_SCTN0914_POPUPFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NTAB(2)}POPUPFRAME.Maximize{OPAREN}{CPAREN}{NEWLINE}{NTAB(2)}POPUPFRAME.BringToFront{OPAREN}{CPAREN}{NEWLINE}"""
 			else:
-				FMPSG_SCTN0914_POPUPFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisWindowName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
+				FMPSG_SCTN0914_POPUPFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 

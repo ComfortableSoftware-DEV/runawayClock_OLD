@@ -1846,7 +1846,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	APPMODE: APPMODE_NONE,  # default mode is clocks
 	BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
-	CHECKBOX_RUNAWAY: True,  # default to avoiding mouse
+	CHECKBOX_RUNAWAY: False,  # default to avoiding mouse
 	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
