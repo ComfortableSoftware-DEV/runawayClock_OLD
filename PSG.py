@@ -55,6 +55,7 @@ COLOR_TEXT_HIGH = "#9900FF"  # the highlight color used in blinking bits when th
 COLOR_TEXT_INTERVAL_COUNT_INACTIVE = "#999988"  # the GRAY color used when the next event is not an interval
 COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
 COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
+COLOR_TEXT_SPIN = "#CCFF66"  # the color the clock digits are
 COLOR_TIME_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
 COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
@@ -76,6 +77,7 @@ INDEX_X = 0  # X
 INDEX_Y = 1  # Y
 INTERVAL_COUNT = "INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
 IS_ALERTING_NOW = "IS_ALERTING_NOW"  # is the event currently alerting
+MAINFRAME = None  # set up the mainframe
 MAINFRAME_LCN = "MAINFRAME_LCN"  # screen position of the mainframe
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 MOUSE_LCN = "MOUSE_LCN"  # track mouse location to ease load a bit
@@ -99,6 +101,7 @@ MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
 NAME = "NAME"  # name of the event
 NAME_NEXT_EVENT = "NAME_NEXT_EVENT"  # name of the next event up
+POPUPFRAME = None  # set up the mainframe
 POPUPTYPE = "POPUPTYPE"  # which type of popup are we defining
 POPUPTYPE_AUTO_CLOSE = "POPUPTYPE_AUTO_CLOSE"  # for intervals auto close
 PREDISMISSABLE = "PREDISMISSABLE"  #
@@ -791,7 +794,7 @@ FULL_SPINTUP = (
 	(READONLY, False),  # readonly bool
 	(S, (None, None)),  # (width, height) width = characters-wide, height = rows-high
 	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
-	(TEXT_COLOR, None),  # color of the text
+	(COLOR_TEXT_SPIN, None),  # color of the text
 	(TOOLTIP, None),  # text, that will appear when mouse hovers over the element
 	(VALUES, []),  # List of valid values
 	(VISIBLE, True),  # set visibility state of the element
@@ -816,7 +819,7 @@ FULL_SPIN_TDD = {
 	READONLY: False,  # readonly bool
 	S: (None, None),  # (width, height) width = characters-wide, height = rows-high
 	SIZE: (None, None),  # (width, height) width = characters-wide, height = rows-high
-	TEXT_COLOR: None,  # color of the text
+	COLOR_TEXT_SPIN: None,  # color of the text
 	TOOLTIP: None,  # text, that will appear when mouse hovers over the element
 	VALUES: [],  # List of valid values
 	VISIBLE: True,  # set visibility state of the element
@@ -1123,7 +1126,7 @@ NORMAL_SPINTUP = (
 	(INITIAL_VALUE, None),  # Initial item to show in window. Choose from list of values supplied
 	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element
 	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
-	(TEXT_COLOR, None),  # color of the text
+	(COLOR_TEXT_SPIN, None),  # color of the text
 	(VALUES, []),  # List of valid values
 )
 
@@ -1137,7 +1140,7 @@ NORMAL_SPIN_TDD = {
 	INITIAL_VALUE: None,  # Initial item to show in window. Choose from list of values supplied
 	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element
 	SIZE: (None, None),  # (width, height) width = characters-wide, height = rows-high
-	TEXT_COLOR: None,  # color of the text
+	COLOR_TEXT_SPIN: None,  # color of the text
 	VALUES: [],  # List of valid values
 }
 
@@ -1754,10 +1757,10 @@ class CLASS_C_CLOCKS(object):
 		]
 
 		self.C_CLOCKS_SPIN01_SPIN_DICT = {  # define the alarm en/dis/able spinbox
+			TEXT: "SPIN_TEXT",  # comment
 			BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # comment
 			FONT: FONTSZ_ALERT_TEXT,  # comment
 			SIZE: (16, 1),  # comment
-			TEXT: SPIN_TEXT,  # comment
 			TEXT_COLOR: COLOR_ALERT_TEXT,  # comment
 			VALUES: self.C_CLOCKS_SPIN01_SPIN_LIST,  # comment
 		}
@@ -2513,17 +2516,8 @@ def updateClocks():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doReadAMainframe(timeout_=SZ_TIMEOUT_MS):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	# print(f"""{CF.getDebugInfo()}""")
-	if MAPPDS[APPMODE] == APPMODE_ALARMPOPUP:
-		# whatzit_ = POPUPFRAME.Read(timeout=timeout_)
-#		whatzit = "hello"
-#		print(f"""{CF.getDebugInfo()}
-#		{CF.frameIt("whatzit_", whatzit)}""")
-		event_ = ""
-		values_ = []
-	else:
-		event_, values_ = MAINFRAME.Read(timeout=timeout_)
-	return event_, values_
+	eventVals_ = SG.read_all_windows(timeout=timeout_)
+	return eventVals_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2736,7 +2730,7 @@ def doAlarmEvent(eventIndexToDo_):
 	event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
 
 	if event_[IS_ALERTING_NOW] is True:
-		return
+		return None
 
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][IS_ALERTING_NOW] = True
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_LAST_RUN] = NOW_NOMS
@@ -2747,7 +2741,7 @@ def doAlarmEvent(eventIndexToDo_):
 		updateInterval(eventIndexToDo_)
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][INTERVAL_COUNT] += 1
 	event_[INTERVAL_COUNT] += 1
-	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER] = CLASS_POPUP_INTERVAL(event_[NAME], event_[INTERVAL_COUNT], [event_[ALARMPOPUP_TEXT_TEXT]])
+	# MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER] = CLASS_POPUP_INTERVAL(event_[NAME], event_[INTERVAL_COUNT], [event_[ALARMPOPUP_TEXT_TEXT]])
 	return True
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2806,6 +2800,7 @@ def checkAlertPopupStatus(eventIndexToDo_):
 # __main__
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # @profile
+oldValues_ = None
 def reallyDoIt():
 	global \
 			CLOCKS_DICT, \
@@ -2817,83 +2812,70 @@ def reallyDoIt():
 			TIMES_NEXT_PERIODIC_JOB
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	localTimes()
+	while True:
+		localTimes()
 
-	if (NOWS == 0):
-		doMidnightWork()
+		if (NOWS == 0):
+			doMidnightWork()
 
-	checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
-
-	if (TIMES_NEXT_EVENT == NOW_NOMS):
-		alarmResult_ = doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
-		return APPSTATUS_NEW_ALARM
-
-	findNextAlarmEvent()
-	updateClocks()
-
-	if (CURRENT_EVENTMODE == EVENTMODE_INTERVAL) and (PREV_ALARM_TYPE != EVENTMODE_INTERVAL):
-		PREV_ALARM_TYPE = EVENTMODE_INTERVAL
-		intervalCountOn()
-	elif (PREV_ALARM_TYPE == EVENTMODE_INTERVAL) and (CURRENT_EVENTMODE != EVENTMODE_INTERVAL):
-		PREV_ALARM_TYPE = CURRENT_EVENTMODE
-		intervalCountOff()
-	elif (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
-		updateInterval()
-
-	event_, values_ = doReadAMainframe()
-
-	if (oldValues_ != values_) and (values_ is not None):
-		MAPPDS = CF.mergeDicts(MAPPDS, values_)
-		oldValues_ = values_
-
-#		if event_ != "__TIMEOUT__":
-#			print(f"""{CF.NEWLINE}{CF.getDebugInfo()}
-#			{CF.frameIt("event_", event_)}""")
-
-	if event_ == "__TIMEOUT__":
 		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
-		for eventIndex_ in INTERVALLING_LIST:
-			checkAlertPopupStatus(eventIndex_)
-		# CF.whirl()
-		# updateClocks()
-		continue
 
-	elif event_ == BTN_QUIT:
-		retVal_ = "BTN_QUIT"
-		break
+		if (TIMES_NEXT_EVENT == NOW_NOMS):
+			alarmResult_ = doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
+			return APPMODE_NEW_ALARMPOPUP
 
-	elif event_ == CHECKBOX_RUNAWAY:
-		MAPPDS[CHECKBOX_RUNAWAY] = not MAPPDS[CHECKBOX_RUNAWAY]
-
-	elif event_ == CHECKBOX_ALPHA_LOW:
-		MAPPDS[CHECKBOX_ALPHA_LOW] = not MAPPDS[CHECKBOX_ALPHA_LOW]
-
-	elif event_ == BTN_ZERO:
-		CLOCKS_DICT[TIME_AT_ZEROELAPSE] = NOWS
+		findNextAlarmEvent()
 		updateClocks()
 
-	return retVal_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+		if (CURRENT_EVENTMODE == EVENTMODE_INTERVAL) and (PREV_ALARM_TYPE != EVENTMODE_INTERVAL):
+			PREV_ALARM_TYPE = EVENTMODE_INTERVAL
+			intervalCountOn()
+		elif (PREV_ALARM_TYPE == EVENTMODE_INTERVAL) and (CURRENT_EVENTMODE != EVENTMODE_INTERVAL):
+			PREV_ALARM_TYPE = CURRENT_EVENTMODE
+			intervalCountOff()
+		elif (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
+			updateInterval()
+
+		eventVals_ = doReadAMainframe()
+		print(f"""{CF.frameIt("eventVals_", eventVals_)}""")
+
+		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
 
 
-def doit(startMode_):
+#		if event_ == BTN_QUIT:
+#			return BTN_QUIT
+#
+#		elif event_ == CHECKBOX_RUNAWAY:
+#			MAPPDS[CHECKBOX_RUNAWAY] = not MAPPDS[CHECKBOX_RUNAWAY]
+#
+#		elif event_ == CHECKBOX_ALPHA_LOW:
+#			MAPPDS[CHECKBOX_ALPHA_LOW] = not MAPPDS[CHECKBOX_ALPHA_LOW]
+#
+#		elif event_ == BTN_ZERO:
+#			CLOCKS_DICT[TIME_AT_ZEROELAPSE] = NOWS
+#			updateClocks()
+
+		# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+def doit():
 	with \
 			CLOCKS_CLASS() as NEXT, \
 			CF.withPickles("runawayClock.pkl", MAPPDS):
-		PSG.doInit1()
+		doInit1()
 		while True:
 			nextMode_ = reallyDoIt()
 
 			if nextMode_ == BTN_QUIT:
 				break
 
-			elif nextMode_ == APPSTATUS_NEW_ALARM:
-				with CLASS_C_CLOCKS(CF.serializeIt()):
+			elif nextMode_ == APPMODE_NEW_ALARMPOPUP:
+				with CLASS_C_CLOCKS(CF.serializeIt("runawayClock_DEV")):
 					while True:
 						nextMode_ = reallyDoIt()
 
-						if nextMode_ == APPMO
-
+						if nextMode_ == APPMODE_DISMISS_ALARMPOPUP:
+							break
 
 			else:
 				print(f"""{CF.getDebugInfo()}

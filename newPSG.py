@@ -55,6 +55,7 @@ COLOR_TEXT_HIGH = "#9900FF"  # the highlight color used in blinking bits when th
 COLOR_TEXT_INTERVAL_COUNT_INACTIVE = "#999988"  # the GRAY color used when the next event is not an interval
 COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
 COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
+COLOR_TEXT_SPIN = "#CCFF66"  # the color the clock digits are
 COLOR_TIME_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
 COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
@@ -76,6 +77,7 @@ INDEX_X = 0  # X
 INDEX_Y = 1  # Y
 INTERVAL_COUNT = "INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
 IS_ALERTING_NOW = "IS_ALERTING_NOW"  # is the event currently alerting
+MAINFRAME = None  # set up the mainframe
 MAINFRAME_LCN = "MAINFRAME_LCN"  # screen position of the mainframe
 MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 MOUSE_LCN = "MOUSE_LCN"  # track mouse location to ease load a bit
@@ -99,6 +101,7 @@ MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
 NAME = "NAME"  # name of the event
 NAME_NEXT_EVENT = "NAME_NEXT_EVENT"  # name of the next event up
+POPUPFRAME = None  # set up the mainframe
 POPUPTYPE = "POPUPTYPE"  # which type of popup are we defining
 POPUPTYPE_AUTO_CLOSE = "POPUPTYPE_AUTO_CLOSE"  # for intervals auto close
 PREDISMISSABLE = "PREDISMISSABLE"  # 
@@ -791,7 +794,7 @@ FULL_SPINTUP = (
 	(READONLY, False),  # readonly bool
 	(S, (None, None)),  # (width, height) width = characters-wide, height = rows-high
 	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
-	(TEXT_COLOR, None),  # color of the text
+	(COLOR_TEXT_SPIN, None),  # color of the text
 	(TOOLTIP, None),  # text, that will appear when mouse hovers over the element
 	(VALUES, []),  # List of valid values
 	(VISIBLE, True),  # set visibility state of the element
@@ -816,7 +819,7 @@ FULL_SPIN_TDD = {
 	READONLY: False,  # readonly bool
 	S: (None, None),  # (width, height) width = characters-wide, height = rows-high
 	SIZE: (None, None),  # (width, height) width = characters-wide, height = rows-high
-	TEXT_COLOR: None,  # color of the text
+	COLOR_TEXT_SPIN: None,  # color of the text
 	TOOLTIP: None,  # text, that will appear when mouse hovers over the element
 	VALUES: [],  # List of valid values
 	VISIBLE: True,  # set visibility state of the element
@@ -1123,7 +1126,7 @@ NORMAL_SPINTUP = (
 	(INITIAL_VALUE, None),  # Initial item to show in window. Choose from list of values supplied
 	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element
 	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
-	(TEXT_COLOR, None),  # color of the text
+	(COLOR_TEXT_SPIN, None),  # color of the text
 	(VALUES, []),  # List of valid values
 )
 
@@ -1137,7 +1140,7 @@ NORMAL_SPIN_TDD = {
 	INITIAL_VALUE: None,  # Initial item to show in window. Choose from list of values supplied
 	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element
 	SIZE: (None, None),  # (width, height) width = characters-wide, height = rows-high
-	TEXT_COLOR: None,  # color of the text
+	COLOR_TEXT_SPIN: None,  # color of the text
 	VALUES: [],  # List of valid values
 }
 
@@ -1754,10 +1757,10 @@ class CLASS_C_CLOCKS(object):
 		]
 
 		self.C_CLOCKS_SPIN01_SPIN_DICT = {  # define the alarm en/dis/able spinbox
+			TEXT: "SPIN_TEXT",  # comment
 			BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # comment
 			FONT: FONTSZ_ALERT_TEXT,  # comment
 			SIZE: (16, 1),  # comment
-			TEXT: SPIN_TEXT,  # comment
 			TEXT_COLOR: COLOR_ALERT_TEXT,  # comment
 			VALUES: self.C_CLOCKS_SPIN01_SPIN_LIST,  # comment
 		}

@@ -1,7 +1,6 @@
 #!/usr/bin/env /usr/bin/python
 
 
-import CF
 import PSG
 
 
@@ -12,42 +11,12 @@ NEXT_MODE = None
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # __main__
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# @profile
 def __main__():
 	global \
 		STARTMODE, \
 		NEXT_MODE
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	while True:
-		if STARTMODE == "CLOCKS":
-			with \
-					PSG.CLOCKS_CLASS() as NEXT, \
-					CF.withPickles("runawayClock.pkl", PSG.MAPPDS):
-				PSG.doInit1()
-				NEXT_MODE = PSG.doIt()
-
-		elif STARTMODE == "THECLOCK":
-			with \
-					PSG.THECLOCK_CLASS() as NEXT, \
-					CF.withPickles("runawayClock.pkl", PSG.MAPPDS):
-				PSG.doInit1()
-				NEXT_MODE = PSG.doIt()
-
-		if NEXT_MODE == PSG.BTN_QUIT:
-			break
-
-		elif NEXT_MODE in [
-			"CLOCKS",
-			"THECLOCK",
-			"MAINMODE",
-		]:
-			STARTMODE = NEXT_MODE
-
-		else:
-			print(f"""{CF.getDebugInfo()}
-			{CF.frameIt("NEXT_MODE", NEXT_MODE)}""")
-			break
-
+	PSG.doit()
 	print("gotterdid")
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 

@@ -1065,6 +1065,7 @@ TBGLST = [
 	("PSGVAL_COLOR_GRAYC", FMAXPSG_SCTN0900_STR_DEF, "COLOR_GRAYC", "#CCCCCC", "gray C",),
 	("PSGVAL_COLOR_TEXT_HIGH", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TEXT_HIGH", "#9900FF", "the highlight color used in blinking bits when they are 'lit'",),
 	("PSGVAL_COLOR_TEXT_INTERVAL_COUNT_INACTIVE", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TEXT_INTERVAL_COUNT_INACTIVE", "#999988", "the GRAY color used when the next event is not an interval",),
+	("PSGVAL_COLOR_TEXT_SPIN", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TEXT_SPIN", "#CCFF66", "the color the clock digits are",),
 	("PSGVAL_COLOR_TEXT_LOW", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TEXT_LOW", "#330022", "the color the clock digits are",),
 	("PSGVAL_COLOR_TEXT_NORMAL", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TEXT_NORMAL", "#660044", "the color the clock digits are",),
 	("PSGVAL_COLOR_TIME_CLOCK", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TIME_CLOCK", "#CC66FF", "color of the clock on any window/frame/etc.",),
@@ -1229,7 +1230,7 @@ TBGLST = [
 	("PSGVAL_FULL_SPIN_READONLY", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "FULL_SPIN", "READONLY", "False", "readonly bool",),
 	("PSGVAL_FULL_SPIN_S", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "FULL_SPIN", "S", "(None, None)", "(width, height) width = characters-wide, height = rows-high",),
 	("PSGVAL_FULL_SPIN_SIZE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "FULL_SPIN", "SIZE", "(None, None)", "(width, height) width = characters-wide, height = rows-high",),
-	("PSGVAL_FULL_SPIN_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "FULL_SPIN", "TEXT_COLOR", "None", "color of the text",),
+	("PSGVAL_FULL_SPIN_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "FULL_SPIN", "COLOR_TEXT_SPIN", "None", "color of the text",),
 	("PSGVAL_FULL_SPIN_TOOLTIP", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "FULL_SPIN", "TOOLTIP", "None", "text, that will appear when mouse hovers over the element",),
 	("PSGVAL_FULL_SPIN_VALUES", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "FULL_SPIN", "VALUES", "[]", "List of valid values",),
 	("PSGVAL_FULL_SPIN_VISIBLE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "FULL_SPIN", "VISIBLE", "True", "set visibility state of the element",),
@@ -1430,7 +1431,7 @@ TBGLST = [
 	("PSGVAL_NORMAL_SPIN_INITIAL_VALUE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "INITIAL_VALUE", "None", "Initial item to show in window. Choose from list of values supplied",),
 	("PSGVAL_NORMAL_SPIN_KEY", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "KEY", "None", "Used with window.FindElement and with return values to uniquely identify this element",),
 	("PSGVAL_NORMAL_SPIN_SIZE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "SIZE", "(None, None)", "(width, height) width = characters-wide, height = rows-high",),
-	("PSGVAL_NORMAL_SPIN_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "TEXT_COLOR", "None", "color of the text",),
+	("PSGVAL_NORMAL_SPIN_TEXT_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "COLOR_TEXT_SPIN", "None", "color of the text",),
 	("PSGVAL_NORMAL_SPIN_VALUES", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_SPIN", "VALUES", "[]", "List of valid values",),
 	("PSGVAL_NORMAL_TEXT", FMAXPSG_SCTN0905_TUPDICT_DEF, "NORMAL_TEXT", "the full monty for text elements",),
 	("PSGVAL_NORMAL_TEXT_BACKGROUND_COLOR", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "NORMAL_TEXT", "BACKGROUND_COLOR", "None", "color of background",),
@@ -1541,6 +1542,8 @@ TBGLST = [
 	("PSGVAL_UPDATE_COMBO_VALUES", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "UPDATE_COMBO", "VALUES", "None", "values to choose. While displayed as text, the items returned are what the caller supplied, not text",),
 	("PSGVAL_UPDATE_COMBO_VISIBLE", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "UPDATE_COMBO", "VISIBLE", "None", "set visibility state of the element",),
 	("PSGVAL_ZERO_CLOCK", FMAXPSG_SCTN0900_VAL_DEF, "ZERO_CLOCK", "0", "all the zeros",),
+	("PSGVAL_VMAINFRAME", FMAXPSG_SCTN0900_VAL_DEF, "MAINFRAME", "None", "set up the mainframe",),
+	("PSGVAL_VPOPUPFRAME", FMAXPSG_SCTN0900_VAL_DEF, "POPUPFRAME", "None", "set up the mainframe",),
 	("PSGVAL__BTN_DISMISS20", FMAX_NOP, "start of the dismiss button for alarms",),
 	("PSGVAL__BTN_DISMISS2000", FMAXPSG_SCTN0906_BTN_DEF, "BTN_DISMISS20", "",),
 	("PSGVAL__BTN_DISMISS2001", FMAXPSG_SCTN0906_BTN_STR_ADD, "BTN_DISMISS20", "BUTTON_TEXT", "", "button_text empty for the DOWN button",),
@@ -1897,7 +1900,7 @@ TBGLST = [
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "BACKGROUND_COLOR", "COLOR_ALERT_BACKGROUND", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "FONT", "FONTSZ_ALERT_TEXT", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "SIZE", "(16, 1)", "comment",),
-	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "TEXT", "SPIN_TEXT", "comment",),
+	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VS_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "TEXT", "SPIN_TEXT", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "TEXT_COLOR", "COLOR_ALERT_TEXT", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "VALUES", "%LIST%", "comment",),
 	("PSGVAL__C_CLOCKS_SPIN01_02", FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD, "C_CLOCKS", "C_CLOCKS_SPIN01", "0", "index 0",),
@@ -5140,12 +5143,7 @@ def parseTBGLST(FDTBGLST):
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
 				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
-
-			if thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
-				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_] = {}
-			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
-				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] = ""
+				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_][thisElementName_] = ""
 
 			if (thisKey_ == "VALUES") and (thisVal_ == "%LIST%"):
 				thisValStr_ = f"""self.{thisClassName_}{thisElementName_}_LIST"""
@@ -5174,11 +5172,6 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_][thisElementName_] = ""
 
-			if thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
-				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_] = {}
-			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
-				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_][thisElementName_] = ""
-
 			if (thisKey_ == "VALUES") and (thisVal_ == "%LIST%"):
 				thisValStr_ = f"""self.{thisElementName_}_SPIN_LIST"""
 			else:
@@ -5200,11 +5193,6 @@ def parseTBGLST(FDTBGLST):
 			thisElementName_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
 
-			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
-				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
-			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
-
 			if thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_] = {}
 			if thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_]:
@@ -5225,11 +5213,6 @@ def parseTBGLST(FDTBGLST):
 			thisClassName_ = thisItem_[2]
 			thisElementName_ = thisItem_[3]
 			thisVal_ = thisItem_[4]
-
-			if thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
-				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
-			if thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_DICT[thisClassName_] = {}
 
 			if thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[thisClassName_] = {}
@@ -5320,6 +5303,79 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # CLASS_TEXT_ENDS
 
+# CLASS_WINDOW_BEGINS
+	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_WINDOW_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 5:
+				doErrorItem("not 5 items", thisItem_)
+				continue
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_WINDOW_DICT:
+				FMPSG_SCTN0916_CLASS_WINDOW_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_WINDOW_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_WINDOW_DICT[thisClassName_][thisElementName_] = ""
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT:
+				FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT[thisClassName_] = {}
+
+			FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT[thisClassName_][thisElementName_] = f"""{thisComment_}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_WINDOW_STR_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 7:
+				doErrorItem("not 7 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+			thisKey_ = thisItem_[4]
+			thisVal_ = thisItem_[5]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_WINDOW_DICT:
+				FMPSG_SCTN0916_CLASS_WINDOW_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_WINDOW_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_WINDOW_DICT[thisClassName_][thisElementName_] = ""
+
+			FMPSG_SCTN0916_CLASS_WINDOW_DICT[thisClassName_][thisElementName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 7:
+				doErrorItem("not 7 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+			thisKey_ = thisItem_[4]
+			thisVal_ = thisItem_[5]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_WINDOW_DICT:
+				FMPSG_SCTN0916_CLASS_WINDOW_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_WINDOW_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_WINDOW_DICT[thisClassName_][thisElementName_] = ""
+
+			FMPSG_SCTN0916_CLASS_WINDOW_DICT[thisClassName_][thisElementName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+
+	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+# CLASS_WINDOW_ENDS
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 #
 #
