@@ -21,11 +21,12 @@ ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
 ALPHA_LOW = "ALPHA_LOW"  # alphalow key
 ALPHA_MODE = "ALPHA_MODE"  # alpha mode key
 APPMODE = "APPMODE"  # app mode key
-APPMODE_ALARMPOPUP = "APPMODE_ALARMPOPUP"  # main mode (xpand from clocks to this)
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
+APPMODE_DISMISS_ALARMPOPUP = "APPMODE_DISMISS_ALARMPOPUP"  # main mode (xpand from clocks to this)
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
 APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # mouseOver mode (xpand from clocks to this)
+APPMODE_NEW_ALARMPOPUP = "APPMODE_NEW_ALARMPOPUP"  # main mode (xpand from clocks to this)
 APPMODE_NONE = "APPMODE_NONE"  # NONE mode
 APPMODE_THECLOCK = "APPMODE_THECLOCK"  # theClock mode (xpand from clocks to this)
 BBOX = "BBOX"  # BOUNDING BOX
@@ -2724,7 +2725,6 @@ def doMidnightWork():
 # doAlarmEvent
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doAlarmEvent(eventIndexToDo_):
-	return
 	global \
 			ALERTING_LIST, \
 			MAINFRAME, \
@@ -2732,38 +2732,23 @@ def doAlarmEvent(eventIndexToDo_):
 			NUMBER_ACTIVE_ALARMS, \
 			POPUPFRAME, \
 			PREVIOUS_APPMODE
-	"""
-	type of event
-	popup appropriate window
-	start timer on no more alarm
-	check for another event at the same time
-	reset for next
-	"""
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
+
 	if event_[IS_ALERTING_NOW] is True:
-#		print(f"""{CF.getDebugInfo}
-#		already alerting
-#		{CF.frameIt("event_", event_)}
-#		""")
 		return
-#	print("fresh alert")
+
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][IS_ALERTING_NOW] = True
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_LAST_RUN] = NOW_NOMS
 	NUMBER_ACTIVE_ALARMS += 1
 	ALERTING_LIST.append(eventIndexToDo_)
-#	print(f"""{CF.getDebugInfo()}
-#	event_ {event_}""")
+
 	if event_[EVENTMODE] == EVENTMODE_INTERVAL:
 		updateInterval(eventIndexToDo_)
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][INTERVAL_COUNT] += 1
 	event_[INTERVAL_COUNT] += 1
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER] = CLASS_POPUP_INTERVAL(event_[NAME], event_[INTERVAL_COUNT], [event_[ALARMPOPUP_TEXT_TEXT]])
-#	print(f"""{CF.getDebugInfo()}
-#{CF.frameIt("event_", event_)}
-#{CF.IGMPP(MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER])}
-#	""")
-
+	return True
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2821,7 +2806,7 @@ def checkAlertPopupStatus(eventIndexToDo_):
 # __main__
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # @profile
-def doIt():
+def reallyDoIt():
 	global \
 			CLOCKS_DICT, \
 			MAINFRAME, \
@@ -2831,76 +2816,89 @@ def doIt():
 			TIMES_NEXT_EVENT, \
 			TIMES_NEXT_PERIODIC_JOB
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	oldValues_ = None
-	retVal_ = None
-	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 
-	while True:
-		localTimes()
+	localTimes()
 
-		if (NOWS == 0):
-			doMidnightWork()
+	if (NOWS == 0):
+		doMidnightWork()
 
-		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
+	checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
 
-		if (TIMES_NEXT_EVENT == NOW_NOMS):
-			# MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][TIME_AT_LAST_RUN] = NOWS
-			# MAPPDS[EVENT_ENTRIES][MAPPDS[INDEX_OF_NEXT_EVENT]][IS_ALERTING_NOW] = True
-			doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
+	if (TIMES_NEXT_EVENT == NOW_NOMS):
+		alarmResult_ = doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
+		return APPSTATUS_NEW_ALARM
 
-		findNextAlarmEvent()
-		updateClocks()
+	findNextAlarmEvent()
+	updateClocks()
 
-		if (CURRENT_EVENTMODE == EVENTMODE_INTERVAL) and (PREV_ALARM_TYPE != EVENTMODE_INTERVAL):
-			PREV_ALARM_TYPE = EVENTMODE_INTERVAL
-			intervalCountOn()
-		elif (PREV_ALARM_TYPE == EVENTMODE_INTERVAL) and (CURRENT_EVENTMODE != EVENTMODE_INTERVAL):
-			PREV_ALARM_TYPE = CURRENT_EVENTMODE
-			intervalCountOff()
-		elif (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
-			updateInterval()
+	if (CURRENT_EVENTMODE == EVENTMODE_INTERVAL) and (PREV_ALARM_TYPE != EVENTMODE_INTERVAL):
+		PREV_ALARM_TYPE = EVENTMODE_INTERVAL
+		intervalCountOn()
+	elif (PREV_ALARM_TYPE == EVENTMODE_INTERVAL) and (CURRENT_EVENTMODE != EVENTMODE_INTERVAL):
+		PREV_ALARM_TYPE = CURRENT_EVENTMODE
+		intervalCountOff()
+	elif (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
+		updateInterval()
 
-		event_, values_ = doReadAMainframe()
-#		print(f"""{CF.getDebugInfo()}
-#		{CF.frameIt("event_", event_)}
-#		{CF.frameIt("values_", values_)}
-#		""")
+	event_, values_ = doReadAMainframe()
 
-
-		if (oldValues_ != values_) and (values_ is not None):
-#			print(f"""{CF.getDebugInfo()}
-#			{CF.frameIt("values_", values_)}""")
-			MAPPDS = CF.mergeDicts(MAPPDS, values_)
-			oldValues_ = values_
+	if (oldValues_ != values_) and (values_ is not None):
+		MAPPDS = CF.mergeDicts(MAPPDS, values_)
+		oldValues_ = values_
 
 #		if event_ != "__TIMEOUT__":
 #			print(f"""{CF.NEWLINE}{CF.getDebugInfo()}
 #			{CF.frameIt("event_", event_)}""")
 
-		if event_ == "__TIMEOUT__":
-			checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
-			for eventIndex_ in INTERVALLING_LIST:
-				checkAlertPopupStatus(eventIndex_)
-			# CF.whirl()
-			# updateClocks()
-			continue
+	if event_ == "__TIMEOUT__":
+		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
+		for eventIndex_ in INTERVALLING_LIST:
+			checkAlertPopupStatus(eventIndex_)
+		# CF.whirl()
+		# updateClocks()
+		continue
 
-		elif event_ == BTN_QUIT:
-			retVal_ = "BTN_QUIT"
-			break
+	elif event_ == BTN_QUIT:
+		retVal_ = "BTN_QUIT"
+		break
 
-		elif event_ == CHECKBOX_RUNAWAY:
-			MAPPDS[CHECKBOX_RUNAWAY] = not MAPPDS[CHECKBOX_RUNAWAY]
+	elif event_ == CHECKBOX_RUNAWAY:
+		MAPPDS[CHECKBOX_RUNAWAY] = not MAPPDS[CHECKBOX_RUNAWAY]
 
-		elif event_ == CHECKBOX_ALPHA_LOW:
-			MAPPDS[CHECKBOX_ALPHA_LOW] = not MAPPDS[CHECKBOX_ALPHA_LOW]
+	elif event_ == CHECKBOX_ALPHA_LOW:
+		MAPPDS[CHECKBOX_ALPHA_LOW] = not MAPPDS[CHECKBOX_ALPHA_LOW]
 
-		elif event_ == BTN_ZERO:
-			CLOCKS_DICT[TIME_AT_ZEROELAPSE] = NOWS
-			updateClocks()
+	elif event_ == BTN_ZERO:
+		CLOCKS_DICT[TIME_AT_ZEROELAPSE] = NOWS
+		updateClocks()
 
 	return retVal_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+def doit(startMode_):
+	with \
+			CLOCKS_CLASS() as NEXT, \
+			CF.withPickles("runawayClock.pkl", MAPPDS):
+		PSG.doInit1()
+		while True:
+			nextMode_ = reallyDoIt()
+
+			if nextMode_ == BTN_QUIT:
+				break
+
+			elif nextMode_ == APPSTATUS_NEW_ALARM:
+				with CLASS_C_CLOCKS(CF.serializeIt()):
+					while True:
+						nextMode_ = reallyDoIt()
+
+						if nextMode_ == APPMO
+
+
+			else:
+				print(f"""{CF.getDebugInfo()}
+				{CF.frameIt("nextMode_", nextMode_)}""")
+				break
 
 
 #
