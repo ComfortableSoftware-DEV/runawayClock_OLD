@@ -141,8 +141,8 @@ TIME_INTERVAL__END = "TIME_INTERVAL__END"  # key for time an interval goes to le
 TIME_INTERVAL_START = "TIME_INTERVAL_START"  # interval timer starting time, reset each time the interval goes off
 TIME_LEN_RING = "TIME_LEN_RING"  # length of ringing
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
-TIMEH_ADJUST_HRS = 0  # comment
-TIMEM_ADJUST_MINS = 0  # comment
+TIMEH_ADJUST_HRS = 20  # comment
+TIMEM_ADJUST_MINS = 37  # comment
 TITLE_ALARMPOPUP = "ALERT"  # string with window title for APPMODE_CLOCKS
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
@@ -1718,7 +1718,7 @@ class CLASS_C_CLOCKS(object):
 			POPUPFRAME, \
 			TIMES_LIST
 
-	def __init__(self, {}, thisWindow_=None):
+	def __init__(self, thisWindow_=None):
 		THIS_WINDOW = thisWindow_
 
 		self.SERIAL_KEY = CF.serializeIt("RAC")
@@ -1834,12 +1834,12 @@ class CLASS_C_CLOCKS(object):
 			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
 			return self.THIS_WINDOW
 
-		
+
 		TIMES_LIST.append()
 
 
 	def __exit__(self, *args_):
-	global \
+		global \
 			MAINFRAME, \
 			MAPPDS, \
 			POPUPFRAME, \
@@ -1987,8 +1987,6 @@ def splitXYToRaw(XYToSplit_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*def mousepos():
 # @profile
 def getMousePos():
-	global \
-			TIMEMS_NEXT_MOUSE_CHECK
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	mseData_ = MLCN()._data
@@ -2125,21 +2123,20 @@ def getCloseBBox(location_, size_, closeEnough_=SZ_CLOSE):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # updateMainframeFromDict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def updateMainframeFromDict(dictToUpdateFrom_, isTimeUpdate_=False):
+def updateMainframeFromDict(dictToUpdateFrom_):
 	global \
 			MAINFRAME
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_, val_ in dictToUpdateFrom_.items():
-		# print(f"""key_ {key_} val_ {val_}""")
-		if isTimeUpdate_ is True:
-			if val_ >= CF.DAYSECS:
+		print(f"""key_ {key_} val_ {val_}""")
+		if (key_ in TIMES_LIST):
+			print(f"""is a time""")
+			if (val_ >= CF.DAYSECS):
+				print("is tomorrow")
 				val_ -= CF.DAYSECS
-#			print(f"""{CF.getDebugInfo()}
-#			{CF.frameItHMS(key_, val_)}""")
 			MAINFRAME.Element(key_).Update(value=CF.nrmlIntToHMS(val_))
+
 		else:
-#			print(f"""{CF.getDebugInfo()}
-#			{CF.frameItHMS(key_, val_)}""")
 			MAINFRAME.Element(key_).Update(value=val_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2443,10 +2440,10 @@ def updateClocks():
 		# print(f"""mappdsMode_ {mappdsMode_}""")
 
 		if mappdsMode_ == APPMODE_THECLOCK:
-			updateMainframeFromDict(THECLOCK_DICT, isTimeUpdate_=True)
+			updateMainframeFromDict(THECLOCK_DICT)
 
 		elif mappdsMode_ == APPMODE_CLOCKS:
-			updateMainframeFromDict(CLOCKS_DICT, isTimeUpdate_=True)
+			updateMainframeFromDict(CLOCKS_DICT)
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2459,9 +2456,9 @@ def doReadAMainframe(timeout_=SZ_TIMEOUT_MS):
 	# print(f"""{CF.getDebugInfo()}""")
 	if MAPPDS[APPMODE] == APPMODE_ALARMPOPUP:
 		# whatzit_ = POPUPFRAME.Read(timeout=timeout_)
-		whatzit = "hello"
-		print(f"""{CF.getDebugInfo()}
-		{CF.frameIt("whatzit_", whatzit)}""")
+#		whatzit = "hello"
+#		print(f"""{CF.getDebugInfo()}
+#		{CF.frameIt("whatzit_", whatzit)}""")
 		event_ = ""
 		values_ = []
 	else:
@@ -2573,15 +2570,20 @@ def findNextAlarmEvent():
 				nextEventList_.append((fixTimeAtNext(event_[TIME_AT_NEXT]), index_, event_[EVENTMODE], event_[NAME]))
 
 	nextEventList_.sort()
-	CLOCKS_DICT[TIME_AT_NEXT] = nextEventList_[0][0]# (time, index, mode, name)
-	TIMES_NEXT_EVENT = CLOCKS_DICT[TIME_AT_NEXT]
-	NAME_NEXT_EVENT_STR = nextEventList_[0][3]# (time, index, mode, name)
-	CLOCKS_TEXT_DICT[NAME_NEXT_EVENT] = NAME_NEXT_EVENT_STR
-	CURRENT_EVENTMODE = nextEventList_[0][2]# (time, index, mode, name)
-	if (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
-		CURRENT_INTERVAL_COUNT = MAPPDS[EVENT_ENTRIES][nextEventList_[0][1]]
-		updateIntervalCount()
-	updateMainframeFromDict(CLOCKS_TEXT_DICT)
+#	print(f"""{CF.frameIt("nextEventList_", nextEventList_)}
+#{CF.frameIt("CLOCKS_DICT", CLOCKS_DICT)}""")
+	if nextEventList_ != []:
+		CLOCKS_DICT[TIME_AT_NEXT] = nextEventList_[0][0]# (time, index, mode, name)
+		TIMES_NEXT_EVENT = CLOCKS_DICT[TIME_AT_NEXT]
+		NAME_NEXT_EVENT_STR = nextEventList_[0][3]# (time, index, mode, name)
+		CLOCKS_TEXT_DICT[NAME_NEXT_EVENT] = NAME_NEXT_EVENT_STR
+		CURRENT_EVENTMODE = nextEventList_[0][2]# (time, index, mode, name)
+
+		if (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
+			CURRENT_INTERVAL_COUNT = MAPPDS[EVENT_ENTRIES][nextEventList_[0][1]]
+			updateIntervalCount()
+
+		updateMainframeFromDict(CLOCKS_TEXT_DICT)
 #	print(f"""{CF.getDebugInfo()}
 #	{CF.frameItHMS("NOWS updated next event", NOWS)}
 #	{CF.frameIt("EVENT_ENTRIES", MAPPDS[EVENT_ENTRIES])}
@@ -2595,7 +2597,9 @@ def findNextAlarmEvent():
 # doMidnightWork
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doMidnightWork():
+	print("midnight")
 	global \
+			CLOCKS_DICT, \
 			MAPPDS, \
 			TIMEMS_NEXT_MOUSE_CHECK, \
 			TIMEMS_NEXT_MOVED, \
@@ -2603,12 +2607,38 @@ def doMidnightWork():
 			TIMES_NEXT_EVENT, \
 			TIMES_NEXT_PERIODIC_JOB
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TIMEMS_NEXT_MOUSE_CHECK = TIMEMS_NEXT_MOUSE_CHECK % CF.DAYMS
-	TIMEMS_NEXT_MOVED = TIMEMS_NEXT_MOVED % CF.DAYMS
-	TIMEMS_NEXT_UPDATED = TIMEMS_NEXT_UPDATED % CF.DAYMS
-	TIMES_NEXT_EVENT = TIMES_NEXT_EVENT % CF.DAYMS
-	TIMES_NEXT_PERIODIC_JOB = TIMES_NEXT_PERIODIC_JOB % CF.DAYMS
+#	if TIMEMS_NEXT_MOUSE_CHECK > CF.DAYMS:
+#		TIMEMS_NEXT_MOUSE_CHECK -= CF.DAYMS
+#	TIMEMS_NEXT_MOUSE_CHECK = TIMEMS_NEXT_MOUSE_CHECK % CF.DAYSECS
+	TIMEMS_NEXT_MOUSE_CHECK = 0
 
+#	if TIMEMS_NEXT_MOVED > CF.DAYMS:
+#		TIMEMS_NEXT_MOVED -= CF.DAYMS
+	# TIMEMS_NEXT_MOVED = TIMEMS_NEXT_MOVED % CF.DAYSECS
+	TIMEMS_NEXT_MOVED = 0
+
+#	if TIMEMS_NEXT_UPDATED > CF.DAYMS:
+#		TIMEMS_NEXT_UPDATED -= CF.DAYMS
+	# TIMEMS_NEXT_UPDATED = TIMEMS_NEXT_UPDATED % CF.DAYSECS
+	TIMEMS_NEXT_UPDATED = 0
+
+#	if TIMES_NEXT_EVENT > CF.DAYSECS:
+#		TIMES_NEXT_EVENT -= CF.DAYSECS
+	# TIMES_NEXT_EVENT = TIMES_NEXT_EVENT % CF.DAYSECS
+	TIMES_NEXT_EVENT = 0
+
+#	if TIMES_NEXT_PERIODIC_JOB > CF.DAYSECS:
+#		TIMES_NEXT_PERIODIC_JOB -= CF.DAYSECS
+	# TIMES_NEXT_PERIODIC_JOB = TIMES_NEXT_PERIODIC_JOB % CF.DAYSECS
+	TIMES_NEXT_PERIODIC_JOB = 0
+
+#	print(f"""{CF.getDebugInfo()}
+#{CF.frameItMS("TIMEMS_NEXT_MOUSE_CHECK", TIMEMS_NEXT_MOUSE_CHECK)} = TIMEMS_NEXT_MOUSE_CHECK % CF.DAYMS
+#{CF.frameItMS("TIMEMS_NEXT_MOVED", TIMEMS_NEXT_MOVED)} = TIMEMS_NEXT_MOVED % CF.DAYMS
+#{CF.frameItMS("TIMEMS_NEXT_UPDATED", TIMEMS_NEXT_UPDATED)} = TIMEMS_NEXT_UPDATED % CF.DAYMS
+#{CF.frameItHMS("TIMES_NEXT_EVENT", TIMES_NEXT_EVENT)} = TIMES_NEXT_EVENT % CF.DAYMS
+#{CF.frameItHMS("TIMES_NEXT_PERIODIC_JOB", TIMES_NEXT_PERIODIC_JOB)} = TIMES_NEXT_PERIODIC_JOB % CF.DAYMS
+#""")
 	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
 #		print(f"""{CF.getDebugInfo()}{CF.NEWLINE} {CF.frameIt("event_", event_)}
 #		{CF.frameIt("MAPPDS[EVENT_ENTRIES]", MAPPDS[EVENT_ENTRIES])}""")
@@ -2635,6 +2665,7 @@ def doMidnightWork():
 # doAlarmEvent
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doAlarmEvent(eventIndexToDo_):
+	return
 	global \
 			ALERTING_LIST, \
 			MAINFRAME, \
@@ -2652,27 +2683,27 @@ def doAlarmEvent(eventIndexToDo_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
 	if event_[IS_ALERTING_NOW] is True:
-		print(f"""{CF.getDebugInfo}
-		already alerting
-		{CF.frameIt("event_", event_)}
-		""")
+#		print(f"""{CF.getDebugInfo}
+#		already alerting
+#		{CF.frameIt("event_", event_)}
+#		""")
 		return
-	print("fresh alert")
+#	print("fresh alert")
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][IS_ALERTING_NOW] = True
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_LAST_RUN] = NOW_NOMS
 	NUMBER_ACTIVE_ALARMS += 1
 	ALERTING_LIST.append(eventIndexToDo_)
-	print(f"""{CF.getDebugInfo()}
-	event_ {event_}""")
+#	print(f"""{CF.getDebugInfo()}
+#	event_ {event_}""")
 	if event_[EVENTMODE] == EVENTMODE_INTERVAL:
 		updateInterval(eventIndexToDo_)
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][INTERVAL_COUNT] += 1
 	event_[INTERVAL_COUNT] += 1
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER] = CLASS_POPUP_INTERVAL(event_[NAME], event_[INTERVAL_COUNT], [event_[ALARMPOPUP_TEXT_TEXT]])
-	print(f"""{CF.getDebugInfo()}
-{CF.frameIt("event_", event_)}
-{CF.IGMPP(MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER])}
-	""")
+#	print(f"""{CF.getDebugInfo()}
+#{CF.frameIt("event_", event_)}
+#{CF.IGMPP(MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER])}
+#	""")
 
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2719,10 +2750,11 @@ def doInit1():
 # checkAlertPopupStatus
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def checkAlertPopupStatus(eventIndexToDo_):
+	pass
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	print(f"""{CF.getDebugInfo()}
-{CF.IGMPP(MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER])}
-""")
+#	print(f"""{CF.getDebugInfo()}
+#{CF.IGMPP(MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER])}
+#""")
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2770,21 +2802,21 @@ def doIt():
 			updateInterval()
 
 		event_, values_ = doReadAMainframe()
-		print(f"""{CF.getDebugInfo()}
-		{CF.frameIt("event_", event_)}
-		{CF.frameIt("values_", values_)}
-		""")
+#		print(f"""{CF.getDebugInfo()}
+#		{CF.frameIt("event_", event_)}
+#		{CF.frameIt("values_", values_)}
+#		""")
 
 
 		if (oldValues_ != values_) and (values_ is not None):
-			print(f"""{CF.getDebugInfo()}
-			{CF.frameIt("values_", values_)}""")
+#			print(f"""{CF.getDebugInfo()}
+#			{CF.frameIt("values_", values_)}""")
 			MAPPDS = CF.mergeDicts(MAPPDS, values_)
 			oldValues_ = values_
 
-		if event_ != "__TIMEOUT__":
-			print(f"""{CF.NEWLINE}{CF.getDebugInfo()}
-			{CF.frameIt("event_", event_)}""")
+#		if event_ != "__TIMEOUT__":
+#			print(f"""{CF.NEWLINE}{CF.getDebugInfo()}
+#			{CF.frameIt("event_", event_)}""")
 
 		if event_ == "__TIMEOUT__":
 			checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))

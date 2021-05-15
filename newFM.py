@@ -681,10 +681,14 @@ FMPSG_SCTN0916_CLASS_COLUMN_PARMS_DICT = {}  # holds all of the button entriess 
 FMPSG_SCTN0916_CLASS_COMBO_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_COMBO_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_DICT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN0916_CLASS_LIST_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_LIST_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_RADIO_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_RADIO_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
@@ -800,10 +804,14 @@ FMPSG_SCTN0916_CLASS_WINDOW_DICT = {}  # holds all of the button entriess (TUPDI
 		FMPSG_SCTN0916_CLASS_COMBO_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_COMBO_DICT, \
 		FMPSG_SCTN0916_CLASS_DICT, \
+		FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT, \
+		FMPSG_SCTN0916_CLASS_DICT_DICT, \
 		FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_FRAME_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_DICT, \
+		FMPSG_SCTN0916_CLASS_LIST_CMNT_DICT, \
+		FMPSG_SCTN0916_CLASS_LIST_DICT, \
 		FMPSG_SCTN0916_CLASS_RADIO_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_RADIO_DICT, \
 		FMPSG_SCTN0916_CLASS_RCMENU_CMNT_DICT, \

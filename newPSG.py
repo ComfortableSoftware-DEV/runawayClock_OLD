@@ -354,14 +354,17 @@ INTERVALLING_LIST = [  # list that holds all currently alarming events
 
 
 TIMES_LIST = [  # list of all keys to times for midnight etc. processing
-	TIME_ALARM,  # alarm time entry in TIMES_LIST
 	TIME_AT_LAST_RUN,  # alarm time entry in TIMES_LIST
 	TIME_AT_NEXT,  # alarm time entry in TIMES_LIST
+	TIME_AT_ZEROELAPSE,  # alarm time entry in TIMES_LIST
+	TIME_CLOCK,  # alarm time entry in TIMES_LIST
+	TIME_ELAPSED,  # alarm time entry in TIMES_LIST
 	TIME_INTERVAL,  # alarm time entry in TIMES_LIST
 	TIME_INTERVAL_START,  # alarm time entry in TIMES_LIST
 	TIME_INTERVAL__BEGIN,  # alarm time entry in TIMES_LIST
 	TIME_INTERVAL__END,  # alarm time entry in TIMES_LIST
 	TIME_LEN_RING,  # alarm time entry in TIMES_LIST
+	TIME_TOGO,  # alarm time entry in TIMES_LIST
 ]
 
 
@@ -1842,6 +1845,45 @@ class CLASS_C_CLOCKS(object):
 			self.THIS_WINDOW = POPUPFRAME
 		elif (self.THIS_WINDOW is not None):
 			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
+
+		def __exit__(self, *args_):
+		global \
+				MAINFRAME, \
+				MAPPDS, \
+				POPUPFRAME
+
+		self.THIS_WINDOW.close()
+		if (self.THIS_WINDOW == MAINFRAME):
+			MAINFRAME = None
+		elif (self.THIS_WINDOW == POPUPFRAME):
+			POPUPFRAME = None
+
+		self.THIS_WINDOW = None
+
+
+class CLASS_C_CLOCKS_TEXT_DICT(object):
+	global \
+			MAINFRAME, \
+			MAPPDS, \
+			POPUPFRAME
+
+	def __init__(self, , thisWindow_=None):
+		THIS_WINDOW = thisWindow_
+	def __enter__(self):
+		global \
+				MAINFRAME, \
+				MAPPDS, \
+				POPUPFRAME
+
+		if (MAINFRAME is None):
+			MAINFRAME = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
+			self.THIS_WINDOW = MAINFRAME
+		elif (POPUPFRAME is None):
+			POPUPFRAME = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
+
+			self.THIS_WINDOW = POPUPFRAME
+		elif (self.THIS_WINDOW is not None):
+			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
 
 		def __exit__(self, *args_):
 		global \

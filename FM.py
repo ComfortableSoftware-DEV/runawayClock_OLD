@@ -52,6 +52,8 @@ CMNTLEN = 200
 CONFIGDIR = "/rcr/0-units/python/"
 FOLDLEN = 200
 TRIQT = f"""{DBLQT}{DBLQT}{DBLQT}"""
+USER_CACHE_DIR = "/home/will/.cache/"
+USER_CONFIG_DIR = "/home/will/.config/"
 
 
 #
@@ -185,6 +187,8 @@ SCTNSNAME = f"""{CONFIGDIR}SCTNS.md"""
 SP_NAME = "newSP.py"
 SPTOP_NAME = f"""{CONFIGDIR}SPTOP.py"""
 TBGLST_NAME = "TBGLST.py"
+USER_CACHE_URL = lambda FILENAME_: f"""{USER_CACHE_DIR}{FILENAME_}"""
+USER_CONFIG_URL = lambda FILENAME_: f"""{USER_CONFIG_DIR}{FILENAME_}"""
 VO_NAME = "newVO.py"
 VOTOP_NAME = f"""{CONFIGDIR}VOTOP.py"""
 WHIRLCOUNT = 0
@@ -361,6 +365,11 @@ FMAXPSG_SCTN0916_CLASS_COLUMN_SPIN_ADD = "FMAXPSG_SCTN0916_CLASS_COLUMN_SPIN_ADD
 FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD = "FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD"  # add a text element to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
 FMAXPSG_SCTN0916_CLASS_COMBO_DEF = "FMAXPSG_SCTN0916_CLASS_COMBO_DEF"  # define a combo box
 FMAXPSG_SCTN0916_CLASS_DEF = "FMAXPSG_SCTN0916_CLASS_DEF"  # define a class <NAC><CLASSNAME>
+FMAXPSG_SCTN0916_CLASS_DICT_DEF = "FMAXPSG_SCTN0916_CLASS_DICT_DEF"  # define a dict in PSG <NAC><CLASSNAME><DICTNAME>
+FMAXPSG_SCTN0916_CLASS_DICT_SS_ADD = "FMAXPSG_SCTN0916_CLASS_DICT_SS_ADD"  # add a str-str to a dict <NAC><CLASSNAME><DICTNAME><STR><STR>
+FMAXPSG_SCTN0916_CLASS_DICT_SV_ADD = "FMAXPSG_SCTN0916_CLASS_DICT_SV_ADD"  # add a str-val to a dict <NAC><CLASSNAME><DICTNAME><STR><VAL>
+FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD = "FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD"  # add a str to a dict <NAC><CLASSNAME><DICTNAME><KEY><VAL>
+FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD = "FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD"  # add a val to a dict in PSG <NAC><CLASSNAME><DICTNAME><KEY><VAL>
 FMAXPSG_SCTN0916_CLASS_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0916_CLASS_FRAMEELEMENT_DEF"  # define a frame element
 FMAXPSG_SCTN0916_CLASS_LAYOUT_BUTTON_ADD = "FMAXPSG_SCTN0916_CLASS_LAYOUT_BUTTON_ADD"  # add a button to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 FMAXPSG_SCTN0916_CLASS_LAYOUT_CHECKBOX_ADD = "FMAXPSG_SCTN0916_CLASS_LAYOUT_CHECKBOX_ADD"  # add a checkbox to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
@@ -374,6 +383,9 @@ FMAXPSG_SCTN0916_CLASS_LAYOUT_RADIO_ADD = "FMAXPSG_SCTN0916_CLASS_LAYOUT_RADIO_A
 FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD = "FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD"  # add a row [] to a layout <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL>
 FMAXPSG_SCTN0916_CLASS_LAYOUT_SPIN_ADD = "FMAXPSG_SCTN0916_CLASS_LAYOUT_SPIN_ADD"  # add a spinbox to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 FMAXPSG_SCTN0916_CLASS_LAYOUT_TEXT_ADD = "FMAXPSG_SCTN0916_CLASS_LAYOUT_TEXT_ADD"  # add a text element to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+FMAXPSG_SCTN0916_CLASS_LIST_DEF = "FMAXPSG_SCTN0916_CLASS_LIST_DEF"  # define a list in PSG <NAC><CLASSNAME><LISTNAME>
+FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD = "FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD"  # add a str to a list in PSG <NAC><CLASSNAME><LISTNAME><STR>
+FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD"  # add a val to a list in PSG <NAC><CLASSNAME><LISTNAME><VAL>
 FMAXPSG_SCTN0916_CLASS_RADIO_DEF = "FMAXPSG_SCTN0916_CLASS_RADIO_DEF"  # define a radio button element
 FMAXPSG_SCTN0916_CLASS_RCMENU_DEF = "FMAXPSG_SCTN0916_CLASS_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD"  # define a right click menu
@@ -388,16 +400,7 @@ FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD"  # a
 FMAXPSG_SCTN0916_CLASS_WINDOW_DEF = "FMAXPSG_SCTN0916_CLASS_WINDOW_DEF"  # define a main dictdict <NAC><CLASSNAME><MAINNAME>
 FMAXPSG_SCTN0916_CLASS_WINDOW_STR_ADD = "FMAXPSG_SCTN0916_CLASS_WINDOW_STR_ADD"  # add a str to the main dictdict
 FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD"  # add a str to the main dictdict
-FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF = "FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF"
-FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF = "FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF"
-FMAXPSG_SCTN0916_CLASS_DICT_DEF = "FMAXPSG_SCTN0916_CLASS_DICT_DEF"
-FMAXPSG_SCTN0916_CLASS_DICT_SS_ADD = "FMAXPSG_SCTN0916_CLASS_DICT_SS_ADD"
-FMAXPSG_SCTN0916_CLASS_DICT_SV_ADD = "FMAXPSG_SCTN0916_CLASS_DICT_SV_ADD"
-FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD = "FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD"
-FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD = "FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD"
-FMAXPSG_SCTN0916_CLASS_LIST_DEF = "FMAXPSG_SCTN0916_CLASS_LIST_DEF"
-FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD = "FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD"
-FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD"
+
 
 FMAXFM_AXLST = [
 	FMAX_NOP,  # skip this entry
@@ -544,6 +547,11 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD,  # add a text element to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
 	FMAXPSG_SCTN0916_CLASS_COMBO_DEF,  # define a combo box
 	FMAXPSG_SCTN0916_CLASS_DEF,  # define a class <NAC><CLASSNAME>
+	FMAXPSG_SCTN0916_CLASS_DICT_DEF,  # define a dict in PSG <NAC><CLASSNAME><DICTNAME>
+	FMAXPSG_SCTN0916_CLASS_DICT_SS_ADD,  # add a str-str to a dict <NAC><CLASSNAME><DICTNAME><STR><STR>
+	FMAXPSG_SCTN0916_CLASS_DICT_SV_ADD,  # add a str-val to a dict <NAC><CLASSNAME><DICTNAME><STR><VAL>
+	FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD,  # add a str to a dict <NAC><CLASSNAME><DICTNAME><KEY><VAL>
+	FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD,  # add a val to a dict in PSG <NAC><CLASSNAME><DICTNAME><KEY><VAL>
 	FMAXPSG_SCTN0916_CLASS_FRAMEELEMENT_DEF,  # define a frame element
 	FMAXPSG_SCTN0916_CLASS_LAYOUT_BUTTON_ADD,  # add a button to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 	FMAXPSG_SCTN0916_CLASS_LAYOUT_CHECKBOX_ADD,  # add a checkbox to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
@@ -557,6 +565,9 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD,  # add a row [] to a layout <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL>
 	FMAXPSG_SCTN0916_CLASS_LAYOUT_SPIN_ADD,  # add a spinbox to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 	FMAXPSG_SCTN0916_CLASS_LAYOUT_TEXT_ADD,  # add a text element to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+	FMAXPSG_SCTN0916_CLASS_LIST_DEF,  # define a list in PSG <NAC><CLASSNAME><LISTNAME>
+	FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD,  # add a str to a list in PSG <NAC><CLASSNAME><LISTNAME><STR>
+	FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD,  # add a val to a list in PSG <NAC><CLASSNAME><LISTNAME><VAL>
 	FMAXPSG_SCTN0916_CLASS_RADIO_DEF,  # define a radio button element
 	FMAXPSG_SCTN0916_CLASS_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD,  # define a right click menu
@@ -571,16 +582,6 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0916_CLASS_WINDOW_DEF,  # define a main dictdict <NAC><CLASSNAME><MAINNAME>
 	FMAXPSG_SCTN0916_CLASS_WINDOW_STR_ADD,  # add a str to the main dictdict
 	FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD,  # add a str to the main dictdict
-	FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF,
-	FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF,
-	FMAXPSG_SCTN0916_CLASS_DICT_DEF,
-	FMAXPSG_SCTN0916_CLASS_DICT_SS_ADD,
-	FMAXPSG_SCTN0916_CLASS_DICT_SV_ADD,
-	FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD,
-	FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD,
-	FMAXPSG_SCTN0916_CLASS_LIST_DEF,
-	FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD,
-	FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD,
 ]
 
 
@@ -593,6 +594,8 @@ TABLEVEL = "TABLEVEL"  # key for tab levels
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN103 _DICT_ _DEF_
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF = {}  # define a class mainframe
+FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF = {}  # define a class mainframe
 FMCF_SCTN0003_TYPE_CMNT_DICT = {}  # SCTN009 types comments
 FMCF_SCTN0003_TYPE_DICT = {}  # SCTN003 types
 FMCF_SCTN0201_DEF_CMNT_DICT = {}  # SCTN201 defines comments dict
@@ -614,6 +617,7 @@ FMFM_SCTN0103_DICT_CMNT_DICT = {}  # SCTN103 dict defined
 FMFM_SCTN0103_DICT_DICT = {}  # SCTN103 dict defined
 FMFM_SCTN0104_LIST_CMNT_DICT = {}  # SCTN201 device defines
 FMFM_SCTN0104_LIST_DICT = {}  # SCTN201 device defines
+FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
 FMPSG_SCTN0900_DEF1_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0900_DEF1_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0901_DEF2_CMNT_DICT = {}  # define the dict to hold everything in SCTN0901
@@ -677,17 +681,20 @@ FMPSG_SCTN0916_CLASS_COLUMN_PARMS_DICT = {}  # holds all of the button entriess 
 FMPSG_SCTN0916_CLASS_COMBO_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_COMBO_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_DICT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN0916_CLASS_LIST_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_LIST_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_RADIO_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_RADIO_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT = {}  # holds the spin element stuffs (TUPDICT)f
 FMPSG_SCTN0916_CLASS_SPIN_DICT = {}  # holds the spin element stuffs (TUPDICT)
-FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
 FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_TEXT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
@@ -1011,6 +1018,10 @@ TBGLST = [
 	("FMPSG_SCTN0916_CLASS_COMBO_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_COMBO_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_LIST_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_FRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
@@ -1487,13 +1498,16 @@ TBGLST = [
 	("PSGVAL_TIMEH_ADJUST_HRS", FMAXPSG_SCTN0900_VAL_DEF, "TIMEH_ADJUST_HRS", "0", "comment",),
 	("PSGVAL_TIMEM_ADJUST_MINS", FMAXPSG_SCTN0900_VAL_DEF, "TIMEM_ADJUST_MINS", "0", "comment",),
 	("PSGVAL_TIMES_LIST", FMAXPSG_SCTN0903_LIST_DEF, "TIMES_LIST", "list of all keys to times for midnight etc. processing",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_ALARM", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_AT_LAST_RUN", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_AT_NEXT", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL_START", "alarm time entry in TIMES_LIST",),
+	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_AT_ZEROELAPSE", "alarm time entry in TIMES_LIST",),
+	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_CLOCK", "alarm time entry in TIMES_LIST",),
+	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_ELAPSED", "alarm time entry in TIMES_LIST",),
+	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_TOGO", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL__BEGIN", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL__END", "alarm time entry in TIMES_LIST",),
+	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL_START", "alarm time entry in TIMES_LIST",),
+	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_LEN_RING", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TITLE", FMAX_NOP, "titles start here",),
 	("PSGVAL_TITLE_ALARMPOPUP", FMAXPSG_SCTN0900_STR_DEF, "TITLE_ALARMPOPUP", "ALERT", "string with window title for APPMODE_CLOCKS",),
@@ -1965,6 +1979,15 @@ TBGLST = [
 	("PSGVAL__C_CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "C_CLOCKS", "C_CLOCKS_WINDOW", "MARGINS", "SZ_MARGINS_ALL", "",),
 	("PSGVAL__C_CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "C_CLOCKS", "C_CLOCKS_WINDOW", "NO_TITLEBAR", "True", "no titlebar on APPMODE_CLOCKS window",),
 	("PSGVAL__C_CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "C_CLOCKS", "C_CLOCKS_WINDOW", "TITLE", "TITLE_C_CLOCKS", "",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST", FMAXPSG_SCTN0916_CLASS_LIST_DEF, "C_CLOCKS", "TIMES_LIST", "list of all keys to times for midnight etc. processing",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_ALARM%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_AT_LAST_RUN%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_AT_NEXT%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL_START%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL__BEGIN%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_INTERVAL__END%KEY%", "alarm time entry in TIMES_LIST",),
+	("PSGVAL__C_CLOCKS_TIMES_LIST01", FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD, "C_CLOCKS", "TIMES_LIST", "TIME_LEN_RING%KEY%", "alarm time entry in TIMES_LIST",),
 	("PSGVAL__FONTSZ_ALERT_TEXT", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_ALERT_TEXT", "(FONT_DEFAULT, SZ_ALERT_TEXT)", "the font for the clocks only clock",),
 	("PSGVAL__FONTSZ_BTNS", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_BTNS", "(FONT_DEFAULT, SZ_BTNS)", "comment",),
 	("PSGVAL__FONTSZ_CLOCKS_INTERVAL_COUNT", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_CLOCKS_INTERVAL_COUNT", "(FONT_DEFAULT, SZ_INTERVAL_COUNT)", "the font for the clocks only clock",),
@@ -2947,6 +2970,8 @@ class CLASS_{thisName_}{OPAREN}object{CPAREN}:
 def parseTBGLST(FDTBGLST):
 	global \
 		TABLEVEL, \
+		FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF, \
+		FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF, \
 		FMCF_SCTN0003_TYPE_CMNT_DICT, \
 		FMCF_SCTN0003_TYPE_DICT, \
 		FMCF_SCTN0201_DEF_CMNT_DICT, \
@@ -2968,6 +2993,7 @@ def parseTBGLST(FDTBGLST):
 		FMFM_SCTN0103_DICT_DICT, \
 		FMFM_SCTN0104_LIST_CMNT_DICT, \
 		FMFM_SCTN0104_LIST_DICT, \
+		FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT, \
 		FMPSG_SCTN0900_DEF1_CMNT_DICT, \
 		FMPSG_SCTN0900_DEF1_DICT, \
 		FMPSG_SCTN0901_DEF2_CMNT_DICT, \
@@ -3031,17 +3057,20 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0916_CLASS_COMBO_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_COMBO_DICT, \
 		FMPSG_SCTN0916_CLASS_DICT, \
+		FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT, \
+		FMPSG_SCTN0916_CLASS_DICT_DICT, \
 		FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_FRAME_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_DICT, \
+		FMPSG_SCTN0916_CLASS_LIST_CMNT_DICT, \
+		FMPSG_SCTN0916_CLASS_LIST_DICT, \
 		FMPSG_SCTN0916_CLASS_RADIO_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_RADIO_DICT, \
 		FMPSG_SCTN0916_CLASS_RCMENU_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_RCMENU_DICT, \
 		FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_SPIN_DICT, \
-		FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT, \
 		FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_TEXT_DICT, \
 		FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT, \
@@ -4880,6 +4909,144 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # CLASS_CHECKBOX_ENDS
 
+# CLASS_DICT_BEGINS
+	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_DICT_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 5:
+				doErrorItem("not 5 items", thisItem_)
+				continue
+			TthisClassName_ = thisItem_[2]
+			thisDictName_ = thisItem_[3]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_DICT:
+				FMPSG_SCTN0916_CLASS_DICT[thisClassName_] = {}
+			if thisDictName_ not in FMPSG_SCTN0916_CLASS_DICT:
+				FMPSG_SCTN0916_CLASS_DICT[thisDictName_] = ""
+
+			FMPSG_SCTN0916_CLASS_CMNT_DICT[thisDictName_] = f"""{thisComment_}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 6:
+				doErrorItem("not 6 items", thisItem_)
+				continue
+			thisDictName_ = thisItem_[2]
+			thisKey_ = thisItem_[3]
+			thisVal_ = thisItem_[4]
+			if thisDictName_ not in FMPSG_SCTN0916_CLASS_DICT:
+				FMPSG_SCTN0916_CLASS_DICT[thisDictName_] = ""
+			FMPSG_SCTN0916_CLASS_DICT[thisDictName_] += f"""{NTAB(1)}{thisKey_}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_DICT_SS_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 6:
+				doErrorItem("not 6 items", thisItem_)
+				continue
+			thisDictName_ = thisItem_[2]
+			thisKey_ = thisItem_[3]
+			thisVal_ = thisItem_[4]
+			if thisDictName_ not in FMPSG_SCTN0916_CLASS_DICT:
+				FMPSG_SCTN0916_CLASS_DICT[thisDictName_] = ""
+			FMPSG_SCTN0916_CLASS_DICT[thisDictName_] += f"""{NTAB(1)}{DBLQT}{thisKey_}{DBLQT}: {DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_DICT_SV_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 6:
+				doErrorItem("not 6 items", thisItem_)
+				continue
+			thisDictName_ = thisItem_[2]
+			thisKey_ = thisItem_[3]
+			thisVal_ = thisItem_[4]
+			if thisDictName_ not in FMPSG_SCTN0916_CLASS_DICT:
+				FMPSG_SCTN0916_CLASS_DICT[thisDictName_] = ""
+			FMPSG_SCTN0916_CLASS_DICT[thisDictName_] += f"""{NTAB(1)}{DBLQT}{thisKey_}{DBLQT}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 6:
+				doErrorItem("not 6 items", thisItem_)
+				continue
+			thisDictName_ = thisItem_[2]
+			thisKey_ = thisItem_[3]
+			thisVal_ = thisItem_[4]
+			if thisDictName_ not in FMPSG_SCTN0916_CLASS_DICT:
+				FMPSG_SCTN0916_CLASS_DICT[thisDictName_] = ""
+			FMPSG_SCTN0916_CLASS_DICT[thisDictName_] += f"""{NTAB(1)}{thisKey_}: {thisVal_},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+# CLASS_DICT_ENDS
+
+# CLASS_LIST_BEGINS
+	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0903_LIST_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 4:
+				doErrorItem("not 4 items", thisItem_)
+				continue
+			thisListName_ = thisItem_[2]
+			if thisListName_ not in FMPSG_SCTN0903_LIST_DICT:
+				FMPSG_SCTN0903_LIST_DICT[thisListName_] = ""
+			FMPSG_SCTN0903_LIST_CMNT_DICT[thisListName_] = f"""{thisComment_}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0903_LIST_STR_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 5:
+				doErrorItem("not 5 items", thisItem_)
+				continue
+			thisListName_ = thisItem_[2]
+			thisVal_ = thisItem_[3]
+			if thisListName_ not in FMPSG_SCTN0903_LIST_DICT:
+				FMPSG_SCTN0903_LIST_DICT[thisListName_] = ""
+			FMPSG_SCTN0903_LIST_DICT[thisListName_] += f"""{NTAB(1)}{DBLQT}{thisVal_}{DBLQT},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0903_LIST_VAL_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 5:
+				doErrorItem("not 5 items", thisItem_)
+				continue
+			thisListName_ = thisItem_[2]
+			thisVal_ = thisItem_[3]
+			if thisListName_ not in FMPSG_SCTN0903_LIST_DICT:
+				FMPSG_SCTN0903_LIST_DICT[thisListName_] = ""
+			FMPSG_SCTN0903_LIST_DICT[thisListName_] += f"""{NTAB(1)}{thisVal_},  # {thisComment_}{NEWLINE}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+	# CLASS_LIST_ENDS
+
+	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # CLASS_SPIN_BEGINS
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
@@ -5086,7 +5253,7 @@ FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT {FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT}
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # CLASS_TEXT_ENDS
 
-
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -5094,7 +5261,6 @@ FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT {FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT}
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 
