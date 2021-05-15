@@ -1436,6 +1436,7 @@ CHECKBOX_ALPHA_LOW01 = {  # checkbox for alpha under mouse
 	TEXT: "ALPHA_LOW",  # simple text reminder
 	TOOLTIP: "low alpha under mouse",  # comment
 	DEFAULT: True,  # leave it on by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
 	KEY: CHECKBOX_ALPHA_LOW,  # set the key for the checkbox
 }
 
@@ -1444,6 +1445,7 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 	TEXT: "RNAWY",  # text label
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it on by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
 	KEY: CHECKBOX_RUNAWAY,  # set the key for the checkbox
 }
 
@@ -1738,7 +1740,13 @@ class CLASS_C_CLOCKS(object):
 			POPUPFRAME
 
 	def __init__(self, key_, thisWindow_=None):
-		THIS_WINDOW = thisWindow_
+		self.THIS_WINDOW = thisWindow_
+
+		self.C_CLOCKS_TEXT_DICT = {  # holds the values for the text elements
+			NAME_NEXT_EVENT: "",  # name of next event
+			INTERVAL_COUNT: 0,  # interval count
+		}
+
 		self.C_BTN_DISMISS20 = {  #
 			BUTTON_TEXT: "",  # button_text empty for the DOWN button
 			IMAGE_FILENAME: "res/dismiss20.png",  # filename for the button icon
@@ -1862,45 +1870,6 @@ class CLASS_C_CLOCKS(object):
 			self.THIS_WINDOW = POPUPFRAME
 		elif (self.THIS_WINDOW is not None):
 			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
-
-	def __exit__(self, *args_):
-		global \
-				MAINFRAME, \
-				MAPPDS, \
-				POPUPFRAME
-
-		self.THIS_WINDOW.close()
-		if (self.THIS_WINDOW == MAINFRAME):
-			MAINFRAME = None
-		elif (self.THIS_WINDOW == POPUPFRAME):
-			POPUPFRAME = None
-
-		self.THIS_WINDOW = None
-
-
-class CLASS_C_CLOCKS_TEXT_DICT(object):
-	global \
-			MAINFRAME, \
-			MAPPDS, \
-			POPUPFRAME
-
-	def __init__(self, key_, thisWindow_=None):
-		THIS_WINDOW = thisWindow_
-	def __enter__(self):
-		global \
-				MAINFRAME, \
-				MAPPDS, \
-				POPUPFRAME
-
-		if (MAINFRAME is None):
-			MAINFRAME = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
-			self.THIS_WINDOW = MAINFRAME
-		elif (POPUPFRAME is None):
-			POPUPFRAME = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
-
-			self.THIS_WINDOW = POPUPFRAME
-		elif (self.THIS_WINDOW is not None):
-			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
 
 	def __exit__(self, *args_):
 		global \
@@ -2836,8 +2805,17 @@ def reallyDoIt():
 		elif (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
 			updateInterval()
 
-		eventVals_ = doReadAMainframe()
-		print(f"""{CF.frameIt("eventVals_", eventVals_)}""")
+		eventWindow_, eventKey_, eventVals_ = doReadAMainframe()
+
+		print(f"""{CF.frameIt("eventWindow_", eventWindow_)} {CF.frameIt("eventKey_", eventKey_)} {CF.frameIt("eventVals_", eventVals_)}""")
+
+		if (eventWindow_ == POPUPFRAME):
+
+			if (eventKey_ == BTN_QUIT):
+				return BTN_QUIT
+
+			elif (eventKey_ == BTN_DISMISS):
+				return BTN_DISMISS
 
 		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
 
@@ -2860,7 +2838,7 @@ def reallyDoIt():
 
 def doit():
 	with \
-			CLOCKS_CLASS() as NEXT, \
+			CLOCKS_CLASS(""), \
 			CF.withPickles("runawayClock.pkl", MAPPDS):
 		doInit1()
 		while True:
@@ -2874,7 +2852,8 @@ def doit():
 					while True:
 						nextMode_ = reallyDoIt()
 
-						if nextMode_ == APPMODE_DISMISS_ALARMPOPUP:
+						if (nextMode_ == APPMODE_DISMISS_ALARMPOPUP) or \
+								(nextMode_ == BTN_DISMISS):
 							break
 
 			else:

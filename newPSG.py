@@ -314,26 +314,6 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_DICT = {  # holds the values for the clocks frame
-	TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
-	TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # holds the values for the clocks frame
-	TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
-	TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
-	TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
-}
-
-
-CLOCKS_TEXT_DICT = {  # holds the values for the text elements
-	NAME_NEXT_EVENT: "",  # name of next event
-	INTERVAL_COUNT: 0,  # interval count
-}
-
-
-THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
-	TIME_CLOCK: ZERO_CLOCK,  # comment
-}
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0903 lists
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1261,16 +1241,6 @@ UPDATE_COMBO_TDD = {
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0913 right click menu options
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-THECLOCK_RCMENU01 = [  # right click to do the things
-	[],
-	[
-		BTN_QUIT,  # quit by right click
-		CHECKBOX_ALPHA_LOW,  # toggle CHECKBOX_ALPHA_LOW
-		CHECKBOX_RUNAWAY,  # toggle CHECKBOX_RUNAWAY
-	],
-]
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0906 button elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1436,6 +1406,7 @@ CHECKBOX_ALPHA_LOW01 = {  # checkbox for alpha under mouse
 	TEXT: "ALPHA_LOW",  # simple text reminder
 	TOOLTIP: "low alpha under mouse",  # comment
 	DEFAULT: True,  # leave it on by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
 	KEY: CHECKBOX_ALPHA_LOW,  # set the key for the checkbox
 }
 
@@ -1444,6 +1415,7 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 	TEXT: "RNAWY",  # text label
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it on by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
 	KEY: CHECKBOX_RUNAWAY,  # set the key for the checkbox
 }
 
@@ -1451,275 +1423,21 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
-	TEXT: "0000",  # the text to fill in
-	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-	ENABLE_EVENTS: False,  # this is clickable
-	FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
-	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: INTERVAL_COUNT,  # comment
-	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-	SIZE: (4, 1),  # characters, lines size line
-	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
-}
-
-
-CLOCKS_TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCKS_CLOCK_TIME
-	TEXT: "",  # the text to fill in
-	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-	ENABLE_EVENTS: False,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
-	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: NAME_NEXT_EVENT,  # comment
-	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-	SIZE: (16, 1),  # characters, lines size line
-	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
-}
-
-
-CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
-	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-	ENABLE_EVENTS: False,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
-	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_AT_NEXT,  # comment
-	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-	SIZE: (8, 1),  # characters, lines size line
-	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
-}
-
-
-CLOCKS_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
-	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-	ENABLE_EVENTS: False,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
-	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_AT_ZEROELAPSE,  # comment
-	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-	SIZE: (8, 1),  # characters, lines size line
-	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
-}
-
-
-CLOCKS_TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
-	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-	ENABLE_EVENTS: True,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
-	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_CLOCK,  # comment
-	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-	SIZE: (8, 1),  # characters, lines size line
-	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
-}
-
-
-CLOCKS_TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
-	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
-	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_ELAPSED,  # comment
-	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-	SIZE: (8, 1),  # characters, lines size line
-	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
-}
-
-
-CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
-	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
-	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_TOGO,  # comment
-	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-	SIZE: (8, 1),  # characters, lines size line
-	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
-}
-
-
-THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
-	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-	ENABLE_EVENTS: True,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
-	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_CLOCK,  # comment
-	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-	RIGHT_CLICK_MENU: THECLOCK_RCMENU01,  # set up the right click menu
-	SIZE: (8, 1),  # characters, lines size line
-	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
-}
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090A radio elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090B column elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the main one
-	[
-		SG.Text(  # add a new TEXT element to clocks column
-			**CLOCKS_TEXT_TIME_CLOCK,  # add the main clock
-		),
-	],
-	[
-		SG.Text(  # add a new row to clocks column
-			**CLOCKS_TEXT_TIME_AT_ZEROELAPSE,  # add time to go
-		),
-		SG.Text(  # add a new text element to row01 clocks column
-			**CLOCKS_TEXT_TIME_ELAPSED,  # add elapsed time
-		),
-	],
-	[
-		SG.Text(  # add a new text element to row01 clocks column
-			**CLOCKS_TEXT_TIME_TOGO,  # add elapsed time
-		),
-		SG.Text(  # add a new row to clocks column
-			**CLOCKS_TEXT_TIME_AT_NEXT,  # add time to go
-		),
-	],
-	[
-		SG.Text(  # add a new text element to row01 clocks column
-			**CLOCKS_TEXT_NAME_NEXT_EVENT,  # add the main clock
-		),
-	],
-	[
-		SG.Checkbox(  # add a new text element to row01 clocks column
-			**CHECKBOX_RUNAWAY01,  # add elapsed time
-		),
-		SG.Checkbox(  # add a new text element to row01 clocks column
-			**CHECKBOX_ALPHA_LOW01,  # add elapsed time
-		),
-	],
-]
-
-
-CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the main one
-	[
-		SG.Button(  # add a button element to clocks column
-			**BTN_QUIT20,  # add the xpand button to clocks
-		),
-	],
-	[
-		SG.Button(  # add reset button for elapsed time
-			**BTN_ZERO20,  # add the zero button to clocks
-		),
-	],
-	[
-		SG.Button(  # add reset button for elapsed time
-			**BTN_XPAND20,  # add the zero button to clocks
-		),
-	],
-	[
-		SG.Text(  # add reset button for elapsed time
-			**CLOCKS_TEXT_INTERVAL_COUNT,  # add the zero button to clocks
-		),
-	],
-]
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090E layout elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
-	[
-		SG.Col(  # add a column
-			layout=CLOCKS_COLUMN01,  # comment
-			pad=SZ_PAD_ALL,  # comment
-		),
-		SG.Col(  # add a column
-			layout=CLOCKS_COLUMN02,  # comment
-			pad=SZ_PAD_ALL,  # comment
-		),
-	],
-]
-
-
-THECLOCK_LAYOUT = [  # layout for APPMODE_THECLOCK
-	[
-		SG.Text(  # add a column
-			**THECLOCK_TEXT_TIME_CLOCK,  # comment
-		),
-	],
-]
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090F window
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_WINDOW = {  # define the clocks window
-	ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
-	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
-	BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
-	ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
-	FORCE_TOPLEVEL: None,  # 
-	GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
-	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
-	LAYOUT: CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
-	MARGINS: SZ_MARGINS_ALL,  # 
-	NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
-	TITLE: TITLE_CLOCKS,  # 
-}
-
-
-THECLOCK_WINDOW = {  # define the clocks window
-	ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
-	BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
-	BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
-	ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
-	FORCE_TOPLEVEL: None,  # 
-	GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
-	KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
-	LAYOUT: THECLOCK_LAYOUT,  # add the layout for THECLOCK_WINDOW
-	MARGINS: SZ_MARGINS_ALL,  # 
-	NO_TITLEBAR: True,  # no titlebar on APPMODE_THECLOCK window
-	TITLE: TITLE_THECLOCK,  # 
-}
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090D mainframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * CLOCKS_CLASS
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-class CLOCKS_CLASS():
-	global MAINFRAME, MAPPDS
-
-	def __enter__(self):
-		global MAINFRAME, MAPPDS
-		MAINFRAME = SG.Window(
-			**CLOCKS_WINDOW,
-		).finalize()
-		MAPPDS[APPMODE] = APPMODE_CLOCKS
-
-	def __exit__(self, *args):
-		global MAINFRAME, MAPPDS
-		MAINFRAME.close()
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * THECLOCK_CLASS
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-class THECLOCK_CLASS():
-	global MAINFRAME, MAPPDS
-
-	def __enter__(self):
-		global MAINFRAME, MAPPDS
-		MAINFRAME = SG.Window(
-			**THECLOCK_WINDOW,
-		).finalize()
-		MAPPDS[APPMODE] = APPMODE_THECLOCK
-
-	def __exit__(self, *args):
-		global MAINFRAME, MAPPDS
-		MAINFRAME.close()
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0914 popupframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1731,120 +1449,122 @@ class THECLOCK_CLASS():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 
-class CLASS_C_CLOCKS(object):
+class CLASS_CLOCKS(object):
 	global \
 			MAINFRAME, \
 			MAPPDS, \
 			POPUPFRAME
 
 	def __init__(self, key_, thisWindow_=None):
-		THIS_WINDOW = thisWindow_
-		self.C_BTN_DISMISS20 = {  # 
-			BUTTON_TEXT: "",  # button_text empty for the DOWN button
-			IMAGE_FILENAME: "res/dismiss20.png",  # filename for the button icon
-			BORDER_WIDTH: 0,  # button xpand key
-			BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
-			FOCUS: True,  # focus on click
-			FONT: FONTSZ_BTNS,  # button xpand font
-			KEY: f"""{BTN_DISMISS}{key_}""",  # button xpand key
-			PAD: SZ_PAD_ALL,  # button xpand key
+		self.THIS_WINDOW = thisWindow_
+
+		self.CLOCKS_DICT = {  # holds the values for the clocks frame
+			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
+			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # holds the values for the clocks frame
+			TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
+			TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
+			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
 		}
 
-		self.C_CLOCKS_SPIN01_SPIN_LIST = [
-			0,  # index 0
-			1,  # index 1
-			2,  # index 2
-		]
-
-		self.C_CLOCKS_SPIN01_SPIN_DICT = {  # define the alarm en/dis/able spinbox
-			TEXT: "SPIN_TEXT",  # comment
-			BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # comment
-			FONT: FONTSZ_ALERT_TEXT,  # comment
-			SIZE: (16, 1),  # comment
-			TEXT_COLOR: COLOR_ALERT_TEXT,  # comment
-			VALUES: self.C_CLOCKS_SPIN01_SPIN_LIST,  # comment
+		self.CLOCKS_TEXT_DICT = {  # holds the values for the text elements
+			NAME_NEXT_EVENT: "",  # name of next event
+			INTERVAL_COUNT: 0,  # interval count
 		}
 
-		self.C_CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
 			TEXT: "0000",  # the text to fill in
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{INTERVAL_COUNT}{key_}""",  # comment
+			KEY: INTERVAL_COUNT,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (4, 1),  # characters, lines size line
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 		}
 
-		self.C_CLOCKS_TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.CLOCKS_TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCKS_CLOCK_TIME
 			TEXT: "",  # the text to fill in
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{NAME_NEXT_EVENT}{key_}""",  # comment
+			KEY: NAME_NEXT_EVENT,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (16, 1),  # characters, lines size line
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 		}
 
-		self.C_CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{TIME_AT_NEXT}{key_}""",  # comment
+			KEY: TIME_AT_NEXT,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 		}
 
-		self.C_CLOCKS_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.CLOCKS_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{TIME_AT_ZEROELAPSE}{key_}""",  # comment
+			KEY: TIME_AT_ZEROELAPSE,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 			TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
 		}
 
-		self.C_CLOCKS_TEXT_TIME_CLOCK = {  # C_define the text element for CLOCKS_CLOCK_TIME
+		self.CLOCKS_TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			ENABLE_EVENTS: True,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{TIME_CLOCK}{key_}""",  # comment
+			KEY: TIME_CLOCK,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 		}
 
-		self.C_CLOCKS_TEXT_TIME_ELAPSED = {  # C_define the text element for CLOCKS_CLOCK_TIME
+		self.CLOCKS_TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{TIME_ELAPSED}{key_}""",  # comment
+			KEY: TIME_ELAPSED,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 			TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
 		}
 
-		self.C_CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{TIME_TOGO}{key_}""",  # comment
+			KEY: TIME_TOGO,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+		}
+
+		self.CLOCKS_WINDOW = {  # define the clocks window
+			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
+			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
+			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
+			ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
+			FORCE_TOPLEVEL: None,  # 
+			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
+			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
+			LAYOUT: CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
+			MARGINS: SZ_MARGINS_ALL,  # 
+			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
+			TITLE: TITLE_CLOCKS,  # 
 		}
 
 	def __enter__(self):
@@ -1854,14 +1574,14 @@ class CLASS_C_CLOCKS(object):
 				POPUPFRAME
 
 		if (MAINFRAME is None):
-			MAINFRAME = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
+			MAINFRAME = SG.Window(**self.CLOCKS_WINDOW).finalize()
 			self.THIS_WINDOW = MAINFRAME
 		elif (POPUPFRAME is None):
-			POPUPFRAME = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
+			POPUPFRAME = SG.Window(**self.CLOCKS_WINDOW).finalize()
 
 			self.THIS_WINDOW = POPUPFRAME
 		elif (self.THIS_WINDOW is not None):
-			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
+			self.THIS_WINDOW = SG.Window(**self.CLOCKS_WINDOW).finalize()
 
 	def __exit__(self, *args_):
 		global \
@@ -1878,14 +1598,142 @@ class CLASS_C_CLOCKS(object):
 		self.THIS_WINDOW = None
 
 
-class CLASS_C_CLOCKS_TEXT_DICT(object):
+class CLASS_POPUP_ALERT(object):
 	global \
 			MAINFRAME, \
 			MAPPDS, \
 			POPUPFRAME
 
 	def __init__(self, key_, thisWindow_=None):
-		THIS_WINDOW = thisWindow_
+		self.THIS_WINDOW = thisWindow_
+
+		self.POPUP_ALERT_TEXT_DICT = {  # holds the values for the text elements
+			NAME_NEXT_EVENT: "",  # name of next event
+			INTERVAL_COUNT: 0,  # interval count
+		}
+
+		self.C_BTN_DISMISS20 = {  # 
+			BUTTON_TEXT: "",  # button_text empty for the DOWN button
+			IMAGE_FILENAME: "res/dismiss20.png",  # filename for the button icon
+			BORDER_WIDTH: 0,  # button xpand key
+			BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+			FOCUS: True,  # focus on click
+			FONT: FONTSZ_BTNS,  # button xpand font
+			KEY: f"""{BTN_DISMISS}{key_}""",  # button xpand key
+			PAD: SZ_PAD_ALL,  # button xpand key
+		}
+
+		self.POPUP_ALERT_SPIN01_SPIN_LIST = [
+			0,  # index 0
+			1,  # index 1
+			2,  # index 2
+		]
+
+		self.POPUP_ALERT_SPIN01_SPIN_DICT = {  # define the alarm en/dis/able spinbox
+			TEXT: "SPIN_TEXT",  # comment
+			BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # comment
+			FONT: FONTSZ_ALERT_TEXT,  # comment
+			SIZE: (16, 1),  # comment
+			TEXT_COLOR: COLOR_ALERT_TEXT,  # comment
+			VALUES: self.POPUP_ALERT_SPIN01_SPIN_LIST,  # comment
+		}
+
+		self.POPUP_ALERT_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
+			TEXT: "0000",  # the text to fill in
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: False,  # this is clickable
+			FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: f"""{INTERVAL_COUNT}{key_}""",  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (4, 1),  # characters, lines size line
+			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+		}
+
+		self.POPUP_ALERT_TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCKS_CLOCK_TIME
+			TEXT: "",  # the text to fill in
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: False,  # this is clickable
+			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: f"""{NAME_NEXT_EVENT}{key_}""",  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (16, 1),  # characters, lines size line
+			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+		}
+
+		self.POPUP_ALERT_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: False,  # this is clickable
+			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: f"""{TIME_AT_NEXT}{key_}""",  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+		}
+
+		self.POPUP_ALERT_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: False,  # this is clickable
+			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: f"""{TIME_AT_ZEROELAPSE}{key_}""",  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
+		}
+
+		self.POPUP_ALERT_TEXT_TIME_CLOCK = {  # C_define the text element for CLOCKS_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: True,  # this is clickable
+			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: f"""{TIME_CLOCK}{key_}""",  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+		}
+
+		self.POPUP_ALERT_TEXT_TIME_ELAPSED = {  # C_define the text element for CLOCKS_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: f"""{TIME_ELAPSED}{key_}""",  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
+		}
+
+		self.POPUP_ALERT_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: f"""{TIME_TOGO}{key_}""",  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+		}
+
+		self.POPUP_ALERT_WINDOW = {  # define the clocks window
+			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
+			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
+			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
+			ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
+			FORCE_TOPLEVEL: None,  # 
+			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
+			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
+			LAYOUT: self.POPUP_ALERT_LAYOUT,  # add the layout for CLOCKS_WINDOW
+			MARGINS: SZ_MARGINS_ALL,  # 
+			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
+			TITLE: TITLE_POPUP_ALERT,  # 
+		}
+
 	def __enter__(self):
 		global \
 				MAINFRAME, \
@@ -1893,14 +1741,85 @@ class CLASS_C_CLOCKS_TEXT_DICT(object):
 				POPUPFRAME
 
 		if (MAINFRAME is None):
-			MAINFRAME = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
+			MAINFRAME = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
 			self.THIS_WINDOW = MAINFRAME
 		elif (POPUPFRAME is None):
-			POPUPFRAME = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
+			POPUPFRAME = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
 
 			self.THIS_WINDOW = POPUPFRAME
 		elif (self.THIS_WINDOW is not None):
-			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
+			self.THIS_WINDOW = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
+
+	def __exit__(self, *args_):
+		global \
+				MAINFRAME, \
+				MAPPDS, \
+				POPUPFRAME
+
+		self.THIS_WINDOW.close()
+		if (self.THIS_WINDOW == MAINFRAME):
+			MAINFRAME = None
+		elif (self.THIS_WINDOW == POPUPFRAME):
+			POPUPFRAME = None
+
+		self.THIS_WINDOW = None
+
+
+class CLASS_THECLOCK(object):
+	global \
+			MAINFRAME, \
+			MAPPDS, \
+			POPUPFRAME
+
+	def __init__(self, key_, thisWindow_=None):
+		self.THIS_WINDOW = thisWindow_
+
+		self.THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
+			TIME_CLOCK: ZERO_CLOCK,  # comment
+		}
+
+		self.THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: True,  # this is clickable
+			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: TIME_CLOCK,  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			RIGHT_CLICK_MENU: THECLOCK_RCMENU01,  # set up the right click menu
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+		}
+
+		self.THECLOCK_WINDOW = {  # define the clocks window
+			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
+			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
+			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
+			ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
+			FORCE_TOPLEVEL: None,  # 
+			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
+			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
+			LAYOUT: THECLOCK_LAYOUT,  # add the layout for THECLOCK_WINDOW
+			MARGINS: SZ_MARGINS_ALL,  # 
+			NO_TITLEBAR: True,  # no titlebar on APPMODE_THECLOCK window
+			TITLE: TITLE_THECLOCK,  # 
+		}
+
+	def __enter__(self):
+		global \
+				MAINFRAME, \
+				MAPPDS, \
+				POPUPFRAME
+
+		if (MAINFRAME is None):
+			MAINFRAME = SG.Window(**self.THECLOCK_WINDOW).finalize()
+			self.THIS_WINDOW = MAINFRAME
+		elif (POPUPFRAME is None):
+			POPUPFRAME = SG.Window(**self.THECLOCK_WINDOW).finalize()
+
+			self.THIS_WINDOW = POPUPFRAME
+		elif (self.THIS_WINDOW is not None):
+			self.THIS_WINDOW = SG.Window(**self.THECLOCK_WINDOW).finalize()
 
 	def __exit__(self, *args_):
 		global \
