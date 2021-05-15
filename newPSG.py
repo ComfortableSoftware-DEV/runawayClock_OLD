@@ -354,9 +354,10 @@ INTERVALLING_LIST = [  # list that holds all currently alarming events
 
 
 TIMES_LIST = [  # list of all keys to times for midnight etc. processing
-	TIME_AT_LAST_RUN,  # alarm time entry in TIMES_LIST
-	TIME_AT_NEXT,  # alarm time entry in TIMES_LIST
-	TIME_AT_ZEROELAPSE,  # alarm time entry in TIMES_LIST
+	TIME_ALARM,  # alarm time entry in TIMES_LIST
+	TIME_AT_LAST_RUN,  # time at last run entry in TIMES_LIST
+	TIME_AT_NEXT,  # time at next event entry in TIMES_LIST
+	TIME_AT_ZEROELAPSE,  # time the elapsed timer was reset in TIMES_LIST
 	TIME_CLOCK,  # alarm time entry in TIMES_LIST
 	TIME_ELAPSED,  # alarm time entry in TIMES_LIST
 	TIME_INTERVAL,  # alarm time entry in TIMES_LIST
@@ -1720,7 +1721,7 @@ class CLASS_C_CLOCKS(object):
 			MAPPDS, \
 			POPUPFRAME
 
-	def __init__(self, {}, thisWindow_=None):
+	def __init__(self, thisWindow_=None):
 		THIS_WINDOW = thisWindow_
 		self.C_BTN_DISMISS20 = {  # 
 			BUTTON_TEXT: "",  # button_text empty for the DOWN button
@@ -1867,7 +1868,7 @@ class CLASS_C_CLOCKS_TEXT_DICT(object):
 			MAPPDS, \
 			POPUPFRAME
 
-	def __init__(self, , thisWindow_=None):
+	def __init__(self, thisWindow_=None):
 		THIS_WINDOW = thisWindow_
 	def __enter__(self):
 		global \

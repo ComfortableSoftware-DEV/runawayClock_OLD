@@ -141,8 +141,8 @@ TIME_INTERVAL__END = "TIME_INTERVAL__END"  # key for time an interval goes to le
 TIME_INTERVAL_START = "TIME_INTERVAL_START"  # interval timer starting time, reset each time the interval goes off
 TIME_LEN_RING = "TIME_LEN_RING"  # length of ringing
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
-TIMEH_ADJUST_HRS = 20  # comment
-TIMEM_ADJUST_MINS = 37  # comment
+TIMEH_ADJUST_HRS = 0  # comment
+TIMEM_ADJUST_MINS = 0  # comment
 TITLE_ALARMPOPUP = "ALERT"  # string with window title for APPMODE_CLOCKS
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
@@ -355,13 +355,17 @@ INTERVALLING_LIST = [  # list that holds all currently alarming events
 
 TIMES_LIST = [  # list of all keys to times for midnight etc. processing
 	TIME_ALARM,  # alarm time entry in TIMES_LIST
-	TIME_AT_LAST_RUN,  # alarm time entry in TIMES_LIST
-	TIME_AT_NEXT,  # alarm time entry in TIMES_LIST
+	TIME_AT_LAST_RUN,  # time at last run entry in TIMES_LIST
+	TIME_AT_NEXT,  # time at next event entry in TIMES_LIST
+	TIME_AT_ZEROELAPSE,  # time the elapsed timer was reset in TIMES_LIST
+	TIME_CLOCK,  # alarm time entry in TIMES_LIST
+	TIME_ELAPSED,  # alarm time entry in TIMES_LIST
 	TIME_INTERVAL,  # alarm time entry in TIMES_LIST
 	TIME_INTERVAL_START,  # alarm time entry in TIMES_LIST
 	TIME_INTERVAL__BEGIN,  # alarm time entry in TIMES_LIST
 	TIME_INTERVAL__END,  # alarm time entry in TIMES_LIST
 	TIME_LEN_RING,  # alarm time entry in TIMES_LIST
+	TIME_TOGO,  # alarm time entry in TIMES_LIST
 ]
 
 
@@ -1715,14 +1719,10 @@ class CLASS_C_CLOCKS(object):
 	global \
 			MAINFRAME, \
 			MAPPDS, \
-			POPUPFRAME, \
-			TIMES_LIST
+			POPUPFRAME
 
 	def __init__(self, thisWindow_=None):
 		THIS_WINDOW = thisWindow_
-
-		self.SERIAL_KEY = CF.serializeIt("RAC")
-
 		self.C_BTN_DISMISS20 = {  #
 			BUTTON_TEXT: "",  # button_text empty for the DOWN button
 			IMAGE_FILENAME: "res/dismiss20.png",  # filename for the button icon
@@ -1730,8 +1730,23 @@ class CLASS_C_CLOCKS(object):
 			BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 			FOCUS: True,  # focus on click
 			FONT: FONTSZ_BTNS,  # button xpand font
-			KEY: f"""{BTN_DISMISS_}_{self.SERIAL_KEY}""",  # button xpand key
+			KEY: BTN_DISMISS%KEY%,  # button xpand key
 			PAD: SZ_PAD_ALL,  # button xpand key
+		}
+
+		self.C_CLOCKS_SPIN01_SPIN_LIST = [
+			0,  # index 0
+			1,  # index 1
+			2,  # index 2
+		]
+
+		self.C_CLOCKS_SPIN01_SPIN_DICT = {  # define the alarm en/dis/able spinbox
+			BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # comment
+			FONT: FONTSZ_ALERT_TEXT,  # comment
+			SIZE: (16, 1),  # comment
+			TEXT: SPIN_TEXT,  # comment
+			TEXT_COLOR: COLOR_ALERT_TEXT,  # comment
+			VALUES: %LIST%,  # comment
 		}
 
 		self.C_CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
@@ -1740,7 +1755,7 @@ class CLASS_C_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{INTERVAL_COUNT}_{self.SERIAL_KEY}""",  # comment
+			KEY: INTERVAL_COUNT%KEY%,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (4, 1),  # characters, lines size line
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
@@ -1752,7 +1767,7 @@ class CLASS_C_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{NAME_NEXT_EVENT}_{self.SERIAL_KEY}""",  # comment
+			KEY: NAME_NEXT_EVENT%KEY%,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (16, 1),  # characters, lines size line
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
@@ -1763,7 +1778,7 @@ class CLASS_C_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY:  f"""{TIME_AT_NEXT}_{self.SERIAL_KEY}""",  # comment
+			KEY: TIME_AT_NEXT%KEY%,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1775,7 +1790,7 @@ class CLASS_C_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY:  f"""{TIME_AT_ZEROELAPSE}_{self.SERIAL_KEY}""",  # comment
+			KEY: TIME_AT_ZEROELAPSE%KEY%,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1787,7 +1802,7 @@ class CLASS_C_CLOCKS(object):
 			ENABLE_EVENTS: True,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY:  f"""{TIME_CLOCK}_{self.SERIAL_KEY}""",  # comment
+			KEY: TIME_CLOCK%KEY%,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1798,7 +1813,7 @@ class CLASS_C_CLOCKS(object):
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY:  f"""{TIME_ELAPSED}_{self.SERIAL_KEY}""",  # comment
+			KEY: TIME_ELAPSED%KEY%,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1809,7 +1824,7 @@ class CLASS_C_CLOCKS(object):
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY:  f"""{TIME_TOGO}_{self.SERIAL_KEY}""",  # comment
+			KEY: TIME_TOGO%KEY%,  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1820,8 +1835,7 @@ class CLASS_C_CLOCKS(object):
 		global \
 				MAINFRAME, \
 				MAPPDS, \
-				POPUPFRAME, \
-				TIMES_LIST
+				POPUPFRAME
 
 		if (MAINFRAME is None):
 			MAINFRAME = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
@@ -1832,18 +1846,51 @@ class CLASS_C_CLOCKS(object):
 			self.THIS_WINDOW = POPUPFRAME
 		elif (self.THIS_WINDOW is not None):
 			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_WINDOW).finalize()
-			return self.THIS_WINDOW
 
-
-		TIMES_LIST.append()
-
-
-	def __exit__(self, *args_):
+		def __exit__(self, *args_):
 		global \
+				MAINFRAME, \
+				MAPPDS, \
+				POPUPFRAME
+
+		self.THIS_WINDOW.close()
+		if (self.THIS_WINDOW == MAINFRAME):
+			MAINFRAME = None
+		elif (self.THIS_WINDOW == POPUPFRAME):
+			POPUPFRAME = None
+
+		self.THIS_WINDOW = None
+
+
+class CLASS_C_CLOCKS_TEXT_DICT(object):
+	global \
 			MAINFRAME, \
 			MAPPDS, \
-			POPUPFRAME, \
-			TIMES_LIST
+			POPUPFRAME
+
+	def __init__(self, thisWindow_=None):
+		THIS_WINDOW = thisWindow_
+	def __enter__(self):
+		global \
+				MAINFRAME, \
+				MAPPDS, \
+				POPUPFRAME
+
+		if (MAINFRAME is None):
+			MAINFRAME = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
+			self.THIS_WINDOW = MAINFRAME
+		elif (POPUPFRAME is None):
+			POPUPFRAME = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
+
+			self.THIS_WINDOW = POPUPFRAME
+		elif (self.THIS_WINDOW is not None):
+			self.THIS_WINDOW = SG.Window(**self.C_CLOCKS_TEXT_DICT_WINDOW).finalize()
+
+		def __exit__(self, *args_):
+		global \
+				MAINFRAME, \
+				MAPPDS, \
+				POPUPFRAME
 
 		self.THIS_WINDOW.close()
 		if (self.THIS_WINDOW == MAINFRAME):

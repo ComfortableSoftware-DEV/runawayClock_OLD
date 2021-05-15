@@ -386,6 +386,8 @@ FMAXPSG_SCTN0916_CLASS_LAYOUT_TEXT_ADD = "FMAXPSG_SCTN0916_CLASS_LAYOUT_TEXT_ADD
 FMAXPSG_SCTN0916_CLASS_LIST_DEF = "FMAXPSG_SCTN0916_CLASS_LIST_DEF"  # define a list in PSG <NAC><CLASSNAME><LISTNAME>
 FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD = "FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD"  # add a str to a list in PSG <NAC><CLASSNAME><LISTNAME><STR>
 FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD"  # add a val to a list in PSG <NAC><CLASSNAME><LISTNAME><VAL>
+FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF = "FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF"  # define a class mainframe
+FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF = "FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF"  # define a class mainframe
 FMAXPSG_SCTN0916_CLASS_RADIO_DEF = "FMAXPSG_SCTN0916_CLASS_RADIO_DEF"  # define a radio button element
 FMAXPSG_SCTN0916_CLASS_RCMENU_DEF = "FMAXPSG_SCTN0916_CLASS_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD"  # define a right click menu
@@ -568,6 +570,8 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0916_CLASS_LIST_DEF,  # define a list in PSG <NAC><CLASSNAME><LISTNAME>
 	FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD,  # add a str to a list in PSG <NAC><CLASSNAME><LISTNAME><STR>
 	FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD,  # add a val to a list in PSG <NAC><CLASSNAME><LISTNAME><VAL>
+	FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF,  # define a class mainframe
+	FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF,  # define a class mainframe
 	FMAXPSG_SCTN0916_CLASS_RADIO_DEF,  # define a radio button element
 	FMAXPSG_SCTN0916_CLASS_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD,  # define a right click menu
@@ -594,8 +598,6 @@ TABLEVEL = "TABLEVEL"  # key for tab levels
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN103 _DICT_ _DEF_
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF = {}  # define a class mainframe
-FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF = {}  # define a class mainframe
 FMCF_SCTN0003_TYPE_CMNT_DICT = {}  # SCTN009 types comments
 FMCF_SCTN0003_TYPE_DICT = {}  # SCTN003 types
 FMCF_SCTN0201_DEF_CMNT_DICT = {}  # SCTN201 defines comments dict
@@ -717,8 +719,6 @@ FMPSG_SCTN0916_CLASS_WINDOW_DICT = {}  # holds all of the button entriess (TUPDI
 
 	global \
 		TABLEVEL, \
-		FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF, \
-		FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF, \
 		FMCF_SCTN0003_TYPE_CMNT_DICT, \
 		FMCF_SCTN0003_TYPE_DICT, \
 		FMCF_SCTN0201_DEF_CMNT_DICT, \
