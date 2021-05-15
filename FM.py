@@ -311,7 +311,7 @@ FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD = "FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD"  # a
 FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD = "FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD"  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
 FMAXPSG_SCTN090C_MAPPDS_VS_ADD = "FMAXPSG_SCTN090C_MAPPDS_VS_ADD"  # add a string to the mainapp dict <NAC><KEY><STR>
 FMAXPSG_SCTN090C_MAPPDS_VV_ADD = "FMAXPSG_SCTN090C_MAPPDS_VV_ADD"  # add a value to the mainapp dict <NAC><KEY><VAL>
-FMAXPSG_SCTN090D_MAINFRAME_DEF = "FMAXPSG_SCTN090D_MAINFRAME_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+FMAXPSG_SCTN090D_FORMMAIN_DEF = "FMAXPSG_SCTN090D_FORMMAIN_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD = "FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD"  # add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD = "FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD"  # add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD = "FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD"  # add a column to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
@@ -337,7 +337,7 @@ FMAXPSG_SCTN0911_COMBO_DEF = "FMAXPSG_SCTN0911_COMBO_DEF"  # define a combo box
 FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # define a frame element
 FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu
-FMAXPSG_SCTN0914_POPUPFRAME_DEF = "FMAXPSG_SCTN0914_POPUPFRAME_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+FMAXPSG_SCTN0914_FORMPOPUP_DEF = "FMAXPSG_SCTN0914_FORMPOPUP_DEF"  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 FMAXPSG_SCTN0915_PUDLG_DEF = "FMAXPSG_SCTN0915_PUDLG_DEF"  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
 FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD = "FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
 FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD = "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
@@ -386,8 +386,8 @@ FMAXPSG_SCTN0916_CLASS_LAYOUT_TEXT_ADD = "FMAXPSG_SCTN0916_CLASS_LAYOUT_TEXT_ADD
 FMAXPSG_SCTN0916_CLASS_LIST_DEF = "FMAXPSG_SCTN0916_CLASS_LIST_DEF"  # define a list in PSG <NAC><CLASSNAME><LISTNAME>
 FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD = "FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD"  # add a str to a list in PSG <NAC><CLASSNAME><LISTNAME><STR>
 FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD"  # add a val to a list in PSG <NAC><CLASSNAME><LISTNAME><VAL>
-FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF = "FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF"  # define a class mainframe
-FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF = "FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF"  # define a class mainframe
+FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF = "FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF"  # define a class mainframe
+FMAXPSG_SCTN0916_CLASS_FORMPOPUP_DEF = "FMAXPSG_SCTN0916_CLASS_FORMPOPUP_DEF"  # define a class mainframe
 FMAXPSG_SCTN0916_CLASS_RADIO_DEF = "FMAXPSG_SCTN0916_CLASS_RADIO_DEF"  # define a radio button element
 FMAXPSG_SCTN0916_CLASS_RCMENU_DEF = "FMAXPSG_SCTN0916_CLASS_RCMENU_DEF"  # define a right click menu
 FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD"  # define a right click menu
@@ -495,7 +495,7 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD,  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
 	FMAXPSG_SCTN090C_MAPPDS_VS_ADD,  # add a string to the mainapp dict <NAC><KEY><STR>
 	FMAXPSG_SCTN090C_MAPPDS_VV_ADD,  # add a value to the mainapp dict <NAC><KEY><VAL>
-	FMAXPSG_SCTN090D_MAINFRAME_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+	FMAXPSG_SCTN090D_FORMMAIN_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 	FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD,  # add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 	FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD,  # add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 	FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD,  # add a column to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
@@ -521,7 +521,7 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0912_FRAMEELEMENT_DEF,  # define a frame element
 	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu
-	FMAXPSG_SCTN0914_POPUPFRAME_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+	FMAXPSG_SCTN0914_FORMPOPUP_DEF,  # define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 	FMAXPSG_SCTN0915_PUDLG_DEF,  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
 	FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
 	FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
@@ -570,8 +570,8 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0916_CLASS_LIST_DEF,  # define a list in PSG <NAC><CLASSNAME><LISTNAME>
 	FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD,  # add a str to a list in PSG <NAC><CLASSNAME><LISTNAME><STR>
 	FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD,  # add a val to a list in PSG <NAC><CLASSNAME><LISTNAME><VAL>
-	FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF,  # define a class mainframe
-	FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF,  # define a class mainframe
+	FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF,  # define a class mainframe
+	FMAXPSG_SCTN0916_CLASS_FORMPOPUP_DEF,  # define a class mainframe
 	FMAXPSG_SCTN0916_CLASS_RADIO_DEF,  # define a radio button element
 	FMAXPSG_SCTN0916_CLASS_RCMENU_DEF,  # define a right click menu
 	FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD,  # define a right click menu
@@ -652,8 +652,8 @@ FMPSG_SCTN090B_COLUMN_PARMS_DICT = {}  # holds all of the button entriess (TUPDI
 FMPSG_SCTN090C_MAPPDS_CMNT_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090C_MAPPDS_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090C_MAPPDSDICT_DICT = {}  # the main app dict+dict for this app
-FMPSG_SCTN090D_MAINFRAME_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
-FMPSG_SCTN090D_MAINFRAME_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN090D_FORMMAIN_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
+FMPSG_SCTN090D_FORMMAIN_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090E_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090E_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090F_WINDOW_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
@@ -666,8 +666,8 @@ FMPSG_SCTN0912_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCT
 FMPSG_SCTN0912_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0913_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
-FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN0914_POPUPFRAME_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
+FMPSG_SCTN0914_FORMPOPUP_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN0914_FORMPOPUP_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
 FMPSG_SCTN0915_PUDLG_CMNT_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
 FMPSG_SCTN0915_PUDLG_DICT_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
 FMPSG_SCTN0915_PUDLG_LIST_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
@@ -835,7 +835,7 @@ TBGLST = [
 	("FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN090C_MAPPDS_VS_ADD", FMAXFM_SCTN0101_AX_DEF, "add a string to the mainapp dict <NAC><KEY><STR>",),
 	("FMAXPSG_SCTN090C_MAPPDS_VV_ADD", FMAXFM_SCTN0101_AX_DEF, "add a value to the mainapp dict <NAC><KEY><VAL>",),
-	("FMAXPSG_SCTN090D_MAINFRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
+	("FMAXPSG_SCTN090D_FORMMAIN_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
 	("FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD", FMAXFM_SCTN0101_AX_DEF, "add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
 	("FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD", FMAXFM_SCTN0101_AX_DEF, "add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
 	("FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD", FMAXFM_SCTN0101_AX_DEF, "add a column to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
@@ -862,7 +862,7 @@ TBGLST = [
 	("FMAXPSG_SCTN0912_FRAMEELEMENT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame element",),
 	("FMAXPSG_SCTN0913_RCMENU_DEF", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
 	("FMAXPSG_SCTN0913_RCMENU_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
-	("FMAXPSG_SCTN0914_POPUPFRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
+	("FMAXPSG_SCTN0914_FORMPOPUP_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><WINDOW><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
 	("FMAXPSG_SCTN0915_PUDLG_DEF", FMAXFM_SCTN0101_AX_DEF, "define a popup dialog <NAC><POPUPNAME><POPUPTYPE>",),
 	("FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to a text element <NAC><POPUPNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",),
@@ -912,8 +912,8 @@ TBGLST = [
 	("FMAXPSG_SCTN0916_CLASS_LIST_DEF", FMAXFM_SCTN0101_AX_DEF, "define a list in PSG <NAC><CLASSNAME><LISTNAME>",),
 	("FMAXPSG_SCTN0916_CLASS_LIST_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to a list in PSG <NAC><CLASSNAME><LISTNAME><STR>",),
 	("FMAXPSG_SCTN0916_CLASS_LIST_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a val to a list in PSG <NAC><CLASSNAME><LISTNAME><VAL>",),
-	("FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a class mainframe",),
-	("FMAXPSG_SCTN0916_CLASS_POPUPFRAME_DEF", FMAXFM_SCTN0101_AX_DEF, "define a class mainframe",),
+	("FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF", FMAXFM_SCTN0101_AX_DEF, "define a class mainframe",),
+	("FMAXPSG_SCTN0916_CLASS_FORMPOPUP_DEF", FMAXFM_SCTN0101_AX_DEF, "define a class mainframe",),
 	("FMAXPSG_SCTN0916_CLASS_RADIO_DEF", FMAXFM_SCTN0101_AX_DEF, "define a radio button element",),
 	("FMAXPSG_SCTN0916_CLASS_RCMENU_DEF", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
 	("FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "define a right click menu",),
@@ -990,8 +990,8 @@ TBGLST = [
 	("FMPSG_SCTN090C_MAPPDSDICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict+dict for this app",),
 	("FMPSG_SCTN090C_MAPPDS_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict for this app",),
 	("FMPSG_SCTN090C_MAPPDS_DICT", FMAXFM_SCTN0103_DICT_DEF, "the main app dict for this app",),
-	("FMPSG_SCTN090D_MAINFRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
-	("FMPSG_SCTN090D_MAINFRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN090D_FORMMAIN_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
+	("FMPSG_SCTN090D_FORMMAIN_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN090E_LAYOUT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN090E_LAYOUT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN090F_WINDOW_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
@@ -1004,8 +1004,8 @@ TBGLST = [
 	("FMPSG_SCTN0912_FRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0913_RCMENU_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0913_RCMENU_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
-	("FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
-	("FMPSG_SCTN0914_POPUPFRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
+	("FMPSG_SCTN0914_FORMPOPUP_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN0914_FORMPOPUP_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
 	("FMPSG_SCTN0915_PUDLG_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
 	("FMPSG_SCTN0915_PUDLG_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
 	("FMPSG_SCTN0915_PUDLG_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
@@ -1305,6 +1305,17 @@ TBGLST = [
 	("PSGVAL_KEY_BTN_XPAND", FMAXPSG_SCTN0900_KEY_DEF, "BTN_XPAND", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_ZERO", FMAXPSG_SCTN0900_KEY_DEF, "BTN_ZERO", "key for all of the button xpand",),
 	("PSGVAL_KEY_CHECKBOX_ALPHA_LOW", FMAXPSG_SCTN0900_KEY_DEF, "CHECKBOX_ALPHA_LOW", "is the clock transparent under mouse (ineffective if mouse is avoided)",),
+	("PSGVAL_KEY_FORM", FMAXPSG_SCTN0900_KEY_DEF, "FORM", "holds all of form entries",),
+	("PSGVAL_KEY_FORMMAIN", FMAXPSG_SCTN0900_KEY_DEF, "FORMMAIN", "holds all of form entries",),
+	("PSGVAL_KEY_FORMPOPUP00", FMAXPSG_SCTN0900_KEY_DEF, "FORMPOPUP00", "holds all of form entries",),
+	("PSGVAL_KEY_FORMPOPUP01", FMAXPSG_SCTN0900_KEY_DEF, "FORMPOPUP01", "holds all of form entries",),
+	("PSGVAL_KEY_FORMPOPUP02", FMAXPSG_SCTN0900_KEY_DEF, "FORMPOPUP02", "holds all of form entries",),
+	("PSGVAL_KEY_FORMPOPUP03", FMAXPSG_SCTN0900_KEY_DEF, "FORMPOPUP03", "holds all of form entries",),
+	("PSGVAL_KEY_FORMPOPUP04", FMAXPSG_SCTN0900_KEY_DEF, "FORMPOPUP04", "holds all of form entries",),
+	("PSGVAL_KEY_FORMEDITOR", FMAXPSG_SCTN0900_KEY_DEF, "FORMEDITOR", "holds all of form entries",),
+	("PSGVAL_KEY_FORMEDITENTRY", FMAXPSG_SCTN0900_KEY_DEF, "FORMEDITENTRY", "holds all of form entries",),
+	("PSGVAL_KEY_FORMCLOCKS", FMAXPSG_SCTN0900_KEY_DEF, "FORMCLOCKS", "holds all of form entries",),
+	("PSGVAL_KEY_FORMTHECLOCK", FMAXPSG_SCTN0900_KEY_DEF, "FORMTHECLOCK", "holds all of form entries",),
 	("PSGVAL_KEY_CHECKBOX_RUNAWAY", FMAXPSG_SCTN0900_KEY_DEF, "CHECKBOX_RUNAWAY", "key for avoiding the mouse bool",),
 	("PSGVAL_KEY_CLOSE_BBOX", FMAXPSG_SCTN0900_KEY_DEF, "CLOSE_BBOX", "CLOSE BOUNDING BOX",),
 	("PSGVAL_KEY_DISMISSED", FMAXPSG_SCTN0900_KEY_DEF, "DISMISSED", "alarm dismissed bool",),
@@ -1317,8 +1328,8 @@ TBGLST = [
 	("PSGVAL_KEY_INDEX_OF_NEXT_EVENT", FMAXPSG_SCTN0900_KEY_DEF, "INDEX_OF_NEXT_EVENT", "",),
 	("PSGVAL_KEY_INTERVAL_COUNT", FMAXPSG_SCTN0900_KEY_DEF, "INTERVAL_COUNT", "count of the number of times since last reset this interval has triggered an alert",),
 	("PSGVAL_KEY_IS_ALERTING_NOW", FMAXPSG_SCTN0900_KEY_DEF, "IS_ALERTING_NOW", "is the event currently alerting",),
-	("PSGVAL_KEY_MAINFRAME_LCN", FMAXPSG_SCTN0900_KEY_DEF, "MAINFRAME_LCN", "screen position of the mainframe",),
-	("PSGVAL_KEY_MAINFRAME_SIZE", FMAXPSG_SCTN0900_KEY_DEF, "MAINFRAME_SIZE", "make life easier by remembering mainframe size, and why currently resizable is always False",),
+	("PSGVAL_KEY_FORMMAIN_LCN", FMAXPSG_SCTN0900_KEY_DEF, "FORMMAIN_LCN", "screen position of the mainframe",),
+	("PSGVAL_KEY_FORMMAIN_SIZE", FMAXPSG_SCTN0900_KEY_DEF, "FORMMAIN_SIZE", "make life easier by remembering mainframe size, and why currently resizable is always False",),
 	("PSGVAL_KEY_MOUSE_LCN", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_LCN", "track mouse location to ease load a bit",),
 	("PSGVAL_KEY_MOUSE_STATUS_CLOSE_E", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_CLOSE_E", "mouse is east of checked element",),
 	("PSGVAL_KEY_MOUSE_STATUS_CLOSE_N", FMAXPSG_SCTN0900_KEY_DEF, "MOUSE_STATUS_CLOSE_N", "mouse is north of checked element",),
@@ -1630,8 +1641,8 @@ TBGLST = [
 	("PSGVAL__CLOCKS_LAYOUT05", FMAXPSG_SCTN0916_CLASS_LAYOUT_COLUMN_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L02", "CLOCKS_LAYOUT_E02", "add a column",),
 	("PSGVAL__CLOCKS_LAYOUT06", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L03", "CLOCKS_LAYOUT_E02", "layout", "CLOCKS_COLUMN02", "comment",),
 	("PSGVAL__CLOCKS_LAYOUT07", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L03", "CLOCKS_LAYOUT_E02", "pad", "SZ_PAD_ALL", "comment",),
-	("PSGVAL__CLOCKS_MAINFRAME", FMAX_NOP, "the frame for clocks",),
-	("PSGVAL__CLOCKS_MAINFRAME00", FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF, "CLOCKS", "CLOCKS_WINDOW", "True", "the clocks frame defined and done",),
+	("PSGVAL__CLOCKS_FORMMAIN", FMAX_NOP, "the frame for clocks",),
+	("PSGVAL__CLOCKS_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "CLOCKS", "CLOCKS_WINDOW", "True", "the clocks frame defined and done",),
 	("PSGVAL__CLOCKS_TEXT_DICT", FMAX_NOP, "dict with the root source for clocks values, updated both directions as appropriate",),
 	("PSGVAL__CLOCKS_TEXT_DICT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "CLOCKS_TEXT_DICT", "holds the values for the text elements",),
 	("PSGVAL__CLOCKS_TEXT_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "CLOCKS", "CLOCKS_TEXT_DICT", "NAME_NEXT_EVENT", "", "name of next event",),
@@ -1749,9 +1760,9 @@ TBGLST = [
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "CHECKBOX_RUNAWAY", "False", "default to avoiding mouse",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "CLOSE_BBOX", "EMPTY_BBOX", "FILLED IN BY INIT",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "INDEX_OF_NEXT_EVENT", "0", "default to first entry as next until the app can sort through them",),
-	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "MAINFRAME", "None", "current screen position",),
-	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "MAINFRAME_LCN", "EMPTY_XY", "current screen position",),
-	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "MAINFRAME_SIZE", "EMPTY_XY", "current screen position",),
+	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "FORMMAIN", "None", "current screen position",),
+	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "FORMMAIN_LCN", "EMPTY_XY", "current screen position",),
+	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "FORMMAIN_SIZE", "EMPTY_XY", "current screen position",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "MOUSE_LCN", "(0, 0)", "track mouse location",),
 	("PSGVAL__MAPPDS01", FMAXPSG_SCTN090C_MAPPDS_VV_ADD, "MAPPDS", "SCREEN_DIMS", "EMPTY_XY", "current screen position",),
 	("PSGVAL__MAPPDS02", FMAXPSG_SCTN090C_MAPPDS_DICT_DEF, "MAPPDS", "EVENT_ENTRIES", "0", "holds events",),
@@ -1877,8 +1888,8 @@ TBGLST = [
 	("PSGVAL__POPUP_ALERT_LAYOUT05", FMAXPSG_SCTN0916_CLASS_LAYOUT_COLUMN_ADD, "POPUP_ALERT", "POPUP_ALERT_LAYOUT", "POPUP_ALERT_LAYOUT_ROW_00", "L02", "CLOCKS_LAYOUT_E02", "add a column",),
 	("PSGVAL__POPUP_ALERT_LAYOUT06", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "POPUP_ALERT", "POPUP_ALERT_LAYOUT", "POPUP_ALERT_LAYOUT_ROW_00", "L03", "CLOCKS_LAYOUT_E02", "layout", "POPUP_ALERT_COLUMN02", "comment",),
 	("PSGVAL__POPUP_ALERT_LAYOUT07", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "POPUP_ALERT", "POPUP_ALERT_LAYOUT", "POPUP_ALERT_LAYOUT_ROW_00", "L03", "CLOCKS_LAYOUT_E02", "pad", "SZ_PAD_ALL", "comment",),
-	("PSGVAL__POPUP_ALERT_MAINFRAME", FMAX_NOP, "the frame for clocks",),
-	("PSGVAL__POPUP_ALERT_MAINFRAME00", FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF, "POPUP_ALERT", "POPUP_ALERT_WINDOW", "True", "the clocks frame defined and done",),
+	("PSGVAL__POPUP_ALERT_FORMMAIN", FMAX_NOP, "the frame for clocks",),
+	("PSGVAL__POPUP_ALERT_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "POPUP_ALERT", "POPUP_ALERT_WINDOW", "True", "the clocks frame defined and done",),
 	("PSGVAL__POPUP_ALERT_SPIN01_00", FMAXPSG_SCTN0916_CLASS_SPIN_DEF, "POPUP_ALERT", "POPUP_ALERT_SPIN01", "define the alarm en/dis/able spinbox",),
 	("PSGVAL__POPUP_ALERT_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VS_ADD, "POPUP_ALERT", "POPUP_ALERT_SPIN01", "TEXT", "SPIN_TEXT", "comment",),
 	("PSGVAL__POPUP_ALERT_SPIN01_01", FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD, "POPUP_ALERT", "POPUP_ALERT_SPIN01", "BACKGROUND_COLOR", "COLOR_ALERT_BACKGROUND", "comment",),
@@ -1996,8 +2007,8 @@ TBGLST = [
 	("PSGVAL__THECLOCK_LAYOUT01", FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD, "THECLOCK", "THECLOCK_LAYOUT", "THECLOCK_LAYOUT_ROW_00", "L01", "add a row to the layout",),
 	("PSGVAL__THECLOCK_LAYOUT02", FMAXPSG_SCTN0916_CLASS_LAYOUT_TEXT_ADD, "THECLOCK", "THECLOCK_LAYOUT", "THECLOCK_LAYOUT_ROW_00", "L02", "THECLOCK_LAYOUT_E01", "add a column",),
 	("PSGVAL__THECLOCK_LAYOUT03", FMAXPSG_SCTN0916_CLASS_LAYOUT_PACKEDPARM_ADD, "THECLOCK", "THECLOCK_LAYOUT", "THECLOCK_LAYOUT_ROW_00", "L03", "THECLOCK_LAYOUT_E01", "THECLOCK_TEXT_TIME_CLOCK", "comment",),
-	("PSGVAL__THECLOCK_MAINFRAME", FMAX_NOP, "the frame for clocks",),
-	("PSGVAL__THECLOCK_MAINFRAME00", FMAXPSG_SCTN0916_CLASS_MAINFRAME_DEF, "THECLOCK", "THECLOCK", "THECLOCK_WINDOW", "True", "the clocks frame defined and done",),
+	("PSGVAL__THECLOCK_FORMMAIN", FMAX_NOP, "the frame for clocks",),
+	("PSGVAL__THECLOCK_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "THECLOCK", "THECLOCK", "THECLOCK_WINDOW", "True", "the clocks frame defined and done",),
 	("PSGVAL__THECLOCK_RCMENU01", FMAXPSG_SCTN0916_CLASS_RCMENU_DEF, "THECLOCK", "THECLOCK_RCMENU01", "right click to do the things",),
 	("PSGVAL__THECLOCK_RCMENU0101", FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD, "THECLOCK", "THECLOCK_RCMENU01", "BTN_QUIT", "quit by right click",),
 	("PSGVAL__THECLOCK_RCMENU0101", FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD, "THECLOCK", "THECLOCK_RCMENU01", "CHECKBOX_ALPHA_LOW", "toggle CHECKBOX_ALPHA_LOW",),
@@ -2032,7 +2043,7 @@ TBGLST = [
 	("PSGVAL__VCURRENT_INTERVAL_COUNT", FMAXPSG_SCTN0901_VAL_DEF, "CURRENT_INTERVAL_COUNT", "0", "comment",),
 	("PSGVAL__VIS_ALERTING_NOWV", FMAXPSG_SCTN0901_VAL_DEF, "IS_ALERTING_NOWV", "False", "comment",),
 	("PSGVAL__VLAST_MOUSE_STATUS", FMAXPSG_SCTN0901_VAL_DEF, "LAST_MOUSE_STATUS", "None", "last returned mouse status to deal with hover events",),
-	("PSGVAL__VMAINFRAME", FMAXPSG_SCTN0901_VAL_DEF, "MAINFRAME", "None", "mainframe so everything passes together always",),
+	("PSGVAL__VFORMMAIN", FMAXPSG_SCTN0901_VAL_DEF, "FORMMAIN", "None", "mainframe so everything passes together always",),
 	("PSGVAL__VMLCN", FMAXPSG_SCTN0901_VAL_DEF, "MLCN", "DISP.Display().screen().root.query_pointer", "short cut to get mouse position",),
 	("PSGVAL__VNAME_NEXT_EVENT_STR", FMAXPSG_SCTN0901_STR_DEF, "NAME_NEXT_EVENT_STR", "", "name of the next event",),
 	("PSGVAL__VNOWM", FMAXPSG_SCTN0901_VAL_DEF, "NOWM", "0", "comment",),
@@ -2528,9 +2539,9 @@ def makePSGClasses():
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		strToRtn_ += f"""class CLASS_{thisClassName_}{OPAREN}object{CPAREN}:
 {NTAB(1)}global {BKSLSH}
-{NTAB(3)}MAINFRAME, {BKSLSH}
+{NTAB(3)}FORMMAIN, {BKSLSH}
 {NTAB(3)}MAPPDS, {BKSLSH}
-{NTAB(3)}POPUPFRAME{NEWLINE}
+{NTAB(3)}FORMPOPUP{NEWLINE}
 {NTAB(1)}def __init__{OPAREN}self, key_, thisWindow_=None{CPAREN}:
 {NTAB(2)}self.THIS_WINDOW = thisWindow_{NEWLINE}{NEWLINE}"""
 
@@ -2604,27 +2615,27 @@ def makePSGClasses():
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:
 {NTAB(2)}global {BKSLSH}
-{NTAB(4)}MAINFRAME, {BKSLSH}
+{NTAB(4)}FORMMAIN, {BKSLSH}
 {NTAB(4)}MAPPDS, {BKSLSH}
-{NTAB(4)}POPUPFRAME{NEWLINE}
-{NTAB(2)}if {OPAREN}MAINFRAME is None{CPAREN}:
-{NTAB(3)}MAINFRAME = SG.Window{OPAREN}**self.{thisClassName_}_WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}
-{NTAB(3)}self.THIS_WINDOW = MAINFRAME
-{NTAB(2)}elif {OPAREN}POPUPFRAME is None{CPAREN}:
-{NTAB(3)}POPUPFRAME = SG.Window{OPAREN}**self.{thisClassName_}_WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}
-{NTAB(3)}self.THIS_WINDOW = POPUPFRAME
+{NTAB(4)}FORMPOPUP{NEWLINE}
+{NTAB(2)}if {OPAREN}FORMMAIN is None{CPAREN}:
+{NTAB(3)}FORMMAIN = SG.Window{OPAREN}**self.{thisClassName_}_WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}
+{NTAB(3)}self.THIS_WINDOW = FORMMAIN
+{NTAB(2)}elif {OPAREN}FORMPOPUP is None{CPAREN}:
+{NTAB(3)}FORMPOPUP = SG.Window{OPAREN}**self.{thisClassName_}_WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}
+{NTAB(3)}self.THIS_WINDOW = FORMPOPUP
 {NTAB(2)}elif {OPAREN}self.THIS_WINDOW is not None{CPAREN}:
 {NTAB(3)}self.THIS_WINDOW = SG.Window{OPAREN}**self.{thisClassName_}_WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}
 {NTAB(1)}def __exit__{OPAREN}self, *args_{CPAREN}:
 {NTAB(2)}global {BKSLSH}
-{NTAB(4)}MAINFRAME, {BKSLSH}
+{NTAB(4)}FORMMAIN, {BKSLSH}
 {NTAB(4)}MAPPDS, {BKSLSH}
-{NTAB(4)}POPUPFRAME{NEWLINE}
+{NTAB(4)}FORMPOPUP{NEWLINE}
 {NTAB(2)}self.THIS_WINDOW.close{OPAREN}{CPAREN}
-{NTAB(2)}if {OPAREN}self.THIS_WINDOW == MAINFRAME{CPAREN}:
-{NTAB(3)}MAINFRAME = None
-{NTAB(2)}elif {OPAREN}self.THIS_WINDOW == POPUPFRAME{CPAREN}:
-{NTAB(3)}POPUPFRAME = None{NEWLINE}
+{NTAB(2)}if {OPAREN}self.THIS_WINDOW == FORMMAIN{CPAREN}:
+{NTAB(3)}FORMMAIN = None
+{NTAB(2)}elif {OPAREN}self.THIS_WINDOW == FORMPOPUP{CPAREN}:
+{NTAB(3)}FORMPOPUP = None{NEWLINE}
 {NTAB(2)}self.THIS_WINDOW = None{NEWLINE}{NEWLINE}
 """
 
@@ -2763,23 +2774,23 @@ def makePSG():
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN090D mainframe")}"""
-	dictToUse_ = sortADict(FMPSG_SCTN090D_MAINFRAME_DICT)
+	dictToUse_ = sortADict(FMPSG_SCTN090D_FORMMAIN_DICT)
 	for thisName_, value_ in dictToUse_.items():
-		strToRtn_ += f"""{makeAComment(f"{thisName_}_CLASS")}class {thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global MAINFRAME, MAPPDS{NEWLINE}{NEWLINE}"""
-		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global MAINFRAME, MAPPDS{NEWLINE}"""
-		strToRtn_ += f"""{NTAB(2)}MAINFRAME = SG.Window{OPAREN}{NEWLINE}{value_}"""
+		strToRtn_ += f"""{makeAComment(f"{thisName_}_CLASS")}class {thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global FORMMAIN, MAPPDS{NEWLINE}{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global FORMMAIN, MAPPDS{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(2)}FORMMAIN = SG.Window{OPAREN}{NEWLINE}{value_}"""
 		strToRtn_ = strToRtn_[:-1] + f"""{NTAB(2)}MAPPDS{OBRKT}APPMODE{CBRKT} = APPMODE_{thisName_}{NEWLINE}{NEWLINE}"""
-		strToRtn_ += f"""{NTAB(1)}def __exit__{OPAREN}self, *args{CPAREN}:{NEWLINE}{NTAB(2)}global MAINFRAME, MAPPDS{NEWLINE}{NTAB(2)}MAINFRAME.close(){NEWLINE}{NEWLINE}{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(1)}def __exit__{OPAREN}self, *args{CPAREN}:{NEWLINE}{NTAB(2)}global FORMMAIN, MAPPDS{NEWLINE}{NTAB(2)}FORMMAIN.close(){NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	strToRtn_ += f"""{makeAComment("SCTN0914 popupframe")}"""
-	dictToUse_ = sortADict(FMPSG_SCTN0914_POPUPFRAME_DICT)
+	dictToUse_ = sortADict(FMPSG_SCTN0914_FORMPOPUP_DICT)
 	for thisName_, value_ in dictToUse_.items():
-		strToRtn_ += f"""{makeAComment(f"{thisName_}_CLASS")}class {thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global POPUPFRAME, MAPPDS, PREVIOUS_APPMODE{NEWLINE}{NEWLINE}"""
-		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global POPUPFRAME, MAPPDS, PREVIOUS_APPMODE{NEWLINE}"""
+		strToRtn_ += f"""{makeAComment(f"{thisName_}_CLASS")}class {thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global FORMPOPUP, MAPPDS, PREVIOUS_APPMODE{NEWLINE}{NEWLINE}"""
+		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global FORMPOPUP, MAPPDS, PREVIOUS_APPMODE{NEWLINE}"""
 		# strToRtn_ += f"""{NTAB(2)}MAPPDS{OBRKT}APPMODE{CBRKT} = APPMODE_{thisName_}{NEWLINE}"""
-		strToRtn_ += f"""{NTAB(2)}POPUPFRAME = SG.Window{OPAREN}{NEWLINE}{value_}"""
-		strToRtn_ += f"""{NEWLINE}{NTAB(1)}def __exit__{OPAREN}self, *args{CPAREN}:{NEWLINE}{NTAB(2)}global POPUPFRAME, PREVIOUS_APPMODE, MAPPDS{NEWLINE}{NTAB(2)}POPUPFRAME.close(){NEWLINE}"""
+		strToRtn_ += f"""{NTAB(2)}FORMPOPUP = SG.Window{OPAREN}{NEWLINE}{value_}"""
+		strToRtn_ += f"""{NEWLINE}{NTAB(1)}def __exit__{OPAREN}self, *args{CPAREN}:{NEWLINE}{NTAB(2)}global FORMPOPUP, PREVIOUS_APPMODE, MAPPDS{NEWLINE}{NTAB(2)}FORMPOPUP.close(){NEWLINE}"""
 		strToRtn_ += f"""{NTAB(2)}MAPPDS{OBRKT}APPMODE{CBRKT} = PREVIOUS_APPMODE{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
@@ -2946,8 +2957,8 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN090C_MAPPDS_CMNT_DICT, \
 		FMPSG_SCTN090C_MAPPDS_DICT, \
 		FMPSG_SCTN090C_MAPPDSDICT_DICT, \
-		FMPSG_SCTN090D_MAINFRAME_CMNT_DICT, \
-		FMPSG_SCTN090D_MAINFRAME_DICT, \
+		FMPSG_SCTN090D_FORMMAIN_CMNT_DICT, \
+		FMPSG_SCTN090D_FORMMAIN_DICT, \
 		FMPSG_SCTN090E_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN090E_LAYOUT_DICT, \
 		FMPSG_SCTN090F_WINDOW_CMNT_DICT, \
@@ -2960,8 +2971,8 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0912_FRAME_DICT, \
 		FMPSG_SCTN0913_RCMENU_CMNT_DICT, \
 		FMPSG_SCTN0913_RCMENU_DICT, \
-		FMPSG_SCTN0914_POPUPFRAME_CMNT_DICT, \
-		FMPSG_SCTN0914_POPUPFRAME_DICT, \
+		FMPSG_SCTN0914_FORMPOPUP_CMNT_DICT, \
+		FMPSG_SCTN0914_FORMPOPUP_DICT, \
 		FMPSG_SCTN0915_PUDLG_CMNT_DICT, \
 		FMPSG_SCTN0915_PUDLG_DICT_DICT, \
 		FMPSG_SCTN0915_PUDLG_LIST_DICT, \
@@ -4265,7 +4276,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-		elif thisAX_ == FMAXPSG_SCTN090D_MAINFRAME_DEF:
+		elif thisAX_ == FMAXPSG_SCTN090D_FORMMAIN_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
@@ -4274,9 +4285,9 @@ def parseTBGLST(FDTBGLST):
 			thisElementName_ = thisItem_[3]
 			thisFinalize_ = thisItem_[4]
 			if thisFinalize_ == "True":
-				FMPSG_SCTN090D_MAINFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NEWLINE}"""
+				FMPSG_SCTN090D_FORMMAIN_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NEWLINE}"""
 			else:
-				FMPSG_SCTN090D_MAINFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
+				FMPSG_SCTN090D_FORMMAIN_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4619,7 +4630,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
-		elif thisAX_ == FMAXPSG_SCTN0914_POPUPFRAME_DEF:
+		elif thisAX_ == FMAXPSG_SCTN0914_FORMPOPUP_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if thisItemLen_ != 6:
 				doErrorItem("not 6 items", thisItem_)
@@ -4628,9 +4639,9 @@ def parseTBGLST(FDTBGLST):
 			thisElementName_ = thisItem_[3]
 			thisFinalize_ = thisItem_[4]
 			if thisFinalize_ == "True":
-				FMPSG_SCTN0914_POPUPFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NTAB(2)}POPUPFRAME.Maximize{OPAREN}{CPAREN}{NEWLINE}{NTAB(2)}POPUPFRAME.BringToFront{OPAREN}{CPAREN}{NEWLINE}"""
+				FMPSG_SCTN0914_FORMPOPUP_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NTAB(2)}FORMPOPUP.Maximize{OPAREN}{CPAREN}{NEWLINE}{NTAB(2)}FORMPOPUP.BringToFront{OPAREN}{CPAREN}{NEWLINE}"""
 			else:
-				FMPSG_SCTN0914_POPUPFRAME_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
+				FMPSG_SCTN0914_FORMPOPUP_DICT[thisMainframeName_] = f"""{NTAB(3)}**{thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 

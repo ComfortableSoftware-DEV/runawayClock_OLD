@@ -77,9 +77,9 @@ INDEX_X = 0  # X
 INDEX_Y = 1  # Y
 INTERVAL_COUNT = "INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
 IS_ALERTING_NOW = "IS_ALERTING_NOW"  # is the event currently alerting
-MAINFRAME = None  # set up the mainframe
-MAINFRAME_LCN = "MAINFRAME_LCN"  # screen position of the mainframe
-MAINFRAME_SIZE = "MAINFRAME_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
+FORMMAIN = None  # set up the mainframe
+FORMMAIN_LCN = "FORMMAIN_LCN"  # screen position of the mainframe
+FORMMAIN_SIZE = "FORMMAIN_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 MOUSE_LCN = "MOUSE_LCN"  # track mouse location to ease load a bit
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
@@ -101,7 +101,7 @@ MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
 NAME = "NAME"  # name of the event
 NAME_NEXT_EVENT = "NAME_NEXT_EVENT"  # name of the next event up
-POPUPFRAME = None  # set up the mainframe
+FORMPOPUP = None  # set up the mainframe
 POPUPTYPE = "POPUPTYPE"  # which type of popup are we defining
 POPUPTYPE_AUTO_CLOSE = "POPUPTYPE_AUTO_CLOSE"  # for intervals auto close
 PREDISMISSABLE = "PREDISMISSABLE"  #
@@ -179,7 +179,7 @@ FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font 
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
 IS_ALERTING_NOWV = False  # comment
 LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
-MAINFRAME = None  # mainframe so everything passes together always
+FORMMAIN = None  # mainframe so everything passes together always
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
 NAME_NEXT_EVENT_STR = ""  # name of the next event
 NOW_NOMS = 0  # comment
@@ -446,8 +446,8 @@ EMPTY_MAPPDSTUP = (
 	(CLOSE_BBOX, EMPTY_BBOX),  # empty BBOX dict
 	(EVENT_ENTRIES, EMPTY0_EVENT_ENTRY_TDD),  # an empty event
 	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
-	(MAINFRAME_LCN, EMPTY_XY),  # holds the screen position
-	(MAINFRAME_SIZE, EMPTY_XY),  # which event number is upcoming
+	(FORMMAIN_LCN, EMPTY_XY),  # holds the screen position
+	(FORMMAIN_SIZE, EMPTY_XY),  # which event number is upcoming
 	(SCREEN_DIMS, EMPTY_XY),  #
 )
 
@@ -466,8 +466,8 @@ EMPTY_MAPPDS_TDD = {
 	CLOSE_BBOX: EMPTY_BBOX,  # empty BBOX dict
 	EVENT_ENTRIES: EMPTY0_EVENT_ENTRY_TDD,  # an empty event
 	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
-	MAINFRAME_LCN: EMPTY_XY,  # holds the screen position
-	MAINFRAME_SIZE: EMPTY_XY,  # which event number is upcoming
+	FORMMAIN_LCN: EMPTY_XY,  # holds the screen position
+	FORMMAIN_SIZE: EMPTY_XY,  # which event number is upcoming
 	SCREEN_DIMS: EMPTY_XY,  #
 }
 
@@ -1451,9 +1451,9 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 
 class CLASS_CLOCKS(object):
 	global \
-			MAINFRAME, \
+			FORMMAIN, \
 			MAPPDS, \
-			POPUPFRAME
+			FORMPOPUP
 
 	def __init__(self, key_, thisWindow_=None):
 		self.THIS_WINDOW = thisWindow_
@@ -1569,40 +1569,40 @@ class CLASS_CLOCKS(object):
 
 	def __enter__(self):
 		global \
-				MAINFRAME, \
+				FORMMAIN, \
 				MAPPDS, \
-				POPUPFRAME
+				FORMPOPUP
 
-		if (MAINFRAME is None):
-			MAINFRAME = SG.Window(**self.CLOCKS_WINDOW).finalize()
-			self.THIS_WINDOW = MAINFRAME
-		elif (POPUPFRAME is None):
-			POPUPFRAME = SG.Window(**self.CLOCKS_WINDOW).finalize()
+		if (FORMMAIN is None):
+			FORMMAIN = SG.Window(**self.CLOCKS_WINDOW).finalize()
+			self.THIS_WINDOW = FORMMAIN
+		elif (FORMPOPUP is None):
+			FORMPOPUP = SG.Window(**self.CLOCKS_WINDOW).finalize()
 
-			self.THIS_WINDOW = POPUPFRAME
+			self.THIS_WINDOW = FORMPOPUP
 		elif (self.THIS_WINDOW is not None):
 			self.THIS_WINDOW = SG.Window(**self.CLOCKS_WINDOW).finalize()
 
 	def __exit__(self, *args_):
 		global \
-				MAINFRAME, \
+				FORMMAIN, \
 				MAPPDS, \
-				POPUPFRAME
+				FORMPOPUP
 
 		self.THIS_WINDOW.close()
-		if (self.THIS_WINDOW == MAINFRAME):
-			MAINFRAME = None
-		elif (self.THIS_WINDOW == POPUPFRAME):
-			POPUPFRAME = None
+		if (self.THIS_WINDOW == FORMMAIN):
+			FORMMAIN = None
+		elif (self.THIS_WINDOW == FORMPOPUP):
+			FORMPOPUP = None
 
 		self.THIS_WINDOW = None
 
 
 class CLASS_POPUP_ALERT(object):
 	global \
-			MAINFRAME, \
+			FORMMAIN, \
 			MAPPDS, \
-			POPUPFRAME
+			FORMPOPUP
 
 	def __init__(self, key_, thisWindow_=None):
 		self.THIS_WINDOW = thisWindow_
@@ -1736,40 +1736,40 @@ class CLASS_POPUP_ALERT(object):
 
 	def __enter__(self):
 		global \
-				MAINFRAME, \
+				FORMMAIN, \
 				MAPPDS, \
-				POPUPFRAME
+				FORMPOPUP
 
-		if (MAINFRAME is None):
-			MAINFRAME = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
-			self.THIS_WINDOW = MAINFRAME
-		elif (POPUPFRAME is None):
-			POPUPFRAME = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
+		if (FORMMAIN is None):
+			FORMMAIN = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
+			self.THIS_WINDOW = FORMMAIN
+		elif (FORMPOPUP is None):
+			FORMPOPUP = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
 
-			self.THIS_WINDOW = POPUPFRAME
+			self.THIS_WINDOW = FORMPOPUP
 		elif (self.THIS_WINDOW is not None):
 			self.THIS_WINDOW = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
 
 	def __exit__(self, *args_):
 		global \
-				MAINFRAME, \
+				FORMMAIN, \
 				MAPPDS, \
-				POPUPFRAME
+				FORMPOPUP
 
 		self.THIS_WINDOW.close()
-		if (self.THIS_WINDOW == MAINFRAME):
-			MAINFRAME = None
-		elif (self.THIS_WINDOW == POPUPFRAME):
-			POPUPFRAME = None
+		if (self.THIS_WINDOW == FORMMAIN):
+			FORMMAIN = None
+		elif (self.THIS_WINDOW == FORMPOPUP):
+			FORMPOPUP = None
 
 		self.THIS_WINDOW = None
 
 
 class CLASS_THECLOCK(object):
 	global \
-			MAINFRAME, \
+			FORMMAIN, \
 			MAPPDS, \
-			POPUPFRAME
+			FORMPOPUP
 
 	def __init__(self, key_, thisWindow_=None):
 		self.THIS_WINDOW = thisWindow_
@@ -1807,31 +1807,31 @@ class CLASS_THECLOCK(object):
 
 	def __enter__(self):
 		global \
-				MAINFRAME, \
+				FORMMAIN, \
 				MAPPDS, \
-				POPUPFRAME
+				FORMPOPUP
 
-		if (MAINFRAME is None):
-			MAINFRAME = SG.Window(**self.THECLOCK_WINDOW).finalize()
-			self.THIS_WINDOW = MAINFRAME
-		elif (POPUPFRAME is None):
-			POPUPFRAME = SG.Window(**self.THECLOCK_WINDOW).finalize()
+		if (FORMMAIN is None):
+			FORMMAIN = SG.Window(**self.THECLOCK_WINDOW).finalize()
+			self.THIS_WINDOW = FORMMAIN
+		elif (FORMPOPUP is None):
+			FORMPOPUP = SG.Window(**self.THECLOCK_WINDOW).finalize()
 
-			self.THIS_WINDOW = POPUPFRAME
+			self.THIS_WINDOW = FORMPOPUP
 		elif (self.THIS_WINDOW is not None):
 			self.THIS_WINDOW = SG.Window(**self.THECLOCK_WINDOW).finalize()
 
 	def __exit__(self, *args_):
 		global \
-				MAINFRAME, \
+				FORMMAIN, \
 				MAPPDS, \
-				POPUPFRAME
+				FORMPOPUP
 
 		self.THIS_WINDOW.close()
-		if (self.THIS_WINDOW == MAINFRAME):
-			MAINFRAME = None
-		elif (self.THIS_WINDOW == POPUPFRAME):
-			POPUPFRAME = None
+		if (self.THIS_WINDOW == FORMMAIN):
+			FORMMAIN = None
+		elif (self.THIS_WINDOW == FORMPOPUP):
+			FORMPOPUP = None
 
 		self.THIS_WINDOW = None
 
@@ -1920,9 +1920,9 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
 	IS_ALERTING_NOW: False,  # is any event alerting right now
-	MAINFRAME: None,  # current screen position
-	MAINFRAME_LCN: EMPTY_XY,  # current screen position
-	MAINFRAME_SIZE: EMPTY_XY,  # current screen position
+	FORMMAIN: None,  # current screen position
+	FORMMAIN_LCN: EMPTY_XY,  # current screen position
+	FORMMAIN_SIZE: EMPTY_XY,  # current screen position
 	MOUSE_LCN: (0, 0),  # track mouse location
 	SCREEN_DIMS: EMPTY_XY,  # current screen position
 }
@@ -1995,9 +1995,9 @@ def fixTimeAtNext(timeToFix_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def getElementLocation():
 	global \
-			MAINFRAME
+			FORMMAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	return MAINFRAME.CurrentLocation()
+	return FORMMAIN.CurrentLocation()
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2107,7 +2107,7 @@ def getCloseBBox(location_, size_, closeEnough_=SZ_CLOSE):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def updateMainframeFromDict(dictToUpdateFrom_):
 	global \
-			MAINFRAME
+			FORMMAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_, val_ in dictToUpdateFrom_.items():
 
@@ -2116,10 +2116,10 @@ def updateMainframeFromDict(dictToUpdateFrom_):
 			if (val_ >= CF.DAYSECS):
 
 				val_ -= CF.DAYSECS
-			MAINFRAME.Element(key_).Update(value=CF.nrmlIntToHMS(val_))
+			FORMMAIN.Element(key_).Update(value=CF.nrmlIntToHMS(val_))
 
 		else:
-			MAINFRAME.Element(key_).Update(value=val_)
+			FORMMAIN.Element(key_).Update(value=val_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2128,11 +2128,11 @@ def updateMainframeFromDict(dictToUpdateFrom_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def updatePopupframeFromDict(dictToUpdateFrom_):
 	global \
-			POPUPFRAME
+			FORMPOPUP
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_, val_ in dictToUpdateFrom_.items():
 		# print(f"""key_ {key_} val_ {val_}""")
-		POPUPFRAME.Element(key_).Update(value=val_)
+		FORMPOPUP.Element(key_).Update(value=val_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2141,10 +2141,10 @@ def updatePopupframeFromDict(dictToUpdateFrom_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def readWithDict(dictToReadWith_):
 	global \
-			MAINFRAME
+			FORMMAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for key_ in dictToReadWith_:
-		dictToReadWith_[key_] = MAINFRAME[key_]
+		dictToReadWith_[key_] = FORMMAIN[key_]
 	return dictToReadWith_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2154,9 +2154,9 @@ def readWithDict(dictToReadWith_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def intervalCountOff():
 	global \
-			CLOCKS_MAINFRAME
+			CLOCKS_FORMMAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	CLOCKS_MAINFRAME[INTERVAL_COUNT].update(text_color=COLOR_TEXT_INTERVAL_COUNT_INACTIVE)
+	CLOCKS_FORMMAIN[INTERVAL_COUNT].update(text_color=COLOR_TEXT_INTERVAL_COUNT_INACTIVE)
 	CLOCKS_TEXT_DICT[INTERVAL_COUNT] = f"""{0:04d}"""
 	updateMainframeFromDict(CLOCKS_TEXT_DICT)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2167,9 +2167,9 @@ def intervalCountOff():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def intervalCountOn():
 	global \
-			CLOCKS_MAINFRAME
+			CLOCKS_FORMMAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	CLOCKS_MAINFRAME[INTERVAL_COUNT].update(text_color=COLOR_TIME_TOGO)
+	CLOCKS_FORMMAIN[INTERVAL_COUNT].update(text_color=COLOR_TIME_TOGO)
 	CLOCKS_TEXT_DICT[INTERVAL_COUNT] = f"""{CURRENT_INTERVAL_COUNT:04d}"""
 	updateMainframeFromDict(CLOCKS_TEXT_DICT)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2180,7 +2180,7 @@ def intervalCountOn():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def updateIntervalCount():
 	global \
-			CLOCKS_MAINFRAME
+			CLOCKS_FORMMAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	CLOCKS_TEXT_DICT[INTERVAL_COUNT] = f"""{CURRENT_INTERVAL_COUNT:04d}"""
 	updateMainframeFromDict(CLOCKS_TEXT_DICT)
@@ -2204,10 +2204,10 @@ def isInBBox(BBoxIn_, pointIn_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def moveFrame(moveTo_=(0, 0)):  # remember - is N/W and + is S/E
 	global \
-			MAINFRAME
+			FORMMAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_, TLcnY_ = getElementLocation(MAINFRAME)
-	TSizeX_, TSizeY_ = getElementSize(MAINFRAME)
+	TLcnX_, TLcnY_ = getElementLocation(FORMMAIN)
+	TSizeX_, TSizeY_ = getElementSize(FORMMAIN)
 	if TLcnX_ < 0:
 		TLcnX_ = 0
 	elif TLcnX_ > (MAPPDS[SCREEN_DIMS][INDEX_X] - TSizeX_):
@@ -2216,7 +2216,7 @@ def moveFrame(moveTo_=(0, 0)):  # remember - is N/W and + is S/E
 		TLcnY_ = 0
 	elif TLcnY_ > (MAPPDS[SCREEN_DIMS][INDEX_Y] - TSizeY_):
 		TLcnY_ = (MAPPDS[SCREEN_DIMS][INDEX_Y] - TSizeY_)
-	MAINFRAME.Move(moveTo_)
+	FORMMAIN.Move(moveTo_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2225,7 +2225,7 @@ def moveFrame(moveTo_=(0, 0)):  # remember - is N/W and + is S/E
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
 	global \
-			MAPPDS, MAINFRAME, \
+			MAPPDS, FORMMAIN, \
 			TIMEMS_NEXT_MOVED
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
@@ -2235,8 +2235,8 @@ def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
 
 	TIMEMS_NEXT_MOVED = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
 	screenSZX_, screenSZY_ = splitXYToRaw(MAPPDS[SCREEN_DIMS])
-	TSizeX_, TSizeY_ = splitXYToRaw(MAPPDS[MAINFRAME_SIZE])
-	TLcnX_, TLcnY_ = splitXYToRaw(MAPPDS[MAINFRAME_LCN])
+	TSizeX_, TSizeY_ = splitXYToRaw(MAPPDS[FORMMAIN_SIZE])
+	TLcnX_, TLcnY_ = splitXYToRaw(MAPPDS[FORMMAIN_LCN])
 	moveToX_ = TLcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
 	moveToY_ = TLcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
 
@@ -2257,7 +2257,7 @@ def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
 		# print(f"""(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA) (abs({moveToY_} - {TLcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA)}""")
 		return
 
-	MAINFRAME.Move(moveToX_, moveToY_)
+	FORMMAIN.Move(moveToX_, moveToY_)
 	TIMEMS_NEXT_MOVED = NOWMS
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2268,7 +2268,7 @@ def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def getScreenDims():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TDim_ = MAINFRAME.GetScreenDimensions()
+	TDim_ = FORMMAIN.GetScreenDimensions()
 	return TDim_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2280,9 +2280,9 @@ def updateMappds(mainframeLocation_):
 	global \
 			MAPPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	MAPPDS[MAINFRAME_LCN] = mainframeLocation_
-	MAPPDS[BBOX] = getBBox(MAPPDS[MAINFRAME_LCN], MAPPDS[MAINFRAME_SIZE])
-	MAPPDS[CLOSE_BBOX] = getCloseBBox(MAPPDS[MAINFRAME_LCN], MAPPDS[MAINFRAME_SIZE])
+	MAPPDS[FORMMAIN_LCN] = mainframeLocation_
+	MAPPDS[BBOX] = getBBox(MAPPDS[FORMMAIN_LCN], MAPPDS[FORMMAIN_SIZE])
+	MAPPDS[CLOSE_BBOX] = getCloseBBox(MAPPDS[FORMMAIN_LCN], MAPPDS[FORMMAIN_SIZE])
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2293,7 +2293,7 @@ def updateMappds(mainframeLocation_):
 def checkMouseLcn(oldFrameLocation_):
 	global \
 		LAST_MOUSE_STATUS, \
-		MAINFRAME, \
+		FORMMAIN, \
 		MAPPDS, \
 		TIMEMS_NEXT_MOUSE_CHECK
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
@@ -2306,9 +2306,9 @@ def checkMouseLcn(oldFrameLocation_):
 	statusToRtn_ = None
 	TLcn_ = getElementLocation()
 	TMouseLcnX_, TMouseLcnY_ = TMouseLcn_ = getMousePos()
-	TBBoxWest_, TBBoxNorth_, TBBoxEast_, TBBoxSouth_ = TBBox_ = getBBox(TLcn_, MAPPDS[MAINFRAME_SIZE])
-	TCloseBBox_ = getCloseBBox(TLcn_, MAPPDS[MAINFRAME_SIZE])
-	TSize_ = MAPPDS[MAINFRAME_SIZE]
+	TBBoxWest_, TBBoxNorth_, TBBoxEast_, TBBoxSouth_ = TBBox_ = getBBox(TLcn_, MAPPDS[FORMMAIN_SIZE])
+	TCloseBBox_ = getCloseBBox(TLcn_, MAPPDS[FORMMAIN_SIZE])
+	TSize_ = MAPPDS[FORMMAIN_SIZE]
 	isInCloseBBox_ = isInBBox(TCloseBBox_, TMouseLcn_)
 
 	if compareXY(TLcn_, oldFrameLocation_) is False:
@@ -2375,11 +2375,11 @@ def checkMouseLcn(oldFrameLocation_):
 		statusToRtn_ = MOUSE_STATUS_OVER
 
 	if (statusToRtn_ == MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS != MOUSE_STATUS_OVER) and (MAPPDS[CHECKBOX_ALPHA_LOW] is True):
-		MAINFRAME.AlphaChannel = MAPPDS[ALPHA_LOW]
+		FORMMAIN.AlphaChannel = MAPPDS[ALPHA_LOW]
 		alphaMode = True
 
 	elif ((statusToRtn_ != MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS == MOUSE_STATUS_OVER)) or ((LAST_MOUSE_STATUS == MOUSE_STATUS_OVER) and (ALPHA_MODE is True) and (MAPPDS[CHECKBOX_ALPHA_LOW] is False)):
-		MAINFRAME.AlphaChannel = MAPPDS[ALPHA_HIGH]
+		FORMMAIN.AlphaChannel = MAPPDS[ALPHA_HIGH]
 		alphaMode = False
 
 	LAST_MOUSE_STATUS = statusToRtn_
@@ -2395,7 +2395,7 @@ def checkMouseLcn(oldFrameLocation_):
 def updateClocks():
 	global \
 			CLOCKS_DICT, \
-			MAINFRAME, \
+			FORMMAIN, \
 			MAPPDS, \
 			THECLOCK_DICT, \
 			TIMEMS_NEXT_UPDATED
@@ -2445,7 +2445,7 @@ def doReadAMainframe(timeout_=SZ_TIMEOUT_MS):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # @profile
 def checkMouseStatus(statusToDo_):
-	global MAINFRAME
+	global FORMMAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	# print(f"""checkMouseStatus statusToDo_ {statusToDo_} """)
 
@@ -2640,10 +2640,10 @@ def doMidnightWork():
 def doAlarmEvent(eventIndexToDo_):
 	global \
 			ALERTING_LIST, \
-			MAINFRAME, \
+			FORMMAIN, \
 			MAPPDS, \
 			NUMBER_ACTIVE_ALARMS, \
-			POPUPFRAME, \
+			FORMPOPUP, \
 			PREVIOUS_APPMODE
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
@@ -2671,21 +2671,21 @@ def doAlarmEvent(eventIndexToDo_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doInit1():
 	global \
-			MAINFRAME, \
+			FORMMAIN, \
 			MAPPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	localTimes()
 	# print(f"""{CF.getDebugInfo()}{CF.NEWLINE}{CF.frameIt("NOWS", NOWS)} {CF.nrmlIntToHMS(NOWS)} {CF.frameIt("NOWS", NOWS)} {CF.nrmlIntToHMS(NOWS)}""")
-	MAINFRAME.AlphaChannel = SZ_ALPHA_HIGH
-	# MAINFRAME.Maximize()
-	# MAINFRAME.BringToFront()
-	MAPPDS[MAINFRAME_LCN] = getElementLocation()
+	FORMMAIN.AlphaChannel = SZ_ALPHA_HIGH
+	# FORMMAIN.Maximize()
+	# FORMMAIN.BringToFront()
+	MAPPDS[FORMMAIN_LCN] = getElementLocation()
 	MAPPDS[SCREEN_DIMS] = getScreenDims()
-	MAPPDS[MAINFRAME_SIZE] = getElementSize(MAINFRAME)
+	MAPPDS[FORMMAIN_SIZE] = getElementSize(FORMMAIN)
 
 	MAPPDS[ALPHA_CHANNEL] = SZ_ALPHA_HIGH
-	MAPPDS[BBOX] = getBBox(MAPPDS[MAINFRAME_LCN], MAPPDS[MAINFRAME_SIZE])
-	MAPPDS[CLOSE_BBOX] = getCloseBBox(MAPPDS[MAINFRAME_LCN], MAPPDS[MAINFRAME_SIZE])
+	MAPPDS[BBOX] = getBBox(MAPPDS[FORMMAIN_LCN], MAPPDS[FORMMAIN_SIZE])
+	MAPPDS[CLOSE_BBOX] = getCloseBBox(MAPPDS[FORMMAIN_LCN], MAPPDS[FORMMAIN_SIZE])
 	CLOCKS_DICT[TIME_CLOCK] = NOWS
 	CLOCKS_DICT[TIME_AT_ZEROELAPSE] = NOWS
 	TIME_AT_LAST_ZERO_CHECK = NOWS
@@ -2723,9 +2723,9 @@ oldValues_ = None
 def reallyDoIt():
 	global \
 			CLOCKS_DICT, \
-			MAINFRAME, \
+			FORMMAIN, \
 			MAPPDS, \
-			POPUPFRAME, \
+			FORMPOPUP, \
 			PREV_ALARM_TYPE, \
 			TIMES_NEXT_EVENT, \
 			TIMES_NEXT_PERIODIC_JOB
@@ -2737,7 +2737,7 @@ def reallyDoIt():
 		if (NOWS == 0):
 			doMidnightWork()
 
-		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
+		checkMouseStatus(checkMouseLcn(MAPPDS[FORMMAIN_LCN]))
 
 		if (TIMES_NEXT_EVENT == NOW_NOMS):
 			alarmResult_ = doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
@@ -2759,7 +2759,7 @@ def reallyDoIt():
 
 		print(f"""{CF.frameIt("eventWindow_", eventWindow_)} {CF.frameIt("eventKey_", eventKey_)} {CF.frameIt("eventVals_", eventVals_)}""")
 
-		if (eventWindow_ == POPUPFRAME):
+		if (eventWindow_ == FORMPOPUP):
 
 			if (eventKey_ == BTN_QUIT):
 				return BTN_QUIT
@@ -2767,7 +2767,7 @@ def reallyDoIt():
 			elif (eventKey_ == BTN_DISMISS):
 				return BTN_DISMISS
 
-		checkMouseStatus(checkMouseLcn(MAPPDS[MAINFRAME_LCN]))
+		checkMouseStatus(checkMouseLcn(MAPPDS[FORMMAIN_LCN]))
 
 
 #		if event_ == BTN_QUIT:
@@ -2833,8 +2833,8 @@ edit:
 	add new events
 	delete this event
 	TIME_s
-CLOCKS_MAINFRAME.__dict__["TKroot"].__str__
-CLOCKS_MAINFRAME[TIME_CLOCK].DisplayText
-CLOCKS_MAINFRAME.Move(10, 10)
+CLOCKS_FORMMAIN.__dict__["TKroot"].__str__
+CLOCKS_FORMMAIN[TIME_CLOCK].DisplayText
+CLOCKS_FORMMAIN.Move(10, 10)
 
 """
