@@ -1247,28 +1247,28 @@ class CLASS_CLOCKS(object):
 		self.CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the main one
 			[
 				SG.Text(  # add a new TEXT element to clocks column
-					**CLOCKS_TEXT_TIME_CLOCK  # add the main clock
+					**self.CLOCKS_TEXT_TIME_CLOCK  # add the main clock
 				),
 			],
 			[
 				SG.Text(  # add a new row to clocks column
-					**CLOCKS_TEXT_TIME_AT_ZEROELAPSE  # add time to go
+					**self.CLOCKS_TEXT_TIME_AT_ZEROELAPSE  # add time to go
 				),
 				SG.Text(  # add a new text element to row01 clocks column
-					**CLOCKS_TEXT_TIME_ELAPSED  # add elapsed time
+					**self.CLOCKS_TEXT_TIME_ELAPSED  # add elapsed time
 				),
 			],
 			[
 				SG.Text(  # add a new text element to row01 clocks column
-					**CLOCKS_TEXT_TIME_TOGO  # add elapsed time
+					**self.CLOCKS_TEXT_TIME_TOGO  # add elapsed time
 				),
 				SG.Text(  # add a new row to clocks column
-					**CLOCKS_TEXT_TIME_AT_NEXT  # add time to go
+					**self.CLOCKS_TEXT_TIME_AT_NEXT  # add time to go
 				),
 			],
 			[
 				SG.Text(  # add a new text element to row01 clocks column
-					**CLOCKS_TEXT_NAME_NEXT_EVENT  # add the main clock
+					**self.CLOCKS_TEXT_NAME_NEXT_EVENT  # add the main clock
 				),
 			],
 			[
@@ -1299,7 +1299,7 @@ class CLASS_CLOCKS(object):
 			],
 			[
 				SG.Text(  # add reset button for elapsed time
-					**CLOCKS_TEXT_INTERVAL_COUNT  # add the zero button to clocks
+					**self.CLOCKS_TEXT_INTERVAL_COUNT  # add the zero button to clocks
 				),
 			],
 		]
@@ -1328,7 +1328,7 @@ class CLASS_CLOCKS(object):
 			FORCE_TOPLEVEL: None,  #
 			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
-			LAYOUT: CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
+			LAYOUT: self.CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
 			MARGINS: SZ_MARGINS_ALL,  #
 			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
 			TITLE: TITLE_CLOCKS,  #
