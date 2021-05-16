@@ -1141,12 +1141,12 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 
 class CLASS_CLOCKS(object):
 	global \
-			FORMMAIN, \
-			MAPPDS, \
-			FORMPOPUP
+			ALL_THE_FORMS, \
+			MAPPDS
 
-	def __init__(self, key_, thisWindow_=None):
-		self.THIS_WINDOW = thisWindow_
+	def __init__(self, key_, formName_, thisWindow_=None):
+		self.THIS_FORM_OBJ = thisWindow_
+		self.THIS_FORM_NAME = formName_
 
 		self.CLOCKS_DICT = {  # holds the values for the clocks frame
 			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -1246,67 +1246,65 @@ class CLASS_CLOCKS(object):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0916_CLASS column elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the main one
-	[
-		SG.Button(  # add a new TEXT element to clocks column
-			SG.Button(  # add the main clock
-		),
-	],
-	[
-		SG.Button(  # add a new row to clocks column
-			SG.Button(  # add time to go
-		),
-		SG.Button(  # add a new text element to row01 clocks column
-			SG.Button(  # add elapsed time
-		),
-	],
-	[
-		SG.Button(  # add a new text element to row01 clocks column
-			SG.Button(  # add elapsed time
-		),
-		SG.Button(  # add a new row to clocks column
-			SG.Button(  # add time to go
-		),
-	],
-	[
-		SG.Button(  # add a new text element to row01 clocks column
-			SG.Button(  # add the main clock
-		),
-	],
-	[
-		SG.Button(  # add a new text element to row01 clocks column
-			SG.Button(  # add elapsed time
-		),
-		SG.Button(  # add a new text element to row01 clocks column
-			SG.Button(  # add elapsed time
-		),
-	],
-]
+		self.CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the main one
+			[
+					SG.Text(  # add a new TEXT element to clocks column
+						**CLOCKS_TEXT_TIME_CLOCK  # add the main clock
+				),
+			],
+			[
+					SG.Text(  # add a new row to clocks column
+						**CLOCKS_TEXT_TIME_AT_ZEROELAPSE  # add time to go
+				),
+					SG.Text(  # add a new text element to row01 clocks column
+						**CLOCKS_TEXT_TIME_ELAPSED  # add elapsed time
+				),
+			],
+			[
+					SG.Text(  # add a new text element to row01 clocks column
+						**CLOCKS_TEXT_TIME_TOGO  # add elapsed time
+				),
+					SG.Text(  # add a new row to clocks column
+						**CLOCKS_TEXT_TIME_AT_NEXT  # add time to go
+				),
+			],
+			[
+					SG.Text(  # add a new text element to row01 clocks column
+						**CLOCKS_TEXT_NAME_NEXT_EVENT  # add the main clock
+				),
+			],
+			[
+					SG.Checkbox(  # add a new text element to row01 clocks column
+						**CHECKBOX_RUNAWAY01  # add elapsed time
+				),
+					SG.Checkbox(  # add a new text element to row01 clocks column
+						**CHECKBOX_ALPHA_LOW01  # add elapsed time
+				),
+			],
+		]
 
-
-CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the main one
-	[
-		SG.Button(  # add a button element to clocks column
-			SG.Button(  # add the xpand button to clocks
-		),
-	],
-	[
-		SG.Button(  # add reset button for elapsed time
-			SG.Button(  # add the zero button to clocks
-		),
-	],
-	[
-		SG.Button(  # add reset button for elapsed time
-			SG.Button(  # add the zero button to clocks
-		),
-	],
-	[
-		SG.Button(  # add reset button for elapsed time
-			SG.Button(  # add the zero button to clocks
-		),
-	],
-]
-
+		self.CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the main one
+			[
+					SG.Button(  # add a button element to clocks column
+						**BTN_QUIT20  # add the xpand button to clocks
+				),
+			],
+			[
+					SG.Button(  # add reset button for elapsed time
+						**BTN_ZERO20  # add the zero button to clocks
+				),
+			],
+			[
+					SG.Button(  # add reset button for elapsed time
+						**BTN_XPAND20  # add the zero button to clocks
+				),
+			],
+			[
+					SG.Text(  # add reset button for elapsed time
+						**CLOCKS_TEXT_INTERVAL_COUNT  # add the zero button to clocks
+				),
+			],
+		]
 
 		self.CLOCKS_WINDOW = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
@@ -1324,43 +1322,30 @@ CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the mai
 
 	def __enter__(self):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
 
-		if (FORMMAIN is None):
-			FORMMAIN = SG.Window(**self.CLOCKS_WINDOW).finalize()
-			self.THIS_WINDOW = FORMMAIN
-		elif (FORMPOPUP is None):
-			FORMPOPUP = SG.Window(**self.CLOCKS_WINDOW).finalize()
-
-			self.THIS_WINDOW = FORMPOPUP
-		elif (self.THIS_WINDOW is not None):
-			self.THIS_WINDOW = SG.Window(**self.CLOCKS_WINDOW).finalize()
+		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.CLOCKS_WINDOW).finalize()
+			self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
+		self.THIS_FORM_OBJ.close()
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = None
 
-		self.THIS_WINDOW.close()
-		if (self.THIS_WINDOW == FORMMAIN):
-			FORMMAIN = None
-		elif (self.THIS_WINDOW == FORMPOPUP):
-			FORMPOPUP = None
-
-		self.THIS_WINDOW = None
+		self.THIS_FORM_OBJ = None
 
 
 class CLASS_POPUP_ALERT(object):
 	global \
-			FORMMAIN, \
-			MAPPDS, \
-			FORMPOPUP
+			ALL_THE_FORMS, \
+			MAPPDS
 
-	def __init__(self, key_, thisWindow_=None):
-		self.THIS_WINDOW = thisWindow_
+	def __init__(self, key_, formName_, thisWindow_=None):
+		self.THIS_FORM_OBJ = thisWindow_
+		self.THIS_FORM_NAME = formName_
 
 		self.POPUP_ALERT_TEXT_DICT = {  # holds the values for the text elements
 			NAME_NEXT_EVENT: "",  # name of next event
@@ -1467,67 +1452,65 @@ class CLASS_POPUP_ALERT(object):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0916_CLASS column elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-POPUP_ALERT_COLUMN01 = [  # C_the column that puts the two smaller clocks below the main one
+		self.POPUP_ALERT_COLUMN01 = [  # C_the column that puts the two smaller clocks below the main one
 	[
-		SG.Button(  # add a new TEXT element to clocks column
-			SG.Button(  # add the main clock
+		SG.Text(  # add a new TEXT element to clocks column
+			**CLOCKS_TEXT_TIME_CLOCK  # add the main clock
 		),
 	],
 	[
-		SG.Button(  # add a new row to clocks column
-			SG.Button(  # add time to go
+		SG.Text(  # add a new row to clocks column
+			**self.POPUP_ALERT_TEXT_TIME_AT_ZEROELAPSE  # add time to go
 		),
-		SG.Button(  # add a new text element to row01 clocks column
-			SG.Button(  # add elapsed time
-		),
-	],
-	[
-		SG.Button(  # add a new text element to row01 clocks column
-			SG.Button(  # add elapsed time
-		),
-		SG.Button(  # add a new row to clocks column
-			SG.Button(  # add time to go
+		SG.Text(  # add a new text element to row01 clocks column
+			**self.POPUP_ALERT_TEXT_TIME_ELAPSED  # add elapsed time
 		),
 	],
 	[
-		SG.Button(  # add a new text element to row01 clocks column
-			SG.Button(  # add the main clock
+		SG.Text(  # add a new text element to row01 clocks column
+			**self.POPUP_ALERT_TEXT_TIME_TOGO  # add elapsed time
+		),
+		SG.Text(  # add a new row to clocks column
+			**self.POPUP_ALERT_TEXT_TIME_AT_NEXT  # add time to go
 		),
 	],
 	[
-		SG.Button(  # add a new text element to row01 clocks column
-			SG.Button(  # add elapsed time
+		SG.Text(  # add a new text element to row01 clocks column
+			**self.POPUP_ALERT_TEXT_NAME_NEXT_EVENT  # add the main clock
 		),
-		SG.Button(  # add a new text element to row01 clocks column
-			SG.Button(  # add elapsed time
+	],
+	[
+		SG.Checkbox(  # add a new text element to row01 clocks column
+			**self.C_CHECKBOX_RUNAWAY01  # add elapsed time
+		),
+		SG.Checkbox(  # add a new text element to row01 clocks column
+			**CHECKBOX_ALPHA_LOW01  # add elapsed time
 		),
 	],
 ]
 
-
-POPUP_ALERT_COLUMN02 = [  # C_the column that puts the two smaller clocks below the main one
+		self.POPUP_ALERT_COLUMN02 = [  # C_the column that puts the two smaller clocks below the main one
 	[
 		SG.Button(  # add a button element to clocks column
-			SG.Button(  # add the xpand button to clocks
+			**BTN_QUIT20  # add the xpand button to clocks
 		),
 	],
 	[
 		SG.Button(  # add reset button for elapsed time
-			SG.Button(  # add the zero button to clocks
+			**BTN_ZERO20  # add the zero button to clocks
 		),
 	],
 	[
 		SG.Button(  # add reset button for elapsed time
-			SG.Button(  # add the zero button to clocks
+			**BTN_XPAND20  # add the zero button to clocks
 		),
 	],
 	[
-		SG.Button(  # add reset button for elapsed time
-			SG.Button(  # add the zero button to clocks
+		SG.Text(  # add reset button for elapsed time
+			**self.POPUP_ALERT_TEXT_INTERVAL_COUNT  # add the zero button to clocks
 		),
 	],
 ]
-
 
 		self.POPUP_ALERT_WINDOW = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
@@ -1545,43 +1528,30 @@ POPUP_ALERT_COLUMN02 = [  # C_the column that puts the two smaller clocks below 
 
 	def __enter__(self):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
 
-		if (FORMMAIN is None):
-			FORMMAIN = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
-			self.THIS_WINDOW = FORMMAIN
-		elif (FORMPOPUP is None):
-			FORMPOPUP = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
-
-			self.THIS_WINDOW = FORMPOPUP
-		elif (self.THIS_WINDOW is not None):
-			self.THIS_WINDOW = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
+		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
+			self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
+		self.THIS_FORM_OBJ.close()
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = None
 
-		self.THIS_WINDOW.close()
-		if (self.THIS_WINDOW == FORMMAIN):
-			FORMMAIN = None
-		elif (self.THIS_WINDOW == FORMPOPUP):
-			FORMPOPUP = None
-
-		self.THIS_WINDOW = None
+		self.THIS_FORM_OBJ = None
 
 
 class CLASS_THECLOCK(object):
 	global \
-			FORMMAIN, \
-			MAPPDS, \
-			FORMPOPUP
+			ALL_THE_FORMS, \
+			MAPPDS
 
-	def __init__(self, key_, thisWindow_=None):
-		self.THIS_WINDOW = thisWindow_
+	def __init__(self, key_, formName_, thisWindow_=None):
+		self.THIS_FORM_OBJ = thisWindow_
+		self.THIS_FORM_NAME = formName_
 
 		self.THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
 			TIME_CLOCK: ZERO_CLOCK,  # comment
@@ -1616,33 +1586,20 @@ class CLASS_THECLOCK(object):
 
 	def __enter__(self):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
 
-		if (FORMMAIN is None):
-			FORMMAIN = SG.Window(**self.THECLOCK_WINDOW).finalize()
-			self.THIS_WINDOW = FORMMAIN
-		elif (FORMPOPUP is None):
-			FORMPOPUP = SG.Window(**self.THECLOCK_WINDOW).finalize()
-
-			self.THIS_WINDOW = FORMPOPUP
-		elif (self.THIS_WINDOW is not None):
-			self.THIS_WINDOW = SG.Window(**self.THECLOCK_WINDOW).finalize()
+		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.THECLOCK_WINDOW).finalize()
+			self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
+		self.THIS_FORM_OBJ.close()
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = None
 
-		self.THIS_WINDOW.close()
-		if (self.THIS_WINDOW == FORMMAIN):
-			FORMMAIN = None
-		elif (self.THIS_WINDOW == FORMPOPUP):
-			FORMPOPUP = None
-
-		self.THIS_WINDOW = None
+		self.THIS_FORM_OBJ = None
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

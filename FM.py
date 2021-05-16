@@ -1601,41 +1601,41 @@ TBGLST = [
 	("PSGVAL__CHECKBOX_RUNAWAY0101", FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD, "CHECKBOX_RUNAWAY01", "KEY", "CHECKBOX_RUNAWAY", "set the key for the checkbox",),
 	("PSGVAL__CLOCKS_COLUMN01", FMAX_NOP, "the column for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_COLUMN0100", FMAXPSG_SCTN0916_CLASS_COLUMN_DEF, "CLOCKS", "CLOCKS_COLUMN01", "the column that puts the two smaller clocks below the main one",),
-	("PSGVAL__CLOCKS_COLUMN0101", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_00", "L01", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0102", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_00", "L02", "CLOCKS_COLUMN01_E01", "add a new TEXT element to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0103", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_00", "L03", "CLOCKS_COLUMN01_E01", "**CLOCKS_TEXT_TIME_CLOCK", "add the main clock",),
-	("PSGVAL__CLOCKS_COLUMN0104", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L01", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0105", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L02", "CLOCKS_COLUMN01_E02", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0106", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L03", "CLOCKS_COLUMN01_E02", "**CLOCKS_TEXT_TIME_AT_ZEROELAPSE", "add time to go",),
-	("PSGVAL__CLOCKS_COLUMN0107", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L02", "CLOCKS_COLUMN01_E03", "add a new text element to row01 clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0108", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L03", "CLOCKS_COLUMN01_E03", "**CLOCKS_TEXT_TIME_ELAPSED", "add elapsed time",),
-	("PSGVAL__CLOCKS_COLUMN0109", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L01", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN010A", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L02", "CLOCKS_COLUMN01_E04", "add a new text element to row01 clocks column",),
-	("PSGVAL__CLOCKS_COLUMN010B", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L03", "CLOCKS_COLUMN01_E04", "**CLOCKS_TEXT_TIME_TOGO", "add elapsed time",),
-	("PSGVAL__CLOCKS_COLUMN010C", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L02", "CLOCKS_COLUMN01_E05", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN010D", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L03", "CLOCKS_COLUMN01_E05", "**CLOCKS_TEXT_TIME_AT_NEXT", "add time to go",),
-	("PSGVAL__CLOCKS_COLUMN010E", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_03", "L01", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN010F", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_03", "L02", "CLOCKS_COLUMN01_E08", "add a new text element to row01 clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0110", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_03", "L03", "CLOCKS_COLUMN01_E08", "**CLOCKS_TEXT_NAME_NEXT_EVENT", "add the main clock",),
-	("PSGVAL__CLOCKS_COLUMN0111", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L01", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0112", FMAXPSG_SCTN0916_CLASS_COLUMN_CHECKBOX_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L02", "CLOCKS_COLUMN01_E06", "add a new text element to row01 clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0113", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L03", "CLOCKS_COLUMN01_E06", "**CHECKBOX_RUNAWAY01", "add elapsed time",),
-	("PSGVAL__CLOCKS_COLUMN0114", FMAXPSG_SCTN0916_CLASS_COLUMN_CHECKBOX_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L02", "CLOCKS_COLUMN01_E07", "add a new text element to row01 clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0115", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L03", "CLOCKS_COLUMN01_E07", "**CHECKBOX_ALPHA_LOW01", "add elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN0101", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_00", "L03", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0102", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_00", "L05", "CLOCKS_COLUMN01_E01", "add a new TEXT element to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0103", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_00", "L06", "CLOCKS_COLUMN01_E01", "**CLOCKS_TEXT_TIME_CLOCK", "add the main clock",),
+	("PSGVAL__CLOCKS_COLUMN0104", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L03", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0105", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L05", "CLOCKS_COLUMN01_E02", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0106", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L06", "CLOCKS_COLUMN01_E02", "**CLOCKS_TEXT_TIME_AT_ZEROELAPSE", "add time to go",),
+	("PSGVAL__CLOCKS_COLUMN0107", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L05", "CLOCKS_COLUMN01_E03", "add a new text element to row01 clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0108", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L06", "CLOCKS_COLUMN01_E03", "**CLOCKS_TEXT_TIME_ELAPSED", "add elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN0109", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L03", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN010A", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L05", "CLOCKS_COLUMN01_E04", "add a new text element to row01 clocks column",),
+	("PSGVAL__CLOCKS_COLUMN010B", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L06", "CLOCKS_COLUMN01_E04", "**CLOCKS_TEXT_TIME_TOGO", "add elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN010C", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L05", "CLOCKS_COLUMN01_E05", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN010D", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L06", "CLOCKS_COLUMN01_E05", "**CLOCKS_TEXT_TIME_AT_NEXT", "add time to go",),
+	("PSGVAL__CLOCKS_COLUMN010E", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_03", "L03", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN010F", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_03", "L05", "CLOCKS_COLUMN01_E08", "add a new text element to row01 clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0110", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_03", "L06", "CLOCKS_COLUMN01_E08", "**CLOCKS_TEXT_NAME_NEXT_EVENT", "add the main clock",),
+	("PSGVAL__CLOCKS_COLUMN0111", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L03", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0112", FMAXPSG_SCTN0916_CLASS_COLUMN_CHECKBOX_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L05", "CLOCKS_COLUMN01_E06", "add a new text element to row01 clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0113", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L06", "CLOCKS_COLUMN01_E06", "**CHECKBOX_RUNAWAY01", "add elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN0114", FMAXPSG_SCTN0916_CLASS_COLUMN_CHECKBOX_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L05", "CLOCKS_COLUMN01_E07", "add a new text element to row01 clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0115", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L06", "CLOCKS_COLUMN01_E07", "**CHECKBOX_ALPHA_LOW01", "add elapsed time",),
 	("PSGVAL__CLOCKS_COLUMN02", FMAX_NOP, "the column for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_COLUMN0200", FMAXPSG_SCTN0916_CLASS_COLUMN_DEF, "CLOCKS", "CLOCKS_COLUMN02", "the column that puts the two smaller clocks below the main one",),
-	("PSGVAL__CLOCKS_COLUMN0201", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_01", "L01", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0202", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_01", "L02", "CLOCKS_COLUMN02_E01", "add a button element to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0203", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_01", "L03", "CLOCKS_COLUMN02_E01", "**BTN_QUIT20", "add the xpand button to clocks",),
-	("PSGVAL__CLOCKS_COLUMN0204", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_02", "L01", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0205", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_02", "L02", "CLOCKS_COLUMN02_E02", "add reset button for elapsed time",),
-	("PSGVAL__CLOCKS_COLUMN0206", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_02", "L03", "CLOCKS_COLUMN02_E02", "**BTN_ZERO20", "add the zero button to clocks",),
-	("PSGVAL__CLOCKS_COLUMN0207", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_03", "L01", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0208", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_03", "L02", "CLOCKS_COLUMN02_E03", "add reset button for elapsed time",),
-	("PSGVAL__CLOCKS_COLUMN0209", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_03", "L03", "CLOCKS_COLUMN02_E03", "**BTN_XPAND20", "add the zero button to clocks",),
-	("PSGVAL__CLOCKS_COLUMN020A", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_04", "L01", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN020B", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_04", "L02", "CLOCKS_COLUMN02_E04", "add reset button for elapsed time",),
-	("PSGVAL__CLOCKS_COLUMN020C", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_04", "L03", "CLOCKS_COLUMN02_E04", "**CLOCKS_TEXT_INTERVAL_COUNT", "add the zero button to clocks",),
+	("PSGVAL__CLOCKS_COLUMN0201", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_01", "L03", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0202", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_01", "L05", "CLOCKS_COLUMN02_E01", "add a button element to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0203", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_01", "L06", "CLOCKS_COLUMN02_E01", "**BTN_QUIT20", "add the xpand button to clocks",),
+	("PSGVAL__CLOCKS_COLUMN0204", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_02", "L03", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0205", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_02", "L05", "CLOCKS_COLUMN02_E02", "add reset button for elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN0206", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_02", "L06", "CLOCKS_COLUMN02_E02", "**BTN_ZERO20", "add the zero button to clocks",),
+	("PSGVAL__CLOCKS_COLUMN0207", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_03", "L03", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0208", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_03", "L05", "CLOCKS_COLUMN02_E03", "add reset button for elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN0209", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_03", "L06", "CLOCKS_COLUMN02_E03", "**BTN_XPAND20", "add the zero button to clocks",),
+	("PSGVAL__CLOCKS_COLUMN020A", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_04", "L03", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN020B", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_04", "L05", "CLOCKS_COLUMN02_E04", "add reset button for elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN020C", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_04", "L06", "CLOCKS_COLUMN02_E04", "**CLOCKS_TEXT_INTERVAL_COUNT", "add the zero button to clocks",),
 	("PSGVAL__CLOCKS_DICT", FMAX_NOP, "dict with the root source for clocks values, updated both directions as appropriate",),
 	("PSGVAL__CLOCKS_DICT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "CLOCKS_DICT", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "CLOCKS_DICT", "TIME_AT_NEXT", "ZERO_CLOCK", "holds the values for the clocks frame",),
@@ -2544,11 +2544,11 @@ def makePSGClasses():
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		strToRtn_ += f"""class CLASS_{thisClassName_}{OPAREN}object{CPAREN}:
 {NTAB(1)}global {BKSLSH}
-{NTAB(3)}FORMMAIN, {BKSLSH}
-{NTAB(3)}MAPPDS, {BKSLSH}
-{NTAB(3)}FORMPOPUP{NEWLINE}
-{NTAB(1)}def __init__{OPAREN}self, key_, thisWindow_=None{CPAREN}:
-{NTAB(2)}self.THIS_WINDOW = thisWindow_{NEWLINE}{NEWLINE}"""
+{NTAB(3)}ALL_THE_FORMS, {BKSLSH}
+{NTAB(3)}MAPPDS{NEWLINE}
+{NTAB(1)}def __init__{OPAREN}self, key_, formName_, thisWindow_=None{CPAREN}:
+{NTAB(2)}self.THIS_FORM_OBJ = thisWindow_
+{NTAB(2)}self.THIS_FORM_NAME = formName_{NEWLINE}{NEWLINE}"""
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -2630,23 +2630,26 @@ def makePSGClasses():
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		if thisClassName_ in FMPSG_SCTN0916_CLASS_COLUMN_DICT:
 			strToRtn_ += f"""{makeAComment("SCTN0916_CLASS column elements")}"""
-			dictToUse_ = sortADict(FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_])
-			for thisElementName_, vals1_ in dictToUse_.items():
-				strToRtn_ += f"""{thisElementName_} = {OBRKT}  # {FMPSG_SCTN0916_CLASS_COLUMN_CMNT_DICT[thisClassName_][thisElementName_]}{NEWLINE}"""
+			dictToUse2_ = sortADict(FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_])
+
+			for thisElementName_, vals1_ in dictToUse2_.items():
+				strToRtn_ += f"""{NTAB(2)}self.{thisElementName_} = {OBRKT}  # {FMPSG_SCTN0916_CLASS_COLUMN_CMNT_DICT[thisClassName_][thisElementName_]}{NEWLINE}"""
+
 				for thisRow_, vals2_ in vals1_.items():
-# 					print(f"""FMPSG_SCTN0916_CLASS_COLUMN_DICT {FMPSG_SCTN0916_CLASS_COLUMN_DICT}
-# thisClassName_ {thisClassName_}
-# thisElementName_ {thisElementName_}
-# thisRow_ {thisRow_}""")
 					thisTabLevel1_ = FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRow_][TABLEVEL]
 					strToRtn_ += f"""{NTAB(thisTabLevel1_)}{OBRKT}{NEWLINE}"""
+
 					for thisElementKey_, vals3_ in vals2_.items():
+
 						if thisElementKey_ == TABLEVEL:
 							continue
+
 						if vals3_ != "":
 							strToRtn_ += f"""{vals3_}{NTAB(thisTabLevel1_ + 1)}{CPAREN},{NEWLINE}"""
+
 					strToRtn_ += f"""{NTAB(thisTabLevel1_)}{CBRKT},{NEWLINE}"""
-				strToRtn_ += f"""{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
+
+				strToRtn_ += f"""{NTAB(thisTabLevel1_ - 1)}{CBRKT}{NEWLINE}{NEWLINE}"""
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -2660,29 +2663,17 @@ def makePSGClasses():
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:
 {NTAB(2)}global {BKSLSH}
-{NTAB(4)}FORMMAIN, {BKSLSH}
-{NTAB(4)}MAPPDS, {BKSLSH}
-{NTAB(4)}FORMPOPUP{NEWLINE}
-{NTAB(2)}if {OPAREN}FORMMAIN is None{CPAREN}:
-{NTAB(3)}FORMMAIN = SG.Window{OPAREN}**self.{thisClassName_}_WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}
-{NTAB(3)}self.THIS_WINDOW = FORMMAIN
-{NTAB(2)}elif {OPAREN}FORMPOPUP is None{CPAREN}:
-{NTAB(3)}FORMPOPUP = SG.Window{OPAREN}**self.{thisClassName_}_WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}
-{NTAB(3)}self.THIS_WINDOW = FORMPOPUP
-{NTAB(2)}elif {OPAREN}self.THIS_WINDOW is not None{CPAREN}:
-{NTAB(3)}self.THIS_WINDOW = SG.Window{OPAREN}**self.{thisClassName_}_WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}
+{NTAB(4)}ALL_THE_FORMS, {BKSLSH}
+{NTAB(4)}MAPPDS{NEWLINE}
+{NTAB(2)}ALL_THE_FORMS{OBRKT}SELF.THIS_FORM_NAME{CBRKT} = SG.Window{OPAREN}**self.{thisClassName_}_WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}
+{NTAB(3)}self.THIS_FORM_OBJ = ALL_THE_FORMS{OBRKT}SELF.THIS_FORM_NAME{CBRKT}{NEWLINE}
 {NTAB(1)}def __exit__{OPAREN}self, *args_{CPAREN}:
 {NTAB(2)}global {BKSLSH}
-{NTAB(4)}FORMMAIN, {BKSLSH}
-{NTAB(4)}MAPPDS, {BKSLSH}
-{NTAB(4)}FORMPOPUP{NEWLINE}
-{NTAB(2)}self.THIS_WINDOW.close{OPAREN}{CPAREN}
-{NTAB(2)}if {OPAREN}self.THIS_WINDOW == FORMMAIN{CPAREN}:
-{NTAB(3)}FORMMAIN = None
-{NTAB(2)}elif {OPAREN}self.THIS_WINDOW == FORMPOPUP{CPAREN}:
-{NTAB(3)}FORMPOPUP = None{NEWLINE}
-{NTAB(2)}self.THIS_WINDOW = None{NEWLINE}{NEWLINE}
-"""
+{NTAB(4)}ALL_THE_FORMS, {BKSLSH}
+{NTAB(4)}MAPPDS
+{NTAB(2)}self.THIS_FORM_OBJ.close{OPAREN}{CPAREN}
+{NTAB(2)}ALL_THE_FORMS{OBRKT}self.THIS_FORM_NAME{CBRKT} = None{NEWLINE}
+{NTAB(2)}self.THIS_FORM_OBJ = None{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	return strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -5065,7 +5056,7 @@ def parseTBGLST(FDTBGLST):
 			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_]:
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Checkbox{OPAREN}  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5097,7 +5088,7 @@ def parseTBGLST(FDTBGLST):
 			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_]:
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Column{OPAREN}  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5129,7 +5120,7 @@ def parseTBGLST(FDTBGLST):
 			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_]:
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Combo{OPAREN}  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5161,7 +5152,7 @@ def parseTBGLST(FDTBGLST):
 			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_]:
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}**{thisElementKey_}  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5194,7 +5185,7 @@ def parseTBGLST(FDTBGLST):
 			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_]:
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}{thisVal_}  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5226,7 +5217,7 @@ def parseTBGLST(FDTBGLST):
 			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_]:
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Radio{OPAREN}  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5291,7 +5282,7 @@ def parseTBGLST(FDTBGLST):
 			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_]:
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Spin{OPAREN}  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5323,7 +5314,7 @@ def parseTBGLST(FDTBGLST):
 			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_]:
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Text{OPAREN}  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
