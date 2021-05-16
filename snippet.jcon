@@ -1,0 +1,95 @@
+FMPSG_SCTN0916_CLASS_COLUMN_DICT
+
+{
+	'CLOCKS': {
+		'CLOCKS_COLUMN01': {
+			'CLOCKS_COLUMN01_ROW_00': {
+				'TABLEVEL': 1,
+				'CLOCKS_COLUMN01_E01': '\t\tSG.Button(  # add a new TEXT element to clocks column\n\t\t\tSG.Button(  # add the main clock\n'
+			},
+				'CLOCKS_COLUMN01_ROW_01': {
+					'TABLEVEL': 1,
+					'CLOCKS_COLUMN01_E02': '\t\tSG.Button(  # add a new row to clocks column\n\t\t\tSG.Button(  # add time to go\n',
+					'CLOCKS_COLUMN01_E03': '\t\tSG.Button(  # add a new text element to row01 clocks column\n\t\t\tSG.Button(  # add elapsed time\n'
+				},
+				'CLOCKS_COLUMN01_ROW_02': {
+					'TABLEVEL': 1,
+					'CLOCKS_COLUMN01_E04': '\t\tSG.Button(  # add a new text element to row01 clocks column\n\t\t\tSG.Button(  # add elapsed time\n',
+					'CLOCKS_COLUMN01_E05': '\t\tSG.Button(  # add a new row to clocks column\n\t\t\tSG.Button(  # add time to go\n'
+				},
+				'CLOCKS_COLUMN01_ROW_03': {
+					'TABLEVEL': 1,
+					'CLOCKS_COLUMN01_E08': '\t\tSG.Button(  # add a new text element to row01 clocks column\n\t\t\tSG.Button(  # add the main clock\n'
+				},
+				'CLOCKS_COLUMN01_ROW_04': {
+					'TABLEVEL': 1,
+					'CLOCKS_COLUMN01_E06': '\t\tSG.Button(  # add a new text element to row01 clocks column\n\t\t\tSG.Button(  # add elapsed time\n',
+					'CLOCKS_COLUMN01_E07': '\t\tSG.Button(  # add a new text element to row01 clocks column\n\t\t\tSG.Button(  # add elapsed time\n'
+				}
+			},
+		'CLOCKS_COLUMN02': {
+			'CLOCKS_COLUMN02_ROW_01': {
+				'TABLEVEL': 1,
+				'CLOCKS_COLUMN02_E01': '\t\tSG.Button(  # add a button element to clocks column\n\t\t\tSG.Button(  # add the xpand button to clocks\n'
+			},
+			'CLOCKS_COLUMN02_ROW_02': {
+				'TABLEVEL': 1,
+				'CLOCKS_COLUMN02_E02': '\t\tSG.Button(  # add reset button for elapsed time\n\t\t\tSG.Button(  # add the zero button to clocks\n'
+			},
+			'CLOCKS_COLUMN02_ROW_03': {
+				'TABLEVEL': 1,
+				'CLOCKS_COLUMN02_E03': '\t\tSG.Button(  # add reset button for elapsed time\n\t\t\tSG.Button(  # add the zero button to clocks\n'
+			},
+			'CLOCKS_COLUMN02_ROW_04': {
+				'TABLEVEL': 1,
+				'CLOCKS_COLUMN02_E04': '\t\tSG.Button(  # add reset button for elapsed time\n\t\t\tSG.Button(  # add the zero button to clocks\n'
+			}
+		}
+	},
+
+	'POPUP_ALERT': {
+		'POPUP_ALERT_COLUMN01': {
+			'POPUP_ALERT_COLUMN01_ROW_00': {
+				'TABLEVEL': 1,
+				'POPUP_ALERT_COLUMN01_E01': '\t\tSG.Button(  # add a new TEXT element to clocks column\n\t\t\tSG.Button(  # add the main clock\n'
+			},
+			'POPUP_ALERT_COLUMN01_ROW_01': {
+				'TABLEVEL': 1,
+				'POPUP_ALERT_COLUMN01_E02': '\t\tSG.Button(  # add a new row to clocks column\n\t\t\tSG.Button(  # add time to go\n',
+				'POPUP_ALERT_COLUMN01_E03': '\t\tSG.Button(  # add a new text element to row01 clocks column\n\t\t\tSG.Button(  # add elapsed time\n'
+			},
+			'POPUP_ALERT_COLUMN01_ROW_02': {
+				'TABLEVEL': 1,
+				'POPUP_ALERT_COLUMN01_E04': '\t\tSG.Button(  # add a new text element to row01 clocks column\n\t\t\tSG.Button(  # add elapsed time\n',
+				'POPUP_ALERT_COLUMN01_E05': '\t\tSG.Button(  # add a new row to clocks column\n\t\t\tSG.Button(  # add time to go\n'
+			},
+			'POPUP_ALERT_COLUMN01_ROW_03': {
+				'TABLEVEL': 1,
+				'POPUP_ALERT_COLUMN01_E08': '\t\tSG.Button(  # add a new text element to row01 clocks column\n\t\t\tSG.Button(  # add the main clock\n'
+			},
+			'POPUP_ALERT_COLUMN01_ROW_04': {
+				'TABLEVEL': 1,
+				'POPUP_ALERT_COLUMN01_E06': '\t\tSG.Button(  # add a new text element to row01 clocks column\n\t\t\tSG.Button(  # add elapsed time\n',
+				'POPUP_ALERT_COLUMN01_E07': '\t\tSG.Button(  # add a new text element to row01 clocks column\n\t\t\tSG.Button(  # add elapsed time\n'
+			}
+		},
+		'POPUP_ALERT_COLUMN02': {
+			'POPUP_ALERT_COLUMN02_ROW_01': {
+				'TABLEVEL': 1,
+				'POPUP_ALERT_COLUMN02_E01': '\t\tSG.Button(  # add a button element to clocks column\n\t\t\tSG.Button(  # add the xpand button to clocks\n'
+			},
+			'POPUP_ALERT_COLUMN02_ROW_02': {
+				'TABLEVEL': 1,
+				'POPUP_ALERT_COLUMN02_E02': '\t\tSG.Button(  # add reset button for elapsed time\n\t\t\tSG.Button(  # add the zero button to clocks\n'
+			},
+			'POPUP_ALERT_COLUMN02_ROW_03': {
+				'TABLEVEL': 1,
+				'POPUP_ALERT_COLUMN02_E03': '\t\tSG.Button(  # add reset button for elapsed time\n\t\t\tSG.Button(  # add the zero button to clocks\n'
+			},
+			'POPUP_ALERT_COLUMN02_ROW_04': {
+				'TABLEVEL': 1,
+				'POPUP_ALERT_COLUMN02_E04': '\t\tSG.Button(  # add reset button for elapsed time\n\t\t\tSG.Button(  # add the zero button to clocks\n'
+			}
+		}
+	}
+}
