@@ -2006,9 +2006,9 @@ TBGLST = [
 	("PSGVAL__THECLOCK_DICT", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "THECLOCK", "THECLOCK_DICT", "set up the mainframe update dict for theclock mode",),
 	("PSGVAL__THECLOCK_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "THECLOCK", "THECLOCK_DICT", "TIME_CLOCK", "ZERO_CLOCK", "comment",),
 	("PSGVAL__THECLOCK_LAYOUT00", FMAXPSG_SCTN0916_CLASS_LAYOUT_DEF, "THECLOCK", "THECLOCK_LAYOUT", "layout for APPMODE_THECLOCK",),
-	("PSGVAL__THECLOCK_LAYOUT01", FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD, "THECLOCK", "THECLOCK_LAYOUT", "THECLOCK_LAYOUT_ROW_00", "L01", "add a row to the layout",),
-	("PSGVAL__THECLOCK_LAYOUT02", FMAXPSG_SCTN0916_CLASS_LAYOUT_TEXT_ADD, "THECLOCK", "THECLOCK_LAYOUT", "THECLOCK_LAYOUT_ROW_00", "L02", "THECLOCK_LAYOUT_E01", "add a column",),
-	("PSGVAL__THECLOCK_LAYOUT03", FMAXPSG_SCTN0916_CLASS_LAYOUT_PACKEDPARM_ADD, "THECLOCK", "THECLOCK_LAYOUT", "THECLOCK_LAYOUT_ROW_00", "L03", "THECLOCK_LAYOUT_E01", "THECLOCK_TEXT_TIME_CLOCK", "comment",),
+	("PSGVAL__THECLOCK_LAYOUT01", FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD, "THECLOCK", "THECLOCK_LAYOUT", "THECLOCK_LAYOUT_ROW_00", "L03", "add a row to the layout",),
+	("PSGVAL__THECLOCK_LAYOUT02", FMAXPSG_SCTN0916_CLASS_LAYOUT_TEXT_ADD, "THECLOCK", "THECLOCK_LAYOUT", "THECLOCK_LAYOUT_ROW_00", "L04", "THECLOCK_LAYOUT_E01", "add a column",),
+	("PSGVAL__THECLOCK_LAYOUT03", FMAXPSG_SCTN0916_CLASS_LAYOUT_PACKEDPARM_ADD, "THECLOCK", "THECLOCK_LAYOUT", "THECLOCK_LAYOUT_ROW_00", "L05", "THECLOCK_LAYOUT_E01", "self.THECLOCK_TEXT_TIME_CLOCK", "comment",),
 	("PSGVAL__THECLOCK_FORMMAIN", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__THECLOCK_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "THECLOCK", "THECLOCK", "THECLOCK_WINDOW", "True", "the clocks frame defined and done",),
 	("PSGVAL__THECLOCK_RCMENU01", FMAXPSG_SCTN0916_CLASS_RCMENU_DEF, "THECLOCK", "THECLOCK_RCMENU01", "right click to do the things",),
@@ -2691,7 +2691,7 @@ def makePSGClasses():
 {NTAB(4)}ALL_THE_FORMS, {BKSLSH}
 {NTAB(4)}MAPPDS{NEWLINE}
 {NTAB(2)}ALL_THE_FORMS{OBRKT}SELF.THIS_FORM_NAME{CBRKT} = SG.Window{OPAREN}**self.{thisClassName_}_WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}
-{NTAB(3)}self.THIS_FORM_OBJ = ALL_THE_FORMS{OBRKT}SELF.THIS_FORM_NAME{CBRKT}{NEWLINE}
+{NTAB(2)}self.THIS_FORM_OBJ = ALL_THE_FORMS{OBRKT}SELF.THIS_FORM_NAME{CBRKT}{NEWLINE}
 {NTAB(1)}def __exit__{OPAREN}self, *args_{CPAREN}:
 {NTAB(2)}global {BKSLSH}
 {NTAB(4)}ALL_THE_FORMS, {BKSLSH}
@@ -5620,8 +5620,8 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
 		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_PACKEDPARM_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if thisItemLen_ != 8:
-				doErrorItem("not 8 items", thisItem_)
+			if thisItemLen_ != 9:
+				doErrorItem("not 9 items", thisItem_)
 				continue
 
 			thisClassName_ = thisItem_[2]
@@ -5630,6 +5630,7 @@ def parseTBGLST(FDTBGLST):
 			thisTabLevel_ = thisItem_[5]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[6]
+			thisVal_ = thisItem_[7]
 
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
 				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
@@ -5643,7 +5644,7 @@ def parseTBGLST(FDTBGLST):
 			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_]:
 				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}**{thisElementKey_}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}**{thisVal_},  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2

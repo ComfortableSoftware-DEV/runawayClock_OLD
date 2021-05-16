@@ -1339,7 +1339,7 @@ class CLASS_CLOCKS(object):
 				MAPPDS
 
 		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.CLOCKS_WINDOW).finalize()
-			self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
+		self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
@@ -1561,7 +1561,7 @@ class CLASS_POPUP_ALERT(object):
 				MAPPDS
 
 		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
-			self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
+		self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
@@ -1603,11 +1603,12 @@ class CLASS_THECLOCK(object):
 # * SCTN0916_CLASS layout elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 		self.THECLOCK_LAYOUT = [  # layout for APPMODE_THECLOCK
-	[
-		SG.Text(  # add a column
-		),
-	],
-]
+			[
+				SG.Text(  # add a column
+					**self.THECLOCK_TEXT_TIME_CLOCK,  # comment
+				),
+			],
+		]
 
 		self.THECLOCK_WINDOW = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
@@ -1629,7 +1630,7 @@ class CLASS_THECLOCK(object):
 				MAPPDS
 
 		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.THECLOCK_WINDOW).finalize()
-			self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
+		self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
