@@ -2632,7 +2632,7 @@ def makePSGClasses():
 			strToRtn_ += f"""{makeAComment("SCTN0916_CLASS column elements")}"""
 			dictToUse_ = sortADict(FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_])
 			for thisElementName_, vals1_ in dictToUse_.items():
-				strToRtn_ += f"""{thisElementName_} = {OBRKT}  # {FMPSG_SCTN0916_CLASS_COLUMN_CMNT_DICT[thisElementName_]}{NEWLINE}"""
+				strToRtn_ += f"""{thisElementName_} = {OBRKT}  # {FMPSG_SCTN0916_CLASS_COLUMN_CMNT_DICT[thisClassName_][thisElementName_]}{NEWLINE}"""
 				for thisRow_, vals2_ in vals1_.items():
 					print(f"""FMPSG_SCTN0916_CLASS_COLUMN_DICT {FMPSG_SCTN0916_CLASS_COLUMN_DICT}
 thisClassName_ {thisClassName_}
@@ -4683,7 +4683,6 @@ def parseTBGLST(FDTBGLST):
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # SCTN090F_ENDS
-
 
 # SCTN0910_BEGINS
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
