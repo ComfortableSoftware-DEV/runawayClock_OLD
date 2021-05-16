@@ -5227,30 +5227,30 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
 		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if thisItemLen_ != 8:
-				doErrorItem("not 8 items", thisItem_)
+			if thisItemLen_ != 7:
+				doErrorItem("not 7 items", thisItem_)
 				continue
 
 			thisClassName_ = thisItem_[2]
-			thisElementName_ = thisItem_[3]
+			thisColumnName_ = thisItem_[3]
 			thisRowKey_ = thisItem_[4]
 			thisTabLevel_ = thisItem_[5]
 			thisTabLevel_ = int(thisTabLevel_[1:])
-			thisElementKey_ = thisItem_[6]
 
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT:
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_] = {}
 
-			if thisElementName_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_] = ""
+			if thisColumnName_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_] = {}
 
-			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_]:
-				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_] = {}
-
-			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_]:
-				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
-
-			FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+			print(f"""FMPSG_SCTN0916_CLASS_COLUMN_DICT {FMPSG_SCTN0916_CLASS_COLUMN_DICT}
+thisClassName_ = {thisClassName_}
+thisColumnName_ = {thisColumnName_}
+thisRowKey_ = {thisRowKey_}
+thisTabLevel_ = {thisTabLevel_}
+""")
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_]:
+				FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisColumnName_][thisRowKey_] = {}
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
