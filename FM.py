@@ -2634,10 +2634,10 @@ def makePSGClasses():
 			for thisElementName_, vals1_ in dictToUse_.items():
 				strToRtn_ += f"""{thisElementName_} = {OBRKT}  # {FMPSG_SCTN0916_CLASS_COLUMN_CMNT_DICT[thisClassName_][thisElementName_]}{NEWLINE}"""
 				for thisRow_, vals2_ in vals1_.items():
-					print(f"""FMPSG_SCTN0916_CLASS_COLUMN_DICT {FMPSG_SCTN0916_CLASS_COLUMN_DICT}
-thisClassName_ {thisClassName_}
-thisElementName_ {thisElementName_}
-thisRow_ {thisRow_}""")
+# 					print(f"""FMPSG_SCTN0916_CLASS_COLUMN_DICT {FMPSG_SCTN0916_CLASS_COLUMN_DICT}
+# thisClassName_ {thisClassName_}
+# thisElementName_ {thisElementName_}
+# thisRow_ {thisRow_}""")
 					thisTabLevel1_ = FMPSG_SCTN0916_CLASS_COLUMN_DICT[thisClassName_][thisElementName_][thisRow_][TABLEVEL]
 					strToRtn_ += f"""{NTAB(thisTabLevel1_)}{OBRKT}{NEWLINE}"""
 					for thisElementKey_, vals3_ in vals2_.items():
