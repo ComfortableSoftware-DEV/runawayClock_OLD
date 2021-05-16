@@ -1339,8 +1339,8 @@ class CLASS_CLOCKS(object):
 				ALL_THE_FORMS, \
 				MAPPDS
 
-		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.CLOCKS_WINDOW).finalize()
-		self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.CLOCKS_WINDOW).finalize()
+		self.THIS_FORM_OBJ = ALL_THE_FORMS[self.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
@@ -1561,8 +1561,8 @@ class CLASS_POPUP_ALERT(object):
 				ALL_THE_FORMS, \
 				MAPPDS
 
-		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
-		self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
+		self.THIS_FORM_OBJ = ALL_THE_FORMS[self.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
@@ -1630,8 +1630,8 @@ class CLASS_THECLOCK(object):
 				ALL_THE_FORMS, \
 				MAPPDS
 
-		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.THECLOCK_WINDOW).finalize()
-		self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.THECLOCK_WINDOW).finalize()
+		self.THIS_FORM_OBJ = ALL_THE_FORMS[self.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
