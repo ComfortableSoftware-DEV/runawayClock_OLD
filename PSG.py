@@ -178,6 +178,7 @@ COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors 
 CURRENT_ALARM_NAME = None  # last returned mouse status to deal with hover events
 CURRENT_EVENTMODE = EVENTMODE_NONE  # last returned mouse status to deal with hover events
 CURRENT_INTERVAL_COUNT = 0  # comment
+EMPTY_BBOX = (0, 0, 0, 0)  # empty XY dict
 EMPTY_XY = (0, 0)  # empty XY dict
 FONTSZ_ALERT_TEXT = (FONT_DEFAULT, SZ_ALERT_TEXT)  # the font for the clocks only clock
 FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
@@ -2598,7 +2599,7 @@ def reallyDoIt():
 def doit():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	with \
-			CLOCKS_CLASS(""), \
+			CLASS_CLOCKS("key", FORMCLOCKS), \
 			CF.withPickles("runawayClock.pkl", MAPPDS):
 		doInit1()
 		while True:
