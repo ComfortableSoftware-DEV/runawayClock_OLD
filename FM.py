@@ -1602,40 +1602,40 @@ TBGLST = [
 	("PSGVAL__CLOCKS_COLUMN01", FMAX_NOP, "the column for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_COLUMN0100", FMAXPSG_SCTN0916_CLASS_COLUMN_DEF, "CLOCKS", "CLOCKS_COLUMN01", "the column that puts the two smaller clocks below the main one",),
 	("PSGVAL__CLOCKS_COLUMN0101", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_00", "L03", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0102", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_00", "L05", "CLOCKS_COLUMN01_E01", "add a new TEXT element to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0103", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_00", "L06", "CLOCKS_COLUMN01_E01", "**CLOCKS_TEXT_TIME_CLOCK", "add the main clock",),
+	("PSGVAL__CLOCKS_COLUMN0102", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_00", "L04", "CLOCKS_COLUMN01_E01", "add a new TEXT element to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0103", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_00", "L05", "CLOCKS_COLUMN01_E01", "**CLOCKS_TEXT_TIME_CLOCK", "add the main clock",),
 	("PSGVAL__CLOCKS_COLUMN0104", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L03", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0105", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L05", "CLOCKS_COLUMN01_E02", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0106", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L06", "CLOCKS_COLUMN01_E02", "**CLOCKS_TEXT_TIME_AT_ZEROELAPSE", "add time to go",),
-	("PSGVAL__CLOCKS_COLUMN0107", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L05", "CLOCKS_COLUMN01_E03", "add a new text element to row01 clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0108", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L06", "CLOCKS_COLUMN01_E03", "**CLOCKS_TEXT_TIME_ELAPSED", "add elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN0105", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L04", "CLOCKS_COLUMN01_E02", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0106", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L05", "CLOCKS_COLUMN01_E02", "**CLOCKS_TEXT_TIME_AT_ZEROELAPSE", "add time to go",),
+	("PSGVAL__CLOCKS_COLUMN0107", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L04", "CLOCKS_COLUMN01_E03", "add a new text element to row01 clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0108", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_01", "L05", "CLOCKS_COLUMN01_E03", "**CLOCKS_TEXT_TIME_ELAPSED", "add elapsed time",),
 	("PSGVAL__CLOCKS_COLUMN0109", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L03", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN010A", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L05", "CLOCKS_COLUMN01_E04", "add a new text element to row01 clocks column",),
-	("PSGVAL__CLOCKS_COLUMN010B", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L06", "CLOCKS_COLUMN01_E04", "**CLOCKS_TEXT_TIME_TOGO", "add elapsed time",),
-	("PSGVAL__CLOCKS_COLUMN010C", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L05", "CLOCKS_COLUMN01_E05", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN010D", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L06", "CLOCKS_COLUMN01_E05", "**CLOCKS_TEXT_TIME_AT_NEXT", "add time to go",),
+	("PSGVAL__CLOCKS_COLUMN010A", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L04", "CLOCKS_COLUMN01_E04", "add a new text element to row01 clocks column",),
+	("PSGVAL__CLOCKS_COLUMN010B", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L05", "CLOCKS_COLUMN01_E04", "**CLOCKS_TEXT_TIME_TOGO", "add elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN010C", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L04", "CLOCKS_COLUMN01_E05", "add a new row to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN010D", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_02", "L05", "CLOCKS_COLUMN01_E05", "**CLOCKS_TEXT_TIME_AT_NEXT", "add time to go",),
 	("PSGVAL__CLOCKS_COLUMN010E", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_03", "L03", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN010F", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_03", "L05", "CLOCKS_COLUMN01_E08", "add a new text element to row01 clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0110", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_03", "L06", "CLOCKS_COLUMN01_E08", "**CLOCKS_TEXT_NAME_NEXT_EVENT", "add the main clock",),
+	("PSGVAL__CLOCKS_COLUMN010F", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_03", "L04", "CLOCKS_COLUMN01_E08", "add a new text element to row01 clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0110", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_03", "L05", "CLOCKS_COLUMN01_E08", "**CLOCKS_TEXT_NAME_NEXT_EVENT", "add the main clock",),
 	("PSGVAL__CLOCKS_COLUMN0111", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L03", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0112", FMAXPSG_SCTN0916_CLASS_COLUMN_CHECKBOX_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L05", "CLOCKS_COLUMN01_E06", "add a new text element to row01 clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0113", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L06", "CLOCKS_COLUMN01_E06", "**CHECKBOX_RUNAWAY01", "add elapsed time",),
-	("PSGVAL__CLOCKS_COLUMN0114", FMAXPSG_SCTN0916_CLASS_COLUMN_CHECKBOX_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L05", "CLOCKS_COLUMN01_E07", "add a new text element to row01 clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0115", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L06", "CLOCKS_COLUMN01_E07", "**CHECKBOX_ALPHA_LOW01", "add elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN0112", FMAXPSG_SCTN0916_CLASS_COLUMN_CHECKBOX_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L04", "CLOCKS_COLUMN01_E06", "add a new text element to row01 clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0113", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L05", "CLOCKS_COLUMN01_E06", "**CHECKBOX_RUNAWAY01", "add elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN0114", FMAXPSG_SCTN0916_CLASS_COLUMN_CHECKBOX_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L04", "CLOCKS_COLUMN01_E07", "add a new text element to row01 clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0115", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN01", "CLOCKS_COLUMN01_ROW_04", "L05", "CLOCKS_COLUMN01_E07", "**CHECKBOX_ALPHA_LOW01", "add elapsed time",),
 	("PSGVAL__CLOCKS_COLUMN02", FMAX_NOP, "the column for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_COLUMN0200", FMAXPSG_SCTN0916_CLASS_COLUMN_DEF, "CLOCKS", "CLOCKS_COLUMN02", "the column that puts the two smaller clocks below the main one",),
 	("PSGVAL__CLOCKS_COLUMN0201", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_01", "L03", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0202", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_01", "L05", "CLOCKS_COLUMN02_E01", "add a button element to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0203", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_01", "L06", "CLOCKS_COLUMN02_E01", "**BTN_QUIT20", "add the xpand button to clocks",),
+	("PSGVAL__CLOCKS_COLUMN0202", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_01", "L04", "CLOCKS_COLUMN02_E01", "add a button element to clocks column",),
+	("PSGVAL__CLOCKS_COLUMN0203", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_01", "L05", "CLOCKS_COLUMN02_E01", "**BTN_QUIT20", "add the xpand button to clocks",),
 	("PSGVAL__CLOCKS_COLUMN0204", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_02", "L03", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0205", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_02", "L05", "CLOCKS_COLUMN02_E02", "add reset button for elapsed time",),
-	("PSGVAL__CLOCKS_COLUMN0206", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_02", "L06", "CLOCKS_COLUMN02_E02", "**BTN_ZERO20", "add the zero button to clocks",),
+	("PSGVAL__CLOCKS_COLUMN0205", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_02", "L04", "CLOCKS_COLUMN02_E02", "add reset button for elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN0206", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_02", "L05", "CLOCKS_COLUMN02_E02", "**BTN_ZERO20", "add the zero button to clocks",),
 	("PSGVAL__CLOCKS_COLUMN0207", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_03", "L03", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN0208", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_03", "L05", "CLOCKS_COLUMN02_E03", "add reset button for elapsed time",),
-	("PSGVAL__CLOCKS_COLUMN0209", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_03", "L06", "CLOCKS_COLUMN02_E03", "**BTN_XPAND20", "add the zero button to clocks",),
+	("PSGVAL__CLOCKS_COLUMN0208", FMAXPSG_SCTN0916_CLASS_COLUMN_BUTTON_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_03", "L04", "CLOCKS_COLUMN02_E03", "add reset button for elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN0209", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_03", "L05", "CLOCKS_COLUMN02_E03", "**BTN_XPAND20", "add the zero button to clocks",),
 	("PSGVAL__CLOCKS_COLUMN020A", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_04", "L03", "add a new row to clocks column",),
-	("PSGVAL__CLOCKS_COLUMN020B", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_04", "L05", "CLOCKS_COLUMN02_E04", "add reset button for elapsed time",),
-	("PSGVAL__CLOCKS_COLUMN020C", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_04", "L06", "CLOCKS_COLUMN02_E04", "**CLOCKS_TEXT_INTERVAL_COUNT", "add the zero button to clocks",),
+	("PSGVAL__CLOCKS_COLUMN020B", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_04", "L04", "CLOCKS_COLUMN02_E04", "add reset button for elapsed time",),
+	("PSGVAL__CLOCKS_COLUMN020C", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "CLOCKS_COLUMN02", "CLOCKS_COLUMN02_ROW_04", "L05", "CLOCKS_COLUMN02_E04", "**CLOCKS_TEXT_INTERVAL_COUNT", "add the zero button to clocks",),
 	("PSGVAL__CLOCKS_DICT", FMAX_NOP, "dict with the root source for clocks values, updated both directions as appropriate",),
 	("PSGVAL__CLOCKS_DICT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "CLOCKS_DICT", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "CLOCKS_DICT", "TIME_AT_NEXT", "ZERO_CLOCK", "holds the values for the clocks frame",),
@@ -1643,6 +1643,8 @@ TBGLST = [
 	("PSGVAL__CLOCKS_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "CLOCKS_DICT", "TIME_CLOCK", "ZERO_CLOCK", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "CLOCKS_DICT", "TIME_ELAPSED", "ZERO_CLOCK", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "CLOCKS_DICT", "TIME_TOGO", "ZERO_CLOCK", "holds the values for the clocks frame",),
+	("PSGVAL__CLOCKS_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "CLOCKS", "CLOCKS_DICT", "NAME_NEXT_EVENT", "", "name of next event",),
+	("PSGVAL__CLOCKS_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "CLOCKS_DICT", "INTERVAL_COUNT", "0", "interval count",),
 	("PSGVAL__CLOCKS_LAYOUT", FMAX_NOP, "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT00", FMAXPSG_SCTN0916_CLASS_LAYOUT_DEF, "CLOCKS", "CLOCKS_LAYOUT", "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT01", FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L01", "add a row to the layout",),
@@ -1654,10 +1656,6 @@ TBGLST = [
 	("PSGVAL__CLOCKS_LAYOUT07", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L03", "CLOCKS_LAYOUT_E02", "pad", "SZ_PAD_ALL", "comment",),
 	("PSGVAL__CLOCKS_FORMMAIN", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__CLOCKS_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "CLOCKS", "CLOCKS_WINDOW", "True", "the clocks frame defined and done",),
-	("PSGVAL__CLOCKS_TEXT_DICT", FMAX_NOP, "dict with the root source for clocks values, updated both directions as appropriate",),
-	("PSGVAL__CLOCKS_TEXT_DICT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "CLOCKS_TEXT_DICT", "holds the values for the text elements",),
-	("PSGVAL__CLOCKS_TEXT_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "CLOCKS", "CLOCKS_TEXT_DICT", "NAME_NEXT_EVENT", "", "name of next event",),
-	("PSGVAL__CLOCKS_TEXT_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "CLOCKS_TEXT_DICT", "INTERVAL_COUNT", "0", "interval count",),
 	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT", FMAX_NOP, "CLOCKS text interval count",),
 	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "CLOCKS_TEXT_INTERVAL_COUNT", "define the text element for CLOCKS_CLOCK_TIME",),
 	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT01", FMAXPSG_SCTN0916_CLASS_TEXT_STR_ADD, "CLOCKS", "CLOCKS_TEXT_INTERVAL_COUNT", "TEXT", "0000", "the text to fill in",),
@@ -2623,7 +2621,7 @@ def makePSGClasses():
 """
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# all elements go abov or this marker :: NOT order sensitive up to the top marker very sensitive below this marker
+# all elements go above this marker :: NOT order sensitive up to the top marker very sensitive below this marker
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
@@ -2651,6 +2649,31 @@ def makePSGClasses():
 
 				strToRtn_ += f"""{NTAB(thisTabLevel1_ - 1)}{CBRKT}{NEWLINE}{NEWLINE}"""
 
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		if thisClassName_ in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+			strToRtn_ += f"""{makeAComment("SCTN0916_CLASS layout elements")}"""
+			dictToUse2_ = sortADict(FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_])
+
+			for thisElementName_, vals1_ in dictToUse2_.items():
+				strToRtn_ += f"""{NTAB(2)}self.{thisElementName_} = {OBRKT}  # {FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT[thisClassName_][thisElementName_]}{NEWLINE}"""
+
+				for thisRow_, vals2_ in vals1_.items():
+					thisTabLevel1_ = FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRow_][TABLEVEL]
+					strToRtn_ += f"""{NTAB(thisTabLevel1_)}{OBRKT}{NEWLINE}"""
+
+					for thisElementKey_, vals3_ in vals2_.items():
+
+						if thisElementKey_ == TABLEVEL:
+							continue
+
+						if vals3_ != "":
+							strToRtn_ += f"""{vals3_}{NTAB(thisTabLevel1_ + 1)}{CPAREN},{NEWLINE}"""
+
+					strToRtn_ += f"""{NTAB(thisTabLevel1_)}{CBRKT},{NEWLINE}"""
+
+				strToRtn_ += f"""{NTAB(thisTabLevel1_ - 1)}{CBRKT}{NEWLINE}{NEWLINE}"""
+
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		if thisClassName_ in FMPSG_SCTN0916_CLASS_WINDOW_DICT:
@@ -2658,6 +2681,8 @@ def makePSGClasses():
 				strToRtn_ += f"""{NTAB(2)}self.{thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT[thisClassName_][thisElementName_]}
 {thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
 """
+
+### *frame goes here
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -5438,7 +5463,356 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # SCTN0916_04_ENDS_DICT
 
-# SCTN0916_05_BEGINS_LIST
+# SCTN0916_05_BEGINS_LAYOUT
+	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 5:
+				doErrorItem("not 5 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_] = {}
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT[thisClassName_] = {}
+
+			FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT[thisClassName_][thisElementName_] = f"""{thisComment_}"""
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_BUTTON_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 8:
+				doErrorItem("not 8 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+			thisRowKey_ = thisItem_[4]
+			thisTabLevel_ = thisItem_[5]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[6]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
+
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_] = ""
+
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_] = {}
+
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
+
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Button{OPAREN}  # {thisComment_}{NEWLINE}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_CHECKBOX_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 8:
+				doErrorItem("not 8 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+			thisRowKey_ = thisItem_[4]
+			thisTabLevel_ = thisItem_[5]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[6]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
+
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_] = ""
+
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_] = {}
+
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
+
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Checkbox{OPAREN}  # {thisComment_}{NEWLINE}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_COLUMN_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 8:
+				doErrorItem("not 8 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+			thisRowKey_ = thisItem_[4]
+			thisTabLevel_ = thisItem_[5]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[6]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
+
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_] = ""
+
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_] = {}
+
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
+
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Column{OPAREN}  # {thisComment_}{NEWLINE}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_COMBO_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 8:
+				doErrorItem("not 8 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+			thisRowKey_ = thisItem_[4]
+			thisTabLevel_ = thisItem_[5]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[6]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
+
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_] = ""
+
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_] = {}
+
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
+
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Combo{OPAREN}  # {thisComment_}{NEWLINE}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_PACKEDPARM_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 8:
+				doErrorItem("not 8 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+			thisRowKey_ = thisItem_[4]
+			thisTabLevel_ = thisItem_[5]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[6]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
+
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_] = ""
+
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_] = {}
+
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
+
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}**{thisElementKey_}  # {thisComment_}{NEWLINE}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 9:
+				doErrorItem("not 9 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisColumnName_ = thisItem_[3]
+			thisRowKey_ = thisItem_[4]
+			thisTabLevel_ = thisItem_[5]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[6]
+			thisVal_ = thisItem_[7]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
+
+			if thisColumnName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_] = {}
+
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_] = {}
+
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] = ""
+
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}{thisVal_}  # {thisComment_}{NEWLINE}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_RADIO_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 8:
+				doErrorItem("not 8 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisElementName_ = thisItem_[3]
+			thisRowKey_ = thisItem_[4]
+			thisTabLevel_ = thisItem_[5]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[6]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
+
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_] = ""
+
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_] = {}
+
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] = ""
+
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Radio{OPAREN}  # {thisComment_}{NEWLINE}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 7:
+				doErrorItem("not 7 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisColumnName_ = thisItem_[3]
+			thisRowKey_ = thisItem_[4]
+			thisTabLevel_ = thisItem_[5]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
+			if thisColumnName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_] = {}
+
+#			print(f"""FMPSG_SCTN0916_CLASS_LAYOUT_DICT {FMPSG_SCTN0916_CLASS_LAYOUT_DICT}
+#thisClassName_ = {thisClassName_}
+#thisColumnName_ = {thisColumnName_}
+#thisRowKey_ = {thisRowKey_}
+#thisTabLevel_ = {thisTabLevel_}
+#""")
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_] = {}
+
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][TABLEVEL] = thisTabLevel_
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_SPIN_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 8:
+				doErrorItem("not 8 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisColumnName_ = thisItem_[3]
+			thisRowKey_ = thisItem_[4]
+			thisTabLevel_ = thisItem_[5]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[6]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
+
+			if thisColumnName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_] = ""
+
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_] = {}
+
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] = ""
+
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Spin{OPAREN}  # {thisComment_}{NEWLINE}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
+		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_TEXT_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if thisItemLen_ != 8:
+				doErrorItem("not 8 items", thisItem_)
+				continue
+
+			thisClassName_ = thisItem_[2]
+			thisColumnName_ = thisItem_[3]
+			thisRowKey_ = thisItem_[4]
+			thisTabLevel_ = thisItem_[5]
+			thisTabLevel_ = int(thisTabLevel_[1:])
+			thisElementKey_ = thisItem_[6]
+
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
+
+			if thisColumnName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_] = {}
+
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_] = {}
+
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] = ""
+
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Text{OPAREN}  # {thisComment_}{NEWLINE}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+# SCTN0916_05_ENDS_LAYOUT
+
+# SCTN0916_06_BEGINS_LIST
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
@@ -5485,9 +5859,9 @@ def parseTBGLST(FDTBGLST):
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-# SCTN0916_05_ENDS_LIST
+# SCTN0916_06_ENDS_LIST
 
-# SCTN0916_06_BEGINS_SPIN
+# SCTN0916_07_BEGINS_SPIN
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
@@ -5611,9 +5985,9 @@ def parseTBGLST(FDTBGLST):
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-# SCTN0916_06_ENDS_SPIN
+# SCTN0916_07_ENDS_SPIN
 
-# SCTN0916_07_BEGINS_TEXT
+# SCTN0916_08_BEGINS_TEXT
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
@@ -5688,7 +6062,7 @@ def parseTBGLST(FDTBGLST):
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-# SCTN0916_07_ENDS_TEXT
+# SCTN0916_08_ENDS_TEXT
 
 # SCTN0916_89_BEGINS_WINDOW
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3

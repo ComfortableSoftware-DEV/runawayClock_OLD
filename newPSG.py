@@ -1149,16 +1149,13 @@ class CLASS_CLOCKS(object):
 		self.THIS_FORM_NAME = formName_
 
 		self.CLOCKS_DICT = {  # holds the values for the clocks frame
+			NAME_NEXT_EVENT: "",  # name of next event
+			INTERVAL_COUNT: 0,  # interval count
 			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
-		}
-
-		self.CLOCKS_TEXT_DICT = {  # holds the values for the text elements
-			NAME_NEXT_EVENT: "",  # name of next event
-			INTERVAL_COUNT: 0,  # interval count
 		}
 
 		self.CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
@@ -1248,63 +1245,75 @@ class CLASS_CLOCKS(object):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 		self.CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the main one
 			[
-					SG.Text(  # add a new TEXT element to clocks column
-						**CLOCKS_TEXT_TIME_CLOCK  # add the main clock
+				SG.Text(  # add a new TEXT element to clocks column
+					**CLOCKS_TEXT_TIME_CLOCK  # add the main clock
 				),
 			],
 			[
-					SG.Text(  # add a new row to clocks column
-						**CLOCKS_TEXT_TIME_AT_ZEROELAPSE  # add time to go
+				SG.Text(  # add a new row to clocks column
+					**CLOCKS_TEXT_TIME_AT_ZEROELAPSE  # add time to go
 				),
-					SG.Text(  # add a new text element to row01 clocks column
-						**CLOCKS_TEXT_TIME_ELAPSED  # add elapsed time
-				),
-			],
-			[
-					SG.Text(  # add a new text element to row01 clocks column
-						**CLOCKS_TEXT_TIME_TOGO  # add elapsed time
-				),
-					SG.Text(  # add a new row to clocks column
-						**CLOCKS_TEXT_TIME_AT_NEXT  # add time to go
+				SG.Text(  # add a new text element to row01 clocks column
+					**CLOCKS_TEXT_TIME_ELAPSED  # add elapsed time
 				),
 			],
 			[
-					SG.Text(  # add a new text element to row01 clocks column
-						**CLOCKS_TEXT_NAME_NEXT_EVENT  # add the main clock
+				SG.Text(  # add a new text element to row01 clocks column
+					**CLOCKS_TEXT_TIME_TOGO  # add elapsed time
+				),
+				SG.Text(  # add a new row to clocks column
+					**CLOCKS_TEXT_TIME_AT_NEXT  # add time to go
 				),
 			],
 			[
-					SG.Checkbox(  # add a new text element to row01 clocks column
-						**CHECKBOX_RUNAWAY01  # add elapsed time
+				SG.Text(  # add a new text element to row01 clocks column
+					**CLOCKS_TEXT_NAME_NEXT_EVENT  # add the main clock
 				),
-					SG.Checkbox(  # add a new text element to row01 clocks column
-						**CHECKBOX_ALPHA_LOW01  # add elapsed time
+			],
+			[
+				SG.Checkbox(  # add a new text element to row01 clocks column
+					**CHECKBOX_RUNAWAY01  # add elapsed time
+				),
+				SG.Checkbox(  # add a new text element to row01 clocks column
+					**CHECKBOX_ALPHA_LOW01  # add elapsed time
 				),
 			],
 		]
 
 		self.CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the main one
 			[
-					SG.Button(  # add a button element to clocks column
-						**BTN_QUIT20  # add the xpand button to clocks
+				SG.Button(  # add a button element to clocks column
+					**BTN_QUIT20  # add the xpand button to clocks
 				),
 			],
 			[
-					SG.Button(  # add reset button for elapsed time
-						**BTN_ZERO20  # add the zero button to clocks
+				SG.Button(  # add reset button for elapsed time
+					**BTN_ZERO20  # add the zero button to clocks
 				),
 			],
 			[
-					SG.Button(  # add reset button for elapsed time
-						**BTN_XPAND20  # add the zero button to clocks
+				SG.Button(  # add reset button for elapsed time
+					**BTN_XPAND20  # add the zero button to clocks
 				),
 			],
 			[
-					SG.Text(  # add reset button for elapsed time
-						**CLOCKS_TEXT_INTERVAL_COUNT  # add the zero button to clocks
+				SG.Text(  # add reset button for elapsed time
+					**CLOCKS_TEXT_INTERVAL_COUNT  # add the zero button to clocks
 				),
 			],
 		]
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0916_CLASS layout elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+		self.CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
+	[
+		SG.Column(  # add a column
+		),
+		SG.Column(  # add a column
+		),
+	],
+]
 
 		self.CLOCKS_WINDOW = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
@@ -1512,6 +1521,18 @@ class CLASS_POPUP_ALERT(object):
 	],
 ]
 
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0916_CLASS layout elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+		self.POPUP_ALERT_LAYOUT = [  # C_layout for APPMODE_CLOCKS
+	[
+		SG.Column(  # add a column
+		),
+		SG.Column(  # add a column
+		),
+	],
+]
+
 		self.POPUP_ALERT_WINDOW = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
 			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
@@ -1569,6 +1590,16 @@ class CLASS_THECLOCK(object):
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 		}
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0916_CLASS layout elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+		self.THECLOCK_LAYOUT = [  # layout for APPMODE_THECLOCK
+	[
+		SG.Text(  # add a column
+		),
+	],
+]
 
 		self.THECLOCK_WINDOW = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
