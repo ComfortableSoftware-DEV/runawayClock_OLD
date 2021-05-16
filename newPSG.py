@@ -1307,13 +1307,17 @@ class CLASS_CLOCKS(object):
 # * SCTN0916_CLASS layout elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 		self.CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
-	[
-		SG.Column(  # add a column
-		),
-		SG.Column(  # add a column
-		),
-	],
-]
+			[
+				SG.Column(  # add a column
+					layout=self.CLOCKS_COLUMN01,  # comment
+					pad=SZ_PAD_ALL,  # comment
+				),
+				SG.Column(  # add a column
+					layout=self.CLOCKS_COLUMN02,  # comment
+					pad=SZ_PAD_ALL,  # comment
+				),
+			],
+		]
 
 		self.CLOCKS_WINDOW = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
@@ -1527,8 +1531,12 @@ class CLASS_POPUP_ALERT(object):
 		self.POPUP_ALERT_LAYOUT = [  # C_layout for APPMODE_CLOCKS
 	[
 		SG.Column(  # add a column
+			layout=POPUP_ALERT_COLUMN01,  # comment
+			pad=SZ_PAD_ALL,  # comment
 		),
 		SG.Column(  # add a column
+			layout=POPUP_ALERT_COLUMN02,  # comment
+			pad=SZ_PAD_ALL,  # comment
 		),
 	],
 ]

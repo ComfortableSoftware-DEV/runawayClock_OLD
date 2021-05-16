@@ -1647,13 +1647,13 @@ TBGLST = [
 	("PSGVAL__CLOCKS_DICT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "CLOCKS_DICT", "INTERVAL_COUNT", "0", "interval count",),
 	("PSGVAL__CLOCKS_LAYOUT", FMAX_NOP, "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT00", FMAXPSG_SCTN0916_CLASS_LAYOUT_DEF, "CLOCKS", "CLOCKS_LAYOUT", "layout for APPMODE_CLOCKS",),
-	("PSGVAL__CLOCKS_LAYOUT01", FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L01", "add a row to the layout",),
-	("PSGVAL__CLOCKS_LAYOUT02", FMAXPSG_SCTN0916_CLASS_LAYOUT_COLUMN_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L02", "CLOCKS_LAYOUT_E01", "add a column",),
-	("PSGVAL__CLOCKS_LAYOUT03", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L03", "CLOCKS_LAYOUT_E01", "layout", "CLOCKS_COLUMN01", "comment",),
-	("PSGVAL__CLOCKS_LAYOUT04", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L03", "CLOCKS_LAYOUT_E01", "pad", "SZ_PAD_ALL", "comment",),
-	("PSGVAL__CLOCKS_LAYOUT05", FMAXPSG_SCTN0916_CLASS_LAYOUT_COLUMN_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L02", "CLOCKS_LAYOUT_E02", "add a column",),
-	("PSGVAL__CLOCKS_LAYOUT06", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L03", "CLOCKS_LAYOUT_E02", "layout", "CLOCKS_COLUMN02", "comment",),
-	("PSGVAL__CLOCKS_LAYOUT07", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L03", "CLOCKS_LAYOUT_E02", "pad", "SZ_PAD_ALL", "comment",),
+	("PSGVAL__CLOCKS_LAYOUT01", FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L03", "add a row to the layout",),
+	("PSGVAL__CLOCKS_LAYOUT02", FMAXPSG_SCTN0916_CLASS_LAYOUT_COLUMN_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L04", "CLOCKS_LAYOUT_E01", "add a column",),
+	("PSGVAL__CLOCKS_LAYOUT03", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L05", "CLOCKS_LAYOUT_E01", "layout", "self.CLOCKS_COLUMN01", "comment",),
+	("PSGVAL__CLOCKS_LAYOUT04", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L05", "CLOCKS_LAYOUT_E01", "pad", "SZ_PAD_ALL", "comment",),
+	("PSGVAL__CLOCKS_LAYOUT05", FMAXPSG_SCTN0916_CLASS_LAYOUT_COLUMN_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L04", "CLOCKS_LAYOUT_E02", "add a column",),
+	("PSGVAL__CLOCKS_LAYOUT06", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L05", "CLOCKS_LAYOUT_E02", "layout", "self.CLOCKS_COLUMN02", "comment",),
+	("PSGVAL__CLOCKS_LAYOUT07", FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "CLOCKS_LAYOUT", "CLOCKS_LAYOUT_ROW_00", "L05", "CLOCKS_LAYOUT_E02", "pad", "SZ_PAD_ALL", "comment",),
 	("PSGVAL__CLOCKS_FORMMAIN", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__CLOCKS_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "CLOCKS", "CLOCKS_WINDOW", "True", "the clocks frame defined and done",),
 	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT", FMAX_NOP, "CLOCKS text interval count",),
@@ -5652,31 +5652,33 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if thisAX_ …
 		elif thisAX_ == FMAXPSG_SCTN0916_CLASS_LAYOUT_PARM_VAL_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if thisItemLen_ != 9:
-				doErrorItem("not 9 items", thisItem_)
+			if thisItemLen_ != 10:
+				doErrorItem("not 10 items", thisItem_)
 				continue
 
 			thisClassName_ = thisItem_[2]
-			thisColumnName_ = thisItem_[3]
+			thisLayoutName_ = thisItem_[3]
 			thisRowKey_ = thisItem_[4]
 			thisTabLevel_ = thisItem_[5]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 			thisElementKey_ = thisItem_[6]
-			thisVal_ = thisItem_[7]
+			thisValKey_ = thisItem_[7]
+			thisVal_ = thisItem_[8]
+
 
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
 				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
 
-			if thisColumnName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_] = {}
+			if thisLayoutName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_] = {}
 
-			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_] = {}
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_] = {}
 
-			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] = ""
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}{thisVal_}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}{thisValKey_}={thisVal_},  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5722,24 +5724,24 @@ def parseTBGLST(FDTBGLST):
 				continue
 
 			thisClassName_ = thisItem_[2]
-			thisColumnName_ = thisItem_[3]
+			thisLayoutName_ = thisItem_[3]
 			thisRowKey_ = thisItem_[4]
 			thisTabLevel_ = thisItem_[5]
 			thisTabLevel_ = int(thisTabLevel_[1:])
 
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
 				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
-			if thisColumnName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_] = {}
+			if thisLayoutName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_] = {}
 
 #			print(f"""FMPSG_SCTN0916_CLASS_LAYOUT_DICT {FMPSG_SCTN0916_CLASS_LAYOUT_DICT}
 #thisClassName_ = {thisClassName_}
-#thisColumnName_ = {thisColumnName_}
+#thisLayoutName_ = {thisLayoutName_}
 #thisRowKey_ = {thisRowKey_}
 #thisTabLevel_ = {thisTabLevel_}
 #""")
-			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_] = {}
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_] = {}
 
 			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisElementName_][thisRowKey_][TABLEVEL] = thisTabLevel_
 
@@ -5755,7 +5757,7 @@ def parseTBGLST(FDTBGLST):
 				continue
 
 			thisClassName_ = thisItem_[2]
-			thisColumnName_ = thisItem_[3]
+			thisLayoutName_ = thisItem_[3]
 			thisRowKey_ = thisItem_[4]
 			thisTabLevel_ = thisItem_[5]
 			thisTabLevel_ = int(thisTabLevel_[1:])
@@ -5764,16 +5766,16 @@ def parseTBGLST(FDTBGLST):
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
 				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
 
-			if thisColumnName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_] = ""
+			if thisLayoutName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_] = ""
 
-			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_] = {}
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_] = {}
 
-			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] = ""
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Spin{OPAREN}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Spin{OPAREN}  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5787,7 +5789,7 @@ def parseTBGLST(FDTBGLST):
 				continue
 
 			thisClassName_ = thisItem_[2]
-			thisColumnName_ = thisItem_[3]
+			thisLayoutName_ = thisItem_[3]
 			thisRowKey_ = thisItem_[4]
 			thisTabLevel_ = thisItem_[5]
 			thisTabLevel_ = int(thisTabLevel_[1:])
@@ -5796,16 +5798,16 @@ def parseTBGLST(FDTBGLST):
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
 				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_] = {}
 
-			if thisColumnName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_] = {}
+			if thisLayoutName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_] = {}
 
-			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_] = {}
+			if thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_] = {}
 
-			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] = ""
+			if thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_][thisElementKey_] = ""
 
-			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisColumnName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Text{OPAREN}  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[thisClassName_][thisLayoutName_][thisRowKey_][thisElementKey_] += f"""{NTAB(thisTabLevel_)}SG.Text{OPAREN}  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2

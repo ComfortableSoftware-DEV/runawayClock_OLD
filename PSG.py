@@ -68,6 +68,19 @@ EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
 FIRSTRUN = "FIRSTRUN"  # True if just started, false after init1()
 FONT_DEFAULT = "Source Code Pro"  # set the main font
+FORM = "FORM"  # holds all of form entries
+FORMCLOCKS = "FORMCLOCKS"  # holds all of form entries
+FORMEDITENTRY = "FORMEDITENTRY"  # holds all of form entries
+FORMEDITOR = "FORMEDITOR"  # holds all of form entries
+FORMMAIN = "FORMMAIN"  # holds all of form entries
+FORMMAIN_LCN = "FORMMAIN_LCN"  # screen position of the mainframe
+FORMMAIN_SIZE = "FORMMAIN_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
+FORMPOPUP00 = "FORMPOPUP00"  # holds all of form entries
+FORMPOPUP01 = "FORMPOPUP01"  # holds all of form entries
+FORMPOPUP02 = "FORMPOPUP02"  # holds all of form entries
+FORMPOPUP03 = "FORMPOPUP03"  # holds all of form entries
+FORMPOPUP04 = "FORMPOPUP04"  # holds all of form entries
+FORMTHECLOCK = "FORMTHECLOCK"  # holds all of form entries
 INDEX_EAST = 2  # EAST
 INDEX_NORTH = 1  # NORTH
 INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  #
@@ -77,9 +90,6 @@ INDEX_X = 0  # X
 INDEX_Y = 1  # Y
 INTERVAL_COUNT = "INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
 IS_ALERTING_NOW = "IS_ALERTING_NOW"  # is the event currently alerting
-FORMMAIN = None  # set up the mainframe
-FORMMAIN_LCN = "FORMMAIN_LCN"  # screen position of the mainframe
-FORMMAIN_SIZE = "FORMMAIN_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 MOUSE_LCN = "MOUSE_LCN"  # track mouse location to ease load a bit
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
@@ -101,7 +111,6 @@ MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
 NAME = "NAME"  # name of the event
 NAME_NEXT_EVENT = "NAME_NEXT_EVENT"  # name of the next event up
-FORMPOPUP = None  # set up the mainframe
 POPUPTYPE = "POPUPTYPE"  # which type of popup are we defining
 POPUPTYPE_AUTO_CLOSE = "POPUPTYPE_AUTO_CLOSE"  # for intervals auto close
 PREDISMISSABLE = "PREDISMISSABLE"  #
@@ -169,7 +178,6 @@ COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors 
 CURRENT_ALARM_NAME = None  # last returned mouse status to deal with hover events
 CURRENT_EVENTMODE = EVENTMODE_NONE  # last returned mouse status to deal with hover events
 CURRENT_INTERVAL_COUNT = 0  # comment
-EMPTY_BBOX = (0, 0, 0, 0)  # create as needed dict for values passed around as dict
 EMPTY_XY = (0, 0)  # empty XY dict
 FONTSZ_ALERT_TEXT = (FONT_DEFAULT, SZ_ALERT_TEXT)  # the font for the clocks only clock
 FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
@@ -177,9 +185,9 @@ FONTSZ_CLOCKS_INTERVAL_COUNT = (FONT_DEFAULT, SZ_INTERVAL_COUNT)  # the font for
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
+FORMMAIN = None  # mainframe so everything passes together always
 IS_ALERTING_NOWV = False  # comment
 LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
-FORMMAIN = None  # mainframe so everything passes together always
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
 NAME_NEXT_EVENT_STR = ""  # name of the next event
 NOW_NOMS = 0  # comment
@@ -314,6 +322,20 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+ALL_THE_FORMS = {  # comment
+	FORMCLOCKS: None,  # ENTRY IN FORMS
+	FORMEDITENTRY: None,  # ENTRY IN FORMS
+	FORMEDITOR: None,  # ENTRY IN FORMS
+	FORMMAIN: None,  # ENTRY IN FORMS
+	FORMPOPUP00: None,  # ENTRY IN FORMS
+	FORMPOPUP01: None,  # ENTRY IN FORMS
+	FORMPOPUP02: None,  # ENTRY IN FORMS
+	FORMPOPUP03: None,  # ENTRY IN FORMS
+	FORMPOPUP04: None,  # ENTRY IN FORMS
+	FORMTHECLOCK: None,  # ENTRY IN FORMS
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0903 lists
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -371,107 +393,6 @@ TIMES_LIST = [  # list of all keys to times for midnight etc. processing
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0905 tupdict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY0_EVENT_ENTRY structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTY0_EVENT_ENTRYTUP = (
-	(DISMISSED, False),  # has the event been dismissed just this once
-	(ENABLED, True),  # is the event enabled bool
-	(EVENTMODE, EVENTMODE_ALARM),  # which event mode is this event
-	(NAME, "alarm"),  # the name of this event
-	(PREDISMISSABLE, False),  # can the event be dismissed prior to on time
-	(SNOOZABLE, False),  # can the alarm be snoozed
-	(SNOOZED, False),  # is the event snoozed
-	(TIME_ALARM, ZERO_CLOCK),  # in an alarm mode event, what time is the alarm
-	(TIME_AT_LAST_RUN, 0),  # has the event been dismissed just this once
-	(TIME_INTERVAL, ZERO_CLOCK),  # how much time to add to an interval mode event
-)
-
-def EMPTY0_EVENT_ENTRYDICT():
-	return dict((x, y) for x, y in EMPTY0_EVENT_ENTRYTUP)
-
-
-EMPTY0_EVENT_ENTRY_TDD = {
-	DISMISSED: False,  # has the event been dismissed just this once
-	ENABLED: True,  # is the event enabled bool
-	EVENTMODE: EVENTMODE_ALARM,  # which event mode is this event
-	NAME: "alarm",  # the name of this event
-	PREDISMISSABLE: False,  # can the event be dismissed prior to on time
-	SNOOZABLE: False,  # can the alarm be snoozed
-	SNOOZED: False,  # is the event snoozed
-	TIME_ALARM: ZERO_CLOCK,  # in an alarm mode event, what time is the alarm
-	TIME_AT_LAST_RUN: 0,  # has the event been dismissed just this once
-	TIME_INTERVAL: ZERO_CLOCK,  # how much time to add to an interval mode event
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY_CLOCKS structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTY_CLOCKSTUP = (
-	(TIME_AT_NEXT, ZERO_CLOCK),  # the main count down to the next event time
-	(TIME_AT_ZEROELAPSE, ZERO_CLOCK),  # the main clock time
-	(TIME_CLOCK, ZERO_CLOCK),  # the main clock time
-	(TIME_ELAPSED, ZERO_CLOCK),  # the main elapsed time
-	(TIME_TOGO, ZERO_CLOCK),  # the main count down to the next event time
-)
-
-def EMPTY_CLOCKSDICT():
-	return dict((x, y) for x, y in EMPTY_CLOCKSTUP)
-
-
-EMPTY_CLOCKS_TDD = {
-	TIME_AT_NEXT: ZERO_CLOCK,  # the main count down to the next event time
-	TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # the main clock time
-	TIME_CLOCK: ZERO_CLOCK,  # the main clock time
-	TIME_ELAPSED: ZERO_CLOCK,  # the main elapsed time
-	TIME_TOGO: ZERO_CLOCK,  # the main count down to the next event time
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of EMPTY_MAPPDS structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-EMPTY_MAPPDSTUP = (
-	(ALPHA_CHANNEL, 1.0),  # fully opaque
-	(ALPHA_HIGH, 1.0),  # fully opaque
-	(ALPHA_LOW, 0.3),  # almost fully alpha
-	(APPMODE, APPMODE_CLOCKS),  # default to clocks mode
-	(BBOX, EMPTY_BBOX),  # empty bbox entry
-	(CHECKBOX_ALPHA_LOW, True),  # the checkbox bool for ALPHA high/low mode
-	(CHECKBOX_RUNAWAY, True),  # checkbox bool for RUNAWAY mode
-	(CLOSE_BBOX, EMPTY_BBOX),  # empty BBOX dict
-	(EVENT_ENTRIES, EMPTY0_EVENT_ENTRY_TDD),  # an empty event
-	(INDEX_OF_NEXT_EVENT, 0),  # which event number is upcoming
-	(FORMMAIN_LCN, EMPTY_XY),  # holds the screen position
-	(FORMMAIN_SIZE, EMPTY_XY),  # which event number is upcoming
-	(SCREEN_DIMS, EMPTY_XY),  #
-)
-
-def EMPTY_MAPPDSDICT():
-	return dict((x, y) for x, y in EMPTY_MAPPDSTUP)
-
-
-EMPTY_MAPPDS_TDD = {
-	ALPHA_CHANNEL: 1.0,  # fully opaque
-	ALPHA_HIGH: 1.0,  # fully opaque
-	ALPHA_LOW: 0.3,  # almost fully alpha
-	APPMODE: APPMODE_CLOCKS,  # default to clocks mode
-	BBOX: EMPTY_BBOX,  # empty bbox entry
-	CHECKBOX_ALPHA_LOW: True,  # the checkbox bool for ALPHA high/low mode
-	CHECKBOX_RUNAWAY: True,  # checkbox bool for RUNAWAY mode
-	CLOSE_BBOX: EMPTY_BBOX,  # empty BBOX dict
-	EVENT_ENTRIES: EMPTY0_EVENT_ENTRY_TDD,  # an empty event
-	INDEX_OF_NEXT_EVENT: 0,  # which event number is upcoming
-	FORMMAIN_LCN: EMPTY_XY,  # holds the screen position
-	FORMMAIN_SIZE: EMPTY_XY,  # which event number is upcoming
-	SCREEN_DIMS: EMPTY_XY,  #
-}
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of FULL_BUTTON structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -977,237 +898,6 @@ FULL_WINDOW_TDD = {
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of NORMAL_BUTTON structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-NORMAL_BUTTONTUP = (
-	(BUTTON_COLOR, None),  # Color of button. default is from theme or the window. Easy to remember which is which if you say 'ON' between colors. 'red' on 'green'. Normally a tuple, but can be a simplified-button-color-string 'foreground on background'. Can be a single color if want to set only the background.
-	(BUTTON_TEXT, ""),  # str text to display on the button
-	(FOCUS, False),  # if True, initial focus will be put on this button
-	(FONT, None),  # specifies the font family, size, etc
-	(IMAGE_DATA, None),  # Raw or Base64 representation of the image to put on button. Choose either filename or data
-	(IMAGE_FILENAME, None),  # image filename if there is a button image. GIFs and PNGs only.
-	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
-)
-
-def NORMAL_BUTTONDICT():
-	return dict((x, y) for x, y in NORMAL_BUTTONTUP)
-
-
-NORMAL_BUTTON_TDD = {
-	BUTTON_COLOR: None,  # Color of button. default is from theme or the window. Easy to remember which is which if you say 'ON' between colors. 'red' on 'green'. Normally a tuple, but can be a simplified-button-color-string 'foreground on background'. Can be a single color if want to set only the background.
-	BUTTON_TEXT: "",  # str text to display on the button
-	FOCUS: False,  # if True, initial focus will be put on this button
-	FONT: None,  # specifies the font family, size, etc
-	IMAGE_DATA: None,  # Raw or Base64 representation of the image to put on button. Choose either filename or data
-	IMAGE_FILENAME: None,  # image filename if there is a button image. GIFs and PNGs only.
-	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of NORMAL_CHECKBOX structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-NORMAL_CHECKBOXTUP = (
-	(BACKGROUND_COLOR, None),  # color of background
-	(CHECKBOX_COLOR, None),  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
-	(DEFAULT, False),  # Set to True if you want this checkbox initially checked
-	(FONT, None),  # specifies the font family, size, etc
-	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element
-	(TEXT, ""),  # Window to display next to checkbox
-	(TEXT_COLOR, None),  # color of the text
-)
-
-def NORMAL_CHECKBOXDICT():
-	return dict((x, y) for x, y in NORMAL_CHECKBOXTUP)
-
-
-NORMAL_CHECKBOX_TDD = {
-	BACKGROUND_COLOR: None,  # color of background
-	CHECKBOX_COLOR: None,  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
-	DEFAULT: False,  # Set to True if you want this checkbox initially checked
-	FONT: None,  # specifies the font family, size, etc
-	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element
-	TEXT: "",  # Window to display next to checkbox
-	TEXT_COLOR: None,  # color of the text
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of NORMAL_COMBO structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-NORMAL_COMBOTUP = (
-	(BACKGROUND_COLOR, None),  # color of background
-	(DEFAULT_VALUE, None),  # Choice to be displayed as initial value. Must match one of values variable contents
-	(FONT, None),  # specifies the font family, size, etc
-	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element
-	(SIZE, None),  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
-	(TEXT_COLOR, None),  # color of the text
-	(VALUES, []),  # values to choose. While displayed as text, the items returned are what the caller supplied, not text
-)
-
-def NORMAL_COMBODICT():
-	return dict((x, y) for x, y in NORMAL_COMBOTUP)
-
-
-NORMAL_COMBO_TDD = {
-	BACKGROUND_COLOR: None,  # color of background
-	DEFAULT_VALUE: None,  # Choice to be displayed as initial value. Must match one of values variable contents
-	FONT: None,  # specifies the font family, size, etc
-	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element
-	SIZE: None,  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
-	TEXT_COLOR: None,  # color of the text
-	VALUES: [],  # values to choose. While displayed as text, the items returned are what the caller supplied, not text
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of NORMAL_RADIO structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-NORMAL_RADIOTUP = (
-	(BACKGROUND_COLOR, None),  #
-	(CIRCLE_COLOR, None),  #
-	(DEFAULT, False),  #
-	(FONT, None),  #
-	(GROUP_ID, ""),  # Groups together multiple Radio Buttons. Any type works
-	(KEY, None),  #
-	(SIZE, (None, None)),  #
-	(TEXT, ""),  #
-	(TEXT_COLOR, None),  #
-)
-
-def NORMAL_RADIODICT():
-	return dict((x, y) for x, y in NORMAL_RADIOTUP)
-
-
-NORMAL_RADIO_TDD = {
-	BACKGROUND_COLOR: None,  #
-	CIRCLE_COLOR: None,  #
-	DEFAULT: False,  #
-	FONT: None,  #
-	GROUP_ID: "",  # Groups together multiple Radio Buttons. Any type works
-	KEY: None,  #
-	SIZE: (None, None),  #
-	TEXT: "",  #
-	TEXT_COLOR: None,  #
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of NORMAL_SPIN structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-NORMAL_SPINTUP = (
-	(BACKGROUND_COLOR, None),  # color of background
-	(FONT, None),  # specifies the font family, size, etc
-	(INITIAL_VALUE, None),  # Initial item to show in window. Choose from list of values supplied
-	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element
-	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
-	(COLOR_TEXT_SPIN, None),  # color of the text
-	(VALUES, []),  # List of valid values
-)
-
-def NORMAL_SPINDICT():
-	return dict((x, y) for x, y in NORMAL_SPINTUP)
-
-
-NORMAL_SPIN_TDD = {
-	BACKGROUND_COLOR: None,  # color of background
-	FONT: None,  # specifies the font family, size, etc
-	INITIAL_VALUE: None,  # Initial item to show in window. Choose from list of values supplied
-	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element
-	SIZE: (None, None),  # (width, height) width = characters-wide, height = rows-high
-	COLOR_TEXT_SPIN: None,  # color of the text
-	VALUES: [],  # List of valid values
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of NORMAL_TEXT structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-NORMAL_TEXTTUP = (
-	(BACKGROUND_COLOR, None),  # color of background
-	(BORDER_WIDTH, None),  # number of pixels for the border (if using a relief)
-	(FONT, None),  # specifies the font family, size, etc
-	(GRAB, None),  # If True can grab this element and move the window around. Default is False
-	(JUSTIFICATION, None),  # how string should be aligned within space provided by size. Valid choices = `left`, `right`, `center`
-	(KEY, None),  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
-	(RELIEF, None),  # relief style around the text. Values are same as progress meter relief values. Should be a constant that is defined at starting with 'RELIEF_' - `RELIEF_RAISED, RELIEF_SUNKEN, RELIEF_FLAT, RELIEF_RIDGE, RELIEF_GROOVE, RELIEF_SOLID`
-	(SIZE, (None, None)),  # (width, height) width = characters-wide, height = rows-high
-	(TEXT, ""),  # The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
-	(TEXT_COLOR, None),  # color of the text
-)
-
-def NORMAL_TEXTDICT():
-	return dict((x, y) for x, y in NORMAL_TEXTTUP)
-
-
-NORMAL_TEXT_TDD = {
-	BACKGROUND_COLOR: None,  # color of background
-	BORDER_WIDTH: None,  # number of pixels for the border (if using a relief)
-	FONT: None,  # specifies the font family, size, etc
-	GRAB: None,  # If True can grab this element and move the window around. Default is False
-	JUSTIFICATION: None,  # how string should be aligned within space provided by size. Valid choices = `left`, `right`, `center`
-	KEY: None,  # Used with window.FindElement and with return values to uniquely identify this element to uniquely identify this element
-	RELIEF: None,  # relief style around the text. Values are same as progress meter relief values. Should be a constant that is defined at starting with 'RELIEF_' - `RELIEF_RAISED, RELIEF_SUNKEN, RELIEF_FLAT, RELIEF_RIDGE, RELIEF_GROOVE, RELIEF_SOLID`
-	SIZE: (None, None),  # (width, height) width = characters-wide, height = rows-high
-	TEXT: "",  # The text to display. Can include /n to achieve multiple lines.  Will convert (optional) parameter into a string
-	TEXT_COLOR: None,  # color of the text
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of NORMAL_WINDOW structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-NORMAL_WINDOWTUP = (
-	(BACKGROUND_COLOR, None),  # color of background
-	(FINALIZE, False),  # If True then the Finalize method will be called. Use this rather than chaining .Finalize for cleaner code
-	(FONT, None),  # specifies the font family, size, etc
-	(GRAB_ANYWHERE, False),  # If True can use mouse to click and drag to move the window. Almost every location of the window will work except input fields on some systems
-	(ICON, None),  # Can be either a filename or Base64 value. For Windows if filename, it MUST be ICO format. For Linux, must NOT be ICO
-	(KEEP_ON_TOP, False),  # If True, window will be created on top of all other windows on screen. It can be bumped down if another window created with this parm
-	(LAYOUT, None),  # The layout for the window. Can also be specified in the Layout method
-	(LOCATION, (None, None)),  # (x,y) location, in pixels, to locate the upper left corner of the window on the screen. Default is to center on screen.
-	(MODAL, False),  # If True then this window will be the only window a user can interact with until it is closed
-	(NO_TITLEBAR, False),  # If true, no titlebar nor frame will be shown on window. This means you cannot minimize the window and it will not show up on the taskbar
-	(TITLE, ""),  # The title that will be displayed in the Titlebar and on the Taskbar
-	(TITLEBAR_BACKGROUND_COLOR, None),  # If custom titlebar indicated by use_custom_titlebar, then use this as background color
-	(TITLEBAR_FONT, None),  # If custom titlebar indicated by use_custom_titlebar, then use this as title font
-	(TITLEBAR_ICON, None),  # If custom titlebar indicated by use_custom_titlebar, then use this as the icon (file or base64 bytes)
-	(TITLEBAR_TEXT_COLOR, None),  # If custom titlebar indicated by use_custom_titlebar, then use this as text color
-	(TRANSPARENT_COLOR, None),  # Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.
-)
-
-def NORMAL_WINDOWDICT():
-	return dict((x, y) for x, y in NORMAL_WINDOWTUP)
-
-
-NORMAL_WINDOW_TDD = {
-	BACKGROUND_COLOR: None,  # color of background
-	FINALIZE: False,  # If True then the Finalize method will be called. Use this rather than chaining .Finalize for cleaner code
-	FONT: None,  # specifies the font family, size, etc
-	GRAB_ANYWHERE: False,  # If True can use mouse to click and drag to move the window. Almost every location of the window will work except input fields on some systems
-	ICON: None,  # Can be either a filename or Base64 value. For Windows if filename, it MUST be ICO format. For Linux, must NOT be ICO
-	KEEP_ON_TOP: False,  # If True, window will be created on top of all other windows on screen. It can be bumped down if another window created with this parm
-	LAYOUT: None,  # The layout for the window. Can also be specified in the Layout method
-	LOCATION: (None, None),  # (x,y) location, in pixels, to locate the upper left corner of the window on the screen. Default is to center on screen.
-	MODAL: False,  # If True then this window will be the only window a user can interact with until it is closed
-	NO_TITLEBAR: False,  # If true, no titlebar nor frame will be shown on window. This means you cannot minimize the window and it will not show up on the taskbar
-	TITLE: "",  # The title that will be displayed in the Titlebar and on the Taskbar
-	TITLEBAR_BACKGROUND_COLOR: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as background color
-	TITLEBAR_FONT: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as title font
-	TITLEBAR_ICON: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as the icon (file or base64 bytes)
-	TITLEBAR_TEXT_COLOR: None,  # If custom titlebar indicated by use_custom_titlebar, then use this as text color
-	TRANSPARENT_COLOR: None,  # Any portion of the window that has this color will be completely transparent. You can even click through these spots to the window under this window.
-}
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * start of UPDATE_COMBO structures
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
@@ -1414,7 +1104,7 @@ CHECKBOX_ALPHA_LOW01 = {  # checkbox for alpha under mouse
 CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 	TEXT: "RNAWY",  # text label
 	TOOLTIP: "run away from mouse when checked",  # tooltip
-	DEFAULT: False,  # leave it on by default
+	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
 	KEY: CHECKBOX_RUNAWAY,  # set the key for the checkbox
 }
@@ -1451,24 +1141,21 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 
 class CLASS_CLOCKS(object):
 	global \
-			FORMMAIN, \
-			MAPPDS, \
-			FORMPOPUP
+			ALL_THE_FORMS, \
+			MAPPDS
 
-	def __init__(self, key_, thisWindow_=None):
-		self.THIS_WINDOW = thisWindow_
+	def __init__(self, key_, formName_, thisWindow_=None):
+		self.THIS_FORM_OBJ = thisWindow_
+		self.THIS_FORM_NAME = formName_
 
 		self.CLOCKS_DICT = {  # holds the values for the clocks frame
+			NAME_NEXT_EVENT: "",  # name of next event
+			INTERVAL_COUNT: 0,  # interval count
 			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
-		}
-
-		self.CLOCKS_TEXT_DICT = {  # holds the values for the text elements
-			NAME_NEXT_EVENT: "",  # name of next event
-			INTERVAL_COUNT: 0,  # interval count
 		}
 
 		self.CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
@@ -1553,6 +1240,85 @@ class CLASS_CLOCKS(object):
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 		}
 
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0916_CLASS column elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+		self.CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the main one
+			[
+				SG.Text(  # add a new TEXT element to clocks column
+					**CLOCKS_TEXT_TIME_CLOCK  # add the main clock
+				),
+			],
+			[
+				SG.Text(  # add a new row to clocks column
+					**CLOCKS_TEXT_TIME_AT_ZEROELAPSE  # add time to go
+				),
+				SG.Text(  # add a new text element to row01 clocks column
+					**CLOCKS_TEXT_TIME_ELAPSED  # add elapsed time
+				),
+			],
+			[
+				SG.Text(  # add a new text element to row01 clocks column
+					**CLOCKS_TEXT_TIME_TOGO  # add elapsed time
+				),
+				SG.Text(  # add a new row to clocks column
+					**CLOCKS_TEXT_TIME_AT_NEXT  # add time to go
+				),
+			],
+			[
+				SG.Text(  # add a new text element to row01 clocks column
+					**CLOCKS_TEXT_NAME_NEXT_EVENT  # add the main clock
+				),
+			],
+			[
+				SG.Checkbox(  # add a new text element to row01 clocks column
+					**CHECKBOX_RUNAWAY01  # add elapsed time
+				),
+				SG.Checkbox(  # add a new text element to row01 clocks column
+					**CHECKBOX_ALPHA_LOW01  # add elapsed time
+				),
+			],
+		]
+
+		self.CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the main one
+			[
+				SG.Button(  # add a button element to clocks column
+					**BTN_QUIT20  # add the xpand button to clocks
+				),
+			],
+			[
+				SG.Button(  # add reset button for elapsed time
+					**BTN_ZERO20  # add the zero button to clocks
+				),
+			],
+			[
+				SG.Button(  # add reset button for elapsed time
+					**BTN_XPAND20  # add the zero button to clocks
+				),
+			],
+			[
+				SG.Text(  # add reset button for elapsed time
+					**CLOCKS_TEXT_INTERVAL_COUNT  # add the zero button to clocks
+				),
+			],
+		]
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0916_CLASS layout elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+		self.CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
+			[
+				SG.Column(  # add a column
+					layout=self.CLOCKS_COLUMN01,  # comment
+					pad=SZ_PAD_ALL,  # comment
+				),
+				SG.Column(  # add a column
+					layout=self.CLOCKS_COLUMN02,  # comment
+					pad=SZ_PAD_ALL,  # comment
+				),
+			],
+		]
+
 		self.CLOCKS_WINDOW = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
 			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
@@ -1569,58 +1335,34 @@ class CLASS_CLOCKS(object):
 
 	def __enter__(self):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
 
-		if (FORMMAIN is None):
-			FORMMAIN = SG.Window(**self.CLOCKS_WINDOW).finalize()
-			self.THIS_WINDOW = FORMMAIN
-		elif (FORMPOPUP is None):
-			FORMPOPUP = SG.Window(**self.CLOCKS_WINDOW).finalize()
-
-			self.THIS_WINDOW = FORMPOPUP
-		elif (self.THIS_WINDOW is not None):
-			self.THIS_WINDOW = SG.Window(**self.CLOCKS_WINDOW).finalize()
+		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.CLOCKS_WINDOW).finalize()
+			self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
+		self.THIS_FORM_OBJ.close()
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = None
 
-		self.THIS_WINDOW.close()
-		if (self.THIS_WINDOW == FORMMAIN):
-			FORMMAIN = None
-		elif (self.THIS_WINDOW == FORMPOPUP):
-			FORMPOPUP = None
-
-		self.THIS_WINDOW = None
+		self.THIS_FORM_OBJ = None
 
 
 class CLASS_POPUP_ALERT(object):
 	global \
-			FORMMAIN, \
-			MAPPDS, \
-			FORMPOPUP
+			ALL_THE_FORMS, \
+			MAPPDS
 
-	def __init__(self, key_, thisWindow_=None):
-		self.THIS_WINDOW = thisWindow_
+	def __init__(self, key_, formName_, thisWindow_=None):
+		self.THIS_FORM_OBJ = thisWindow_
+		self.THIS_FORM_NAME = formName_
 
 		self.POPUP_ALERT_TEXT_DICT = {  # holds the values for the text elements
 			NAME_NEXT_EVENT: "",  # name of next event
 			INTERVAL_COUNT: 0,  # interval count
-		}
-
-		self.C_BTN_DISMISS20 = {  #
-			BUTTON_TEXT: "",  # button_text empty for the DOWN button
-			IMAGE_FILENAME: "res/dismiss20.png",  # filename for the button icon
-			BORDER_WIDTH: 0,  # button xpand key
-			BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
-			FOCUS: True,  # focus on click
-			FONT: FONTSZ_BTNS,  # button xpand font
-			KEY: f"""{BTN_DISMISS}{key_}""",  # button xpand key
-			PAD: SZ_PAD_ALL,  # button xpand key
 		}
 
 		self.POPUP_ALERT_SPIN01_SPIN_LIST = [
@@ -1720,6 +1462,85 @@ class CLASS_POPUP_ALERT(object):
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 		}
 
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0916_CLASS column elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+		self.POPUP_ALERT_COLUMN01 = [  # C_the column that puts the two smaller clocks below the main one
+	[
+		SG.Text(  # add a new TEXT element to clocks column
+			**CLOCKS_TEXT_TIME_CLOCK  # add the main clock
+		),
+	],
+	[
+		SG.Text(  # add a new row to clocks column
+			**self.POPUP_ALERT_TEXT_TIME_AT_ZEROELAPSE  # add time to go
+		),
+		SG.Text(  # add a new text element to row01 clocks column
+			**self.POPUP_ALERT_TEXT_TIME_ELAPSED  # add elapsed time
+		),
+	],
+	[
+		SG.Text(  # add a new text element to row01 clocks column
+			**self.POPUP_ALERT_TEXT_TIME_TOGO  # add elapsed time
+		),
+		SG.Text(  # add a new row to clocks column
+			**self.POPUP_ALERT_TEXT_TIME_AT_NEXT  # add time to go
+		),
+	],
+	[
+		SG.Text(  # add a new text element to row01 clocks column
+			**self.POPUP_ALERT_TEXT_NAME_NEXT_EVENT  # add the main clock
+		),
+	],
+	[
+		SG.Checkbox(  # add a new text element to row01 clocks column
+			**self.C_CHECKBOX_RUNAWAY01  # add elapsed time
+		),
+		SG.Checkbox(  # add a new text element to row01 clocks column
+			**CHECKBOX_ALPHA_LOW01  # add elapsed time
+		),
+	],
+]
+
+		self.POPUP_ALERT_COLUMN02 = [  # C_the column that puts the two smaller clocks below the main one
+	[
+		SG.Button(  # add a button element to clocks column
+			**BTN_QUIT20  # add the xpand button to clocks
+		),
+	],
+	[
+		SG.Button(  # add reset button for elapsed time
+			**BTN_ZERO20  # add the zero button to clocks
+		),
+	],
+	[
+		SG.Button(  # add reset button for elapsed time
+			**BTN_XPAND20  # add the zero button to clocks
+		),
+	],
+	[
+		SG.Text(  # add reset button for elapsed time
+			**self.POPUP_ALERT_TEXT_INTERVAL_COUNT  # add the zero button to clocks
+		),
+	],
+]
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0916_CLASS layout elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+		self.POPUP_ALERT_LAYOUT = [  # C_layout for APPMODE_CLOCKS
+	[
+		SG.Column(  # add a column
+			layout=POPUP_ALERT_COLUMN01,  # comment
+			pad=SZ_PAD_ALL,  # comment
+		),
+		SG.Column(  # add a column
+			layout=POPUP_ALERT_COLUMN02,  # comment
+			pad=SZ_PAD_ALL,  # comment
+		),
+	],
+]
+
 		self.POPUP_ALERT_WINDOW = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
 			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
@@ -1736,43 +1557,30 @@ class CLASS_POPUP_ALERT(object):
 
 	def __enter__(self):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
 
-		if (FORMMAIN is None):
-			FORMMAIN = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
-			self.THIS_WINDOW = FORMMAIN
-		elif (FORMPOPUP is None):
-			FORMPOPUP = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
-
-			self.THIS_WINDOW = FORMPOPUP
-		elif (self.THIS_WINDOW is not None):
-			self.THIS_WINDOW = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
+		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
+			self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
+		self.THIS_FORM_OBJ.close()
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = None
 
-		self.THIS_WINDOW.close()
-		if (self.THIS_WINDOW == FORMMAIN):
-			FORMMAIN = None
-		elif (self.THIS_WINDOW == FORMPOPUP):
-			FORMPOPUP = None
-
-		self.THIS_WINDOW = None
+		self.THIS_FORM_OBJ = None
 
 
 class CLASS_THECLOCK(object):
 	global \
-			FORMMAIN, \
-			MAPPDS, \
-			FORMPOPUP
+			ALL_THE_FORMS, \
+			MAPPDS
 
-	def __init__(self, key_, thisWindow_=None):
-		self.THIS_WINDOW = thisWindow_
+	def __init__(self, key_, formName_, thisWindow_=None):
+		self.THIS_FORM_OBJ = thisWindow_
+		self.THIS_FORM_NAME = formName_
 
 		self.THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
 			TIME_CLOCK: ZERO_CLOCK,  # comment
@@ -1791,6 +1599,16 @@ class CLASS_THECLOCK(object):
 			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 		}
 
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0916_CLASS layout elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+		self.THECLOCK_LAYOUT = [  # layout for APPMODE_THECLOCK
+	[
+		SG.Text(  # add a column
+		),
+	],
+]
+
 		self.THECLOCK_WINDOW = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
 			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
@@ -1807,33 +1625,20 @@ class CLASS_THECLOCK(object):
 
 	def __enter__(self):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
 
-		if (FORMMAIN is None):
-			FORMMAIN = SG.Window(**self.THECLOCK_WINDOW).finalize()
-			self.THIS_WINDOW = FORMMAIN
-		elif (FORMPOPUP is None):
-			FORMPOPUP = SG.Window(**self.THECLOCK_WINDOW).finalize()
-
-			self.THIS_WINDOW = FORMPOPUP
-		elif (self.THIS_WINDOW is not None):
-			self.THIS_WINDOW = SG.Window(**self.THECLOCK_WINDOW).finalize()
+		ALL_THE_FORMS[SELF.THIS_FORM_NAME] = SG.Window(**self.THECLOCK_WINDOW).finalize()
+			self.THIS_FORM_OBJ = ALL_THE_FORMS[SELF.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
-				FORMMAIN, \
-				MAPPDS, \
-				FORMPOPUP
+				ALL_THE_FORMS, \
+				MAPPDS
+		self.THIS_FORM_OBJ.close()
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = None
 
-		self.THIS_WINDOW.close()
-		if (self.THIS_WINDOW == FORMMAIN):
-			FORMMAIN = None
-		elif (self.THIS_WINDOW == FORMPOPUP):
-			FORMPOPUP = None
-
-		self.THIS_WINDOW = None
+		self.THIS_FORM_OBJ = None
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1857,6 +1662,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
+			FORM: None,  # time of this event
 			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			NAME: "MOVE",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
@@ -1879,6 +1685,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
+			FORM: None,  # time of this event
 			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			IS_ALERTING_NOW: False,  # is this event dismissed
 			NAME: "wind down",  # this entry's name
@@ -1902,6 +1709,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
+			FORM: None,  # time of this event
 			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			IS_ALERTING_NOW: False,  # is this event alerting right now
 			NAME: "test interval",  # this entry's name
@@ -1918,11 +1726,11 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 	},
-	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
-	IS_ALERTING_NOW: False,  # is any event alerting right now
 	FORMMAIN: None,  # current screen position
 	FORMMAIN_LCN: EMPTY_XY,  # current screen position
 	FORMMAIN_SIZE: EMPTY_XY,  # current screen position
+	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
+	IS_ALERTING_NOW: False,  # is any event alerting right now
 	MOUSE_LCN: (0, 0),  # track mouse location
 	SCREEN_DIMS: EMPTY_XY,  # current screen position
 }
@@ -2787,6 +2595,7 @@ def reallyDoIt():
 
 
 def doit():
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	with \
 			CLOCKS_CLASS(""), \
 			CF.withPickles("runawayClock.pkl", MAPPDS):
@@ -2810,6 +2619,8 @@ def doit():
 				print(f"""{CF.getDebugInfo()}
 				{CF.frameIt("nextMode_", nextMode_)}""")
 				break
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 #
