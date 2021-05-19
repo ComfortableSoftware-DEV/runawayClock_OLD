@@ -68,13 +68,13 @@ EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
 FIRSTRUN = "FIRSTRUN"  # True if just started, false after init1()
 FONT_DEFAULT = "Source Code Pro"  # set the main font
-FORM = "FORM"  # holds all of form entries
+FORM_CURRENT_LCN = "FORM_CURRENT_LCN"  # screen position of the mainframe
+FORM_CURRENT_SIZE = "FORM_CURRENT_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
+FORM_NAME = "FORM_NAME"  # holds all of form entries
 FORMCLOCKS = "FORMCLOCKS"  # holds all of form entries
 FORMEDITENTRY = "FORMEDITENTRY"  # holds all of form entries
 FORMEDITOR = "FORMEDITOR"  # holds all of form entries
 FORMMAIN = "FORMMAIN"  # holds all of form entries
-FORMMAIN_LCN = "FORMMAIN_LCN"  # screen position of the mainframe
-FORMMAIN_SIZE = "FORMMAIN_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
 FORMPOPUP00 = "FORMPOPUP00"  # holds all of form entries
 FORMPOPUP01 = "FORMPOPUP01"  # holds all of form entries
 FORMPOPUP02 = "FORMPOPUP02"  # holds all of form entries
@@ -177,6 +177,8 @@ COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined c
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 CURRENT_ALARM_NAME = None  # last returned mouse status to deal with hover events
 CURRENT_EVENTMODE = EVENTMODE_NONE  # last returned mouse status to deal with hover events
+CURRENT_FORM = None  # last returned mouse status to deal with hover events
+CURRENT_FORM_NAME = None  # last returned mouse status to deal with hover events
 CURRENT_INTERVAL_COUNT = 0  # comment
 EMPTY_BBOX = (0, 0, 0, 0)  # empty XY dict
 EMPTY_XY = (0, 0)  # empty XY dict
@@ -1102,12 +1104,75 @@ CHECKBOX_ALPHA_LOW01 = {  # checkbox for alpha under mouse
 }
 
 
+CHECKBOX_DISMISSED01 = {  # checkbox for dismissed from mouse behavior
+	TEXT: "DISMISSED",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: CHECKBOX_DISMISSED,  # set the key for the checkbox
+}
+
+
+CHECKBOX_ENABLED01 = {  # checkbox for dismissed from mouse behavior
+	TEXT: "ENABLED",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: CHECKBOX_ENABLED,  # set the key for the checkbox
+}
+
+
+CHECKBOX_FIRSTRUN01 = {  # checkbox for dismissed from mouse behavior
+	TEXT: "FIRSTRUN",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: CHECKBOX_FIRSTRUN,  # set the key for the checkbox
+}
+
+
+CHECKBOX_IS_ALERTING_NOW01 = {  # checkbox for dismissed from mouse behavior
+	TEXT: "IS_ALERTING_NOW",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: CHECKBOX_IS_ALERTING_NOW,  # set the key for the checkbox
+}
+
+
+CHECKBOX_PREDISMISSABLE01 = {  # checkbox for dismissed from mouse behavior
+	TEXT: "PREDISMISSABLE",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: CHECKBOX_PREDISMISSABLE,  # set the key for the checkbox
+}
+
+
 CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
-	TEXT: "RNAWY",  # text label
+	TEXT: "RUNAWAY",  # text label
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
 	KEY: CHECKBOX_RUNAWAY,  # set the key for the checkbox
+}
+
+
+CHECKBOX_SNOOZABLE01 = {  # checkbox for dismissed from mouse behavior
+	TEXT: "SNOOZABLE",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: CHECKBOX_SNOOZABLE,  # set the key for the checkbox
+}
+
+
+CHECKBOX_SNOOZED01 = {  # checkbox for dismissed from mouse behavior
+	TEXT: "SNOOZED",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: CHECKBOX_SNOOZED,  # set the key for the checkbox
 }
 
 
@@ -1664,7 +1729,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
-			FORM: None,  # time of this event
+			FORM_NAME: None,  # time of this event
 			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			NAME: "MOVE",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
@@ -1687,7 +1752,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
-			FORM: None,  # time of this event
+			FORM_NAME: None,  # time of this event
 			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			IS_ALERTING_NOW: False,  # is this event dismissed
 			NAME: "wind down",  # this entry's name
@@ -1711,7 +1776,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			ENABLED: True,  # is this event enabled
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
-			FORM: None,  # time of this event
+			FORM_NAME: None,  # time of this event
 			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			IS_ALERTING_NOW: False,  # is this event alerting right now
 			NAME: "test interval",  # this entry's name
@@ -1728,11 +1793,9 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 	},
-	FORMMAIN: None,  # current screen position
-	FORMMAIN_LCN: EMPTY_XY,  # current screen position
-	FORMMAIN_SIZE: EMPTY_XY,  # current screen position
+	FORM_CURRENT_LCN: EMPTY_XY,  # current screen position
+	FORM_CURRENT_SIZE: EMPTY_XY,  # current screen position
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
-	IS_ALERTING_NOW: False,  # is any event alerting right now
 	MOUSE_LCN: (0, 0),  # track mouse location
 	SCREEN_DIMS: EMPTY_XY,  # current screen position
 }
