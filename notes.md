@@ -1,51 +1,53 @@
 # notes regarding runawayClock
 
 
-status   | [ ] | item
----------|-----|-------------------------------------------------------------------------------------------------------
-consider | [ ] | clocks mode can be separated
-consider | [ ] | lowercase all parm keys to match PySimpleGui conventions
-do       | [X] | avoid mouse unless cornered/walled/overrun
-do       | [ ] | edit mode
-do       | [ ] | main all seeing mode
-do       | [X] | read mouse
-do       | [X] | read position
-do       | [X] | screen position saved in MAPPDS (added the space, and locator code)
-do       | [ ] | alarm in time, with and without reminders
-do       | [X] | interval from when started
-do       | []  | interval from a start time eg every half hour from 00:01:00
-do       | [X] | make time till next event time work
-do       | []  | snoozing times and settings
-do       | []  | actually make the bool flags work
-do       | []  | make event entries work from FM.py on
-do       | [X] | make sure empty tupdict works
-do       | [X] | all the tupdict and tupdictdict ready
-do       | [X] | (abandoned) convert all passed about things to a dict (ended up going back to tuples for all of these)
-         | [X] | sizes to dict for sure
-         | [X] | pos(x, y) to dict
-         | [X] | (abandoned) convert all tupdict here to tupdict_dict -=> the infamous TDD
-         | []  | check for dict or tdd data in MAPPDS before updating it, translate them back to tuples
-         | [X] | add TIME_AT_ZERO to CLOCKS_MAINFRAME
-         | []  | mv PSG.py PSG_TIME.py to make sure these special modifications to PSG earn their keep
-         | [X] | switch all times to int seconds MTSS and MTSMS from strings
-         | [x] | only switching to text to display
-         | [X] | fix elapsed after midnight
-         | [X] | start and stop times for intervals
-         | [X] | manage rewrite of the mainframe class to the ALARMPOPUP class
-         | []  | length of alarms
-         | []  | auto dismiss
-         | []  | time until dismissed
-         | [X] | intervals working
-         | []  | alarms working
-         | [X] | (alarm+reminder working)
-         | [X] | remove reminders
-         | []  | make the clocks mode able to invisible all except when over
-         | []  | auto dismiss time 0 for no auto dismiss
-         | []  | default intervals to 5 seconds to start
-         | []  | add a counter of intervals, and a reset when counter clicked
-         | []  | flash clocks or theclock instead of popup for intervals
-         | []  | switching to all classes for the FRAMEs
-         |     |
+[ ] | item
+----|-------------------------------------------------------------------------------------------------------
+[ ] | alarm in time count 
+[ ] | clocks mode can be separated
+[ ] | edit mode
+[ ] | lowercase all parm keys to match PySimpleGui conventions
+[ ] | main all seeing mode
+[]  |  
+[]  | actually make the bool flags work
+[]  | add a counter of intervals, and a reset when counter clicked
+[]  | alarms working
+[]  | auto dismiss
+[]  | auto dismiss, time 0 for no auto dismiss
+[]  | check for dict or tdd data in MAPPDS before updating it, translate them back to tuples
+[]  | default intervals to 5 seconds to start
+[]  | flash clocks or theclock instead of popup for intervals
+[]  | interval from a start time eg every half hour from 00:01:00
+[]  | length of alarms
+[]  | make event entries work from FM.py on
+[]  | make the clocks mode able to invisible all except when over
+[]  | mv PSG.py PSG_TIME.py to make sure these special modifications to PSG earn their keep
+[]  | snoozing times and settings
+[]  | time until dismissed
+[X] | (abandoned) convert all passed about things to a dict (ended up going back to tuples for all of these)
+[X] | (abandoned) convert all tupdict here to tupdict_dict -=> the infamous TDD
+[X] | (alarm+reminder working)
+[X] | add TIME_AT_ZERO to CLOCKS_MAINFRAME
+[X] | all the tupdict and tupdictdict ready
+[X] | avoid mouse unless cornered/walled/overrun
+[X] | fix elapsed after midnight
+[X] | interval from when started
+[X] | intervals working
+[X] | make sure empty tupdict works
+[X] | make time till next event time work
+[X] | manage rewrite of the mainframe class to the ALARMPOPUP class
+[x] | only switching to text to display
+[X] | pos(x, y) to dict
+[X] | read mouse
+[X] | read position
+[X] | remove reminders
+[X] | remove unused structures
+[X] | screen position saved in MAPPDS (added the space, and locator code)
+[X] | sizes to dict for sure
+[X] | start and stop times for intervals
+[X] | switch all times to int seconds MTSS and MTSMS from strings
+[X] | switching to all classes for the FRAMEs
+
 
 
 
