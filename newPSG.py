@@ -772,44 +772,44 @@ class CLASS_CLOCKS(object):
 			**TEXT_INTERVAL_COUNT,  # interval count template
 			KEY: f"""{self.USE_THIS_KEY(INTERVAL_COUNT)}""",  # interval count template
 		}
+		self._KEY_DICT_[INTERVAL_COUNT] = f"""{self._USE_THIS_KEY_(KEY)
 
-		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
 		self._TEXT_NAME_NEXT_EVENT_ = {  # class text for interval count
 			**TEXT_NAME_NEXT_EVENT,  # interval count template
 			KEY: f"""{self.USE_THIS_KEY(NAME_NEXT_EVENT)}""",  # interval count template
 		}
+		self._KEY_DICT_[NAME_NEXT_EVENT] = f"""{self._USE_THIS_KEY_(KEY)
 
-		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
 		self._TEXT_TIME_AT_NEXT_ = {  # class text for interval count
 			**TEXT_TIME_AT_NEXT,  # interval count template
 			KEY: f"""{self.USE_THIS_KEY(TIME_AT_NEXT)}""",  # interval count template
 		}
+		self._KEY_DICT_[TIME_AT_NEXT] = f"""{self._USE_THIS_KEY_(KEY)
 
-		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
 		self._TEXT_TIME_AT_ZEROELAPSE_ = {  # class text for interval count
 			**TEXT_TIME_AT_ZEROELAPSE,  # interval count template
 			KEY: f"""{self.USE_THIS_KEY(TIME_AT_ZEROELAPSE)}""",  # interval count template
 		}
+		self._KEY_DICT_[TIME_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(KEY)
 
-		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
 		self._TEXT_TIME_CLOCK_ = {  # class text for interval count
 			**TEXT_TIME_CLOCK,  # interval count template
 			KEY: f"""{self.USE_THIS_KEY(TIME_CLOCK)}""",  # interval count template
 		}
+		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(KEY)
 
-		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
 		self._TEXT_TIME_ELAPSED_ = {  # class text for interval count
 			**TEXT_TIME_ELAPSED,  # interval count template
 			KEY: f"""{self.USE_THIS_KEY(TIME_ELAPSED)}""",  # interval count template
 		}
+		self._KEY_DICT_[TIME_ELAPSED] = f"""{self._USE_THIS_KEY_(KEY)
 
-		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
 		self._TEXT_TIME_TOGO_ = {  # class text for interval count
 			**TEXT_TIME_TOGO,  # interval count template
 			KEY: f"""{self.USE_THIS_KEY(TIME_TOGO)}""",  # interval count template
 		}
+		self._KEY_DICT_[TIME_TOGO] = f"""{self._USE_THIS_KEY_(KEY)
 
-		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0916_CLASS column elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -946,8 +946,8 @@ class CLASS_THECLOCK(object):
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 		}
+		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(KEY)
 
-		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0916_CLASS layout elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

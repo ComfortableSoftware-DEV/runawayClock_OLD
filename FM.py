@@ -2326,11 +2326,12 @@ def makePSGClasses():
 		if thisClassName_ in FMPSG_SCTN0916_CLASS_TEXT_DICT:
 			for thisElementName_, thisElementVals_ in FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_].items():
 				strToRtn_ += f"""{NTAB(2)}self.{thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT[thisClassName_][thisElementName_]}
-{thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
+{thisElementVals_}{NTAB(2)}{CBRCE}
 """
 				if thisElementName_ in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_]:
 					strToRtn_ += f"""{FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_]}"""
 
+				strToRtn_ += f"""{NEWLINE}"""
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # all elements go above this marker :: NOT order sensitive up to the top marker very sensitive below this marker
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -5706,7 +5707,7 @@ def parseTBGLST(FDTBGLST):
 				if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_]:
 					FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] = ""
 
-				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{thisKey_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{thisKey_}{CPAREN}{NEWLINE}"""
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{thisVal_}{CPAREN}{NEWLINE}"""
 
 			else:
 				thisValStr_ = f"""{thisVal_}"""
