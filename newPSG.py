@@ -90,6 +90,7 @@ INDEX_X = 0  # X
 INDEX_Y = 1  # Y
 INTERVAL_COUNT = "INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
 IS_ALERTING_NOW = "IS_ALERTING_NOW"  # is the event currently alerting
+KEY_BASE = "KEY_BASE"  # is the event currently alerting
 MOUSE_LCN = "MOUSE_LCN"  # track mouse location to ease load a bit
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
@@ -1207,11 +1208,11 @@ CHECKBOX_SNOOZED01 = {  # checkbox for dismissed from mouse behavior
 
 class CLASS_CLOCKS(object):
 	global \
-			ALL_THE_FORMS, \
-			MAPPDS
+		ALL_THE_FORMS, \
+		MAPPDS
 
-	def __init__(self, key_, formName_, thisWindow_=None):
-		self.THIS_FORM_OBJ = thisWindow_
+	def __init__(self, keyBase_, formName_):
+		self.THIS_KEY_BASE = keyBase_
 		self.THIS_FORM_NAME = formName_
 
 		self.CLOCKS_DICT = {  # holds the values for the clocks frame
@@ -1230,7 +1231,7 @@ class CLASS_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: INTERVAL_COUNT,  # comment
+			KEY: f"""{INTERVAL_COUNT}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (4, 1),  # characters, lines size line
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
@@ -1242,7 +1243,7 @@ class CLASS_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: NAME_NEXT_EVENT,  # comment
+			KEY: f"""{NAME_NEXT_EVENT}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (16, 1),  # characters, lines size line
 			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
@@ -1253,7 +1254,7 @@ class CLASS_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: TIME_AT_NEXT,  # comment
+			KEY: f"""{TIME_AT_NEXT}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1265,7 +1266,7 @@ class CLASS_CLOCKS(object):
 			ENABLE_EVENTS: False,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: TIME_AT_ZEROELAPSE,  # comment
+			KEY: f"""{TIME_AT_ZEROELAPSE}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1277,7 +1278,7 @@ class CLASS_CLOCKS(object):
 			ENABLE_EVENTS: True,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: TIME_CLOCK,  # comment
+			KEY: f"""{TIME_CLOCK}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1288,7 +1289,7 @@ class CLASS_CLOCKS(object):
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: TIME_ELAPSED,  # comment
+			KEY: f"""{TIME_ELAPSED}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1299,7 +1300,7 @@ class CLASS_CLOCKS(object):
 			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: TIME_TOGO,  # comment
+			KEY: f"""{TIME_TOGO}{key_}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			SIZE: (8, 1),  # characters, lines size line
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -1401,251 +1402,27 @@ class CLASS_CLOCKS(object):
 
 	def __enter__(self):
 		global \
-				ALL_THE_FORMS, \
-				MAPPDS
-
-		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.CLOCKS_WINDOW).finalize()
-		self.THIS_FORM_OBJ = ALL_THE_FORMS[self.THIS_FORM_NAME]
-
-	def __exit__(self, *args_):
-		global \
-				ALL_THE_FORMS, \
-				MAPPDS
-		self.THIS_FORM_OBJ.close()
-		ALL_THE_FORMS[self.THIS_FORM_NAME] = None
-
-		self.THIS_FORM_OBJ = None
-
-
-class CLASS_POPUP_ALERT(object):
-	global \
 			ALL_THE_FORMS, \
 			MAPPDS
-
-	def __init__(self, key_, formName_, thisWindow_=None):
-		self.THIS_FORM_OBJ = thisWindow_
-		self.THIS_FORM_NAME = formName_
-
-		self.POPUP_ALERT_TEXT_DICT = {  # holds the values for the text elements
-			NAME_NEXT_EVENT: "",  # name of next event
-			INTERVAL_COUNT: 0,  # interval count
-		}
-
-		self.POPUP_ALERT_SPIN01_SPIN_LIST = [
-			0,  # index 0
-			1,  # index 1
-			2,  # index 2
-		]
-
-		self.POPUP_ALERT_SPIN01_SPIN_DICT = {  # define the alarm en/dis/able spinbox
-			TEXT: "SPIN_TEXT",  # comment
-			BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # comment
-			FONT: FONTSZ_ALERT_TEXT,  # comment
-			SIZE: (16, 1),  # comment
-			TEXT_COLOR: COLOR_ALERT_TEXT,  # comment
-			VALUES: self.POPUP_ALERT_SPIN01_SPIN_LIST,  # comment
-		}
-
-		self.POPUP_ALERT_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
-			TEXT: "0000",  # the text to fill in
-			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-			ENABLE_EVENTS: False,  # this is clickable
-			FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
-			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{INTERVAL_COUNT}{key_}""",  # comment
-			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-			SIZE: (4, 1),  # characters, lines size line
-			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
-		}
-
-		self.POPUP_ALERT_TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCKS_CLOCK_TIME
-			TEXT: "",  # the text to fill in
-			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-			ENABLE_EVENTS: False,  # this is clickable
-			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
-			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{NAME_NEXT_EVENT}{key_}""",  # comment
-			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-			SIZE: (16, 1),  # characters, lines size line
-			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
-		}
-
-		self.POPUP_ALERT_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
-			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-			ENABLE_EVENTS: False,  # this is clickable
-			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
-			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{TIME_AT_NEXT}{key_}""",  # comment
-			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-			SIZE: (8, 1),  # characters, lines size line
-			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
-		}
-
-		self.POPUP_ALERT_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
-			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-			ENABLE_EVENTS: False,  # this is clickable
-			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
-			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{TIME_AT_ZEROELAPSE}{key_}""",  # comment
-			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-			SIZE: (8, 1),  # characters, lines size line
-			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-			TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
-		}
-
-		self.POPUP_ALERT_TEXT_TIME_CLOCK = {  # C_define the text element for CLOCKS_CLOCK_TIME
-			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-			ENABLE_EVENTS: True,  # this is clickable
-			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
-			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{TIME_CLOCK}{key_}""",  # comment
-			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-			SIZE: (8, 1),  # characters, lines size line
-			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
-		}
-
-		self.POPUP_ALERT_TEXT_TIME_ELAPSED = {  # C_define the text element for CLOCKS_CLOCK_TIME
-			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-			FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
-			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{TIME_ELAPSED}{key_}""",  # comment
-			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-			SIZE: (8, 1),  # characters, lines size line
-			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-			TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
-		}
-
-		self.POPUP_ALERT_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
-			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-			FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
-			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{TIME_TOGO}{key_}""",  # comment
-			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-			SIZE: (8, 1),  # characters, lines size line
-			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-			TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
-		}
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0916_CLASS column elements
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-		self.POPUP_ALERT_COLUMN01 = [  # C_the column that puts the two smaller clocks below the main one
-	[
-		SG.Text(  # add a new TEXT element to clocks column
-			**CLOCKS_TEXT_TIME_CLOCK  # add the main clock
-		),
-	],
-	[
-		SG.Text(  # add a new row to clocks column
-			**self.POPUP_ALERT_TEXT_TIME_AT_ZEROELAPSE  # add time to go
-		),
-		SG.Text(  # add a new text element to row01 clocks column
-			**self.POPUP_ALERT_TEXT_TIME_ELAPSED  # add elapsed time
-		),
-	],
-	[
-		SG.Text(  # add a new text element to row01 clocks column
-			**self.POPUP_ALERT_TEXT_TIME_TOGO  # add elapsed time
-		),
-		SG.Text(  # add a new row to clocks column
-			**self.POPUP_ALERT_TEXT_TIME_AT_NEXT  # add time to go
-		),
-	],
-	[
-		SG.Text(  # add a new text element to row01 clocks column
-			**self.POPUP_ALERT_TEXT_NAME_NEXT_EVENT  # add the main clock
-		),
-	],
-	[
-		SG.Checkbox(  # add a new text element to row01 clocks column
-			**self.C_CHECKBOX_RUNAWAY01  # add elapsed time
-		),
-		SG.Checkbox(  # add a new text element to row01 clocks column
-			**CHECKBOX_ALPHA_LOW01  # add elapsed time
-		),
-	],
-]
-
-		self.POPUP_ALERT_COLUMN02 = [  # C_the column that puts the two smaller clocks below the main one
-	[
-		SG.Button(  # add a button element to clocks column
-			**BTN_QUIT20  # add the xpand button to clocks
-		),
-	],
-	[
-		SG.Button(  # add reset button for elapsed time
-			**BTN_ZERO20  # add the zero button to clocks
-		),
-	],
-	[
-		SG.Button(  # add reset button for elapsed time
-			**BTN_XPAND20  # add the zero button to clocks
-		),
-	],
-	[
-		SG.Text(  # add reset button for elapsed time
-			**self.POPUP_ALERT_TEXT_INTERVAL_COUNT  # add the zero button to clocks
-		),
-	],
-]
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0916_CLASS layout elements
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-		self.POPUP_ALERT_LAYOUT = [  # C_layout for APPMODE_CLOCKS
-	[
-		SG.Column(  # add a column
-			layout=POPUP_ALERT_COLUMN01,  # comment
-			pad=SZ_PAD_ALL,  # comment
-		),
-		SG.Column(  # add a column
-			layout=POPUP_ALERT_COLUMN02,  # comment
-			pad=SZ_PAD_ALL,  # comment
-		),
-	],
-]
-
-		self.POPUP_ALERT_WINDOW = {  # define the clocks window
-			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
-			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
-			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
-			ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
-			FORCE_TOPLEVEL: None,  # 
-			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
-			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
-			LAYOUT: self.POPUP_ALERT_LAYOUT,  # add the layout for CLOCKS_WINDOW
-			MARGINS: SZ_MARGINS_ALL,  # 
-			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
-			TITLE: TITLE_POPUP_ALERT,  # 
-		}
-
-	def __enter__(self):
-		global \
-				ALL_THE_FORMS, \
-				MAPPDS
-
-		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.POPUP_ALERT_WINDOW).finalize()
-		self.THIS_FORM_OBJ = ALL_THE_FORMS[self.THIS_FORM_NAME]
+		#
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.CLOCKS_WINDOW).finalize()
 
 	def __exit__(self, *args_):
 		global \
-				ALL_THE_FORMS, \
-				MAPPDS
-		self.THIS_FORM_OBJ.close()
+			ALL_THE_FORMS, \
+			MAPPDS
+		#
+		ALL_THE_FORMS[self.THIS_FORM_NAME].close()
 		ALL_THE_FORMS[self.THIS_FORM_NAME] = None
-
-		self.THIS_FORM_OBJ = None
 
 
 class CLASS_THECLOCK(object):
 	global \
-			ALL_THE_FORMS, \
-			MAPPDS
+		ALL_THE_FORMS, \
+		MAPPDS
 
-	def __init__(self, key_, formName_, thisWindow_=None):
-		self.THIS_FORM_OBJ = thisWindow_
+	def __init__(self, keyBase_, formName_):
+		self.THIS_KEY_BASE = keyBase_
 		self.THIS_FORM_NAME = formName_
 
 		self.THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
@@ -1692,20 +1469,18 @@ class CLASS_THECLOCK(object):
 
 	def __enter__(self):
 		global \
-				ALL_THE_FORMS, \
-				MAPPDS
-
+			ALL_THE_FORMS, \
+			MAPPDS
+		#
 		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.THECLOCK_WINDOW).finalize()
-		self.THIS_FORM_OBJ = ALL_THE_FORMS[self.THIS_FORM_NAME]
 
 	def __exit__(self, *args_):
 		global \
-				ALL_THE_FORMS, \
-				MAPPDS
-		self.THIS_FORM_OBJ.close()
+			ALL_THE_FORMS, \
+			MAPPDS
+		#
+		ALL_THE_FORMS[self.THIS_FORM_NAME].close()
 		ALL_THE_FORMS[self.THIS_FORM_NAME] = None
-
-		self.THIS_FORM_OBJ = None
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1731,6 +1506,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			FIRSTRUN: True,  # are we initializing or not
 			FORM_NAME: None,  # time of this event
 			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
+			KEY_BASE: None,  # count of number of times this has alerted since last reset
 			NAME: "MOVE",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
@@ -1755,6 +1531,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			FORM_NAME: None,  # time of this event
 			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			IS_ALERTING_NOW: False,  # is this event dismissed
+			KEY_BASE: None,  # count of number of times this has alerted since last reset
 			NAME: "wind down",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
@@ -1779,6 +1556,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			FORM_NAME: None,  # time of this event
 			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			IS_ALERTING_NOW: False,  # is this event alerting right now
+			KEY_BASE: None,  # count of number of times this has alerted since last reset
 			NAME: "test interval",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
