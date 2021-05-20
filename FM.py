@@ -699,6 +699,7 @@ FMPSG_SCTN0916_CLASS_RCMENU_CMNT_DICT = {}  # define the dict to hold everything
 FMPSG_SCTN0916_CLASS_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT = {}  # holds the spin element stuffs (TUPDICT)f
 FMPSG_SCTN0916_CLASS_SPIN_DICT = {}  # holds the spin element stuffs (TUPDICT)
+FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_TEXT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
@@ -1040,6 +1041,7 @@ TBGLST = [
 	("FMPSG_SCTN0916_CLASS_SPIN_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_TEXT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_WINDOW_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_____", FMAX_NOP, "FMPSG_ENDS",),
@@ -1505,8 +1507,26 @@ TBGLST = [
 	("PSGVAL__CLOCKS_RCMENU0101", FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD, "CLOCKS", "_RCMENU01_", "CHECKBOX_ALPHA_LOW", "toggle CHECKBOX_ALPHA_LOW",),
 	("PSGVAL__CLOCKS_RCMENU0101", FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD, "CLOCKS", "_RCMENU01_", "CHECKBOX_RUNAWAY", "toggle CHECKBOX_RUNAWAY",),
 	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_INTERVAL_COUNT_", "class text for interval count",),
-	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_INTERVAL_COUNT_", "**TEXT_INTERVAL_COUNT", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_INTERVAL_COUNT_", "**TEXT_INTERVAL_COUNT", "interval count template",),
 	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_INTERVAL_COUNT_", "KEY", "INTERVAL_COUNT", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_NAME_NEXT_EVENT00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_NAME_NEXT_EVENT_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_NAME_NEXT_EVENT01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_NAME_NEXT_EVENT_", "**TEXT_NAME_NEXT_EVENT", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_NAME_NEXT_EVENT01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_NAME_NEXT_EVENT_", "KEY", "NAME_NEXT_EVENT", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_TIME_AT_NEXT00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_AT_NEXT_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_TIME_AT_NEXT01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_TIME_AT_NEXT_", "**TEXT_TIME_AT_NEXT", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_TIME_AT_NEXT01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_TIME_AT_NEXT_", "KEY", "TIME_AT_NEXT", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_TIME_AT_ZERO00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_AT_ZEROELAPSE_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_TIME_AT_ZERO01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_TIME_AT_ZEROELAPSE_", "**TEXT_TIME_AT_ZEROELAPSE", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_TIME_AT_ZERO01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_TIME_AT_ZEROELAPSE_", "KEY", "TIME_AT_ZEROELAPSE", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_CLOCK_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_TIME_CLOCK_", "**TEXT_TIME_CLOCK", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_TIME_CLOCK_", "KEY", "TIME_CLOCK", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_TIME_ELAPSED00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_ELAPSED_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_TIME_ELAPSED01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_TIME_ELAPSED_", "**TEXT_TIME_ELAPSED", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_TIME_ELAPSED01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_TIME_ELAPSED_", "KEY", "TIME_ELAPSED", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_TIME_TOGO00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_TOGO_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_TIME_TOGO_", "**TEXT_TIME_TOGO", "interval count template",),
+	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_TIME_TOGO_", "KEY", "TIME_TOGO", "interval count template",),
 	("PSGVAL__CLOCKS_WINDOW", FMAX_NOP, "the window for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_WINDOW00", FMAXPSG_SCTN0916_CLASS_WINDOW_DEF, "CLOCKS", "_WINDOW_", "define the clocks window",),
 	("PSGVAL__CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "ALPHA_CHANNEL", "SZ_ALPHA_HIGH", "set the high alpha as the default",),
@@ -1516,10 +1536,10 @@ TBGLST = [
 	("PSGVAL__CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "FORCE_TOPLEVEL", "None", "",),
 	("PSGVAL__CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "GRAB_ANYWHERE", "True", "eliminate all not useful on the floating clocks",),
 	("PSGVAL__CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "KEEP_ON_TOP", "True", "eliminate all not useful on the floating clocks",),
-	("PSGVAL__CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "_LAYOUT_", "self.CLOCKS_LAYOUT", "add the layout for CLOCKS_WINDOW",),
 	("PSGVAL__CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "MARGINS", "SZ_MARGINS_ALL", "",),
 	("PSGVAL__CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "NO_TITLEBAR", "True", "no titlebar on APPMODE_CLOCKS window",),
 	("PSGVAL__CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "TITLE", "TITLE_CLOCKS", "",),
+	("PSGVAL__CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "_LAYOUT_", "self.CLOCKS_LAYOUT", "add the layout for CLOCKS_WINDOW",),
 	("PSGVAL__COLORS", FMAX_NOP, "colors defines",),
 	("PSGVAL__COLORS_BTN_NORMAL", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_BTN_NORMAL", "(COLOR_TEXT_NORMAL, COLOR_BACKGROUND)", "comment",),
 	("PSGVAL__COLORS_TEXT_HIGH", FMAXPSG_SCTN0901_VAL_DEF, "COLORS_TEXT_HIGH", "(COLOR_TEXT_HIGH, COLOR_BACKGROUND)", "combined colors for a clock text element",),
@@ -1721,10 +1741,10 @@ TBGLST = [
 	("PSGVAL__THECLOCK_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "THECLOCK", "THECLOCK_WINDOW", "FORCE_TOPLEVEL", "None", "",),
 	("PSGVAL__THECLOCK_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "THECLOCK", "THECLOCK_WINDOW", "GRAB_ANYWHERE", "True", "eliminate all not useful on the floating clocks",),
 	("PSGVAL__THECLOCK_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "THECLOCK", "THECLOCK_WINDOW", "KEEP_ON_TOP", "True", "eliminate all not useful on the floating clocks",),
-	("PSGVAL__THECLOCK_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "THECLOCK", "THECLOCK_WINDOW", "_LAYOUT_", "THECLOCK_LAYOUT", "add the layout for THECLOCK_WINDOW",),
 	("PSGVAL__THECLOCK_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "THECLOCK", "THECLOCK_WINDOW", "MARGINS", "SZ_MARGINS_ALL", "",),
 	("PSGVAL__THECLOCK_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "THECLOCK", "THECLOCK_WINDOW", "NO_TITLEBAR", "True", "no titlebar on APPMODE_THECLOCK window",),
 	("PSGVAL__THECLOCK_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "THECLOCK", "THECLOCK_WINDOW", "TITLE", "TITLE_THECLOCK", "",),
+	("PSGVAL__THECLOCK_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "THECLOCK", "THECLOCK_WINDOW", "_LAYOUT_", "THECLOCK_LAYOUT", "add the layout for THECLOCK_WINDOW",),
 	("PSGVAL__VCURRENT_ALARM_NAME", FMAXPSG_SCTN0901_VAL_DEF, "CURRENT_ALARM_NAME", "None", "last returned mouse status to deal with hover events",),
 	("PSGVAL__VCURRENT_EVENTMODE", FMAXPSG_SCTN0901_VAL_DEF, "CURRENT_EVENTMODE", "EVENTMODE_NONE", "last returned mouse status to deal with hover events",),
 	("PSGVAL__VCURRENT_FORM", FMAXPSG_SCTN0901_VAL_DEF, "CURRENT_FORM", "None", "last returned mouse status to deal with hover events",),
@@ -2234,7 +2254,8 @@ def makePSGClasses():
 {NTAB(1)}def __init__{OPAREN}self, keyBase_, formName_{CPAREN}:
 {NTAB(2)}self.THIS_KEY_BASE = keyBase_
 {NTAB(2)}self.USE_THIS_KEY = lambda KEY_TEXT_: f{TRIQT}{OBRCE}KEY_TEXT_{CBRCE}{OBRCE}self.THIS_KEY_BASE{CBRCE}{TRIQT}
-{NTAB(2)}self.THIS_FORM_NAME = formName_{NEWLINE}{NEWLINE}"""
+{NTAB(2)}self.THIS_FORM_NAME = formName_
+{NTAB(2)}self._KEY_DICT_ = {OBRCE}{CBRCE}{NEWLINE}{NEWLINE}"""
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -2307,6 +2328,8 @@ def makePSGClasses():
 				strToRtn_ += f"""{NTAB(2)}self.{thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT[thisClassName_][thisElementName_]}
 {thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
 """
+				if thisElementName_ in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_]:
+					strToRtn_ += f"""{FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_]}"""
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # all elements go above this marker :: NOT order sensitive up to the top marker very sensitive below this marker
@@ -5582,6 +5605,11 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] = ""
 
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT:
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] = ""
+
 			if thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT[thisClassName_] = {}
 
@@ -5606,12 +5634,12 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] = ""
 
-			if (thisKey_ == "KEY"):
-				thisValStr_ = f"""f{TRIQT}{OBRCE}self.USE_THIS_KEY{OPAREN}{thisVal_}{CPAREN}{CBRCE}{TRIQT}"""
-			else:
-				thisValStr_ = f"""{DBLQT}{thisVal_}{DBLQT}"""
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT:
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_] = {}
+			if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_]:
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] = ""
 
-			FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisValStr_},  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisVal_},  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5633,8 +5661,17 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] = ""
 
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT:
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_] = {}
+
 			if (thisKey_ == "KEY"):
 				thisValStr_ = f"""f{TRIQT}{OBRCE}self.USE_THIS_KEY{OPAREN}{thisVal_}{CPAREN}{CBRCE}{TRIQT}"""
+
+				if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_]:
+					FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] = ""
+
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{thisKey_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{thisKey_}{CPAREN}{NEWLINE}"""
+
 			else:
 				thisValStr_ = f"""{DBLQT}{thisVal_}{DBLQT}"""
 
@@ -5660,10 +5697,19 @@ def parseTBGLST(FDTBGLST):
 			if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_]:
 				FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] = ""
 
+			if thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT:
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_] = {}
+
 			if (thisKey_ == "KEY"):
 				thisValStr_ = f"""f{TRIQT}{OBRCE}self.USE_THIS_KEY{OPAREN}{thisVal_}{CPAREN}{CBRCE}{TRIQT}"""
+
+				if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_]:
+					FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] = ""
+
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{thisKey_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{thisKey_}{CPAREN}{NEWLINE}"""
+
 			else:
-				thisValStr_ = f"""{DBLQT}{thisVal_}{DBLQT}"""
+				thisValStr_ = f"""{thisVal_}"""
 
 			FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisValStr_},  # {thisComment_}{NEWLINE}"""
 
@@ -5747,6 +5793,11 @@ def parseTBGLST(FDTBGLST):
 # SCTN0916_89_ENDS_CLASS_WINDOW
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 # FMPSG_PARSE_ENDS_CLASS_WINDOW
+
+
+#
+
+
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

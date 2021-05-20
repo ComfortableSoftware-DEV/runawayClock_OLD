@@ -699,6 +699,7 @@ FMPSG_SCTN0916_CLASS_RCMENU_CMNT_DICT = {}  # define the dict to hold everything
 FMPSG_SCTN0916_CLASS_RCMENU_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT = {}  # holds the spin element stuffs (TUPDICT)f
 FMPSG_SCTN0916_CLASS_SPIN_DICT = {}  # holds the spin element stuffs (TUPDICT)
+FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_TEXT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
@@ -820,6 +821,7 @@ FMPSG_SCTN0916_CLASS_WINDOW_DICT = {}  # holds all of the button entriess (TUPDI
 		FMPSG_SCTN0916_CLASS_RCMENU_DICT, \
 		FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_SPIN_DICT, \
+		FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT, \
 		FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_TEXT_DICT, \
 		FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT, \

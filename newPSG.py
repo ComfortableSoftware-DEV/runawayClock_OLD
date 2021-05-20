@@ -756,6 +756,7 @@ class CLASS_CLOCKS(object):
 		self.THIS_KEY_BASE = keyBase_
 		self.USE_THIS_KEY = lambda KEY_TEXT_: f"""{KEY_TEXT_}{self.THIS_KEY_BASE}"""
 		self.THIS_FORM_NAME = formName_
+		self._KEY_DICT_ = {}
 
 		self._DICT_ = {  # holds the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
@@ -768,9 +769,47 @@ class CLASS_CLOCKS(object):
 		}
 
 		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count
+			**TEXT_INTERVAL_COUNT,  # interval count template
 			KEY: f"""{self.USE_THIS_KEY(INTERVAL_COUNT)}""",  # interval count template
 		}
 
+		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
+		self._TEXT_NAME_NEXT_EVENT_ = {  # class text for interval count
+			**TEXT_NAME_NEXT_EVENT,  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(NAME_NEXT_EVENT)}""",  # interval count template
+		}
+
+		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
+		self._TEXT_TIME_AT_NEXT_ = {  # class text for interval count
+			**TEXT_TIME_AT_NEXT,  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(TIME_AT_NEXT)}""",  # interval count template
+		}
+
+		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
+		self._TEXT_TIME_AT_ZEROELAPSE_ = {  # class text for interval count
+			**TEXT_TIME_AT_ZEROELAPSE,  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(TIME_AT_ZEROELAPSE)}""",  # interval count template
+		}
+
+		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
+		self._TEXT_TIME_CLOCK_ = {  # class text for interval count
+			**TEXT_TIME_CLOCK,  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(TIME_CLOCK)}""",  # interval count template
+		}
+
+		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
+		self._TEXT_TIME_ELAPSED_ = {  # class text for interval count
+			**TEXT_TIME_ELAPSED,  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(TIME_ELAPSED)}""",  # interval count template
+		}
+
+		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
+		self._TEXT_TIME_TOGO_ = {  # class text for interval count
+			**TEXT_TIME_TOGO,  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(TIME_TOGO)}""",  # interval count template
+		}
+
+		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0916_CLASS column elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -889,24 +928,26 @@ class CLASS_THECLOCK(object):
 		self.THIS_KEY_BASE = keyBase_
 		self.USE_THIS_KEY = lambda KEY_TEXT_: f"""{KEY_TEXT_}{self.THIS_KEY_BASE}"""
 		self.THIS_FORM_NAME = formName_
+		self._KEY_DICT_ = {}
 
 		self.THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
 			TIME_CLOCK: ZERO_CLOCK,  # comment
 		}
 
 		self.THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
-			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
-			ENABLE_EVENTS: "True",  # this is clickable
-			FONT: "FONTSZ_CLOCKS_TIME_CLOCK",  # font+size line
-			JUSTIFICATION: "JUSTIFICATION_CENTER",  # center everything
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: True,  # this is clickable
+			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 			KEY: f"""{self.USE_THIS_KEY(TIME_CLOCK)}""",  # comment
-			PAD: "SZ_PAD_ALL",  # the text color for a clock_time element
-			RIGHT_CLICK_MENU: "THECLOCK_RCMENU01",  # set up the right click menu
-			SIZE: "(8, 1)",  # characters, lines size line
-			TEXT: "ZERO_CLOCK",  # the text color for a clock_time element
-			TEXT_COLOR: "COLOR_TIME_CLOCK",  # the text color for a clock_time element
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			RIGHT_CLICK_MENU: THECLOCK_RCMENU01,  # set up the right click menu
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 		}
 
+		self._KEY_DICT_[KEY] = f"""{self._USE_THIS_KEY_(KEY)
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0916_CLASS layout elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
