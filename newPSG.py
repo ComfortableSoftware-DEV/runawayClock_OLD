@@ -221,6 +221,7 @@ TIMES_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next ti
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0910 DEF3
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+_LAYOUT_ = "layout"  # 
 ALPHA_CHANNEL = "alpha_channel"  # 
 AUTO_CLOSE = "auto_close"  # 
 AUTO_CLOSE_DURATION = "auto_close_duration"  # 
@@ -278,7 +279,6 @@ JUSTIFICATION_RIGHT = "right"  # comment
 K = "k"  # 
 KEEP_ON_TOP = "keep_on_top"  # 
 KEY = "key"  # 
-LAYOUT = "layout"  # 
 LOCATION = "location"  # 
 MARGINS = "margins"  # 
 METADATA = "metadata"  # 
@@ -648,7 +648,6 @@ TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: INTERVAL_COUNT,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (4, 1),  # characters, lines size line
 	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
@@ -661,7 +660,6 @@ TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCK_TIME
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: NAME_NEXT_EVENT,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (16, 1),  # characters, lines size line
 	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
@@ -673,7 +671,6 @@ TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_AT_NEXT,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -686,7 +683,6 @@ TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_AT_ZEROELAPSE,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -699,7 +695,6 @@ TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
 	ENABLE_EVENTS: True,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_CLOCK,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -711,7 +706,6 @@ TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_ELAPSED,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -723,7 +717,6 @@ TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	KEY: TIME_TOGO,  # comment
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
@@ -764,7 +757,7 @@ class CLASS_CLOCKS(object):
 		self.USE_THIS_KEY = lambda KEY_TEXT_: f"""{KEY_TEXT_}{self.THIS_KEY_BASE}"""
 		self.THIS_FORM_NAME = formName_
 
-		self.DICT = {  # holds the values for the clocks frame
+		self._DICT_ = {  # holds the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
 			INTERVAL_COUNT: 0,  # interval count
 			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -774,34 +767,37 @@ class CLASS_CLOCKS(object):
 			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
 		}
 
+		self._TEXT_INTERVAL_COUNT_ = {  # 
+		}
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0916_CLASS column elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-		self.COLUMN01 = [  # the column that puts the two smaller clocks below the main one
+		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
 			[
 				SG.Text(  # add a new TEXT element to clocks column
-					**self.CLOCKS_TEXT_TIME_CLOCK  # add the main clock
+					**self._TEXT_TIME_CLOCK_  # add the main clock
 				),
 			],
 			[
 				SG.Text(  # add a new row to clocks column
-					**self.CLOCKS_TEXT_TIME_AT_ZEROELAPSE  # add time to go
+					**self.S_TEXT_TIME_AT_ZEROELAPSE_  # add time to go
 				),
 				SG.Text(  # add a new text element to row01 clocks column
-					**self.CLOCKS_TEXT_TIME_ELAPSED  # add elapsed time
+					**self._TEXT_TIME_ELAPSED_  # add elapsed time
 				),
 			],
 			[
 				SG.Text(  # add a new text element to row01 clocks column
-					**self.CLOCKS_TEXT_TIME_TOGO  # add elapsed time
+					**self._TEXT_TIME_TOGO_  # add elapsed time
 				),
 				SG.Text(  # add a new row to clocks column
-					**self.CLOCKS_TEXT_TIME_AT_NEXT  # add time to go
+					**self._TEXT_TIME_AT_NEXT_  # add time to go
 				),
 			],
 			[
 				SG.Text(  # add a new text element to row01 clocks column
-					**self.CLOCKS_TEXT_NAME_NEXT_EVENT  # add the main clock
+					**self._TEXT_NAME_NEXT_EVENT_  # add the main clock
 				),
 			],
 			[
@@ -814,7 +810,7 @@ class CLASS_CLOCKS(object):
 			],
 		]
 
-		self.COLUMN02 = [  # the column that puts the two smaller clocks below the main one
+		self._COLUMN02_ = [  # the column that puts the two smaller clocks below the main one
 			[
 				SG.Button(  # add a button element to clocks column
 					**BTN_QUIT20  # add the xpand button to clocks
@@ -840,20 +836,20 @@ class CLASS_CLOCKS(object):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0916_CLASS layout elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-		self.LAYOUT = [  # layout for APPMODE_CLOCKS
+		self._LAYOUT_ = [  # layout for APPMODE_CLOCKS
 			[
 				SG.Column(  # add a column
-					layout=self.CLOCKS_COLUMN01,  # comment
+					layout=self._COLUMN01_,  # comment
 					pad=SZ_PAD_ALL,  # comment
 				),
 				SG.Column(  # add a column
-					layout=self.CLOCKS_COLUMN02,  # comment
+					layout=self._COLUMN02_,  # comment
 					pad=SZ_PAD_ALL,  # comment
 				),
 			],
 		]
 
-		self.WINDOW = {  # define the clocks window
+		self._WINDOW_ = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
 			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
 			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
@@ -861,10 +857,10 @@ class CLASS_CLOCKS(object):
 			FORCE_TOPLEVEL: None,  # 
 			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
-			LAYOUT: self.CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
 			MARGINS: SZ_MARGINS_ALL,  # 
 			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
 			TITLE: TITLE_CLOCKS,  # 
+			_LAYOUT_: self.CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
 		}
 
 	def __enter__(self):
@@ -929,10 +925,10 @@ class CLASS_THECLOCK(object):
 			FORCE_TOPLEVEL: None,  # 
 			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
-			LAYOUT: THECLOCK_LAYOUT,  # add the layout for THECLOCK_WINDOW
 			MARGINS: SZ_MARGINS_ALL,  # 
 			NO_TITLEBAR: True,  # no titlebar on APPMODE_THECLOCK window
 			TITLE: TITLE_THECLOCK,  # 
+			_LAYOUT_: THECLOCK_LAYOUT,  # add the layout for THECLOCK_WINDOW
 		}
 
 	def __enter__(self):
