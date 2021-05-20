@@ -1213,6 +1213,7 @@ class CLASS_CLOCKS(object):
 
 	def __init__(self, keyBase_, formName_):
 		self.THIS_KEY_BASE = keyBase_
+		self.USE_THIS_KEY = lambda KEY_TEXT_: f"""{KEY_TEXT_}{self.THIS_KEY_BASE}"""
 		self.THIS_FORM_NAME = formName_
 
 		self.CLOCKS_DICT = {  # holds the values for the clocks frame
@@ -2430,7 +2431,7 @@ def reallyDoIt():
 def doit():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	with \
-			CLASS_CLOCKS("key", FORMCLOCKS) as , \
+			CLASS_CLOCKS(f"""{CF.serializeIt("runawayClock_DEV")}""", FORMCLOCKS), \
 			CF.withPickles("runawayClock.pkl", MAPPDS):
 		doInit1()
 		while True:
