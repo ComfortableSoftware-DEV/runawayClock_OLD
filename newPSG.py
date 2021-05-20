@@ -642,6 +642,95 @@ CHECKBOX_SNOOZED01 = {  # checkbox for dismissed from mouse behavior
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
+	TEXT: "0000",  # the text to fill in
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: INTERVAL_COUNT,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (4, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+}
+
+
+TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCK_TIME
+	TEXT: "",  # the text to fill in
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: NAME_NEXT_EVENT,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (16, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+}
+
+
+TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: TIME_AT_NEXT,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+}
+
+
+TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: TIME_AT_ZEROELAPSE,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
+}
+
+
+TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: True,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: TIME_CLOCK,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+}
+
+
+TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: TIME_ELAPSED,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
+}
+
+
+TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	KEY: TIME_TOGO,  # comment
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090A radio elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -683,88 +772,6 @@ class CLASS_CLOCKS(object):
 			TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
-		}
-
-		self.TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
-			TEXT: "0000",  # the text to fill in
-			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
-			ENABLE_EVENTS: "False",  # this is clickable
-			FONT: "FONTSZ_CLOCKS_INTERVAL_COUNT",  # font+size line
-			JUSTIFICATION: "JUSTIFICATION_CENTER",  # center everything
-			KEY: f"""{self.USE_THIS_KEY(INTERVAL_COUNT)}""",  # comment
-			PAD: "SZ_PAD_ALL",  # the text color for a clock_time element
-			SIZE: "(4, 1)",  # characters, lines size line
-			TEXT_COLOR: "COLOR_TIME_TOGO",  # the text color for a clock_time element
-		}
-
-		self.TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCK_TIME
-			TEXT: "",  # the text to fill in
-			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
-			ENABLE_EVENTS: "False",  # this is clickable
-			FONT: "FONTSZ_CLOCKS_TIME_TOGO",  # font+size line
-			JUSTIFICATION: "JUSTIFICATION_CENTER",  # center everything
-			KEY: f"""{self.USE_THIS_KEY(NAME_NEXT_EVENT)}""",  # comment
-			PAD: "SZ_PAD_ALL",  # the text color for a clock_time element
-			SIZE: "(16, 1)",  # characters, lines size line
-			TEXT_COLOR: "COLOR_TIME_TOGO",  # the text color for a clock_time element
-		}
-
-		self.TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
-			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
-			ENABLE_EVENTS: "False",  # this is clickable
-			FONT: "FONTSZ_CLOCKS_TIME_TOGO",  # font+size line
-			JUSTIFICATION: "JUSTIFICATION_CENTER",  # center everything
-			KEY: f"""{self.USE_THIS_KEY(TIME_AT_NEXT)}""",  # comment
-			PAD: "SZ_PAD_ALL",  # the text color for a clock_time element
-			SIZE: "(8, 1)",  # characters, lines size line
-			TEXT: "ZERO_CLOCK",  # the text color for a clock_time element
-			TEXT_COLOR: "COLOR_TIME_TOGO",  # the text color for a clock_time element
-		}
-
-		self.TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
-			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
-			ENABLE_EVENTS: "False",  # this is clickable
-			FONT: "FONTSZ_CLOCKS_TIME_ELAPSED",  # font+size line
-			JUSTIFICATION: "JUSTIFICATION_CENTER",  # center everything
-			KEY: f"""{self.USE_THIS_KEY(TIME_AT_ZEROELAPSE)}""",  # comment
-			PAD: "SZ_PAD_ALL",  # the text color for a clock_time element
-			SIZE: "(8, 1)",  # characters, lines size line
-			TEXT: "ZERO_CLOCK",  # the text color for a clock_time element
-			TEXT_COLOR: "COLOR_TIME_ELAPSED",  # the text color for a clock_time element
-		}
-
-		self.TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
-			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
-			ENABLE_EVENTS: "True",  # this is clickable
-			FONT: "FONTSZ_CLOCKS_TIME_CLOCK",  # font+size line
-			JUSTIFICATION: "JUSTIFICATION_CENTER",  # center everything
-			KEY: f"""{self.USE_THIS_KEY(TIME_CLOCK)}""",  # comment
-			PAD: "SZ_PAD_ALL",  # the text color for a clock_time element
-			SIZE: "(8, 1)",  # characters, lines size line
-			TEXT: "ZERO_CLOCK",  # the text color for a clock_time element
-			TEXT_COLOR: "COLOR_TIME_CLOCK",  # the text color for a clock_time element
-		}
-
-		self.TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
-			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
-			FONT: "FONTSZ_CLOCKS_TIME_ELAPSED",  # font+size line
-			JUSTIFICATION: "JUSTIFICATION_CENTER",  # center everything
-			KEY: f"""{self.USE_THIS_KEY(TIME_ELAPSED)}""",  # comment
-			PAD: "SZ_PAD_ALL",  # the text color for a clock_time element
-			SIZE: "(8, 1)",  # characters, lines size line
-			TEXT: "ZERO_CLOCK",  # the text color for a clock_time element
-			TEXT_COLOR: "COLOR_TIME_ELAPSED",  # the text color for a clock_time element
-		}
-
-		self.TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
-			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
-			FONT: "FONTSZ_CLOCKS_TIME_TOGO",  # font+size line
-			JUSTIFICATION: "JUSTIFICATION_CENTER",  # center everything
-			KEY: f"""{self.USE_THIS_KEY(TIME_TOGO)}""",  # comment
-			PAD: "SZ_PAD_ALL",  # the text color for a clock_time element
-			SIZE: "(8, 1)",  # characters, lines size line
-			TEXT: "ZERO_CLOCK",  # the text color for a clock_time element
-			TEXT_COLOR: "COLOR_TIME_TOGO",  # the text color for a clock_time element
 		}
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
