@@ -150,6 +150,7 @@ SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
 SZ_TIMEMS_BETWEEN_MOVES = 500  # comment
 SZ_TIMEMS_BETWEEN_UPDATES = 500  # comment
 SZ_TIMEOUT_MS = 100  # timeout for PSG
+SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_LAST_RUN = "TIME_AT_LAST_RUN"  # timeS of last alarm
 TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
@@ -190,6 +191,7 @@ CURRENT_FORM_NAME = None  # last returned mouse status to deal with hover events
 CURRENT_INTERVAL_COUNT = 0  # comment
 EMPTY_BBOX = (0, 0, 0, 0)  # empty XY dict
 EMPTY_XY = (0, 0)  # empty XY dict
+FONT_DEFAULT = "Source Code Pro"  # default font my favorite readable font
 FONTSZ_ALERT_TEXT = (FONT_DEFAULT, SZ_ALERT_TEXT)  # the font for the clocks only clock
 FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_INTERVAL_COUNT = (FONT_DEFAULT, SZ_INTERVAL_COUNT)  # the font for the clocks only clock
@@ -208,7 +210,6 @@ NOWS = 0  # comment
 NUMBER_ACTIVE_ALARMS = 0  # number of alarms with not dismissed state
 PREV_ALARM_TYPE = EVENTMODE_NONE  # previous alarm type
 PREVIOUS_APPMODE = APPMODE_NONE  # comment
-SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
 TIMEMS_NEXT_MOVED = 0  # comment
 TIMEMS_NEXT_UPDATED = 0  # comment
@@ -404,37 +405,6 @@ TIMES_LIST = [  # list of all keys to times for midnight etc. processing
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0905 tupdict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of UPDATE_COMBO structures
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-UPDATE_COMBOTUP = (
-	(DISABLED, None),  # set disable state for element
-	(FONT, None),  # specifies the font family, size, etc
-	(READONLY, None),  # make element readonly (user can't change). True means user cannot change
-	(SET_TO_INDEX, None),  #
-	(SIZE, None),  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
-	(VALUE, None),  # change which value is current selected based on new list of previous list of choices
-	(VALUES, None),  # values to choose. While displayed as text, the items returned are what the caller supplied, not text
-	(VISIBLE, None),  # set visibility state of the element
-)
-
-def UPDATE_COMBODICT():
-	return dict((x, y) for x, y in UPDATE_COMBOTUP)
-
-
-UPDATE_COMBO_TDD = {
-	DISABLED: None,  # set disable state for element
-	FONT: None,  # specifies the font family, size, etc
-	READONLY: None,  # make element readonly (user can't change). True means user cannot change
-	SET_TO_INDEX: None,  #
-	SIZE: None,  # width, height. Width = characters-wide, height = NOTE it's the number of entries to show in the list
-	VALUE: None,  # change which value is current selected based on new list of previous list of choices
-	VALUES: None,  # values to choose. While displayed as text, the items returned are what the caller supplied, not text
-	VISIBLE: None,  # set visibility state of the element
-}
-
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0913 right click menu options
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -708,7 +678,7 @@ class CLASS_CLOCKS(object):
 		self.USE_THIS_KEY = lambda KEY_TEXT_: f"""{KEY_TEXT_}{self.THIS_KEY_BASE}"""
 		self.THIS_FORM_NAME = formName_
 
-		self.CLOCKS_DICT = {  # holds the values for the clocks frame
+		self.DICT = {  # holds the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
 			INTERVAL_COUNT: 0,  # interval count
 			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -718,7 +688,7 @@ class CLASS_CLOCKS(object):
 			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
 		}
 
-		self.CLOCKS_TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
 			TEXT: "0000",  # the text to fill in
 			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
 			ENABLE_EVENTS: "False",  # this is clickable
@@ -730,7 +700,7 @@ class CLASS_CLOCKS(object):
 			TEXT_COLOR: "COLOR_TIME_TOGO",  # the text color for a clock_time element
 		}
 
-		self.CLOCKS_TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCK_TIME
 			TEXT: "",  # the text to fill in
 			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
 			ENABLE_EVENTS: "False",  # this is clickable
@@ -742,7 +712,7 @@ class CLASS_CLOCKS(object):
 			TEXT_COLOR: "COLOR_TIME_TOGO",  # the text color for a clock_time element
 		}
 
-		self.CLOCKS_TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
 			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
 			ENABLE_EVENTS: "False",  # this is clickable
 			FONT: "FONTSZ_CLOCKS_TIME_TOGO",  # font+size line
@@ -754,7 +724,7 @@ class CLASS_CLOCKS(object):
 			TEXT_COLOR: "COLOR_TIME_TOGO",  # the text color for a clock_time element
 		}
 
-		self.CLOCKS_TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
 			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
 			ENABLE_EVENTS: "False",  # this is clickable
 			FONT: "FONTSZ_CLOCKS_TIME_ELAPSED",  # font+size line
@@ -766,7 +736,7 @@ class CLASS_CLOCKS(object):
 			TEXT_COLOR: "COLOR_TIME_ELAPSED",  # the text color for a clock_time element
 		}
 
-		self.CLOCKS_TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
 			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
 			ENABLE_EVENTS: "True",  # this is clickable
 			FONT: "FONTSZ_CLOCKS_TIME_CLOCK",  # font+size line
@@ -778,7 +748,7 @@ class CLASS_CLOCKS(object):
 			TEXT_COLOR: "COLOR_TIME_CLOCK",  # the text color for a clock_time element
 		}
 
-		self.CLOCKS_TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
 			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
 			FONT: "FONTSZ_CLOCKS_TIME_ELAPSED",  # font+size line
 			JUSTIFICATION: "JUSTIFICATION_CENTER",  # center everything
@@ -789,7 +759,7 @@ class CLASS_CLOCKS(object):
 			TEXT_COLOR: "COLOR_TIME_ELAPSED",  # the text color for a clock_time element
 		}
 
-		self.CLOCKS_TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
+		self.TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 			BACKGROUND_COLOR: "COLOR_CLOCK_BACKGROUND",  # background color for the clock elements
 			FONT: "FONTSZ_CLOCKS_TIME_TOGO",  # font+size line
 			JUSTIFICATION: "JUSTIFICATION_CENTER",  # center everything
@@ -803,7 +773,7 @@ class CLASS_CLOCKS(object):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0916_CLASS column elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-		self.CLOCKS_COLUMN01 = [  # the column that puts the two smaller clocks below the main one
+		self.COLUMN01 = [  # the column that puts the two smaller clocks below the main one
 			[
 				SG.Text(  # add a new TEXT element to clocks column
 					**self.CLOCKS_TEXT_TIME_CLOCK  # add the main clock
@@ -840,7 +810,7 @@ class CLASS_CLOCKS(object):
 			],
 		]
 
-		self.CLOCKS_COLUMN02 = [  # the column that puts the two smaller clocks below the main one
+		self.COLUMN02 = [  # the column that puts the two smaller clocks below the main one
 			[
 				SG.Button(  # add a button element to clocks column
 					**BTN_QUIT20  # add the xpand button to clocks
@@ -866,7 +836,7 @@ class CLASS_CLOCKS(object):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0916_CLASS layout elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-		self.CLOCKS_LAYOUT = [  # layout for APPMODE_CLOCKS
+		self.LAYOUT = [  # layout for APPMODE_CLOCKS
 			[
 				SG.Column(  # add a column
 					layout=self.CLOCKS_COLUMN01,  # comment
@@ -879,7 +849,7 @@ class CLASS_CLOCKS(object):
 			],
 		]
 
-		self.CLOCKS_WINDOW = {  # define the clocks window
+		self.WINDOW = {  # define the clocks window
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
 			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
 			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
@@ -898,7 +868,7 @@ class CLASS_CLOCKS(object):
 			ALL_THE_FORMS, \
 			MAPPDS
 		#
-		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.CLOCKS_WINDOW).finalize()
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.WINDOW).finalize()
 
 	def __exit__(self, *args_):
 		global \
@@ -966,7 +936,7 @@ class CLASS_THECLOCK(object):
 			ALL_THE_FORMS, \
 			MAPPDS
 		#
-		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.THECLOCK_WINDOW).finalize()
+		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.WINDOW).finalize()
 
 	def __exit__(self, *args_):
 		global \

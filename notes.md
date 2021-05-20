@@ -3,12 +3,6 @@
 
 [ ] | item
 ----|-------------------------------------------------------------------------------------------------------
-[ ] | alarm in time count 
-[ ] | clocks mode can be separated
-[ ] | edit mode
-[ ] | lowercase all parm keys to match PySimpleGui conventions
-[ ] | main all seeing mode
-[]  |  
 []  | actually make the bool flags work
 []  | add a counter of intervals, and a reset when counter clicked
 []  | alarms working
@@ -23,9 +17,14 @@
 []  | make the clocks mode able to invisible all except when over
 []  | mv PSG.py PSG_TIME.py to make sure these special modifications to PSG earn their keep
 []  | snoozing times and settings
-[]  | time until dismissed
+[]  | time until dismissed timer
+[]  | alarm in time count
+[]  | clocks mode can be separated
+[]  | edit mode, use combo for selecting which EVENT_ENTRIES entry to use
+[]  | lowercase all parm keys to match PySimpleGui conventions
 [X] | (abandoned) convert all passed about things to a dict (ended up going back to tuples for all of these)
 [X] | (abandoned) convert all tupdict here to tupdict_dict -=> the infamous TDD
+[X] | (abandoned) main all seeing mode
 [X] | (alarm+reminder working)
 [X] | add TIME_AT_ZERO to CLOCKS_MAINFRAME
 [X] | all the tupdict and tupdictdict ready
@@ -47,6 +46,7 @@
 [X] | start and stop times for intervals
 [X] | switch all times to int seconds MTSS and MTSMS from strings
 [X] | switching to all classes for the FRAMEs
+    |
 
 
 
