@@ -767,7 +767,8 @@ class CLASS_CLOCKS(object):
 			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
 		}
 
-		self._TEXT_INTERVAL_COUNT_ = {  # 
+		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count
+			KEY: f"""{self.USE_THIS_KEY(INTERVAL_COUNT)}""",  # interval count template
 		}
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
