@@ -5671,12 +5671,12 @@ def parseTBGLST(FDTBGLST):
 				if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_]:
 					FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] = ""
 
-				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{thisKey_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{thisKey_}{CPAREN}{NEWLINE}"""
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{thisVal_}{CPAREN}{NEWLINE}"""
 
 			else:
-				thisValStr_ = f"""{DBLQT}{thisVal_}{DBLQT}"""
+				thisValStr_ = f"""{thisVal_}"""
 
-			FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {thisValStr_},  # {thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_TEXT_DICT[thisClassName_][thisElementName_] += f"""{NTAB(3)}{thisKey_}: {DBLQT}{thisValStr_}{DBLQT},  # {thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
