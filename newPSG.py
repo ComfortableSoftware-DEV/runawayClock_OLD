@@ -39,7 +39,14 @@ BTN_UP = "BTN_UP"  # key for all of the button xpand
 BTN_XPAND = "BTN_XPAND"  # key for all of the button xpand
 BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
 CHECKBOX_ALPHA_LOW = "CHECKBOX_ALPHA_LOW"  # is the clock transparent under mouse (ineffective if mouse is avoided)
+CHECKBOX_DISMISSED = "CHECKBOX_DISMISSED"  # key for avoiding the mouse bool
+CHECKBOX_ENABLED = "CHECKBOX_ENABLED"  # key for avoiding the mouse bool
+CHECKBOX_FIRSTRUN = "CHECKBOX_FIRSTRUN"  # key for avoiding the mouse bool
+CHECKBOX_IS_ALERTING_NOW = "CHECKBOX_IS_ALERTING_NOW"  # key for avoiding the mouse bool
+CHECKBOX_PREDISMISSABLE = "CHECKBOX_PREDISMISSABLE"  # key for avoiding the mouse bool
 CHECKBOX_RUNAWAY = "CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
+CHECKBOX_SNOOZABLE = "CHECKBOX_SNOOZABLE"  # key for avoiding the mouse bool
+CHECKBOX_SNOOZED = "CHECKBOX_SNOOZED"  # key for avoiding the mouse bool
 CLOSE_BBOX = "CLOSE_BBOX"  # CLOSE BOUNDING BOX
 COLOR_ALERT_BACKGROUND = "#662244"  # alert background color
 COLOR_ALERT_TEXT = "#CC4466"  # color of text on alert popup
@@ -76,11 +83,11 @@ FORMCLOCKS = "FORMCLOCKS"  # holds all of form entries
 FORMEDITENTRY = "FORMEDITENTRY"  # holds all of form entries
 FORMEDITOR = "FORMEDITOR"  # holds all of form entries
 FORMMAIN = "FORMMAIN"  # holds all of form entries
-FORMPOPUP00 = "FORMPOPUP00"  # holds all of form entries
 FORMPOPUP01 = "FORMPOPUP01"  # holds all of form entries
 FORMPOPUP02 = "FORMPOPUP02"  # holds all of form entries
 FORMPOPUP03 = "FORMPOPUP03"  # holds all of form entries
 FORMPOPUP04 = "FORMPOPUP04"  # holds all of form entries
+FORMPOPUP05 = "FORMPOPUP05"  # holds all of form entries
 FORMTHECLOCK = "FORMTHECLOCK"  # holds all of form entries
 INDEX_EAST = 2  # EAST
 INDEX_NORTH = 1  # NORTH
@@ -332,11 +339,11 @@ ALL_THE_FORMS = {  # comment
 	FORMEDITENTRY: None,  # ENTRY IN FORMS
 	FORMEDITOR: None,  # ENTRY IN FORMS
 	FORMMAIN: None,  # ENTRY IN FORMS
-	FORMPOPUP00: None,  # ENTRY IN FORMS
 	FORMPOPUP01: None,  # ENTRY IN FORMS
 	FORMPOPUP02: None,  # ENTRY IN FORMS
 	FORMPOPUP03: None,  # ENTRY IN FORMS
 	FORMPOPUP04: None,  # ENTRY IN FORMS
+	FORMPOPUP05: None,  # ENTRY IN FORMS
 	FORMTHECLOCK: None,  # ENTRY IN FORMS
 }
 
