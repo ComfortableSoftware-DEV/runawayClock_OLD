@@ -1119,8 +1119,8 @@ def splitXYToRaw(XYToSplit_):
 def getMousePos():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	mseData_ = MLCN()._data
-	MAPPDS[MOUSE_LCN] = locationToRtn_ = (mseData_["root_x"], mseData_["root_y"])
+	_mseData_ = MLCN()._data
+	MAPPDS[MOUSE_LCN] = locationToRtn_ = (_mseData_["root_x"], _mseData_["root_y"])
 	return locationToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1172,17 +1172,17 @@ def localTimes(hrs_=None, mins_=None):
 	if mins_ is None:
 		mins_ = TIMEM_ADJUST_MINS
 
-	adjSecs_ = CF.MTSS() - TIMES_ADJUST_VALUE(hrs_, mins_)
-	if adjSecs_ < 0:
-		adjSecs_ += CF.DAYSECS
+	_adjSecs_ = CF.MTSS() - TIMES_ADJUST_VALUE(hrs_, mins_)
+	if _adjSecs_ < 0:
+		_adjSecs_ += CF.DAYSECS
 
-	adjSecs_ = adjSecs_ % CF.DAYSECS
-	NOWS = adjSecs_
+	_adjSecs_ = _adjSecs_ % CF.DAYSECS
+	NOWS = _adjSecs_
 	NOW_NOMS = int(NOWS)
-	NOWM = CF.loseTheSecs(adjSecs_)
+	NOWM = CF.loseTheSecs(_adjSecs_)
 	NOWMS = int(NOWS * 1000)
 #	print(f"""{CF.getDebugInfo()}
-#	{CF.frameItHMS("adjSecs_", adjSecs_)}
+#	{CF.frameItHMS("_adjSecs_", _adjSecs_)}
 #	{CF.frameItHMS("TIMES_ADJUST_VALUE(hrs_, mins_)", TIMES_ADJUST_VALUE(hrs_, mins_))}""")
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1216,16 +1216,16 @@ def compareBBox(BBox1_, BBox2_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def getBBox(locnToBBox_, sizeToBBox_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_ = locnToBBox_[INDEX_X]
-	TLcnY_ = locnToBBox_[INDEX_Y]
-	TSizeX_ = sizeToBBox_[INDEX_X]
-	TSizeY_ = sizeToBBox_[INDEX_Y]
+	_TLcnX_ = locnToBBox_[INDEX_X]
+	_TLcnY_ = locnToBBox_[INDEX_Y]
+	_TSizeX_ = sizeToBBox_[INDEX_X]
+	_TSizeY_ = sizeToBBox_[INDEX_Y]
 
 	return (
-		TLcnX_,
-		TLcnY_,
-		(TLcnX_ + TSizeX_),
-		(TLcnY_ + TSizeY_),
+		_TLcnX_,
+		_TLcnY_,
+		(_TLcnX_ + _TSizeX_),
+		(_TLcnY_ + _TSizeY_),
 	)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1235,15 +1235,15 @@ def getBBox(locnToBBox_, sizeToBBox_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def getCloseBBox(location_, size_, closeEnough_=SZ_CLOSE):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_ = location_[INDEX_X]
-	TLcnY_ = location_[INDEX_Y]
-	TSizeX_ = size_[INDEX_X]
-	TSizeY_ = size_[INDEX_Y]
+	_TLcnX_ = location_[INDEX_X]
+	_TLcnY_ = location_[INDEX_Y]
+	_TSizeX_ = size_[INDEX_X]
+	_TSizeY_ = size_[INDEX_Y]
 	return (
-		(TLcnX_ - closeEnough_),
-		(TLcnY_ - closeEnough_),
-		(TLcnX_ + TSizeX_ + closeEnough_),
-		(TLcnY_ + TSizeY_ + closeEnough_)
+		(_TLcnX_ - closeEnough_),
+		(_TLcnY_ - closeEnough_),
+		(_TLcnX_ + _TSizeX_ + closeEnough_),
+		(_TLcnY_ + _TSizeY_ + closeEnough_)
 	)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1255,19 +1255,19 @@ def updateFrameFromDict(frameToUpdate_, dictToUpdateFrom_):
 	global \
 		ALL_THE_FORMS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	for key_, val_ in dictToUpdateFrom_.items():
+	for _key_, _val_ in dictToUpdateFrom_.items():
 
-		if (key_ in TIMES_LIST):
-			if (val_ >= CF.DAYSECS):
-				val_ -= CF.DAYSECS
+		if (_key_ in TIMES_LIST):
+			if (_val_ >= CF.DAYSECS):
+				_val_ -= CF.DAYSECS
 
-			if (val_ < 0):
-				val_ = abs(val_)
+			if (_val_ < 0):
+				_val_ = abs(_val_)
 
-			ALL_THE_FORMS[frameToUpdate_].Element(key_).Update(value=CF.nrmlIntToHMS(val_))
+			ALL_THE_FORMS[frameToUpdate_].Element(_key_).Update(value=CF.nrmlIntToHMS(_val_))
 
 		else:
-			ALL_THE_FORMS[frameToUpdate_].Element(key_).Update(value=val_)
+			ALL_THE_FORMS[frameToUpdate_].Element(_key_).Update(value=_val_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1278,8 +1278,8 @@ def readWithDict(formToRead_, dictToReadWith_):
 	global \
 		ALL_THE_FORMS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	for key_ in dictToReadWith_:
-		dictToReadWith_[key_] = ALL_THE_FORMS[formToRead_][key_]
+	for _key_ in dictToReadWith_:
+		dictToReadWith_[_key_] = ALL_THE_FORMS[formToRead_][_key_]
 	return dictToReadWith_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1342,16 +1342,16 @@ def moveFrame(moveTo_=(0, 0)):  # remember - is N/W and + is S/E
 	global \
 			FORMMAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TLcnX_, TLcnY_ = getElementLocation(FORMMAIN)
-	TSizeX_, TSizeY_ = getElementSize(FORMMAIN)
-	if TLcnX_ < 0:
-		TLcnX_ = 0
-	elif TLcnX_ > (MAPPDS[SCREEN_DIMS][INDEX_X] - TSizeX_):
-		TLcnX_ = (MAPPDS[SCREEN_DIMS][INDEX_X] - TSizeX_)
-	if TLcnY_ < 0:
-		TLcnY_ = 0
-	elif TLcnY_ > (MAPPDS[SCREEN_DIMS][INDEX_Y] - TSizeY_):
-		TLcnY_ = (MAPPDS[SCREEN_DIMS][INDEX_Y] - TSizeY_)
+	_TLcnX_, _TLcnY_ = getElementLocation(FORMMAIN)
+	_TSizeX_, _TSizeY_ = getElementSize(FORMMAIN)
+	if _TLcnX_ < 0:
+		_TLcnX_ = 0
+	elif _TLcnX_ > (MAPPDS[SCREEN_DIMS][INDEX_X] - _TSizeX_):
+		_TLcnX_ = (MAPPDS[SCREEN_DIMS][INDEX_X] - _TSizeX_)
+	if _TLcnY_ < 0:
+		_TLcnY_ = 0
+	elif _TLcnY_ > (MAPPDS[SCREEN_DIMS][INDEX_Y] - _TSizeY_):
+		_TLcnY_ = (MAPPDS[SCREEN_DIMS][INDEX_Y] - _TSizeY_)
 	FORMMAIN.Move(moveTo_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1370,30 +1370,30 @@ def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
 		return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
 	TIMEMS_NEXT_MOVED = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
-	screenSZX_, screenSZY_ = splitXYToRaw(MAPPDS[SCREEN_DIMS])
-	TSizeX_, TSizeY_ = splitXYToRaw(MAPPDS[FORM_CURRENT_SIZE])
-	TLcnX_, TLcnY_ = splitXYToRaw(MAPPDS[FORM_CURRENT_LCN])
-	moveToX_ = TLcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
-	moveToY_ = TLcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
+	_screenSZX_, _screenSZY_ = splitXYToRaw(MAPPDS[SCREEN_DIMS])
+	_TSizeX_, _TSizeY_ = splitXYToRaw(MAPPDS[FORM_CURRENT_SIZE])
+	_TLcnX_, _TLcnY_ = splitXYToRaw(MAPPDS[FORM_CURRENT_LCN])
+	_moveToX_ = _TLcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
+	_moveToY_ = _TLcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
 
-	if moveToX_ < 0:
-		moveToX_ = 0
-	elif moveToX_ > (screenSZX_ - TSizeX_):
-		moveToX_ = (screenSZX_ - TSizeX_)
+	if _moveToX_ < 0:
+		_moveToX_ = 0
+	elif _moveToX_ > (_screenSZX_ - _TSizeX_):
+		_moveToX_ = (_screenSZX_ - _TSizeX_)
 
-	if moveToY_ < 0:
-		moveToY_ = 0
-	elif moveToY_ > (screenSZY_ - TSizeY_):
-		moveToY_ = (screenSZY_ - TSizeY_)
+	if _moveToY_ < 0:
+		_moveToY_ = 0
+	elif _moveToY_ > (_screenSZY_ - _TSizeY_):
+		_moveToY_ = (_screenSZY_ - _TSizeY_)
 
-	# print(f"""likely moving abs(moveToX_ - TLcnX_) {abs(moveToX_ - TLcnX_)} abs(moveToY_ - TLcnY_) {abs(moveToY_ - TLcnY_)} SZ_MAX_DELTA {SZ_MAX_DELTA}""")
+	# print(f"""likely moving abs(_moveToX_ - _TLcnX_) {abs(_moveToX_ - _TLcnX_)} abs(_moveToY_ - _TLcnY_) {abs(_moveToY_ - _TLcnY_)} SZ_MAX_DELTA {SZ_MAX_DELTA}""")
 		# avoid trouble with spurious moves caused by a process delaying anything here too far
-	if (abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA) or (abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA):
-		# print(f"""(abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA) (abs({moveToX_} - {TLcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(moveToX_ - TLcnX_) > SZ_MAX_DELTA)}""")
-		# print(f"""(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA) (abs({moveToY_} - {TLcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(moveToY_ - TLcnY_) > SZ_MAX_DELTA)}""")
+	if (abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA):
+		# print(f"""(abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA) (abs({_moveToX_} - {_TLcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA)}""")
+		# print(f"""(abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA) (abs({_moveToY_} - {_TLcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA)}""")
 		return
 
-	FORMMAIN.Move(moveToX_, moveToY_)
+	FORMMAIN.Move(_moveToX_, _moveToY_)
 	TIMEMS_NEXT_MOVED = NOWMS
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -1404,8 +1404,8 @@ def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def getScreenDims():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	TDim_ = FORMMAIN.GetScreenDimensions()
-	return TDim_
+	_TDim_ = FORMMAIN.GetScreenDimensions()
+	return _TDim_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1439,88 +1439,88 @@ def checkMouseLcn(oldFrameLocation_):
 
 	TIMEMS_NEXT_MOUSE_CHECK = NOWMS + SZ_TIMEMS_BETWEEN_MOUSE_CHECKS
 
-	statusToRtn_ = None
-	TLcn_ = getElementLocation()
-	TMouseLcnX_, TMouseLcnY_ = TMouseLcn_ = getMousePos()
-	TBBoxWest_, TBBoxNorth_, TBBoxEast_, TBBoxSouth_ = TBBox_ = getBBox(TLcn_, MAPPDS[FORM_CURRENT_SIZE])
-	TCloseBBox_ = getCloseBBox(TLcn_, MAPPDS[FORM_CURRENT_SIZE])
-	TSize_ = MAPPDS[FORM_CURRENT_SIZE]
-	isInCloseBBox_ = isInBBox(TCloseBBox_, TMouseLcn_)
+	_statusToRtn_ = None
+	_TLcn_ = getElementLocation()
+	_TMouseLcnX_, _TMouseLcnY_ = _TMouseLcn_ = getMousePos()
+	_TBBoxWest_, _TBBoxNorth_, _TBBoxEast_, _TBBoxSouth_ = _TBBox_ = getBBox(_TLcn_, MAPPDS[FORM_CURRENT_SIZE])
+	_TCloseBBox_ = getCloseBBox(_TLcn_, MAPPDS[FORM_CURRENT_SIZE])
+	_TSize_ = MAPPDS[FORM_CURRENT_SIZE]
+	_isInCloseBBox_ = isInBBox(_TCloseBBox_, _TMouseLcn_)
 
-	if compareXY(TLcn_, oldFrameLocation_) is False:
-		updateMappds(TLcn_)
+	if compareXY(_TLcn_, oldFrameLocation_) is False:
+		updateMappds(_TLcn_)
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	if (TBBoxWest_ < TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ < TBBoxNorth_):
-		if isInCloseBBox_ is True:
-			statusToRtn_ = MOUSE_STATUS_CLOSE_N
+	if (_TBBoxWest_ < _TMouseLcnX_ < _TBBoxEast_) and (_TMouseLcnY_ < _TBBoxNorth_):
+		if _isInCloseBBox_ is True:
+			_statusToRtn_ = MOUSE_STATUS_CLOSE_N
 		else:
-			statusToRtn_ = MOUSE_STATUS_N
+			_statusToRtn_ = MOUSE_STATUS_N
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	if ( TBBoxWest_ < TMouseLcnX_ < TBBoxEast_) and (TMouseLcnY_ > TBBoxSouth_):
-		if isInCloseBBox_ is True:
-			statusToRtn_ = MOUSE_STATUS_CLOSE_S
+	if ( _TBBoxWest_ < _TMouseLcnX_ < _TBBoxEast_) and (_TMouseLcnY_ > _TBBoxSouth_):
+		if _isInCloseBBox_ is True:
+			_statusToRtn_ = MOUSE_STATUS_CLOSE_S
 		else:
-			statusToRtn_ = MOUSE_STATUS_S
+			_statusToRtn_ = MOUSE_STATUS_S
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	if (TMouseLcnX_ < TBBoxWest_) and (TBBoxNorth_< TMouseLcnY_ < TBBoxSouth_):
-		if isInCloseBBox_ is True:
-			statusToRtn_ = MOUSE_STATUS_CLOSE_W
+	if (_TMouseLcnX_ < _TBBoxWest_) and (_TBBoxNorth_< _TMouseLcnY_ < _TBBoxSouth_):
+		if _isInCloseBBox_ is True:
+			_statusToRtn_ = MOUSE_STATUS_CLOSE_W
 		else:
-			statusToRtn_ = MOUSE_STATUS_W
+			_statusToRtn_ = MOUSE_STATUS_W
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	if (TMouseLcnX_ > TBBoxEast_) and (TBBoxNorth_< TMouseLcnY_ < TBBoxSouth_):
-		if isInCloseBBox_ is True:
-			statusToRtn_ = MOUSE_STATUS_CLOSE_E
+	if (_TMouseLcnX_ > _TBBoxEast_) and (_TBBoxNorth_< _TMouseLcnY_ < _TBBoxSouth_):
+		if _isInCloseBBox_ is True:
+			_statusToRtn_ = MOUSE_STATUS_CLOSE_E
 		else:
-			statusToRtn_ = MOUSE_STATUS_E
+			_statusToRtn_ = MOUSE_STATUS_E
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	if (TMouseLcnY_ > TBBoxSouth_) and (TMouseLcnX_ < TBBoxWest_):
-		if isInCloseBBox_ is True:
-			statusToRtn_ = MOUSE_STATUS_CLOSE_SW
+	if (_TMouseLcnY_ > _TBBoxSouth_) and (_TMouseLcnX_ < _TBBoxWest_):
+		if _isInCloseBBox_ is True:
+			_statusToRtn_ = MOUSE_STATUS_CLOSE_SW
 		else:
-			statusToRtn_ = MOUSE_STATUS_SW
+			_statusToRtn_ = MOUSE_STATUS_SW
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	if (TMouseLcnY_ > TBBoxSouth_) and (TMouseLcnX_ > TBBoxEast_):
-		if isInCloseBBox_ is True:
-			statusToRtn_ = MOUSE_STATUS_CLOSE_SE
+	if (_TMouseLcnY_ > _TBBoxSouth_) and (_TMouseLcnX_ > _TBBoxEast_):
+		if _isInCloseBBox_ is True:
+			_statusToRtn_ = MOUSE_STATUS_CLOSE_SE
 		else:
-			statusToRtn_ = MOUSE_STATUS_SE
+			_statusToRtn_ = MOUSE_STATUS_SE
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	if (TMouseLcnY_ < TBBoxNorth_) and (TMouseLcnX_ < TBBoxWest_):
-		if isInCloseBBox_ is True:
-			statusToRtn_ = MOUSE_STATUS_CLOSE_NW
+	if (_TMouseLcnY_ < _TBBoxNorth_) and (_TMouseLcnX_ < _TBBoxWest_):
+		if _isInCloseBBox_ is True:
+			_statusToRtn_ = MOUSE_STATUS_CLOSE_NW
 		else:
-			statusToRtn_ = MOUSE_STATUS_NW
+			_statusToRtn_ = MOUSE_STATUS_NW
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	if (TMouseLcnY_ < TBBoxNorth_) and (TMouseLcnX_ > TBBoxEast_):
-		if isInCloseBBox_ is True:
-			statusToRtn_ = MOUSE_STATUS_CLOSE_NE
+	if (_TMouseLcnY_ < _TBBoxNorth_) and (_TMouseLcnX_ > _TBBoxEast_):
+		if _isInCloseBBox_ is True:
+			_statusToRtn_ = MOUSE_STATUS_CLOSE_NE
 		else:
-			statusToRtn_ = MOUSE_STATUS_NE
+			_statusToRtn_ = MOUSE_STATUS_NE
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	if isInBBox(TBBox_, TMouseLcn_) is True:
-		statusToRtn_ = MOUSE_STATUS_OVER
+	if isInBBox(_TBBox_, _TMouseLcn_) is True:
+		_statusToRtn_ = MOUSE_STATUS_OVER
 
-	if (statusToRtn_ == MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS != MOUSE_STATUS_OVER) and (MAPPDS[CHECKBOX_ALPHA_LOW] is True):
+	if (_statusToRtn_ == MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS != MOUSE_STATUS_OVER) and (MAPPDS[CHECKBOX_ALPHA_LOW] is True):
 		FORMMAIN.AlphaChannel = MAPPDS[ALPHA_LOW]
 		alphaMode = True
 
-	elif ((statusToRtn_ != MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS == MOUSE_STATUS_OVER)) or ((LAST_MOUSE_STATUS == MOUSE_STATUS_OVER) and (ALPHA_MODE is True) and (MAPPDS[CHECKBOX_ALPHA_LOW] is False)):
+	elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS == MOUSE_STATUS_OVER)) or ((LAST_MOUSE_STATUS == MOUSE_STATUS_OVER) and (ALPHA_MODE is True) and (MAPPDS[CHECKBOX_ALPHA_LOW] is False)):
 		FORMMAIN.AlphaChannel = MAPPDS[ALPHA_HIGH]
 		alphaMode = False
 
-	LAST_MOUSE_STATUS = statusToRtn_
-	# print(f"""returning {statusToRtn_}""")
-	return statusToRtn_
+	LAST_MOUSE_STATUS = _statusToRtn_
+	# print(f"""returning {_statusToRtn_}""")
+	return _statusToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1554,13 +1554,13 @@ def updateClocks():
 			CLOCKS_DICT[TIME_TOGO] += CF.DAYSECS
 
 		THECLOCK_DICT[TIME_CLOCK] = NOWS
-		mappdsMode_ = MAPPDS[APPMODE]
-		# print(f"""mappdsMode_ {mappdsMode_}""")
+		_mappdsMode_ = MAPPDS[APPMODE]
+		# print(f"""_mappdsMode_ {_mappdsMode_}""")
 
-		if mappdsMode_ == APPMODE_THECLOCK:
+		if _mappdsMode_ == APPMODE_THECLOCK:
 			updateFrameFromDict(THECLOCK_DICT)
 
-		elif mappdsMode_ == APPMODE_CLOCKS:
+		elif _mappdsMode_ == APPMODE_CLOCKS:
 			updateFrameFromDict(CLOCKS_DICT)
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -1571,8 +1571,8 @@ def updateClocks():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doReadAMainframe(timeout_=SZ_TIMEOUT_MS):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	eventVals_ = SG.read_all_windows(timeout=timeout_)
-	return eventVals_
+	_eventVals_ = SG.read_all_windows(timeout=timeout_)
+	return _eventVals_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1625,28 +1625,28 @@ def updateInterval(eventIndexToDo_):
 			MAPPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	eventToDo_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
-	TInterval_ = eventToDo_[TIME_INTERVAL]
-	TTimeAtBegin_ = eventToDo_[TIME_INTERVAL__BEGIN]
-	TTimeSinceBegin_ = NOWS - TTimeAtBegin_
-	TTimeAtLastRun_ = eventToDo_[TIME_AT_LAST_RUN]
-	TTimeAtStart_ = int(TTimeSinceBegin_ // TInterval_) * TInterval_
-	TTimeAtNext_ = fixTimeAtNext(TTimeAtStart_ + TInterval_)
+	_eventToDo_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
+	_TInterval_ = _eventToDo_[TIME_INTERVAL]
+	_TTimeAtBegin_ = _eventToDo_[TIME_INTERVAL__BEGIN]
+	_TTimeSinceBegin_ = NOWS - _TTimeAtBegin_
+	_TTimeAtLastRun_ = _eventToDo_[TIME_AT_LAST_RUN]
+	_TTimeAtStart_ = int(_TTimeSinceBegin_ // _TInterval_) * _TInterval_
+	_TTimeAtNext_ = fixTimeAtNext(_TTimeAtStart_ + _TInterval_)
 
-	if (eventIndexToDo_ in INTERVALLING_LIST) and (NOWS == fixTimeAtNext(eventToDo_[TIME_INTERVAL__END])):
+	if (eventIndexToDo_ in INTERVALLING_LIST) and (NOWS == fixTimeAtNext(_eventToDo_[TIME_INTERVAL__END])):
 		INTERVALLING_LIST.remove(eventIndexToDo_)
 
-	if (eventIndexToDo_ not in INTERVALLING_LIST) and (NOWS == (eventToDo_[TIME_INTERVAL__BEGIN])):
+	if (eventIndexToDo_ not in INTERVALLING_LIST) and (NOWS == (_eventToDo_[TIME_INTERVAL__BEGIN])):
 		INTERVALLING_LIST.append(eventIndexToDo_)
 
-	if eventToDo_[FIRSTRUN] is True:
-#		TTimeAtStart_ = int(TTimeSinceBegin_ // TInterval_) * TInterval_
-#		TTimeAtNext_ = fixTimeAtNext(TTimeAtStart_ + TInterval_)
+	if _eventToDo_[FIRSTRUN] is True:
+#		_TTimeAtStart_ = int(_TTimeSinceBegin_ // _TInterval_) * _TInterval_
+#		_TTimeAtNext_ = fixTimeAtNext(_TTimeAtStart_ + _TInterval_)
 		MAPPDS[EVENT_ENTRIES][eventIndexToDo_][FIRSTRUN] = False
-		MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_LAST_RUN] = TTimeAtLastRun_ = TTimeAtStart_
+		MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_LAST_RUN] = _TTimeAtLastRun_ = _TTimeAtStart_
 
-	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_INTERVAL_START] = TTimeAtStart_
-	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_NEXT] = TTimeAtNext_
+	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_INTERVAL_START] = _TTimeAtStart_
+	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_NEXT] = _TTimeAtNext_
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1661,42 +1661,42 @@ def findNextAlarmEvent():
 			NAME_NEXT_EVENT_STR, \
 			TIMES_NEXT_EVENT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	nextEventList_ = []  # (time, index, mode, name)
+	_nextEventList_ = []  # (time, index, mode, name)
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
+	for _index_, _event_ in MAPPDS[EVENT_ENTRIES].items():
 
-		if event_ is not None:
-			TEventMode_ = event_[EVENTMODE]
+		if _event_ is not None:
+			_TEventMode_ = _event_[EVENTMODE]
 
-			if (TEventMode_ == EVENTMODE_INTERVAL):
-				updateInterval(index_)
-				event_ = MAPPDS[EVENT_ENTRIES][index_]
+			if (_TEventMode_ == EVENTMODE_INTERVAL):
+				updateInterval(_index_)
+				_event_ = MAPPDS[EVENT_ENTRIES][_index_]
 
-			elif (TEventMode_ == EVENTMODE_ALARM):
-				event_[TIME_AT_NEXT] = event_[TIME_ALARM]
+			elif (_TEventMode_ == EVENTMODE_ALARM):
+				_event_[TIME_AT_NEXT] = _event_[TIME_ALARM]
 
-			if (event_[DISMISSED] is False) and (event_[ENABLED] is True) and (event_[TIME_INTERVAL__BEGIN] <= NOWS < fixTimeAtNext(event_[TIME_INTERVAL__END])):
-				nextEventList_.append((fixTimeAtNext(event_[TIME_AT_NEXT]), index_, event_[EVENTMODE], event_[NAME]))
+			if (_event_[DISMISSED] is False) and (_event_[ENABLED] is True) and (_event_[TIME_INTERVAL__BEGIN] <= NOWS < fixTimeAtNext(_event_[TIME_INTERVAL__END])):
+				_nextEventList_.append((fixTimeAtNext(_event_[TIME_AT_NEXT]), _index_, _event_[EVENTMODE], _event_[NAME]))
 
-	nextEventList_.sort()
-#	print(f"""{CF.frameIt("nextEventList_", nextEventList_)}
+	_nextEventList_.sort()
+#	print(f"""{CF.frameIt("_nextEventList_", _nextEventList_)}
 #{CF.frameIt("CLOCKS_DICT", CLOCKS_DICT)}""")
-	if nextEventList_ != []:
-		CLOCKS_DICT[TIME_AT_NEXT] = nextEventList_[0][0]# (time, index, mode, name)
+	if _nextEventList_ != []:
+		CLOCKS_DICT[TIME_AT_NEXT] = _nextEventList_[0][0]# (time, index, mode, name)
 		TIMES_NEXT_EVENT = CLOCKS_DICT[TIME_AT_NEXT]
-		NAME_NEXT_EVENT_STR = nextEventList_[0][3]# (time, index, mode, name)
+		NAME_NEXT_EVENT_STR = _nextEventList_[0][3]# (time, index, mode, name)
 		CLOCKS_TEXT_DICT[NAME_NEXT_EVENT] = NAME_NEXT_EVENT_STR
-		CURRENT_EVENTMODE = nextEventList_[0][2]# (time, index, mode, name)
+		CURRENT_EVENTMODE = _nextEventList_[0][2]# (time, index, mode, name)
 
 		if (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
-			CURRENT_INTERVAL_COUNT = MAPPDS[EVENT_ENTRIES][nextEventList_[0][1]]
+			CURRENT_INTERVAL_COUNT = MAPPDS[EVENT_ENTRIES][_nextEventList_[0][1]]
 			updateIntervalCount()
 
 		updateFrameFromDict(CLOCKS_TEXT_DICT)
 #	print(f"""{CF.getDebugInfo()}
 #	{CF.frameItHMS("NOWS updated next event", NOWS)}
 #	{CF.frameIt("EVENT_ENTRIES", MAPPDS[EVENT_ENTRIES])}
-#	{CF.frameIt("nextEventList_", nextEventList_)}
+#	{CF.frameIt("_nextEventList_", _nextEventList_)}
 #	""")
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -1748,23 +1748,23 @@ def doMidnightWork():
 #{CF.frameItHMS("TIMES_NEXT_EVENT", TIMES_NEXT_EVENT)} = TIMES_NEXT_EVENT % CF.DAYMS
 #{CF.frameItHMS("TIMES_NEXT_PERIODIC_JOB", TIMES_NEXT_PERIODIC_JOB)} = TIMES_NEXT_PERIODIC_JOB % CF.DAYMS
 #""")
-	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
-#		print(f"""{CF.getDebugInfo()}{CF.NEWLINE} {CF.frameIt("event_", event_)}
+	for _index_, _event_ in MAPPDS[EVENT_ENTRIES].items():
+#		print(f"""{CF.getDebugInfo()}{CF.NEWLINE} {CF.frameIt("_event_", _event_)}
 #		{CF.frameIt("MAPPDS[EVENT_ENTRIES]", MAPPDS[EVENT_ENTRIES])}""")
 
-		if (event_ is not None):  # and (event_[EVENTMODE] in [EVENTMODE_ALARM]):
-#			MAPPDS[EVENT_ENTRIES][index_][TIME_AT_LAST_RUN] = None
-			MAPPDS[EVENT_ENTRIES][index_][DISMISSED] = False
-			MAPPDS[EVENT_ENTRIES][index_][IS_ALERTING_NOW] = False
+		if (_event_ is not None):  # and (_event_[EVENTMODE] in [EVENTMODE_ALARM]):
+#			MAPPDS[EVENT_ENTRIES][_index_][TIME_AT_LAST_RUN] = None
+			MAPPDS[EVENT_ENTRIES][_index_][DISMISSED] = False
+			MAPPDS[EVENT_ENTRIES][_index_][IS_ALERTING_NOW] = False
 
-			for index1_ in MAPPDS_TIMES_LIST:
+			for _index1_ in MAPPDS_TIMES_LIST:
 #				print(f"""{CF.getDebugInfo()}
-#				{CF.frameIt("index1_", index1_)}
-#				{CF.frameIt("MAPPDS[EVENT_ENTRIES][index_]", MAPPDS[EVENT_ENTRIES][index_])}
+#				{CF.frameIt("_index1_", _index1_)}
+#				{CF.frameIt("MAPPDS[EVENT_ENTRIES][_index_]", MAPPDS[EVENT_ENTRIES][_index_])}
 #				""")
 
-				if MAPPDS[EVENT_ENTRIES][index_][index1_] >= CF.DAYSECS:
-					MAPPDS[EVENT_ENTRIES][index_][index1_] -= CF.DAYSECS
+				if MAPPDS[EVENT_ENTRIES][_index_][_index1_] >= CF.DAYSECS:
+					MAPPDS[EVENT_ENTRIES][_index_][_index1_] -= CF.DAYSECS
 	findNextAlarmEvent()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -1782,9 +1782,9 @@ def doAlarmEvent(eventIndexToDo_):
 			FORMPOPUP, \
 			PREVIOUS_APPMODE
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
+	_event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
 
-	if event_[IS_ALERTING_NOW] is True:
+	if _event_[IS_ALERTING_NOW] is True:
 		return None
 
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][IS_ALERTING_NOW] = True
@@ -1792,11 +1792,11 @@ def doAlarmEvent(eventIndexToDo_):
 	NUMBER_ACTIVE_ALARMS += 1
 	ALERTING_LIST.append(eventIndexToDo_)
 
-	if event_[EVENTMODE] == EVENTMODE_INTERVAL:
+	if _event_[EVENTMODE] == EVENTMODE_INTERVAL:
 		updateInterval(eventIndexToDo_)
 	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][INTERVAL_COUNT] += 1
-	event_[INTERVAL_COUNT] += 1
-	# MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER] = CLASS_POPUP_INTERVAL(event_[NAME], event_[INTERVAL_COUNT], [event_[ALARMPOPUP_TEXT_TEXT]])
+	_event_[INTERVAL_COUNT] += 1
+	# MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER] = CLASS_POPUP_INTERVAL(_event_[NAME], _event_[INTERVAL_COUNT], [_event_[ALARMPOPUP_TEXT_TEXT]])
 	return True
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -1812,14 +1812,14 @@ def doInit1():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	localTimes()
 	# print(f"""{CF.getDebugInfo()}{CF.NEWLINE}{CF.frameIt("NOWS", NOWS)} {CF.nrmlIntToHMS(NOWS)} {CF.frameIt("NOWS", NOWS)} {CF.nrmlIntToHMS(NOWS)}""")
-	for thisKey_, theseVals_ in ALL_THE_FORMS:
-		if theseVals_ is not None:
-			ALL_THE_FORMS[thisKey_].AlphaChannel = SZ_ALPHA_HIGH
+	for _thisKey_, _theseVals_ in ALL_THE_FORMS.items():
+		if _theseVals_ is not None:
+			ALL_THE_FORMS[_thisKey_].AlphaChannel = SZ_ALPHA_HIGH
 			# FORMMAIN.Maximize()
 			# FORMMAIN.BringToFront()
 			MAPPDS[FORM_CURRENT_LCN] = getElementLocation()
 			MAPPDS[SCREEN_DIMS] = getScreenDims()
-			MAPPDS[FORM_CURRENT_SIZE] = getElementSize(ALL_THE_FORMS[thisKey_])
+			MAPPDS[FORM_CURRENT_SIZE] = getElementSize(ALL_THE_FORMS[_thisKey_])
 
 	MAPPDS[ALPHA_CHANNEL] = SZ_ALPHA_HIGH
 	MAPPDS[BBOX] = getBBox(MAPPDS[FORM_CURRENT_LCN], MAPPDS[FORM_CURRENT_SIZE])
@@ -1829,12 +1829,12 @@ def doInit1():
 	TIME_AT_LAST_ZERO_CHECK = NOWS
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	for index_, event_ in MAPPDS[EVENT_ENTRIES].items():
+	for _index_, _event_ in MAPPDS[EVENT_ENTRIES].items():
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-#		MAPPDS[EVENT_ENTRIES][index_][TIME_AT_LAST_RUN] = None
-		for timeKey_ in MAPPDS_TIMES_LIST:
-			if isinstance(event_[timeKey_], str):
-				MAPPDS[EVENT_ENTRIES][index_][timeKey_] = CF.HMSToNrmlInt(event_[timeKey_])
+#		MAPPDS[EVENT_ENTRIES][_index_][TIME_AT_LAST_RUN] = None
+		for _timeKey_ in MAPPDS_TIMES_LIST:
+			if isinstance(_event_[_timeKey_], str):
+				MAPPDS[EVENT_ENTRIES][_index_][_timeKey_] = CF.HMSToNrmlInt(_event_[_timeKey_])
 	doMidnightWork()
 	findNextAlarmEvent()
 
@@ -1857,7 +1857,6 @@ def checkAlertPopupStatus(eventIndexToDo_):
 # __main__
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # @profile
-oldValues_ = None
 def reallyDoIt():
 	global \
 			CLOCKS_DICT, \
@@ -1878,7 +1877,7 @@ def reallyDoIt():
 		checkMouseStatus(checkMouseLcn(MAPPDS[FORM_CURRENT_LCN]))
 
 		if (TIMES_NEXT_EVENT == NOW_NOMS):
-			alarmResult_ = doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
+			_alarmResult_ = doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
 			return APPMODE_NEW_ALARMPOPUP
 
 		findNextAlarmEvent()
@@ -1893,31 +1892,31 @@ def reallyDoIt():
 		elif (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
 			updateInterval()
 
-		eventWindow_, eventKey_, eventVals_ = doReadAMainframe()
+		_eventWindow_, _eventKey_, _eventVals_ = doReadAMainframe()
 
-		print(f"""{CF.frameIt("eventWindow_", eventWindow_)} {CF.frameIt("eventKey_", eventKey_)} {CF.frameIt("eventVals_", eventVals_)}""")
+		print(f"""{CF.frameIt("_eventWindow_", _eventWindow_)} {CF.frameIt("_eventKey_", _eventKey_)} {CF.frameIt("_eventVals_", _eventVals_)}""")
 
-		if (eventWindow_ == FORMPOPUP):
+		if (_eventWindow_ == FORMPOPUP):
 
-			if (eventKey_ == BTN_QUIT):
+			if (_eventKey_ == BTN_QUIT):
 				return BTN_QUIT
 
-			elif (eventKey_ == BTN_DISMISS):
+			elif (_eventKey_ == BTN_DISMISS):
 				return BTN_DISMISS
 
 		checkMouseStatus(checkMouseLcn(MAPPDS[FORM_CURRENT_LCN]))
 
 
-#		if event_ == BTN_QUIT:
+#		if _event_ == BTN_QUIT:
 #			return BTN_QUIT
 #
-#		elif event_ == CHECKBOX_RUNAWAY:
+#		elif _event_ == CHECKBOX_RUNAWAY:
 #			MAPPDS[CHECKBOX_RUNAWAY] = not MAPPDS[CHECKBOX_RUNAWAY]
 #
-#		elif event_ == CHECKBOX_ALPHA_LOW:
+#		elif _event_ == CHECKBOX_ALPHA_LOW:
 #			MAPPDS[CHECKBOX_ALPHA_LOW] = not MAPPDS[CHECKBOX_ALPHA_LOW]
 #
-#		elif event_ == BTN_ZERO:
+#		elif _event_ == BTN_ZERO:
 #			CLOCKS_DICT[TIME_AT_ZEROELAPSE] = NOWS
 #			updateClocks()
 
@@ -1933,23 +1932,23 @@ def doit():
 		doInit1()
 
 		while True:
-			nextMode_ = reallyDoIt()
+			_nextMode_ = reallyDoIt()
 
-			if nextMode_ == BTN_QUIT:
+			if _nextMode_ == BTN_QUIT:
 				break
 
-			elif nextMode_ == APPMODE_NEW_ALARMPOPUP:
+			elif _nextMode_ == APPMODE_NEW_ALARMPOPUP:
 				with CLASS_C_CLOCKS(CF.serializeIt("runawayClock_DEV"), FORMPOPUP01):
 					while True:
-						nextMode_ = reallyDoIt()
+						_nextMode_ = reallyDoIt()
 
-						if (nextMode_ == APPMODE_DISMISS_ALARMPOPUP) or \
-								(nextMode_ == BTN_DISMISS):
+						if (_nextMode_ == APPMODE_DISMISS_ALARMPOPUP) or \
+								(_nextMode_ == BTN_DISMISS):
 							break
 
 			else:
 				print(f"""{CF.getDebugInfo()}
-				{CF.frameIt("nextMode_", nextMode_)}""")
+				{CF.frameIt("_nextMode_", _nextMode_)}""")
 				break
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
