@@ -755,8 +755,11 @@ class CLASS_CLOCKS(object):
 	def __init__(self, _keyBase_, _formName_):
 		self._THIS_KEY_BASE_ = _keyBase_
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
-		self._THIS_FORM_NAME_ = _formName_
+
 		self._KEY_DICT_ = {}
+		self._MAINFRAME_ = None
+		self._THIS_FORM_NAME_ = _formName_
+		self._TIME_LIST_ = []
 
 		self._DICT_ = {  # holds the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
@@ -766,6 +769,11 @@ class CLASS_CLOCKS(object):
 			TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
+		}
+
+		self._VALUES_DICT_ = {
+			CHECKBOX_RUNAWAY: False,
+			CHECKBOX_ALPHA_LOW: True,
 		}
 
 		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count
@@ -785,30 +793,35 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}""",  # interval count template
 		}
 		self._KEY_DICT_[TIME_AT_NEXT] = f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}"""
+		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_CLOCK))
 
 		self._TEXT_TIME_AT_ZEROELAPSE_ = {  # class text for interval count
 			**TEXT_TIME_AT_ZEROELAPSE,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}""",  # interval count template
 		}
 		self._KEY_DICT_[TIME_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}"""
+		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_CLOCK))
 
 		self._TEXT_TIME_CLOCK_ = {  # class text for interval count
 			**TEXT_TIME_CLOCK,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(TIME_CLOCK)}""",  # interval count template
 		}
 		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""
+		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_CLOCK))
 
 		self._TEXT_TIME_ELAPSED_ = {  # class text for interval count
 			**TEXT_TIME_ELAPSED,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}""",  # interval count template
 		}
 		self._KEY_DICT_[TIME_ELAPSED] = f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}"""
+		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_ELAPSED))
 
 		self._TEXT_TIME_TOGO_ = {  # class text for interval count
 			**TEXT_TIME_TOGO,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(TIME_TOGO)}""",  # interval count template
 		}
 		self._KEY_DICT_[TIME_TOGO] = f"""{self._USE_THIS_KEY_(TIME_TOGO)}"""
+		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_TOGO))
 
 		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
 			[
@@ -911,6 +924,27 @@ class CLASS_CLOCKS(object):
 		#
 		ALL_THE_FORMS[self._THIS_FORM_NAME_].close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
+
+	def updateFromDict(self, dictToUpdateFrom_=self._DICT_):
+		_tempDictToUpdateFrom_ = {}
+		for _key_, _val_ in dictToUpdateFrom_.items():
+			if (_key_ in TIMES_LIST):
+				if (_val_ >= CF.DAYSECS):
+					_val_ -= CF.DAYSECS
+				if (_val_ < 0):
+					_val_ = abs(_val_)
+				_tempDictToUpdateFrom_[_key_] = CF.nrmlIntToHMS(_val_)
+			else:
+				_tempDictToUpdateFrom_[_key_] = _val_
+		self.__MAINFRAME__.fill(_tempDictToUpdateFrom_)
+
+	def readToDict(self, dictToReadTo_=self._VALUES_DICT_, setLocalValuesDict_=True):
+		_dictToRtn_ = {}
+		for _key_ in dictToReadTo_:
+			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]
+			if (setLocalValuesDict_ is True):
+				self._VALUES_DICT_[_key_] = _dictToRtn_[_key_]
+		return _dictToRtn_
 
 
 class CLASS_THECLOCK(object):
@@ -1314,9 +1348,9 @@ def intervalCountOn(formToCountOn_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # intervalCountOn
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def updateIntervalCount():
+def updateIntervalCount(formNameToUpdate_):
 	global \
-			CLOCKS_FORMMAIN
+			ALL_THE_FORMS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	CLOCKS_TEXT_DICT[INTERVAL_COUNT] = f"""{CURRENT_INTERVAL_COUNT:04d}"""
 	updateFrameFromDict(CLOCKS_TEXT_DICT)
