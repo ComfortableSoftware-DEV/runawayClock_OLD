@@ -1817,7 +1817,7 @@ def doInit1():
 			ALL_THE_FORMS[_thisKey_].AlphaChannel = SZ_ALPHA_HIGH
 			# FORMMAIN.Maximize()
 			# FORMMAIN.BringToFront()
-			MAPPDS[FORM_CURRENT_LCN] = getElementLocation()
+			MAPPDS[FORM_CURRENT_LCN] = getElementLocation(ALL_THE_FORMS[_thisKey_])
 			MAPPDS[SCREEN_DIMS] = getScreenDims()
 			MAPPDS[FORM_CURRENT_SIZE] = getElementSize(ALL_THE_FORMS[_thisKey_])
 
