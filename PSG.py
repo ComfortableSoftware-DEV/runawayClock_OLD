@@ -770,43 +770,43 @@ class CLASS_CLOCKS(object):
 
 		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count
 			**TEXT_INTERVAL_COUNT,  # interval count template
-			KEY: f"""{self.USE_THIS_KEY(INTERVAL_COUNT)}""",  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(INTERVAL_COUNT)}""",  # interval count template
 		}
 		self._KEY_DICT_[INTERVAL_COUNT] = f"""{self._USE_THIS_KEY_(INTERVAL_COUNT)}"""
 
 		self._TEXT_NAME_NEXT_EVENT_ = {  # class text for interval count
 			**TEXT_NAME_NEXT_EVENT,  # interval count template
-			KEY: f"""{self.USE_THIS_KEY(NAME_NEXT_EVENT)}""",  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(NAME_NEXT_EVENT)}""",  # interval count template
 		}
 		self._KEY_DICT_[NAME_NEXT_EVENT] = f"""{self._USE_THIS_KEY_(NAME_NEXT_EVENT)}"""
 
 		self._TEXT_TIME_AT_NEXT_ = {  # class text for interval count
 			**TEXT_TIME_AT_NEXT,  # interval count template
-			KEY: f"""{self.USE_THIS_KEY(TIME_AT_NEXT)}""",  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}""",  # interval count template
 		}
 		self._KEY_DICT_[TIME_AT_NEXT] = f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}"""
 
 		self._TEXT_TIME_AT_ZEROELAPSE_ = {  # class text for interval count
 			**TEXT_TIME_AT_ZEROELAPSE,  # interval count template
-			KEY: f"""{self.USE_THIS_KEY(TIME_AT_ZEROELAPSE)}""",  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}""",  # interval count template
 		}
 		self._KEY_DICT_[TIME_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}"""
 
 		self._TEXT_TIME_CLOCK_ = {  # class text for interval count
 			**TEXT_TIME_CLOCK,  # interval count template
-			KEY: f"""{self.USE_THIS_KEY(TIME_CLOCK)}""",  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(TIME_CLOCK)}""",  # interval count template
 		}
 		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""
 
 		self._TEXT_TIME_ELAPSED_ = {  # class text for interval count
 			**TEXT_TIME_ELAPSED,  # interval count template
-			KEY: f"""{self.USE_THIS_KEY(TIME_ELAPSED)}""",  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}""",  # interval count template
 		}
 		self._KEY_DICT_[TIME_ELAPSED] = f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}"""
 
 		self._TEXT_TIME_TOGO_ = {  # class text for interval count
 			**TEXT_TIME_TOGO,  # interval count template
-			KEY: f"""{self.USE_THIS_KEY(TIME_TOGO)}""",  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(TIME_TOGO)}""",  # interval count template
 		}
 		self._KEY_DICT_[TIME_TOGO] = f"""{self._USE_THIS_KEY_(TIME_TOGO)}"""
 
@@ -818,7 +818,7 @@ class CLASS_CLOCKS(object):
 			],
 			[
 				SG.Text(  # add a new row to clocks column
-					**self.S_TEXT_TIME_AT_ZEROELAPSE_  # add time to go
+					**self._TEXT_TIME_AT_ZEROELAPSE_  # add time to go
 				),
 				SG.Text(  # add a new text element to row01 clocks column
 					**self._TEXT_TIME_ELAPSED_  # add elapsed time
@@ -865,7 +865,7 @@ class CLASS_CLOCKS(object):
 			],
 			[
 				SG.Text(  # add reset button for elapsed time
-					**self.CLOCKS_TEXT_INTERVAL_COUNT  # add the zero button to clocks
+					**self._TEXT_INTERVAL_COUNT_  # add the zero button to clocks
 				),
 			],
 		]
@@ -894,7 +894,7 @@ class CLASS_CLOCKS(object):
 			MARGINS: SZ_MARGINS_ALL,  #
 			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
 			TITLE: TITLE_CLOCKS,  #
-			_LAYOUT_: self.CLOCKS_LAYOUT,  # add the layout for CLOCKS_WINDOW
+			_LAYOUT_: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
 		}
 
 	def __enter__(self):
@@ -902,7 +902,7 @@ class CLASS_CLOCKS(object):
 			ALL_THE_FORMS, \
 			MAPPDS
 		#
-		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self.WINDOW).finalize()
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self._WINDOW_).finalize()
 
 	def __exit__(self, *args_):
 		global \
@@ -933,7 +933,7 @@ class CLASS_THECLOCK(object):
 			ENABLE_EVENTS: True,  # this is clickable
 			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{self.USE_THIS_KEY(TIME_CLOCK)}""",  # comment
+			KEY: f"""{self._USE_THIS_KEY_(TIME_CLOCK)}""",  # comment
 			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 			RIGHT_CLICK_MENU: THECLOCK_RCMENU01,  # set up the right click menu
 			SIZE: (8, 1),  # characters, lines size line
@@ -969,7 +969,7 @@ class CLASS_THECLOCK(object):
 			ALL_THE_FORMS, \
 			MAPPDS
 		#
-		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self.WINDOW).finalize()
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self._WINDOW_).finalize()
 
 	def __exit__(self, *args_):
 		global \
