@@ -5669,7 +5669,7 @@ def parseTBGLST(FDTBGLST):
 				if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_]:
 					FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] = ""
 
-				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{thisVal_}{CPAREN}{NEWLINE}"""
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{thisVal_}{CPAREN}{CBRCE}{NEWLINE}"""
 
 			else:
 				thisValStr_ = f"""{thisVal_}"""
@@ -5705,7 +5705,7 @@ def parseTBGLST(FDTBGLST):
 				if thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_]:
 					FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] = ""
 
-				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{thisVal_}{CPAREN}{NEWLINE}"""
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[thisClassName_][thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{thisVal_}{CPAREN}{CBRCE}{TRIQT}{NEWLINE}"""
 
 			else:
 				thisValStr_ = f"""{thisVal_}"""
