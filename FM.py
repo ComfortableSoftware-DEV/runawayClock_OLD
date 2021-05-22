@@ -11,11 +11,11 @@
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # * def doErrorItem(message_, itemToError_):
 # * def explodeItem(itemToExplode_):
-# * def makeAComment(comment_):
+# * def makeAComment(__comment__):
 # * def makeADict(dictName_, dictComment_, dictItems_):
 # * def makeAList(listName_, listComment_, listItems_):
 # * def makeATupDict(tupDictName_, tupDictItems_, tupDictSidecar_):
-# * def makeAWideComment(comment_):
+# * def makeAWideComment(__comment__):
 # * def makeCF():
 # * def makeDBSQLT()
 # * def makeDO():
@@ -1898,10 +1898,10 @@ TBGLST.sort()
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # makeAComment
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def makeAComment(comment_):
+def makeAComment(__comment__):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	strToRtn_ = ""
-	strToRtn_ += f"""{CMNTLINE}{NEWLINE}# * {comment_}{NEWLINE}{CMNTLINE}{NEWLINE}"""
+	strToRtn_ += f"""{CMNTLINE}{NEWLINE}# * {__comment__}{NEWLINE}{CMNTLINE}{NEWLINE}"""
 	return strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1909,13 +1909,13 @@ def makeAComment(comment_):
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # makeAComment
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def makeAWideComment(comment_):
+def makeAWideComment(__comment__):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	"""Short summary.
 
 	Parameters
 	----------
-	comment_ : string
+	__comment__ : string
 			a string to be inserted in the middle of 7 lines, outer two are attention getters
 
 	Returns
@@ -1927,7 +1927,7 @@ def makeAWideComment(comment_):
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	strToRtn_ = ""
-	strToRtn_ += f"""#{NEWLINE}#{NEWLINE}{CMNTLINE}{NEWLINE}# * {comment_}{NEWLINE}{CMNTLINE}{NEWLINE}#{NEWLINE}#{NEWLINE}"""
+	strToRtn_ += f"""#{NEWLINE}#{NEWLINE}{CMNTLINE}{NEWLINE}# * {__comment__}{NEWLINE}{CMNTLINE}{NEWLINE}#{NEWLINE}#{NEWLINE}"""
 	return strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2252,9 +2252,9 @@ def makePSGClasses():
 {NTAB(2)}ALL_THE_FORMS, {BKSLSH}
 {NTAB(2)}MAPPDS{NEWLINE}
 {NTAB(1)}def __init__{OPAREN}self, keyBase_, formName_{CPAREN}:
-{NTAB(2)}self.THIS_KEY_BASE = keyBase_
-{NTAB(2)}self.USE_THIS_KEY = lambda KEY_TEXT_: f{TRIQT}{OBRCE}KEY_TEXT_{CBRCE}{OBRCE}self.THIS_KEY_BASE{CBRCE}{TRIQT}
-{NTAB(2)}self.THIS_FORM_NAME = formName_
+{NTAB(2)}self._THIS_KEY_BASE_ = keyBase_
+{NTAB(2)}self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f{TRIQT}{OBRCE}__KEY_TEXT__{CBRCE}{OBRCE}self._THIS_KEY_BASE_{CBRCE}{TRIQT}
+{NTAB(2)}self._THIS_FORM_NAME_ = formName_
 {NTAB(2)}self._KEY_DICT_ = {OBRCE}{CBRCE}{NEWLINE}{NEWLINE}"""
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
@@ -2400,13 +2400,13 @@ def makePSGClasses():
 {NTAB(2)}global {BKSLSH}
 {NTAB(3)}ALL_THE_FORMS, {BKSLSH}
 {NTAB(3)}MAPPDS{NEWLINE}{NTAB(2)}#
-{NTAB(2)}ALL_THE_FORMS{OBRKT}self.THIS_FORM_NAME{CBRKT} = SG.Window{OPAREN}**self.WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE     }
+{NTAB(2)}ALL_THE_FORMS{OBRKT}self._THIS_FORM_NAME_{CBRKT} = SG.Window{OPAREN}**self.WINDOW{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE     }
 {NTAB(1)}def __exit__{OPAREN}self, *args_{CPAREN}:
 {NTAB(2)}global {BKSLSH}
 {NTAB(3)}ALL_THE_FORMS, {BKSLSH}
 {NTAB(3)}MAPPDS{NEWLINE}{NTAB(2)}#
-{NTAB(2)}ALL_THE_FORMS{OBRKT}self.THIS_FORM_NAME{CBRKT}.close{OPAREN}{CPAREN}
-{NTAB(2)}ALL_THE_FORMS{OBRKT}self.THIS_FORM_NAME{CBRKT} = None{NEWLINE}{NEWLINE}{NEWLINE}"""
+{NTAB(2)}ALL_THE_FORMS{OBRKT}self._THIS_FORM_NAME_{CBRKT}.close{OPAREN}{CPAREN}
+{NTAB(2)}ALL_THE_FORMS{OBRKT}self._THIS_FORM_NAME_{CBRKT} = None{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	return strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -5815,30 +5815,30 @@ def __main__():
 
 	# FMFM_MAIN_BEGINS
 	# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-	with open(TBGLST_NAME, "tw") as FDOut:
-		FDOut.write(f"TBGLST = {OBRKT}{NEWLINE}{NTAB(1)}{FOLD1STARTHERE}{NEWLINE}")
-		parseTBGLST(FDOut)
-		FDOut.write(f"{NTAB(1)}{FOLD1ENDHERE}{NEWLINE}{CBRKT}{NEWLINE}")
+	with open(TBGLST_NAME, "tw") as __FDOut__:
+		__FDOut__.write(f"TBGLST = {OBRKT}{NEWLINE}{NTAB(1)}{FOLD1STARTHERE}{NEWLINE}")
+		parseTBGLST(__FDOut__)
+		__FDOut__.write(f"{NTAB(1)}{FOLD1ENDHERE}{NEWLINE}{CBRKT}{NEWLINE}")
 
-	with open(FM_NAME, "tw") as FDOut:
+	with open(FM_NAME, "tw") as __FDOut__:
 		strToWrt_ = makeFM()
-		FDOut.writelines(strToWrt_)
+		__FDOut__.writelines(strToWrt_)
 	# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# FMFM_MAIN_ENDS
 
 	# FMCF_MAIN_BEGINS
 	# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-	with open(CF_NAME, "tw") as FDOut:
+	with open(CF_NAME, "tw") as __FDOut__:
 		strToWrt_ = makeCF()
-		FDOut.writelines(strToWrt_)
+		__FDOut__.writelines(strToWrt_)
 	# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# FMCF_MAIN_ENDS
 
 	# FMPSG_MAIN_BEGINS
 	# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-	with open(PSG_NAME, "tw") as FDOut:
+	with open(PSG_NAME, "tw") as __FDOut__:
 		strToWrt_ = makePSG()
-		FDOut.writelines(strToWrt_)
+		__FDOut__.writelines(strToWrt_)
 	# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# FMPSG_MAIN_ENDS
 

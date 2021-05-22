@@ -770,45 +770,45 @@ class CLASS_CLOCKS(object):
 
 		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count
 			**TEXT_INTERVAL_COUNT,  # interval count template
-			KEY: self.USE_THIS_KEY(INTERVAL_COUNT),  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(INTERVAL_COUNT)}""",  # interval count template
 		}
-		self._KEY_DICT_[INTERVAL_COUNT] = self._USE_THIS_KEY_(INTERVAL_COUNT)
+		self._KEY_DICT_[INTERVAL_COUNT] = f"""{self._USE_THIS_KEY_(INTERVAL_COUNT)}"""
 
 		self._TEXT_NAME_NEXT_EVENT_ = {  # class text for interval count
 			**TEXT_NAME_NEXT_EVENT,  # interval count template
-			KEY: self.USE_THIS_KEY(NAME_NEXT_EVENT),  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(NAME_NEXT_EVENT)}""",  # interval count template
 		}
-		self._KEY_DICT_[NAME_NEXT_EVENT] = self._USE_THIS_KEY_(NAME_NEXT_EVENT)
+		self._KEY_DICT_[NAME_NEXT_EVENT] = f"""{self._USE_THIS_KEY_(NAME_NEXT_EVENT)}"""
 
 		self._TEXT_TIME_AT_NEXT_ = {  # class text for interval count
 			**TEXT_TIME_AT_NEXT,  # interval count template
-			KEY: self.USE_THIS_KEY(TIME_AT_NEXT),  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(TIME_AT_NEXT)}""",  # interval count template
 		}
-		self._KEY_DICT_[TIME_AT_NEXT] = self._USE_THIS_KEY_(TIME_AT_NEXT)
+		self._KEY_DICT_[TIME_AT_NEXT] = f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}"""
 
 		self._TEXT_TIME_AT_ZEROELAPSE_ = {  # class text for interval count
 			**TEXT_TIME_AT_ZEROELAPSE,  # interval count template
-			KEY: self.USE_THIS_KEY(TIME_AT_ZEROELAPSE),  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(TIME_AT_ZEROELAPSE)}""",  # interval count template
 		}
-		self._KEY_DICT_[TIME_AT_ZEROELAPSE] = self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)
+		self._KEY_DICT_[TIME_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}"""
 
 		self._TEXT_TIME_CLOCK_ = {  # class text for interval count
 			**TEXT_TIME_CLOCK,  # interval count template
-			KEY: self.USE_THIS_KEY(TIME_CLOCK),  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(TIME_CLOCK)}""",  # interval count template
 		}
-		self._KEY_DICT_[TIME_CLOCK] = self._USE_THIS_KEY_(TIME_CLOCK)
+		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""
 
 		self._TEXT_TIME_ELAPSED_ = {  # class text for interval count
 			**TEXT_TIME_ELAPSED,  # interval count template
-			KEY: self.USE_THIS_KEY(TIME_ELAPSED),  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(TIME_ELAPSED)}""",  # interval count template
 		}
-		self._KEY_DICT_[TIME_ELAPSED] = self._USE_THIS_KEY_(TIME_ELAPSED)
+		self._KEY_DICT_[TIME_ELAPSED] = f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}"""
 
 		self._TEXT_TIME_TOGO_ = {  # class text for interval count
 			**TEXT_TIME_TOGO,  # interval count template
-			KEY: self.USE_THIS_KEY(TIME_TOGO),  # interval count template
+			KEY: f"""{self.USE_THIS_KEY(TIME_TOGO)}""",  # interval count template
 		}
-		self._KEY_DICT_[TIME_TOGO] = self._USE_THIS_KEY_(TIME_TOGO)
+		self._KEY_DICT_[TIME_TOGO] = f"""{self._USE_THIS_KEY_(TIME_TOGO)}"""
 
 		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
 			[
@@ -940,7 +940,7 @@ class CLASS_THECLOCK(object):
 			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 		}
-		self._KEY_DICT_[TIME_CLOCK] = self._USE_THIS_KEY_(TIME_CLOCK)
+		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""
 
 		self.THECLOCK_LAYOUT = [  # layout for APPMODE_THECLOCK
 			[
