@@ -752,10 +752,10 @@ class CLASS_CLOCKS(object):
 		ALL_THE_FORMS, \
 		MAPPDS
 
-	def __init__(self, keyBase_, formName_):
-		self.THIS_KEY_BASE = keyBase_
-		self.USE_THIS_KEY = lambda KEY_TEXT_: f"""{KEY_TEXT_}{self.THIS_KEY_BASE}"""
-		self.THIS_FORM_NAME = formName_
+	def __init__(self, _keyBase_, _formName_):
+		self._THIS_KEY_BASE_ = _keyBase_
+		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
+		self._THIS_FORM_NAME_ = _formName_
 		self._KEY_DICT_ = {}
 
 		self._DICT_ = {  # holds the values for the clocks frame
@@ -902,15 +902,15 @@ class CLASS_CLOCKS(object):
 			ALL_THE_FORMS, \
 			MAPPDS
 		#
-		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.WINDOW).finalize()
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self.WINDOW).finalize()
 
 	def __exit__(self, *args_):
 		global \
 			ALL_THE_FORMS, \
 			MAPPDS
 		#
-		ALL_THE_FORMS[self.THIS_FORM_NAME].close()
-		ALL_THE_FORMS[self.THIS_FORM_NAME] = None
+		ALL_THE_FORMS[self._THIS_FORM_NAME_].close()
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
 
 class CLASS_THECLOCK(object):
@@ -918,10 +918,10 @@ class CLASS_THECLOCK(object):
 		ALL_THE_FORMS, \
 		MAPPDS
 
-	def __init__(self, keyBase_, formName_):
-		self.THIS_KEY_BASE = keyBase_
-		self.USE_THIS_KEY = lambda KEY_TEXT_: f"""{KEY_TEXT_}{self.THIS_KEY_BASE}"""
-		self.THIS_FORM_NAME = formName_
+	def __init__(self, _keyBase_, _formName_):
+		self._THIS_KEY_BASE_ = _keyBase_
+		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
+		self._THIS_FORM_NAME_ = _formName_
 		self._KEY_DICT_ = {}
 
 		self.THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
@@ -969,15 +969,15 @@ class CLASS_THECLOCK(object):
 			ALL_THE_FORMS, \
 			MAPPDS
 		#
-		ALL_THE_FORMS[self.THIS_FORM_NAME] = SG.Window(**self.WINDOW).finalize()
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self.WINDOW).finalize()
 
 	def __exit__(self, *args_):
 		global \
 			ALL_THE_FORMS, \
 			MAPPDS
 		#
-		ALL_THE_FORMS[self.THIS_FORM_NAME].close()
-		ALL_THE_FORMS[self.THIS_FORM_NAME] = None
+		ALL_THE_FORMS[self._THIS_FORM_NAME_].close()
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

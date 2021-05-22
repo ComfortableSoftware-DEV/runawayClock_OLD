@@ -752,10 +752,10 @@ class CLASS_CLOCKS(object):
 		ALL_THE_FORMS, \
 		MAPPDS
 
-	def __init__(self, keyBase_, formName_):
-		self._THIS_KEY_BASE_ = keyBase_
-		self._USE_THIS_KEY_ = lambda KEY_TEXT_: f"""{KEY_TEXT_}{self.THIS_KEY_BASE}"""
-		self._THIS_FORM_NAME_ = formName_
+	def __init__(self, _keyBase_, _formName_):
+		self._THIS_KEY_BASE_ = _keyBase_
+		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
+		self._THIS_FORM_NAME_ = _formName_
 		self._KEY_DICT_ = {}
 
 		self._DICT_ = {  # holds the values for the clocks frame
@@ -918,10 +918,10 @@ class CLASS_THECLOCK(object):
 		ALL_THE_FORMS, \
 		MAPPDS
 
-	def __init__(self, keyBase_, formName_):
-		self._THIS_KEY_BASE_ = keyBase_
-		self._USE_THIS_KEY_ = lambda KEY_TEXT_: f"""{KEY_TEXT_}{self.THIS_KEY_BASE}"""
-		self._THIS_FORM_NAME_ = formName_
+	def __init__(self, _keyBase_, _formName_):
+		self._THIS_KEY_BASE_ = _keyBase_
+		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
+		self._THIS_FORM_NAME_ = _formName_
 		self._KEY_DICT_ = {}
 
 		self.THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
