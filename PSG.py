@@ -753,14 +753,14 @@ class CLASS_CLOCKS(object):
 		MAPPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	def __init__(self, _keyBase_, _formName_):
-		self._THIS_KEY_BASE_ = _keyBase_
+	def __init__(self, keyBase_, formName_):
+		self._THIS_KEY_BASE_ = keyBase_
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
 
 		self._KEY_DICT_ = {}
 		self._KEY_DICT_REVERSE_ = {}
 		self._MAINFRAME_ = None
-		self._THIS_FORM_NAME_ = _formName_
+		self._THIS_FORM_NAME_ = formName_
 		self._TIME_KEY_LIST_ = []
 		self._TIME_TO_UPDATE_ = 0
 		self._TIME_TO_MOVE_ = 0
@@ -1009,10 +1009,10 @@ class CLASS_THECLOCK(object):
 		ALL_THE_FORMS, \
 		MAPPDS
 
-	def __init__(self, _keyBase_, _formName_):
-		self._THIS_KEY_BASE_ = _keyBase_
+	def __init__(self, keyBase_, formName_):
+		self._THIS_KEY_BASE_ = keyBase_
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
-		self._THIS_FORM_NAME_ = _formName_
+		self._THIS_FORM_NAME_ = formName_
 		self._KEY_DICT_ = {}
 
 		self.THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
@@ -1427,80 +1427,6 @@ def isInBBox(BBoxIn_, pointIn_):
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# moveFrame
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def moveFrame(moveTo_=(0, 0)):  # remember - is N/W and + is S/E
-	global \
-			FORMMAIN
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_TLcnX_, _TLcnY_ = getElementLocation(FORMMAIN)
-	_TSizeX_, _TSizeY_ = getElementSize(FORMMAIN)
-	if _TLcnX_ < 0:
-		_TLcnX_ = 0
-	elif _TLcnX_ > (MAPPDS[SCREEN_DIMS][INDEX_X] - _TSizeX_):
-		_TLcnX_ = (MAPPDS[SCREEN_DIMS][INDEX_X] - _TSizeX_)
-	if _TLcnY_ < 0:
-		_TLcnY_ = 0
-	elif _TLcnY_ > (MAPPDS[SCREEN_DIMS][INDEX_Y] - _TSizeY_):
-		_TLcnY_ = (MAPPDS[SCREEN_DIMS][INDEX_Y] - _TSizeY_)
-	FORMMAIN.Move(moveTo_)
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# moveRelFrame
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def moveRelFrame(moveMpx_=(0, 0)):  # multiplier +/- 0-5
-	global \
-			MAPPDS, FORMMAIN, \
-			TIMEMS_NEXT_MOVED
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-
-	# print(f"""moveRelFrame {NOWMS}  TIMEMS_NEXT_MOVED {TIMEMS_NEXT_MOVED}""")
-	if NOWMS < TIMEMS_NEXT_MOVED:
-		return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
-
-	TIMEMS_NEXT_MOVED = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
-	_screenSZX_, _screenSZY_ = splitXYToRaw(MAPPDS[SCREEN_DIMS])
-	_TSizeX_, _TSizeY_ = splitXYToRaw(MAPPDS[FORM_CURRENT_SIZE])
-	_TLcnX_, _TLcnY_ = splitXYToRaw(MAPPDS[FORM_CURRENT_LCN])
-	_moveToX_ = _TLcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
-	_moveToY_ = _TLcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
-
-	if _moveToX_ < 0:
-		_moveToX_ = 0
-	elif _moveToX_ > (_screenSZX_ - _TSizeX_):
-		_moveToX_ = (_screenSZX_ - _TSizeX_)
-
-	if _moveToY_ < 0:
-		_moveToY_ = 0
-	elif _moveToY_ > (_screenSZY_ - _TSizeY_):
-		_moveToY_ = (_screenSZY_ - _TSizeY_)
-
-	# print(f"""likely moving abs(_moveToX_ - _TLcnX_) {abs(_moveToX_ - _TLcnX_)} abs(_moveToY_ - _TLcnY_) {abs(_moveToY_ - _TLcnY_)} SZ_MAX_DELTA {SZ_MAX_DELTA}""")
-		# avoid trouble with spurious moves caused by a process delaying anything here too far
-	if (abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA):
-		# print(f"""(abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA) (abs({_moveToX_} - {_TLcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA)}""")
-		# print(f"""(abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA) (abs({_moveToY_} - {_TLcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA)}""")
-		return
-
-	FORMMAIN.Move(_moveToX_, _moveToY_)
-	TIMEMS_NEXT_MOVED = NOWMS
-
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# getScreenDims
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def getScreenDims():
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_TDim_ = FORMMAIN.GetScreenDimensions()
-	return _TDim_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # doInit
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def updateMappds(mainframeLocation_):
@@ -1665,7 +1591,6 @@ def doReadAMainframe(timeout_=SZ_TIMEOUT_MS):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # @profile
 def checkMouseStatus(statusToDo_):
-	global FORMMAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	# print(f"""checkMouseStatus statusToDo_ {statusToDo_} """)
 
@@ -1673,28 +1598,28 @@ def checkMouseStatus(statusToDo_):
 		# print(f"""close enough to move""")
 
 		if statusToDo_ == MOUSE_STATUS_CLOSE_N:
-			moveRelFrame(moveMpx_=(0, 1))
+			return (0, 1))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_S:
-			moveRelFrame(moveMpx_=(0, -1))
+			return (0, -1))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_E:
-			moveRelFrame(moveMpx_=(-1, 0))
+			return (-1, 0))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_W:
-			moveRelFrame(moveMpx_=(1, 0))
+			return (1, 0))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_NW:
-			moveRelFrame(moveMpx_=(1, 1))
+			return (1, 1))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_SW:
-			moveRelFrame(moveMpx_=(1, -1))
+			return (1, -1))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_NE:
-			moveRelFrame(moveMpx_=(-1, 1))
+			return (-1, 1))
 
 		elif statusToDo_ == MOUSE_STATUS_CLOSE_SE:
-			moveRelFrame(moveMpx_=(-1, -1))
+			return (-1, -1))
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
