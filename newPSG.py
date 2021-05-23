@@ -758,7 +758,7 @@ class CLASS_CLOCKS(object):
 		self._THIS_FORM_NAME_ = _formName_
 		self._KEY_DICT_ = {}
 
-		self._DICT_ = {  # holds the values for the clocks frame
+		self._DICTIN_ = {  # holds the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
 			INTERVAL_COUNT: 0,  # interval count
 			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame

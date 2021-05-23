@@ -750,8 +750,7 @@ TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 class CLASS_CLOCKS(object):
 	global \
 		ALL_THE_FORMS, \
-		MAPPDS, \
-		TIMEMS_NEXT_MOVED
+		MAPPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	def __init__(self, _keyBase_, _formName_):
