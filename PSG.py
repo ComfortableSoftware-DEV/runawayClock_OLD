@@ -750,18 +750,20 @@ TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 class CLASS_CLOCKS(object):
 	global \
 		ALL_THE_FORMS, \
-		MAPPDS
+		MAPPDS, \
+		TIMEMS_NEXT_MOVED
 
 	def __init__(self, _keyBase_, _formName_):
 		self._THIS_KEY_BASE_ = _keyBase_
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
 
 		self._KEY_DICT_ = {}
+		self._KEY_DICT_REVERSE_ = {}
 		self._MAINFRAME_ = None
 		self._THIS_FORM_NAME_ = _formName_
-		self._TIME_LIST_ = []
+		self._TIME_KEY_LIST_ = []
 
-		self._DICT_ = {  # holds the values for the clocks frame
+		self._DICTIN_ = {  # holds the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
 			INTERVAL_COUNT: 0,  # interval count
 			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -771,7 +773,7 @@ class CLASS_CLOCKS(object):
 			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
 		}
 
-		self._VALUES_DICT_ = {
+		self._DICTOUT_ = {
 			CHECKBOX_RUNAWAY: False,
 			CHECKBOX_ALPHA_LOW: True,
 		}
@@ -781,19 +783,22 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(INTERVAL_COUNT)}""",  # interval count template
 		}
 		self._KEY_DICT_[INTERVAL_COUNT] = f"""{self._USE_THIS_KEY_(INTERVAL_COUNT)}"""
+		self._KEY_DICT_REVERSE_[self._USE_THIS_KEY_(INTERVAL_COUNT)] = INTERVAL_COUNT
 
 		self._TEXT_NAME_NEXT_EVENT_ = {  # class text for interval count
 			**TEXT_NAME_NEXT_EVENT,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(NAME_NEXT_EVENT)}""",  # interval count template
 		}
 		self._KEY_DICT_[NAME_NEXT_EVENT] = f"""{self._USE_THIS_KEY_(NAME_NEXT_EVENT)}"""
+		self._KEY_DICT_REVERSE_[self._USE_THIS_KEY_(NAME_NEXT_EVENT)] = NAME_NEXT_EVENT
 
 		self._TEXT_TIME_AT_NEXT_ = {  # class text for interval count
 			**TEXT_TIME_AT_NEXT,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}""",  # interval count template
 		}
 		self._KEY_DICT_[TIME_AT_NEXT] = f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}"""
-		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_CLOCK))
+		self._KEY_DICT_REVERSE_[self._USE_THIS_KEY_(TIME_AT_NEXT)] = TIME_AT_NEXT
+		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_AT_NEXT))
 
 		self._TEXT_TIME_AT_ZEROELAPSE_ = {  # class text for interval count
 			**TEXT_TIME_AT_ZEROELAPSE,  # interval count template
@@ -915,36 +920,79 @@ class CLASS_CLOCKS(object):
 			ALL_THE_FORMS, \
 			MAPPDS
 		#
-		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self._WINDOW_).finalize()
+		self._MAINFRAME_ = SG.Window(**self._WINDOW_).finalize()
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = self._MAINFRAME_
+		return self
 
 	def __exit__(self, *args_):
 		global \
 			ALL_THE_FORMS, \
 			MAPPDS
 		#
-		ALL_THE_FORMS[self._THIS_FORM_NAME_].close()
+		self._MAINFRAME_.close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
-	def updateFromDict(self, dictToUpdateFrom_=self._DICT_):
+	def updateFromDict(self, dictToUpdateFrom_=self._DICT_, setLocalDict_=True):
 		_tempDictToUpdateFrom_ = {}
-		for _key_, _val_ in dictToUpdateFrom_.items():
-			if (_key_ in TIMES_LIST):
+		for _key_, val_ in dictToUpdateFrom_.items():
+			_val_ = val_
+			if (_key_ in self._TIME_KEY_LIST_):
 				if (_val_ >= CF.DAYSECS):
 					_val_ -= CF.DAYSECS
-				if (_val_ < 0):
-					_val_ = abs(_val_)
+				_val_ = abs(_val_)
 				_tempDictToUpdateFrom_[_key_] = CF.nrmlIntToHMS(_val_)
 			else:
 				_tempDictToUpdateFrom_[_key_] = _val_
-		self.__MAINFRAME__.fill(_tempDictToUpdateFrom_)
+		if setLocalDict_ is True:
+			self._DICTIN_[_key_] = val_
+		self._MAINFRAME_.fill(_tempDictToUpdateFrom_)
 
-	def readToDict(self, dictToReadTo_=self._VALUES_DICT_, setLocalValuesDict_=True):
+	def readToDict(self, dictToReadTo_=self._DICTOUT_, setLocalDict_=True):
 		_dictToRtn_ = {}
 		for _key_ in dictToReadTo_:
 			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]
-			if (setLocalValuesDict_ is True):
-				self._VALUES_DICT_[_key_] = _dictToRtn_[_key_]
+			if (setLocalDict_ is True):
+				self._DICTOUT_[_key_] = _dictToRtn_[_key_]
 		return _dictToRtn_
+
+	def updateClocks():
+		self._DICTIN_, _wasUpdated_ = updateClocks(self._DICTIN_)
+		if _wasUpdated_ is True:
+			self.updateFromDict(setLocalDict_=False)
+
+	def runaway(moveMpx_=(0, 0)):
+		global \
+			TIMEMS_NEXT_MOVED
+
+		if NOWMS < TIMEMS_NEXT_MOVED:
+			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
+
+		TIMEMS_NEXT_MOVED = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
+		_screenSZX_, _screenSZY_ = self._MAINFRAME_.GetScreenDimensions()
+		_TSizeX_, _TSizeY_ = self._MAINFRAME_.Size()
+		_TLcnX_, _TLcnY_ = self._MAINFRAME_.CurrentLocation()
+		_moveToX_ = _TLcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
+		_moveToY_ = _TLcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
+
+		if _moveToX_ < 0:
+			_moveToX_ = 0
+		elif _moveToX_ > (_screenSZX_ - _TSizeX_):
+			_moveToX_ = (_screenSZX_ - _TSizeX_)
+
+		if _moveToY_ < 0:
+			_moveToY_ = 0
+		elif _moveToY_ > (_screenSZY_ - _TSizeY_):
+			_moveToY_ = (_screenSZY_ - _TSizeY_)
+
+		# print(f"""likely moving abs(_moveToX_ - _TLcnX_) {abs(_moveToX_ - _TLcnX_)} abs(_moveToY_ - _TLcnY_) {abs(_moveToY_ - _TLcnY_)} SZ_MAX_DELTA {SZ_MAX_DELTA}""")
+			# avoid trouble with spurious moves caused by a process delaying anything here too far
+		if (abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA):
+			# print(f"""(abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA) (abs({_moveToX_} - {_TLcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA)}""")
+			# print(f"""(abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA) (abs({_moveToY_} - {_TLcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA)}""")
+			return
+
+		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
+
 
 
 class CLASS_THECLOCK(object):
@@ -1460,11 +1508,10 @@ def updateMappds(mainframeLocation_):
 # checkMouseLcn
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # @profile
-def checkMouseLcn(oldFrameLocation_):
+def checkMouseLcn(formName_, oldFrameLocation_):
 	global \
+		ALL_THE_FORMS, \
 		LAST_MOUSE_STATUS, \
-		FORMMAIN, \
-		MAPPDS, \
 		TIMEMS_NEXT_MOUSE_CHECK
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
@@ -1474,7 +1521,7 @@ def checkMouseLcn(oldFrameLocation_):
 	TIMEMS_NEXT_MOUSE_CHECK = NOWMS + SZ_TIMEMS_BETWEEN_MOUSE_CHECKS
 
 	_statusToRtn_ = None
-	_TLcn_ = getElementLocation()
+	_TLcn_ = getElementLocation(formName_)
 	_TMouseLcnX_, _TMouseLcnY_ = _TMouseLcn_ = getMousePos()
 	_TBBoxWest_, _TBBoxNorth_, _TBBoxEast_, _TBBoxSouth_ = _TBBox_ = getBBox(_TLcn_, MAPPDS[FORM_CURRENT_SIZE])
 	_TCloseBBox_ = getCloseBBox(_TLcn_, MAPPDS[FORM_CURRENT_SIZE])
@@ -1562,12 +1609,8 @@ def checkMouseLcn(oldFrameLocation_):
 # updateClocks
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #  @profile
-def updateClocks():
+def updateClocks(dictToUpdate_):
 	global \
-			CLOCKS_DICT, \
-			FORMMAIN, \
-			MAPPDS, \
-			THECLOCK_DICT, \
 			TIMEMS_NEXT_UPDATED
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 #	print(f"""{CF.getDebugInfo()}
@@ -1579,23 +1622,21 @@ def updateClocks():
 		# CF.whirl()
 
 		TIMEMS_NEXT_UPDATED = (NOWMS + SZ_TIMEMS_BETWEEN_UPDATES) % CF.DAYMS
-		# print(f"""CLOCKS_DICT {CLOCKS_DICT} NOWS {NOWS}""")
-		CLOCKS_DICT[TIME_CLOCK] = NOWS
-		CLOCKS_DICT[TIME_ELAPSED] = NOWS - CLOCKS_DICT[TIME_AT_ZEROELAPSE]
-		CLOCKS_DICT[TIME_TOGO] = CLOCKS_DICT[TIME_AT_NEXT] - NOWS
+		_dictToRtn_ = {}
+		for _key_, _index_ in dictToUpdate_.items():
+			_dictToRtn_[_key_] = _val_
 
-		if CLOCKS_DICT[TIME_TOGO] < 0:
-			CLOCKS_DICT[TIME_TOGO] += CF.DAYSECS
+		# print(f"""_dictToRtn_ {_dictToRtn_} NOWS {NOWS}""")
+		_dictToRtn_[TIME_CLOCK] = NOWS
+		_dictToRtn_[TIME_ELAPSED] = NOWS - _dictToRtn_[TIME_AT_ZEROELAPSE]
+		_dictToRtn_[TIME_TOGO] = _dictToRtn_[TIME_AT_NEXT] - NOWS
 
-		THECLOCK_DICT[TIME_CLOCK] = NOWS
-		_mappdsMode_ = MAPPDS[APPMODE]
-		# print(f"""_mappdsMode_ {_mappdsMode_}""")
+		if _dictToRtn_[TIME_TOGO] < 0:
+			_dictToRtn_[TIME_TOGO] += CF.DAYSECS
 
-		if _mappdsMode_ == APPMODE_THECLOCK:
-			updateFrameFromDict(THECLOCK_DICT)
+		return _dictToRtn_, True
 
-		elif _mappdsMode_ == APPMODE_CLOCKS:
-			updateFrameFromDict(CLOCKS_DICT)
+	return _dictToRtn_, False
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1960,7 +2001,7 @@ def reallyDoIt():
 def doit():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	with \
-			CLASS_CLOCKS(f"""{CF.serializeIt("runawayClock_DEV")}""", FORMCLOCKS), \
+			CLASS_CLOCKS(f"""{CF.serializeIt("runawayClock_DEV")}""", FORMCLOCKS) as __CLOCKS__, \
 			CF.withPickles("runawayClock.pkl", MAPPDS):
 
 		doInit1()
