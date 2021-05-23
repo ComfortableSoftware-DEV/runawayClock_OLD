@@ -752,6 +752,7 @@ class CLASS_CLOCKS(object):
 		ALL_THE_FORMS, \
 		MAPPDS, \
 		TIMEMS_NEXT_MOVED
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	def __init__(self, _keyBase_, _formName_):
 		self._THIS_KEY_BASE_ = _keyBase_
@@ -762,8 +763,11 @@ class CLASS_CLOCKS(object):
 		self._MAINFRAME_ = None
 		self._THIS_FORM_NAME_ = _formName_
 		self._TIME_KEY_LIST_ = []
+		self._TIME_TO_UPDATE_ = 0
+		self._TIME_TO_MOVE_ = 0
 
 		self._DICTIN_ = {  # holds the values for the clocks frame
+		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			NAME_NEXT_EVENT: "",  # name of next event
 			INTERVAL_COUNT: 0,  # interval count
 			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -771,6 +775,7 @@ class CLASS_CLOCKS(object):
 			TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
+		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 		}
 
 		self._DICTOUT_ = {
@@ -932,7 +937,7 @@ class CLASS_CLOCKS(object):
 		self._MAINFRAME_.close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
-	def updateFromDict(self, dictToUpdateFrom_=self._DICT_, setLocalDict_=True):
+	def updateFromDict(self, dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
 		_tempDictToUpdateFrom_ = {}
 		for _key_, val_ in dictToUpdateFrom_.items():
 			_val_ = val_
@@ -946,6 +951,7 @@ class CLASS_CLOCKS(object):
 		if setLocalDict_ is True:
 			self._DICTIN_[_key_] = val_
 		self._MAINFRAME_.fill(_tempDictToUpdateFrom_)
+		__dummy__ = self._MAINFRAME_.Read(timeout=1)
 
 	def readToDict(self, dictToReadTo_=self._DICTOUT_, setLocalDict_=True):
 		_dictToRtn_ = {}
@@ -955,45 +961,49 @@ class CLASS_CLOCKS(object):
 				self._DICTOUT_[_key_] = _dictToRtn_[_key_]
 		return _dictToRtn_
 
-	def updateClocks():
-		self._DICTIN_, _wasUpdated_ = updateClocks(self._DICTIN_)
-		if _wasUpdated_ is True:
-			self.updateFromDict(setLocalDict_=False)
-
 	def runaway(moveMpx_=(0, 0)):
-		global \
-			TIMEMS_NEXT_MOVED
-
-		if NOWMS < TIMEMS_NEXT_MOVED:
+		if NOWMS < self._TIME_TO_MOVE_:
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
-		TIMEMS_NEXT_MOVED = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
+		self._TIME_TO_MOVE_ += SZ_TIMEMS_BETWEEN_MOVES
 		_screenSZX_, _screenSZY_ = self._MAINFRAME_.GetScreenDimensions()
-		_TSizeX_, _TSizeY_ = self._MAINFRAME_.Size()
-		_TLcnX_, _TLcnY_ = self._MAINFRAME_.CurrentLocation()
-		_moveToX_ = _TLcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
-		_moveToY_ = _TLcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
+		_sizeX_, _sizeY_ = self._MAINFRAME_.Size()
+		_lcnX_, _lcnY_ = self._MAINFRAME_.CurrentLocation()
+		_moveToX_ = _lcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
+		_moveToY_ = _lcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
 
 		if _moveToX_ < 0:
 			_moveToX_ = 0
-		elif _moveToX_ > (_screenSZX_ - _TSizeX_):
-			_moveToX_ = (_screenSZX_ - _TSizeX_)
+		elif _moveToX_ > (_screenSZX_ - _sizeX_):
+			_moveToX_ = (_screenSZX_ - _sizeX_)
 
 		if _moveToY_ < 0:
 			_moveToY_ = 0
-		elif _moveToY_ > (_screenSZY_ - _TSizeY_):
-			_moveToY_ = (_screenSZY_ - _TSizeY_)
+		elif _moveToY_ > (_screenSZY_ - _sizeY_):
+			_moveToY_ = (_screenSZY_ - _sizeY_)
 
-		# print(f"""likely moving abs(_moveToX_ - _TLcnX_) {abs(_moveToX_ - _TLcnX_)} abs(_moveToY_ - _TLcnY_) {abs(_moveToY_ - _TLcnY_)} SZ_MAX_DELTA {SZ_MAX_DELTA}""")
+		# print(f"""likely moving abs(_moveToX_ - _lcnX_) {abs(_moveToX_ - _lcnX_)} abs(_moveToY_ - _lcnY_) {abs(_moveToY_ - _lcnY_)} SZ_MAX_DELTA {SZ_MAX_DELTA}""")
 			# avoid trouble with spurious moves caused by a process delaying anything here too far
-		if (abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA):
-			# print(f"""(abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA) (abs({_moveToX_} - {_TLcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToX_ - _TLcnX_) > SZ_MAX_DELTA)}""")
-			# print(f"""(abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA) (abs({_moveToY_} - {_TLcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToY_ - _TLcnY_) > SZ_MAX_DELTA)}""")
+		if (abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA):
+			# print(f"""(abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) (abs({_moveToX_} - {_lcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA)}""")
+			# print(f"""(abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA) (abs({_moveToY_} - {_lcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA)}""")
 			return
 
 		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
 
+	def update():
+		if (NOWMS >= self._TIME_TO_UPDATE_):
+			return
 
+		self._TIME_TO_UPDATE_ += SZ_TIMEMS_BETWEEN_UPDATES
+		self._DICTIN_, _wasUpdated_ = updateClocks(self._DICTIN_)
+		if _wasUpdated_ is True:
+			self.updateFromDict(setLocalDict_=False)
+		if (MAPPDS[CHECKBOX_RUNAWAY] is True):
+			_mouseDirection_ = checkMouseLcn(self._THIS_FORM_NAME_, )
+			self.runaway()
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 class CLASS_THECLOCK(object):
 	global \
