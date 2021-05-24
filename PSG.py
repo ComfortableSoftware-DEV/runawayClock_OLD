@@ -756,24 +756,28 @@ class CLASS_CLOCKS(object):
 	def __init__(self, keyBase_, formName_):
 		self._THIS_KEY_BASE_ = keyBase_
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
+		self._THIS_FORM_NAME_ = formName_
 
 		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH
-		self._BBOX_ = (0, 0, 0, 0)
-		self._CLOSE_BBOX_ = (0, 0, 0, 0)
+		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH
+		self._ALPHA_LOW_ = SZ_ALPHA_LOW
+		self._BBOX_ = EMPTY_BBOX
+		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM
+		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY
+		self._CLOSE_BBOX_ = EMPTY_BBOX
 		self._KEY_DICT_ = {}
 		self._KEY_DICT_REVERSE_ = {}
-		self._LOCATION_ = (0, 0)
+		self._LAST_LOCATION_ = EMPTY_XY
+		self._LOCATION_ = EMPTY_XY
 		self._MAINFRAME_ = None
-		self._SIZE_ = (0, 0)
-		self._THIS_FORM_NAME_ = formName_
+		self._SCREEN_DIMS_ = EMPTY_XY
+		self._SIZE_ = EMPTY_XY
 		self._TIME_KEY_LIST_ = []
-		self._TIME_TO_CHECK_MOUSE_ = 0
-		self._TIME_TO_MOVE_ = 0
-		self._TIME_TO_UPDATE_ = 0
-
+		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK
+		self._TIME_TO_MOVE_ = ZERO_CLOCK
+		self._TIME_TO_UPDATE_ = ZERO_CLOCK
 
 		self._DICTIN_ = {  # holds the values for the clocks frame
-		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			NAME_NEXT_EVENT: "",  # name of next event
 			INTERVAL_COUNT: 0,  # interval count
 			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
@@ -781,7 +785,6 @@ class CLASS_CLOCKS(object):
 			TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
-		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 		}
 
 		self._DICTOUT_ = {
@@ -943,6 +946,9 @@ class CLASS_CLOCKS(object):
 		self._MAINFRAME_.close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
+	def quickRead(self):
+		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
+
 	def updateFromDict(self, dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
 		_tempDictToUpdateFrom_ = {}
 		for _key_, val_ in dictToUpdateFrom_.items():
@@ -971,14 +977,14 @@ class CLASS_CLOCKS(object):
 		if NOWMS < self._TIME_TO_CHECK_MOUSE_:
 			return
 
-		self._TIME_TO_CHECK_MOUSE_ += SZ_TIMEMS_BETWEEN_MOUSE_CHECKS
+		self._TIME_TO_CHECK_MOUSE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOUSE_CHECKS
 		_statusToRtn_ = None
 		_mpxToRtn_ = (0, 0)
-		_TLcn_ = getElementLocation(formName_)
+		_TLcn_ = self._LOCATION_
+		_TSizeX_, _TSizeY_ = _TSize_ = self._SIZE_
 		_TMouseLcnX_, _TMouseLcnY_ = _TMouseLcn_ = getMousePos()
-		_TBBoxWest_, _TBBoxNorth_, _TBBoxEast_, _TBBoxSouth_ = _TBBox_ = getBBox(_TLcn_, MAPPDS[FORM_CURRENT_SIZE])
-		_TCloseBBox_ = getCloseBBox(_TLcn_, MAPPDS[FORM_CURRENT_SIZE])
-		_TSize_ = MAPPDS[FORM_CURRENT_SIZE]
+		_TBBoxWest_, _TBBoxNorth_, _TBBoxEast_, _TBBoxSouth_ = _TBBox_ = getBBox(_TLcn_, self._SIZE_)
+		_TCloseBBox_ = getCloseBBox(_TLcn_, self._SIZE_)
 		_isInCloseBBox_ = isInBBox(_TCloseBBox_, _TMouseLcn_)
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -1093,6 +1099,7 @@ class CLASS_CLOCKS(object):
 			return
 
 		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
+
 
 	def update():
 		if (NOWMS >= self._TIME_TO_UPDATE_):
@@ -1564,7 +1571,7 @@ def checkMouseLcn(formName_, oldFrameLocation_):
 	_TMouseLcnX_, _TMouseLcnY_ = _TMouseLcn_ = getMousePos()
 	_TBBoxWest_, _TBBoxNorth_, _TBBoxEast_, _TBBoxSouth_ = _TBBox_ = getBBox(_TLcn_, MAPPDS[FORM_CURRENT_SIZE])
 	_TCloseBBox_ = getCloseBBox(_TLcn_, MAPPDS[FORM_CURRENT_SIZE])
-	_TSize_ = MAPPDS[FORM_CURRENT_SIZE]
+	self._SIZE_ = MAPPDS[FORM_CURRENT_SIZE]
 	_isInCloseBBox_ = isInBBox(_TCloseBBox_, _TMouseLcn_)
 
 	if compareXY(_TLcn_, oldFrameLocation_) is False:
