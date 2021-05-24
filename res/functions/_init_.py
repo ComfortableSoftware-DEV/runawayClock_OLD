@@ -9,6 +9,7 @@
 		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM
 		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY
 		self._CLOSE_BBOX_ = EMPTY_BBOX
+		self._DIMMED_ = False
 		self._KEY_DICT_ = {}
 		self._KEY_DICT_REVERSE_ = {}
 		self._LAST_LOCATION_ = EMPTY_XY

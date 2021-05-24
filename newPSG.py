@@ -38,7 +38,7 @@ BTN_QUIT_EDITOR = "BTN_QUIT_EDITOR"  # key for all of the button xpand
 BTN_UP = "BTN_UP"  # key for all of the button xpand
 BTN_XPAND = "BTN_XPAND"  # key for all of the button xpand
 BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
-CHECKBOX_ALPHA_LOW = "CHECKBOX_ALPHA_LOW"  # is the clock transparent under mouse (ineffective if mouse is avoided)
+CHECKBOX_ALPHA_DIM = "CHECKBOX_ALPHA_DIM"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 CHECKBOX_DISMISSED = "CHECKBOX_DISMISSED"  # key for avoiding the mouse bool
 CHECKBOX_ENABLED = "CHECKBOX_ENABLED"  # key for avoiding the mouse bool
 CHECKBOX_FIRSTRUN = "CHECKBOX_FIRSTRUN"  # key for avoiding the mouse bool
@@ -558,12 +558,12 @@ BTN_ZERO32 = {  #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0908 checkbox elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CHECKBOX_ALPHA_LOW01 = {  # checkbox for alpha under mouse
+CHECKBOX_ALPHA_DIM01 = {  # checkbox for alpha under mouse
 	TEXT: "ALPHA_LOW",  # simple text reminder
 	TOOLTIP: "low alpha under mouse",  # comment
 	DEFAULT: True,  # leave it on by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
-	KEY: CHECKBOX_ALPHA_LOW,  # set the key for the checkbox
+	KEY: CHECKBOX_ALPHA_DIM,  # set the key for the checkbox
 }
 
 
@@ -842,7 +842,7 @@ class CLASS_CLOCKS(object):
 					**CHECKBOX_RUNAWAY01  # add elapsed time
 				),
 				SG.Checkbox(  # add a new text element to row01 clocks column
-					**CHECKBOX_ALPHA_LOW01  # add elapsed time
+					**CHECKBOX_ALPHA_DIM01  # add elapsed time
 				),
 			],
 		]
@@ -984,14 +984,7 @@ class CLASS_THECLOCK(object):
 # * SCTN090C MAPPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
-	ALPHA_CHANNEL: 1.0,  # current AlphaChannel setting
-	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
-	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
 	APPMODE: APPMODE_NONE,  # default mode is clocks
-	BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
-	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
-	CHECKBOX_RUNAWAY: False,  # default to avoiding mouse
-	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
 			ALARMPOPUP_PROPER: None,  # time of this event
@@ -1068,11 +1061,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 	},
-	FORM_CURRENT_LCN: EMPTY_XY,  # current screen position
-	FORM_CURRENT_SIZE: EMPTY_XY,  # current screen position
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
-	MOUSE_LCN: (0, 0),  # track mouse location
-	SCREEN_DIMS: EMPTY_XY,  # current screen position
 }
 
 

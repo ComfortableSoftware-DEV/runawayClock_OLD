@@ -38,7 +38,7 @@ BTN_QUIT_EDITOR = "BTN_QUIT_EDITOR"  # key for all of the button xpand
 BTN_UP = "BTN_UP"  # key for all of the button xpand
 BTN_XPAND = "BTN_XPAND"  # key for all of the button xpand
 BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
-CHECKBOX_ALPHA_LOW = "CHECKBOX_ALPHA_LOW"  # is the clock transparent under mouse (ineffective if mouse is avoided)
+CHECKBOX_ALPHA_DIM = "CHECKBOX_ALPHA_DIM"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 CHECKBOX_DISMISSED = "CHECKBOX_DISMISSED"  # key for avoiding the mouse bool
 CHECKBOX_ENABLED = "CHECKBOX_ENABLED"  # key for avoiding the mouse bool
 CHECKBOX_FIRSTRUN = "CHECKBOX_FIRSTRUN"  # key for avoiding the mouse bool
@@ -558,12 +558,12 @@ BTN_ZERO32 = {  #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0908 checkbox elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-CHECKBOX_ALPHA_LOW01 = {  # checkbox for alpha under mouse
+CHECKBOX_ALPHA_DIM01 = {  # checkbox for alpha under mouse
 	TEXT: "ALPHA_LOW",  # simple text reminder
 	TOOLTIP: "low alpha under mouse",  # comment
 	DEFAULT: True,  # leave it on by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
-	KEY: CHECKBOX_ALPHA_LOW,  # set the key for the checkbox
+	KEY: CHECKBOX_ALPHA_DIM,  # set the key for the checkbox
 }
 
 
@@ -789,7 +789,7 @@ class CLASS_CLOCKS(object):
 
 		self._DICTOUT_ = {
 			CHECKBOX_RUNAWAY: False,
-			CHECKBOX_ALPHA_LOW: True,
+			CHECKBOX_ALPHA_DIM: True,
 		}
 
 		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count
@@ -874,7 +874,7 @@ class CLASS_CLOCKS(object):
 					**CHECKBOX_RUNAWAY01  # add elapsed time
 				),
 				SG.Checkbox(  # add a new text element to row01 clocks column
-					**CHECKBOX_ALPHA_LOW01  # add elapsed time
+					**CHECKBOX_ALPHA_DIM01  # add elapsed time
 				),
 			],
 		]
@@ -931,11 +931,11 @@ class CLASS_CLOCKS(object):
 
 	def __enter__(self):
 		global \
-			ALL_THE_FORMS, \
-			MAPPDS
+			ALL_THE_FORMS
 		#
 		self._MAINFRAME_ = SG.Window(**self._WINDOW_).finalize()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = self._MAINFRAME_
+		self.init()
 		return self
 
 	def __exit__(self, *args_):
@@ -973,7 +973,7 @@ class CLASS_CLOCKS(object):
 				self._DICTOUT_[_key_] = _dictToRtn_[_key_]
 		return _dictToRtn_
 
-	def checkMouseLcn():
+	def checkMouse():
 		if NOWMS < self._TIME_TO_CHECK_MOUSE_:
 			return
 
@@ -983,14 +983,9 @@ class CLASS_CLOCKS(object):
 		_TLcn_ = self._LOCATION_
 		_TSizeX_, _TSizeY_ = _TSize_ = self._SIZE_
 		_TMouseLcnX_, _TMouseLcnY_ = _TMouseLcn_ = getMousePos()
-		_TBBoxWest_, _TBBoxNorth_, _TBBoxEast_, _TBBoxSouth_ = _TBBox_ = getBBox(_TLcn_, self._SIZE_)
-		_TCloseBBox_ = getCloseBBox(_TLcn_, self._SIZE_)
+		_TBBoxWest_, _TBBoxNorth_, _TBBoxEast_, _TBBoxSouth_ = _TBBox_ = self._BBOX_
+		_TCloseBBox_ = self._CLOSE_BBOX_
 		_isInCloseBBox_ = isInBBox(_TCloseBBox_, _TMouseLcn_)
-
-		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if compareXY(_TLcn_, oldFrameLocation_) is False:
-			updateMappds(_TLcn_)
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (_TBBoxWest_ < _TMouseLcnX_ < _TBBoxEast_) and (_TMouseLcnY_ < _TBBoxNorth_):
@@ -1010,6 +1005,7 @@ class CLASS_CLOCKS(object):
 
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		elif (_TMouseLcnX_ < _TBBoxWest_) and (_TBBoxNorth_< _TMouseLcnY_ < _TBBoxSouth_):
+			_mpxToRtn_ = (1, 0)
 			if _isInCloseBBox_ is True:
 				_statusToRtn_ = MOUSE_STATUS_CLOSE_W
 			else:
@@ -1017,6 +1013,7 @@ class CLASS_CLOCKS(object):
 
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		elif (_TMouseLcnX_ > _TBBoxEast_) and (_TBBoxNorth_< _TMouseLcnY_ < _TBBoxSouth_):
+			_mpxToRtn_ = (-1, 0)
 			if _isInCloseBBox_ is True:
 				_statusToRtn_ = MOUSE_STATUS_CLOSE_E
 			else:
@@ -1024,6 +1021,7 @@ class CLASS_CLOCKS(object):
 
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		elif (_TMouseLcnY_ > _TBBoxSouth_) and (_TMouseLcnX_ < _TBBoxWest_):
+			_mpxToRtn_ = (1, -1)
 			if _isInCloseBBox_ is True:
 				_statusToRtn_ = MOUSE_STATUS_CLOSE_SW
 			else:
@@ -1031,6 +1029,7 @@ class CLASS_CLOCKS(object):
 
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		elif (_TMouseLcnY_ > _TBBoxSouth_) and (_TMouseLcnX_ > _TBBoxEast_):
+			_mpxToRtn_ = (-1, -1)
 			if _isInCloseBBox_ is True:
 				_statusToRtn_ = MOUSE_STATUS_CLOSE_SE
 			else:
@@ -1038,6 +1037,7 @@ class CLASS_CLOCKS(object):
 
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		elif (_TMouseLcnY_ < _TBBoxNorth_) and (_TMouseLcnX_ < _TBBoxWest_):
+			_mpxToRtn_ = (1, 1)
 			if _isInCloseBBox_ is True:
 				_statusToRtn_ = MOUSE_STATUS_CLOSE_NW
 			else:
@@ -1045,6 +1045,7 @@ class CLASS_CLOCKS(object):
 
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		elif (_TMouseLcnY_ < _TBBoxNorth_) and (_TMouseLcnX_ > _TBBoxEast_):
+			_mpxToRtn_ = (-1, 1)
 			if _isInCloseBBox_ is True:
 				_statusToRtn_ = MOUSE_STATUS_CLOSE_NE
 			else:
@@ -1052,16 +1053,17 @@ class CLASS_CLOCKS(object):
 
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		elif isInBBox(_TBBox_, _TMouseLcn_) is True:
+			_mpxToRtn_ = (0, 0)
 			_statusToRtn_ = MOUSE_STATUS_OVER
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_statusToRtn_ == MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS != MOUSE_STATUS_OVER) and (MAPPDS[CHECKBOX_ALPHA_LOW] is True):
-			FORMMAIN.AlphaChannel = MAPPDS[ALPHA_LOW]
-			alphaMode = True
+		if (_statusToRtn_ == MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ != MOUSE_STATUS_OVER) and (self._CHECKBOX_ALPHA_DIM_] is True):
+			self._MAINFRAME_.AlphaChannel = self._ALPHA_LOW_
+			self._DIMMED_ = True
 
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-		elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS == MOUSE_STATUS_OVER)) or ((LAST_MOUSE_STATUS == MOUSE_STATUS_OVER) and (ALPHA_MODE is True) and (MAPPDS[CHECKBOX_ALPHA_LOW] is False)):
+	elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER)) or ((self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER) and (self._DIMMED_ is True) and (self._CHECKBOX_ALPHA_DIM_] is False)):
 			FORMMAIN.AlphaChannel = MAPPDS[ALPHA_HIGH]
 			alphaMode = False
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
@@ -1070,7 +1072,7 @@ class CLASS_CLOCKS(object):
 		# print(f"""returning {_statusToRtn_}""")
 		return _statusToRtn_
 
-	def runaway(moveMpx_=(0, 0)):
+	def runaway(self, moveMpx_=(0, 0)):
 		if NOWMS < self._TIME_TO_MOVE_:
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
@@ -1190,7 +1192,7 @@ MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this 
 	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
 	APPMODE: APPMODE_NONE,  # default mode is clocks
 	BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
-	CHECKBOX_ALPHA_LOW: True,  # default transparent under mouse when not cornered to True
+	CHECKBOX_ALPHA_DIM: True,  # default transparent under mouse when not cornered to True
 	CHECKBOX_RUNAWAY: False,  # default to avoiding mouse
 	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
@@ -1637,11 +1639,11 @@ def checkMouseLcn(formName_, oldFrameLocation_):
 	if isInBBox(_TBBox_, _TMouseLcn_) is True:
 		_statusToRtn_ = MOUSE_STATUS_OVER
 
-	if (_statusToRtn_ == MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS != MOUSE_STATUS_OVER) and (MAPPDS[CHECKBOX_ALPHA_LOW] is True):
+	if (_statusToRtn_ == MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS != MOUSE_STATUS_OVER) and (MAPPDS[CHECKBOX_ALPHA_DIM] is True):
 		FORMMAIN.AlphaChannel = MAPPDS[ALPHA_LOW]
 		alphaMode = True
 
-	elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS == MOUSE_STATUS_OVER)) or ((LAST_MOUSE_STATUS == MOUSE_STATUS_OVER) and (ALPHA_MODE is True) and (MAPPDS[CHECKBOX_ALPHA_LOW] is False)):
+	elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS == MOUSE_STATUS_OVER)) or ((LAST_MOUSE_STATUS == MOUSE_STATUS_OVER) and (ALPHA_MODE is True) and (MAPPDS[CHECKBOX_ALPHA_DIM] is False)):
 		FORMMAIN.AlphaChannel = MAPPDS[ALPHA_HIGH]
 		alphaMode = False
 
@@ -2033,8 +2035,8 @@ def reallyDoIt():
 #		elif _event_ == CHECKBOX_RUNAWAY:
 #			MAPPDS[CHECKBOX_RUNAWAY] = not MAPPDS[CHECKBOX_RUNAWAY]
 #
-#		elif _event_ == CHECKBOX_ALPHA_LOW:
-#			MAPPDS[CHECKBOX_ALPHA_LOW] = not MAPPDS[CHECKBOX_ALPHA_LOW]
+#		elif _event_ == CHECKBOX_ALPHA_DIM:
+#			MAPPDS[CHECKBOX_ALPHA_DIM] = not MAPPDS[CHECKBOX_ALPHA_DIM]
 #
 #		elif _event_ == BTN_ZERO:
 #			CLOCKS_DICT[TIME_AT_ZEROELAPSE] = NOWS

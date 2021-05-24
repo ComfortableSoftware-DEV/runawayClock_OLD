@@ -6,7 +6,7 @@
 		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
 		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
 		self._CLOSE_BBOX_ = getCloseBBox(self._LOCATION_, self._SIZE_)
-		# self._DICTIN_, _wasUpdated_ = updateClocks(self._DICTIN_)
+		self._DICTIN_, _wasUpdated_ = updateClocks(self._DICTIN_)
 		if _wasUpdated_ is True:
 			self.updateFromDict(setLocalDict_=False)
 		if (self._CHECKBOX_RUNAWAY_ is True):
