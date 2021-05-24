@@ -355,6 +355,18 @@ ALERTING_LIST = [  # list that holds all currently alarming events
 ]
 
 
+APPDS_TIMES_LIST = [  # list of all keys to times for midnight etc. processing
+	TIME_ALARM,  # 
+	TIME_AT_LAST_RUN,  # 
+	TIME_AT_NEXT,  # 
+	TIME_INTERVAL,  # 
+	TIME_INTERVAL_START,  # 
+	TIME_INTERVAL__BEGIN,  # 
+	TIME_INTERVAL__END,  # 
+	TIME_LEN_RING,  # 
+]
+
+
 CLOSE_LIST = [  # list with close statuses
 	MOUSE_STATUS_CLOSE_E,  # easet close entry
 	MOUSE_STATUS_CLOSE_N,  # easet close entry
@@ -368,18 +380,6 @@ CLOSE_LIST = [  # list with close statuses
 
 
 INTERVALLING_LIST = [  # list that holds all currently alarming events
-]
-
-
-MAPPDS_TIMES_LIST = [  # list of all keys to times for midnight etc. processing
-	TIME_ALARM,  # 
-	TIME_AT_LAST_RUN,  # 
-	TIME_AT_NEXT,  # 
-	TIME_INTERVAL,  # 
-	TIME_INTERVAL_START,  # 
-	TIME_INTERVAL__BEGIN,  # 
-	TIME_INTERVAL__END,  # 
-	TIME_LEN_RING,  # 
 ]
 
 
@@ -752,31 +752,28 @@ class CLASS_CLOCKS(object):
 		ALL_THE_FORMS
 
 	def __init__(self, keyBase_, formName_):
-		self._THIS_KEY_BASE_ = keyBase_
-		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
-		self._THIS_FORM_NAME_ = formName_
+		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  # 
+		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  # 
+		self._ALPHA_LOW_ = SZ_ALPHA_LOW  # 
+		self._BBOX_ = EMPTY_BBOX  # 
+		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM  # 
+		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY  # 
+		self._CLOSE_BBOX_ = EMPTY_BBOX  # 
+		self._DIMMED_ = False  # 
+		self._KEY_DICT_ = {}  # 
+		self._KEY_DICT_REVERSE_ = {}  # 
+		self._LAST_LOCATION_ = EMPTY_XY  # 
+		self._LOCATION_ = EMPTY_XY  # 
+		self._MAINFRAME_ = None  # 
+		self._MOUSE_LOCATION_ = EMPTY_XY  # 
+		self._MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
+		self._SCREEN_DIMS_ = EMPTY_XY  # 
+		self._SIZE_ = EMPTY_XY  # 
+		self._TIME_KEY_LIST_ = []  # 
+		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK  # 
+		self._TIME_TO_MOVE_ = ZERO_CLOCK  # 
+		self._TIME_TO_UPDATE_ = ZERO_CLOCK  # 
 
-		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH
-		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH
-		self._ALPHA_LOW_ = SZ_ALPHA_LOW
-		self._BBOX_ = EMPTY_BBOX
-		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM
-		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY
-		self._CLOSE_BBOX_ = EMPTY_BBOX
-		self._DIMMED_ = False
-		self._KEY_DICT_ = {}
-		self._KEY_DICT_REVERSE_ = {}
-		self._LAST_LOCATION_ = EMPTY_XY
-		self._LOCATION_ = EMPTY_XY
-		self._MAINFRAME_ = None
-		self._SCREEN_DIMS_ = EMPTY_XY
-		self._SIZE_ = EMPTY_XY
-		self._TIME_KEY_LIST_ = []
-		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK
-		self._TIME_TO_MOVE_ = ZERO_CLOCK
-		self._TIME_TO_UPDATE_ = ZERO_CLOCK
-
-		# silly comments
 		self._DICTIN_ = {  # holds the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
 			INTERVAL_COUNT: 0,  # interval count
@@ -921,12 +918,39 @@ class CLASS_CLOCKS(object):
 			_LAYOUT_: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
 		}
 
+		__CDS__ = {
+			COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
+			COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
+			COLUMN02: self._COLUMN02_,  # holds the values for the clocks frame
+			COLUMN02: self._COLUMN02_,  # holds the values for the clocks frame
+			ALPHA_CHANNEL: self._ALPHA_CHANNEL_,
+			ALPHA_HIGH: self._ALPHA_HIGH_,
+			ALPHA_LOW: self._ALPHA_LOW_,
+			BBOX: self._BBOX_,
+			CHECKBOX_ALPHA_DIM: self._CHECKBOX_ALPHA_DIM_,
+			CHECKBOX_RUNAWAY: self._CHECKBOX_RUNAWAY_,
+			CLOSE_BBOX: self._CLOSE_BBOX_,
+			DIMMED: self._DIMMED_,
+			KEY_DICT: self._KEY_DICT_,
+			KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
+			LAST_LOCATION: self._LAST_LOCATION_,
+			LOCATION: self._LOCATION_,
+			MAINFRAME: self._MAINFRAME_,
+			MOUSE_LOCATION: self._MOUSE_LOCATION_,
+			MOUSE_STATUS: self._MOUSE_STATUS_,
+			SCREEN_DIMS: self._SCREEN_DIMS_,
+			SIZE: self._SIZE_,
+			TIME_KEY_LIST: self._TIME_KEY_LIST_,
+			TIME_TO_CHECK_MOUSE: self._TIME_TO_CHECK_MOUSE_,
+			TIME_TO_MOVE: self._TIME_TO_MOVE_,
+			TIME_TO_UPDATE: self._TIME_TO_UPDATE_,
+		}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN090C MAPPDS
+# * SCTN090C APPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
+APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and this app
 	APPMODE: APPMODE_NONE,  # default mode is clocks
 	EVENT_ENTRIES: {  # holds events
 		0: {

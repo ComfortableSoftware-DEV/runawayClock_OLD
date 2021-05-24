@@ -700,6 +700,7 @@ FMPSG_SCTN0915_PUDLG_LIST_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
 FMPSG_SCTN0915_PUDLG_TYPE_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
 FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_BTNS_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN0916_CLASS_CDS_DICT = {}  # class data storage
 FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_CHECKBOX_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
@@ -714,7 +715,9 @@ FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT = {}  # define the dict to hold everything i
 FMPSG_SCTN0916_CLASS_DICT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FUNCTION_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_INIT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
@@ -1063,6 +1066,7 @@ TBGLST = [
 	("FMPSG_SCTN0916_CLASS_COLUMN_PARMS_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_COMBO_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_COMBO_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_CDS_DICT", FMAXFM_SCTN0103_DICT_DEF, "class data storage",),
 	("FMPSG_SCTN0916_CLASS_DEF_DICT", FMAXFM_SCTN0103_DICT_DEF, "str and val defines in a class",),
 	("FMPSG_SCTN0916_CLASS_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
@@ -1487,6 +1491,7 @@ TBGLST = [
 	("PSGVAL__CHECKBOX_SNOOZED0101", FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD, "CHECKBOX_SNOOZED01", "DEFAULT", "False", "leave it off by default",),
 	("PSGVAL__CHECKBOX_SNOOZED0101", FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD, "CHECKBOX_SNOOZED01", "ENABLE_EVENTS", "True", "set the key for the checkbox",),
 	("PSGVAL__CHECKBOX_SNOOZED0101", FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD, "CHECKBOX_SNOOZED01", "KEY", "CHECKBOX_SNOOZED", "set the key for the checkbox",),
+	("PSGVAL__CLOCKS", FMAXPSG_SCTN0916_CLASS_DEF, "CLOCKS", "comment",),
 	("PSGVAL__CLOCKS_COLUMN01", FMAX_NOP, "the column for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_COLUMN0100", FMAXPSG_SCTN0916_CLASS_COLUMN_DEF, "CLOCKS", "_COLUMN01_", "the column that puts the two smaller clocks below the main one",),
 	("PSGVAL__CLOCKS_COLUMN0101", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "_COLUMN01_", "COLUMN01_ROW_00", "L03", "add a new row to clocks column",),
@@ -2300,11 +2305,12 @@ def makePSGClasses():
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if _thisClassName_ in FMPSG_SCTN0916_CLASS_DEF_DICT:
+			if (_thisClassName_ in FMPSG_SCTN0916_CLASS_DEF_DICT):
 				# print(f"""FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT {FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT}""")
 				for _thisValName_, _thisVal_ in FMPSG_SCTN0916_CLASS_DEF_DICT[_thisClassName_].items():
 					_strToRtn_ += f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}{NEWLINE}"""
 				_strToRtn_ += f"""{NEWLINE}"""
+		_strToRtn_ += f"""{NEWLINE}"""
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -2441,6 +2447,9 @@ def makePSGClasses():
 {_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
 """
 
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+
 ### *frame goes here
 
 ### * functions go here
@@ -2450,7 +2459,12 @@ def makePSGClasses():
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-		_strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
+
+		_strToRtn_ += f"""{NTAB(2)}__CDS__ = {OBRCE}{NEWLINE}"""
+		for _thisItem_ in FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_]:
+			_strToRtn_ += f"""{_thisItem_}"""
+
+		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2792,6 +2806,7 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0915_PUDLG_TYPE_DICT, \
 		FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_BTNS_DICT, \
+		FMPSG_SCTN0916_CLASS_CDS_DICT, \
 		FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_CHECKBOX_DICT, \
 		FMPSG_SCTN0916_CLASS_CMNT_DICT, \
@@ -2806,7 +2821,9 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0916_CLASS_DICT_DICT, \
 		FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_FRAME_DICT, \
+		FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_FUNCTION_DICT, \
+		FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_INIT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_DICT, \
@@ -4499,6 +4516,9 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_INIT_DICT:
 				FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_] = []
 
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_CDS_DICT:
+				FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_] = []
+
 			FMPSG_SCTN0916_CLASS_CMNT_DICT[_thisClassName_] = f"""{_thisComment_}"""
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4514,15 +4534,22 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
 				continue
+
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
+
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT:
 				FMPSG_SCTN0916_CLASS_BTNS_DICT[_thisClassName_] = {}
 			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT[_thisClassName_]:
 				FMPSG_SCTN0916_CLASS_BTNS_DICT[_thisClassName_][_thisElementName_] = ""
+
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName},  # {_thisComment_}{NEWLINE}""")
+
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT[_thisClassName_] = {}
+
 			FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4602,7 +4629,9 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_] = {}
 
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName},  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4668,6 +4697,8 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_COLUMN_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN0916_CLASS_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -5016,6 +5047,8 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5125,6 +5158,9 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_INIT_DICT:
 				FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_] = []
 
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_CDS_DICT:
+				FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_] = []
+
 			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].append(f"""{_thisParmStr_}""")
 
 			continue
@@ -5187,6 +5223,7 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ - _thisItem_[4]
 
 			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT[_thisClassName_] = {}
@@ -5206,9 +5243,7 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 
 			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{NEWLINE}""")
-
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT:
-				FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT[_thisClassName_] = {}
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2

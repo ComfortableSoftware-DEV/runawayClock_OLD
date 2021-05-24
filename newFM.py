@@ -305,12 +305,12 @@ FMAXPSG_SCTN090B_COLUMN_RADIO_ADD = "FMAXPSG_SCTN090B_COLUMN_RADIO_ADD"  # add a
 FMAXPSG_SCTN090B_COLUMN_ROW_ADD = "FMAXPSG_SCTN090B_COLUMN_ROW_ADD"  # add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>
 FMAXPSG_SCTN090B_COLUMN_SPIN_ADD = "FMAXPSG_SCTN090B_COLUMN_SPIN_ADD"  # add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
 FMAXPSG_SCTN090B_COLUMN_TEXT_ADD = "FMAXPSG_SCTN090B_COLUMN_TEXT_ADD"  # add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-FMAXPSG_SCTN090C_MAPPDS_DEF = "FMAXPSG_SCTN090C_MAPPDS_DEF"  # add a nested dict holding all of the variables passed between PySimpleGUI and this app
-FMAXPSG_SCTN090C_MAPPDS_DICT_DEF = "FMAXPSG_SCTN090C_MAPPDS_DICT_DEF"  # add a dict to the mainapp dict <NAC><DICTNAME
-FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD = "FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD"  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
-FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD = "FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD"  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
-FMAXPSG_SCTN090C_MAPPDS_VS_ADD = "FMAXPSG_SCTN090C_MAPPDS_VS_ADD"  # add a string to the mainapp dict <NAC><KEY><STR>
-FMAXPSG_SCTN090C_MAPPDS_VV_ADD = "FMAXPSG_SCTN090C_MAPPDS_VV_ADD"  # add a value to the mainapp dict <NAC><KEY><VAL>
+FMAXPSG_SCTN090C_APPDS_DEF = "FMAXPSG_SCTN090C_APPDS_DEF"  # add a nested dict holding all of the variables passed between PySimpleGUI and this app
+FMAXPSG_SCTN090C_APPDS_DICT_DEF = "FMAXPSG_SCTN090C_APPDS_DICT_DEF"  # add a dict to the mainapp dict <NAC><DICTNAME
+FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD = "FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD"  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
+FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD = "FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD"  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
+FMAXPSG_SCTN090C_APPDS_VS_ADD = "FMAXPSG_SCTN090C_APPDS_VS_ADD"  # add a string to the mainapp dict <NAC><KEY><STR>
+FMAXPSG_SCTN090C_APPDS_VV_ADD = "FMAXPSG_SCTN090C_APPDS_VV_ADD"  # add a value to the mainapp dict <NAC><KEY><VAL>
 FMAXPSG_SCTN090D_FORMMAIN_DEF = "FMAXPSG_SCTN090D_FORMMAIN_DEF"  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD = "FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD"  # add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD = "FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD"  # add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
@@ -502,12 +502,12 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN090B_COLUMN_ROW_ADD,  # add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>
 	FMAXPSG_SCTN090B_COLUMN_SPIN_ADD,  # add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
 	FMAXPSG_SCTN090B_COLUMN_TEXT_ADD,  # add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090C_MAPPDS_DEF,  # add a nested dict holding all of the variables passed between PySimpleGUI and this app
-	FMAXPSG_SCTN090C_MAPPDS_DICT_DEF,  # add a dict to the mainapp dict <NAC><DICTNAME
-	FMAXPSG_SCTN090C_MAPPDS_DICT_VS_ADD,  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
-	FMAXPSG_SCTN090C_MAPPDS_DICT_VV_ADD,  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
-	FMAXPSG_SCTN090C_MAPPDS_VS_ADD,  # add a string to the mainapp dict <NAC><KEY><STR>
-	FMAXPSG_SCTN090C_MAPPDS_VV_ADD,  # add a value to the mainapp dict <NAC><KEY><VAL>
+	FMAXPSG_SCTN090C_APPDS_DEF,  # add a nested dict holding all of the variables passed between PySimpleGUI and this app
+	FMAXPSG_SCTN090C_APPDS_DICT_DEF,  # add a dict to the mainapp dict <NAC><DICTNAME
+	FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD,  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
+	FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD,  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
+	FMAXPSG_SCTN090C_APPDS_VS_ADD,  # add a string to the mainapp dict <NAC><KEY><STR>
+	FMAXPSG_SCTN090C_APPDS_VV_ADD,  # add a value to the mainapp dict <NAC><KEY><VAL>
 	FMAXPSG_SCTN090D_FORMMAIN_DEF,  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 	FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD,  # add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 	FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD,  # add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
@@ -675,9 +675,9 @@ FMPSG_SCTN090A_RADIO_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090B_COLUMN_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090B_COLUMN_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090B_COLUMN_PARMS_DICT = {}  # holds all of the button entriess (TUPDICT)
-FMPSG_SCTN090C_MAPPDS_CMNT_DICT = {}  # the main app dict for this app
-FMPSG_SCTN090C_MAPPDS_DICT = {}  # the main app dict for this app
-FMPSG_SCTN090C_MAPPDSDICT_DICT = {}  # the main app dict+dict for this app
+FMPSG_SCTN090C_APPDS_CMNT_DICT = {}  # the main app dict for this app
+FMPSG_SCTN090C_APPDS_DICT = {}  # the main app dict for this app
+FMPSG_SCTN090C_APPDSDICT_DICT = {}  # the main app dict+dict for this app
 FMPSG_SCTN090D_FORMMAIN_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN090D_FORMMAIN_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN090E_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
@@ -700,6 +700,7 @@ FMPSG_SCTN0915_PUDLG_LIST_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
 FMPSG_SCTN0915_PUDLG_TYPE_DICT = {}  # holds all of the DIALOG DIALOG (TUPDICT)
 FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_BTNS_DICT = {}  # holds all of the button entriess (TUPDICT)
+FMPSG_SCTN0916_CLASS_CDS_DICT = {}  # class data storage
 FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_CHECKBOX_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
@@ -714,7 +715,9 @@ FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT = {}  # define the dict to hold everything i
 FMPSG_SCTN0916_CLASS_DICT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FUNCTION_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_INIT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
@@ -800,9 +803,9 @@ FMPSG_SCTN0916_CLASS_WINDOW_DICT = {}  # holds all of the button entriess (TUPDI
 		FMPSG_SCTN090B_COLUMN_CMNT_DICT, \
 		FMPSG_SCTN090B_COLUMN_DICT, \
 		FMPSG_SCTN090B_COLUMN_PARMS_DICT, \
-		FMPSG_SCTN090C_MAPPDS_CMNT_DICT, \
-		FMPSG_SCTN090C_MAPPDS_DICT, \
-		FMPSG_SCTN090C_MAPPDSDICT_DICT, \
+		FMPSG_SCTN090C_APPDS_CMNT_DICT, \
+		FMPSG_SCTN090C_APPDS_DICT, \
+		FMPSG_SCTN090C_APPDSDICT_DICT, \
 		FMPSG_SCTN090D_FORMMAIN_CMNT_DICT, \
 		FMPSG_SCTN090D_FORMMAIN_DICT, \
 		FMPSG_SCTN090E_LAYOUT_CMNT_DICT, \
@@ -825,6 +828,7 @@ FMPSG_SCTN0916_CLASS_WINDOW_DICT = {}  # holds all of the button entriess (TUPDI
 		FMPSG_SCTN0915_PUDLG_TYPE_DICT, \
 		FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_BTNS_DICT, \
+		FMPSG_SCTN0916_CLASS_CDS_DICT, \
 		FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_CHECKBOX_DICT, \
 		FMPSG_SCTN0916_CLASS_CMNT_DICT, \
@@ -839,7 +843,9 @@ FMPSG_SCTN0916_CLASS_WINDOW_DICT = {}  # holds all of the button entriess (TUPDI
 		FMPSG_SCTN0916_CLASS_DICT_DICT, \
 		FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_FRAME_DICT, \
+		FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_FUNCTION_DICT, \
+		FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_INIT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_DICT, \
