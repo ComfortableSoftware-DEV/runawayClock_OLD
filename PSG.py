@@ -757,13 +757,20 @@ class CLASS_CLOCKS(object):
 		self._THIS_KEY_BASE_ = keyBase_
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
 
+		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH
+		self._BBOX_ = (0, 0, 0, 0)
+		self._CLOSE_BBOX_ = (0, 0, 0, 0)
 		self._KEY_DICT_ = {}
 		self._KEY_DICT_REVERSE_ = {}
+		self._LOCATION_ = (0, 0)
 		self._MAINFRAME_ = None
+		self._SIZE_ = (0, 0)
 		self._THIS_FORM_NAME_ = formName_
 		self._TIME_KEY_LIST_ = []
-		self._TIME_TO_UPDATE_ = 0
+		self._TIME_TO_CHECK_MOUSE_ = 0
 		self._TIME_TO_MOVE_ = 0
+		self._TIME_TO_UPDATE_ = 0
+
 
 		self._DICTIN_ = {  # holds the values for the clocks frame
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
@@ -961,10 +968,10 @@ class CLASS_CLOCKS(object):
 		return _dictToRtn_
 
 	def checkMouseLcn():
-		if NOWMS < TIMEMS_NEXT_MOUSE_CHECK:
-			return LAST_MOUSE_STATUS
+		if NOWMS < self._TIME_TO_CHECK_MOUSE_:
+			return
 
-		TIMEMS_NEXT_MOUSE_CHECK = NOWMS + SZ_TIMEMS_BETWEEN_MOUSE_CHECKS
+		self._TIME_TO_CHECK_MOUSE_ += SZ_TIMEMS_BETWEEN_MOUSE_CHECKS
 		_statusToRtn_ = None
 		_mpxToRtn_ = (0, 0)
 		_TLcn_ = getElementLocation(formName_)
