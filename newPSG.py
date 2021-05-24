@@ -776,6 +776,7 @@ class CLASS_CLOCKS(object):
 		self._TIME_TO_MOVE_ = ZERO_CLOCK
 		self._TIME_TO_UPDATE_ = ZERO_CLOCK
 
+		# silly comments
 		self._DICTIN_ = {  # holds the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
 			INTERVAL_COUNT: 0,  # interval count
@@ -784,6 +785,11 @@ class CLASS_CLOCKS(object):
 			TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
 			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
+		}
+
+		self._DICTOUT_ = {  # holds the values for the clocks frame
+			CHECKBOX_ALPHA_DIM: "True",  # name of next event
+			CHECKBOX_RUNAWAY: False,  # interval count
 		}
 
 		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count

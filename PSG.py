@@ -371,7 +371,7 @@ INTERVALLING_LIST = [  # list that holds all currently alarming events
 ]
 
 
-MAPPDS_TIMES_LIST = [  # list of all keys to times for midnight etc. processing
+APPDS_TIMES_LIST = [  # list of all keys to times for midnight etc. processing
 	TIME_ALARM,  #
 	TIME_AT_LAST_RUN,  #
 	TIME_AT_NEXT,  #
@@ -750,7 +750,7 @@ TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 class CLASS_CLOCKS(object):
 	global \
 		ALL_THE_FORMS, \
-		MAPPDS
+		APPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	def __init__(self, keyBase_, formName_):
@@ -941,7 +941,7 @@ class CLASS_CLOCKS(object):
 	def __exit__(self, *args_):
 		global \
 			ALL_THE_FORMS, \
-			MAPPDS
+			APPDS
 		#
 		self._MAINFRAME_.close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
@@ -1064,7 +1064,7 @@ class CLASS_CLOCKS(object):
 
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 	elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER)) or ((self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER) and (self._DIMMED_ is True) and (self._CHECKBOX_ALPHA_DIM_] is False)):
-			FORMMAIN.AlphaChannel = MAPPDS[ALPHA_HIGH]
+			FORMMAIN.AlphaChannel = APPDS[ALPHA_HIGH]
 			alphaMode = False
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
@@ -1111,15 +1111,17 @@ class CLASS_CLOCKS(object):
 		self._DICTIN_, _wasUpdated_ = updateClocks(self._DICTIN_)
 		if _wasUpdated_ is True:
 			self.updateFromDict(setLocalDict_=False)
-		if (MAPPDS[CHECKBOX_RUNAWAY] is True):
+		if (APPDS[CHECKBOX_RUNAWAY] is True):
 			_mouseDirection_ = checkMouseLcn(self._THIS_FORM_NAME_, )
 			self.runaway()
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 class CLASS_THECLOCK(object):
 	global \
 		ALL_THE_FORMS, \
-		MAPPDS
+		APPDS
 
 	def __init__(self, keyBase_, formName_):
 		self._THIS_KEY_BASE_ = keyBase_
@@ -1170,23 +1172,23 @@ class CLASS_THECLOCK(object):
 	def __enter__(self):
 		global \
 			ALL_THE_FORMS, \
-			MAPPDS
+			APPDS
 		#
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self._WINDOW_).finalize()
 
 	def __exit__(self, *args_):
 		global \
 			ALL_THE_FORMS, \
-			MAPPDS
+			APPDS
 		#
 		ALL_THE_FORMS[self._THIS_FORM_NAME_].close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN090C MAPPDS
+# * SCTN090C APPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-MAPPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
+APPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
 	ALPHA_CHANNEL: 1.0,  # current AlphaChannel setting
 	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
 	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
@@ -1323,7 +1325,7 @@ def getMousePos():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	_mseData_ = MLCN()._data
-	MAPPDS[MOUSE_LCN] = locationToRtn_ = (_mseData_["root_x"], _mseData_["root_y"])
+	APPDS[MOUSE_LCN] = locationToRtn_ = (_mseData_["root_x"], _mseData_["root_y"])
 	return locationToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1543,11 +1545,11 @@ def isInBBox(BBoxIn_, pointIn_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def updateMappds(mainframeLocation_):
 	global \
-			MAPPDS
+			APPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	MAPPDS[FORM_CURRENT_LCN] = mainframeLocation_
-	MAPPDS[BBOX] = getBBox(MAPPDS[FORM_CURRENT_LCN], MAPPDS[FORM_CURRENT_SIZE])
-	MAPPDS[CLOSE_BBOX] = getCloseBBox(MAPPDS[FORM_CURRENT_LCN], MAPPDS[FORM_CURRENT_SIZE])
+	APPDS[FORM_CURRENT_LCN] = mainframeLocation_
+	APPDS[BBOX] = getBBox(APPDS[FORM_CURRENT_LCN], APPDS[FORM_CURRENT_SIZE])
+	APPDS[CLOSE_BBOX] = getCloseBBox(APPDS[FORM_CURRENT_LCN], APPDS[FORM_CURRENT_SIZE])
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1571,9 +1573,9 @@ def checkMouseLcn(formName_, oldFrameLocation_):
 	_mpxToRtn_ = (0, 0)
 	_TLcn_ = getElementLocation(formName_)
 	_TMouseLcnX_, _TMouseLcnY_ = _TMouseLcn_ = getMousePos()
-	_TBBoxWest_, _TBBoxNorth_, _TBBoxEast_, _TBBoxSouth_ = _TBBox_ = getBBox(_TLcn_, MAPPDS[FORM_CURRENT_SIZE])
-	_TCloseBBox_ = getCloseBBox(_TLcn_, MAPPDS[FORM_CURRENT_SIZE])
-	self._SIZE_ = MAPPDS[FORM_CURRENT_SIZE]
+	_TBBoxWest_, _TBBoxNorth_, _TBBoxEast_, _TBBoxSouth_ = _TBBox_ = getBBox(_TLcn_, APPDS[FORM_CURRENT_SIZE])
+	_TCloseBBox_ = getCloseBBox(_TLcn_, APPDS[FORM_CURRENT_SIZE])
+	self._SIZE_ = APPDS[FORM_CURRENT_SIZE]
 	_isInCloseBBox_ = isInBBox(_TCloseBBox_, _TMouseLcn_)
 
 	if compareXY(_TLcn_, oldFrameLocation_) is False:
@@ -1639,12 +1641,12 @@ def checkMouseLcn(formName_, oldFrameLocation_):
 	if isInBBox(_TBBox_, _TMouseLcn_) is True:
 		_statusToRtn_ = MOUSE_STATUS_OVER
 
-	if (_statusToRtn_ == MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS != MOUSE_STATUS_OVER) and (MAPPDS[CHECKBOX_ALPHA_DIM] is True):
-		FORMMAIN.AlphaChannel = MAPPDS[ALPHA_LOW]
+	if (_statusToRtn_ == MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS != MOUSE_STATUS_OVER) and (APPDS[CHECKBOX_ALPHA_DIM] is True):
+		FORMMAIN.AlphaChannel = APPDS[ALPHA_LOW]
 		alphaMode = True
 
-	elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS == MOUSE_STATUS_OVER)) or ((LAST_MOUSE_STATUS == MOUSE_STATUS_OVER) and (ALPHA_MODE is True) and (MAPPDS[CHECKBOX_ALPHA_DIM] is False)):
-		FORMMAIN.AlphaChannel = MAPPDS[ALPHA_HIGH]
+	elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (LAST_MOUSE_STATUS == MOUSE_STATUS_OVER)) or ((LAST_MOUSE_STATUS == MOUSE_STATUS_OVER) and (ALPHA_MODE is True) and (APPDS[CHECKBOX_ALPHA_DIM] is False)):
+		FORMMAIN.AlphaChannel = APPDS[ALPHA_HIGH]
 		alphaMode = False
 
 	LAST_MOUSE_STATUS = _statusToRtn_
@@ -1707,7 +1709,7 @@ def checkMouseStatus(statusToDo_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	# print(f"""checkMouseStatus statusToDo_ {statusToDo_} """)
 
-	if (statusToDo_ in CLOSE_LIST) and (MAPPDS[CHECKBOX_RUNAWAY] is True):
+	if (statusToDo_ in CLOSE_LIST) and (APPDS[CHECKBOX_RUNAWAY] is True):
 		# print(f"""close enough to move""")
 
 		if statusToDo_ == MOUSE_STATUS_CLOSE_N:
@@ -1744,10 +1746,10 @@ def updateInterval(eventIndexToDo_):
 	global \
 			INTERVALLING_LIST, \
 			IS_ALERTING_NOWV, \
-			MAPPDS
+			APPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	_eventToDo_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
+	_eventToDo_ = APPDS[EVENT_ENTRIES][eventIndexToDo_]
 	_TInterval_ = _eventToDo_[TIME_INTERVAL]
 	_TTimeAtBegin_ = _eventToDo_[TIME_INTERVAL__BEGIN]
 	_TTimeSinceBegin_ = NOWS - _TTimeAtBegin_
@@ -1764,11 +1766,11 @@ def updateInterval(eventIndexToDo_):
 	if _eventToDo_[FIRSTRUN] is True:
 #		_TTimeAtStart_ = int(_TTimeSinceBegin_ // _TInterval_) * _TInterval_
 #		_TTimeAtNext_ = fixTimeAtNext(_TTimeAtStart_ + _TInterval_)
-		MAPPDS[EVENT_ENTRIES][eventIndexToDo_][FIRSTRUN] = False
-		MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_LAST_RUN] = _TTimeAtLastRun_ = _TTimeAtStart_
+		APPDS[EVENT_ENTRIES][eventIndexToDo_][FIRSTRUN] = False
+		APPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_LAST_RUN] = _TTimeAtLastRun_ = _TTimeAtStart_
 
-	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_INTERVAL_START] = _TTimeAtStart_
-	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_NEXT] = _TTimeAtNext_
+	APPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_INTERVAL_START] = _TTimeAtStart_
+	APPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_NEXT] = _TTimeAtNext_
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1779,20 +1781,20 @@ def updateInterval(eventIndexToDo_):
 def findNextAlarmEvent():
 	global \
 			INTERVALLING_LIST, \
-			MAPPDS, \
+			APPDS, \
 			NAME_NEXT_EVENT_STR, \
 			TIMES_NEXT_EVENT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_nextEventList_ = []  # (time, index, mode, name)
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	for _index_, _event_ in MAPPDS[EVENT_ENTRIES].items():
+	for _index_, _event_ in APPDS[EVENT_ENTRIES].items():
 
 		if _event_ is not None:
 			_TEventMode_ = _event_[EVENTMODE]
 
 			if (_TEventMode_ == EVENTMODE_INTERVAL):
 				updateInterval(_index_)
-				_event_ = MAPPDS[EVENT_ENTRIES][_index_]
+				_event_ = APPDS[EVENT_ENTRIES][_index_]
 
 			elif (_TEventMode_ == EVENTMODE_ALARM):
 				_event_[TIME_AT_NEXT] = _event_[TIME_ALARM]
@@ -1811,13 +1813,13 @@ def findNextAlarmEvent():
 		CURRENT_EVENTMODE = _nextEventList_[0][2]# (time, index, mode, name)
 
 		if (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
-			CURRENT_INTERVAL_COUNT = MAPPDS[EVENT_ENTRIES][_nextEventList_[0][1]]
+			CURRENT_INTERVAL_COUNT = APPDS[EVENT_ENTRIES][_nextEventList_[0][1]]
 			updateIntervalCount()
 
 		updateFrameFromDict(CLOCKS_TEXT_DICT)
 #	print(f"""{CF.getDebugInfo()}
 #	{CF.frameItHMS("NOWS updated next event", NOWS)}
-#	{CF.frameIt("EVENT_ENTRIES", MAPPDS[EVENT_ENTRIES])}
+#	{CF.frameIt("EVENT_ENTRIES", APPDS[EVENT_ENTRIES])}
 #	{CF.frameIt("_nextEventList_", _nextEventList_)}
 #	""")
 
@@ -1831,7 +1833,7 @@ def doMidnightWork():
 	print("midnight")
 	global \
 			CLOCKS_DICT, \
-			MAPPDS, \
+			APPDS, \
 			TIMEMS_NEXT_MOUSE_CHECK, \
 			TIMEMS_NEXT_MOVED, \
 			TIMEMS_NEXT_UPDATED, \
@@ -1870,23 +1872,23 @@ def doMidnightWork():
 #{CF.frameItHMS("TIMES_NEXT_EVENT", TIMES_NEXT_EVENT)} = TIMES_NEXT_EVENT % CF.DAYMS
 #{CF.frameItHMS("TIMES_NEXT_PERIODIC_JOB", TIMES_NEXT_PERIODIC_JOB)} = TIMES_NEXT_PERIODIC_JOB % CF.DAYMS
 #""")
-	for _index_, _event_ in MAPPDS[EVENT_ENTRIES].items():
+	for _index_, _event_ in APPDS[EVENT_ENTRIES].items():
 #		print(f"""{CF.getDebugInfo()}{CF.NEWLINE} {CF.frameIt("_event_", _event_)}
-#		{CF.frameIt("MAPPDS[EVENT_ENTRIES]", MAPPDS[EVENT_ENTRIES])}""")
+#		{CF.frameIt("APPDS[EVENT_ENTRIES]", APPDS[EVENT_ENTRIES])}""")
 
 		if (_event_ is not None):  # and (_event_[EVENTMODE] in [EVENTMODE_ALARM]):
-#			MAPPDS[EVENT_ENTRIES][_index_][TIME_AT_LAST_RUN] = None
-			MAPPDS[EVENT_ENTRIES][_index_][DISMISSED] = False
-			MAPPDS[EVENT_ENTRIES][_index_][IS_ALERTING_NOW] = False
+#			APPDS[EVENT_ENTRIES][_index_][TIME_AT_LAST_RUN] = None
+			APPDS[EVENT_ENTRIES][_index_][DISMISSED] = False
+			APPDS[EVENT_ENTRIES][_index_][IS_ALERTING_NOW] = False
 
-			for _index1_ in MAPPDS_TIMES_LIST:
+			for _index1_ in APPDS_TIMES_LIST:
 #				print(f"""{CF.getDebugInfo()}
 #				{CF.frameIt("_index1_", _index1_)}
-#				{CF.frameIt("MAPPDS[EVENT_ENTRIES][_index_]", MAPPDS[EVENT_ENTRIES][_index_])}
+#				{CF.frameIt("APPDS[EVENT_ENTRIES][_index_]", APPDS[EVENT_ENTRIES][_index_])}
 #				""")
 
-				if MAPPDS[EVENT_ENTRIES][_index_][_index1_] >= CF.DAYSECS:
-					MAPPDS[EVENT_ENTRIES][_index_][_index1_] -= CF.DAYSECS
+				if APPDS[EVENT_ENTRIES][_index_][_index1_] >= CF.DAYSECS:
+					APPDS[EVENT_ENTRIES][_index_][_index1_] -= CF.DAYSECS
 	findNextAlarmEvent()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -1899,26 +1901,26 @@ def doAlarmEvent(eventIndexToDo_):
 	global \
 			ALERTING_LIST, \
 			FORMMAIN, \
-			MAPPDS, \
+			APPDS, \
 			NUMBER_ACTIVE_ALARMS, \
 			FORMPOPUP, \
 			PREVIOUS_APPMODE
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_event_ = MAPPDS[EVENT_ENTRIES][eventIndexToDo_]
+	_event_ = APPDS[EVENT_ENTRIES][eventIndexToDo_]
 
 	if _event_[IS_ALERTING_NOW] is True:
 		return None
 
-	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][IS_ALERTING_NOW] = True
-	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_LAST_RUN] = NOW_NOMS
+	APPDS[EVENT_ENTRIES][eventIndexToDo_][IS_ALERTING_NOW] = True
+	APPDS[EVENT_ENTRIES][eventIndexToDo_][TIME_AT_LAST_RUN] = NOW_NOMS
 	NUMBER_ACTIVE_ALARMS += 1
 	ALERTING_LIST.append(eventIndexToDo_)
 
 	if _event_[EVENTMODE] == EVENTMODE_INTERVAL:
 		updateInterval(eventIndexToDo_)
-	MAPPDS[EVENT_ENTRIES][eventIndexToDo_][INTERVAL_COUNT] += 1
+	APPDS[EVENT_ENTRIES][eventIndexToDo_][INTERVAL_COUNT] += 1
 	_event_[INTERVAL_COUNT] += 1
-	# MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER] = CLASS_POPUP_INTERVAL(_event_[NAME], _event_[INTERVAL_COUNT], [_event_[ALARMPOPUP_TEXT_TEXT]])
+	# APPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER] = CLASS_POPUP_INTERVAL(_event_[NAME], _event_[INTERVAL_COUNT], [_event_[ALARMPOPUP_TEXT_TEXT]])
 	return True
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -1930,7 +1932,7 @@ def doAlarmEvent(eventIndexToDo_):
 def doInit1():
 	global \
 			ALL_THE_FORMS, \
-			MAPPDS
+			APPDS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	localTimes()
 	# print(f"""{CF.getDebugInfo()}{CF.NEWLINE}{CF.frameIt("NOWS", NOWS)} {CF.nrmlIntToHMS(NOWS)} {CF.frameIt("NOWS", NOWS)} {CF.nrmlIntToHMS(NOWS)}""")
@@ -1939,24 +1941,24 @@ def doInit1():
 			ALL_THE_FORMS[_thisKey_].AlphaChannel = SZ_ALPHA_HIGH
 			# FORMMAIN.Maximize()
 			# FORMMAIN.BringToFront()
-			MAPPDS[FORM_CURRENT_LCN] = getElementLocation(ALL_THE_FORMS[_thisKey_])
-			MAPPDS[SCREEN_DIMS] = getScreenDims()
-			MAPPDS[FORM_CURRENT_SIZE] = getElementSize(ALL_THE_FORMS[_thisKey_])
+			APPDS[FORM_CURRENT_LCN] = getElementLocation(ALL_THE_FORMS[_thisKey_])
+			APPDS[SCREEN_DIMS] = getScreenDims()
+			APPDS[FORM_CURRENT_SIZE] = getElementSize(ALL_THE_FORMS[_thisKey_])
 
-	MAPPDS[ALPHA_CHANNEL] = SZ_ALPHA_HIGH
-	MAPPDS[BBOX] = getBBox(MAPPDS[FORM_CURRENT_LCN], MAPPDS[FORM_CURRENT_SIZE])
-	MAPPDS[CLOSE_BBOX] = getCloseBBox(MAPPDS[FORM_CURRENT_LCN], MAPPDS[FORM_CURRENT_SIZE])
+	APPDS[ALPHA_CHANNEL] = SZ_ALPHA_HIGH
+	APPDS[BBOX] = getBBox(APPDS[FORM_CURRENT_LCN], APPDS[FORM_CURRENT_SIZE])
+	APPDS[CLOSE_BBOX] = getCloseBBox(APPDS[FORM_CURRENT_LCN], APPDS[FORM_CURRENT_SIZE])
 	CLOCKS_DICT[TIME_CLOCK] = NOWS
 	CLOCKS_DICT[TIME_AT_ZEROELAPSE] = NOWS
 	TIME_AT_LAST_ZERO_CHECK = NOWS
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	for _index_, _event_ in MAPPDS[EVENT_ENTRIES].items():
+	for _index_, _event_ in APPDS[EVENT_ENTRIES].items():
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-#		MAPPDS[EVENT_ENTRIES][_index_][TIME_AT_LAST_RUN] = None
-		for _timeKey_ in MAPPDS_TIMES_LIST:
+#		APPDS[EVENT_ENTRIES][_index_][TIME_AT_LAST_RUN] = None
+		for _timeKey_ in APPDS_TIMES_LIST:
 			if isinstance(_event_[_timeKey_], str):
-				MAPPDS[EVENT_ENTRIES][_index_][_timeKey_] = CF.HMSToNrmlInt(_event_[_timeKey_])
+				APPDS[EVENT_ENTRIES][_index_][_timeKey_] = CF.HMSToNrmlInt(_event_[_timeKey_])
 	doMidnightWork()
 	findNextAlarmEvent()
 
@@ -1970,7 +1972,7 @@ def checkAlertPopupStatus(eventIndexToDo_):
 	pass
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 #	print(f"""{CF.getDebugInfo()}
-#{CF.IGMPP(MAPPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER])}
+#{CF.IGMPP(APPDS[EVENT_ENTRIES][eventIndexToDo_][ALARMPOPUP_PROPER])}
 #""")
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1983,7 +1985,7 @@ def reallyDoIt():
 	global \
 			CLOCKS_DICT, \
 			FORMMAIN, \
-			MAPPDS, \
+			APPDS, \
 			FORMPOPUP, \
 			PREV_ALARM_TYPE, \
 			TIMES_NEXT_EVENT, \
@@ -1996,10 +1998,10 @@ def reallyDoIt():
 		if (NOWS == 0):
 			doMidnightWork()
 
-		checkMouseStatus(checkMouseLcn(MAPPDS[FORM_CURRENT_LCN]))
+		checkMouseStatus(checkMouseLcn(APPDS[FORM_CURRENT_LCN]))
 
 		if (TIMES_NEXT_EVENT == NOW_NOMS):
-			_alarmResult_ = doAlarmEvent(MAPPDS[INDEX_OF_NEXT_EVENT])
+			_alarmResult_ = doAlarmEvent(APPDS[INDEX_OF_NEXT_EVENT])
 			return APPMODE_NEW_ALARMPOPUP
 
 		findNextAlarmEvent()
@@ -2026,17 +2028,17 @@ def reallyDoIt():
 			elif (_eventKey_ == BTN_DISMISS):
 				return BTN_DISMISS
 
-		checkMouseStatus(checkMouseLcn(MAPPDS[FORM_CURRENT_LCN]))
+		checkMouseStatus(checkMouseLcn(APPDS[FORM_CURRENT_LCN]))
 
 
 #		if _event_ == BTN_QUIT:
 #			return BTN_QUIT
 #
 #		elif _event_ == CHECKBOX_RUNAWAY:
-#			MAPPDS[CHECKBOX_RUNAWAY] = not MAPPDS[CHECKBOX_RUNAWAY]
+#			APPDS[CHECKBOX_RUNAWAY] = not APPDS[CHECKBOX_RUNAWAY]
 #
 #		elif _event_ == CHECKBOX_ALPHA_DIM:
-#			MAPPDS[CHECKBOX_ALPHA_DIM] = not MAPPDS[CHECKBOX_ALPHA_DIM]
+#			APPDS[CHECKBOX_ALPHA_DIM] = not APPDS[CHECKBOX_ALPHA_DIM]
 #
 #		elif _event_ == BTN_ZERO:
 #			CLOCKS_DICT[TIME_AT_ZEROELAPSE] = NOWS
@@ -2049,7 +2051,7 @@ def doit():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	with \
 			CLASS_CLOCKS(f"""{CF.serializeIt("runawayClock_DEV")}""", FORMCLOCKS) as __CLOCKS__, \
-			CF.withPickles("runawayClock.pkl", MAPPDS):
+			CF.withPickles("runawayClock.pkl", APPDS):
 
 		doInit1()
 
