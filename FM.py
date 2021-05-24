@@ -5204,8 +5204,8 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_LINE_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if _thisItemLen_ != 7:
-				doErrorItem("not 7 items", _thisItem_)
+			if _thisItemLen_ != 5:
+				doErrorItem("not 5 items", _thisItem_)
 				continue
 			_thisClassName_ = _thisItem_[2]
 			_thisLine_ = _thisItem_[3]
@@ -5219,25 +5219,15 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_BLANKLINE:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if _thisItemLen_ != 7:
-				doErrorItem("not 7 items", _thisItem_)
+			if _thisItemLen_ != 4:
+				doErrorItem("not 4 items", _thisItem_)
 				continue
+
 			_thisClassName_ = _thisItem_[2]
-			_thisElementName_ = _thisItem_[3]
-			_thisKey_ = _thisItem_[4]
-			_thisVal_ = _thisItem_[5]
 
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_INIT_DICT:
-				FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_][_thisElementName_] = ""
-
-			if (_thisKey_ == "VALUES") and (_thisVal_ == "%LIST%"):
-				thisValStr_ = f"""self.{_thisElementName_}_INIT_LIST"""
-			else:
 				thisValStr_ = f"""{_thisVal_}"""
 
-			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].append(f"""#{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5246,19 +5236,14 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_READ_FROM_FILE:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if _thisItemLen_ != 6:
-				doErrorItem("not 6 items", _thisItem_)
+			if _thisItemLen_ != 5:
+				doErrorItem("not 5 items", _thisItem_)
 				continue
 			_thisClassName_ = _thisItem_[2]
-			_thisElementName_ = _thisItem_[3]
-			_thisVal_ = _thisItem_[4]
+			_thisFileName_ = _thisItem_[3]
 
-			if _thisClassName_ not in FMPSG_SCTB0916_CLASS_INIT_LIST_DICT:
-				FMPSG_SCTB0916_CLASS_INIT_LIST_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTB0916_CLASS_INIT_LIST_DICT[_thisClassName_]:
-				FMPSG_SCTB0916_CLASS_INIT_LIST_DICT[_thisClassName_][_thisElementName_] = ""
 
-			FMPSG_SCTB0916_CLASS_INIT_LIST_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMPSG_SCTB0916_CLASS_INIT_LIST_DICT[_thisClassName_].append(f"""{}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
