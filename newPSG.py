@@ -749,15 +749,9 @@ TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 
 class CLASS_CLOCKS(object):
 	global \
-		ALL_THE_FORMS, \
-		MAPPDS
+		ALL_THE_FORMS
 
-	def __init__(self, _keyBase_, _formName_):
-		self._THIS_KEY_BASE_ = _keyBase_
-		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
-		self._THIS_FORM_NAME_ = _formName_
-		self._KEY_DICT_ = {}
-
+	def __init__(self, keyBase_, formName_):
 		self._DICTIN_ = {  # holds the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
 			INTERVAL_COUNT: 0,  # interval count
@@ -895,73 +889,6 @@ class CLASS_CLOCKS(object):
 			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
 			TITLE: TITLE_CLOCKS,  # 
 			_LAYOUT_: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
-		}
-
-	def __enter__(self):
-		global \
-			ALL_THE_FORMS, \
-			MAPPDS
-		#
-		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self._WINDOW_).finalize()
-
-	def __exit__(self, *args_):
-		global \
-			ALL_THE_FORMS, \
-			MAPPDS
-		#
-		ALL_THE_FORMS[self._THIS_FORM_NAME_].close()
-		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
-
-
-class CLASS_THECLOCK(object):
-	global \
-		ALL_THE_FORMS, \
-		MAPPDS
-
-	def __init__(self, _keyBase_, _formName_):
-		self._THIS_KEY_BASE_ = _keyBase_
-		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
-		self._THIS_FORM_NAME_ = _formName_
-		self._KEY_DICT_ = {}
-
-		self.THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
-			TIME_CLOCK: ZERO_CLOCK,  # comment
-		}
-
-		self.THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
-			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-			ENABLE_EVENTS: True,  # this is clickable
-			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
-			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-			KEY: f"""{self._USE_THIS_KEY_(TIME_CLOCK)}""",  # comment
-			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
-			RIGHT_CLICK_MENU: THECLOCK_RCMENU01,  # set up the right click menu
-			SIZE: (8, 1),  # characters, lines size line
-			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
-		}
-		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""
-
-		self.THECLOCK_LAYOUT = [  # layout for APPMODE_THECLOCK
-			[
-				SG.Text(  # add a column
-					**self.THECLOCK_TEXT_TIME_CLOCK,  # comment
-				),
-			],
-		]
-
-		self.THECLOCK_WINDOW = {  # define the clocks window
-			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
-			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
-			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
-			ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
-			FORCE_TOPLEVEL: None,  # 
-			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
-			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
-			MARGINS: SZ_MARGINS_ALL,  # 
-			NO_TITLEBAR: True,  # no titlebar on APPMODE_THECLOCK window
-			TITLE: TITLE_THECLOCK,  # 
-			_LAYOUT_: THECLOCK_LAYOUT,  # add the layout for THECLOCK_WINDOW
 		}
 
 	def __enter__(self):
