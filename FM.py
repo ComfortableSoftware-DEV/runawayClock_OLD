@@ -710,6 +710,7 @@ FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT = {}  # define the dict to hold everything i
 FMPSG_SCTN0916_CLASS_DICT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FRAME_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_FUNCTION_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_INIT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
@@ -927,10 +928,14 @@ TBGLST = [
 	("FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF", FMAXFM_SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><PARMS>",),
 	("FMAXPSG_SCTN0916_CLASS_FUNCTION_LINE_ADD", FMAXFM_SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><LINE>",),
 	("FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE", FMAXFM_SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>",),
+	("FMAXPSG_SCTN0916_CLASS_FUNCTION_STR_DEF", FMAXFM_SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
+	("FMAXPSG_SCTN0916_CLASS_FUNCTION_VAL_DEF", FMAXFM_SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_INIT_BLANKLINE", FMAXFM_SCTN0101_AX_DEF, "blank line in __init__ <NAC><CLASSNAME>",),
 	("FMAXPSG_SCTN0916_CLASS_INIT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><PARMS>",),
 	("FMAXPSG_SCTN0916_CLASS_INIT_LINE_ADD", FMAXFM_SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><LINE>",),
 	("FMAXPSG_SCTN0916_CLASS_INIT_READ_FROM_FILE", FMAXFM_SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FILENAME>",),
+	("FMAXPSG_SCTN0916_CLASS_INIT_STR_DEF", FMAXFM_SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><VALNAME><VAL>",),
+	("FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF", FMAXFM_SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><VALNAME><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_LAYOUT_BUTTON_ADD", FMAXFM_SCTN0101_AX_DEF, "add a button to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
 	("FMAXPSG_SCTN0916_CLASS_LAYOUT_CHECKBOX_ADD", FMAXFM_SCTN0101_AX_DEF, "add a checkbox to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
 	("FMAXPSG_SCTN0916_CLASS_LAYOUT_COLUMN_ADD", FMAXFM_SCTN0101_AX_DEF, "add a column to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
@@ -955,12 +960,10 @@ TBGLST = [
 	("FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD", FMAXFM_SCTN0101_AX_DEF, "add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_SPIN_LIST_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a STR to the values list <NAC><CLASSNAME><SPINNAME><STR>",),
 	("FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a VAL to the values list <NAC><CLASSNAME><SPINNAME><VAL>",),
-	("FMAXPSG_SCTN0916_CLASS_STR_DEF", FMAXFM_SCTN0101_AX_DEF, "define a string in the class <NAC><VALNAME><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_TEXT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a text <NAC><TEXTNAME>",),
 	("FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD", FMAXFM_SCTN0101_AX_DEF, "add a PARM to a text element <NAC><CLASSNAME><TEXTNAME><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_TEXT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to a text element <NAC><CLASSNAME><TEXTNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a val to a text element <NAC><CLASSNAME><TEXTNAME>",),
-	("FMAXPSG_SCTN0916_CLASS_VAL_DEF", FMAXFM_SCTN0101_AX_DEF, "define a value in the class <NAC><VALNAME><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_WINDOW_DEF", FMAXFM_SCTN0101_AX_DEF, "define a main dictdict <NAC><CLASSNAME><MAINNAME>",),
 	("FMAXPSG_SCTN0916_CLASS_WINDOW_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
 	("FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to the main dictdict",),
@@ -1062,6 +1065,7 @@ TBGLST = [
 	("FMPSG_SCTN0916_CLASS_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_FRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_FUNCTION_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_INIT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_LAYOUT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
@@ -1477,22 +1481,23 @@ TBGLST = [
 	("PSGVAL__CHECKBOX_SNOOZED0101", FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD, "CHECKBOX_SNOOZED01", "DEFAULT", "False", "leave it off by default",),
 	("PSGVAL__CHECKBOX_SNOOZED0101", FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD, "CHECKBOX_SNOOZED01", "ENABLE_EVENTS", "True", "set the key for the checkbox",),
 	("PSGVAL__CHECKBOX_SNOOZED0101", FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD, "CHECKBOX_SNOOZED01", "KEY", "CHECKBOX_SNOOZED", "set the key for the checkbox",),
-	("PSGVAL__CLOCKS_00_INIT", FMAXPSG_SCTN0916_CLASS_INIT_DEF, "CLOCKS", "keyBase_, formName_", "init parms defined",),
-	("PSGVAL__CLOCKS_00_INIT_00", FMAXPSG_SCTN0916_CLASS_INIT_READ_FROM_FILE, "CLOCKS", "res/functions/_init_.py", "read the top of __init__",),
-	("PSGVAL__CLOCKS_01_ENTER", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__enter__", "", "define __enter__",),
-	("PSGVAL__CLOCKS_01_ENTER_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "__enter__", "__enter__.py", "globals for __enter__",),
-	("PSGVAL__CLOCKS_02_EXIT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__exit__", "*args_", "define __exit__ in CLOCKS",),
-	("PSGVAL__CLOCKS_02_EXIT_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "__exit__", "__exit__.py", "__exit__ read in",),
-	("PSGVAL__CLOCKS_03_QUICK_READ", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "quickRead", "", "read the frame and set self._RESULT_",),
-	("PSGVAL__CLOCKS_03_QUICK_READ_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_LINE_ADD, "CLOCKS", "quickRead", "self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)", "read the frame and set self._RESULT_",),
-	("PSGVAL__CLOCKS_04_UPDATE_FROM_DICT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "updateFromDict", "dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True", "comment",),
-	("PSGVAL__CLOCKS_04_UPDATE_FROM_DICT_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "updateFromDict", "updateFromDict.py", "comment",),
-	("PSGVAL__CLOCKS_05_READ_TO_DICT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "readToDict", "dictToReadTo_=self._DICTOUT_, setLocalDict_=True", "define readToDict",),
-	("PSGVAL__CLOCKS_05_READ_TO_DICT_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "readToDict", "readToDict.py", "load readToDict from file",),
-	("PSGVAL__CLOCKS_06_CHECK_MOUSE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "checkMouse", "", "define checkMouse",),
-	("PSGVAL__CLOCKS_06_CHECK_MOUSE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "load checkMouse from file",),
-	("PSGVAL__CLOCKS_07_RUNAWAY", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "runaway", "moveMpx_=(0, 0)", "define runaway",),
-	("PSGVAL__CLOCKS_07_RUNAWAY_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "load checkMouse from file",),
+	("PSGVAL__CLOCKS_FUNC00_INIT", FMAXPSG_SCTN0916_CLASS_INIT_DEF, "CLOCKS", "keyBase_, formName_", "init parms defined",),
+	("PSGVAL__CLOCKS_FUNC00_INIT00", FMAXPSG_SCTN0916_CLASS_INIT_READ_FROM_FILE, "CLOCKS", "res/functions/_init_.py", "read the top of __init__",),
+	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_LINE_ADD, "CLOCKS", "# silly comments", "comment",),
+	("PSGVAL__CLOCKS_FUNC01_ENTER", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__enter__", "", "define __enter__",),
+	("PSGVAL__CLOCKS_FUNC01_ENTER_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "__enter__", "__enter__.py", "globals for __enter__",),
+	("PSGVAL__CLOCKS_FUNC02_EXIT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__exit__", "*args_", "define __exit__ in CLOCKS",),
+	("PSGVAL__CLOCKS_FUNC02_EXIT_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "__exit__", "__exit__.py", "__exit__ read in",),
+	("PSGVAL__CLOCKS_FUNC03_QUICK_READ", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "quickRead", "", "read the frame and set self._RESULT_",),
+	("PSGVAL__CLOCKS_FUNC03_QUICK_READ_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_LINE_ADD, "CLOCKS", "quickRead", "self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)", "read the frame and set self._RESULT_",),
+	("PSGVAL__CLOCKS_FUNC04_UPDATE_FROM_DICT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "updateFromDict", "dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True", "comment",),
+	("PSGVAL__CLOCKS_FUNC04_UPDATE_FROM_DICT_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "updateFromDict", "updateFromDict.py", "comment",),
+	("PSGVAL__CLOCKS_FUNC05_READ_TO_DICT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "readToDict", "dictToReadTo_=self._DICTOUT_, setLocalDict_=True", "define readToDict",),
+	("PSGVAL__CLOCKS_FUNC05_READ_TO_DICT_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "readToDict", "readToDict.py", "load readToDict from file",),
+	("PSGVAL__CLOCKS_FUNC06_CHECK_MOUSE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "checkMouse", "", "define checkMouse",),
+	("PSGVAL__CLOCKS_FUNC06_CHECK_MOUSE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "load checkMouse from file",),
+	("PSGVAL__CLOCKS_FUNC07_RUNAWAY", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "runaway", "moveMpx_=(0, 0)", "define runaway",),
+	("PSGVAL__CLOCKS_FUNC07_RUNAWAY_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "load checkMouse from file",),
 	("PSGVAL__CLOCKS_COLUMN01", FMAX_NOP, "the column for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_COLUMN0100", FMAXPSG_SCTN0916_CLASS_COLUMN_DEF, "CLOCKS", "_COLUMN01_", "the column that puts the two smaller clocks below the main one",),
 	("PSGVAL__CLOCKS_COLUMN0101", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "_COLUMN01_", "COLUMN01_ROW_00", "L03", "add a new row to clocks column",),
@@ -1539,6 +1544,9 @@ TBGLST = [
 	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICTIN_", "TIME_CLOCK", "ZERO_CLOCK", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICTIN_", "TIME_ELAPSED", "ZERO_CLOCK", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICTIN_", "TIME_TOGO", "ZERO_CLOCK", "holds the values for the clocks frame",),
+	("PSGVAL__CLOCKS_DICTOUT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "_DICTOUT_", "holds the values for the clocks frame",),
+	("PSGVAL__CLOCKS_DICTOUT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "CLOCKS", "_DICTOUT_", "CHECKBOX_ALPHA_DIM", "True", "name of next event",),
+	("PSGVAL__CLOCKS_DICTOUT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICTOUT_", "CHECKBOX_RUNAWAY", "False", "interval count",),
 	("PSGVAL__CLOCKS_FORMMAIN", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__CLOCKS_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "CLOCKS", "_WINDOW_", "True", "the clocks frame defined and done",),
 	("PSGVAL__CLOCKS_LAYOUT", FMAX_NOP, "layout for APPMODE_CLOCKS",),
@@ -1577,6 +1585,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_TEXT_TIME_TOGO00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_TOGO_", "class text for interval count",),
 	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_TIME_TOGO_", "**TEXT_TIME_TOGO", "interval count template",),
 	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_TIME_TOGO_", "KEY", "TIME_TOGO", "interval count template",),
+
 	("PSGVAL__CLOCKS_WINDOW", FMAX_NOP, "the window for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_WINDOW00", FMAXPSG_SCTN0916_CLASS_WINDOW_DEF, "CLOCKS", "_WINDOW_", "define the clocks window",),
 	("PSGVAL__CLOCKS_WINDOW01", FMAXPSG_SCTN0916_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "ALPHA_CHANNEL", "SZ_ALPHA_HIGH", "set the high alpha as the default",),
@@ -2265,10 +2274,9 @@ def makePSGClasses():
 			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if _thisClassName_ in FMPSG_SCTN0916_CLASS_DEF_DICT:
 				# print(f"""FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT {FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT}""")
-				for _thisElementName_, _thisVal_ in FMPSG_SCTN0916_CLASS_DEF_DICT[_thisClassName_].items():
-					_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {_thisVal_}{NEWLINE}"""
+				for _thisValName_, _thisVal_ in FMPSG_SCTN0916_CLASS_DEF_DICT[_thisClassName_].items():
+					_strToRtn_ += f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}{NEWLINE}"""
 				_strToRtn_ += f"""{NEWLINE}"""
-
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -2407,19 +2415,14 @@ def makePSGClasses():
 
 ### *frame goes here
 
+### * functions go here
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-		_strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:
-{NTAB(2)}global {BKSLSH}
-{NTAB(3)}ALL_THE_FORMS, {BKSLSH}
-{NTAB(3)}MAPPDS{NEWLINE}{NTAB(2)}#
-{NTAB(2)}ALL_THE_FORMS{OBRKT}self._THIS_FORM_NAME_{CBRKT} = SG.Window{OPAREN}**self._WINDOW_{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE     }
-{NTAB(1)}def __exit__{OPAREN}self, *args_{CPAREN}:
-{NTAB(2)}global {BKSLSH}
-{NTAB(3)}ALL_THE_FORMS, {BKSLSH}
-{NTAB(3)}MAPPDS{NEWLINE}{NTAB(2)}#
-{NTAB(2)}ALL_THE_FORMS{OBRKT}self._THIS_FORM_NAME_{CBRKT}.close{OPAREN}{CPAREN}
-{NTAB(2)}ALL_THE_FORMS{OBRKT}self._THIS_FORM_NAME_{CBRKT} = None{NEWLINE}{NEWLINE}{NEWLINE}"""
+#		for _thisFunctionName_, _thisFunctionVal_ in FMPSG_SCTN0916_CLASS_F
+
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		_strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
 
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2775,6 +2778,7 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0916_CLASS_DICT_DICT, \
 		FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_FRAME_DICT, \
+		FMPSG_SCTN0916_CLASS_FUNCTION_DICT, \
 		FMPSG_SCTN0916_CLASS_INIT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_DICT, \
@@ -5191,7 +5195,7 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisFilename_ = _thisItem_[3]
 
-			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].append(f"""{readFileToStr(_thisFilename_)}""")
+			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].append(f"""{readFileToStr(_thisFilename_)}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2

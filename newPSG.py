@@ -775,19 +775,6 @@ class CLASS_CLOCKS(object):
 		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK
 		self._TIME_TO_MOVE_ = ZERO_CLOCK
 		self._TIME_TO_UPDATE_ = ZERO_CLOCK
-		self._KEY_DICT_ = {}
-		self._KEY_DICT_REVERSE_ = {}
-		self._LAST_MOUSE_STATUS_ = lambda __KEY_TEXT__: ''
-		self._MAINFRAME_ = None
-		self._MOUSE_STATUS_ = MOUSE_STATUS_NONE
-		self._MOVE_MULTIPLIER_ = (0, 0)
-		self._THIS_FORM_NAME_ = _formName_
-		self._THIS_KEY_BASE_ = keyBase_
-		self._TIME_KEY_LIST_ = []
-		self._TIME_TO_CHECK_MOUSE_ = 0
-		self._TIME_TO_MOVE_ = 0
-		self._TIME_TO_UPDATE_ = 0
-		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: ''
 
 		self._DICTIN_ = {  # holds the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
@@ -928,20 +915,6 @@ class CLASS_CLOCKS(object):
 			_LAYOUT_: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
 		}
 
-	def __enter__(self):
-		global \
-			ALL_THE_FORMS, \
-			MAPPDS
-		#
-		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self._WINDOW_).finalize()
-
-	def __exit__(self, *args_):
-		global \
-			ALL_THE_FORMS, \
-			MAPPDS
-		#
-		ALL_THE_FORMS[self._THIS_FORM_NAME_].close()
-		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
