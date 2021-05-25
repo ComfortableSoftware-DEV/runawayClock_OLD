@@ -1093,15 +1093,10 @@ class CLASS_CLOCKS(object):
 		elif _moveToY_ > (_screenSZY_ - _sizeY_):
 			_moveToY_ = (_screenSZY_ - _sizeY_)
 
-		# print(f"""likely moving abs(_moveToX_ - _lcnX_) {abs(_moveToX_ - _lcnX_)} abs(_moveToY_ - _lcnY_) {abs(_moveToY_ - _lcnY_)} SZ_MAX_DELTA {SZ_MAX_DELTA}""")
-			# avoid trouble with spurious moves caused by a process delaying anything here too far
 		if (abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA):
-			# print(f"""(abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) (abs({_moveToX_} - {_lcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA)}""")
-			# print(f"""(abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA) (abs({_moveToY_} - {_lcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA)}""")
 			return
 
 		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
-
 
 	def update():
 		if (NOWMS >= self._TIME_TO_UPDATE_):

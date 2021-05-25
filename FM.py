@@ -1058,6 +1058,7 @@ TBGLST = [
 	("FMPSG_SCTN0915_PUDLG_TYPE_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the DIALOG DIALOG (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_BTNS_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
+	("FMPSG_SCTN0916_CLASS_CDS_DICT", FMAXFM_SCTN0103_DICT_DEF, "class data storage",),
 	("FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_CHECKBOX_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
@@ -1066,17 +1067,16 @@ TBGLST = [
 	("FMPSG_SCTN0916_CLASS_COLUMN_PARMS_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_COMBO_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_COMBO_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
-	("FMPSG_SCTN0916_CLASS_CDS_DICT", FMAXFM_SCTN0103_DICT_DEF, "class data storage",),
 	("FMPSG_SCTN0916_CLASS_DEF_DICT", FMAXFM_SCTN0103_DICT_DEF, "str and val defines in a class",),
 	("FMPSG_SCTN0916_CLASS_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_FRAME_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_FRAME_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
-	("FMPSG_SCTN0916_CLASS_FUNCTION_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
-	("FMPSG_SCTN0916_CLASS_INIT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_FUNCTION_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_INIT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_LAYOUT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_LIST_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
@@ -1106,6 +1106,15 @@ TBGLST = [
 	("PSGVAL_ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORMPOPUP04", "None", "ENTRY IN FORMS",),
 	("PSGVAL_ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORMPOPUP05", "None", "ENTRY IN FORMS",),
 	("PSGVAL_ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORMTHECLOCK", "None", "ENTRY IN FORMS",),
+	("PSGVAL_APPDS_TIMES_LIST", FMAXPSG_SCTN0903_LIST_DEF, "APPDS_TIMES_LIST", "list of all keys to times for midnight etc. processing",),
+	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_ALARM", "",),
+	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_AT_LAST_RUN", "",),
+	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_AT_NEXT", "",),
+	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL", "",),
+	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL_START", "",),
+	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL__BEGIN", "",),
+	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL__END", "",),
+	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_LEN_RING", "",),
 	("PSGVAL_CLOSE_LIST", FMAXPSG_SCTN0903_LIST_DEF, "CLOSE_LIST", "list with close statuses",),
 	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_E", "easet close entry",),
 	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_N", "easet close entry",),
@@ -1244,15 +1253,6 @@ TBGLST = [
 	("PSGVAL_KEY_TIME_LEN_RING", FMAXPSG_SCTN0900_KEY_DEF, "TIME_LEN_RING", "length of ringing",),
 	("PSGVAL_KEY_TIME_TOGO", FMAXPSG_SCTN0900_KEY_DEF, "TIME_TOGO", "down counter to next event on this window/alarm/interval/reminder",),
 	("PSGVAL_KEY_TRANSPARENT", FMAXPSG_SCTN0900_KEY_DEF, "TRANSPARENT", "is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)",),
-	("PSGVAL_APPDS_TIMES_LIST", FMAXPSG_SCTN0903_LIST_DEF, "APPDS_TIMES_LIST", "list of all keys to times for midnight etc. processing",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_ALARM", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_AT_LAST_RUN", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_AT_NEXT", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL_START", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL__BEGIN", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL__END", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_LEN_RING", "",),
 	("PSGVAL_POPUP_INTERVAL", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DEF", "POPUP_INTERVAL", "POPUPTYPE_AUTO_CLOSE", "the dialog when an interval goes off",),
 	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD", "POPUP_INTERVAL", "TITLE", "", "title of the alert window",),
 	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", "POPUP_INTERVAL", "AUTO_CLOSE", "True", "interval timers get auto dismiss by default",),
@@ -1313,6 +1313,81 @@ TBGLST = [
 	("PSGVAL_TITLE_MAIN", FMAXPSG_SCTN0900_STR_DEF, "TITLE_MAIN", "Main window which is xpanded from CLOCKS window and pops up EDIT windows", "string with window title for APPMODE_CLOCKS",),
 	("PSGVAL_TITLE_THECLOCK", FMAXPSG_SCTN0900_STR_DEF, "TITLE_THECLOCK", "THECLOCK", "string with window title for APPMODE_CLOCKS",),
 	("PSGVAL_ZERO_CLOCK", FMAXPSG_SCTN0900_VAL_DEF, "ZERO_CLOCK", "0", "all the zeros",),
+	("PSGVAL__APPDS", FMAX_NOP, "the dict that holds all of the structure of the variables, read from and written to PySimpleGUI bits and un/pickled",),
+	("PSGVAL__APPDS_MAIN_00", FMAXPSG_SCTN090C_APPDS_DEF, "APPDS_MAIN", "the struct holding everything passed betwixt PySimpleGUI and this app",),
+	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "APPMODE", "APPMODE_NONE", "default mode is clocks",),
+	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "INDEX_OF_NEXT_EVENT", "0", "default to first entry as next until the app can sort through them",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "EVENT_ENTRIES", "0", "holds events",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "ALARMPOPUP_TEXT_TEXT", "get up, move around", "alarm text for this event",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "NAME", "MOVE", "this entry's name",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_ALARM", "03:30:00", "time of this event if it an alarm",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_INTERVAL", "00:30:00", "interval of this event",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "ALARMPOPUP_PROPER", "None", "time of this event",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "AUTO_CLOSE_DURATION", "10", "time of this event",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "DISMISSED", "False", "is this event dismissed",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "ENABLED", "True", "is this event enabled",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "FIRSTRUN", "True", "are we initializing or not",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "FORM_NAME", "None", "time of this event",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "KEY_BASE", "None", "count of number of times this has alerted since last reset",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "PREDISMISSABLE", "True", "is this event dismissable in advance",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "SNOOZABLE", "False", "can this event be snoozed",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "SNOOZED", "False", "is this event snoozed",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_AT_LAST_RUN", "0", "time this alarm last ran, now if running",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_AT_NEXT", "ZERO_CLOCK", "time next time this alarm goes off",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_INTERVAL_START", "ZERO_CLOCK", "time of the day this round of interval started",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_INTERVAL__BEGIN", "ZERO_CLOCK", "time of the day this interval is made active",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_INTERVAL__END", "ZERO_CLOCK", "time of the day this interval is no longer active",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_LEN_RING", "ZERO_CLOCK", "length of time to alert this event before auto closing it",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "EVENT_ENTRIES", "1", "holds events",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "ALARMPOPUP_TEXT_TEXT", "start winding down", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "NAME", "wind down", "this entry's name",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_ALARM", "03:30:00", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_INTERVAL", "00:00:00", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "ALARMPOPUP_PROPER", "None", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "AUTO_CLOSE_DURATION", "10", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "DISMISSED", "False", "is this event dismissed",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "ENABLED", "True", "is this event enabled",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "EVENTMODE", "EVENTMODE_ALARM", "this entry's event_mode",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "FIRSTRUN", "True", "are we initializing or not",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "FORM_NAME", "None", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "IS_ALERTING_NOW", "False", "is this event dismissed",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "KEY_BASE", "None", "count of number of times this has alerted since last reset",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "PREDISMISSABLE", "True", "is this event dismissable in advance",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "SNOOZABLE", "False", "can this event be snoozed",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "SNOOZED", "False", "is this event snoozed",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_AT_LAST_RUN", "0", "is this event dismissed",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_AT_NEXT", "ZERO_CLOCK", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_INTERVAL_START", "ZERO_CLOCK", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_INTERVAL__BEGIN", "ZERO_CLOCK", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_INTERVAL__END", "ZERO_CLOCK", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_LEN_RING", "ZERO_CLOCK", "time of this event",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "EVENT_ENTRIES", "2", "holds events",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "ALARMPOPUP_TEXT_TEXT", "next interval", "alarm text for this event",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "NAME", "test interval", "this entry's name",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_ALARM", "00:00:00", "time of this event if it an alarm",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_INTERVAL", "00:00:30", "interval of this event",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "ALARMPOPUP_PROPER", "None", "time of this event",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "AUTO_CLOSE_DURATION", "10", "time of this event",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "DISMISSED", "False", "is this event dismissed",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "ENABLED", "True", "is this event enabled",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "FIRSTRUN", "True", "are we initializing or not",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "FORM_NAME", "None", "time of this event",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "IS_ALERTING_NOW", "False", "is this event alerting right now",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "KEY_BASE", "None", "count of number of times this has alerted since last reset",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "PREDISMISSABLE", "True", "is this event dismissable in advance",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "SNOOZABLE", "False", "can this event be snoozed",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "SNOOZED", "False", "is this event snoozed",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_AT_LAST_RUN", "0", "time this alarm last ran, now if running",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_AT_NEXT", "ZERO_CLOCK", "time next time this alarm goes off",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_INTERVAL_START", "ZERO_CLOCK", "time of the day this round of interval started",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_INTERVAL__BEGIN", "ZERO_CLOCK", "time of the day this interval is made active",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_INTERVAL__END", "ZERO_CLOCK", "time of the day this interval is no longer active",),
+	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_LEN_RING", "ZERO_CLOCK", "length of time to alert this event before auto closing it",),
 	("PSGVAL__BTN_DISMISS20", FMAX_NOP, "start of the dismiss button for alarms",),
 	("PSGVAL__BTN_DISMISS2000", FMAXPSG_SCTN0906_BTN_DEF, "BTN_DISMISS20", "",),
 	("PSGVAL__BTN_DISMISS2001", FMAXPSG_SCTN0906_BTN_STR_ADD, "BTN_DISMISS20", "BUTTON_TEXT", "", "button_text empty for the DOWN button",),
@@ -1544,8 +1619,6 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FORMMAIN", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__CLOCKS_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "CLOCKS", "_WINDOW_", "True", "the clocks frame defined and done",),
 	("PSGVAL__CLOCKS_FUNC00_INIT", FMAXPSG_SCTN0916_CLASS_INIT_DEF, "CLOCKS", "keyBase_, formName_", "init parms defined",),
-
-
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_ALPHA_CHANNEL_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_ALPHA_HIGH_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_ALPHA_LOW_", "SZ_ALPHA_LOW", "",),
@@ -1558,17 +1631,15 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_KEY_DICT_REVERSE_", "{}", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_LAST_LOCATION_", "EMPTY_XY", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_LOCATION_", "EMPTY_XY", "",),
+	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_MAINFRAME_", "None", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_MOUSE_LOCATION_", "EMPTY_XY", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_MOUSE_STATUS_", "MOUSE_STATUS_NONE", "",),
-	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_MAINFRAME_", "None", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_SCREEN_DIMS_", "EMPTY_XY", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_SIZE_", "EMPTY_XY", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_TIME_KEY_LIST_", "[]", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_TIME_TO_CHECK_MOUSE_", "ZERO_CLOCK", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_TIME_TO_MOVE_", "ZERO_CLOCK", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_TIME_TO_UPDATE_", "ZERO_CLOCK", "",),
-
-
 	("PSGVAL__CLOCKS_FUNC01_ENTER", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__enter__", "", "define __enter__",),
 	("PSGVAL__CLOCKS_FUNC01_ENTER_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "__enter__", "__enter__.py", "globals for __enter__",),
 	("PSGVAL__CLOCKS_FUNC02_EXIT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__exit__", "*args_", "define __exit__ in CLOCKS",),
@@ -1646,81 +1717,6 @@ TBGLST = [
 	("PSGVAL__FONTSZ_CLOCKS_TIME_CLOCK", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_CLOCKS_TIME_CLOCK", "(FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)", "the font for the clocks only clock",),
 	("PSGVAL__FONTSZ_CLOCKS_TIME_ELAPSED", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_CLOCKS_TIME_ELAPSED", "(FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)", "the font for the clocks only clock",),
 	("PSGVAL__FONTSZ_CLOCKS_TIME_TOGO", FMAXPSG_SCTN0901_VAL_DEF, "FONTSZ_CLOCKS_TIME_TOGO", "(FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)", "the font for the clocks only clock",),
-	("PSGVAL__APPDS", FMAX_NOP, "the dict that holds all of the structure of the variables, read from and written to PySimpleGUI bits and un/pickled",),
-	("PSGVAL__APPDS_MAIN_00", FMAXPSG_SCTN090C_APPDS_DEF, "APPDS_MAIN", "the struct holding everything passed betwixt PySimpleGUI and this app",),
-	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "APPMODE", "APPMODE_NONE", "default mode is clocks",),
-	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "INDEX_OF_NEXT_EVENT", "0", "default to first entry as next until the app can sort through them",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "EVENT_ENTRIES", "0", "holds events",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "ALARMPOPUP_TEXT_TEXT", "get up, move around", "alarm text for this event",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "NAME", "MOVE", "this entry's name",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_ALARM", "03:30:00", "time of this event if it an alarm",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_INTERVAL", "00:30:00", "interval of this event",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "ALARMPOPUP_PROPER", "None", "time of this event",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "AUTO_CLOSE_DURATION", "10", "time of this event",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "DISMISSED", "False", "is this event dismissed",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "ENABLED", "True", "is this event enabled",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "FIRSTRUN", "True", "are we initializing or not",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "FORM_NAME", "None", "time of this event",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "KEY_BASE", "None", "count of number of times this has alerted since last reset",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "PREDISMISSABLE", "True", "is this event dismissable in advance",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "SNOOZABLE", "False", "can this event be snoozed",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "SNOOZED", "False", "is this event snoozed",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_AT_LAST_RUN", "0", "time this alarm last ran, now if running",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_AT_NEXT", "ZERO_CLOCK", "time next time this alarm goes off",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_INTERVAL_START", "ZERO_CLOCK", "time of the day this round of interval started",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_INTERVAL__BEGIN", "ZERO_CLOCK", "time of the day this interval is made active",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_INTERVAL__END", "ZERO_CLOCK", "time of the day this interval is no longer active",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "0", "TIME_LEN_RING", "ZERO_CLOCK", "length of time to alert this event before auto closing it",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "EVENT_ENTRIES", "1", "holds events",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "ALARMPOPUP_TEXT_TEXT", "start winding down", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "NAME", "wind down", "this entry's name",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_ALARM", "03:30:00", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_INTERVAL", "00:00:00", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "ALARMPOPUP_PROPER", "None", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "AUTO_CLOSE_DURATION", "10", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "DISMISSED", "False", "is this event dismissed",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "ENABLED", "True", "is this event enabled",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "EVENTMODE", "EVENTMODE_ALARM", "this entry's event_mode",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "FIRSTRUN", "True", "are we initializing or not",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "FORM_NAME", "None", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "IS_ALERTING_NOW", "False", "is this event dismissed",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "KEY_BASE", "None", "count of number of times this has alerted since last reset",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "PREDISMISSABLE", "True", "is this event dismissable in advance",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "SNOOZABLE", "False", "can this event be snoozed",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "SNOOZED", "False", "is this event snoozed",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_AT_LAST_RUN", "0", "is this event dismissed",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_AT_NEXT", "ZERO_CLOCK", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_INTERVAL_START", "ZERO_CLOCK", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_INTERVAL__BEGIN", "ZERO_CLOCK", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_INTERVAL__END", "ZERO_CLOCK", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "1", "TIME_LEN_RING", "ZERO_CLOCK", "time of this event",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "EVENT_ENTRIES", "2", "holds events",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "ALARMPOPUP_TEXT_TEXT", "next interval", "alarm text for this event",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "NAME", "test interval", "this entry's name",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_ALARM", "00:00:00", "time of this event if it an alarm",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_INTERVAL", "00:00:30", "interval of this event",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "ALARMPOPUP_PROPER", "None", "time of this event",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "AUTO_CLOSE_DURATION", "10", "time of this event",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "DISMISSED", "False", "is this event dismissed",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "ENABLED", "True", "is this event enabled",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "FIRSTRUN", "True", "are we initializing or not",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "FORM_NAME", "None", "time of this event",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "IS_ALERTING_NOW", "False", "is this event alerting right now",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "KEY_BASE", "None", "count of number of times this has alerted since last reset",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "PREDISMISSABLE", "True", "is this event dismissable in advance",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "SNOOZABLE", "False", "can this event be snoozed",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "SNOOZED", "False", "is this event snoozed",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_AT_LAST_RUN", "0", "time this alarm last ran, now if running",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_AT_NEXT", "ZERO_CLOCK", "time next time this alarm goes off",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_INTERVAL_START", "ZERO_CLOCK", "time of the day this round of interval started",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_INTERVAL__BEGIN", "ZERO_CLOCK", "time of the day this interval is made active",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_INTERVAL__END", "ZERO_CLOCK", "time of the day this interval is no longer active",),
-	("PSGVAL__APPDS_MAIN_04", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "EVENT_ENTRIES", "2", "TIME_LEN_RING", "ZERO_CLOCK", "length of time to alert this event before auto closing it",),
 	("PSGVAL__TEXT_INTERVAL_COUNT", FMAX_NOP, "CLOCKS text interval count",),
 	("PSGVAL__TEXT_INTERVAL_COUNT00", FMAXPSG_SCTN0909_TEXT_DEF, "TEXT_INTERVAL_COUNT", "define the text element for CLOCKS_CLOCK_TIME",),
 	("PSGVAL__TEXT_INTERVAL_COUNT01", FMAXPSG_SCTN0909_TEXT_STR_ADD, "TEXT_INTERVAL_COUNT", "TEXT", "0000", "the text to fill in",),
@@ -2455,16 +2451,18 @@ def makePSGClasses():
 ### * functions go here
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-#		for _thisFunctionName_, _thisFunctionVal_ in FMPSG_SCTN0916_CLASS_F
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 
-		_strToRtn_ += f"""{NTAB(2)}__CDS__ = {OBRCE}{NEWLINE}"""
+		_strToRtn_ += f"""{NTAB(2)}self.__CDS__ = {OBRCE}{NEWLINE}"""
 		for _thisItem_ in FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 
-		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{NEWLINE}{NEWLINE}"""
+		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{NEWLINE}"""
+
+		for _thisFuncName_, _funcVals_ in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
+			_strToRtn_ += f"""{_funcVals_}"""
 
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -4543,7 +4541,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_BTNS_DICT[_thisClassName_]:
 				FMPSG_SCTN0916_CLASS_BTNS_DICT[_thisClassName_][_thisElementName_] = ""
 
-			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT[_thisClassName_] = {}
@@ -4629,7 +4627,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
@@ -4730,6 +4728,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 
 			FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Button{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4762,6 +4761,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 
 			FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Checkbox{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4794,6 +4794,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 
 			FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Column{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4826,6 +4827,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 
 			FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Combo{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4923,6 +4925,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 
 			FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Radio{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5143,6 +5146,37 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # SCTN0916_04_ENDS_CLASS_DICT
 
+# SCTN0916_05_BEGINS_CLASS_FUNCTION
+# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 5:
+				doErrorItem("not 5 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisElementName_ = _thisItem_[3]
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = ""
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT:
+				FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
+
+			FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+# SCTN0916_05_ENDS_CLASS_FUNCTIONS
+
 # SCTN0916_07_BEGINS_CLASS_INIT
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
@@ -5273,6 +5307,8 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -5612,10 +5648,15 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 4:
 				doErrorItem("not 4 items", _thisItem_)
 				continue
+
 			_thisListName_ = _thisItem_[2]
+
 			if _thisListName_ not in FMPSG_SCTN0903_LIST_DICT:
 				FMPSG_SCTN0903_LIST_DICT[_thisListName_] = ""
+
 			FMPSG_SCTN0903_LIST_CMNT_DICT[_thisListName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -5676,7 +5717,10 @@ def parseTBGLST(FDTBGLST):
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[_thisClassName_] = {}
+
 			FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -5804,6 +5848,8 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -5929,6 +5975,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
