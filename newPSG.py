@@ -961,13 +961,79 @@ class CLASS_CLOCKS(object):
 		}
 
 	def __enter__(self):
+	def __enter__(self):
+		global \
+			ALL_THE_FORMS
+		#
+		self._MAINFRAME_ = SG.Window(**self._WINDOW_).finalize()
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = self._MAINFRAME_
+		self.init()
+		return self
 	def __exit__(self, *args_):
+	def __exit__(self, *args_):
+		global \
+			ALL_THE_FORMS, \
+			MAPPDS
+		#
+		self._MAINFRAME_.close()
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 	def quickRead(self):
 		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
 	def updateFromDict(selfdictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
+	def updateFromDict(self, dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
+		_tempDictToUpdateFrom_ = {}
+		for _key_, val_ in dictToUpdateFrom_.items():
+			_val_ = val_
+			if (_key_ in self._TIME_KEY_LIST_):
+				if (_val_ >= CF.DAYSECS):
+					_val_ -= CF.DAYSECS
+				_val_ = abs(_val_)
+				_tempDictToUpdateFrom_[_key_] = CF.nrmlIntToHMS(_val_)
+			else:
+				_tempDictToUpdateFrom_[_key_] = _val_
+		if setLocalDict_ is True:
+			self._DICTIN_[_key_] = val_
+		self._MAINFRAME_.fill(_tempDictToUpdateFrom_)
+		__dummy__ = self._MAINFRAME_.Read(timeout=1)
 	def readToDict(selfdictToReadTo_=self._DICTOUT_, setLocalDict_=True):
+	def readToDict(self, dictToReadTo_=self._DICTOUT_, setLocalDict_=True):
+		_dictToRtn_ = {}
+		for _key_ in dictToReadTo_:
+			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]
+			if (setLocalDict_ is True):
+				self._DICTOUT_[_key_] = _dictToRtn_[_key_]
+		return _dictToRtn_
 	def checkMouse(self):
 	def runaway(selfmoveMpx_=(0, 0)):
+	def runaway(moveMpx_=(0, 0)):
+		if NOWMS < self._TIME_TO_MOVE_:
+			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
+
+		self._TIME_TO_MOVE_ += SZ_TIMEMS_BETWEEN_MOVES
+		_screenSZX_, _screenSZY_ = self._MAINFRAME_.GetScreenDimensions()
+		_sizeX_, _sizeY_ = self._MAINFRAME_.Size()
+		_lcnX_, _lcnY_ = self._MAINFRAME_.CurrentLocation()
+		_moveToX_ = _lcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
+		_moveToY_ = _lcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
+
+		if _moveToX_ < 0:
+			_moveToX_ = 0
+		elif _moveToX_ > (_screenSZX_ - _sizeX_):
+			_moveToX_ = (_screenSZX_ - _sizeX_)
+
+		if _moveToY_ < 0:
+			_moveToY_ = 0
+		elif _moveToY_ > (_screenSZY_ - _sizeY_):
+			_moveToY_ = (_screenSZY_ - _sizeY_)
+
+		# print(f"""likely moving abs(_moveToX_ - _lcnX_) {abs(_moveToX_ - _lcnX_)} abs(_moveToY_ - _lcnY_) {abs(_moveToY_ - _lcnY_)} SZ_MAX_DELTA {SZ_MAX_DELTA}""")
+			# avoid trouble with spurious moves caused by a process delaying anything here too far
+		if (abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA):
+			# print(f"""(abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) (abs({_moveToX_} - {_lcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA)}""")
+			# print(f"""(abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA) (abs({_moveToY_} - {_lcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA)}""")
+			return
+
+		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C APPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

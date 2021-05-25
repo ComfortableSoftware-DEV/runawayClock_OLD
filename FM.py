@@ -5232,14 +5232,14 @@ def parseTBGLST(FDTBGLST):
 
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
-			_thisLine_ = _thisItem_[4]
+			_thisFilename_ = _thisItem_[4]
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
 				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_] = {}
 			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
 				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 
-			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisLine_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr(f"res/functions/" + _thisFilename_)}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
