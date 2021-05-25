@@ -2461,8 +2461,10 @@ def makePSGClasses():
 
 		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{NEWLINE}"""
 
-		for _thisFuncName_, _funcVals_ in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
-			_strToRtn_ += f"""{_funcVals_}"""
+		print(f"""FMPSG_SCTN0916_CLASS_FUNCTION_DICT {FMPSG_SCTN0916_CLASS_FUNCTION_DICT}""")
+		if _thisClassName_ in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
+			for _thisFuncName_, _funcVals_ in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
+				_strToRtn_ += f"""{_funcVals_}"""
 
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -5152,12 +5154,13 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if _thisItemLen_ != 5:
-				doErrorItem("not 5 items", _thisItem_)
+			if _thisItemLen_ != 6:
+				doErrorItem("not 6 items", _thisItem_)
 				continue
 
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
+			_theseParms_ = _thisItem_[4]
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
 				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_] = {}
