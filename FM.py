@@ -5165,8 +5165,9 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
 				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_] = {}
 			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = ""
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""""")
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
 
