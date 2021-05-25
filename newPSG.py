@@ -960,6 +960,13 @@ class CLASS_CLOCKS(object):
 			WINDOW: self._WINDOW_,  # define the clocks window
 		}
 
+	def __enter__(self):
+	def __exit__(self, *args_):
+	def quickRead(self):
+	def updateFromDict(selfdictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
+	def readToDict(selfdictToReadTo_=self._DICTOUT_, setLocalDict_=True):
+	def checkMouse(self):
+	def runaway(selfmoveMpx_=(0, 0)):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C APPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

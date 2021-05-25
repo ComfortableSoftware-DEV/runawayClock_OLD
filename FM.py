@@ -1642,7 +1642,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL_DEF, "CLOCKS", "_TIME_TO_UPDATE_", "ZERO_CLOCK", "",),
 	("PSGVAL__CLOCKS_FUNC01_ENTER", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__enter__", "", "define __enter__",),
 	("PSGVAL__CLOCKS_FUNC01_ENTER_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "__enter__", "__enter__.py", "globals for __enter__",),
-	("PSGVAL__CLOCKS_FUNC02_EXIT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__exit__", "*args_", "define __exit__ in CLOCKS",),
+	("PSGVAL__CLOCKS_FUNC02_EXIT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__exit__", ", *args_", "define __exit__ in CLOCKS",),
 	("PSGVAL__CLOCKS_FUNC02_EXIT_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "__exit__", "__exit__.py", "__exit__ read in",),
 	("PSGVAL__CLOCKS_FUNC03_QUICK_READ", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "quickRead", "", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC03_QUICK_READ_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_LINE_ADD, "CLOCKS", "quickRead", "self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)", "read the frame and set self._RESULT_",),
@@ -2463,8 +2463,10 @@ def makePSGClasses():
 
 		print(f"""FMPSG_SCTN0916_CLASS_FUNCTION_DICT {FMPSG_SCTN0916_CLASS_FUNCTION_DICT}""")
 		if _thisClassName_ in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
-			for _thisFuncName_, _funcVals_ in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
-				_strToRtn_ += f"""{_funcVals_}"""
+			for __thisFuncName__, __funcVals__ in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_].items():
+				for __thisElement__ in __funcVals__:
+					_strToRtn_ += f"""{__thisElement__}"""
+
 
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -5167,7 +5169,107 @@ def parseTBGLST(FDTBGLST):
 			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
 				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 
-			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""""")
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(1)}def {_thisElementName_}{OPAREN}self{_theseParms_}{CPAREN}:{NEWLINE}""")
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT:
+				FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
+
+			FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_BLANKLINE:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 5:
+				doErrorItem("not 5 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisElementName_ = _thisItem_[3]
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
+
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NEWLINE}""")
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_LINE_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 6:
+				doErrorItem("not 6 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisElementName_ = _thisItem_[3]
+
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
+
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NEWLINE}""")
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_STR_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 7:
+				doErrorItem("not 7 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisElementName_ = _thisItem_[3]
+			_thisValName_ = _thisItem_[4]
+			_thisVal_ = _thisItem_[5]
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
+
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}""")
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT:
+				FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
+
+			FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_VAL_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 7:
+				doErrorItem("not 7 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisElementName_ = _thisItem_[3]
+			_thisValName_ = _thisItem_[4]
+			_thisVal_ = _thisItem_[5]
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
+
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisValName_} = {_thisVal_}""")
+
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
 
