@@ -963,6 +963,7 @@ class CLASS_CLOCKS(object):
 	def __enter__(self):
 	def __exit__(self, *args_):
 	def quickRead(self):
+		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
 	def updateFromDict(selfdictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
 	def readToDict(selfdictToReadTo_=self._DICTOUT_, setLocalDict_=True):
 	def checkMouse(self):

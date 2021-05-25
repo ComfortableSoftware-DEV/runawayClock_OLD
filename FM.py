@@ -5210,14 +5210,36 @@ def parseTBGLST(FDTBGLST):
 
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
-
+			_thisLine_ = _thisItem_[4]
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
 				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_] = {}
 			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
 				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 
-			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisLine_}{NEWLINE}""")
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 6:
+				doErrorItem("not 6 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisElementName_ = _thisItem_[3]
+			_thisLine_ = _thisItem_[4]
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
+
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisLine_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
