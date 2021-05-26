@@ -1,4 +1,3 @@
-	def update():
 		if (NOWMS >= self._TIME_TO_UPDATE_):
 			return
 

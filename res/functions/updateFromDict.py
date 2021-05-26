@@ -1,4 +1,3 @@
-	def updateFromDict(self, dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
 		_tempDictToUpdateFrom_ = {}
 		for _key_, val_ in dictToUpdateFrom_.items():
 			_val_ = val_

@@ -946,6 +946,15 @@ class CLASS_CLOCKS(object):
 		self._MAINFRAME_.close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
+	def getMousePos(self):
+		# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+
+		_mseData_ = MLCN()._data
+		APPDS[MOUSE_LCN] = locationToRtn_ = (_mseData_["root_x"], _mseData_["root_y"])
+		return locationToRtn_
+		# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
 	def quickRead(self):
 		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
 
@@ -1058,19 +1067,19 @@ class CLASS_CLOCKS(object):
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_statusToRtn_ == MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ != MOUSE_STATUS_OVER) and (self._CHECKBOX_ALPHA_DIM_] is True):
+		if (_statusToRtn_ == MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ != MOUSE_STATUS_OVER) and (self._CHECKBOX_ALPHA_DIM_ is True):
 			self._MAINFRAME_.AlphaChannel = self._ALPHA_LOW_
 			self._DIMMED_ = True
 
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-	elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER)) or ((self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER) and (self._DIMMED_ is True) and (self._CHECKBOX_ALPHA_DIM_] is False)):
-			FORMMAIN.AlphaChannel = APPDS[ALPHA_HIGH]
+		elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER)) or ((self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER) and (self._DIMMED_ is True) and (self._CHECKBOX_ALPHA_DIM_ is False)):
+			self._MAINFRAME_.AlphaChannel = APPDS[ALPHA_HIGH]
 			alphaMode = False
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		LAST_MOUSE_STATUS = _statusToRtn_
-		# print(f"""returning {_statusToRtn_}""")
-		return _statusToRtn_
+		self._LAST_MOUSE_STATUS_ = _statusToRtn_
+		self._MOUSE_STATUS_ = _statusToRtn_
+		self._MP####
 
 	def runaway(self, moveMpx_=(0, 0)):
 		if NOWMS < self._TIME_TO_MOVE_:
@@ -1106,7 +1115,7 @@ class CLASS_CLOCKS(object):
 		self._DICTIN_, _wasUpdated_ = updateClocks(self._DICTIN_)
 		if _wasUpdated_ is True:
 			self.updateFromDict(setLocalDict_=False)
-		if (APPDS[CHECKBOX_RUNAWAY] is True):
+		if (APPDS_MAIN[CHECKBOX_RUNAWAY] is True):
 			_mouseDirection_ = checkMouseLcn(self._THIS_FORM_NAME_, )
 			self.runaway()
 
@@ -1116,7 +1125,7 @@ class CLASS_CLOCKS(object):
 class CLASS_THECLOCK(object):
 	global \
 		ALL_THE_FORMS, \
-		APPDS
+		APPDS_MAIN
 
 	def __init__(self, keyBase_, formName_):
 		self._THIS_KEY_BASE_ = keyBase_
@@ -1167,23 +1176,23 @@ class CLASS_THECLOCK(object):
 	def __enter__(self):
 		global \
 			ALL_THE_FORMS, \
-			APPDS
+			APPDS_MAIN
 		#
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self._WINDOW_).finalize()
 
 	def __exit__(self, *args_):
 		global \
 			ALL_THE_FORMS, \
-			APPDS
+			APPDS_MAIN
 		#
 		ALL_THE_FORMS[self._THIS_FORM_NAME_].close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN090C APPDS
+# * SCTN090C APPDS_MAIN
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-APPDS = {  # the struct holding everything passed betwixt PySimpleGUI and this app
+APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and this app
 	ALPHA_CHANNEL: 1.0,  # current AlphaChannel setting
 	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
 	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
@@ -1309,19 +1318,6 @@ def splitBBoxToRaw(BBoxToSplit_):
 def splitXYToRaw(XYToSplit_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	return XYToSplit_[INDEX_X], XYToSplit_[INDEX_Y]
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# getMousePos
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*def mousepos():
-# @profile
-def getMousePos():
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-
-	_mseData_ = MLCN()._data
-	APPDS[MOUSE_LCN] = locationToRtn_ = (_mseData_["root_x"], _mseData_["root_y"])
-	return locationToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 

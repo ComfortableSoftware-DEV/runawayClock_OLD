@@ -1,4 +1,3 @@
-	def init(self):
 		self._LAST_LOCATION_ = self._MAINFRAME_.CurrentLocation()
 		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
 		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)

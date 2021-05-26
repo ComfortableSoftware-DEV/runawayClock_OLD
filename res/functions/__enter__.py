@@ -1,4 +1,3 @@
-	def __enter__(self):
 		global \
 			ALL_THE_FORMS
 		#

@@ -1,4 +1,3 @@
-	def runaway(moveMpx_=(0, 0)):
 		if NOWMS < self._TIME_TO_MOVE_:
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 

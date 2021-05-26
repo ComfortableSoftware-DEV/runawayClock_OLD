@@ -1,4 +1,3 @@
-	def __exit__(self, *args_):
 		global \
 			ALL_THE_FORMS, \
 			MAPPDS

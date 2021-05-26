@@ -1,4 +1,3 @@
-	def readToDict(self, dictToReadTo_=self._DICTOUT_, setLocalDict_=True):
 		_dictToRtn_ = {}
 		for _key_ in dictToReadTo_:
 			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]

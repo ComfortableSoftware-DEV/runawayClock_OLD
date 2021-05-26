@@ -200,6 +200,7 @@ FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font 
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
 FORMMAIN = None  # mainframe so everything passes together always
 IS_ALERTING_NOWV = False  # comment
+LAST_MOUSE_LCN = EMPTY_XY  # last returned mouse status to deal with hover events
 LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
 NAME_NEXT_EVENT_STR = ""  # name of the next event
@@ -961,7 +962,6 @@ class CLASS_CLOCKS(object):
 		}
 
 	def __enter__(self):
-	def __enter__(self):
 		global \
 			ALL_THE_FORMS
 		#
@@ -969,7 +969,7 @@ class CLASS_CLOCKS(object):
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = self._MAINFRAME_
 		self.init()
 		return self
-	def __exit__(self, *args_):
+
 	def __exit__(self, *args_):
 		global \
 			ALL_THE_FORMS, \
@@ -977,10 +977,11 @@ class CLASS_CLOCKS(object):
 		#
 		self._MAINFRAME_.close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
+
 	def quickRead(self):
 		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
+
 	def updateFromDict(selfdictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
-	def updateFromDict(self, dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
 		_tempDictToUpdateFrom_ = {}
 		for _key_, val_ in dictToUpdateFrom_.items():
 			_val_ = val_
@@ -995,17 +996,18 @@ class CLASS_CLOCKS(object):
 			self._DICTIN_[_key_] = val_
 		self._MAINFRAME_.fill(_tempDictToUpdateFrom_)
 		__dummy__ = self._MAINFRAME_.Read(timeout=1)
+
 	def readToDict(selfdictToReadTo_=self._DICTOUT_, setLocalDict_=True):
-	def readToDict(self, dictToReadTo_=self._DICTOUT_, setLocalDict_=True):
 		_dictToRtn_ = {}
 		for _key_ in dictToReadTo_:
 			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]
 			if (setLocalDict_ is True):
 				self._DICTOUT_[_key_] = _dictToRtn_[_key_]
 		return _dictToRtn_
+
 	def checkMouse(self):
+
 	def runaway(selfmoveMpx_=(0, 0)):
-	def runaway(moveMpx_=(0, 0)):
 		if NOWMS < self._TIME_TO_MOVE_:
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
@@ -1034,6 +1036,7 @@ class CLASS_CLOCKS(object):
 			return
 
 		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C APPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
