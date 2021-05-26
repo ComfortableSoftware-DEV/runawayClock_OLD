@@ -22,6 +22,7 @@
 []  | clocks mode can be separated
 []  | edit mode, use combo for selecting which EVENT_ENTRIES entry to use
 []  | lowercase all parm keys to match PySimpleGui conventions
+[]  |  switch to automatic _DICTIN_, _DICTOUT_, and __CDS__ from a bool in TBGLST
 []  | ** idea ran away before I could get it written **
 [X] | (abandoned) convert all passed about things to a dict (ended up going back to tuples for all of these)
 [X] | (abandoned) convert all tupdict here to tupdict_dict -=> the infamous TDD
