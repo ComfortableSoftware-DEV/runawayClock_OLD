@@ -5484,19 +5484,6 @@ def parseTBGLST(FDTBGLST):
 			_thisValKey_ = _thisItem_[7]
 			_thisVal_ = _thisItem_[8]
 
-
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_] = {}
-
-			if _thisLayoutName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_] = {}
-
-			if _thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_] = {}
-
-			if _thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] = ""
-
 			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}{_thisValKey_}={_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
@@ -5517,18 +5504,6 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_] = {}
-
-			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_] = ""
-
-			if _thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_] = {}
-
-			if _thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-
 			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Radio{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
@@ -5547,20 +5522,6 @@ def parseTBGLST(FDTBGLST):
 			_thisRowKey_ = _thisItem_[4]
 			_thisTabLevel_ = _thisItem_[5]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
-
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_] = {}
-			if _thisLayoutName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_] = {}
-
-#			print(f"""FMPSG_SCTN0916_CLASS_LAYOUT_DICT {FMPSG_SCTN0916_CLASS_LAYOUT_DICT}
-#_thisClassName_ = {_thisClassName_}
-#_thisLayoutName_ = {_thisLayoutName_}
-#_thisRowKey_ = {_thisRowKey_}
-#_thisTabLevel_ = {_thisTabLevel_}
-#""")
-			if _thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_] = {}
 
 			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][TABLEVEL] = _thisTabLevel_
 
@@ -5582,18 +5543,6 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_] = {}
-
-			if _thisLayoutName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_] = ""
-
-			if _thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_] = {}
-
-			if _thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] = ""
-
 			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Spin{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
@@ -5614,18 +5563,6 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_] = {}
-
-			if _thisLayoutName_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_] = {}
-
-			if _thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_] = {}
-
-			if _thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_]:
-				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] = ""
-
 			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Text{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
@@ -5639,16 +5576,19 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN0903_LIST_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if _thisItemLen_ != 4:
-				doErrorItem("not 4 items", _thisItem_)
+			if _thisItemLen_ != 5:
+				doErrorItem("not 5 items", _thisItem_)
 				continue
 
-			_thisListName_ = _thisItem_[2]
+			_thisClassName_ = _thisItem_[2]
+			_thisListName_ = _thisItem_[3]
 
-			if _thisListName_ not in FMPSG_SCTN0903_LIST_DICT:
-				FMPSG_SCTN0903_LIST_DICT[_thisListName_] = ""
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_LIST_DICT:
+				FMPSG_SCTN0916_CLASS_LIST_DICT[_thisClassName_] = {}
+			if _thisListName_ not in FMPSG_SCTN0916_CLASS_LIST_DICT[_thisClassName_]:
+				FMPSG_SCTN0916_CLASS_LIST_DICT[_thisClassName_][_thisListName_] = ""
 
-			FMPSG_SCTN0903_LIST_CMNT_DICT[_thisListName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0916_CLASS_LIST_CMNT_DICT[_thisListName_] = f"""{_thisComment_}"""
 			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
@@ -5661,11 +5601,12 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
 				continue
+
 			_thisListName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			if _thisListName_ not in FMPSG_SCTN0903_LIST_DICT:
-				FMPSG_SCTN0903_LIST_DICT[_thisListName_] = ""
+
 			FMPSG_SCTN0903_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -5676,11 +5617,12 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
 				continue
+
 			_thisListName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			if _thisListName_ not in FMPSG_SCTN0903_LIST_DICT:
-				FMPSG_SCTN0903_LIST_DICT[_thisListName_] = ""
+
 			FMPSG_SCTN0903_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -5706,13 +5648,14 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
 				continue
+
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
 				FMPSG_SCTN0916_CLASS_SPIN_DICT[_thisClassName_] = {}
 			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_DICT[_thisClassName_] = {}
+				FMPSG_SCTN0916_CLASS_SPIN_DICT[_thisClassName_][_thisElementName_] = {}
 
 			if _thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_] = {}
@@ -5723,6 +5666,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5734,15 +5678,11 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
 				continue
+
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
-
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
-				FMPSG_SCTN0916_CLASS_SPIN_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_DICT[_thisClassName_][_thisElementName_] = ""
 
 			if (_thisKey_ == "VALUES") and (_thisVal_ == "%LIST%"):
 				thisValStr_ = f"""self.{_thisClassName_}{_thisElementName_}_LIST"""
@@ -5761,15 +5701,11 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
 				continue
+
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
-
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT:
-				FMPSG_SCTN0916_CLASS_SPIN_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_SPIN_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_SPIN_DICT[_thisClassName_][_thisElementName_] = ""
 
 			if (_thisKey_ == "VALUES") and (_thisVal_ == "%LIST%"):
 				thisValStr_ = f"""self.{_thisElementName_}_SPIN_LIST"""
@@ -5788,14 +5724,10 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
 				continue
+
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
-
-			if _thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
-				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_]:
-				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_][_thisElementName_] = ""
 
 			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
@@ -5809,14 +5741,10 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
 				continue
+
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
-
-			if _thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
-				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_]:
-				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_][_thisElementName_] = ""
 
 			FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
@@ -5834,6 +5762,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
 				continue
+
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 
@@ -5868,11 +5797,6 @@ def parseTBGLST(FDTBGLST):
 			_thisElementName_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT:
-				FMPSG_SCTN0916_CLASS_TEXT_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] = ""
-
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT:
 				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_] = {}
 			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_]:
@@ -5894,11 +5818,6 @@ def parseTBGLST(FDTBGLST):
 			_thisElementName_ = _thisItem_[3]
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
-
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT:
-				FMPSG_SCTN0916_CLASS_TEXT_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] = ""
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT:
 				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_] = {}
@@ -5926,18 +5845,11 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
 				continue
+
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
-
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT:
-				FMPSG_SCTN0916_CLASS_TEXT_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] = ""
-
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT:
-				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_] = {}
 
 			if (_thisKey_ == "KEY"):
 				thisValStr_ = f"""f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}"""
@@ -5966,6 +5878,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
 				continue
+
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 
@@ -5996,11 +5909,6 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_WINDOW_DICT:
-				FMPSG_SCTN0916_CLASS_WINDOW_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_WINDOW_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_WINDOW_DICT[_thisClassName_][_thisElementName_] = ""
-
 			FMPSG_SCTN0916_CLASS_WINDOW_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
@@ -6018,11 +5926,6 @@ def parseTBGLST(FDTBGLST):
 			_thisElementName_ = _thisItem_[3]
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
-
-			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_WINDOW_DICT:
-				FMPSG_SCTN0916_CLASS_WINDOW_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_WINDOW_DICT[_thisClassName_]:
-				FMPSG_SCTN0916_CLASS_WINDOW_DICT[_thisClassName_][_thisElementName_] = ""
 
 			FMPSG_SCTN0916_CLASS_WINDOW_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
