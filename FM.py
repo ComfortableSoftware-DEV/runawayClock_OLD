@@ -1124,15 +1124,6 @@ TBGLST = [
 	("PSGVAL_ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORMPOPUP04", "None", "ENTRY IN FORMS",),
 	("PSGVAL_ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORMPOPUP05", "None", "ENTRY IN FORMS",),
 	("PSGVAL_ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORMTHECLOCK", "None", "ENTRY IN FORMS",),
-	("PSGVAL_APPDS_TIMES_LIST", FMAXPSG_SCTN0903_LIST_DEF, "APPDS_TIMES_LIST", "list of all keys to times for midnight etc. processing",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_ALARM", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_AT_LAST_RUN", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_AT_NEXT", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL_START", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL__BEGIN", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_INTERVAL__END", "",),
-	("PSGVAL_APPDS_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "TIME_LEN_RING", "",),
 	("PSGVAL_CLOSE_LIST", FMAXPSG_SCTN0903_LIST_DEF, "CLOSE_LIST", "list with close statuses",),
 	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_E", "easet close entry",),
 	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_N", "easet close entry",),
@@ -1271,18 +1262,6 @@ TBGLST = [
 	("PSGVAL_KEY_TIME_LEN_RING", FMAXPSG_SCTN0900_KEY_DEF, "TIME_LEN_RING", "length of ringing",),
 	("PSGVAL_KEY_TIME_TOGO", FMAXPSG_SCTN0900_KEY_DEF, "TIME_TOGO", "down counter to next event on this window/alarm/interval/reminder",),
 	("PSGVAL_KEY_TRANSPARENT", FMAXPSG_SCTN0900_KEY_DEF, "TRANSPARENT", "is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)",),
-	("PSGVAL_POPUP_INTERVAL", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DEF", "POPUP_INTERVAL", "POPUPTYPE_AUTO_CLOSE", "the dialog when an interval goes off",),
-	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD", "POPUP_INTERVAL", "TITLE", "", "title of the alert window",),
-	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", "POPUP_INTERVAL", "AUTO_CLOSE", "True", "interval timers get auto dismiss by default",),
-	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", "POPUP_INTERVAL", "AUTO_CLOSE_DURATION", "5", "5 seconds before auto closing an interval alert",),
-	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", "POPUP_INTERVAL", "FONT", "FONTSZ_ALERT_TEXT", "no title bar on our popup",),
-	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", "POPUP_INTERVAL", "GRAB_ANYWHERE", "True", "grab anywhere on our popup",),
-	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", "POPUP_INTERVAL", "KEEP_ON_TOP", "True", "keep our popup on top",),
-	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", "POPUP_INTERVAL", "MODAL", "True", "grab anywhere on our popup",),
-	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", "POPUP_INTERVAL", "NON_BLOCKING", "True", "carry on with everything else",),
-	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", "POPUP_INTERVAL", "NO_TITLEBAR", "True", "no title bar on our popup",),
-	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD", "POPUP_INTERVAL", "INTERVAL %title_% has expired %count_% times", "line of text",),
-	("PSGVAL_POPUP_INTERVAL01", FMAX_NOP, "FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD", "POPUP_INTERVAL", "click OK to dismiss or wait %self.POPUP_INTERVAL_DICT[auto_close_duration]% seconds or so", "line of text",),
 	("PSGVAL_SZ_ALERT_TEXT", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALERT_TEXT", "20", "high alpha",),
 	("PSGVAL_SZ_ALPHA_HIGH", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_HIGH", "1.0", "high alpha",),
 	("PSGVAL_SZ_ALPHA_LOW", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_LOW", "0.1", "low alpha setting",),
@@ -1311,19 +1290,6 @@ TBGLST = [
 	("PSGVAL_SZ_TIMES_BETWEEN_PERIODIC_JOB", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMES_BTWN_PERIODIC_JOB", "900", "time between periodic job runnings",),
 	("PSGVAL_TIMEH_ADJUST_HRS", FMAXPSG_SCTN0900_VAL_DEF, "TIMEH_ADJUST_HRS", "0", "comment",),
 	("PSGVAL_TIMEM_ADJUST_MINS", FMAXPSG_SCTN0900_VAL_DEF, "TIMEM_ADJUST_MINS", "0", "comment",),
-	("PSGVAL_TIMES_LIST", FMAXPSG_SCTN0903_LIST_DEF, "TIMES_LIST", "list of all keys to times for midnight etc. processing",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_ALARM", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_AT_LAST_RUN", "time at last run entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_AT_NEXT", "time at next event entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_AT_ZEROELAPSE", "time the elapsed timer was reset in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_CLOCK", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_ELAPSED", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL_START", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL__BEGIN", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_INTERVAL__END", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_LEN_RING", "alarm time entry in TIMES_LIST",),
-	("PSGVAL_TIMES_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "TIMES_LIST", "TIME_TOGO", "alarm time entry in TIMES_LIST",),
 	("PSGVAL_TITLE", FMAX_NOP, "titles start here",),
 	("PSGVAL_TITLE_ALARMPOPUP", FMAXPSG_SCTN0900_STR_DEF, "TITLE_ALARMPOPUP", "ALERT", "string with window title for APPMODE_CLOCKS",),
 	("PSGVAL_TITLE_CLOCKS", FMAXPSG_SCTN0900_STR_DEF, "TITLE_CLOCKS", "CLOCKS", "string with window title for APPMODE_CLOCKS",),
@@ -1331,7 +1297,7 @@ TBGLST = [
 	("PSGVAL_TITLE_MAIN", FMAXPSG_SCTN0900_STR_DEF, "TITLE_MAIN", "Main window which is xpanded from CLOCKS window and pops up EDIT windows", "string with window title for APPMODE_CLOCKS",),
 	("PSGVAL_TITLE_THECLOCK", FMAXPSG_SCTN0900_STR_DEF, "TITLE_THECLOCK", "THECLOCK", "string with window title for APPMODE_CLOCKS",),
 	("PSGVAL_ZERO_CLOCK", FMAXPSG_SCTN0900_VAL_DEF, "ZERO_CLOCK", "0", "all the zeros",),
-	("PSGVAL__APPDS", FMAX_NOP, "the dict that holds all of the structure of the variables, read from and written to PySimpleGUI bits and un/pickled",),
+	("PSGVAL__APPDS", FMAX_NOP, "APP Data Storage",),
 	("PSGVAL__APPDS_MAIN_00", FMAXPSG_SCTN090C_APPDS_DEF, "APPDS_MAIN", "the struct holding everything passed betwixt PySimpleGUI and this app",),
 	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "APPMODE", "APPMODE_NONE", "default mode is clocks",),
 	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "INDEX_OF_NEXT_EVENT", "0", "default to first entry as next until the app can sort through them",),
@@ -4763,7 +4729,6 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 
 			FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Button{OPAREN}  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4796,7 +4761,6 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 
 			FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Checkbox{OPAREN}  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4829,7 +4793,6 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 
 			FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Column{OPAREN}  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4862,7 +4825,6 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 
 			FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Combo{OPAREN}  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4960,7 +4922,6 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 
 			FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Radio{OPAREN}  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5064,7 +5025,12 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # SCTN0916_03_ENDS_CLASS_COLUMN
 
-# SCTN0916_04_BEGINS_CLASS_DICT
+# SCTN0916_04_BEGINS_CLASS_COMBO
+# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+# SCTN0916_04_ENDS_CLASS_COMBO
+
+# SCTN0916_05_BEGINS_CLASS_DICT
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
@@ -5085,7 +5051,6 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 
 			continue
@@ -5179,9 +5144,14 @@ def parseTBGLST(FDTBGLST):
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-# SCTN0916_04_ENDS_CLASS_DICT
+# SCTN0916_05_ENDS_CLASS_DICT
 
-# SCTN0916_05_BEGINS_CLASS_FUNCTION
+# SCTN0916_04_BEGINS_CLASS_FRAMEELEMENT
+# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+# SCTN0916_04_ENDS_CLASS_FRAMEELEMENT
+
+# SCTN0916_06_BEGINS_CLASS_FUNCTION
 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
@@ -5305,7 +5275,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_VAL_DEF:
+		elif (_thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_VAL1_DEF):
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -5334,7 +5304,7 @@ def parseTBGLST(FDTBGLST):
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-# SCTN0916_05_ENDS_CLASS_FUNCTIONS
+# SCTN0916_06_ENDS_CLASS_FUNCTIONS
 
 # SCTN0916_07_BEGINS_CLASS_INIT
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -5444,7 +5414,7 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # SCTN0916_07_ENDS_CLASS_INIT
 
-# SCTN0916_05_BEGINS_CLASS_LAYOUT
+# SCTN0916_08_BEGINS_CLASS_LAYOUT
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
@@ -5796,9 +5766,9 @@ def parseTBGLST(FDTBGLST):
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-# SCTN0916_05_ENDS_CLASS_LAYOUT
+# SCTN0916_08_ENDS_CLASS_LAYOUT
 
-# SCTN0916_06_BEGINS_CLASS_LIST
+# SCTN0916_09_BEGINS_CLASS_LIST
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
@@ -5850,9 +5820,19 @@ def parseTBGLST(FDTBGLST):
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-# SCTN0916_06_ENDS_CLASS_LIST
+# SCTN0916_09_ENDS_CLASS_LIST
 
-# SCTN0916_07_BEGINS_CLASS_SPIN
+# SCTN0916_04_BEGINS_CLASS_RADIO
+# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+# SCTN0916_04_ENDS_CLASS_RADIO
+
+# SCTN0916_04_BEGINS_CLASS_RCMENU
+# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+# SCTN0916_04_ENDS_CLASS_RCMENU
+
+# SCTN0916_0A_BEGINS_CLASS_SPIN
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
@@ -5878,7 +5858,6 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5979,9 +5958,9 @@ def parseTBGLST(FDTBGLST):
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-# SCTN0916_07_ENDS_CLASS_SPIN
+# SCTN0916_0A_ENDS_CLASS_SPIN
 
-# SCTN0916_08_BEGINS_CLASS_TEXT
+# SCTN0916_0B_BEGINS_CLASS_TEXT
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
@@ -6111,7 +6090,7 @@ def parseTBGLST(FDTBGLST):
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-# SCTN0916_08_ENDS_CLASS_TEXT
+# SCTN0916_0B_ENDS_CLASS_TEXT
 
 # SCTN0916_89_BEGINS_CLASS_WINDOW
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3

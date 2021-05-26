@@ -356,18 +356,6 @@ ALERTING_LIST = [  # list that holds all currently alarming events
 ]
 
 
-APPDS_TIMES_LIST = [  # list of all keys to times for midnight etc. processing
-	TIME_ALARM,  # 
-	TIME_AT_LAST_RUN,  # 
-	TIME_AT_NEXT,  # 
-	TIME_INTERVAL,  # 
-	TIME_INTERVAL_START,  # 
-	TIME_INTERVAL__BEGIN,  # 
-	TIME_INTERVAL__END,  # 
-	TIME_LEN_RING,  # 
-]
-
-
 CLOSE_LIST = [  # list with close statuses
 	MOUSE_STATUS_CLOSE_E,  # easet close entry
 	MOUSE_STATUS_CLOSE_N,  # easet close entry
@@ -381,22 +369,6 @@ CLOSE_LIST = [  # list with close statuses
 
 
 INTERVALLING_LIST = [  # list that holds all currently alarming events
-]
-
-
-TIMES_LIST = [  # list of all keys to times for midnight etc. processing
-	TIME_ALARM,  # alarm time entry in TIMES_LIST
-	TIME_AT_LAST_RUN,  # time at last run entry in TIMES_LIST
-	TIME_AT_NEXT,  # time at next event entry in TIMES_LIST
-	TIME_AT_ZEROELAPSE,  # time the elapsed timer was reset in TIMES_LIST
-	TIME_CLOCK,  # alarm time entry in TIMES_LIST
-	TIME_ELAPSED,  # alarm time entry in TIMES_LIST
-	TIME_INTERVAL,  # alarm time entry in TIMES_LIST
-	TIME_INTERVAL_START,  # alarm time entry in TIMES_LIST
-	TIME_INTERVAL__BEGIN,  # alarm time entry in TIMES_LIST
-	TIME_INTERVAL__END,  # alarm time entry in TIMES_LIST
-	TIME_LEN_RING,  # alarm time entry in TIMES_LIST
-	TIME_TOGO,  # alarm time entry in TIMES_LIST
 ]
 
 
@@ -775,19 +747,29 @@ class CLASS_CLOCKS(object):
 		self._TIME_TO_MOVE_ = ZERO_CLOCK  # 
 		self._TIME_TO_UPDATE_ = ZERO_CLOCK  # 
 
-		self._DICTIN_ = {  # holds the values for the clocks frame
+		self._DICTIN_ = {  # holds all of the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
+			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
+			CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			INTERVAL_COUNT: 0,  # interval count
-			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
-			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # holds the values for the clocks frame
-			TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
-			TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
-			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
+			TIME_AT_NEXT: ZERO_CLOCK,  # time at next event
+			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
+			TIME_CLOCK: ZERO_CLOCK,  # time clock or wall clock
+			TIME_ELAPSED: ZERO_CLOCK,  # time elapsed
+			TIME_TOGO: ZERO_CLOCK,  # countdown to next event
 		}
 
 		self._DICTOUT_ = {  # holds the values for the clocks frame
 			CHECKBOX_ALPHA_DIM: "True",  # name of next event
 			CHECKBOX_RUNAWAY: False,  # interval count
+		}
+
+		self._PERIODIC_ = {  # periodic updates dict for the clocks frame
+			TIME_AT_NEXT: ZERO_CLOCK,  # time at next event
+			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
+			TIME_CLOCK: ZERO_CLOCK,  # time clock or wall clock
+			TIME_ELAPSED: ZERO_CLOCK,  # time elapsed
+			TIME_TOGO: ZERO_CLOCK,  # countdown to next event
 		}
 
 		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count
@@ -921,14 +903,7 @@ class CLASS_CLOCKS(object):
 
 		self.__CDS__ = {
 			COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
-			COLUMN01: self._COLUMN01_,  # add a new text element to row01 clocks column
-			COLUMN01: self._COLUMN01_,  # add a new text element to row01 clocks column
 			COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
-			COLUMN02: self._COLUMN02_,  # add a button element to clocks column
-			COLUMN02: self._COLUMN02_,  # add reset button for elapsed time
-			COLUMN02: self._COLUMN02_,  # add reset button for elapsed time
-			COLUMN02: self._COLUMN02_,  # holds the values for the clocks frame
-			COLUMN02: self._COLUMN02_,  # holds the values for the clocks frame
 			ALPHA_CHANNEL: self._ALPHA_CHANNEL_,
 			ALPHA_HIGH: self._ALPHA_HIGH_,
 			ALPHA_LOW: self._ALPHA_LOW_,
@@ -964,24 +939,27 @@ class CLASS_CLOCKS(object):
 	def __enter__(self):
 		global \
 			ALL_THE_FORMS
-		#
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_ = SG.Window(**self._WINDOW_).finalize()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = self._MAINFRAME_
 		self.init()
 		return self
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def __exit__(self, *args_):
 		global \
 			ALL_THE_FORMS, \
 			MAPPDS
-		#
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_.close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def quickRead(self):
 		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
 
 	def updateFromDict(selfdictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		_tempDictToUpdateFrom_ = {}
 		for _key_, val_ in dictToUpdateFrom_.items():
 			_val_ = val_
@@ -996,18 +974,122 @@ class CLASS_CLOCKS(object):
 			self._DICTIN_[_key_] = val_
 		self._MAINFRAME_.fill(_tempDictToUpdateFrom_)
 		__dummy__ = self._MAINFRAME_.Read(timeout=1)
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+		
 
 	def readToDict(selfdictToReadTo_=self._DICTOUT_, setLocalDict_=True):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		_dictToRtn_ = {}
 		for _key_ in dictToReadTo_:
 			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]
 			if (setLocalDict_ is True):
 				self._DICTOUT_[_key_] = _dictToRtn_[_key_]
 		return _dictToRtn_
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def checkMouse(self):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+		if NOWMS < self._TIME_TO_CHECK_MOUSE_:
+			return
+
+		self._TIME_TO_CHECK_MOUSE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOUSE_CHECKS
+		_statusToRtn_ = None
+		_mpxToRtn_ = (0, 0)
+		_TLcn_ = self._LOCATION_
+		_TSizeX_, _TSizeY_ = _TSize_ = self._SIZE_
+		_TMouseLcnX_, _TMouseLcnY_ = _TMouseLcn_ = getMousePos()
+		_TBBoxWest_, _TBBoxNorth_, _TBBoxEast_, _TBBoxSouth_ = _TBBox_ = self._BBOX_
+		_TCloseBBox_ = self._CLOSE_BBOX_
+		_isInCloseBBox_ = isInBBox(_TCloseBBox_, _TMouseLcn_)
+
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_TBBoxWest_ < _TMouseLcnX_ < _TBBoxEast_) and (_TMouseLcnY_ < _TBBoxNorth_):
+			_mpxToRtn_ = (0, 1)
+			if _isInCloseBBox_ is True:
+				_statusToRtn_ = MOUSE_STATUS_CLOSE_N
+			else:
+				_statusToRtn_ = MOUSE_STATUS_N
+
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		elif ( _TBBoxWest_ < _TMouseLcnX_ < _TBBoxEast_) and (_TMouseLcnY_ > _TBBoxSouth_):
+			_mpxToRtn_ = (0, -1)
+			if _isInCloseBBox_ is True:
+				_statusToRtn_ = MOUSE_STATUS_CLOSE_S
+			else:
+				_statusToRtn_ = MOUSE_STATUS_S
+
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		elif (_TMouseLcnX_ < _TBBoxWest_) and (_TBBoxNorth_< _TMouseLcnY_ < _TBBoxSouth_):
+			_mpxToRtn_ = (1, 0)
+			if _isInCloseBBox_ is True:
+				_statusToRtn_ = MOUSE_STATUS_CLOSE_W
+			else:
+				_statusToRtn_ = MOUSE_STATUS_W
+
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		elif (_TMouseLcnX_ > _TBBoxEast_) and (_TBBoxNorth_< _TMouseLcnY_ < _TBBoxSouth_):
+			_mpxToRtn_ = (-1, 0)
+			if _isInCloseBBox_ is True:
+				_statusToRtn_ = MOUSE_STATUS_CLOSE_E
+			else:
+				_statusToRtn_ = MOUSE_STATUS_E
+
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		elif (_TMouseLcnY_ > _TBBoxSouth_) and (_TMouseLcnX_ < _TBBoxWest_):
+			_mpxToRtn_ = (1, -1)
+			if _isInCloseBBox_ is True:
+				_statusToRtn_ = MOUSE_STATUS_CLOSE_SW
+			else:
+				_statusToRtn_ = MOUSE_STATUS_SW
+
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		elif (_TMouseLcnY_ > _TBBoxSouth_) and (_TMouseLcnX_ > _TBBoxEast_):
+			_mpxToRtn_ = (-1, -1)
+			if _isInCloseBBox_ is True:
+				_statusToRtn_ = MOUSE_STATUS_CLOSE_SE
+			else:
+				_statusToRtn_ = MOUSE_STATUS_SE
+
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		elif (_TMouseLcnY_ < _TBBoxNorth_) and (_TMouseLcnX_ < _TBBoxWest_):
+			_mpxToRtn_ = (1, 1)
+			if _isInCloseBBox_ is True:
+				_statusToRtn_ = MOUSE_STATUS_CLOSE_NW
+			else:
+				_statusToRtn_ = MOUSE_STATUS_NW
+
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		elif (_TMouseLcnY_ < _TBBoxNorth_) and (_TMouseLcnX_ > _TBBoxEast_):
+			_mpxToRtn_ = (-1, 1)
+			if _isInCloseBBox_ is True:
+				_statusToRtn_ = MOUSE_STATUS_CLOSE_NE
+			else:
+				_statusToRtn_ = MOUSE_STATUS_NE
+
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		elif isInBBox(_TBBox_, _TMouseLcn_) is True:
+			_mpxToRtn_ = (0, 0)
+			_statusToRtn_ = MOUSE_STATUS_OVER
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_statusToRtn_ == MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ != MOUSE_STATUS_OVER) and (self._CHECKBOX_ALPHA_DIM_ is True):
+			self._MAINFRAME_.AlphaChannel = self._ALPHA_LOW_
+			self._DIMMED_ = True
+
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER)) or ((self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER) and (self._DIMMED_ is True) and (self._CHECKBOX_ALPHA_DIM_ is False)):
+			self._MAINFRAME_.AlphaChannel = APPDS[ALPHA_HIGH]
+			alphaMode = False
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		self._LAST_MOUSE_STATUS_ = _statusToRtn_
+		self._MOUSE_STATUS_ = _statusToRtn_
+
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def runaway(selfmoveMpx_=(0, 0)):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		if NOWMS < self._TIME_TO_MOVE_:
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
@@ -1036,6 +1118,7 @@ class CLASS_CLOCKS(object):
 			return
 
 		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C APPDS
