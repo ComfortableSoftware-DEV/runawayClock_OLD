@@ -736,6 +736,8 @@ FMPSG_SCTN0916_CLASS_FUNCTION_DEF1_DICT = {}  # define the dict to hold everythi
 FMPSG_SCTN0916_CLASS_FUNCTION_DEF2_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FUNCTION_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_INIT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
@@ -1104,6 +1106,8 @@ TBGLST = [
 	("FMPSG_SCTN0916_CLASS_FUNCTION_DEF2_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_FUNCTION_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
+	("FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_INIT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_LAYOUT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
@@ -2304,8 +2308,8 @@ def makePSGClasses():
 {NTAB(1)}global {BKSLSH}
 {NTAB(2)}ALL_THE_FORMS{NEWLINE}
 """
-		_strToRtn_ += f"""{NTAB(1)}def __init__{OPAREN}self, {FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].pop(0)}{CPAREN}:{NEWLINE}"""
-		for _thisItem_ in FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_]:
+		_strToRtn_ += f"""{NTAB(1)}def __init__{OPAREN}self, {FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT[_thisClassName_].pop(0)}{CPAREN}:{NEWLINE}"""
+		for _thisItem_ in FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
@@ -2324,7 +2328,7 @@ def makePSGClasses():
 			# print(f"""FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT {FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT}""")
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN0916_CLASS_DICT_DICT[_thisClassName_].items():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NEWLINE}"""
+{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{FOLD3ENDHERELN}{NEWLINE}{NEWLINE}"""
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -2838,6 +2842,8 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0916_CLASS_FUNCTION_DEF2_DICT, \
 		FMPSG_SCTN0916_CLASS_FUNCTION_DICT, \
 		FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT, \
+		FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT, \
+		FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT, \
 		FMPSG_SCTN0916_CLASS_INIT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_DICT, \
@@ -4533,6 +4539,12 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_CDS_DICT:
 				FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_] = []
 
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT:
+				FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT[_thisClassName_] = []
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT:
+				FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT[_thisClassName_] = []
+
 			FMPSG_SCTN0916_CLASS_CMNT_DICT[_thisClassName_] = f"""{_thisComment_}"""
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -5391,7 +5403,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_STR_DEF:
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_STR2_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -5400,7 +5412,7 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[3]
 			_thisVal_ - _thisItem_[4]
 
-			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT:
@@ -5420,7 +5432,7 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
 			continue

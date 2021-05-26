@@ -736,6 +736,8 @@ FMPSG_SCTN0916_CLASS_FUNCTION_DEF1_DICT = {}  # define the dict to hold everythi
 FMPSG_SCTN0916_CLASS_FUNCTION_DEF2_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_FUNCTION_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_INIT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
@@ -866,6 +868,8 @@ FMPSG_SCTN0916_CLASS_WINDOW_DICT = {}  # holds all of the button entriess (TUPDI
 		FMPSG_SCTN0916_CLASS_FUNCTION_DEF2_DICT, \
 		FMPSG_SCTN0916_CLASS_FUNCTION_DICT, \
 		FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT, \
+		FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT, \
+		FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT, \
 		FMPSG_SCTN0916_CLASS_INIT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_DICT, \
