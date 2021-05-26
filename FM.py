@@ -1624,7 +1624,6 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC00_INIT001", FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA1_DEF, "CLOCKS", "_USE_THIS_KEY_", "__KEY_TEXT__: %FTQ%%OBRCE%__KEY_TEXT__%CBRCE%%OBRCE%self._THIS_KEY_BASE_%CBRCE%%TQ%",),
 	("PSGVAL__CLOCKS_FUNC00_INIT002", FMAXPSG_SCTN0916_CLASS_INIT_VAL1_DEF, "CLOCKS", "_THIS_FORM_NAME_", "formName_",),
 
-
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_ALPHA_CHANNEL_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_ALPHA_HIGH_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_ALPHA_LOW_", "SZ_ALPHA_LOW", "",),
@@ -1660,6 +1659,8 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC06_CHECK_MOUSE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "load checkMouse from file",),
 	("PSGVAL__CLOCKS_FUNC07_RUNAWAY", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "runaway", "moveMpx_=(0, 0)", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC07_RUNAWAY_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "load checkMouse from file",),
+	("PSGVAL__CLOCKS_FUNC08_UPDATE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "update", "", "define the required update function",),
+	("PSGVAL__CLOCKS_FUNC08_UPDATE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "update", "update.py", "define the required update function",),
 	("PSGVAL__CLOCKS_LAYOUT", FMAX_NOP, "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT00", FMAXPSG_SCTN0916_CLASS_LAYOUT_DEF, "CLOCKS", "_LAYOUT_", "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT01", FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD, "CLOCKS", "_LAYOUT_", "LAYOUT_ROW_00", "L03", "add a row to the layout",),
@@ -4925,6 +4926,8 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
+			FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Spin{OPAREN}  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -5266,7 +5269,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
-	elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_STR1_DEF:
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_STR1_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -5302,7 +5305,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
-	elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_VAL1_DEF:
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_VAL1_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
