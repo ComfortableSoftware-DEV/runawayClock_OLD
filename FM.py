@@ -2367,7 +2367,7 @@ def makePSGClasses():
 {NTAB(1)}global {BKSLSH}
 {NTAB(2)}ALL_THE_FORMS{NEWLINE}
 """
-		_strToRtn_ += f"""{NTAB(1)}def __init__{OPAREN}self{FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].pop(0)}{CPAREN}:{NEWLINE}"""
+		_strToRtn_ += f"""{NTAB(1)}def __init__{OPAREN}self{FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].pop(0)}{CPAREN}:{NEWLINE}{NTAB(2)}{FOLD2STARTHERELN}"""
 		for _thisItem_ in FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 		_strToRtn_ += f"""{NEWLINE}"""
@@ -2420,7 +2420,7 @@ def makePSGClasses():
 		if _thisClassName_ in FMPSG_SCTN0916_CLASS_CHECKBOX_DICT:
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN0916_CLASS_CHECKBOX_DICT[_thisClassName_].items():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{NTAB(3)}{FOLD3STARTHERE}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(3)}{FOLD3ENDHERE}
+{NTAB(3)}{FOLD3STARTHERE}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERE}
 """
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
@@ -2436,7 +2436,7 @@ def makePSGClasses():
 		if _thisClassName_ in FMPSG_SCTN0916_CLASS_RADIO_DICT:
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN0916_CLASS_RADIO_DICT[_thisClassName_].items():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_RADIO_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{NTAB(2)}{FOLD3STARTHERE}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
+{NTAB(2)}{FOLD3STARTHERE}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERE}
 """
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
@@ -2446,7 +2446,7 @@ def makePSGClasses():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_}_SPIN_LIST = {OBRKT}
 {FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_][_thisElementName_]}{NTAB(2)}{CBRKT}{NEWLINE}
 {NTAB(2)}self.{_thisElementName_}_SPIN_DICT = {OBRCE}  # {FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{NTAB(2)}{FOLD3STARTHERE}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
+{NTAB(2)}{FOLD3STARTHERE}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERE}
 """
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥

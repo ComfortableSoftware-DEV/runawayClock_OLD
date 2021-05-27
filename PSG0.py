@@ -200,7 +200,6 @@ FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font 
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
 FORMMAIN = None  # mainframe so everything passes together always
 IS_ALERTING_NOWV = False  # comment
-LAST_MOUSE_LCN = EMPTY_XY  # last returned mouse status to deal with hover events
 LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
 NAME_NEXT_EVENT_STR = ""  # name of the next event
@@ -369,6 +368,34 @@ CLOSE_LIST = [  # list with close statuses
 
 
 INTERVALLING_LIST = [  # list that holds all currently alarming events
+]
+
+
+APPDS_TIMES_LIST = [  # list of all keys to times for midnight etc. processing
+	TIME_ALARM,  #
+	TIME_AT_LAST_RUN,  #
+	TIME_AT_NEXT,  #
+	TIME_INTERVAL,  #
+	TIME_INTERVAL_START,  #
+	TIME_INTERVAL__BEGIN,  #
+	TIME_INTERVAL__END,  #
+	TIME_LEN_RING,  #
+]
+
+
+TIMES_LIST = [  # list of all keys to times for midnight etc. processing
+	TIME_ALARM,  # alarm time entry in TIMES_LIST
+	TIME_AT_LAST_RUN,  # time at last run entry in TIMES_LIST
+	TIME_AT_NEXT,  # time at next event entry in TIMES_LIST
+	TIME_AT_ZEROELAPSE,  # time the elapsed timer was reset in TIMES_LIST
+	TIME_CLOCK,  # alarm time entry in TIMES_LIST
+	TIME_ELAPSED,  # alarm time entry in TIMES_LIST
+	TIME_INTERVAL,  # alarm time entry in TIMES_LIST
+	TIME_INTERVAL_START,  # alarm time entry in TIMES_LIST
+	TIME_INTERVAL__BEGIN,  # alarm time entry in TIMES_LIST
+	TIME_INTERVAL__END,  # alarm time entry in TIMES_LIST
+	TIME_LEN_RING,  # alarm time entry in TIMES_LIST
+	TIME_TOGO,  # alarm time entry in TIMES_LIST
 ]
 
 
@@ -721,168 +748,124 @@ TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 
 
 class CLASS_CLOCKS(object):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	global \
-		ALL_THE_FORMS
+		ALL_THE_FORMS, \
+		APPDS
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	def __init__(self, keyBase_, formName_):
-		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-		self._THIS_KEY_BASE_ = keyBase_  # adopt keyBase_
-		self._USE_THIS_KEY_ =   # make a local key sourcer
-		self._THIS_FORM_NAME_ = formName_  # adopt formName_
+		self._THIS_KEY_BASE_ = keyBase_
+		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
+		self._THIS_FORM_NAME_ = formName_
 
-		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  #
-		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  #
-		self._ALPHA_LOW_ = SZ_ALPHA_LOW  #
-		self._BBOX_ = EMPTY_BBOX  #
-		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM  #
-		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY  #
-		self._CLOSE_BBOX_ = EMPTY_BBOX  #
-		self._DIMMED_ = False  #
-		self._KEY_DICT_ = {}  #
-		self._KEY_DICT_REVERSE_ = {}  #
-		self._LAST_LOCATION_ = EMPTY_XY  #
-		self._LOCATION_ = EMPTY_XY  #
-		self._MAINFRAME_ = None  #
-		self._MOUSE_LOCATION_ = EMPTY_XY  #
-		self._MOUSE_STATUS_ = MOUSE_STATUS_NONE  #
-		self._MPX_ = EMPTY_XY  # comment
-		self._SCREEN_DIMS_ = EMPTY_XY  #
-		self._SIZE_ = EMPTY_XY  #
-		self._TIME_KEY_LIST_ = []  #
-		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK  #
-		self._TIME_TO_MOVE_ = ZERO_CLOCK  #
-		self._TIME_TO_UPDATE_ = ZERO_CLOCK  #
+		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH
+		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH
+		self._ALPHA_LOW_ = SZ_ALPHA_LOW
+		self._BBOX_ = EMPTY_BBOX
+		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM
+		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY
+		self._CLOSE_BBOX_ = EMPTY_BBOX
+		self._KEY_DICT_ = {}
+		self._KEY_DICT_REVERSE_ = {}
+		self._LAST_LOCATION_ = EMPTY_XY
+		self._LOCATION_ = EMPTY_XY
+		self._MAINFRAME_ = None
+		self._SCREEN_DIMS_ = EMPTY_XY
+		self._SIZE_ = EMPTY_XY
+		self._TIME_KEY_LIST_ = []
+		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK
+		self._TIME_TO_MOVE_ = ZERO_CLOCK
+		self._TIME_TO_UPDATE_ = ZERO_CLOCK
 
-		self._DICTIN_ = {  # holds all of the values for the clocks frame
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+		self._DICTIN_ = {  # holds the values for the clocks frame
 			NAME_NEXT_EVENT: "",  # name of next event
-			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
-			CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			INTERVAL_COUNT: 0,  # interval count
-			TIME_AT_NEXT: ZERO_CLOCK,  # time at next event
-			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
-			TIME_CLOCK: ZERO_CLOCK,  # time clock or wall clock
-			TIME_ELAPSED: ZERO_CLOCK,  # time elapsed
-			TIME_TOGO: ZERO_CLOCK,  # countdown to next event
+			TIME_AT_NEXT: ZERO_CLOCK,  # holds the values for the clocks frame
+			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # holds the values for the clocks frame
+			TIME_CLOCK: ZERO_CLOCK,  # holds the values for the clocks frame
+			TIME_ELAPSED: ZERO_CLOCK,  # holds the values for the clocks frame
+			TIME_TOGO: ZERO_CLOCK,  # holds the values for the clocks frame
 		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-		self._DICTOUT_ = {  # holds the values for the clocks frame
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			CHECKBOX_ALPHA_DIM: "True",  # name of next event
-			CHECKBOX_RUNAWAY: False,  # interval count
+		self._DICTOUT_ = {
+			CHECKBOX_RUNAWAY: False,
+			CHECKBOX_ALPHA_DIM: True,
 		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
-		self._PERIODIC_ = {  # periodic updates dict for the clocks frame
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			TIME_AT_NEXT: ZERO_CLOCK,  # time at next event
-			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
-			TIME_CLOCK: ZERO_CLOCK,  # time clock or wall clock
-			TIME_ELAPSED: ZERO_CLOCK,  # time elapsed
-			TIME_TOGO: ZERO_CLOCK,  # countdown to next event
-		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**TEXT_INTERVAL_COUNT,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(INTERVAL_COUNT)}""",  # interval count template
 		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 		self._KEY_DICT_[INTERVAL_COUNT] = f"""{self._USE_THIS_KEY_(INTERVAL_COUNT)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(INTERVAL_COUNT)}"""] = INTERVAL_COUNT
+		self._KEY_DICT_REVERSE_[self._USE_THIS_KEY_(INTERVAL_COUNT)] = INTERVAL_COUNT
 
 		self._TEXT_NAME_NEXT_EVENT_ = {  # class text for interval count
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**TEXT_NAME_NEXT_EVENT,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(NAME_NEXT_EVENT)}""",  # interval count template
 		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 		self._KEY_DICT_[NAME_NEXT_EVENT] = f"""{self._USE_THIS_KEY_(NAME_NEXT_EVENT)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(NAME_NEXT_EVENT)}"""] = NAME_NEXT_EVENT
+		self._KEY_DICT_REVERSE_[self._USE_THIS_KEY_(NAME_NEXT_EVENT)] = NAME_NEXT_EVENT
 
 		self._TEXT_TIME_AT_NEXT_ = {  # class text for interval count
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**TEXT_TIME_AT_NEXT,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}""",  # interval count template
 		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._TIME_KEY_LIST_.append(_TEXT_TIME_AT_NEXT_)
-		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_NEXT_))
 		self._KEY_DICT_[TIME_AT_NEXT] = f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}"""] = TIME_AT_NEXT
+		self._KEY_DICT_REVERSE_[self._USE_THIS_KEY_(TIME_AT_NEXT)] = TIME_AT_NEXT
+		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_AT_NEXT))
 
 		self._TEXT_TIME_AT_ZEROELAPSE_ = {  # class text for interval count
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**TEXT_TIME_AT_ZEROELAPSE,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}""",  # interval count template
 		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._TIME_KEY_LIST_.append(_TEXT_TIME_AT_ZEROELAPSE_)
-		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_ZEROELAPSE_))
 		self._KEY_DICT_[TIME_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}"""] = TIME_AT_ZEROELAPSE
+		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_CLOCK))
 
 		self._TEXT_TIME_CLOCK_ = {  # class text for interval count
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**TEXT_TIME_CLOCK,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(TIME_CLOCK)}""",  # interval count template
 		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._TIME_KEY_LIST_.append(_TEXT_TIME_CLOCK_)
-		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_CLOCK_))
 		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""] = TIME_CLOCK
+		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_CLOCK))
 
 		self._TEXT_TIME_ELAPSED_ = {  # class text for interval count
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**TEXT_TIME_ELAPSED,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}""",  # interval count template
 		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._TIME_KEY_LIST_.append(_TEXT_TIME_ELAPSED_)
-		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_ELAPSED_))
 		self._KEY_DICT_[TIME_ELAPSED] = f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}"""] = TIME_ELAPSED
+		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_ELAPSED))
 
 		self._TEXT_TIME_TOGO_ = {  # class text for interval count
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**TEXT_TIME_TOGO,  # interval count template
 			KEY: f"""{self._USE_THIS_KEY_(TIME_TOGO)}""",  # interval count template
 		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._TIME_KEY_LIST_.append(_TEXT_TIME_TOGO_)
-		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_TOGO_))
 		self._KEY_DICT_[TIME_TOGO] = f"""{self._USE_THIS_KEY_(TIME_TOGO)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_TOGO)}"""] = TIME_TOGO
+		self._TIME_LIST_.append(self._USE_THIS_KEY_(TIME_TOGO))
 
 		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
-				SG.Spin(  # add a new TEXT element to clocks column
+				SG.Text(  # add a new TEXT element to clocks column
 					**self._TEXT_TIME_CLOCK_  # add the main clock
 				),
 			],
 			[
-				SG.Spin(  # add a new row to clocks column
+				SG.Text(  # add a new row to clocks column
 					**self._TEXT_TIME_AT_ZEROELAPSE_  # add time to go
 				),
-				SG.Spin(  # add a new text element to row01 clocks column
+				SG.Text(  # add a new text element to row01 clocks column
 					**self._TEXT_TIME_ELAPSED_  # add elapsed time
 				),
 			],
 			[
-				SG.Spin(  # add a new text element to row01 clocks column
+				SG.Text(  # add a new text element to row01 clocks column
 					**self._TEXT_TIME_TOGO_  # add elapsed time
 				),
-				SG.Spin(  # add a new row to clocks column
+				SG.Text(  # add a new row to clocks column
 					**self._TEXT_TIME_AT_NEXT_  # add time to go
 				),
 			],
 			[
-				SG.Spin(  # add a new text element to row01 clocks column
+				SG.Text(  # add a new text element to row01 clocks column
 					**self._TEXT_NAME_NEXT_EVENT_  # add the main clock
 				),
 			],
@@ -895,10 +878,8 @@ class CLASS_CLOCKS(object):
 				),
 			],
 		]
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 		self._COLUMN02_ = [  # the column that puts the two smaller clocks below the main one
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
 				SG.Button(  # add a button element to clocks column
 					**BTN_QUIT20  # add the xpand button to clocks
@@ -915,15 +896,13 @@ class CLASS_CLOCKS(object):
 				),
 			],
 			[
-				SG.Spin(  # add reset button for elapsed time
+				SG.Text(  # add reset button for elapsed time
 					**self._TEXT_INTERVAL_COUNT_  # add the zero button to clocks
 				),
 			],
 		]
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 		self._LAYOUT_ = [  # layout for APPMODE_CLOCKS
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
 				SG.Column(  # add a column
 					layout=self._COLUMN01_,  # comment
@@ -935,10 +914,8 @@ class CLASS_CLOCKS(object):
 				),
 			],
 		]
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 		self._WINDOW_ = {  # define the clocks window
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
 			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
 			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
@@ -951,74 +928,37 @@ class CLASS_CLOCKS(object):
 			TITLE: TITLE_CLOCKS,  #
 			_LAYOUT_: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
 		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
-		self.__CDS__ = {
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3			COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
-			COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
-			DICTIN: self._DICTIN_,  # holds all of the values for the clocks frame
-			DICTOUT: self._DICTOUT_,  # holds the values for the clocks frame
-			THIS_KEY_BASE: self._THIS_KEY_BASE_,
-			USE_THIS_KEY: self._USE_THIS_KEY_,
-			THIS_FORM_NAME: self._THIS_FORM_NAME_,
-			ALPHA_CHANNEL: self._ALPHA_CHANNEL_,
-			ALPHA_HIGH: self._ALPHA_HIGH_,
-			ALPHA_LOW: self._ALPHA_LOW_,
-			BBOX: self._BBOX_,
-			CHECKBOX_ALPHA_DIM: self._CHECKBOX_ALPHA_DIM_,
-			CHECKBOX_RUNAWAY: self._CHECKBOX_RUNAWAY_,
-			CLOSE_BBOX: self._CLOSE_BBOX_,
-			DIMMED: self._DIMMED_,
-			KEY_DICT: self._KEY_DICT_,
-			KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
-			LAST_LOCATION: self._LAST_LOCATION_,
-			LOCATION: self._LOCATION_,
-			MAINFRAME: self._MAINFRAME_,
-			MOUSE_LOCATION: self._MOUSE_LOCATION_,
-			MOUSE_STATUS: self._MOUSE_STATUS_,
-			MPX: self._MPX_,
-			SCREEN_DIMS: self._SCREEN_DIMS_,
-			SIZE: self._SIZE_,
-			TIME_KEY_LIST: self._TIME_KEY_LIST_,
-			TIME_TO_CHECK_MOUSE: self._TIME_TO_CHECK_MOUSE_,
-			TIME_TO_MOVE: self._TIME_TO_MOVE_,
-			TIME_TO_UPDATE: self._TIME_TO_UPDATE_,
-			LAYOUT: self._LAYOUT_,  # layout for APPMODE_CLOCKS
-			PERIODIC: self._PERIODIC_,  # periodic updates dict for the clocks frame
-			TEXT_INTERVAL_COUNT: self._TEXT_INTERVAL_COUNT_,  # class text for interval count
-			TEXT_NAME_NEXT_EVENT: self._TEXT_NAME_NEXT_EVENT_,  # class text for interval count
-			TEXT_TIME_AT_NEXT: self._TEXT_TIME_AT_NEXT_,  # class text for interval count
-			TEXT_TIME_AT_ZEROELAPSE: self._TEXT_TIME_AT_ZEROELAPSE_,  # class text for interval count
-			TEXT_TIME_CLOCK: self._TEXT_TIME_CLOCK_,  # class text for interval count
-			TEXT_TIME_ELAPSED: self._TEXT_TIME_ELAPSED_,  # class text for interval count
-			TEXT_TIME_TOGO: self._TEXT_TIME_TOGO_,  # class text for interval count
-			WINDOW: self._WINDOW_,  # define the clocks window
-		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def __enter__(self):
 		global \
 			ALL_THE_FORMS
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+		#
 		self._MAINFRAME_ = SG.Window(**self._WINDOW_).finalize()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = self._MAINFRAME_
 		self.init()
 		return self
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def __exit__(self, *args_):
 		global \
-			ALL_THE_FORMS
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			ALL_THE_FORMS, \
+			APPDS
+		#
 		self._MAINFRAME_.close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
+
+	def getMousePos(self):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+
+		_mseData_ = MLCN()._data
+		APPDS[MOUSE_LCN] = locationToRtn_ = (_mseData_["root_x"], _mseData_["root_y"])
+		return locationToRtn_
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
 
 	def quickRead(self):
 		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
 
-	def updateFromDict(selfdictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+	def updateFromDict(self, dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
 		_tempDictToUpdateFrom_ = {}
 		for _key_, val_ in dictToUpdateFrom_.items():
 			_val_ = val_
@@ -1033,20 +973,16 @@ class CLASS_CLOCKS(object):
 			self._DICTIN_[_key_] = val_
 		self._MAINFRAME_.fill(_tempDictToUpdateFrom_)
 		__dummy__ = self._MAINFRAME_.Read(timeout=1)
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-	def readToDict(selfdictToReadTo_=self._DICTOUT_, setLocalDict_=True):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+	def readToDict(self, dictToReadTo_=self._DICTOUT_, setLocalDict_=True):
 		_dictToRtn_ = {}
 		for _key_ in dictToReadTo_:
 			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]
 			if (setLocalDict_ is True):
 				self._DICTOUT_[_key_] = _dictToRtn_[_key_]
 		return _dictToRtn_
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-	def checkMouse(self):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+	def checkMouse():
 		if NOWMS < self._TIME_TO_CHECK_MOUSE_:
 			return
 
@@ -1143,20 +1079,18 @@ class CLASS_CLOCKS(object):
 
 		self._LAST_MOUSE_STATUS_ = _statusToRtn_
 		self._MOUSE_STATUS_ = _statusToRtn_
+		self._MPX_ = _mpxToRtn_
 
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
-	def runaway(self):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+	def runaway(self, moveMpx_=(0, 0)):
 		if NOWMS < self._TIME_TO_MOVE_:
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
-		self._TIME_TO_MOVE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
-		_screenSZX_, _screenSZY_ = self._SCREEN_DIMS_
-		_sizeX_, _sizeY_ = self._SIZE_
-		_lcnX_, _lcnY_ = self._LOCATION_
-		_moveToX_ = _lcnX_ + (self._MPX_[INDEX_X] * SZ_MOVE_DIST)
-		_moveToY_ = _lcnY_ + (self._MPX_[INDEX_Y] * SZ_MOVE_DIST)
+		self._TIME_TO_MOVE_ += SZ_TIMEMS_BETWEEN_MOVES
+		_screenSZX_, _screenSZY_ = self._MAINFRAME_.GetScreenDimensions()
+		_sizeX_, _sizeY_ = self._MAINFRAME_.Size()
+		_lcnX_, _lcnY_ = self._MAINFRAME_.CurrentLocation()
+		_moveToX_ = _lcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
+		_moveToY_ = _lcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
 
 		if _moveToX_ < 0:
 			_moveToX_ = 0
@@ -1172,14 +1106,12 @@ class CLASS_CLOCKS(object):
 			return
 
 		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-	def update(self):
-	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+	def update():
 		if (NOWMS >= self._TIME_TO_UPDATE_):
 			return
 
-		self._TIME_TO_UPDATE_ = NOWMS + Z_TIMEMS_BETWEEN_UPDATES
+		self._TIME_TO_UPDATE_ += SZ_TIMEMS_BETWEEN_UPDATES
 		self._DICTIN_, _wasUpdated_ = updateClocks(self._DICTIN_)
 		if _wasUpdated_ is True:
 			self.updateFromDict(setLocalDict_=False)
@@ -1187,31 +1119,88 @@ class CLASS_CLOCKS(object):
 			_mouseDirection_ = checkMouseLcn(self._THIS_FORM_NAME_, )
 			self.runaway()
 
-	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		if (NOWMS >= self._TIME_TO_UPDATE_):
-			return
 
-		self._TIME_TO_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES
-		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
-		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
-		self._CLOSE_BBOX_ = getCloseBBox(self._LOCATION_, self._SIZE_)
-		self.self.checkMouse()
-		if _wasUpdated_ is True:
-			self.updateFromDict(setLocalDict_=False)
-		if (self._CHECKBOX_RUNAWAY_ is True):
-			self.runaway()
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+class CLASS_THECLOCK(object):
+	global \
+		ALL_THE_FORMS, \
+		APPDS_MAIN
 
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+	def __init__(self, keyBase_, formName_):
+		self._THIS_KEY_BASE_ = keyBase_
+		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""
+		self._THIS_FORM_NAME_ = formName_
+		self._KEY_DICT_ = {}
+
+		self.THECLOCK_DICT = {  # set up the mainframe update dict for theclock mode
+			TIME_CLOCK: ZERO_CLOCK,  # comment
+		}
+
+		self.THECLOCK_TEXT_TIME_CLOCK = {  # define the text element for THECLOCK_CLOCK_TIME
+			BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+			ENABLE_EVENTS: True,  # this is clickable
+			FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+			JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+			KEY: f"""{self._USE_THIS_KEY_(TIME_CLOCK)}""",  # comment
+			PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+			RIGHT_CLICK_MENU: THECLOCK_RCMENU01,  # set up the right click menu
+			SIZE: (8, 1),  # characters, lines size line
+			TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+			TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+		}
+		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""
+
+		self.THECLOCK_LAYOUT = [  # layout for APPMODE_THECLOCK
+			[
+				SG.Text(  # add a column
+					**self.THECLOCK_TEXT_TIME_CLOCK,  # comment
+				),
+			],
+		]
+
+		self.THECLOCK_WINDOW = {  # define the clocks window
+			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
+			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
+			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
+			ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
+			FORCE_TOPLEVEL: None,  #
+			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
+			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
+			MARGINS: SZ_MARGINS_ALL,  #
+			NO_TITLEBAR: True,  # no titlebar on APPMODE_THECLOCK window
+			TITLE: TITLE_THECLOCK,  #
+			_LAYOUT_: THECLOCK_LAYOUT,  # add the layout for THECLOCK_WINDOW
+		}
+
+	def __enter__(self):
+		global \
+			ALL_THE_FORMS, \
+			APPDS_MAIN
+		#
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = SG.Window(**self._WINDOW_).finalize()
+
+	def __exit__(self, *args_):
+		global \
+			ALL_THE_FORMS, \
+			APPDS_MAIN
+		#
+		ALL_THE_FORMS[self._THIS_FORM_NAME_].close()
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN090C APPDS
+# * SCTN090C APPDS_MAIN
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and this app
+	ALPHA_CHANNEL: 1.0,  # current AlphaChannel setting
+	ALPHA_HIGH: 1.0,  # amount of seethrough when mouse is not hovering over CLOCKS or THECLOCK
+	ALPHA_LOW: 0.3,  # amount of seethrough when mouse hovers over clocks or THECLOCK
 	APPMODE: APPMODE_NONE,  # default mode is clocks
+	BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
+	CHECKBOX_ALPHA_DIM: True,  # default transparent under mouse when not cornered to True
+	CHECKBOX_RUNAWAY: False,  # default to avoiding mouse
+	CLOSE_BBOX: EMPTY_BBOX,  # FILLED IN BY INIT
 	EVENT_ENTRIES: {  # holds events
 		0: {
 			ALARMPOPUP_PROPER: None,  # time of this event
@@ -1288,7 +1277,11 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 	},
+	FORM_CURRENT_LCN: EMPTY_XY,  # current screen position
+	FORM_CURRENT_SIZE: EMPTY_XY,  # current screen position
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
+	MOUSE_LCN: (0, 0),  # track mouse location
+	SCREEN_DIMS: EMPTY_XY,  # current screen position
 }
 
 
