@@ -4,6 +4,7 @@
 
 		self._TIME_TO_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES
 		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
+		self.checkMouse()
 		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
 		self._CLOSE_BBOX_ = getCloseBBox(self._LOCATION_, self._SIZE_)
 		# self._DICTIN_, _wasUpdated_ = updateClocks(self._DICTIN_)

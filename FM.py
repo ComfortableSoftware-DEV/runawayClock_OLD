@@ -1639,6 +1639,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_MAINFRAME_", "None", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_MOUSE_LOCATION_", "EMPTY_XY", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_MOUSE_STATUS_", "MOUSE_STATUS_NONE", "",),
+	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_MPX_", "EMPTY_XY", "comment",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_SCREEN_DIMS_", "EMPTY_XY", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_SIZE_", "EMPTY_XY", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_TIME_KEY_LIST_", "[]", "",),
@@ -1682,25 +1683,25 @@ TBGLST = [
 	("PSGVAL__CLOCKS_RCMENU0101", FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD, "CLOCKS", "_RCMENU01_", "BTN_ZERO", "quit by right click",),
 	("PSGVAL__CLOCKS_RCMENU0101", FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD, "CLOCKS", "_RCMENU01_", "CHECKBOX_ALPHA_DIM", "toggle CHECKBOX_ALPHA_DIM",),
 	("PSGVAL__CLOCKS_RCMENU0101", FMAXPSG_SCTN0916_CLASS_RCMENU_VAL_ADD, "CLOCKS", "_RCMENU01_", "CHECKBOX_RUNAWAY", "toggle CHECKBOX_RUNAWAY",),
-	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_INTERVAL_COUNT_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_INTERVAL_COUNT_", "False", "class text for interval count",),
 	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_INTERVAL_COUNT_", "**TEXT_INTERVAL_COUNT", "interval count template",),
 	("PSGVAL__CLOCKS_TEXT_INTERVAL_COUNT01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_INTERVAL_COUNT_", "KEY", "INTERVAL_COUNT", "interval count template",),
-	("PSGVAL__CLOCKS_TEXT_NAME_NEXT_EVENT00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_NAME_NEXT_EVENT_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_NAME_NEXT_EVENT00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_NAME_NEXT_EVENT_", "False", "class text for interval count",),
 	("PSGVAL__CLOCKS_TEXT_NAME_NEXT_EVENT01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_NAME_NEXT_EVENT_", "**TEXT_NAME_NEXT_EVENT", "interval count template",),
 	("PSGVAL__CLOCKS_TEXT_NAME_NEXT_EVENT01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_NAME_NEXT_EVENT_", "KEY", "NAME_NEXT_EVENT", "interval count template",),
-	("PSGVAL__CLOCKS_TEXT_TIME_AT_NEXT00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_AT_NEXT_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_TIME_AT_NEXT00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_AT_NEXT_", "True", "class text for interval count",),
 	("PSGVAL__CLOCKS_TEXT_TIME_AT_NEXT01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_TIME_AT_NEXT_", "**TEXT_TIME_AT_NEXT", "interval count template",),
 	("PSGVAL__CLOCKS_TEXT_TIME_AT_NEXT01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_TIME_AT_NEXT_", "KEY", "TIME_AT_NEXT", "interval count template",),
-	("PSGVAL__CLOCKS_TEXT_TIME_AT_ZERO00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_AT_ZEROELAPSE_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_TIME_AT_ZERO00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_AT_ZEROELAPSE_", "True", "class text for interval count",),
 	("PSGVAL__CLOCKS_TEXT_TIME_AT_ZERO01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_TIME_AT_ZEROELAPSE_", "**TEXT_TIME_AT_ZEROELAPSE", "interval count template",),
 	("PSGVAL__CLOCKS_TEXT_TIME_AT_ZERO01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_TIME_AT_ZEROELAPSE_", "KEY", "TIME_AT_ZEROELAPSE", "interval count template",),
-	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_CLOCK_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_CLOCK_", "True", "class text for interval count",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_TIME_CLOCK_", "**TEXT_TIME_CLOCK", "interval count template",),
 	("PSGVAL__CLOCKS_TEXT_TIME_CLOCK01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_TIME_CLOCK_", "KEY", "TIME_CLOCK", "interval count template",),
-	("PSGVAL__CLOCKS_TEXT_TIME_ELAPSED00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_ELAPSED_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_TIME_ELAPSED00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_ELAPSED_", "True", "class text for interval count",),
 	("PSGVAL__CLOCKS_TEXT_TIME_ELAPSED01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_TIME_ELAPSED_", "**TEXT_TIME_ELAPSED", "interval count template",),
 	("PSGVAL__CLOCKS_TEXT_TIME_ELAPSED01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_TIME_ELAPSED_", "KEY", "TIME_ELAPSED", "interval count template",),
-	("PSGVAL__CLOCKS_TEXT_TIME_TOGO00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_TOGO_", "class text for interval count",),
+	("PSGVAL__CLOCKS_TEXT_TIME_TOGO00", FMAXPSG_SCTN0916_CLASS_TEXT_DEF, "CLOCKS", "_TEXT_TIME_TOGO_", "True", "class text for interval count",),
 	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD, "CLOCKS", "_TEXT_TIME_TOGO_", "**TEXT_TIME_TOGO", "interval count template",),
 	("PSGVAL__CLOCKS_TEXT_TIME_TOGO01", FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD, "CLOCKS", "_TEXT_TIME_TOGO_", "KEY", "TIME_TOGO", "interval count template",),
 	("PSGVAL__CLOCKS_WINDOW", FMAX_NOP, "the window for APPMODE_CLOCKS",),
@@ -2411,7 +2412,7 @@ def makePSGClasses():
 			_dictToUse2_ = sortADict(FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_])
 
 			for _thisElementName_, _vals1_ in _dictToUse2_.items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN0916_CLASS_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_]}{NEWLINE}"""
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN0916_CLASS_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_]}{NEWLINE}{NTAB(2)}{FOLD3STARTHERELN}"""
 
 				for _thisRow_, _vals2_ in _vals1_.items():
 					_thisTabLevel1_ = FMPSG_SCTN0916_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRow_][TABLEVEL]
@@ -2427,7 +2428,7 @@ def makePSGClasses():
 
 					_strToRtn_ += f"""{NTAB(_thisTabLevel1_)}{CBRKT},{NEWLINE}"""
 
-				_strToRtn_ += f"""{NTAB(_thisTabLevel1_ - 1)}{CBRKT}{NEWLINE}{NEWLINE}"""
+				_strToRtn_ += f"""{NTAB(_thisTabLevel1_ - 1)}{CBRKT}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}{NEWLINE}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -2435,7 +2436,7 @@ def makePSGClasses():
 			_dictToUse2_ = sortADict(FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_])
 
 			for _thisElementName_, _vals1_ in _dictToUse2_.items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_]}{NEWLINE}"""
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_]}{NEWLINE}{NTAB(2)}{FOLD3STARTHERELN}"""
 
 				for _thisRow_, _vals2_ in _vals1_.items():
 					_thisTabLevel1_ = FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRow_][TABLEVEL]
@@ -2451,14 +2452,14 @@ def makePSGClasses():
 
 					_strToRtn_ += f"""{NTAB(_thisTabLevel1_)}{CBRKT},{NEWLINE}"""
 
-				_strToRtn_ += f"""{NTAB(_thisTabLevel1_ - 1)}{CBRKT}{NEWLINE}{NEWLINE}"""
+				_strToRtn_ += f"""{NTAB(_thisTabLevel1_ - 1)}{CBRKT}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}{NEWLINE}"""
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		if _thisClassName_ in FMPSG_SCTN0916_CLASS_WINDOW_DICT:
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN0916_CLASS_WINDOW_DICT[_thisClassName_].items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT[_thisClassName_][_thisElementName_]}{NEWLINE}{NTAB(2)}{FOLD3STARTHERE}
+{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}
 """
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
@@ -2473,11 +2474,11 @@ def makePSGClasses():
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 
-		_strToRtn_ += f"""{NTAB(2)}self.__CDS__ = {OBRCE}{NEWLINE}"""
+		_strToRtn_ += f"""{NTAB(2)}self.__CDS__ = {OBRCE}{NEWLINE}{NTAB(2)}{FOLD3STARTHERE}"""
 		for _thisItem_ in FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 
-		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{NEWLINE}"""
+		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}{NEWLINE}"""
 
 #		print(f"""FMPSG_SCTN0916_CLASS_FUNCTION_DICT {FMPSG_SCTN0916_CLASS_FUNCTION_DICT}""")
 		if _thisClassName_ in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
@@ -5824,9 +5825,9 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT[_thisClassName_] = {}
 
-			if _isThisATime_ is True:
-				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._TIME_KEY_LIST_.append(_thisElementName_)"""
-				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_thisElementName_))"""
+			if _isThisATime_ == "True":
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._TIME_KEY_LIST_.append({_thisElementName_}){NEWLINE}"""
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_({_thisElementName_})){NEWLINE}"""
 
 			FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")

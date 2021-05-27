@@ -744,6 +744,7 @@ class CLASS_CLOCKS(object):
 		self._MAINFRAME_ = None  # 
 		self._MOUSE_LOCATION_ = EMPTY_XY  # 
 		self._MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
+		self._MPX_ = EMPTY_XY  # comment
 		self._SCREEN_DIMS_ = EMPTY_XY  # 
 		self._SIZE_ = EMPTY_XY  # 
 		self._TIME_KEY_LIST_ = []  # 
@@ -806,6 +807,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+		self._TIME_KEY_LIST_.append(_TEXT_TIME_AT_NEXT_)
+		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_NEXT_))
 		self._KEY_DICT_[TIME_AT_NEXT] = f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}"""] = TIME_AT_NEXT
 
@@ -815,6 +818,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+		self._TIME_KEY_LIST_.append(_TEXT_TIME_AT_ZEROELAPSE_)
+		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_ZEROELAPSE_))
 		self._KEY_DICT_[TIME_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}"""] = TIME_AT_ZEROELAPSE
 
@@ -824,6 +829,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_CLOCK)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+		self._TIME_KEY_LIST_.append(_TEXT_TIME_CLOCK_)
+		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_CLOCK_))
 		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""] = TIME_CLOCK
 
@@ -833,6 +840,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+		self._TIME_KEY_LIST_.append(_TEXT_TIME_ELAPSED_)
+		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_ELAPSED_))
 		self._KEY_DICT_[TIME_ELAPSED] = f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}"""] = TIME_ELAPSED
 
@@ -842,10 +851,13 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_TOGO)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+		self._TIME_KEY_LIST_.append(_TEXT_TIME_TOGO_)
+		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_TOGO_))
 		self._KEY_DICT_[TIME_TOGO] = f"""{self._USE_THIS_KEY_(TIME_TOGO)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_TOGO)}"""] = TIME_TOGO
 
 		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
 				SG.Spin(  # add a new TEXT element to clocks column
 					**self._TEXT_TIME_CLOCK_  # add the main clock
@@ -881,8 +893,10 @@ class CLASS_CLOCKS(object):
 				),
 			],
 		]
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 		self._COLUMN02_ = [  # the column that puts the two smaller clocks below the main one
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
 				SG.Button(  # add a button element to clocks column
 					**BTN_QUIT20  # add the xpand button to clocks
@@ -904,8 +918,10 @@ class CLASS_CLOCKS(object):
 				),
 			],
 		]
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 		self._LAYOUT_ = [  # layout for APPMODE_CLOCKS
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
 				SG.Column(  # add a column
 					layout=self._COLUMN01_,  # comment
@@ -917,8 +933,10 @@ class CLASS_CLOCKS(object):
 				),
 			],
 		]
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 		self._WINDOW_ = {  # define the clocks window
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			ALPHA_CHANNEL: SZ_ALPHA_HIGH,  # set the high alpha as the default
 			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
 			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
@@ -931,9 +949,10 @@ class CLASS_CLOCKS(object):
 			TITLE: TITLE_CLOCKS,  # 
 			_LAYOUT_: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
 		}
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 		self.__CDS__ = {
-			COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3			COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
 			COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
 			DICTIN: self._DICTIN_,  # holds all of the values for the clocks frame
 			DICTOUT: self._DICTOUT_,  # holds the values for the clocks frame
@@ -954,6 +973,7 @@ class CLASS_CLOCKS(object):
 			MAINFRAME: self._MAINFRAME_,
 			MOUSE_LOCATION: self._MOUSE_LOCATION_,
 			MOUSE_STATUS: self._MOUSE_STATUS_,
+			MPX: self._MPX_,
 			SCREEN_DIMS: self._SCREEN_DIMS_,
 			SIZE: self._SIZE_,
 			TIME_KEY_LIST: self._TIME_KEY_LIST_,
@@ -971,6 +991,7 @@ class CLASS_CLOCKS(object):
 			TEXT_TIME_TOGO: self._TEXT_TIME_TOGO_,  # class text for interval count
 			WINDOW: self._WINDOW_,  # define the clocks window
 		}
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def __enter__(self):
 		global \
@@ -984,8 +1005,7 @@ class CLASS_CLOCKS(object):
 
 	def __exit__(self, *args_):
 		global \
-			ALL_THE_FORMS, \
-			MAPPDS
+			ALL_THE_FORMS
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_.close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
@@ -1011,7 +1031,6 @@ class CLASS_CLOCKS(object):
 		self._MAINFRAME_.fill(_tempDictToUpdateFrom_)
 		__dummy__ = self._MAINFRAME_.Read(timeout=1)
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		
 
 	def readToDict(selfdictToReadTo_=self._DICTOUT_, setLocalDict_=True):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1129,12 +1148,12 @@ class CLASS_CLOCKS(object):
 		if NOWMS < self._TIME_TO_MOVE_:
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
-		self._TIME_TO_MOVE_ += SZ_TIMEMS_BETWEEN_MOVES
+		self._TIME_TO_MOVE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
 		_screenSZX_, _screenSZY_ = self._MAINFRAME_.GetScreenDimensions()
 		_sizeX_, _sizeY_ = self._MAINFRAME_.Size()
 		_lcnX_, _lcnY_ = self._MAINFRAME_.CurrentLocation()
-		_moveToX_ = _lcnX_ + (moveMpx_[INDEX_X] * SZ_MOVE_DIST)
-		_moveToY_ = _lcnY_ + (moveMpx_[INDEX_Y] * SZ_MOVE_DIST)
+		_moveToX_ = _lcnX_ + (self._MPX_[INDEX_X] * SZ_MOVE_DIST)
+		_moveToY_ = _lcnY_ + (self._MPX_[INDEX_Y] * SZ_MOVE_DIST)
 
 		if _moveToX_ < 0:
 			_moveToX_ = 0
@@ -1146,11 +1165,7 @@ class CLASS_CLOCKS(object):
 		elif _moveToY_ > (_screenSZY_ - _sizeY_):
 			_moveToY_ = (_screenSZY_ - _sizeY_)
 
-		# print(f"""likely moving abs(_moveToX_ - _lcnX_) {abs(_moveToX_ - _lcnX_)} abs(_moveToY_ - _lcnY_) {abs(_moveToY_ - _lcnY_)} SZ_MAX_DELTA {SZ_MAX_DELTA}""")
-			# avoid trouble with spurious moves caused by a process delaying anything here too far
 		if (abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA):
-			# print(f"""(abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) (abs({_moveToX_} - {_lcnX_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA)}""")
-			# print(f"""(abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA) (abs({_moveToY_} - {_lcnY_}) > {SZ_MAX_DELTA}) {CF.INDENTIN} {(abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA)}""")
 			return
 
 		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
@@ -1163,6 +1178,7 @@ class CLASS_CLOCKS(object):
 
 		self._TIME_TO_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES
 		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
+		self.checkMouse()
 		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
 		self._CLOSE_BBOX_ = getCloseBBox(self._LOCATION_, self._SIZE_)
 		# self._DICTIN_, _wasUpdated_ = updateClocks(self._DICTIN_)
