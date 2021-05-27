@@ -1618,7 +1618,7 @@ def updateClocks(dictToUpdate_):
 		_dictToRtn_[TIME_ELAPSED] = NOWS - _dictToRtn_[TIME_AT_ZEROELAPSE]
 		_dictToRtn_[TIME_TOGO] = _dictToRtn_[TIME_AT_NEXT] - NOWS
 
-		if _dictToRtn_[TIME_TOGO] < 0:
+		if _dictToRtn_[TIME_TOGO] < NOWS:
 			_dictToRtn_[TIME_TOGO] += CF.DAYSECS
 
 		return _dictToRtn_, True

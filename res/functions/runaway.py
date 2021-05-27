@@ -3,9 +3,9 @@
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
 		self._TIME_TO_MOVE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
-		_screenSZX_, _screenSZY_ = self._MAINFRAME_.GetScreenDimensions()
-		_sizeX_, _sizeY_ = self._MAINFRAME_.Size()
-		_lcnX_, _lcnY_ = self._MAINFRAME_.CurrentLocation()
+		_screenSZX_, _screenSZY_ = self._SCREEN_DIMS_
+		_sizeX_, _sizeY_ = self._SIZE_
+		_lcnX_, _lcnY_ = self._LOCATION_
 		_moveToX_ = _lcnX_ + (self._MPX_[INDEX_X] * SZ_MOVE_DIST)
 		_moveToY_ = _lcnY_ + (self._MPX_[INDEX_Y] * SZ_MOVE_DIST)
 

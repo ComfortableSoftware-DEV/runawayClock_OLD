@@ -242,6 +242,9 @@ FMAXFM_SCTN0102_STR_DEF = "FMAXFM_SCTN0102_STR_DEF"  # define a FM string <NAC><
 FMAXFM_SCTN0102_VAL_DEF = "FMAXFM_SCTN0102_VAL_DEF"  # define a FM _value_ <NAC><VALNAME><VAL>
 FMAXFM_SCTN0103_DICT_DEF = "FMAXFM_SCTN0103_DICT_DEF"  # define a dict for FM <NAC>
 FMAXFM_SCTN0104_LIST_DEF = "FMAXFM_SCTN0104_LIST_DEF"  # define a list in FM <NAC>
+FMAXFM_SCTN0105_LDICT_DEF = "FMAXFM_SCTN0105_LDICT_DEF"  # define a dict for FM <NAC>
+FMAXFM_SCTN0105_LDICT_VS_ADD = "FMAXFM_SCTN0105_LDICT_VS_ADD"  # define a dict for FM <NAC>
+FMAXFM_SCTN0105_LDICT_VV_ADD = "FMAXFM_SCTN0105_LDICT_VV_ADD"  # define a dict for FM <NAC>
 FMAXPSG_SCTN0900_KEY_DEF = "FMAXPSG_SCTN0900_KEY_DEF"  # put a key in def1 of PSG.py
 FMAXPSG_SCTN0900_STR_DEF = "FMAXPSG_SCTN0900_STR_DEF"  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
 FMAXPSG_SCTN0900_VAL_DEF = "FMAXPSG_SCTN0900_VAL_DEF"  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
@@ -416,7 +419,7 @@ FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VS_ADD = "FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VS_A
 FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD = "FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD"  # add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>
 FMAXPSG_SCTN0916_CLASS_SPIN_LIST_STR_ADD = "FMAXPSG_SCTN0916_CLASS_SPIN_LIST_STR_ADD"  # add a STR to the values list <NAC><CLASSNAME><SPINNAME><STR>
 FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD"  # add a VAL to the values list <NAC><CLASSNAME><SPINNAME><VAL>
-FMAXPSG_SCTN0916_CLASS_TEXT_DEF = "FMAXPSG_SCTN0916_CLASS_TEXT_DEF"  # define a text <NAC><TEXTNAME>
+FMAXPSG_SCTN0916_CLASS_TEXT_DEF = "FMAXPSG_SCTN0916_CLASS_TEXT_DEF"  # define a text <NAC><CLASSNAME><TEXTNAME><ISATIME>
 FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD = "FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD"  # add a PARM to a text element <NAC><CLASSNAME><TEXTNAME><VAL>
 FMAXPSG_SCTN0916_CLASS_TEXT_STR_ADD = "FMAXPSG_SCTN0916_CLASS_TEXT_STR_ADD"  # add a str to a text element <NAC><CLASSNAME><TEXTNAME><KEY><VAL>
 FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD = "FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD"  # add a val to a text element <NAC><CLASSNAME><TEXTNAME>
@@ -447,6 +450,9 @@ FMAXFM_AXLST = [
 	FMAXFM_SCTN0102_VAL_DEF,  # define a FM _value_ <NAC><VALNAME><VAL>
 	FMAXFM_SCTN0103_DICT_DEF,  # define a dict for FM <NAC>
 	FMAXFM_SCTN0104_LIST_DEF,  # define a list in FM <NAC>
+	FMAXFM_SCTN0105_LDICT_DEF,  # define a dict for FM <NAC>
+	FMAXFM_SCTN0105_LDICT_VS_ADD,  # define a dict for FM <NAC>
+	FMAXFM_SCTN0105_LDICT_VV_ADD,  # define a dict for FM <NAC>
 	FMAXPSG_SCTN0900_KEY_DEF,  # put a key in def1 of PSG.py
 	FMAXPSG_SCTN0900_STR_DEF,  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
 	FMAXPSG_SCTN0900_VAL_DEF,  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
@@ -621,7 +627,7 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD,  # add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>
 	FMAXPSG_SCTN0916_CLASS_SPIN_LIST_STR_ADD,  # add a STR to the values list <NAC><CLASSNAME><SPINNAME><STR>
 	FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD,  # add a VAL to the values list <NAC><CLASSNAME><SPINNAME><VAL>
-	FMAXPSG_SCTN0916_CLASS_TEXT_DEF,  # define a text <NAC><TEXTNAME>
+	FMAXPSG_SCTN0916_CLASS_TEXT_DEF,  # define a text <NAC><CLASSNAME><TEXTNAME><ISATIME>
 	FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD,  # add a PARM to a text element <NAC><CLASSNAME><TEXTNAME><VAL>
 	FMAXPSG_SCTN0916_CLASS_TEXT_STR_ADD,  # add a str to a text element <NAC><CLASSNAME><TEXTNAME><KEY><VAL>
 	FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD,  # add a val to a text element <NAC><CLASSNAME><TEXTNAME>
@@ -661,6 +667,8 @@ FMFM_SCTN0103_DICT_CMNT_DICT = {}  # SCTN103 dict defined
 FMFM_SCTN0103_DICT_DICT = {}  # SCTN103 dict defined
 FMFM_SCTN0104_LIST_CMNT_DICT = {}  # SCTN201 device defines
 FMFM_SCTN0104_LIST_DICT = {}  # SCTN201 device defines
+FMFM_SCTN0105_LDICT_CMNT_DICT = {}  # SCTN105 ldict defined
+FMFM_SCTN0105_LDICT_DICT = {}  # SCTN105 ldict defined
 FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
 FMPSG_SCTN0900_DEF1_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0900_DEF1_DICT = {}  # define the dict to hold everything in SCTN0900
@@ -817,6 +825,9 @@ TBGLST = [
 	("FMAXFM_SCTN0102_VAL_DEF", FMAXFM_SCTN0101_AX_DEF, "define a FM _value_ <NAC><VALNAME><VAL>",),
 	("FMAXFM_SCTN0103_DICT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a dict for FM <NAC>",),
 	("FMAXFM_SCTN0104_LIST_DEF", FMAXFM_SCTN0101_AX_DEF, "define a list in FM <NAC>",),
+	("FMAXFM_SCTN0105_LDICT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a dict for FM <NAC>",),
+	("FMAXFM_SCTN0105_LDICT_VS_ADD", FMAXFM_SCTN0101_AX_DEF, "define a dict for FM <NAC>",),
+	("FMAXFM_SCTN0105_LDICT_VV_ADD", FMAXFM_SCTN0101_AX_DEF, "define a dict for FM <NAC>",),
 	("FMAXFM_____", FMAX_NOP, "FMAXFM_ENDS",),
 	("FMAXPSG", FMAX_NOP, "FMAXPSG_BEGINS",),
 	("FMAXPSG_SCTN0900_KEY_DEF", FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py",),
@@ -1020,7 +1031,8 @@ TBGLST = [
 	("FMCF_SCTN0204_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN204 list dict",),
 	("FMCF_____", FMAX_NOP, "FMCF_ENDS",),
 	("FMFM", FMAX_NOP, "FMFM_BEGINS",),
-	("FMFMVAl_TABLEVEL", FMAXFM_SCTN0102_STR_DEF, "TABLEVEL", "TABLEVEL", "key for tab levels",),
+	("FMVAl_TABLEVEL", FMAXFM_SCTN0102_STR_DEF, "TABLEVEL", "TABLEVEL", "key for tab levels",),
+#	("FMVAL_SUBST_DICT", FMAXFM_SCTN0103, parms, "comment",),
 	("FMFM_SCTN0101_AX_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN101 FMAX defined",),
 	("FMFM_SCTN0101_AX_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN101 FMAX defined",),
 	("FMFM_SCTN0102_VAL_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN102 val",),
@@ -1029,6 +1041,8 @@ TBGLST = [
 	("FMFM_SCTN0103_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN103 dict defined",),
 	("FMFM_SCTN0104_LIST_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN201 device defines",),
 	("FMFM_SCTN0104_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN201 device defines",),
+	("FMFM_SCTN0105_LDICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN105 ldict defined",),
+	("FMFM_SCTN0105_LDICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN105 ldict defined",),
 	("FMFM_____", FMAX_NOP, "FMFM_ENDS",),
 	("FMPSG", FMAX_NOP, "FMPSG_BEGINS",),
 	("FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
@@ -1658,10 +1672,10 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC05_READ_TO_DICT_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "readToDict", "readToDict.py", "load readToDict from file",),
 	("PSGVAL__CLOCKS_FUNC06_CHECK_MOUSE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "checkMouse", "", "define checkMouse",),
 	("PSGVAL__CLOCKS_FUNC06_CHECK_MOUSE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "load checkMouse from file",),
-	("PSGVAL__CLOCKS_FUNC07_RUNAWAY", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "runaway", "moveMpx_=(0, 0)", "define runaway",),
+	("PSGVAL__CLOCKS_FUNC07_RUNAWAY", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "runaway", "", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC07_RUNAWAY_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "load checkMouse from file",),
 	("PSGVAL__CLOCKS_FUNC08_UPDATE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "update", "", "define the required update function",),
-	("PSGVAL__CLOCKS_FUNC08_UPDATE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "update", "update.py", "define the required update function",),
+	("PSGVAL__CLOCKS_FUNC08_UPDATE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "update", "CLOCKS/update.py", "define the required update function",),
 	("PSGVAL__CLOCKS_LAYOUT", FMAX_NOP, "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT00", FMAXPSG_SCTN0916_CLASS_LAYOUT_DEF, "CLOCKS", "_LAYOUT_", "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT01", FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD, "CLOCKS", "_LAYOUT_", "LAYOUT_ROW_00", "L03", "add a row to the layout",),
@@ -2288,6 +2302,21 @@ def makeFM():
 # FMFM_MAKE_ENDS
 
 
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# substLambda
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def substLambda(sourceStr_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	_strToRtn_ = ""
+	_strToRtn_ = _strToRtn_.replace("%CBRCE%", f"""{CBRCE}""")
+	_strToRtn_ = _strToRtn_.replace("%FTQ%", f"""f{TRIQT}""")
+	_strToRtn_ = _strToRtn_.replace("%OBRCE%", f"""{OBRCE}""")
+	_strToRtn_ = _strToRtn_.replace("%TQ%", f"""{TRIQT}""")
+
+	return _strToRtn_
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
 # FMPSG_MAKE_BEGINS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # makePSGClasses
@@ -2772,6 +2801,8 @@ def parseTBGLST(FDTBGLST):
 		FMFM_SCTN0103_DICT_DICT, \
 		FMFM_SCTN0104_LIST_CMNT_DICT, \
 		FMFM_SCTN0104_LIST_DICT, \
+		FMFM_SCTN0105_LDICT_CMNT_DICT, \
+		FMFM_SCTN0105_LDICT_DICT, \
 		FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT, \
 		FMPSG_SCTN0900_DEF1_CMNT_DICT, \
 		FMPSG_SCTN0900_DEF1_DICT, \
@@ -5255,6 +5286,25 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA1_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 6:
+				doErrorItem("not 6 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisValName_ = _thisItem_[3]
+			_thisLambda_ = _thisItem_[4]
+
+			_thisLambda_ = substLambda(_thisLambda_)
+			FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisLambda_}  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_LINE_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if _thisItemLen_ != 5:
@@ -5310,7 +5360,7 @@ def parseTBGLST(FDTBGLST):
 
 			_thisClassName_ = _thisItem_[2]
 			_thisValName_ = _thisItem_[3]
-			_thisVal_ - _thisItem_[4]
+			_thisVal_ = _thisItem_[4]
 
 			FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
@@ -5328,7 +5378,7 @@ def parseTBGLST(FDTBGLST):
 
 			_thisClassName_ = _thisItem_[2]
 			_thisValName_ = _thisItem_[3]
-			_thisVal_ - _thisItem_[4]
+			_thisVal_ = _thisItem_[4]
 
 			FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")

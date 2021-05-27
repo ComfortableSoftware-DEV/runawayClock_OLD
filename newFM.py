@@ -242,6 +242,9 @@ FMAXFM_SCTN0102_STR_DEF = "FMAXFM_SCTN0102_STR_DEF"  # define a FM string <NAC><
 FMAXFM_SCTN0102_VAL_DEF = "FMAXFM_SCTN0102_VAL_DEF"  # define a FM _value_ <NAC><VALNAME><VAL>
 FMAXFM_SCTN0103_DICT_DEF = "FMAXFM_SCTN0103_DICT_DEF"  # define a dict for FM <NAC>
 FMAXFM_SCTN0104_LIST_DEF = "FMAXFM_SCTN0104_LIST_DEF"  # define a list in FM <NAC>
+FMAXFM_SCTN0105_LDICT_DEF = "FMAXFM_SCTN0105_LDICT_DEF"  # define a dict for FM <NAC>
+FMAXFM_SCTN0105_LDICT_VS_ADD = "FMAXFM_SCTN0105_LDICT_VS_ADD"  # define a dict for FM <NAC>
+FMAXFM_SCTN0105_LDICT_VV_ADD = "FMAXFM_SCTN0105_LDICT_VV_ADD"  # define a dict for FM <NAC>
 FMAXPSG_SCTN0900_KEY_DEF = "FMAXPSG_SCTN0900_KEY_DEF"  # put a key in def1 of PSG.py
 FMAXPSG_SCTN0900_STR_DEF = "FMAXPSG_SCTN0900_STR_DEF"  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
 FMAXPSG_SCTN0900_VAL_DEF = "FMAXPSG_SCTN0900_VAL_DEF"  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
@@ -447,6 +450,9 @@ FMAXFM_AXLST = [
 	FMAXFM_SCTN0102_VAL_DEF,  # define a FM _value_ <NAC><VALNAME><VAL>
 	FMAXFM_SCTN0103_DICT_DEF,  # define a dict for FM <NAC>
 	FMAXFM_SCTN0104_LIST_DEF,  # define a list in FM <NAC>
+	FMAXFM_SCTN0105_LDICT_DEF,  # define a dict for FM <NAC>
+	FMAXFM_SCTN0105_LDICT_VS_ADD,  # define a dict for FM <NAC>
+	FMAXFM_SCTN0105_LDICT_VV_ADD,  # define a dict for FM <NAC>
 	FMAXPSG_SCTN0900_KEY_DEF,  # put a key in def1 of PSG.py
 	FMAXPSG_SCTN0900_STR_DEF,  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
 	FMAXPSG_SCTN0900_VAL_DEF,  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
@@ -661,6 +667,8 @@ FMFM_SCTN0103_DICT_CMNT_DICT = {}  # SCTN103 dict defined
 FMFM_SCTN0103_DICT_DICT = {}  # SCTN103 dict defined
 FMFM_SCTN0104_LIST_CMNT_DICT = {}  # SCTN201 device defines
 FMFM_SCTN0104_LIST_DICT = {}  # SCTN201 device defines
+FMFM_SCTN0105_LDICT_CMNT_DICT = {}  # SCTN105 ldict defined
+FMFM_SCTN0105_LDICT_DICT = {}  # SCTN105 ldict defined
 FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
 FMPSG_SCTN0900_DEF1_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0900_DEF1_DICT = {}  # define the dict to hold everything in SCTN0900
@@ -793,6 +801,8 @@ FMPSG_SCTN0916_CLASS_WINDOW_DICT = {}  # holds all of the button entriess (TUPDI
 		FMFM_SCTN0103_DICT_DICT, \
 		FMFM_SCTN0104_LIST_CMNT_DICT, \
 		FMFM_SCTN0104_LIST_DICT, \
+		FMFM_SCTN0105_LDICT_CMNT_DICT, \
+		FMFM_SCTN0105_LDICT_DICT, \
 		FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT, \
 		FMPSG_SCTN0900_DEF1_CMNT_DICT, \
 		FMPSG_SCTN0900_DEF1_DICT, \
