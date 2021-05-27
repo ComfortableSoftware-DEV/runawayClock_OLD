@@ -207,33 +207,33 @@ TIME995959 = (60 * 60 * 100)  # 360000
 
 
 STR_SUBST_DICT = {
-	"%CBRCE%": f"""{CBRCE}""",
-	"%CBRKT%": f"""{CBRKT}""",
-	"%CPAREN%": f"""{CPAREN}""",
-	"%DQ%": f"""{DBLQT}""",
-	"%FOLDLN1E%": f"""{FOLD1ENDHERELN}""",
-	"%FOLDLN2E%": f"""{FOLD2ENDHERELN}""",
-	"%FOLDLN3E%": f"""{FOLD3ENDHERELN}""",
-	"%FOLDLN1S%": f"""{FOLD1STARTHERELN}""",
-	"%FOLDLN2S%": f"""{FOLD2STARTHERELN}""",
-	"%FOLDLN3S%": f"""{FOLD3STARTHERELN}""",
-	"%FTQ%": f"""f{TRIQT}""",
-	"%NEWLINE%": f"""{NEWLINE}""",
-	"%OBRCE%": f"""{OBRCE}""",
-	"%OBRKT%": f"""{OBRKT}""",
-	"%OPAREN%": f"""{OPAREN}""",
-	"%SQ%": f"""{SGLQT}""",
-	"%TAB1%": f"""{NTAB(1)}""",
-	"%TAB2%": f"""{NTAB(2)}""",
-	"%TAB3%": f"""{NTAB(3)}""",
-	"%TAB4%": f"""{NTAB(4)}""",
-	"%TAB5%": f"""{NTAB(5)}""",
-	"%TAB6%": f"""{NTAB(6)}""",
-	"%TAB7%": f"""{NTAB(7)}""",
-	"%TAB8%": f"""{NTAB(8)}""",
-	"%TAB9%": f"""{NTAB(9)}""",
-	"%TABA%": f"""{NTAB(10)}""",
-	"%TQ%": f"""{TRIQT}""",
+	"%CBRCE%": f"""{CBRCE}"""
+	"%CBRKT%": f"""{CBRKT}"""
+	"%CPAREN%": f"""{CPAREN}"""
+	"%DQ%": f"""{DBLQT}"""
+	"%FOLDLN1E%": f"""{FOLD1ENDHERELN}"""
+	"%FOLDLN2E%": f"""{FOLD2ENDHERELN}"""
+	"%FOLDLN3E%": f"""{FOLD3ENDHERELN}"""
+	"%FOLDLN1S%": f"""{FOLD1STARTHERELN}"""
+	"%FOLDLN2S%": f"""{FOLD2STARTHERELN}"""
+	"%FOLDLN3S%": f"""{FOLD3STARTHERELN}"""
+	"%FTQ%": f"""f{TRIQT}"""
+	"%NEWLINE%": f"""{NEWLINE}"""
+	"%OBRCE%": f"""{OBRCE}"""
+	"%OBRKT%": f"""{OBRKT}"""
+	"%OPAREN%": f"""{OPAREN}"""
+	"%SQ%": f"""{SGLQT}"""
+	"%TAB1%": f"""{NTAB(1)}"""
+	"%TAB2%": f"""{NTAB(2)}"""
+	"%TAB3%": f"""{NTAB(3)}"""
+	"%TAB4%": f"""{NTAB(4)}"""
+	"%TAB5%": f"""{NTAB(5)}"""
+	"%TAB6%": f"""{NTAB(6)}"""
+	"%TAB7%": f"""{NTAB(7)}"""
+	"%TAB8%": f"""{NTAB(8)}"""
+	"%TAB9%": f"""{NTAB(9)}"""
+	"%TABA%": f"""{NTAB(10)}"""
+	"%TQ%": f"""{TRIQT}"""
 }
 
 
@@ -409,6 +409,7 @@ FMAXPSG_SCTN0916_CLASS_FORMPOPUP_DEF = "FMAXPSG_SCTN0916_CLASS_FORMPOPUP_DEF"  #
 FMAXPSG_SCTN0916_CLASS_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0916_CLASS_FRAMEELEMENT_DEF"  # define a frame element
 FMAXPSG_SCTN0916_CLASS_FUNCTION_BLANKLINE = "FMAXPSG_SCTN0916_CLASS_FUNCTION_BLANKLINE"  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
 FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF = "FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF"  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
+FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE = "FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE"  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
 FMAXPSG_SCTN0916_CLASS_FUNCTION_LAMBDA1_DEF = "FMAXPSG_SCTN0916_CLASS_FUNCTION_LAMBDA1_DEF"  # add a lambda to the top of a function, usually for absorbing things
 FMAXPSG_SCTN0916_CLASS_FUNCTION_LAMBDA2_DEF = "FMAXPSG_SCTN0916_CLASS_FUNCTION_LAMBDA2_DEF"  # add a lambda to the top of a function, usually for absorbing things
 FMAXPSG_SCTN0916_CLASS_FUNCTION_LINE_ADD = "FMAXPSG_SCTN0916_CLASS_FUNCTION_LINE_ADD"  # define a class <NAC><CLASSNAME><FUNCNAME><LINE>
@@ -617,6 +618,7 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0916_CLASS_FRAMEELEMENT_DEF,  # define a frame element
 	FMAXPSG_SCTN0916_CLASS_FUNCTION_BLANKLINE,  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
 	FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF,  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
+	FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE,  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
 	FMAXPSG_SCTN0916_CLASS_FUNCTION_LAMBDA1_DEF,  # add a lambda to the top of a function, usually for absorbing things
 	FMAXPSG_SCTN0916_CLASS_FUNCTION_LAMBDA2_DEF,  # add a lambda to the top of a function, usually for absorbing things
 	FMAXPSG_SCTN0916_CLASS_FUNCTION_LINE_ADD,  # define a class <NAC><CLASSNAME><FUNCNAME><LINE>
@@ -995,6 +997,7 @@ TBGLST = [
 	("FMAXPSG_SCTN0916_CLASS_FRAMEELEMENT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a frame element",),
 	("FMAXPSG_SCTN0916_CLASS_FUNCTION_BLANKLINE", FMAXFM_SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><PARMS>",),
 	("FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF", FMAXFM_SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><PARMS>",),
+	("FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE", FMAXFM_SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>",),
 	("FMAXPSG_SCTN0916_CLASS_FUNCTION_LAMBDA1_DEF", FMAXFM_SCTN0101_AX_DEF, "add a lambda to the top of a function, usually for absorbing things",),
 	("FMAXPSG_SCTN0916_CLASS_FUNCTION_LAMBDA2_DEF", FMAXFM_SCTN0101_AX_DEF, "add a lambda to the top of a function, usually for absorbing things",),
 	("FMAXPSG_SCTN0916_CLASS_FUNCTION_LINE_ADD", FMAXFM_SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><LINE>",),
@@ -1059,9 +1062,9 @@ TBGLST = [
 	("FMCF_SCTN0203_DICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN203 dict comments dict",),
 	("FMCF_SCTN0203_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN203 dict dict",),
 	("FMCF_SCTN0204_LIST_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN204 list comments dict",),
-	("FMCF_____", FMAX_NOP, "FMCF_ENDS",),
 	("FMCF_SCTN0204_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN204 list dict",),
-	("FMFM_____", FMAX_NOP, "FMFM_ENDS",),
+	("FMCF_____", FMAX_NOP, "FMCF_ENDS",),
+	("FMFM", FMAX_NOP, "FMFM_BEGINS",),
 	("FMFM_SCTN0101_AX_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN101 FMAX defined",),
 	("FMFM_SCTN0101_AX_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN101 FMAX defined",),
 	("FMFM_SCTN0102_VAL_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN102 val",),
@@ -1072,13 +1075,12 @@ TBGLST = [
 	("FMFM_SCTN0104_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN201 device defines",),
 	("FMFM_SCTN0105_LDICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN105 ldict defined",),
 	("FMFM_SCTN0105_LDICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN105 ldict defined",),
-	("FMFM", FMAX_NOP, "FMFM_BEGINS",),
+	("FMFM_____", FMAX_NOP, "FMFM_ENDS",),
+	("FMPSG", FMAX_NOP, "FMPSG_BEGINS",),
 	("FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
 	("FMPSG_SCTN0900_DEF1_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0900_DEF1_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0901_DEF2_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0901",),
-	("FMPSG", FMAX_NOP, "FMPSG_BEGINS",),
-	("FMVAl_TABLEVEL", FMAXFM_SCTN0102_STR_DEF, "TABLEVEL", "TABLEVEL", "key for tab levels",),
 	("FMPSG_SCTN0901_DEF2_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0901",),
 	("FMPSG_SCTN0902_DICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0902",),
 	("FMPSG_SCTN0902_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0902",),
@@ -1169,6 +1171,7 @@ TBGLST = [
 	("FMPSG_SCTN0916_CLASS_WINDOW_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entries (TUPDICT)",),
 	("FMPSG_SCTN0916_CLASS_WINDOW_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds all of the button entriess (TUPDICT)",),
 	("FMPSG_____", FMAX_NOP, "FMPSG_ENDS",),
+	("FMVAl_TABLEVEL", FMAXFM_SCTN0102_STR_DEF, "TABLEVEL", "TABLEVEL", "key for tab levels",),
 	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
 	("PSGVAL_ALERTING_LIST", FMAXPSG_SCTN0903_LIST_DEF, "ALERTING_LIST", "list that holds all currently alarming events",),
 	("PSGVAL_ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_DEF, "ALL_THE_FORMS", "comment",),
@@ -1663,11 +1666,9 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FORMMAIN", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__CLOCKS_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "CLOCKS", "_WINDOW_", "True", "the clocks frame defined and done",),
 	("PSGVAL__CLOCKS_FUNC00_INIT", FMAXPSG_SCTN0916_CLASS_INIT_DEF, "CLOCKS", ", keyBase_, formName_", "init parms defined",),
-
 	("PSGVAL__CLOCKS_FUNC00_INIT000", FMAXPSG_SCTN0916_CLASS_INIT_VAL1_DEF, "CLOCKS", "_THIS_KEY_BASE_", "keyBase_", "adopt keyBase_",),
 	("PSGVAL__CLOCKS_FUNC00_INIT001", FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA1_DEF, "CLOCKS", "_USE_THIS_KEY_", "__KEY_TEXT__: %FTQ%%OBRCE%__KEY_TEXT__%CBRCE%%OBRCE%self._THIS_KEY_BASE_%CBRCE%%TQ%", "make a local key sourcer",),
 	("PSGVAL__CLOCKS_FUNC00_INIT002", FMAXPSG_SCTN0916_CLASS_INIT_VAL1_DEF, "CLOCKS", "_THIS_FORM_NAME_", "formName_", "adopt formName_",),
-
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_ALPHA_CHANNEL_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_ALPHA_HIGH_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_ALPHA_LOW_", "SZ_ALPHA_LOW", "",),
@@ -1704,6 +1705,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC06_CHECK_MOUSE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "load checkMouse from file",),
 	("PSGVAL__CLOCKS_FUNC07_RUNAWAY", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "runaway", "", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC07_RUNAWAY_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "load checkMouse from file",),
+	("PSGVAL__CLOCKS_FUNC08_EASY_UPDATE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "easyUpdate.py", "load the wholel thing from the file for easyUpdate",),
 	("PSGVAL__CLOCKS_FUNC08_UPDATE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "update", "", "define the required update function",),
 	("PSGVAL__CLOCKS_FUNC08_UPDATE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "update", "CLOCKS/update.py", "define the required update function",),
 	("PSGVAL__CLOCKS_LAYOUT", FMAX_NOP, "layout for APPMODE_CLOCKS",),
@@ -5155,6 +5157,33 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 
 			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(1)}def {_thisElementName_}{OPAREN}self{_theseParms_}{CPAREN}:""")
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT:
+				FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
+
+			FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+	elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 6:
+				doErrorItem("not 6 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisElementName_ = _thisItem_[3]
+			_thisFilename_ = _thisItem_[4]
+
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
+				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
+
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr(_thisFilename_)}""")
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
