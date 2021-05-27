@@ -201,9 +201,40 @@ HALFDAYSECS = (60 * 60 * 12)  # 43200
 HALFHOURSECS = (60 * 30)  # 1800
 HOURSECS = (60 * 60)  # 3600
 MINUTESECS = 60 # 60
-NINETYNINE5959SEC = (60 * 60 * 100)  # 360000
 QUARTERDAYSECS = (60 * 60 * 6)
 QUARTERHOURSECS = (60 * 15)  # 900
+TIME995959 = (60 * 60 * 100)  # 360000
+
+
+STR_SUBST_DICT = {
+	"%CBRCE%": f"""{CBRCE}""",
+	"%CBRKT%": f"""{CBRKT}""",
+	"%CPAREN%": f"""{CPAREN}""",
+	"%DQ%": f"""{DBLQT}""",
+	"%FOLDLN1E%": f"""{FOLD1ENDHERELN}""",
+	"%FOLDLN2E%": f"""{FOLD2ENDHERELN}""",
+	"%FOLDLN3E%": f"""{FOLD3ENDHERELN}""",
+	"%FOLDLN1S%": f"""{FOLD1STARTHERELN}""",
+	"%FOLDLN2S%": f"""{FOLD2STARTHERELN}""",
+	"%FOLDLN3S%": f"""{FOLD3STARTHERELN}""",
+	"%FTQ%": f"""f{TRIQT}""",
+	"%NEWLINE%": f"""{NEWLINE}""",
+	"%OBRCE%": f"""{OBRCE}""",
+	"%OBRKT%": f"""{OBRKT}""",
+	"%OPAREN%": f"""{OPAREN}""",
+	"%SQ%": f"""{SGLQT}""",
+	"%TAB1%": f"""{NTAB(1)}""",
+	"%TAB2%": f"""{NTAB(2)}""",
+	"%TAB3%": f"""{NTAB(3)}""",
+	"%TAB4%": f"""{NTAB(4)}""",
+	"%TAB5%": f"""{NTAB(5)}""",
+	"%TAB6%": f"""{NTAB(6)}""",
+	"%TAB7%": f"""{NTAB(7)}""",
+	"%TAB8%": f"""{NTAB(8)}""",
+	"%TAB9%": f"""{NTAB(9)}""",
+	"%TABA%": f"""{NTAB(10)}""",
+	"%TQ%": f"""{TRIQT}""",
+}
 
 
 CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from 'text' strings like color codes"}
@@ -1028,11 +1059,9 @@ TBGLST = [
 	("FMCF_SCTN0203_DICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN203 dict comments dict",),
 	("FMCF_SCTN0203_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN203 dict dict",),
 	("FMCF_SCTN0204_LIST_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN204 list comments dict",),
-	("FMCF_SCTN0204_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN204 list dict",),
 	("FMCF_____", FMAX_NOP, "FMCF_ENDS",),
-	("FMFM", FMAX_NOP, "FMFM_BEGINS",),
-	("FMVAl_TABLEVEL", FMAXFM_SCTN0102_STR_DEF, "TABLEVEL", "TABLEVEL", "key for tab levels",),
-#	("FMVAL_SUBST_DICT", FMAXFM_SCTN0103, parms, "comment",),
+	("FMCF_SCTN0204_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN204 list dict",),
+	("FMFM_____", FMAX_NOP, "FMFM_ENDS",),
 	("FMFM_SCTN0101_AX_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN101 FMAX defined",),
 	("FMFM_SCTN0101_AX_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN101 FMAX defined",),
 	("FMFM_SCTN0102_VAL_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN102 val",),
@@ -1043,12 +1072,13 @@ TBGLST = [
 	("FMFM_SCTN0104_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN201 device defines",),
 	("FMFM_SCTN0105_LDICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN105 ldict defined",),
 	("FMFM_SCTN0105_LDICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "SCTN105 ldict defined",),
-	("FMFM_____", FMAX_NOP, "FMFM_ENDS",),
-	("FMPSG", FMAX_NOP, "FMPSG_BEGINS",),
+	("FMFM", FMAX_NOP, "FMFM_BEGINS",),
 	("FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT", FMAXFM_SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
 	("FMPSG_SCTN0900_DEF1_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0900_DEF1_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0900",),
 	("FMPSG_SCTN0901_DEF2_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0901",),
+	("FMPSG", FMAX_NOP, "FMPSG_BEGINS",),
+	("FMVAl_TABLEVEL", FMAXFM_SCTN0102_STR_DEF, "TABLEVEL", "TABLEVEL", "key for tab levels",),
 	("FMPSG_SCTN0901_DEF2_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0901",),
 	("FMPSG_SCTN0902_DICT_CMNT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0902",),
 	("FMPSG_SCTN0902_DICT_DICT", FMAXFM_SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0902",),
@@ -1635,7 +1665,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC00_INIT", FMAXPSG_SCTN0916_CLASS_INIT_DEF, "CLOCKS", ", keyBase_, formName_", "init parms defined",),
 
 	("PSGVAL__CLOCKS_FUNC00_INIT000", FMAXPSG_SCTN0916_CLASS_INIT_VAL1_DEF, "CLOCKS", "_THIS_KEY_BASE_", "keyBase_", "adopt keyBase_",),
-	("PSGVAL__CLOCKS_FUNC00_INIT001", FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA1_DEF, "CLOCKS", "_USE_THIS_KEY_", "__KEY_TEXT__: %FTQ%%OBRCE%__KEY_TEXT__%CBRCE%%OBRCE%self._THIS_KEY_BASE_%CBRCE%%TQ%",),
+	("PSGVAL__CLOCKS_FUNC00_INIT001", FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA1_DEF, "CLOCKS", "_USE_THIS_KEY_", "__KEY_TEXT__: %FTQ%%OBRCE%__KEY_TEXT__%CBRCE%%OBRCE%self._THIS_KEY_BASE_%CBRCE%%TQ%", "make a local key sourcer",),
 	("PSGVAL__CLOCKS_FUNC00_INIT002", FMAXPSG_SCTN0916_CLASS_INIT_VAL1_DEF, "CLOCKS", "_THIS_FORM_NAME_", "formName_", "adopt formName_",),
 
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_ALPHA_CHANNEL_", "SZ_ALPHA_HIGH", "",),
@@ -2308,10 +2338,8 @@ def makeFM():
 def substLambda(sourceStr_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_strToRtn_ = ""
-	_strToRtn_ = _strToRtn_.replace("%CBRCE%", f"""{CBRCE}""")
-	_strToRtn_ = _strToRtn_.replace("%FTQ%", f"""f{TRIQT}""")
-	_strToRtn_ = _strToRtn_.replace("%OBRCE%", f"""{OBRCE}""")
-	_strToRtn_ = _strToRtn_.replace("%TQ%", f"""{TRIQT}""")
+	for _thisSrcStr_, _thisDestStr_ in STR_SUBST_DICT.items():
+		_strToRtn_ = _strToRtn_.replace(_thisSrcStr_, _thisDestStr_)
 
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1

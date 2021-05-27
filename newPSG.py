@@ -727,6 +727,7 @@ class CLASS_CLOCKS(object):
 
 	def __init__(self, keyBase_, formName_):
 		self._THIS_KEY_BASE_ = keyBase_  # adopt keyBase_
+		self._USE_THIS_KEY_ =   # make a local key sourcer
 		self._THIS_FORM_NAME_ = formName_  # adopt formName_
 
 		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  # 
@@ -957,6 +958,7 @@ class CLASS_CLOCKS(object):
 			DICTIN: self._DICTIN_,  # holds all of the values for the clocks frame
 			DICTOUT: self._DICTOUT_,  # holds the values for the clocks frame
 			THIS_KEY_BASE: self._THIS_KEY_BASE_,
+			USE_THIS_KEY: self._USE_THIS_KEY_,
 			THIS_FORM_NAME: self._THIS_FORM_NAME_,
 			ALPHA_CHANNEL: self._ALPHA_CHANNEL_,
 			ALPHA_HIGH: self._ALPHA_HIGH_,
