@@ -207,33 +207,33 @@ TIME995959 = (60 * 60 * 100)  # 360000
 
 
 STR_SUBST_DICT = {
-	"%CBRCE%": f"""{CBRCE}"""
-	"%CBRKT%": f"""{CBRKT}"""
-	"%CPAREN%": f"""{CPAREN}"""
-	"%DQ%": f"""{DBLQT}"""
-	"%FOLDLN1E%": f"""{FOLD1ENDHERELN}"""
-	"%FOLDLN2E%": f"""{FOLD2ENDHERELN}"""
-	"%FOLDLN3E%": f"""{FOLD3ENDHERELN}"""
-	"%FOLDLN1S%": f"""{FOLD1STARTHERELN}"""
-	"%FOLDLN2S%": f"""{FOLD2STARTHERELN}"""
-	"%FOLDLN3S%": f"""{FOLD3STARTHERELN}"""
-	"%FTQ%": f"""f{TRIQT}"""
-	"%NEWLINE%": f"""{NEWLINE}"""
-	"%OBRCE%": f"""{OBRCE}"""
-	"%OBRKT%": f"""{OBRKT}"""
-	"%OPAREN%": f"""{OPAREN}"""
-	"%SQ%": f"""{SGLQT}"""
-	"%TAB1%": f"""{NTAB(1)}"""
-	"%TAB2%": f"""{NTAB(2)}"""
-	"%TAB3%": f"""{NTAB(3)}"""
-	"%TAB4%": f"""{NTAB(4)}"""
-	"%TAB5%": f"""{NTAB(5)}"""
-	"%TAB6%": f"""{NTAB(6)}"""
-	"%TAB7%": f"""{NTAB(7)}"""
-	"%TAB8%": f"""{NTAB(8)}"""
-	"%TAB9%": f"""{NTAB(9)}"""
-	"%TABA%": f"""{NTAB(10)}"""
-	"%TQ%": f"""{TRIQT}"""
+	"%CBRCE%": f"""{CBRCE}""",
+	"%CBRKT%": f"""{CBRKT}""",
+	"%CPAREN%": f"""{CPAREN}""",
+	"%DQ%": f"""{DBLQT}""",
+	"%FOLDLN1E%": f"""{FOLD1ENDHERELN}""",
+	"%FOLDLN2E%": f"""{FOLD2ENDHERELN}""",
+	"%FOLDLN3E%": f"""{FOLD3ENDHERELN}""",
+	"%FOLDLN1S%": f"""{FOLD1STARTHERELN}""",
+	"%FOLDLN2S%": f"""{FOLD2STARTHERELN}""",
+	"%FOLDLN3S%": f"""{FOLD3STARTHERELN}""",
+	"%FTQ%": f"""f{TRIQT}""",
+	"%NEWLINE%": f"""{NEWLINE}""",
+	"%OBRCE%": f"""{OBRCE}""",
+	"%OBRKT%": f"""{OBRKT}""",
+	"%OPAREN%": f"""{OPAREN}""",
+	"%SQ%": f"""{SGLQT}""",
+	"%TAB1%": f"""{NTAB(1)}""",
+	"%TAB2%": f"""{NTAB(2)}""",
+	"%TAB3%": f"""{NTAB(3)}""",
+	"%TAB4%": f"""{NTAB(4)}""",
+	"%TAB5%": f"""{NTAB(5)}""",
+	"%TAB6%": f"""{NTAB(6)}""",
+	"%TAB7%": f"""{NTAB(7)}""",
+	"%TAB8%": f"""{NTAB(8)}""",
+	"%TAB9%": f"""{NTAB(9)}""",
+	"%TABA%": f"""{NTAB(10)}""",
+	"%TQ%": f"""{TRIQT}""",
 }
 
 
@@ -1663,6 +1663,16 @@ TBGLST = [
 	("PSGVAL__CLOCKS_DICTOUT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "_DICTOUT_", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICTOUT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "CLOCKS", "_DICTOUT_", "CHECKBOX_ALPHA_DIM", "True", "name of next event",),
 	("PSGVAL__CLOCKS_DICTOUT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICTOUT_", "CHECKBOX_RUNAWAY", "False", "interval count",),
+	("PSGVAL__CLOCKS_DICT_TIME00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "_DICT_KEYS_TIME_", "dict of time keys and their max value int seconds",),
+	("PSGVAL__CLOCKS_DICT_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_AT_NEXT", "DAYSECS", "comment",),
+	("PSGVAL__CLOCKS_DICT_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_AT_ZEROELAPSE", "DAYSECS", "comment",),
+	("PSGVAL__CLOCKS_DICT_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_CLOCK", "DAYSECS", "",),
+	("PSGVAL__CLOCKS_DICT_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_ELAPSED", "TIME995959", "",),
+	("PSGVAL__CLOCKS_DICT_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_TOGO", "DAYSECS", "",),
+
+	("PSGVAL__CLOCKS_DICT_INT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "_DICT_KEYS_INT_", "dict of integer keys and their format",),
+	("PSGVAL__CLOCKS_DICT_INT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "CLOCKS", "_DICT_KEYS_INT_", "INTERVAL_COUNT", "04d", "intervalCount:04d",),
+
 	("PSGVAL__CLOCKS_FORMMAIN", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__CLOCKS_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "CLOCKS", "_WINDOW_", "True", "the clocks frame defined and done",),
 	("PSGVAL__CLOCKS_FUNC00_INIT", FMAXPSG_SCTN0916_CLASS_INIT_DEF, "CLOCKS", ", keyBase_, formName_", "init parms defined",),
@@ -1687,27 +1697,26 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_MPX_", "EMPTY_XY", "comment",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_SCREEN_DIMS_", "EMPTY_XY", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_SIZE_", "EMPTY_XY", "",),
-	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_TIME_KEY_LIST_", "[]", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_TIME_TO_CHECK_MOUSE_", "ZERO_CLOCK", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_TIME_TO_MOVE_", "ZERO_CLOCK", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_TIME_TO_UPDATE_", "ZERO_CLOCK", "",),
-	("PSGVAL__CLOCKS_FUNC01_ENTER", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__enter__", "", "define __enter__",),
 	("PSGVAL__CLOCKS_FUNC01_ENTER_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "__enter__", "__enter__.py", "globals for __enter__",),
-	("PSGVAL__CLOCKS_FUNC02_EXIT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__exit__", ", *args_", "define __exit__ in CLOCKS",),
+	("PSGVAL__CLOCKS_FUNC01_ENTER", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__enter__", "", "define __enter__",),
 	("PSGVAL__CLOCKS_FUNC02_EXIT_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "__exit__", "__exit__.py", "__exit__ read in",),
-	("PSGVAL__CLOCKS_FUNC03_QUICK_READ", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "quickRead", "", "read the frame and set self._RESULT_",),
+	("PSGVAL__CLOCKS_FUNC02_EXIT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "__exit__", ", *args_", "define __exit__ in CLOCKS",),
 	("PSGVAL__CLOCKS_FUNC03_QUICK_READ_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_LINE_ADD, "CLOCKS", "quickRead", "self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)", "read the frame and set self._RESULT_",),
-	("PSGVAL__CLOCKS_FUNC04_UPDATE_FROM_DICT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "updateFromDict", "dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True", "comment",),
+	("PSGVAL__CLOCKS_FUNC03_QUICK_READ", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "quickRead", "", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC04_UPDATE_FROM_DICT_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "updateFromDict", "updateFromDict.py", "comment",),
-	("PSGVAL__CLOCKS_FUNC05_READ_TO_DICT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "readToDict", "dictToReadTo_=self._DICTOUT_, setLocalDict_=True", "define readToDict",),
+	("PSGVAL__CLOCKS_FUNC04_UPDATE_FROM_DICT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "updateFromDict", "dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True", "comment",),
 	("PSGVAL__CLOCKS_FUNC05_READ_TO_DICT_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "readToDict", "readToDict.py", "load readToDict from file",),
-	("PSGVAL__CLOCKS_FUNC06_CHECK_MOUSE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "checkMouse", "", "define checkMouse",),
+	("PSGVAL__CLOCKS_FUNC05_READ_TO_DICT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "readToDict", "dictToReadTo_=self._DICTOUT_, setLocalDict_=True", "define readToDict",),
 	("PSGVAL__CLOCKS_FUNC06_CHECK_MOUSE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "load checkMouse from file",),
-	("PSGVAL__CLOCKS_FUNC07_RUNAWAY", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "runaway", "", "define runaway",),
+	("PSGVAL__CLOCKS_FUNC06_CHECK_MOUSE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "checkMouse", "", "define checkMouse",),
 	("PSGVAL__CLOCKS_FUNC07_RUNAWAY_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "load checkMouse from file",),
-	("PSGVAL__CLOCKS_FUNC08_EASY_UPDATE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "easyUpdate.py", "load the wholel thing from the file for easyUpdate",),
-	("PSGVAL__CLOCKS_FUNC08_UPDATE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "update", "", "define the required update function",),
-	("PSGVAL__CLOCKS_FUNC08_UPDATE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "update", "CLOCKS/update.py", "define the required update function",),
+	("PSGVAL__CLOCKS_FUNC07_RUNAWAY", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "runaway", "", "define runaway",),
+	("PSGVAL__CLOCKS_FUNC08_EASY_UPDATE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "easyUpdate.py", "load the whole thing from the file for easyUpdate",),
+	("PSGVAL__CLOCKS_FUNC09_UPDATE_00", FMAXPSG_SCTN0916_CLASS_FUNCTION_READ_FROM_FILE, "CLOCKS", "update", "CLOCKS/update.py", "define the required update function",),
+	("PSGVAL__CLOCKS_FUNC09_UPDATE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF, "CLOCKS", "update", "", "define the required update function",),
 	("PSGVAL__CLOCKS_LAYOUT", FMAX_NOP, "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT00", FMAXPSG_SCTN0916_CLASS_LAYOUT_DEF, "CLOCKS", "_LAYOUT_", "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT01", FMAXPSG_SCTN0916_CLASS_LAYOUT_ROW_ADD, "CLOCKS", "_LAYOUT_", "LAYOUT_ROW_00", "L03", "add a row to the layout",),
@@ -5168,7 +5177,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
-	elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE:
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -5183,7 +5192,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisElementName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_]:
 				FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 
-			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr(_thisFilename_)}""")
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr("res/functions/" + _thisFilename_)}""")
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
@@ -5238,7 +5247,7 @@ def parseTBGLST(FDTBGLST):
 			_thisElementName_ = _thisItem_[3]
 			_thisFilename_ = _thisItem_[4]
 
-			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr(f"res/functions/" + _thisFilename_)}""")
+			FMPSG_SCTN0916_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr("res/functions/" + _thisFilename_)}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2

@@ -295,33 +295,33 @@ TIME995959 = (60 * 60 * 100)  # 360000
 
 
 STR_SUBST_DICT = {
-	"%CBRCE%": f"""{CBRCE}"""
-	"%CBRKT%": f"""{CBRKT}"""
-	"%CPAREN%": f"""{CPAREN}"""
-	"%DQ%": f"""{DBLQT}"""
-	"%FOLDLN1E%": f"""{FOLD1ENDHERELN}"""
-	"%FOLDLN2E%": f"""{FOLD2ENDHERELN}"""
-	"%FOLDLN3E%": f"""{FOLD3ENDHERELN}"""
-	"%FOLDLN1S%": f"""{FOLD1STARTHERELN}"""
-	"%FOLDLN2S%": f"""{FOLD2STARTHERELN}"""
-	"%FOLDLN3S%": f"""{FOLD3STARTHERELN}"""
-	"%FTQ%": f"""f{TRIQT}"""
-	"%NEWLINE%": f"""{NEWLINE}"""
-	"%OBRCE%": f"""{OBRCE}"""
-	"%OBRKT%": f"""{OBRKT}"""
-	"%OPAREN%": f"""{OPAREN}"""
-	"%SQ%": f"""{SGLQT}"""
-	"%TAB1%": f"""{NTAB(1)}"""
-	"%TAB2%": f"""{NTAB(2)}"""
-	"%TAB3%": f"""{NTAB(3)}"""
-	"%TAB4%": f"""{NTAB(4)}"""
-	"%TAB5%": f"""{NTAB(5)}"""
-	"%TAB6%": f"""{NTAB(6)}"""
-	"%TAB7%": f"""{NTAB(7)}"""
-	"%TAB8%": f"""{NTAB(8)}"""
-	"%TAB9%": f"""{NTAB(9)}"""
-	"%TABA%": f"""{NTAB(10)}"""
-	"%TQ%": f"""{TRIQT}"""
+	"%CBRCE%": f"""{CBRCE}""",
+	"%CBRKT%": f"""{CBRKT}""",
+	"%CPAREN%": f"""{CPAREN}""",
+	"%DQ%": f"""{DBLQT}""",
+	"%FOLDLN1E%": f"""{FOLD1ENDHERELN}""",
+	"%FOLDLN2E%": f"""{FOLD2ENDHERELN}""",
+	"%FOLDLN3E%": f"""{FOLD3ENDHERELN}""",
+	"%FOLDLN1S%": f"""{FOLD1STARTHERELN}""",
+	"%FOLDLN2S%": f"""{FOLD2STARTHERELN}""",
+	"%FOLDLN3S%": f"""{FOLD3STARTHERELN}""",
+	"%FTQ%": f"""f{TRIQT}""",
+	"%NEWLINE%": f"""{NEWLINE}""",
+	"%OBRCE%": f"""{OBRCE}""",
+	"%OBRKT%": f"""{OBRKT}""",
+	"%OPAREN%": f"""{OPAREN}""",
+	"%SQ%": f"""{SGLQT}""",
+	"%TAB1%": f"""{NTAB(1)}""",
+	"%TAB2%": f"""{NTAB(2)}""",
+	"%TAB3%": f"""{NTAB(3)}""",
+	"%TAB4%": f"""{NTAB(4)}""",
+	"%TAB5%": f"""{NTAB(5)}""",
+	"%TAB6%": f"""{NTAB(6)}""",
+	"%TAB7%": f"""{NTAB(7)}""",
+	"%TAB8%": f"""{NTAB(8)}""",
+	"%TAB9%": f"""{NTAB(9)}""",
+	"%TABA%": f"""{NTAB(10)}""",
+	"%TQ%": f"""{TRIQT}""",
 }
 
 
