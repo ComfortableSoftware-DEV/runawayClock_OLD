@@ -6,7 +6,7 @@
 		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
 		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
 		self._CLOSE_BBOX_ = getCloseBBox(self._LOCATION_, self._SIZE_)
-		self.self.checkMouse()
+		self.checkMouse()
 		if _wasUpdated_ is True:
 			self.updateFromDict(setLocalDict_=False)
 		if (self._CHECKBOX_RUNAWAY_ is True):

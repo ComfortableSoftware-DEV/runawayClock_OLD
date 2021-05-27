@@ -2531,11 +2531,11 @@ def makePSGClasses():
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 
-		_strToRtn_ += f"""{NTAB(2)}self.__CDS__ = {OBRCE}{NEWLINE}{NTAB(2)}{FOLD3STARTHERE}"""
+		_strToRtn_ += f"""{NTAB(2)}self.__CDS__ = {OBRCE}{NEWLINE}{NTAB(2)}{FOLD3STARTHERELN}"""
 		for _thisItem_ in FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 
-		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}{NEWLINE}"""
+		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}{NEWLINE}{NTAB(2)}{FOLD2ENDHERELN}{NEWLINE}"""
 
 #		print(f"""FMPSG_SCTN0916_CLASS_FUNCTION_DICT {FMPSG_SCTN0916_CLASS_FUNCTION_DICT}""")
 		if _thisClassName_ in FMPSG_SCTN0916_CLASS_FUNCTION_DICT:
