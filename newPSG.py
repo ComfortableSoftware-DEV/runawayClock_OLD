@@ -1036,7 +1036,7 @@ class CLASS_CLOCKS(object):
 	def quickRead(self):
 		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
 
-	def updateFromDict(selfdictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
+	def updateFromDict(self, dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		_tempDictToUpdateFrom_ = {}
 		for _key_, val_ in dictToUpdateFrom_.items():
@@ -1054,7 +1054,7 @@ class CLASS_CLOCKS(object):
 		__dummy__ = self._MAINFRAME_.Read(timeout=1)
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-	def readToDict(selfdictToReadTo_=self._DICTOUT_, setLocalDict_=True):
+	def readToDict(self, dictToReadTo_=self._DICTOUT_, setLocalDict_=True):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		_dictToRtn_ = {}
 		for _key_ in dictToReadTo_:
@@ -1214,6 +1214,7 @@ class CLASS_CLOCKS(object):
 		self._DICTIN_[TIME_CLOCK] = TIME_CLOCK_
 		self._DICTIN_[TIME_ELAPSED] = TIME_ELAPSED_
 		self._DICTIN_[TIME_TOGO] = TIME_TOGO_
+		self.updateFromDict()
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def update(self):
