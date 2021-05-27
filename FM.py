@@ -995,7 +995,7 @@ TBGLST = [
 	("FMAXPSG_SCTN0916_CLASS_SPIN_DICT_VV_ADD", FMAXFM_SCTN0101_AX_DEF, "add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_SPIN_LIST_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a STR to the values list <NAC><CLASSNAME><SPINNAME><STR>",),
 	("FMAXPSG_SCTN0916_CLASS_SPIN_LIST_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a VAL to the values list <NAC><CLASSNAME><SPINNAME><VAL>",),
-	("FMAXPSG_SCTN0916_CLASS_TEXT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a text <NAC><TEXTNAME>",),
+	("FMAXPSG_SCTN0916_CLASS_TEXT_DEF", FMAXFM_SCTN0101_AX_DEF, "define a text <NAC><CLASSNAME><TEXTNAME><ISATIME>",),
 	("FMAXPSG_SCTN0916_CLASS_TEXT_PARM_ADD", FMAXFM_SCTN0101_AX_DEF, "add a PARM to a text element <NAC><CLASSNAME><TEXTNAME><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_TEXT_STR_ADD", FMAXFM_SCTN0101_AX_DEF, "add a str to a text element <NAC><CLASSNAME><TEXTNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN0916_CLASS_TEXT_VAL_ADD", FMAXFM_SCTN0101_AX_DEF, "add a val to a text element <NAC><CLASSNAME><TEXTNAME>",),
@@ -2309,7 +2309,11 @@ def makePSGClasses():
 {NTAB(1)}global {BKSLSH}
 {NTAB(2)}ALL_THE_FORMS{NEWLINE}
 """
-		_strToRtn_ += f"""{NTAB(1)}def __init__{OPAREN}self, {FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT[_thisClassName_].pop(0)}{CPAREN}:{NEWLINE}"""
+		_strToRtn_ += f"""{NTAB(1)}def __init__{OPAREN}self{FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].pop(0)}{CPAREN}:{NEWLINE}"""
+		for _thisItem_ in FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT[_thisClassName_]:
+			_strToRtn_ += f"""{_thisItem_}"""
+		_strToRtn_ += f"""{NEWLINE}"""
+
 		for _thisItem_ in FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 
@@ -2329,7 +2333,7 @@ def makePSGClasses():
 			# print(f"""FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT {FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT}""")
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN0916_CLASS_DICT_DICT[_thisClassName_].items():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{FOLD3ENDHERELN}{NEWLINE}{NEWLINE}"""
+{NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}{NEWLINE}"""
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -2337,7 +2341,7 @@ def makePSGClasses():
 			# print(f"""FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT {FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT}""")
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN0916_CLASS_LIST_DICT[_thisClassName_].items():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{_thisElementVals_}{NTAB(2)}{CBRKT}{NEWLINE}{NEWLINE}"""
+{NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRKT}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}"""
 
 ### right click menu goes here
 
@@ -2350,7 +2354,7 @@ def makePSGClasses():
 		if _thisClassName_ in FMPSG_SCTN0916_CLASS_BTNS_DICT:
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN0916_CLASS_BTNS_DICT[_thisClassName_].items():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_BTNS_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
+{NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}
 """
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
@@ -2358,7 +2362,7 @@ def makePSGClasses():
 		if _thisClassName_ in FMPSG_SCTN0916_CLASS_CHECKBOX_DICT:
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN0916_CLASS_CHECKBOX_DICT[_thisClassName_].items():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
+{NTAB(3)}{FOLD3STARTHERE}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(3)}{FOLD3ENDHERE}
 """
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
@@ -2366,7 +2370,7 @@ def makePSGClasses():
 		if _thisClassName_ in FMPSG_SCTN0916_CLASS_COMBO_DICT:
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN0916_CLASS_COMBO_DICT[_thisClassName_].items():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_COMBO_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
+{NTAB(2)}{FOLD3STARTHERE}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERE}
 """
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
@@ -2374,7 +2378,7 @@ def makePSGClasses():
 		if _thisClassName_ in FMPSG_SCTN0916_CLASS_RADIO_DICT:
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN0916_CLASS_RADIO_DICT[_thisClassName_].items():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_RADIO_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
+{NTAB(2)}{FOLD3STARTHERE}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
 """
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
@@ -2384,7 +2388,7 @@ def makePSGClasses():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_}_SPIN_LIST = {OBRKT}
 {FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_][_thisElementName_]}{NTAB(2)}{CBRKT}{NEWLINE}
 {NTAB(2)}self.{_thisElementName_}_SPIN_DICT = {OBRCE}  # {FMPSG_SCTN0916_CLASS_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
+{NTAB(2)}{FOLD3STARTHERE}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}
 """
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
@@ -2392,8 +2396,7 @@ def makePSGClasses():
 		if _thisClassName_ in FMPSG_SCTN0916_CLASS_TEXT_DICT:
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN0916_CLASS_TEXT_DICT[_thisClassName_].items():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_]}
-{_thisElementVals_}{NTAB(2)}{CBRCE}
-"""
+{NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}"""
 				if _thisElementName_ in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_]:
 					_strToRtn_ += f"""{FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_]}"""
 
@@ -5800,12 +5803,13 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_TEXT_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if _thisItemLen_ != 5:
-				doErrorItem("not 5 items", _thisItem_)
+			if _thisItemLen_ != 6:
+				doErrorItem("not 6 items", _thisItem_)
 				continue
 
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
+			_isThisATime_ = _thisItem_[4]
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_DICT:
 				FMPSG_SCTN0916_CLASS_TEXT_DICT[_thisClassName_] = {}
@@ -5819,6 +5823,10 @@ def parseTBGLST(FDTBGLST):
 
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT[_thisClassName_] = {}
+
+			if _isThisATime_ is True:
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._TIME_KEY_LIST_.append(_thisElementName_)"""
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_thisElementName_))"""
 
 			FMPSG_SCTN0916_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
@@ -5869,7 +5877,8 @@ def parseTBGLST(FDTBGLST):
 				if _thisElementName_ not in FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_]:
 					FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
-				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{_thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{NEWLINE}"""
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{_thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{NEWLINE}"""
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_REVERSE_{OBRKT}f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{CBRKT} = {_thisVal_}{NEWLINE}"""
 
 			else:
 				thisValStr_ = f"""{_thisVal_}"""
@@ -5899,6 +5908,7 @@ def parseTBGLST(FDTBGLST):
 					FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
 				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{_thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{NEWLINE}"""
+				FMPSG_SCTN0916_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_REVERSE_{OBRKT}f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{CBRKT} = {_thisVal_}{NEWLINE}"""
 
 			else:
 				thisValStr_ = f"""{_thisVal_}"""
