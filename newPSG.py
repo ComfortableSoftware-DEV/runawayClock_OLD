@@ -725,6 +725,29 @@ class CLASS_CLOCKS(object):
 	global \
 		ALL_THE_FORMS
 
+	def __init__(self, 		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  # 
+):
+		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  # 
+		self._ALPHA_LOW_ = SZ_ALPHA_LOW  # 
+		self._BBOX_ = EMPTY_BBOX  # 
+		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM  # 
+		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY  # 
+		self._CLOSE_BBOX_ = EMPTY_BBOX  # 
+		self._DIMMED_ = False  # 
+		self._KEY_DICT_ = {}  # 
+		self._KEY_DICT_REVERSE_ = {}  # 
+		self._LAST_LOCATION_ = EMPTY_XY  # 
+		self._LOCATION_ = EMPTY_XY  # 
+		self._MAINFRAME_ = None  # 
+		self._MOUSE_LOCATION_ = EMPTY_XY  # 
+		self._MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
+		self._SCREEN_DIMS_ = EMPTY_XY  # 
+		self._SIZE_ = EMPTY_XY  # 
+		self._TIME_KEY_LIST_ = []  # 
+		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK  # 
+		self._TIME_TO_MOVE_ = ZERO_CLOCK  # 
+		self._TIME_TO_UPDATE_ = ZERO_CLOCK  # 
+
 		self._DICTIN_ = {  # holds all of the values for the clocks frame
 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			NAME_NEXT_EVENT: "",  # name of next event
@@ -803,28 +826,28 @@ class CLASS_CLOCKS(object):
 
 		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
 			[
-				SG.Text(  # add a new TEXT element to clocks column
+				SG.Spin(  # add a new TEXT element to clocks column
 					**self._TEXT_TIME_CLOCK_  # add the main clock
 				),
 			],
 			[
-				SG.Text(  # add a new row to clocks column
+				SG.Spin(  # add a new row to clocks column
 					**self._TEXT_TIME_AT_ZEROELAPSE_  # add time to go
 				),
-				SG.Text(  # add a new text element to row01 clocks column
+				SG.Spin(  # add a new text element to row01 clocks column
 					**self._TEXT_TIME_ELAPSED_  # add elapsed time
 				),
 			],
 			[
-				SG.Text(  # add a new text element to row01 clocks column
+				SG.Spin(  # add a new text element to row01 clocks column
 					**self._TEXT_TIME_TOGO_  # add elapsed time
 				),
-				SG.Text(  # add a new row to clocks column
+				SG.Spin(  # add a new row to clocks column
 					**self._TEXT_TIME_AT_NEXT_  # add time to go
 				),
 			],
 			[
-				SG.Text(  # add a new text element to row01 clocks column
+				SG.Spin(  # add a new text element to row01 clocks column
 					**self._TEXT_NAME_NEXT_EVENT_  # add the main clock
 				),
 			],
@@ -855,7 +878,7 @@ class CLASS_CLOCKS(object):
 				),
 			],
 			[
-				SG.Text(  # add reset button for elapsed time
+				SG.Spin(  # add reset button for elapsed time
 					**self._TEXT_INTERVAL_COUNT_  # add the zero button to clocks
 				),
 			],
@@ -891,6 +914,10 @@ class CLASS_CLOCKS(object):
 		self.__CDS__ = {
 			COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
 			COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
+			DICTIN: self._DICTIN_,  # holds all of the values for the clocks frame
+			DICTOUT: self._DICTOUT_,  # holds the values for the clocks frame
+			THIS_KEY_BASE: self._THIS_KEY_BASE_,
+			THIS_FORM_NAME: self._THIS_FORM_NAME_,
 			ALPHA_CHANNEL: self._ALPHA_CHANNEL_,
 			ALPHA_HIGH: self._ALPHA_HIGH_,
 			ALPHA_LOW: self._ALPHA_LOW_,
@@ -913,6 +940,7 @@ class CLASS_CLOCKS(object):
 			TIME_TO_MOVE: self._TIME_TO_MOVE_,
 			TIME_TO_UPDATE: self._TIME_TO_UPDATE_,
 			LAYOUT: self._LAYOUT_,  # layout for APPMODE_CLOCKS
+			PERIODIC: self._PERIODIC_,  # periodic updates dict for the clocks frame
 			TEXT_INTERVAL_COUNT: self._TEXT_INTERVAL_COUNT_,  # class text for interval count
 			TEXT_NAME_NEXT_EVENT: self._TEXT_NAME_NEXT_EVENT_,  # class text for interval count
 			TEXT_TIME_AT_NEXT: self._TEXT_TIME_AT_NEXT_,  # class text for interval count
@@ -1105,6 +1133,22 @@ class CLASS_CLOCKS(object):
 			return
 
 		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+	def update(self):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+		if (NOWMS >= self._TIME_TO_UPDATE_):
+			return
+
+		self._TIME_TO_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES
+		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
+		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
+		self._CLOSE_BBOX_ = getCloseBBox(self._LOCATION_, self._SIZE_)
+		# self._DICTIN_, _wasUpdated_ = updateClocks(self._DICTIN_)
+		if _wasUpdated_ is True:
+			self.updateFromDict(setLocalDict_=False)
+		if (self._CHECKBOX_RUNAWAY_ is True):
+			self.runaway()
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1

@@ -1618,11 +1618,11 @@ TBGLST = [
 	("PSGVAL__CLOCKS_DICTOUT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICTOUT_", "CHECKBOX_RUNAWAY", "False", "interval count",),
 	("PSGVAL__CLOCKS_FORMMAIN", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__CLOCKS_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "CLOCKS", "_WINDOW_", "True", "the clocks frame defined and done",),
-	("PSGVAL__CLOCKS_FUNC00_INIT", FMAXPSG_SCTN0916_CLASS_INIT_DEF, "CLOCKS", "keyBase_, formName_", "init parms defined",),
+	("PSGVAL__CLOCKS_FUNC00_INIT", FMAXPSG_SCTN0916_CLASS_INIT_DEF, "CLOCKS", ", keyBase_, formName_", "init parms defined",),
 
-	("PSGVAL__CLOCKS_FUNC00_INIT000", FMAXPSG_SCTN0916_CLASS_INIT_VAL1_DEF, "CLOCKS", "_THIS_KEY_BASE_", "keyBase_",),
+	("PSGVAL__CLOCKS_FUNC00_INIT000", FMAXPSG_SCTN0916_CLASS_INIT_VAL1_DEF, "CLOCKS", "_THIS_KEY_BASE_", "keyBase_", "adopt keyBase_",),
 	("PSGVAL__CLOCKS_FUNC00_INIT001", FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA1_DEF, "CLOCKS", "_USE_THIS_KEY_", "__KEY_TEXT__: %FTQ%%OBRCE%__KEY_TEXT__%CBRCE%%OBRCE%self._THIS_KEY_BASE_%CBRCE%%TQ%",),
-	("PSGVAL__CLOCKS_FUNC00_INIT002", FMAXPSG_SCTN0916_CLASS_INIT_VAL1_DEF, "CLOCKS", "_THIS_FORM_NAME_", "formName_",),
+	("PSGVAL__CLOCKS_FUNC00_INIT002", FMAXPSG_SCTN0916_CLASS_INIT_VAL1_DEF, "CLOCKS", "_THIS_FORM_NAME_", "formName_", "adopt formName_",),
 
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_ALPHA_CHANNEL_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_ALPHA_HIGH_", "SZ_ALPHA_HIGH", "",),
@@ -4678,6 +4678,7 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[5]
 
 			FMPSG_SCTN0916_CLASS_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {DBLQT}_thisVal_{DBLQT},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4986,6 +4987,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT:
 				FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
 
+			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisDictName_[1:-1]}: self.{_thisDictName_},  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN0916_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
 
 			continue
@@ -5451,7 +5453,9 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			if _thisElementKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+
 			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Column{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
@@ -5554,8 +5558,8 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[5]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 
-			if _thisRowKey_ not in FMPSG_SCTN0916_CLASS_DICT_DICT[_thisClassName_][_thisLayoutName_]:
-				FMPSG_SCTN0916_CLASS_DICT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_] = {}
+			if _thisRowKey_ not in FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_]:
+				FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_] = {}
 
 			FMPSG_SCTN0916_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][TABLEVEL] = _thisTabLevel_
 
