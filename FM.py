@@ -2337,7 +2337,7 @@ def makeFM():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def substLambda(sourceStr_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
+	_strToRtn_ = sourceStr_
 	for _thisSrcStr_, _thisDestStr_ in STR_SUBST_DICT.items():
 		_strToRtn_ = _strToRtn_.replace(_thisSrcStr_, _thisDestStr_)
 
@@ -5325,7 +5325,7 @@ def parseTBGLST(FDTBGLST):
 			_thisLambda_ = _thisItem_[4]
 
 			_thisLambda_ = substLambda(_thisLambda_)
-			FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisLambda_}  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN0916_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
 			continue
