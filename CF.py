@@ -1320,7 +1320,7 @@ def IGMPP(objToIP_):
 def serializeIt(UUID_):
 	global SERIALZ
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	with withPickles(f"""SERIALZ.pkl""", SERIALZ):
+	with withPickles(f"""{CONFIG_DIR}SERIALZ.pkl""", SERIALZ):
 		if UUID_ not in SERIALZ:
 			SERIALZ[UUID_] = 0
 		keyToRtn_ = f"""_{SERIALZ[UUID_]:08X}"""

@@ -19,17 +19,14 @@ ALARMPOPUP_PROPER = "ALARMPOPUP_PROPER"  # key for the button return for the pop
 ALARMPOPUP_TEXT_TEXT = "ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
 ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
 ALPHA_LOW = "ALPHA_LOW"  # alphalow key
-ALPHA_MODE = "ALPHA_MODE"  # alpha mode key
 APPMODE = "APPMODE"  # app mode key
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
-APPMODE_DISMISS_ALARMPOPUP = "APPMODE_DISMISS_ALARMPOPUP"  # main mode (xpand from clocks to this)
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
 APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # mouseOver mode (xpand from clocks to this)
 APPMODE_NEW_ALARMPOPUP = "APPMODE_NEW_ALARMPOPUP"  # main mode (xpand from clocks to this)
 APPMODE_NONE = "APPMODE_NONE"  # NONE mode
 APPMODE_THECLOCK = "APPMODE_THECLOCK"  # theClock mode (xpand from clocks to this)
-BBOX = "BBOX"  # BOUNDING BOX
 BTN_DISMISS = "BTN_DISMISS"  # key for all of the button xpand
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
@@ -47,7 +44,6 @@ CHECKBOX_PREDISMISSABLE = "CHECKBOX_PREDISMISSABLE"  # key for avoiding the mous
 CHECKBOX_RUNAWAY = "CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
 CHECKBOX_SNOOZABLE = "CHECKBOX_SNOOZABLE"  # key for avoiding the mouse bool
 CHECKBOX_SNOOZED = "CHECKBOX_SNOOZED"  # key for avoiding the mouse bool
-CLOSE_BBOX = "CLOSE_BBOX"  # CLOSE BOUNDING BOX
 COLOR_ALERT_BACKGROUND = "#662244"  # alert background color
 COLOR_ALERT_TEXT = "#CC4466"  # color of text on alert popup
 COLOR_BACKGROUND = "#331122"  # the background of the main frames
@@ -70,24 +66,23 @@ COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
 DISMISSED = "DISMISSED"  # alarm dismissed bool
 EVENT_ENTRIES = "EVENT_ENTRIES"  # 
+EVENT_NAME = "EVENT_NAME"  # name of the event
 EVENTMODE = "EVENTMODE"  # what mode is this event
 EVENTMODE_ALARM = "EVENTMODE_ALARM"  # 
 EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  # 
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
 FIRSTRUN = "FIRSTRUN"  # True if just started, false after init1()
-FORM_CURRENT_LCN = "FORM_CURRENT_LCN"  # screen position of the mainframe
-FORM_CURRENT_SIZE = "FORM_CURRENT_SIZE"  # make life easier by remembering mainframe size, and why currently resizable is always False
+FORM_CLOCKS = "FORM_CLOCKS"  # holds all of form entries
+FORM_EDITENTRY = "FORM_EDITENTRY"  # holds all of form entries
+FORM_EDITOR = "FORM_EDITOR"  # holds all of form entries
+FORM_MAIN = "FORM_MAIN"  # holds all of form entries
 FORM_NAME = "FORM_NAME"  # holds all of form entries
-FORMCLOCKS = "FORMCLOCKS"  # holds all of form entries
-FORMEDITENTRY = "FORMEDITENTRY"  # holds all of form entries
-FORMEDITOR = "FORMEDITOR"  # holds all of form entries
-FORMMAIN = "FORMMAIN"  # holds all of form entries
-FORMPOPUP01 = "FORMPOPUP01"  # holds all of form entries
-FORMPOPUP02 = "FORMPOPUP02"  # holds all of form entries
-FORMPOPUP03 = "FORMPOPUP03"  # holds all of form entries
-FORMPOPUP04 = "FORMPOPUP04"  # holds all of form entries
-FORMPOPUP05 = "FORMPOPUP05"  # holds all of form entries
-FORMTHECLOCK = "FORMTHECLOCK"  # holds all of form entries
+FORM_POPUP01 = "FORM_POPUP01"  # holds all of form entries
+FORM_POPUP02 = "FORM_POPUP02"  # holds all of form entries
+FORM_POPUP03 = "FORM_POPUP03"  # holds all of form entries
+FORM_POPUP04 = "FORM_POPUP04"  # holds all of form entries
+FORM_POPUP05 = "FORM_POPUP05"  # holds all of form entries
+FORM_THECLOCK = "FORM_THECLOCK"  # holds all of form entries
 INDEX_EAST = 2  # EAST
 INDEX_NORTH = 1  # NORTH
 INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  # 
@@ -96,9 +91,6 @@ INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
 INTERVAL_COUNT = "INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
-IS_ALERTING_NOW = "IS_ALERTING_NOW"  # is the event currently alerting
-KEY_BASE = "KEY_BASE"  # is the event currently alerting
-MOUSE_LCN = "MOUSE_LCN"  # track mouse location to ease load a bit
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
 MOUSE_STATUS_CLOSE_NE = "MOUSE_STATUS_CLOSE_NE"  # mouse is northeast of checked element
@@ -117,12 +109,8 @@ MOUSE_STATUS_S = "MOUSE_STATUS_S"  # mouse is south of checked element
 MOUSE_STATUS_SE = "MOUSE_STATUS_SE"  # mouse is southeast of checked element
 MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
-NAME = "NAME"  # name of the event
 NAME_NEXT_EVENT = "NAME_NEXT_EVENT"  # name of the next event up
-POPUPTYPE = "POPUPTYPE"  # which type of popup are we defining
-POPUPTYPE_AUTO_CLOSE = "POPUPTYPE_AUTO_CLOSE"  # for intervals auto close
 PREDISMISSABLE = "PREDISMISSABLE"  # 
-SCREEN_DIMS = "SCREEN_DIMS"  # dimension of the screen
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # snoozed bool
 SZ_ALERT_TEXT = 20  # high alpha
@@ -153,7 +141,7 @@ SZ_TIMEOUT_MS = 100  # timeout for PSG
 SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_LAST_RUN = "TIME_AT_LAST_RUN"  # timeS of last alarm 
-TIME_AT_NEXT = "TIME_AT_NEXT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
+TIME_AT_NEXT_ALERT = "TIME_AT_NEXT_ALERT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
 TIME_AT_ZEROELAPSE = "TIME_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
 TIME_ELAPSED = "TIME_ELAPSED"  # key for all clocks elapsed
@@ -161,7 +149,7 @@ TIME_INTERVAL = "TIME_INTERVAL"  # interval timer starting time, reset each time
 TIME_INTERVAL__BEGIN = "TIME_INTERVAL__BEGIN"  # key for time interval starts alerting
 TIME_INTERVAL__END = "TIME_INTERVAL__END"  # key for time an interval goes to leep and stops alerting
 TIME_INTERVAL_START = "TIME_INTERVAL_START"  # interval timer starting time, reset each time the interval goes off
-TIME_LEN_RING = "TIME_LEN_RING"  # length of ringing
+TIME_LEN_OF_ALERT = "TIME_LEN_OF_ALERT"  # length of alerting
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 TIMEH_ADJUST_HRS = 0  # comment
 TIMEM_ADJUST_MINS = 0  # comment
@@ -170,7 +158,6 @@ TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
 TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
 TITLE_THECLOCK = "THECLOCK"  # string with window title for APPMODE_CLOCKS
-TRANSPARENT = "TRANSPARENT"  # is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)
 ZERO_CLOCK = 0  # all the zeros
 ZERO_CLOCKSTR = "00:00:00"  # all the zeros
 
@@ -185,11 +172,6 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-CURRENT_ALARM_NAME = None  # last returned mouse status to deal with hover events
-CURRENT_EVENTMODE = EVENTMODE_NONE  # last returned mouse status to deal with hover events
-CURRENT_FORM = None  # last returned mouse status to deal with hover events
-CURRENT_FORM_NAME = None  # last returned mouse status to deal with hover events
-CURRENT_INTERVAL_COUNT = 0  # comment
 EMPTY_BBOX = (0, 0, 0, 0)  # empty XY dict
 EMPTY_XY = (0, 0)  # empty XY dict
 FONT_DEFAULT = "Source Code Pro"  # default font my favorite readable font
@@ -199,25 +181,14 @@ FONTSZ_CLOCKS_INTERVAL_COUNT = (FONT_DEFAULT, SZ_INTERVAL_COUNT)  # the font for
 FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
-FORMMAIN = None  # mainframe so everything passes together always
-IS_ALERTING_NOWV = False  # comment
-LAST_MOUSE_LCN = EMPTY_XY  # last returned mouse status to deal with hover events
-LAST_MOUSE_STATUS = None  # last returned mouse status to deal with hover events
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
-NAME_NEXT_EVENT_STR = ""  # name of the next event
 NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
-NUMBER_ACTIVE_ALARMS = 0  # number of alarms with not dismissed state
-PREV_ALARM_TYPE = EVENTMODE_NONE  # previous alarm type
-PREVIOUS_APPMODE = APPMODE_NONE  # comment
-TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
-TIMEMS_NEXT_MOVED = 0  # comment
-TIMEMS_NEXT_UPDATED = 0  # comment
-TIMES_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
-TIMES_NEXT_EVENT = 0  # comment
-TIMES_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
+TIME_S_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
+TIME_S_AT_NEXT_EVENT = 0  # comment
+TIME_S_AT_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -392,6 +363,7 @@ BTN_DISMISS20 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_DISMISS,  # button xpand font
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -402,7 +374,8 @@ BTN_DOWN20 = {  #
 	BORDER_WIDTH: 0,  # button xpand key
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
-	FONT: FONTSZ_BTNS,  # button xpand font
+	FOCUS: True,  # focus on click
+	KEY: BTN_DOWN,  # button xpand font
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -414,6 +387,7 @@ BTN_DOWN32 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_DOWN,  # focus on click
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -424,6 +398,7 @@ BTN_EDIT20 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_EDIT,  # button xpand font
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -446,6 +421,7 @@ BTN_QUIT20 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_QUIT_ALL,  # button xpand font
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -457,6 +433,7 @@ BTN_QUIT32 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_QUIT_ALL,  # button xpand font
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -467,6 +444,7 @@ BTN_UP20 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_UP,  # button xpand font
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -477,6 +455,7 @@ BTN_UP32 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_UP,  # button up key
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -488,6 +467,7 @@ BTN_XPAND20 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_XPAND,  # focus on click
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -499,6 +479,7 @@ BTN_XPAND32 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_XPAND,  # button xpand font
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -522,6 +503,7 @@ BTN_ZERO32 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: BTN_ZERO,  # button zero key
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -640,7 +622,7 @@ TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCK_TIME
 }
 
 
-TEXT_TIME_AT_NEXT = {  # define the text element for CLOCKS_CLOCK_TIME
+TEXT_TIME_AT_NEXT_ALERT = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
@@ -768,7 +750,7 @@ class CLASS_CLOCKS(object):
 			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
 			CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			INTERVAL_COUNT: 0,  # interval count
-			TIME_AT_NEXT: ZERO_CLOCK,  # time at next event
+			TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time at next event
 			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
 			TIME_CLOCK: ZERO_CLOCK,  # time clock or wall clock
 			TIME_ELAPSED: ZERO_CLOCK,  # time elapsed
@@ -782,7 +764,7 @@ class CLASS_CLOCKS(object):
 			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
 			CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			INTERVAL_COUNT: 0,  # interval count
-			TIME_AT_NEXT: ZERO_CLOCK,  # time at next event
+			TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time at next event
 			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
 			TIME_CLOCK: ZERO_CLOCK,  # time clock or wall clock
 			TIME_ELAPSED: ZERO_CLOCK,  # time elapsed
@@ -805,7 +787,7 @@ class CLASS_CLOCKS(object):
 
 		self._DICT_KEYS_TIME_ = {  # dict of time keys and their max value int seconds
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			TIME_AT_NEXT: DAYSECS,  # comment
+			TIME_AT_NEXT_ALERT: DAYSECS,  # comment
 			TIME_AT_ZEROELAPSE: DAYSECS,  # comment
 			TIME_CLOCK: DAYSECS,  # 
 			TIME_ELAPSED: TIME995959,  # 
@@ -815,7 +797,7 @@ class CLASS_CLOCKS(object):
 
 		self._PERIODIC_ = {  # periodic updates dict for the clocks frame
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			TIME_AT_NEXT: ZERO_CLOCK,  # time at next event
+			TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time at next event
 			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
 			TIME_CLOCK: ZERO_CLOCK,  # time clock or wall clock
 			TIME_ELAPSED: ZERO_CLOCK,  # time elapsed
@@ -841,16 +823,16 @@ class CLASS_CLOCKS(object):
 		self._KEY_DICT_[NAME_NEXT_EVENT] = f"""{self._USE_THIS_KEY_(NAME_NEXT_EVENT)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(NAME_NEXT_EVENT)}"""] = NAME_NEXT_EVENT
 
-		self._TEXT_TIME_AT_NEXT_ = {  # class text for interval count
+		self._TEXT_TIME_AT_NEXT_ALERT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			**TEXT_TIME_AT_NEXT,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}""",  # interval count template
+			**TEXT_TIME_AT_NEXT_ALERT,  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_NEXT_ALERT)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._TIME_KEY_LIST_.append(_TEXT_TIME_AT_NEXT_)
-		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_NEXT_))
-		self._KEY_DICT_[TIME_AT_NEXT] = f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_AT_NEXT)}"""] = TIME_AT_NEXT
+		self._TIME_KEY_LIST_.append(_TEXT_TIME_AT_NEXT_ALERT_)
+		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_NEXT_ALERT_))
+		self._KEY_DICT_[TIME_AT_NEXT_ALERT] = f"""{self._USE_THIS_KEY_(TIME_AT_NEXT_ALERT)}"""
+		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_AT_NEXT_ALERT)}"""] = TIME_AT_NEXT_ALERT
 
 		self._TEXT_TIME_AT_ZEROELAPSE_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -916,7 +898,7 @@ class CLASS_CLOCKS(object):
 					**self._TEXT_TIME_TOGO_  # add elapsed time
 				),
 				SG.Spin(  # add a new row to clocks column
-					**self._TEXT_TIME_AT_NEXT_  # add time to go
+					**self._TEXT_TIME_AT_NEXT_ALERT_  # add time to go
 				),
 			],
 			[
@@ -1034,7 +1016,7 @@ class CLASS_CLOCKS(object):
 			PERIODIC: self._PERIODIC_,  # periodic updates dict for the clocks frame
 			TEXT_INTERVAL_COUNT: self._TEXT_INTERVAL_COUNT_,  # class text for interval count
 			TEXT_NAME_NEXT_EVENT: self._TEXT_NAME_NEXT_EVENT_,  # class text for interval count
-			TEXT_TIME_AT_NEXT: self._TEXT_TIME_AT_NEXT_,  # class text for interval count
+			TEXT_TIME_AT_NEXT_ALERT: self._TEXT_TIME_AT_NEXT_ALERT_,  # class text for interval count
 			TEXT_TIME_AT_ZEROELAPSE: self._TEXT_TIME_AT_ZEROELAPSE_,  # class text for interval count
 			TEXT_TIME_CLOCK: self._TEXT_TIME_CLOCK_,  # class text for interval count
 			TEXT_TIME_ELAPSED: self._TEXT_TIME_ELAPSED_,  # class text for interval count
@@ -1294,69 +1276,21 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			AUTO_CLOSE_DURATION: 10,  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
+			EVENT_NAME: "MOVE",  # this entry's name
 			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			FIRSTRUN: True,  # are we initializing or not
 			FORM_NAME: None,  # time of this event
 			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			KEY_BASE: None,  # count of number of times this has alerted since last reset
-			NAME: "MOVE",  # this entry's name
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: "03:30:00",  # time of this event if it an alarm
+			TIME_ALARM: 0,  # time of this event if it an alarm
 			TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
-			TIME_AT_NEXT: ZERO_CLOCK,  # time next time this alarm goes off
-			TIME_INTERVAL: "00:30:00",  # interval of this event
-			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
-			TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
-			TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
-			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
-		},
-		1: {
-			ALARMPOPUP_PROPER: None,  # time of this event
-			ALARMPOPUP_TEXT_TEXT: "start winding down",  # time of this event
-			AUTO_CLOSE_DURATION: 10,  # time of this event
-			DISMISSED: False,  # is this event dismissed
-			ENABLED: True,  # is this event enabled
-			EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
-			FIRSTRUN: True,  # are we initializing or not
-			FORM_NAME: None,  # time of this event
-			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
-			IS_ALERTING_NOW: False,  # is this event dismissed
-			KEY_BASE: None,  # count of number of times this has alerted since last reset
-			NAME: "wind down",  # this entry's name
-			PREDISMISSABLE: True,  # is this event dismissable in advance
-			SNOOZABLE: False,  # can this event be snoozed
-			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: "03:30:00",  # time of this event
-			TIME_AT_LAST_RUN: 0,  # is this event dismissed
-			TIME_AT_NEXT: ZERO_CLOCK,  # time of this event
-			TIME_INTERVAL: "00:00:00",  # time of this event
-			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of this event
-			TIME_INTERVAL__END: ZERO_CLOCK,  # time of this event
-			TIME_INTERVAL_START: ZERO_CLOCK,  # time of this event
-			TIME_LEN_RING: ZERO_CLOCK,  # time of this event
-		},
-		2: {
-			ALARMPOPUP_PROPER: None,  # time of this event
-			ALARMPOPUP_TEXT_TEXT: "next interval",  # alarm text for this event
-			AUTO_CLOSE_DURATION: 10,  # time of this event
-			DISMISSED: False,  # is this event dismissed
-			ENABLED: True,  # is this event enabled
-			EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
-			FIRSTRUN: True,  # are we initializing or not
-			FORM_NAME: None,  # time of this event
-			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
-			IS_ALERTING_NOW: False,  # is this event alerting right now
-			KEY_BASE: None,  # count of number of times this has alerted since last reset
-			NAME: "test interval",  # this entry's name
-			PREDISMISSABLE: True,  # is this event dismissable in advance
-			SNOOZABLE: False,  # can this event be snoozed
-			SNOOZED: False,  # is this event snoozed
-			TIME_ALARM: "00:00:00",  # time of this event if it an alarm
-			TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
-			TIME_AT_NEXT: ZERO_CLOCK,  # time next time this alarm goes off
-			TIME_INTERVAL: "00:00:30",  # interval of this event
+			TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
+			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time next time this alarm goes off
+			TIME_ELAPSED: ZERO_CLOCK,  # time next time this alarm goes off
+			TIME_INTERVAL: HALFHOURSECS,  # interval of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
