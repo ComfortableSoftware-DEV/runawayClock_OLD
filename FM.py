@@ -1678,14 +1678,14 @@ TBGLST = [
 	("PSGVAL__CLOCKS_DICTOUT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "_DICTOUT_", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICTOUT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "CLOCKS", "_DICTOUT_", "CHECKBOX_ALPHA_DIM", "True", "name of next event",),
 	("PSGVAL__CLOCKS_DICTOUT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICTOUT_", "CHECKBOX_RUNAWAY", "False", "interval count",),
-	("PSGVAL__CLOCKS_DICT_INT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "_DICT_KEYS_INT_", "dict of integer keys and their format",),
-	("PSGVAL__CLOCKS_DICT_INT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "CLOCKS", "_DICT_KEYS_INT_", "INTERVAL_COUNT", "04d", "intervalCount:04d",),
-	("PSGVAL__CLOCKS_DICT_TIME00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "_DICT_KEYS_TIME_", "dict of time keys and their max value int seconds",),
-	("PSGVAL__CLOCKS_DICT_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_AT_NEXT", "DAYSECS", "comment",),
-	("PSGVAL__CLOCKS_DICT_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_AT_ZEROELAPSE", "DAYSECS", "comment",),
-	("PSGVAL__CLOCKS_DICT_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_CLOCK", "DAYSECS", "",),
-	("PSGVAL__CLOCKS_DICT_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_ELAPSED", "TIME995959", "",),
-	("PSGVAL__CLOCKS_DICT_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_TOGO", "DAYSECS", "",),
+	("PSGVAL__CLOCKS_DICT_KEYS_INT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "_DICT_KEYS_INT_", "dict of integer keys and their format",),
+	("PSGVAL__CLOCKS_DICT_KEYS_INT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "CLOCKS", "_DICT_KEYS_INT_", "INTERVAL_COUNT", "04d", "intervalCount:04d",),
+	("PSGVAL__CLOCKS_DICT_KEYS_TIME00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "_DICT_KEYS_TIME_", "dict of time keys and their max value int seconds",),
+	("PSGVAL__CLOCKS_DICT_KEYS_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_AT_NEXT", "DAYSECS", "comment",),
+	("PSGVAL__CLOCKS_DICT_KEYS_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_AT_ZEROELAPSE", "DAYSECS", "comment",),
+	("PSGVAL__CLOCKS_DICT_KEYS_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_CLOCK", "DAYSECS", "",),
+	("PSGVAL__CLOCKS_DICT_KEYS_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_ELAPSED", "TIME995959", "",),
+	("PSGVAL__CLOCKS_DICT_KEYS_TIME01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "TIME_TOGO", "DAYSECS", "",),
 	("PSGVAL__CLOCKS_FORMMAIN", FMAX_NOP, "the frame for clocks",),
 	("PSGVAL__CLOCKS_FORMMAIN00", FMAXPSG_SCTN0916_CLASS_FORMMAIN_DEF, "CLOCKS", "_WINDOW_", "True", "the clocks frame defined and done",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT", FMAXPSG_SCTN0916_CLASS_INIT_DEF, "CLOCKS", ", keyBase_, formName_", "init parms defined",),
@@ -1723,6 +1723,8 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN0916_CLASS_INIT_VAL2_DEF, "CLOCKS", "_TIME_TO_UPDATE_", "ZERO_CLOCK", "",),
 	("PSGVAL__CLOCKS_FUNC_01_ENTER", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__enter__", "__enter__.py", "define __enter__",),
 	("PSGVAL__CLOCKS_FUNC_02_EXIT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__exit__", "__exit__.py", "define __exit__ in CLOCKS",),
+	("PSGVAL__CLOCKS_FUNC_03_ENINT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enint", "enint.py", "read the frame and set self._RESULT_",),
+	("PSGVAL__CLOCKS_FUNC_03_ENSTRING", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enstring", "enstring.py", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_QUICK_READ", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "quickRead", "quickRead.py", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_READ_TO_DICT", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "readToDict", "readToDict.py", "define readToDict",),
 	("PSGVAL__CLOCKS_FUNC_03_CHECK_MOUSE", FMAXPSG_SCTN0916_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "define checkMouse",),
@@ -2403,7 +2405,6 @@ def makePSGClasses():
 		for _thisItem_ in FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 
-
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
@@ -2413,6 +2414,20 @@ def makePSGClasses():
 					_strToRtn_ += f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}{NEWLINE}"""
 				_strToRtn_ += f"""{NEWLINE}"""
 		_strToRtn_ += f"""{NEWLINE}"""
+
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		_strToRtn_ += f"""{NTAB(2)}_DICTIN_ = {OBRCE}{NEWLINE}{NTAB(2)}{FOLD3STARTHERELN}"""
+		for _thisItem_ in FMPSG_SCTN0916_CLASS_INIT_DICTIN_DICT[_thisClassName_]:
+			_strToRtn_ += f"""{_thisItem_}"""
+		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{FOLD3ENDHERELN}{NEWLINE}"""
+
+	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		_strToRtn_ += f"""{NTAB(2)}_DICTINSTR_ = {OBRCE}{NEWLINE}{NTAB(2)}{FOLD3STARTHERELN}"""
+		for _thisItem_ in FMPSG_SCTN0916_CLASS_INIT_DICTINSTR_DICT[_thisClassName_]:
+			_strToRtn_ += f"""{_thisItem_}"""
+		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{FOLD3ENDHERELN}{NEWLINE}"""
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
