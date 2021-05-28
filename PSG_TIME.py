@@ -189,6 +189,12 @@ NOWS = 0  # comment
 TIME_S_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
 TIME_S_AT_NEXT_EVENT = 0  # comment
 TIME_S_AT_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
+TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
+TIMEMS_NEXT_MOVED = 0  # comment
+TIMEMS_NEXT_UPDATED = 0  # comment
+TIMES_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
+TIMES_NEXT_EVENT = 0  # comment
+TIMES_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1513,50 +1519,24 @@ def doMidnightWork():
 	global \
 			CLOCKS_DICT, \
 			APPDS, \
-			TIMEMS_NEXT_MOUSE_CHECK, \
+			TIME_MS_NEXT_MOUSE_CHECK, \
 			TIMEMS_NEXT_MOVED, \
 			TIMEMS_NEXT_UPDATED, \
 			TIME_S_AT_NEXT_EVENT, \
 			TIME_S_AT_NEXT_PERIODIC_JOB
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-#	if TIMEMS_NEXT_MOUSE_CHECK > CF.DAYMS:
-#		TIMEMS_NEXT_MOUSE_CHECK -= CF.DAYMS
-#	TIMEMS_NEXT_MOUSE_CHECK = TIMEMS_NEXT_MOUSE_CHECK % CF.DAYSECS
-	TIMEMS_NEXT_MOUSE_CHECK = 0
+	while NOWMS < 1:
+		localTimes()
 
-#	if TIMEMS_NEXT_MOVED > CF.DAYMS:
-#		TIMEMS_NEXT_MOVED -= CF.DAYMS
-	# TIMEMS_NEXT_MOVED = TIMEMS_NEXT_MOVED % CF.DAYSECS
+	TIME_MS_NEXT_MOUSE_CHECK = 0
 	TIMEMS_NEXT_MOVED = 0
-
-#	if TIMEMS_NEXT_UPDATED > CF.DAYMS:
-#		TIMEMS_NEXT_UPDATED -= CF.DAYMS
-	# TIMEMS_NEXT_UPDATED = TIMEMS_NEXT_UPDATED % CF.DAYSECS
 	TIMEMS_NEXT_UPDATED = 0
-
-#	if TIME_S_AT_NEXT_EVENT > CF.DAYSECS:
-#		TIME_S_AT_NEXT_EVENT -= CF.DAYSECS
-	# TIME_S_AT_NEXT_EVENT = TIME_S_AT_NEXT_EVENT % CF.DAYSECS
 	TIME_S_AT_NEXT_EVENT = 0
-
-#	if TIME_S_AT_NEXT_PERIODIC_JOB > CF.DAYSECS:
-#		TIME_S_AT_NEXT_PERIODIC_JOB -= CF.DAYSECS
-	# TIME_S_AT_NEXT_PERIODIC_JOB = TIME_S_AT_NEXT_PERIODIC_JOB % CF.DAYSECS
 	TIME_S_AT_NEXT_PERIODIC_JOB = 0
 
-#	print(f"""{CF.getDebugInfo()}
-#{CF.frameItMS("TIMEMS_NEXT_MOUSE_CHECK", TIMEMS_NEXT_MOUSE_CHECK)} = TIMEMS_NEXT_MOUSE_CHECK % CF.DAYMS
-#{CF.frameItMS("TIMEMS_NEXT_MOVED", TIMEMS_NEXT_MOVED)} = TIMEMS_NEXT_MOVED % CF.DAYMS
-#{CF.frameItMS("TIMEMS_NEXT_UPDATED", TIMEMS_NEXT_UPDATED)} = TIMEMS_NEXT_UPDATED % CF.DAYMS
-#{CF.frameItHMS("TIME_S_AT_NEXT_EVENT", TIME_S_AT_NEXT_EVENT)} = TIME_S_AT_NEXT_EVENT % CF.DAYMS
-#{CF.frameItHMS("TIME_S_AT_NEXT_PERIODIC_JOB", TIME_S_AT_NEXT_PERIODIC_JOB)} = TIME_S_AT_NEXT_PERIODIC_JOB % CF.DAYMS
-#""")
 	for _index_, _event_ in APPDS[EVENT_ENTRIES].items():
-#		print(f"""{CF.getDebugInfo()}{CF.NEWLINE} {CF.frameIt("_event_", _event_)}
-#		{CF.frameIt("APPDS[EVENT_ENTRIES]", APPDS[EVENT_ENTRIES])}""")
 
 		if (_event_ is not None):  # and (_event_[EVENTMODE] in [EVENTMODE_ALARM]):
-#			APPDS[EVENT_ENTRIES][_index_][TIME_AT_LAST_RUN] = None
 			APPDS[EVENT_ENTRIES][_index_][DISMISSED] = False
 			APPDS[EVENT_ENTRIES][_index_][IS_ALERTING_NOW] = False
 
@@ -1574,6 +1554,25 @@ def doMidnightWork():
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# outerLoop
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def outerLoop():
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	while True:
+		window_, _result_, _values_ = SG.read_all_windows(timeout=SZ_TIMEOUT_MS)
+
+		if _result_ != "__TIMEOUT__":
+			# do all result processing here
+			pass
+
+		localTimes()
+
+		if (NOWMS == 0):
+			doMidnightWork()
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # doit
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doit():
@@ -1584,7 +1583,15 @@ def doit():
 		while True:
 			_result_ = outerLoop()
 
-			if _result_ == BTN_QUIT_ALL
+			if _result_ == BTN_QUIT_ALL:
+				break
+
+			elif _result_ == APPMODE_NEW_ALARMPOPUP:
+				pass
+
+			else:
+				print(f"""I don't know how to handle {CF.frameIt("_result_", _result_)}""")
+				break
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
