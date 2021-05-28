@@ -736,29 +736,31 @@ class CLASS_CLOCKS(object):
 		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  # 
 		self._ALPHA_LOW_ = SZ_ALPHA_LOW  # 
 		self._BBOX_ = EMPTY_BBOX  # 
+		self._CHANGED_EVENTS_ = False  # comment
+		self._CHANGED_VALUES_ = False  # comment
 		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM  # 
 		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY  # 
 		self._CLOSE_BBOX_ = EMPTY_BBOX  # 
 		self._CURRENT_EVENT_ = None  # 
+		self._CURRENT_LOCATION_ = EMPTY_XY  # 
+		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  # 
+		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
 		self._CURRENT_VALUES = {}  # 
 		self._DIMMED_ = False  # 
-		self._EVENT_CHANGED_ = False  # comment
 		self._KEY_DICT_ = {}  # 
 		self._KEY_DICT_REVERSE_ = {}  # 
 		self._LAST_EVENT_ = None  # 
 		self._LAST_LOCATION_ = EMPTY_XY  # 
+		self._LAST_MOUSE_LOCATION_ = EMPTY_XY  # 
+		self._LAST_MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
 		self._LAST_VALUES_ = {}  # 
-		self._LOCATION_ = EMPTY_XY  # 
 		self._MAINFRAME_ = None  # 
-		self._MOUSE_LOCATION_ = EMPTY_XY  # 
-		self._MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
 		self._MPX_ = EMPTY_XY  # comment
 		self._SCREEN_DIMS_ = EMPTY_XY  # 
 		self._SIZE_ = EMPTY_XY  # 
 		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK  # 
 		self._TIME_TO_MOVE_ = ZERO_CLOCK  # 
 		self._TIME_TO_UPDATE_ = ZERO_CLOCK  # 
-		self._VALUES_CHANGED_ = False  # comment
 
 		self._DICTIN_ = {  # holds all of the values for the clocks frame
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1005,29 +1007,31 @@ class CLASS_CLOCKS(object):
 			ALPHA_HIGH: self._ALPHA_HIGH_,
 			ALPHA_LOW: self._ALPHA_LOW_,
 			BBOX: self._BBOX_,
+			CHANGED_EVENTS: self._CHANGED_EVENTS_,
+			CHANGED_VALUES: self._CHANGED_VALUES_,
 			CHECKBOX_ALPHA_DIM: self._CHECKBOX_ALPHA_DIM_,
 			CHECKBOX_RUNAWAY: self._CHECKBOX_RUNAWAY_,
 			CLOSE_BBOX: self._CLOSE_BBOX_,
 			CURRENT_EVENT: self._CURRENT_EVENT_,
+			CURRENT_LOCATION: self._CURRENT_LOCATION_,
+			CURRENT_MOUSE_LOCATION: self._CURRENT_MOUSE_LOCATION_,
+			CURRENT_MOUSE_STATUS: self._CURRENT_MOUSE_STATUS_,
 			CURRENT_VALUE: self._CURRENT_VALUES,
 			DIMMED: self._DIMMED_,
-			EVENT_CHANGED: self._EVENT_CHANGED_,
 			KEY_DICT: self._KEY_DICT_,
 			KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
 			LAST_EVENT: self._LAST_EVENT_,
 			LAST_LOCATION: self._LAST_LOCATION_,
+			LAST_MOUSE_LOCATION: self._LAST_MOUSE_LOCATION_,
+			LAST_MOUSE_STATUS: self._LAST_MOUSE_STATUS_,
 			LAST_VALUES: self._LAST_VALUES_,
-			LOCATION: self._LOCATION_,
 			MAINFRAME: self._MAINFRAME_,
-			MOUSE_LOCATION: self._MOUSE_LOCATION_,
-			MOUSE_STATUS: self._MOUSE_STATUS_,
 			MPX: self._MPX_,
 			SCREEN_DIMS: self._SCREEN_DIMS_,
 			SIZE: self._SIZE_,
 			TIME_TO_CHECK_MOUSE: self._TIME_TO_CHECK_MOUSE_,
 			TIME_TO_MOVE: self._TIME_TO_MOVE_,
 			TIME_TO_UPDATE: self._TIME_TO_UPDATE_,
-			VALUES_CHANGED: self._VALUES_CHANGED_,
 			LAYOUT: self._LAYOUT_,  # layout for APPMODE_CLOCKS
 			PERIODIC: self._PERIODIC_,  # periodic updates dict for the clocks frame
 			TEXT_INTERVAL_COUNT: self._TEXT_INTERVAL_COUNT_,  # class text for interval count
