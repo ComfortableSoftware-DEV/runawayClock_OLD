@@ -172,6 +172,7 @@ TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT w
 TITLE_THECLOCK = "THECLOCK"  # string with window title for APPMODE_CLOCKS
 TRANSPARENT = "TRANSPARENT"  # is the app transparent (only the buttons and text appears, all backgrounds are transparent, can click through transparent)
 ZERO_CLOCK = 0  # all the zeros
+ZERO_CLOCKSTR = "00:00:00"  # all the zeros
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -738,10 +739,15 @@ class CLASS_CLOCKS(object):
 		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM  # 
 		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY  # 
 		self._CLOSE_BBOX_ = EMPTY_BBOX  # 
+		self._CURRENT_EVENT_ = None  # 
+		self._CURRENT_VALUES = {}  # 
 		self._DIMMED_ = False  # 
+		self._EVENT_CHANGED_ = False  # comment
 		self._KEY_DICT_ = {}  # 
 		self._KEY_DICT_REVERSE_ = {}  # 
+		self._LAST_EVENT_ = None  # 
 		self._LAST_LOCATION_ = EMPTY_XY  # 
+		self._LAST_VALUES_ = {}  # 
 		self._LOCATION_ = EMPTY_XY  # 
 		self._MAINFRAME_ = None  # 
 		self._MOUSE_LOCATION_ = EMPTY_XY  # 
@@ -752,8 +758,23 @@ class CLASS_CLOCKS(object):
 		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK  # 
 		self._TIME_TO_MOVE_ = ZERO_CLOCK  # 
 		self._TIME_TO_UPDATE_ = ZERO_CLOCK  # 
+		self._VALUES_CHANGED_ = False  # comment
 
 		self._DICTIN_ = {  # holds all of the values for the clocks frame
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			NAME_NEXT_EVENT: "",  # name of next event
+			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
+			CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
+			INTERVAL_COUNT: 0,  # interval count
+			TIME_AT_NEXT: ZERO_CLOCK,  # time at next event
+			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
+			TIME_CLOCK: ZERO_CLOCK,  # time clock or wall clock
+			TIME_ELAPSED: ZERO_CLOCK,  # time elapsed
+			TIME_TOGO: ZERO_CLOCK,  # countdown to next event
+		}
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+		self._DICTINSTR_ = {  # holds all of the values for the clocks frame as strings
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			NAME_NEXT_EVENT: "",  # name of next event
 			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
@@ -973,6 +994,7 @@ class CLASS_CLOCKS(object):
 			COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
 			COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
 			DICTIN: self._DICTIN_,  # holds all of the values for the clocks frame
+			DICTINSTR: self._DICTINSTR_,  # holds all of the values for the clocks frame as strings
 			DICTOUT: self._DICTOUT_,  # holds the values for the clocks frame
 			DICT_KEYS_INT: self._DICT_KEYS_INT_,  # dict of integer keys and their format
 			DICT_KEYS_TIME: self._DICT_KEYS_TIME_,  # dict of time keys and their max value int seconds
@@ -986,10 +1008,15 @@ class CLASS_CLOCKS(object):
 			CHECKBOX_ALPHA_DIM: self._CHECKBOX_ALPHA_DIM_,
 			CHECKBOX_RUNAWAY: self._CHECKBOX_RUNAWAY_,
 			CLOSE_BBOX: self._CLOSE_BBOX_,
+			CURRENT_EVENT: self._CURRENT_EVENT_,
+			CURRENT_VALUE: self._CURRENT_VALUES,
 			DIMMED: self._DIMMED_,
+			EVENT_CHANGED: self._EVENT_CHANGED_,
 			KEY_DICT: self._KEY_DICT_,
 			KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
+			LAST_EVENT: self._LAST_EVENT_,
 			LAST_LOCATION: self._LAST_LOCATION_,
+			LAST_VALUES: self._LAST_VALUES_,
 			LOCATION: self._LOCATION_,
 			MAINFRAME: self._MAINFRAME_,
 			MOUSE_LOCATION: self._MOUSE_LOCATION_,
@@ -1000,6 +1027,7 @@ class CLASS_CLOCKS(object):
 			TIME_TO_CHECK_MOUSE: self._TIME_TO_CHECK_MOUSE_,
 			TIME_TO_MOVE: self._TIME_TO_MOVE_,
 			TIME_TO_UPDATE: self._TIME_TO_UPDATE_,
+			VALUES_CHANGED: self._VALUES_CHANGED_,
 			LAYOUT: self._LAYOUT_,  # layout for APPMODE_CLOCKS
 			PERIODIC: self._PERIODIC_,  # periodic updates dict for the clocks frame
 			TEXT_INTERVAL_COUNT: self._TEXT_INTERVAL_COUNT_,  # class text for interval count
@@ -1036,26 +1064,8 @@ class CLASS_CLOCKS(object):
 	def quickRead(self):
 		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
 
-	def updateFromDict(self, dictToUpdateFrom_=self._DICTIN_, setLocalDict_=True):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		_tempDictToUpdateFrom_ = {}
-		for _key_, val_ in dictToUpdateFrom_.items():
-			_val_ = val_
-			if (_key_ in self._TIME_KEY_LIST_):
-				if (_val_ >= CF.DAYSECS):
-					_val_ -= CF.DAYSECS
-				_val_ = abs(_val_)
-				_tempDictToUpdateFrom_[_key_] = CF.nrmlIntToHMS(_val_)
-			else:
-				_tempDictToUpdateFrom_[_key_] = _val_
-		if setLocalDict_ is True:
-			self._DICTIN_[_key_] = val_
-		self._MAINFRAME_.fill(_tempDictToUpdateFrom_)
-		__dummy__ = self._MAINFRAME_.Read(timeout=1)
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
 	def readToDict(self, dictToReadTo_=self._DICTOUT_, setLocalDict_=True):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		_dictToRtn_ = {}
 		for _key_ in dictToReadTo_:
 			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]
@@ -1162,11 +1172,12 @@ class CLASS_CLOCKS(object):
 
 		self._LAST_MOUSE_STATUS_ = _statusToRtn_
 		self._MOUSE_STATUS_ = _statusToRtn_
+		self._MPX_ = _mpxToRtn_
 
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def runaway(self):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		if NOWMS < self._TIME_TO_MOVE_:
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
@@ -1194,10 +1205,10 @@ class CLASS_CLOCKS(object):
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def easyUpdate(self,
-			NAME_NEXT_EVENT_=self._DICTIN_[NAME_NEXT_EVENT],
 			CHECKBOX_ALPHA_DIM_=self._DICTIN_[CHECKBOX_ALPHA_DIM],
 			CHECKBOX_RUNAWAY_=self._DICTIN_[CHECKBOX_RUNAWAY],
 			INTERVAL_COUNT_=self._DICTIN_[INTERVAL_COUNT],
+			NAME_NEXT_EVENT_=self._DICTIN_[NAME_NEXT_EVENT],
 			TIME_AT_NEXT_=self._DICTIN_[TIME_AT_NEXT],
 			TIME_AT_ZEROELAPSE_=self._DICTIN_[TIME_AT_ZEROELAPSE],
 			TIME_CLOCK_=self._DICTIN_[TIME_CLOCK],
@@ -1214,11 +1225,12 @@ class CLASS_CLOCKS(object):
 		self._DICTIN_[TIME_CLOCK] = TIME_CLOCK_
 		self._DICTIN_[TIME_ELAPSED] = TIME_ELAPSED_
 		self._DICTIN_[TIME_TOGO] = TIME_TOGO_
+		self.enint()
 		self.updateFromDict()
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def update(self):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		if (NOWMS >= self._TIME_TO_UPDATE_):
 			return
 
@@ -1227,8 +1239,6 @@ class CLASS_CLOCKS(object):
 		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
 		self._CLOSE_BBOX_ = getCloseBBox(self._LOCATION_, self._SIZE_)
 		self.checkMouse()
-		if _wasUpdated_ is True:
-			self.updateFromDict(setLocalDict_=False)
 		if (self._CHECKBOX_RUNAWAY_ is True):
 			self.runaway()
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
