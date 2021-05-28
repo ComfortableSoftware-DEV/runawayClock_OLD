@@ -140,8 +140,8 @@ CMNTLEN = 200
 CONFIGDIR = "/rcr/0-units/python/"
 FOLDLEN = 200
 TRIQT = f"""{DBLQT}{DBLQT}{DBLQT}"""
-USER_CACHE_DIR = "/home/will/.cache/"
-USER_CONFIG_DIR = "/home/will/.config/"
+CACHE_DIR = "/home/will/.cache/"
+CONFIG_DIR = "/home/will/.config/"
 
 
 #
