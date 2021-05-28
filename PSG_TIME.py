@@ -39,6 +39,7 @@ CHECKBOX_ALPHA_DIM = "CHECKBOX_ALPHA_DIM"  # is the clock transparent under mous
 CHECKBOX_DISMISSED = "CHECKBOX_DISMISSED"  # key for avoiding the mouse bool
 CHECKBOX_ENABLED = "CHECKBOX_ENABLED"  # key for avoiding the mouse bool
 CHECKBOX_FIRSTRUN = "CHECKBOX_FIRSTRUN"  # key for avoiding the mouse bool
+CHECKBOX_HOVER_DATE = "CHECKBOX_HOVER_DATE"  # KEY FOR CHECKBOX_HOVER_DATE
 CHECKBOX_IS_ALERTING_NOW = "CHECKBOX_IS_ALERTING_NOW"  # key for avoiding the mouse bool
 CHECKBOX_PREDISMISSABLE = "CHECKBOX_PREDISMISSABLE"  # key for avoiding the mouse bool
 CHECKBOX_RUNAWAY = "CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
@@ -72,20 +73,20 @@ EVENTMODE_ALARM = "EVENTMODE_ALARM"  #
 EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
 FIRSTRUN = "FIRSTRUN"  # True if just started, false after init1()
-FORM_CLOCKS = "FORM_CLOCKS"  # holds all of form entries
-FORM_EDITENTRY = "FORM_EDITENTRY"  # holds all of form entries
-FORM_EDITOR = "FORM_EDITOR"  # holds all of form entries
-FORM_MAIN = "FORM_MAIN"  # holds all of form entries
-FORM_NAME = "FORM_NAME"  # holds all of form entries
-FORM_POPUP01 = "FORM_POPUP01"  # holds all of form entries
-FORM_POPUP02 = "FORM_POPUP02"  # holds all of form entries
-FORM_POPUP03 = "FORM_POPUP03"  # holds all of form entries
-FORM_POPUP04 = "FORM_POPUP04"  # holds all of form entries
-FORM_POPUP05 = "FORM_POPUP05"  # holds all of form entries
-FORM_THECLOCK = "FORM_THECLOCK"  # holds all of form entries
+FORM_CLOCKS = "FORM_CLOCKS"  # holds all of clocks form entries
+FORM_EDITENTRY = "FORM_EDITENTRY"  # holds all of form edit-entry entries
+FORM_EDITOR = "FORM_EDITOR"  # holds all of form editor entries
+FORM_MAIN = "FORM_MAIN"  # holds all of form main entries
+FORM_NAME = "FORM_NAME"  # the name of the form
+FORM_POPUP01 = "FORM_POPUP01"  # holds all of form popup entries
+FORM_POPUP02 = "FORM_POPUP02"  # holds all of form popup entries
+FORM_POPUP03 = "FORM_POPUP03"  # holds all of form popup entries
+FORM_POPUP04 = "FORM_POPUP04"  # holds all of form popup entries
+FORM_POPUP05 = "FORM_POPUP05"  # holds all of form popup entries
+FORM_THECLOCK = "FORM_THECLOCK"  # holds all of theclock form entries
 INDEX_EAST = 2  # EAST
 INDEX_NORTH = 1  # NORTH
-INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  #
+INDEX_OF_NEXT_EVENT = "INDEX_OF_NEXT_EVENT"  # index of the next event to alert
 INDEX_SOUTH = 3  # SOUTH
 INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
@@ -102,41 +103,40 @@ MOUSE_STATUS_CLOSE_W = "MOUSE_STATUS_CLOSE_W"  # mouse is west of checked elemen
 MOUSE_STATUS_E = "MOUSE_STATUS_E"  # mouse is east of checked element
 MOUSE_STATUS_N = "MOUSE_STATUS_N"  # mouse is north of checked element
 MOUSE_STATUS_NE = "MOUSE_STATUS_NE"  # mouse is northeast of checked element
-MOUSE_STATUS_NONE = "MOUSE_STATUS_NONE"  # mouse is northeast of checked element
+MOUSE_STATUS_NONE = "MOUSE_STATUS_NONE"  # mouse is unknown
 MOUSE_STATUS_NW = "MOUSE_STATUS_NW"  # mouse is northwest of checked element
-MOUSE_STATUS_OVER = "MOUSE_STATUS_OVER"  # mouse is southwest of checked element
+MOUSE_STATUS_OVER = "MOUSE_STATUS_OVER"  # mouse is over top of checked element
 MOUSE_STATUS_S = "MOUSE_STATUS_S"  # mouse is south of checked element
 MOUSE_STATUS_SE = "MOUSE_STATUS_SE"  # mouse is southeast of checked element
 MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
 NAME_NEXT_EVENT = "NAME_NEXT_EVENT"  # name of the next event up
-PREDISMISSABLE = "PREDISMISSABLE"  #
+PREDISMISSABLE = "PREDISMISSABLE"  # event can be dismissed in advance
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
-SNOOZED = "SNOOZED"  # snoozed bool
-SZ_ALERT_TEXT = 20  # high alpha
+SNOOZED = "SNOOZED"  # is this event snoozed bool
+SZ_ALERT_TEXT = 20  # font size of alert text
 SZ_ALPHA_HIGH = 1.0  # high alpha
-SZ_ALPHA_LOW = 0.1  # low alpha setting
+SZ_ALPHA_LOW = 0.2  # low alpha
 SZ_BORDER_DEPTH = 0  # border depth
-SZ_BTNS = 6  # size for button text
-SZ_CLOCKS_MOVE = 15  # how far to move each time the mouse approaches
-SZ_CLOCKS_TIME_CLOCK = 26  # size of the main clock on the clocks only floating widget
-SZ_CLOCKS_TIME_ELAPSED = 13  # size of the elapsed clock on the clocks only floating widget
-SZ_CLOCKS_TIME_TOGO = 13  # size of the main togo clock on the clocks only floating widget
+SZ_BTNS = 6  # font size for button text
+SZ_CLOCKS_TIME_CLOCK = 26  # font size of the main clock on the clocks only floating widget
+SZ_CLOCKS_TIME_ELAPSED = 13  # font size of the elapsed clock on the clocks only floating widget
+SZ_CLOCKS_TIME_TOGO = 13  # font size of the main togo clock on the clocks only floating widget
 SZ_CLOSE = 80  # close enough to move from the mouse
-SZ_EDIT_TIME_CLOCK = 20  # size of the main clock on the clocks only floating widget
-SZ_EDIT_TIME_ELAPSED = 10  # size of the elapsed clock on the clocks only floating widget
-SZ_EDIT_TIME_TOGO = 10  # size of the main togo clock on the clocks only floating widget
-SZ_INTERVAL_COUNT = 10  # size of the main togo clock on the clocks only floating widget
-SZ_MAIN_TIME_CLOCK = 60  # size of the main clock on the clocks only floating widget
-SZ_MAIN_TIME_ELAPSED = 30  # size of the elapsed clock on the clocks only floating widget
-SZ_MAIN_TIME_TOGO = 30  # size of the main togo clock on the clocks only floating widget
+SZ_EDIT_TIME_CLOCK = 20  # font size of the main clock on the clocks only floating widget
+SZ_EDIT_TIME_ELAPSED = 10  # font size of the elapsed clock on the clocks only floating widget
+SZ_EDIT_TIME_TOGO = 10  # font size of the main togo clock on the clocks only floating widget
+SZ_INTERVAL_COUNT = 10  # font size of the main interval count
+SZ_MAIN_TIME_CLOCK = 60  # font size of the main clock on the clocks only floating widget
+SZ_MAIN_TIME_ELAPSED = 30  # font size of the elapsed clock on the clocks only floating widget
+SZ_MAIN_TIME_TOGO = 30  # font size of the main togo clock on the clocks only floating widget
 SZ_MARGINS_ALL = (0, 0)  # all margins default
-SZ_MAX_DELTA = 100  # comment
-SZ_MOVE_DIST = 50  # comment
+SZ_MAX_DELTA = 100  # maximum possible change per move
+SZ_MOVE_DIST = 50  # move by this pixels each jump
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
-SZ_TIMEMS_BETWEEN_MOVES = 500  # comment
-SZ_TIMEMS_BETWEEN_UPDATES = 500  # comment
+SZ_TIMEMS_BETWEEN_MOVES = 500  # time_ms between moves
+SZ_TIMEMS_BETWEEN_UPDATES = 500  # time_ms between updating windows/frames/etc
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIME_ALARM = "TIME_ALARM"  # the alarm time
@@ -314,16 +314,16 @@ VISIBLE = "visible"  # visibility of elements
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALL_THE_FORMS = {  # comment
-	FORMCLOCKS: None,  # ENTRY IN FORMS
-	FORMEDITENTRY: None,  # ENTRY IN FORMS
-	FORMEDITOR: None,  # ENTRY IN FORMS
-	FORMMAIN: None,  # ENTRY IN FORMS
-	FORMPOPUP01: None,  # ENTRY IN FORMS
-	FORMPOPUP02: None,  # ENTRY IN FORMS
-	FORMPOPUP03: None,  # ENTRY IN FORMS
-	FORMPOPUP04: None,  # ENTRY IN FORMS
-	FORMPOPUP05: None,  # ENTRY IN FORMS
-	FORMTHECLOCK: None,  # ENTRY IN FORMS
+	FORM_CLOCKS: None,  # ENTRY IN FORMS
+	FORM_EDITENTRY: None,  # ENTRY IN FORMS
+	FORM_EDITOR: None,  # ENTRY IN FORMS
+	FORM_MAIN: None,  # ENTRY IN FORMS
+	FORM_POPUP01: None,  # ENTRY IN FORMS
+	FORM_POPUP02: None,  # ENTRY IN FORMS
+	FORM_POPUP03: None,  # ENTRY IN FORMS
+	FORM_POPUP04: None,  # ENTRY IN FORMS
+	FORM_POPUP05: None,  # ENTRY IN FORMS
+	FORM_THECLOCK: None,  # ENTRY IN FORMS
 }
 
 
@@ -343,10 +343,6 @@ CLOSE_LIST = [  # list with close statuses
 	MOUSE_STATUS_CLOSE_SE,  # easet close entry
 	MOUSE_STATUS_CLOSE_SW,  # easet close entry
 	MOUSE_STATUS_CLOSE_W,  # easet close entry
-]
-
-
-INTERVALLING_LIST = [  # list that holds all currently alarming events
 ]
 
 
@@ -556,6 +552,15 @@ CHECKBOX_FIRSTRUN01 = {  # checkbox for dismissed from mouse behavior
 }
 
 
+CHECKBOX_HOVER_DATE01 = {  # checkbox for dismissed from mouse behavior
+	TEXT: "DT on hover",  # text label
+	TOOLTIP: "show date when hovering over clock",  # tooltip
+	DEFAULT: True,  # leave it on by default
+	ENABLE_EVENTS: True,  # set the events on for the checkbox
+	KEY: CHECKBOX_HOVER_DATE,  # set the key for the checkbox
+}
+
+
 CHECKBOX_IS_ALERTING_NOW01 = {  # checkbox for dismissed from mouse behavior
 	TEXT: "IS_ALERTING_NOW",  # text label
 	TOOLTIP: "run away from mouse when checked",  # tooltip
@@ -705,7 +710,7 @@ TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 # * SCTN0914 popupframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0916 classes
+# * SCTN09FF classes
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 
@@ -750,7 +755,7 @@ class CLASS_CLOCKS(object):
 		self._TIME_TO_MOVE_ = ZERO_CLOCK  #
 		self._TIME_TO_UPDATE_ = ZERO_CLOCK  #
 
-		_DICTIN_ = {
+		self._DICTIN_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			NAME_NEXT_EVENT: "",  # name of next event
 			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
@@ -763,8 +768,9 @@ class CLASS_CLOCKS(object):
 			TIME_TOGO: ZERO_CLOCK,  # countdown to next event
 		}
 # fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+		_DICTIN_ = self._DICTIN_
 
-		_DICTINSTR_ = {
+		self._DICTINSTR_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			NAME_NEXT_EVENT: "",  # name of next event
 			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
@@ -1154,26 +1160,44 @@ class CLASS_CLOCKS(object):
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def easyUpdate(self,
-			CHECKBOX_ALPHA_DIM_=self._DICTIN_[CHECKBOX_ALPHA_DIM],
-			CHECKBOX_RUNAWAY_=self._DICTIN_[CHECKBOX_RUNAWAY],
-			INTERVAL_COUNT_=self._DICTIN_[INTERVAL_COUNT],
-			NAME_NEXT_EVENT_=self._DICTIN_[NAME_NEXT_EVENT],
-			TIME_AT_NEXT_=self._DICTIN_[TIME_AT_NEXT],
-			TIME_AT_ZEROELAPSE_=self._DICTIN_[TIME_AT_ZEROELAPSE],
-			TIME_CLOCK_=self._DICTIN_[TIME_CLOCK],
-			TIME_ELAPSED_=self._DICTIN_[TIME_ELAPSED],
-			TIME_TOGO_=self._DICTIN_[TIME_TOGO],
+			CHECKBOX_ALPHA_DIM_=None,
+			CHECKBOX_RUNAWAY_=None,
+			INTERVAL_COUNT_=None,
+			NAME_NEXT_EVENT_=None,
+			TIME_AT_NEXT_=None,
+			TIME_AT_ZEROELAPSE_=None,
+			TIME_CLOCK_=None,
+			TIME_ELAPSED_=None,
+			TIME_TOGO_=None,
 		):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		self._DICTIN_[NAME_NEXT_EVENT] = NAME_NEXT_EVENT_
-		self._DICTIN_[CHECKBOX_ALPHA_DIM] = CHECKBOX_ALPHA_DIM_
-		self._DICTIN_[CHECKBOX_RUNAWAY] = CHECKBOX_RUNAWAY_
-		self._DICTIN_[INTERVAL_COUNT] = INTERVAL_COUNT_
-		self._DICTIN_[TIME_AT_NEXT] = TIME_AT_NEXT_
-		self._DICTIN_[TIME_AT_ZEROELAPSE] = TIME_AT_ZEROELAPSE_
-		self._DICTIN_[TIME_CLOCK] = TIME_CLOCK_
-		self._DICTIN_[TIME_ELAPSED] = TIME_ELAPSED_
-		self._DICTIN_[TIME_TOGO] = TIME_TOGO_
+		if NAME_NEXT_EVENT_ is not None:
+			self._DICTIN_[NAME_NEXT_EVENT] = NAME_NEXT_EVENT_
+
+		if CHECKBOX_ALPHA_DIM_ is not None:
+			self._DICTIN_[CHECKBOX_ALPHA_DIM] = CHECKBOX_ALPHA_DIM_
+
+		if CHECKBOX_RUNAWAY_ is not None:
+			self._DICTIN_[CHECKBOX_RUNAWAY] = CHECKBOX_RUNAWAY_
+
+		if INTERVAL_COUNT_ is not None:
+			self._DICTIN_[INTERVAL_COUNT] = INTERVAL_COUNT_
+
+		if TIME_AT_NEXT_ is not None:
+			self._DICTIN_[TIME_AT_NEXT] = TIME_AT_NEXT_
+
+		if TIME_AT_ZEROELAPSE_ is not None:
+			self._DICTIN_[TIME_AT_ZEROELAPSE] = TIME_AT_ZEROELAPSE_
+
+		if TIME_CLOCK_ is not None:
+			self._DICTIN_[TIME_CLOCK] = TIME_CLOCK_
+
+		if TIME_ELAPSED_ is not None:
+			self._DICTIN_[TIME_ELAPSED] = TIME_ELAPSED_
+
+		if TIME_TOGO_ is not None:
+			self._DICTIN_[TIME_TOGO] = TIME_TOGO_
+
 		self.enint()
 		self.updateFromDict()
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -1488,12 +1512,16 @@ def findNextAlarmEvent():
 				_nextEventList_.append((fixTimeAtNext(_event_[TIME_AT_NEXT_ALERT]), _index_, _event_[EVENTMODE], _event_[NAME]))
 
 	_nextEventList_.sort()
-#	print(f"""{CF.frameIt("_nextEventList_", _nextEventList_)}
-#{CF.frameIt("CLOCKS_DICT", CLOCKS_DICT)}""")
+
 	if _nextEventList_ != []:
-		CLOCKS_DICT[TIME_AT_NEXT_ALERT] = _nextEventList_[0][0]# (time, index, mode, name)
+		if ALL_THE_FORMS[FORM_CLOCKS] is not None:
+			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+				TIME_AT_NEXT_=_nextEventList_[0][0],
+				NAME_NEXT_EVENT_=_nextEventList_[0][3],
+			)
+		CLOCKS_DICT[TIME_AT_NEXT_ALERT] = # (time, index, mode, name)
 		TIME_S_AT_NEXT_EVENT = CLOCKS_DICT[TIME_AT_NEXT_ALERT]
-		NAME_NEXT_EVENT_STR = _nextEventList_[0][3]# (time, index, mode, name)
+		NAME_NEXT_EVENT_STR = # (time, index, mode, name)
 		CLOCKS_TEXT_DICT[NAME_NEXT_EVENT] = NAME_NEXT_EVENT_STR
 		CURRENT_EVENTMODE = _nextEventList_[0][2]# (time, index, mode, name)
 
@@ -1501,12 +1529,8 @@ def findNextAlarmEvent():
 			CURRENT_INTERVAL_COUNT = APPDS[EVENT_ENTRIES][_nextEventList_[0][1]]
 			updateIntervalCount()
 
-		updateFrameFromDict(CLOCKS_TEXT_DICT)
-#	print(f"""{CF.getDebugInfo()}
-#	{CF.frameItHMS("NOWS updated next event", NOWS)}
-#	{CF.frameIt("EVENT_ENTRIES", APPDS[EVENT_ENTRIES])}
-#	{CF.frameIt("_nextEventList_", _nextEventList_)}
-#	""")
+		####updateFrameFromDict(CLOCKS_TEXT_DICT)
+
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1517,8 +1541,7 @@ def findNextAlarmEvent():
 def doMidnightWork():
 	print("midnight")
 	global \
-			CLOCKS_DICT, \
-			APPDS, \
+			APPDS_MAIN, \
 			TIME_MS_NEXT_MOUSE_CHECK, \
 			TIMEMS_NEXT_MOVED, \
 			TIMEMS_NEXT_UPDATED, \
@@ -1534,22 +1557,35 @@ def doMidnightWork():
 	TIME_S_AT_NEXT_EVENT = 0
 	TIME_S_AT_NEXT_PERIODIC_JOB = 0
 
-	for _index_, _event_ in APPDS[EVENT_ENTRIES].items():
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	for _index_, _event_ in APPDS_MAIN[EVENT_ENTRIES].items():
 
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (_event_ is not None):  # and (_event_[EVENTMODE] in [EVENTMODE_ALARM]):
-			APPDS[EVENT_ENTRIES][_index_][DISMISSED] = False
-			APPDS[EVENT_ENTRIES][_index_][IS_ALERTING_NOW] = False
+			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			APPDS_MAIN[EVENT_ENTRIES][_index_][DISMISSED] = False
+			APPDS_MAIN[EVENT_ENTRIES][_index_][IS_ALERTING_NOW] = False
 
+			# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
 			for _index1_ in APPDS_TIMES_LIST:
-#				print(f"""{CF.getDebugInfo()}
-#				{CF.frameIt("_index1_", _index1_)}
-#				{CF.frameIt("APPDS[EVENT_ENTRIES][_index_]", APPDS[EVENT_ENTRIES][_index_])}
-#				""")
 
-				if APPDS[EVENT_ENTRIES][_index_][_index1_] >= CF.DAYSECS:
-					APPDS[EVENT_ENTRIES][_index_][_index1_] -= CF.DAYSECS
+				# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
+				if APPDS_MAIN[EVENT_ENTRIES][_index_][_index1_] >= CF.DAYSECS:
+					# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
+					APPDS_MAIN[EVENT_ENTRIES][_index_][_index1_] -= CF.DAYSECS
+
+					# ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥
+					if (APPDS_MAIN[EVENT_ENTRIES][_index_][_index1_] < 0):
+						# 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥
+						APPDS_MAIN[EVENT_ENTRIES][_index_][_index1_] = abs(APPDS_MAIN[EVENT_ENTRIES][_index_][_index1_])
+
+						# ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6
+					# ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5
+				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 	findNextAlarmEvent()
-
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -1561,9 +1597,12 @@ def outerLoop():
 	while True:
 		window_, _result_, _values_ = SG.read_all_windows(timeout=SZ_TIMEOUT_MS)
 
+		print(f"""_result_ {_result_} _values_ {_values_}""")
 		if _result_ != "__TIMEOUT__":
 			# do all result processing here
-			pass
+
+			if (_result_ == BTN_QUIT_ALL):
+				return BTN_QUIT_ALL
 
 		localTimes()
 
@@ -1578,7 +1617,9 @@ def outerLoop():
 def doit():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	with CF.withPickles(f"""{CF.CONFIG_DIR}runawayClock/runawayClock.pkl""", APPDS), \
-			CLASS_CLOCKS(CF.serializeIt("")):
+			CLASS_CLOCKS(CF.serializeIt(""), FORM_CLOCKS):
+
+		doMidnightWork()
 
 		while True:
 			_result_ = outerLoop()
