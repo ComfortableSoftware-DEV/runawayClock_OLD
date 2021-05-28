@@ -420,6 +420,10 @@ FMAXPSG_SCTN0916_CLASS_FUNCTION_VAL1_DEF = "FMAXPSG_SCTN0916_CLASS_FUNCTION_VAL1
 FMAXPSG_SCTN0916_CLASS_FUNCTION_VAL2_DEF = "FMAXPSG_SCTN0916_CLASS_FUNCTION_VAL2_DEF"  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
 FMAXPSG_SCTN0916_CLASS_INIT_BLANKLINE = "FMAXPSG_SCTN0916_CLASS_INIT_BLANKLINE"  # blank line in __init__ <NAC><CLASSNAME>
 FMAXPSG_SCTN0916_CLASS_INIT_DEF = "FMAXPSG_SCTN0916_CLASS_INIT_DEF"  # define a class <NAC><CLASSNAME><PARMS>
+FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_SS_ADD = "FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_SS_ADD"  # add a str-str to a dict <NAC><CLASSNAME><STR><STR>
+FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_SV_ADD = "FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_SV_ADD"  # add a str-val to a dict <NAC><CLASSNAME><STR><VAL>
+FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VS_ADD = "FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VS_ADD"  # add a str to a dict <NAC><CLASSNAME><KEY><VAL>
+FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD = "FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD"  # add a val to a dict in PSG <NAC><CLASSNAME><KEY><VAL>
 FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA1_DEF = "FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA1_DEF"  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
 FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA2_DEF = "FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA2_DEF"  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
 FMAXPSG_SCTN0916_CLASS_INIT_LINE_ADD = "FMAXPSG_SCTN0916_CLASS_INIT_LINE_ADD"  # define a class <NAC><CLASSNAME><LINE>
@@ -629,6 +633,10 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0916_CLASS_FUNCTION_VAL2_DEF,  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
 	FMAXPSG_SCTN0916_CLASS_INIT_BLANKLINE,  # blank line in __init__ <NAC><CLASSNAME>
 	FMAXPSG_SCTN0916_CLASS_INIT_DEF,  # define a class <NAC><CLASSNAME><PARMS>
+	FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_SS_ADD,  # add a str-str to a dict <NAC><CLASSNAME><STR><STR>
+	FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_SV_ADD,  # add a str-val to a dict <NAC><CLASSNAME><STR><VAL>
+	FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VS_ADD,  # add a str to a dict <NAC><CLASSNAME><KEY><VAL>
+	FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD,  # add a val to a dict in PSG <NAC><CLASSNAME><KEY><VAL>
 	FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA1_DEF,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
 	FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA2_DEF,  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
 	FMAXPSG_SCTN0916_CLASS_INIT_LINE_ADD,  # define a class <NAC><CLASSNAME><LINE>
@@ -780,6 +788,8 @@ FMPSG_SCTN0916_CLASS_INIT_CMNT_DICT = {}  # define the dict to hold everything i
 FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_INIT_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_INIT_DICTIN_DICT = {}  # define the dict to hold everything in SCTN0900
+FMPSG_SCTN0916_CLASS_INIT_DICTINSTR_DICT = {}  # define the dict to hold everything in SCTN0900
 FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT = {}  # holds all of the button entries (TUPDICT)
 FMPSG_SCTN0916_CLASS_LAYOUT_DICT = {}  # holds all of the button entriess (TUPDICT)
 FMPSG_SCTN0916_CLASS_LIST_CMNT_DICT = {}  # define the dict to hold everything in SCTN0900
@@ -1656,16 +1666,15 @@ TBGLST = [
 	("PSGVAL__CLOCKS_COLUMN020A", FMAXPSG_SCTN0916_CLASS_COLUMN_ROW_ADD, "CLOCKS", "_COLUMN02_", "COLUMN02_ROW_04", "L03", "add a new row to clocks column",),
 	("PSGVAL__CLOCKS_COLUMN020B", FMAXPSG_SCTN0916_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "_COLUMN02_", "COLUMN02_ROW_04", "L04", "COLUMN02_E04", "add reset button for elapsed time",),
 	("PSGVAL__CLOCKS_COLUMN020C", FMAXPSG_SCTN0916_CLASS_COLUMN_PARM_ADD, "CLOCKS", "_COLUMN02_", "COLUMN02_ROW_04", "L05", "COLUMN02_E04", "**self._TEXT_INTERVAL_COUNT_", "add the zero button to clocks",),
-	("PSGVAL__CLOCKS_DICTIN", FMAX_NOP, "dict with the root source for clocks values, updated both directions as appropriate",),
-	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VS_ADD, "CLOCKS", "NAME_NEXT_EVENT", "", "name of next event",),
-	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "CHECKBOX_ALPHA_DIM", "False", "value of the alphas dim checkbox",),
-	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "CHECKBOX_RUNAWAY", "False", "value of runaway checkbox",),
-	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "INTERVAL_COUNT", "0", "interval count",),
-	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "TIME_AT_NEXT", "ZERO_CLOCK", "time at next event",),
-	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "TIME_AT_ZEROELAPSE", "ZERO_CLOCK", "time at last zero of elapsed timer",),
-	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "TIME_CLOCK", "ZERO_CLOCK", "time clock or wall clock",),
-	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "TIME_ELAPSED", "ZERO_CLOCK", "time elapsed",),
-	("PSGVAL__CLOCKS_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "TIME_TOGO", "ZERO_CLOCK", "countdown to next event",),
+	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VS_ADD, "CLOCKS", "NAME_NEXT_EVENT", "", "name of next event",),
+	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "CHECKBOX_ALPHA_DIM", "False", "value of the alphas dim checkbox",),
+	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "CHECKBOX_RUNAWAY", "False", "value of runaway checkbox",),
+	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "INTERVAL_COUNT", "0", "interval count",),
+	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "TIME_AT_NEXT", "ZERO_CLOCK", "time at next event",),
+	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "TIME_AT_ZEROELAPSE", "ZERO_CLOCK", "time at last zero of elapsed timer",),
+	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "TIME_CLOCK", "ZERO_CLOCK", "time clock or wall clock",),
+	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "TIME_ELAPSED", "ZERO_CLOCK", "time elapsed",),
+	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "TIME_TOGO", "ZERO_CLOCK", "countdown to next event",),
 	("PSGVAL__CLOCKS_DICTOUT00", FMAXPSG_SCTN0916_CLASS_DICT_DEF, "CLOCKS", "_DICTOUT_", "holds the values for the clocks frame",),
 	("PSGVAL__CLOCKS_DICTOUT01", FMAXPSG_SCTN0916_CLASS_DICT_VS_ADD, "CLOCKS", "_DICTOUT_", "CHECKBOX_ALPHA_DIM", "True", "name of next event",),
 	("PSGVAL__CLOCKS_DICTOUT01", FMAXPSG_SCTN0916_CLASS_DICT_VV_ADD, "CLOCKS", "_DICTOUT_", "CHECKBOX_RUNAWAY", "False", "interval count",),
@@ -2923,6 +2932,8 @@ def parseTBGLST(FDTBGLST):
 		FMPSG_SCTN0916_CLASS_INIT_DEF1_DICT, \
 		FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT, \
 		FMPSG_SCTN0916_CLASS_INIT_DICT, \
+		FMPSG_SCTN0916_CLASS_INIT_DICTIN_DICT, \
+		FMPSG_SCTN0916_CLASS_INIT_DICTINSTR_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_CMNT_DICT, \
 		FMPSG_SCTN0916_CLASS_LAYOUT_DICT, \
 		FMPSG_SCTN0916_CLASS_LIST_CMNT_DICT, \
@@ -4632,6 +4643,10 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_FUNCTION_DEF2_DICT:
 				FMPSG_SCTN0916_CLASS_INIT_DEF2_DICT[_thisClassName_] = []
 
+			if _thisClassName_ not in FMPSG_SCTN0916_CLASS_INIT_DICTIN_DICT:
+				FMPSG_SCTN0916_CLASS_INIT_DICTIN_DICT[_thisClassName_] = []
+				FMPSG_SCTN0916_CLASS_INIT_DICTINSTR_DICT[_thisClassName_] = []
+
 			FMPSG_SCTN0916_CLASS_CMNT_DICT[_thisClassName_] = f"""{_thisComment_}"""
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -5355,6 +5370,93 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_BLANKLINE:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 4:
+				doErrorItem("not 4 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+
+			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].append(f"""#{NEWLINE}""")
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_SS_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 6:
+				doErrorItem("not 6 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisKey_ = _thisItem_[3]
+			_thisVal_ = _thisItem_[4]
+
+			FMPSG_SCTN0916_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_SV_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 6:
+				doErrorItem("not 6 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisKey_ = _thisItem_[3]
+			_thisVal_ = _thisItem_[4]
+
+			FMPSG_SCTN0916_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VS_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 6:
+				doErrorItem("not 6 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisKey_ = _thisItem_[3]
+			_thisVal_ = _thisItem_[4]
+
+			FMPSG_SCTN0916_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_DICTIN_VV_ADD:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 6:
+				doErrorItem("not 6 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisKey_ = _thisItem_[3]
+			_thisVal_ = _thisItem_[4]
+
+			FMPSG_SCTN0916_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN0916_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_LAMBDA1_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if _thisItemLen_ != 6:
@@ -5384,21 +5486,6 @@ def parseTBGLST(FDTBGLST):
 			_thisLine_ = _thisItem_[3]
 
 			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].append(f"""{NTAB(2)}{_thisLine_}  # {_thisComment_}{NEWLINE}""")
-
-			continue
-			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
-
-	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
-		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN0916_CLASS_INIT_BLANKLINE:
-			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if _thisItemLen_ != 4:
-				doErrorItem("not 4 items", _thisItem_)
-				continue
-
-			_thisClassName_ = _thisItem_[2]
-
-			FMPSG_SCTN0916_CLASS_INIT_DICT[_thisClassName_].append(f"""#{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2

@@ -762,34 +762,6 @@ class CLASS_CLOCKS(object):
 		self._TIME_TO_MOVE_ = ZERO_CLOCK  # 
 		self._TIME_TO_UPDATE_ = ZERO_CLOCK  # 
 
-		self._DICTIN_ = {  # holds all of the values for the clocks frame
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			NAME_NEXT_EVENT: "",  # name of next event
-			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
-			CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
-			INTERVAL_COUNT: 0,  # interval count
-			TIME_AT_NEXT: ZERO_CLOCK,  # time at next event
-			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
-			TIME_CLOCK: ZERO_CLOCK,  # time clock or wall clock
-			TIME_ELAPSED: ZERO_CLOCK,  # time elapsed
-			TIME_TOGO: ZERO_CLOCK,  # countdown to next event
-		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
-		self._DICTINSTR_ = {  # holds all of the values for the clocks frame as strings
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			NAME_NEXT_EVENT: "",  # name of next event
-			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
-			CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
-			INTERVAL_COUNT: 0,  # interval count
-			TIME_AT_NEXT: ZERO_CLOCK,  # time at next event
-			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
-			TIME_CLOCK: ZERO_CLOCK,  # time clock or wall clock
-			TIME_ELAPSED: ZERO_CLOCK,  # time elapsed
-			TIME_TOGO: ZERO_CLOCK,  # countdown to next event
-		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
 		self._DICTOUT_ = {  # holds the values for the clocks frame
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			CHECKBOX_ALPHA_DIM: "True",  # name of next event
@@ -995,8 +967,6 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
 			COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
-			DICTIN: self._DICTIN_,  # holds all of the values for the clocks frame
-			DICTINSTR: self._DICTINSTR_,  # holds all of the values for the clocks frame as strings
 			DICTOUT: self._DICTOUT_,  # holds the values for the clocks frame
 			DICT_KEYS_INT: self._DICT_KEYS_INT_,  # dict of integer keys and their format
 			DICT_KEYS_TIME: self._DICT_KEYS_TIME_,  # dict of time keys and their max value int seconds
@@ -1063,19 +1033,6 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_.close()
 		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
-	def quickRead(self):
-		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
-
-	def readToDict(self, dictToReadTo_=self._DICTOUT_, setLocalDict_=True):
-# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		_dictToRtn_ = {}
-		for _key_ in dictToReadTo_:
-			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]
-			if (setLocalDict_ is True):
-				self._DICTOUT_[_key_] = _dictToRtn_[_key_]
-		return _dictToRtn_
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def checkMouse(self):
@@ -1180,6 +1137,44 @@ class CLASS_CLOCKS(object):
 
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
+	def easyUpdate(self,
+			CHECKBOX_ALPHA_DIM_=self._DICTIN_[CHECKBOX_ALPHA_DIM],
+			CHECKBOX_RUNAWAY_=self._DICTIN_[CHECKBOX_RUNAWAY],
+			INTERVAL_COUNT_=self._DICTIN_[INTERVAL_COUNT],
+			NAME_NEXT_EVENT_=self._DICTIN_[NAME_NEXT_EVENT],
+			TIME_AT_NEXT_=self._DICTIN_[TIME_AT_NEXT],
+			TIME_AT_ZEROELAPSE_=self._DICTIN_[TIME_AT_ZEROELAPSE],
+			TIME_CLOCK_=self._DICTIN_[TIME_CLOCK],
+			TIME_ELAPSED_=self._DICTIN_[TIME_ELAPSED],
+			TIME_TOGO_=self._DICTIN_[TIME_TOGO],
+		):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+		self._DICTIN_[NAME_NEXT_EVENT] = NAME_NEXT_EVENT_
+		self._DICTIN_[CHECKBOX_ALPHA_DIM] = CHECKBOX_ALPHA_DIM_
+		self._DICTIN_[CHECKBOX_RUNAWAY] = CHECKBOX_RUNAWAY_
+		self._DICTIN_[INTERVAL_COUNT] = INTERVAL_COUNT_
+		self._DICTIN_[TIME_AT_NEXT] = TIME_AT_NEXT_
+		self._DICTIN_[TIME_AT_ZEROELAPSE] = TIME_AT_ZEROELAPSE_
+		self._DICTIN_[TIME_CLOCK] = TIME_CLOCK_
+		self._DICTIN_[TIME_ELAPSED] = TIME_ELAPSED_
+		self._DICTIN_[TIME_TOGO] = TIME_TOGO_
+		self.enint()
+		self.updateFromDict()
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+	def quickRead(self):
+		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
+
+	def readToDict(self, dictToReadTo_=self._DICTOUT_, setLocalDict_=True):
+# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+		_dictToRtn_ = {}
+		for _key_ in dictToReadTo_:
+			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]
+			if (setLocalDict_ is True):
+				self._DICTOUT_[_key_] = _dictToRtn_[_key_]
+		return _dictToRtn_
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
 	def runaway(self):
 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		if NOWMS < self._TIME_TO_MOVE_:
@@ -1206,31 +1201,6 @@ class CLASS_CLOCKS(object):
 			return
 
 		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
-	def easyUpdate(self,
-			CHECKBOX_ALPHA_DIM_=self._DICTIN_[CHECKBOX_ALPHA_DIM],
-			CHECKBOX_RUNAWAY_=self._DICTIN_[CHECKBOX_RUNAWAY],
-			INTERVAL_COUNT_=self._DICTIN_[INTERVAL_COUNT],
-			NAME_NEXT_EVENT_=self._DICTIN_[NAME_NEXT_EVENT],
-			TIME_AT_NEXT_=self._DICTIN_[TIME_AT_NEXT],
-			TIME_AT_ZEROELAPSE_=self._DICTIN_[TIME_AT_ZEROELAPSE],
-			TIME_CLOCK_=self._DICTIN_[TIME_CLOCK],
-			TIME_ELAPSED_=self._DICTIN_[TIME_ELAPSED],
-			TIME_TOGO_=self._DICTIN_[TIME_TOGO],
-		):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		self._DICTIN_[NAME_NEXT_EVENT] = NAME_NEXT_EVENT_
-		self._DICTIN_[CHECKBOX_ALPHA_DIM] = CHECKBOX_ALPHA_DIM_
-		self._DICTIN_[CHECKBOX_RUNAWAY] = CHECKBOX_RUNAWAY_
-		self._DICTIN_[INTERVAL_COUNT] = INTERVAL_COUNT_
-		self._DICTIN_[TIME_AT_NEXT] = TIME_AT_NEXT_
-		self._DICTIN_[TIME_AT_ZEROELAPSE] = TIME_AT_ZEROELAPSE_
-		self._DICTIN_[TIME_CLOCK] = TIME_CLOCK_
-		self._DICTIN_[TIME_ELAPSED] = TIME_ELAPSED_
-		self._DICTIN_[TIME_TOGO] = TIME_TOGO_
-		self.enint()
-		self.updateFromDict()
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def update(self):
