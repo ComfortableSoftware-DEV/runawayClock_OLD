@@ -1,7 +1,7 @@
 	def easyUpdate(self,
 			checkboxAlphaDim_=None,
 			checkboxRunaway_=None,
-			eventmode_=None,
+			eventMode_=None,
 			intervalCount_=None,
 			nameNextEvent_=None,
 			timeAtNext_=None,
@@ -20,19 +20,19 @@
 		if checkboxRunaway_ is not None:
 			self._DICTIN_[CHECKBOX_RUNAWAY] = checkboxRunaway_
 
-		if eventmode_ is not None:
-			self.CURRENT_EVENTMODE = eventmode_
+		if eventMode_ is not None:
+			self.CURRENT_EVENTMODE = eventMode_
 
 			if intervalCount_ is not None:
 				self._DICTIN_[INTERVAL_COUNT] = intervalCount_
 
-			if (eventmode_ == EVENTMODE_INTERVAL):
+			if (eventMode_ == EVENTMODE_INTERVAL):
 				self.intervalCountOn()
 			else:
 				self.intervalCountOff()
 
-		if time_at_next_ is not None:
-			self._DICTIN_[TIME_AT_NEXT] = time_at_next_
+		if timeAtNext_ is not None:
+			self._DICTIN_[TIME_AT_NEXT] = timeAtNext_
 
 		if timeAtZeroelapse_ is not None:
 			self._DICTIN_[TIME_AT_ZEROELAPSE] = timeAtZeroelapse_

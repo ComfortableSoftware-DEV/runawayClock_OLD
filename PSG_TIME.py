@@ -172,6 +172,7 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+CURRENT_INTERVAL_COUNT = 0  # comment
 EMPTY_BBOX = (0, 0, 0, 0)  # empty XY dict
 EMPTY_XY = (0, 0)  # empty XY dict
 FONT_DEFAULT = "Source Code Pro"  # default font my favorite readable font
@@ -193,8 +194,6 @@ TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
 TIMEMS_NEXT_MOVED = 0  # comment
 TIMEMS_NEXT_UPDATED = 0  # comment
 TIMES_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
-TIMES_NEXT_EVENT = 0  # comment
-TIMES_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1182,19 +1181,19 @@ class CLASS_CLOCKS(object):
 		if checkboxRunaway_ is not None:
 			self._DICTIN_[CHECKBOX_RUNAWAY] = checkboxRunaway_
 
-		if eventmode_ is not None:
-			self.CURRENT_EVENTMODE = eventmode_
+		if eventMode_ is not None:
+			self.CURRENT_EVENTMODE = eventMode_
 
 			if intervalCount_ is not None:
 				self._DICTIN_[INTERVAL_COUNT] = intervalCount_
 
-			if (eventmode_ == EVENTMODE_INTERVAL):
+			if (eventMode_ == EVENTMODE_INTERVAL):
 				self.intervalCountOn()
 			else:
 				self.intervalCountOff()
 
-		if time_at_next_ is not None:
-			self._DICTIN_[TIME_AT_NEXT] = time_at_next_
+		if timeAtNext_ is not None:
+			self._DICTIN_[TIME_AT_NEXT] = timeAtNext_
 
 		if timeAtZeroelapse_ is not None:
 			self._DICTIN_[TIME_AT_ZEROELAPSE] = timeAtZeroelapse_

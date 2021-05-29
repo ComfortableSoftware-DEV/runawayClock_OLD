@@ -66,11 +66,11 @@ COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
 DISMISSED = "DISMISSED"  # alarm dismissed bool
-EVENT_ENTRIES = "EVENT_ENTRIES"  #
+EVENT_ENTRIES = "EVENT_ENTRIES"  # 
 EVENT_NAME = "EVENT_NAME"  # name of the event
 EVENTMODE = "EVENTMODE"  # what mode is this event
-EVENTMODE_ALARM = "EVENTMODE_ALARM"  #
-EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
+EVENTMODE_ALARM = "EVENTMODE_ALARM"  # 
+EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  # 
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
 FIRSTRUN = "FIRSTRUN"  # True if just started, false after init1()
 FORM_CLOCKS = "FORM_CLOCKS"  # holds all of clocks form entries
@@ -140,7 +140,7 @@ SZ_TIMEMS_BETWEEN_UPDATES = 500  # time_ms between updating windows/frames/etc
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
 TIME_ALARM = "TIME_ALARM"  # the alarm time
-TIME_AT_LAST_RUN = "TIME_AT_LAST_RUN"  # timeS of last alarm
+TIME_AT_LAST_RUN = "TIME_AT_LAST_RUN"  # timeS of last alarm 
 TIME_AT_NEXT_ALERT = "TIME_AT_NEXT_ALERT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
 TIME_AT_ZEROELAPSE = "TIME_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
 TIME_CLOCK = "TIME_CLOCK"  # the main clock time
@@ -172,6 +172,7 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+CURRENT_INTERVAL_COUNT = 0  # comment
 EMPTY_BBOX = (0, 0, 0, 0)  # empty XY dict
 EMPTY_XY = (0, 0)  # empty XY dict
 FONT_DEFAULT = "Source Code Pro"  # default font my favorite readable font
@@ -193,120 +194,118 @@ TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
 TIMEMS_NEXT_MOVED = 0  # comment
 TIMEMS_NEXT_UPDATED = 0  # comment
 TIMES_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
-TIMES_NEXT_EVENT = 0  # comment
-TIMES_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0910 DEF3
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-_LAYOUT_ = "layout"  #
-ALPHA_CHANNEL = "alpha_channel"  #
-AUTO_CLOSE = "auto_close"  #
-AUTO_CLOSE_DURATION = "auto_close_duration"  #
-AUTO_SIZE_BUTTON = "auto_size_button"  #
-AUTO_SIZE_BUTTONS = "auto_size_buttons"  #
-AUTO_SIZE_TEXT = "auto_size_text"  #
-BACKGROUND_COLOR = "background_color"  #
-BIND_RETURN_KEY = "bind_return_key"  #
-BORDER_DEPTH = "border_depth"  #
-BORDER_WIDTH = "border_width"  #
-BUTTON_COLOR = "button_color"  #
-BUTTON_TEXT = "button_text"  #
-BUTTON_TYPE = "button_type"  #
-CHANGE_SUBMITS = "change_submits"  #
+_LAYOUT_ = "layout"  # 
+ALPHA_CHANNEL = "alpha_channel"  # 
+AUTO_CLOSE = "auto_close"  # 
+AUTO_CLOSE_DURATION = "auto_close_duration"  # 
+AUTO_SIZE_BUTTON = "auto_size_button"  # 
+AUTO_SIZE_BUTTONS = "auto_size_buttons"  # 
+AUTO_SIZE_TEXT = "auto_size_text"  # 
+BACKGROUND_COLOR = "background_color"  # 
+BIND_RETURN_KEY = "bind_return_key"  # 
+BORDER_DEPTH = "border_depth"  # 
+BORDER_WIDTH = "border_width"  # 
+BUTTON_COLOR = "button_color"  # 
+BUTTON_TEXT = "button_text"  # 
+BUTTON_TYPE = "button_type"  # 
+CHANGE_SUBMITS = "change_submits"  # 
 CHECKBOX_COLOR = "checkbox_color"  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
-CIRCLE_COLOR = "circle_color"  #
-CLICK_SUBMITS = "click_submits"  #
-DEBUGGER_ENABLED = "debugger_enabled"  #
-DEFAULT = "default"  #
-DEFAULT_BUTTON_ELEMENT_SIZE = "default_button_element_size"  #
-DEFAULT_ELEMENT_SIZE = "default_element_size"  #
-DEFAULT_EXTENSION = "default_extension"  #
-DEFAULT_VALUE = "default_value"  #
-DISABLE_CLOSE = "disable_close"  #
-DISABLE_MINIMIZE = "disable_minimize"  #
-DISABLED = "disabled"  #
-DISABLED_BUTTON_COLOR = "disabled_button_color"  #
-ELEMENT_JUSTIFICATION = "element_justification"  #
-ELEMENT_PADDING = "element_padding"  #
-ENABLE_CLOSE_ATTEMPTED_EVENT = "enable_close_attempted_event"  #
-ENABLE_EVENTS = "enable_events"  #
-ENABLED = "enabled"  #
-EXPAND_X = "expand_x"  #
-EXPAND_Y = "expand_y"  #
-FILE_TYPES = "file_types"  #
-FINALIZE = "finalize"  #
-FOCUS = "focus"  #
-FONT = "font"  #
-FORCE_TOPLEVEL = "force_toplevel"  #
-GRAB = "grab"  #
-GRAB_ANYWHERE = "grab_anywhere"  #
-GROUP_ID = "group_id"  #
-HIGHLIGHT_COLORS = "highlight_colors"  #
-ICON = "icon"  #
-IMAGE_DATA = "image_data"  #
-IMAGE_FILENAME = "image_filename"  #
-IMAGE_SIZE = "image_size"  #
-IMAGE_SUBSAMPLE = "image_subsample"  #
-INITIAL_FOLDER = "initial_folder"  #
-INITIAL_VALUE = "initial_value"  #
-JUSTIFICATION = "justification"  #
+CIRCLE_COLOR = "circle_color"  # 
+CLICK_SUBMITS = "click_submits"  # 
+DEBUGGER_ENABLED = "debugger_enabled"  # 
+DEFAULT = "default"  # 
+DEFAULT_BUTTON_ELEMENT_SIZE = "default_button_element_size"  # 
+DEFAULT_ELEMENT_SIZE = "default_element_size"  # 
+DEFAULT_EXTENSION = "default_extension"  # 
+DEFAULT_VALUE = "default_value"  # 
+DISABLE_CLOSE = "disable_close"  # 
+DISABLE_MINIMIZE = "disable_minimize"  # 
+DISABLED = "disabled"  # 
+DISABLED_BUTTON_COLOR = "disabled_button_color"  # 
+ELEMENT_JUSTIFICATION = "element_justification"  # 
+ELEMENT_PADDING = "element_padding"  # 
+ENABLE_CLOSE_ATTEMPTED_EVENT = "enable_close_attempted_event"  # 
+ENABLE_EVENTS = "enable_events"  # 
+ENABLED = "enabled"  # 
+EXPAND_X = "expand_x"  # 
+EXPAND_Y = "expand_y"  # 
+FILE_TYPES = "file_types"  # 
+FINALIZE = "finalize"  # 
+FOCUS = "focus"  # 
+FONT = "font"  # 
+FORCE_TOPLEVEL = "force_toplevel"  # 
+GRAB = "grab"  # 
+GRAB_ANYWHERE = "grab_anywhere"  # 
+GROUP_ID = "group_id"  # 
+HIGHLIGHT_COLORS = "highlight_colors"  # 
+ICON = "icon"  # 
+IMAGE_DATA = "image_data"  # 
+IMAGE_FILENAME = "image_filename"  # 
+IMAGE_SIZE = "image_size"  # 
+IMAGE_SUBSAMPLE = "image_subsample"  # 
+INITIAL_FOLDER = "initial_folder"  # 
+INITIAL_VALUE = "initial_value"  # 
+JUSTIFICATION = "justification"  # 
 JUSTIFICATION_CENTER = "center"  # comment
 JUSTIFICATION_LEFT = "left"  # comment
 JUSTIFICATION_RIGHT = "right"  # comment
-K = "k"  #
-KEEP_ON_TOP = "keep_on_top"  #
-KEY = "key"  #
-LOCATION = "location"  #
-MARGINS = "margins"  #
-METADATA = "metadata"  #
-MODAL = "modal"  #
-NO_TITLEBAR = "no_titlebar"  #
-NON_BLOCKING = "non_blocking"  #
-PAD = "pad"  #
-PROGRESS_BAR_COLOR = "progress_bar_color"  #
-READONLY = "readonly"  #
-RELIEF = "relief"  #
+K = "k"  # 
+KEEP_ON_TOP = "keep_on_top"  # 
+KEY = "key"  # 
+LOCATION = "location"  # 
+MARGINS = "margins"  # 
+METADATA = "metadata"  # 
+MODAL = "modal"  # 
+NO_TITLEBAR = "no_titlebar"  # 
+NON_BLOCKING = "non_blocking"  # 
+PAD = "pad"  # 
+PROGRESS_BAR_COLOR = "progress_bar_color"  # 
+READONLY = "readonly"  # 
+RELIEF = "relief"  # 
 RELIEF_FLAT = "flat"  # comment
-RELIEF_GROOVE = "groove"  #
-RELIEF_RAISED = "raised"  #
-RELIEF_RIDGE = "ridge"  #
-RELIEF_SOLID = "solid"  #
-RELIEF_SUNKEN = "sunken"  #
-RESIZABLE = "resizable"  #
-RETURN_KEYBOARD_EVENTS = "return_keyboard_events"  #
-RIGHT_CLICK_MENU = "right_click_menu"  #
-RIGHT_CLICK_MENU_BACKGROUND_COLOR = "right_click_menu_background_color"  #
-RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR = "right_click_menu_disabled_text_color"  #
-RIGHT_CLICK_MENU_FONT = "right_click_menu_font"  #
-RIGHT_CLICK_MENU_SELECTED_COLORS = "right_click_menu_selected_colors"  #
-RIGHT_CLICK_MENU_TEAROFF = "right_click_menu_tearoff"  #
-RIGHT_CLICK_MENU_TEXT_COLOR = "right_click_menu_text_color"  #
-S = "s"  #
+RELIEF_GROOVE = "groove"  # 
+RELIEF_RAISED = "raised"  # 
+RELIEF_RIDGE = "ridge"  # 
+RELIEF_SOLID = "solid"  # 
+RELIEF_SUNKEN = "sunken"  # 
+RESIZABLE = "resizable"  # 
+RETURN_KEYBOARD_EVENTS = "return_keyboard_events"  # 
+RIGHT_CLICK_MENU = "right_click_menu"  # 
+RIGHT_CLICK_MENU_BACKGROUND_COLOR = "right_click_menu_background_color"  # 
+RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR = "right_click_menu_disabled_text_color"  # 
+RIGHT_CLICK_MENU_FONT = "right_click_menu_font"  # 
+RIGHT_CLICK_MENU_SELECTED_COLORS = "right_click_menu_selected_colors"  # 
+RIGHT_CLICK_MENU_TEAROFF = "right_click_menu_tearoff"  # 
+RIGHT_CLICK_MENU_TEXT_COLOR = "right_click_menu_text_color"  # 
+S = "s"  # 
 SCROLLABLE = "scrollable"  # can this column be scrolled bool
 SET_TO_INDEX = "set_to_index"  # change selection to a particular choice starting with index = 0
-SIZE = "size"  #
-TARGET = "target"  #
-TEXT = "text"  #
-TEXT_COLOR = "text_color"  #
-TEXT_JUSTIFICATION = "text_justification"  #
-TIMEOUT_KEY = "timeout_key"  #
-TITLE = "title"  #
-TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  #
-TITLEBAR_FONT = "titlebar_font"  #
-TITLEBAR_ICON = "titlebar_icon"  #
-TITLEBAR_TEXT_COLOR = "titlebar_text_color"  #
-TOOLTIP = "tooltip"  #
-TRANSPARENT_COLOR = "transparent_color"  #
-TTK_THEME = "ttk_theme"  #
-USE_CUSTOM_TITLEBAR = "use_custom_titlebar"  #
-USE_DEFAULT_FOCUS = "use_default_focus"  #
-USE_TTK_BUTTONS = "use_ttk_buttons"  #
+SIZE = "size"  # 
+TARGET = "target"  # 
+TEXT = "text"  # 
+TEXT_COLOR = "text_color"  # 
+TEXT_JUSTIFICATION = "text_justification"  # 
+TIMEOUT_KEY = "timeout_key"  # 
+TITLE = "title"  # 
+TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  # 
+TITLEBAR_FONT = "titlebar_font"  # 
+TITLEBAR_ICON = "titlebar_icon"  # 
+TITLEBAR_TEXT_COLOR = "titlebar_text_color"  # 
+TOOLTIP = "tooltip"  # 
+TRANSPARENT_COLOR = "transparent_color"  # 
+TTK_THEME = "ttk_theme"  # 
+USE_CUSTOM_TITLEBAR = "use_custom_titlebar"  # 
+USE_DEFAULT_FOCUS = "use_default_focus"  # 
+USE_TTK_BUTTONS = "use_ttk_buttons"  # 
 VALUE = "value"  # the value of the element
 VALUES = "values"  # list of values
-VERTICAL_ALIGNMENT = "vertical_alignment"  #
-VERTICAL_SCROLL_ONLY = "verticale_scroll_only"  #
+VERTICAL_ALIGNMENT = "vertical_alignment"  # 
+VERTICAL_SCROLL_ONLY = "verticale_scroll_only"  # 
 VISIBLE = "visible"  # visibility of elements
 
 
@@ -358,7 +357,7 @@ CLOSE_LIST = [  # list with close statuses
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0906 button elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-BTN_DISMISS20 = {  #
+BTN_DISMISS20 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the DOWN button
 	IMAGE_FILENAME: "res/dismiss20.png",  # filename for the button icon
 	BORDER_WIDTH: 0,  # button xpand key
@@ -370,7 +369,7 @@ BTN_DISMISS20 = {  #
 }
 
 
-BTN_DOWN20 = {  #
+BTN_DOWN20 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the DOWN button
 	IMAGE_FILENAME: "res/down20.png",  # filename for the button icon
 	BORDER_WIDTH: 0,  # button xpand key
@@ -382,7 +381,7 @@ BTN_DOWN20 = {  #
 }
 
 
-BTN_DOWN32 = {  #
+BTN_DOWN32 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the DOWN button
 	IMAGE_FILENAME: "res/down32.png",  # filename for the button icon
 	BORDER_WIDTH: 0,  # button xpand key
@@ -394,7 +393,7 @@ BTN_DOWN32 = {  #
 }
 
 
-BTN_EDIT20 = {  #
+BTN_EDIT20 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the EDIT button
 	IMAGE_FILENAME: "res/edit20.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -405,7 +404,7 @@ BTN_EDIT20 = {  #
 }
 
 
-BTN_EDIT32 = {  #
+BTN_EDIT32 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the EDIT button
 	IMAGE_FILENAME: "res/edit32.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -416,7 +415,7 @@ BTN_EDIT32 = {  #
 }
 
 
-BTN_QUIT20 = {  #
+BTN_QUIT20 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the QUIT button
 	IMAGE_FILENAME: "res/quit20.png",  # filename for the button icon
 	TOOLTIP: "quit the app",  # button_text empty for the QUIT button
@@ -428,7 +427,7 @@ BTN_QUIT20 = {  #
 }
 
 
-BTN_QUIT32 = {  #
+BTN_QUIT32 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the QUIT button
 	IMAGE_FILENAME: "res/quit32.png",  # filename for the button icon
 	TOOLTIP: "quit the app",  # button_text empty for the QUIT button
@@ -440,7 +439,7 @@ BTN_QUIT32 = {  #
 }
 
 
-BTN_UP20 = {  #
+BTN_UP20 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the UP button
 	IMAGE_FILENAME: "res/up20.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -451,7 +450,7 @@ BTN_UP20 = {  #
 }
 
 
-BTN_UP32 = {  #
+BTN_UP32 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the UP button
 	IMAGE_FILENAME: "res/up32.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -462,7 +461,7 @@ BTN_UP32 = {  #
 }
 
 
-BTN_XPAND20 = {  #
+BTN_XPAND20 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the XPAND button
 	IMAGE_FILENAME: "res/xpand20.png",  # filename for the button icon
 	TOOLTIP: "expand to the big window from where you can edit events",  # tooltip
@@ -474,7 +473,7 @@ BTN_XPAND20 = {  #
 }
 
 
-BTN_XPAND32 = {  #
+BTN_XPAND32 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the XPAND button
 	IMAGE_FILENAME: "res/xpand32.png",  # filename for the button icon
 	TOOLTIP: "expand to the big window from where you can edit events",  # tooltip
@@ -486,7 +485,7 @@ BTN_XPAND32 = {  #
 }
 
 
-BTN_ZERO20 = {  #
+BTN_ZERO20 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the ZERO button
 	IMAGE_FILENAME: "res/zero20.png",  # filename for the button icon
 	TOOLTIP: "zero the elapsed timer",  # tooltip
@@ -498,7 +497,7 @@ BTN_ZERO20 = {  #
 }
 
 
-BTN_ZERO32 = {  #
+BTN_ZERO32 = {  # 
 	BUTTON_TEXT: "",  # button_text empty for the ZERO button
 	IMAGE_FILENAME: "res/zero32.png",  # filename for the button icon
 	TOOLTIP: "zero the elapsed timer",  # tooltip
@@ -725,36 +724,36 @@ class CLASS_CLOCKS(object):
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""  # make a local key sourcer
 		self._THIS_FORM_NAME_ = formName_  # adopt formName_
 
-		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  #
-		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  #
-		self._ALPHA_LOW_ = SZ_ALPHA_LOW  #
-		self._BBOX_ = EMPTY_BBOX  #
+		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  # 
+		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  # 
+		self._ALPHA_LOW_ = SZ_ALPHA_LOW  # 
+		self._BBOX_ = EMPTY_BBOX  # 
 		self._CHANGED_EVENTS_ = False  # comment
 		self._CHANGED_VALUES_ = False  # comment
-		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM  #
-		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY  #
-		self._CLOSE_BBOX_ = EMPTY_BBOX  #
-		self._CURRENT_EVENTMODE_ = None  #
-		self._CURRENT_EVENT_ = None  #
-		self._CURRENT_LOCATION_ = EMPTY_XY  #
-		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  #
-		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  #
-		self._CURRENT_VALUES = {}  #
-		self._DIMMED_ = False  #
-		self._KEY_DICT_ = {}  #
-		self._KEY_DICT_REVERSE_ = {}  #
-		self._LAST_EVENT_ = None  #
-		self._LAST_LOCATION_ = EMPTY_XY  #
-		self._LAST_MOUSE_LOCATION_ = EMPTY_XY  #
-		self._LAST_MOUSE_STATUS_ = MOUSE_STATUS_NONE  #
-		self._LAST_VALUES_ = {}  #
-		self._MAINFRAME_ = None  #
+		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM  # 
+		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY  # 
+		self._CLOSE_BBOX_ = EMPTY_BBOX  # 
+		self._CURRENT_EVENTMODE_ = None  # 
+		self._CURRENT_EVENT_ = None  # 
+		self._CURRENT_LOCATION_ = EMPTY_XY  # 
+		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  # 
+		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
+		self._CURRENT_VALUES = {}  # 
+		self._DIMMED_ = False  # 
+		self._KEY_DICT_ = {}  # 
+		self._KEY_DICT_REVERSE_ = {}  # 
+		self._LAST_EVENT_ = None  # 
+		self._LAST_LOCATION_ = EMPTY_XY  # 
+		self._LAST_MOUSE_LOCATION_ = EMPTY_XY  # 
+		self._LAST_MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
+		self._LAST_VALUES_ = {}  # 
+		self._MAINFRAME_ = None  # 
 		self._MPX_ = EMPTY_XY  # comment
-		self._SCREEN_DIMS_ = EMPTY_XY  #
-		self._SIZE_ = EMPTY_XY  #
-		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK  #
-		self._TIME_TO_MOVE_ = ZERO_CLOCK  #
-		self._TIME_TO_UPDATE_ = ZERO_CLOCK  #
+		self._SCREEN_DIMS_ = EMPTY_XY  # 
+		self._SIZE_ = EMPTY_XY  # 
+		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK  # 
+		self._TIME_TO_MOVE_ = ZERO_CLOCK  # 
+		self._TIME_TO_UPDATE_ = ZERO_CLOCK  # 
 
 		self._DICTIN_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -801,9 +800,9 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			TIME_AT_NEXT_ALERT: DAYSECS,  # comment
 			TIME_AT_ZEROELAPSE: DAYSECS,  # comment
-			TIME_CLOCK: DAYSECS,  #
-			TIME_ELAPSED: TIME995959,  #
-			TIME_TOGO: DAYSECS,  #
+			TIME_CLOCK: DAYSECS,  # 
+			TIME_ELAPSED: TIME995959,  # 
+			TIME_TOGO: DAYSECS,  # 
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -975,12 +974,12 @@ class CLASS_CLOCKS(object):
 			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
 			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
 			ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
-			FORCE_TOPLEVEL: None,  #
+			FORCE_TOPLEVEL: None,  # 
 			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
-			MARGINS: SZ_MARGINS_ALL,  #
+			MARGINS: SZ_MARGINS_ALL,  # 
 			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
-			TITLE: TITLE_CLOCKS,  #
+			TITLE: TITLE_CLOCKS,  # 
 			_LAYOUT_: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -1182,19 +1181,19 @@ class CLASS_CLOCKS(object):
 		if checkboxRunaway_ is not None:
 			self._DICTIN_[CHECKBOX_RUNAWAY] = checkboxRunaway_
 
-		if eventmode_ is not None:
-			self.CURRENT_EVENTMODE = eventmode_
+		if eventMode_ is not None:
+			self.CURRENT_EVENTMODE = eventMode_
 
 			if intervalCount_ is not None:
 				self._DICTIN_[INTERVAL_COUNT] = intervalCount_
 
-			if (eventmode_ == EVENTMODE_INTERVAL):
+			if (eventMode_ == EVENTMODE_INTERVAL):
 				self.intervalCountOn()
 			else:
 				self.intervalCountOff()
 
-		if time_at_next_ is not None:
-			self._DICTIN_[TIME_AT_NEXT] = time_at_next_
+		if timeAtNext_ is not None:
+			self._DICTIN_[TIME_AT_NEXT] = timeAtNext_
 
 		if timeAtZeroelapse_ is not None:
 			self._DICTIN_[TIME_AT_ZEROELAPSE] = timeAtZeroelapse_
@@ -1239,7 +1238,7 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		for _thisKey_, _thisVal_ in self._DICT_KEYS_TIME_.items():
 			_DICTINSTR_[_thisKey_] = CF.nrmlIntToHMS((thisVal_ % CF._DICT_KEYS_TIME_))
-
+			
 		for _thisKey_, _thisVal_ in self._DICT_KEYS_INT_.items():
 			_DICTINSTR_[_thisKey_] = f"""{self._DICTIN_[_thisKey_]:_thisVal_}"""
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -1374,3 +1373,5 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
+
+
