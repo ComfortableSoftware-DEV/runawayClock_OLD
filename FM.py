@@ -1668,7 +1668,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_VAL2_DEF, "CLOCKS", "_DIMMED_", "False", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_VAL2_DEF, "CLOCKS", "_KEY_DICT_", "{}", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_VAL2_DEF, "CLOCKS", "_KEY_DICT_REVERSE_", "{}", "",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_VAL2_DEF, "CLOCKS", "_KEY_DICT_TIMES_", "[]", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_VAL2_DEF, "CLOCKS", "_KEY_LIST_TIMES_", "[]", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_VAL2_DEF, "CLOCKS", "_LAST_EVENT_", "None", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_VAL2_DEF, "CLOCKS", "_LAST_LOCATION_", "EMPTY_XY", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_VAL2_DEF, "CLOCKS", "_LAST_MOUSE_LOCATION_", "EMPTY_XY", "",),
@@ -6009,8 +6009,8 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT[_thisClassName_] = {}
 
 			if _isThisATime_ == "True":
-				FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_TIMES_.append(_thisElementName_){NEWLINE}"""
-				FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_TIMES_.append(self._USE_THIS_KEY_({_thisElementName_})){NEWLINE}"""
+				FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_LIST_TIMES_.append({_thisElementName_[1:-1]}){NEWLINE}"""
+				FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_({_thisElementName_[1:-1]})){NEWLINE}"""
 
 			FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")

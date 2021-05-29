@@ -744,7 +744,7 @@ class CLASS_CLOCKS(object):
 		self._DIMMED_ = False  # 
 		self._KEY_DICT_ = {}  # 
 		self._KEY_DICT_REVERSE_ = {}  # 
-		self._KEY_DICT_TIMES_ = {}  # 
+		self._KEY_LIST_TIMES_ = []  # 
 		self._LAST_EVENT_ = None  # 
 		self._LAST_LOCATION_ = EMPTY_XY  # 
 		self._LAST_MOUSE_LOCATION_ = EMPTY_XY  # 
@@ -843,8 +843,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_NEXT_ALERT)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_DICT_TIMES_.append(_TEXT_TIME_AT_NEXT_ALERT_)
-		self._KEY_DICT_TIMES_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_NEXT_ALERT_))
+		self._KEY_LIST_TIMES_.append(TEXT_TIME_AT_NEXT_ALERT)
+		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_AT_NEXT_ALERT))
 		self._KEY_DICT_[TIME_AT_NEXT_ALERT] = f"""{self._USE_THIS_KEY_(TIME_AT_NEXT_ALERT)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_AT_NEXT_ALERT)}"""] = TIME_AT_NEXT_ALERT
 
@@ -854,8 +854,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_DICT_TIMES_.append(_TEXT_TIME_AT_ZEROELAPSE_)
-		self._KEY_DICT_TIMES_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_ZEROELAPSE_))
+		self._KEY_LIST_TIMES_.append(TEXT_TIME_AT_ZEROELAPSE)
+		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_AT_ZEROELAPSE))
 		self._KEY_DICT_[TIME_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}"""] = TIME_AT_ZEROELAPSE
 
@@ -865,8 +865,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_CLOCK)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_DICT_TIMES_.append(_TEXT_TIME_CLOCK_)
-		self._KEY_DICT_TIMES_.append(self._USE_THIS_KEY_(_TEXT_TIME_CLOCK_))
+		self._KEY_LIST_TIMES_.append(TEXT_TIME_CLOCK)
+		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_CLOCK))
 		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""] = TIME_CLOCK
 
@@ -876,8 +876,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_DICT_TIMES_.append(_TEXT_TIME_ELAPSED_)
-		self._KEY_DICT_TIMES_.append(self._USE_THIS_KEY_(_TEXT_TIME_ELAPSED_))
+		self._KEY_LIST_TIMES_.append(TEXT_TIME_ELAPSED)
+		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_ELAPSED))
 		self._KEY_DICT_[TIME_ELAPSED] = f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}"""] = TIME_ELAPSED
 
@@ -887,8 +887,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_TOGO)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_DICT_TIMES_.append(_TEXT_TIME_TOGO_)
-		self._KEY_DICT_TIMES_.append(self._USE_THIS_KEY_(_TEXT_TIME_TOGO_))
+		self._KEY_LIST_TIMES_.append(TEXT_TIME_TOGO)
+		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_TOGO))
 		self._KEY_DICT_[TIME_TOGO] = f"""{self._USE_THIS_KEY_(TIME_TOGO)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_TOGO)}"""] = TIME_TOGO
 
@@ -1015,7 +1015,7 @@ class CLASS_CLOCKS(object):
 			DIMMED: self._DIMMED_,
 			KEY_DICT: self._KEY_DICT_,
 			KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
-			KEY_DICT_TIMES: self._KEY_DICT_TIMES_,
+			KEY_LIST_TIMES: self._KEY_LIST_TIMES_,
 			LAST_EVENT: self._LAST_EVENT_,
 			LAST_LOCATION: self._LAST_LOCATION_,
 			LAST_MOUSE_LOCATION: self._LAST_MOUSE_LOCATION_,
