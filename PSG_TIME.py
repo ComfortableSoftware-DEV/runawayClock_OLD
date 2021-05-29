@@ -17,7 +17,6 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALARMPOPUP_PROPER = "ALARMPOPUP_PROPER"  # key for the button return for the popup
 ALARMPOPUP_TEXT_TEXT = "ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
-ALPHA_CHANNEL = "ALPHA_CHANNEL"  #
 ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
 ALPHA_LOW = "ALPHA_LOW"  #
 APPMODE = "APPMODE"  # app mode key
@@ -246,7 +245,6 @@ TIMES_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0910 DEF3
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-_LAYOUT_ = "layout"  #
 ALPHA_CHANNEL = "alpha_channel"  #
 AUTO_CLOSE = "auto_close"  #
 AUTO_CLOSE_DURATION = "auto_close_duration"  #
@@ -304,6 +302,7 @@ JUSTIFICATION_RIGHT = "right"  # comment
 K = "k"  #
 KEEP_ON_TOP = "keep_on_top"  #
 KEY = "key"  #
+LAYOUT = "layout"  #
 LOCATION = "location"  #
 MARGINS = "margins"  #
 METADATA = "metadata"  #
@@ -1025,10 +1024,10 @@ class CLASS_CLOCKS(object):
 			FORCE_TOPLEVEL: None,  #
 			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
+			LAYOUT: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
 			MARGINS: SZ_MARGINS_ALL,  #
 			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
 			TITLE: TITLE_CLOCKS,  #
-			_LAYOUT_: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1198,7 +1197,7 @@ class CLASS_CLOCKS(object):
 
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER)) or ((self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER) and (self._DIMMED_ is True) and (self._CHECKBOX_ALPHA_DIM_ is False)):
-			self._MAINFRAME_.AlphaChannel = APPDS[ALPHA_HIGH]
+			self._MAINFRAME_.AlphaChannel = self._ALPHA_HIGH_
 			alphaMode = False
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
