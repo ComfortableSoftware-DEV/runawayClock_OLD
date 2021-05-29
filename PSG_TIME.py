@@ -562,7 +562,7 @@ BTN_ZERO32 = {  #
 # * SCTN0908 checkbox elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CHECKBOX_ALPHA_DIM01 = {  # checkbox for alpha under mouse
-	TEXT: "ALPHA_LOW",  # simple text reminder
+	TEXT: "ALPHA_DIM",  # simple text reminder
 	TOOLTIP: "low alpha under mouse",  # comment
 	DEFAULT: True,  # leave it on by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
@@ -1230,7 +1230,7 @@ class CLASS_CLOCKS(object):
 			self._DICTIN_[CHECKBOX_RUNAWAY] = checkboxRunaway_
 
 		if eventMode_ is not None:
-			self.CURRENT_EVENTMODE = eventMode_
+			self._CURRENT_EVENTMODE_ = eventMode_
 
 			if intervalCount_ is not None:
 				self._DICTIN_[INTERVAL_COUNT] = intervalCount_
@@ -1605,12 +1605,10 @@ def findNextAlarmEvent():
 				nameNextEvent_=_nextEventList_[0][3],
 				timeAtNext_=_nextEventList_[0][0],
 			)
-		CURRENT_EVENTMODE = _nextEventList_[0][2]# (time, index, mode, name)
-		CURRENT_INTERVAL_COUNT = _nextEventList_[0][1]
-		NAME_NEXT_EVENT_STR = _nextEventList_[0][3]# (time, index, mode, name)
+		CURRENT_EVENTMODE_VAL = _nextEventList_[0][2]  # (time, index, mode, name, intervalCount)
+		CURRENT_INTERVAL_COUNT = _nextEventList_[0][4]
+		NAME_NEXT_EVENT_STR = _nextEventList_[0][3]  # (time, index, mode, name, intervalCount)
 		TIME_S_AT_NEXT_EVENT = _nextEventList_[0][0]
-
-
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
