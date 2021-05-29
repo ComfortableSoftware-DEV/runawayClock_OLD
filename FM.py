@@ -1684,6 +1684,8 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_03_CHECK_MOUSE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "define checkMouse",),
 	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "easyUpdate.py", "load the whole thing from the file for easyUpdate",),
 	("PSGVAL__CLOCKS_FUNC_03_ENINT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enint", "enint.py", "read the frame and set self._RESULT_",),
+	("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTOFF", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOff", "intervalCountOff.py", "turn interval count off",),
+	("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTON", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOn", "intervalCountOn.py", "turn interval count on",),
 	("PSGVAL__CLOCKS_FUNC_03_ENSTRING", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enstring", "enstring.py", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_QUICK_READ", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "quickRead", "quickRead.py", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_READ_TO_DICT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "readToDict", "readToDict.py", "define readToDict",),
