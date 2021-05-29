@@ -17,8 +17,9 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALARMPOPUP_PROPER = "ALARMPOPUP_PROPER"  # key for the button return for the popup
 ALARMPOPUP_TEXT_TEXT = "ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
+ALPHA_CHANNEL = "ALPHA_CHANNEL"  #
 ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
-ALPHA_LOW = "ALPHA_LOW"  # alphalow key
+ALPHA_LOW = "ALPHA_LOW"  #
 APPMODE = "APPMODE"  # app mode key
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
@@ -27,6 +28,7 @@ APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # mouseOver mode (xpand from clocks t
 APPMODE_NEW_ALARMPOPUP = "APPMODE_NEW_ALARMPOPUP"  # main mode (xpand from clocks to this)
 APPMODE_NONE = "APPMODE_NONE"  # NONE mode
 APPMODE_THECLOCK = "APPMODE_THECLOCK"  # theClock mode (xpand from clocks to this)
+BBOX = "BBOX"  #
 BTN_DISMISS = "BTN_DISMISS"  # key for all of the button xpand
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
@@ -35,6 +37,8 @@ BTN_QUIT_EDITOR = "BTN_QUIT_EDITOR"  # key for all of the button xpand
 BTN_UP = "BTN_UP"  # key for all of the button xpand
 BTN_XPAND = "BTN_XPAND"  # key for all of the button xpand
 BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
+CHANGED_EVENTS = "CHANGED_EVENTS"  #
+CHANGED_VALUES = "CHANGED_VALUES"  #
 CHECKBOX_ALPHA_DIM = "CHECKBOX_ALPHA_DIM"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 CHECKBOX_DISMISSED = "CHECKBOX_DISMISSED"  # key for avoiding the mouse bool
 CHECKBOX_ENABLED = "CHECKBOX_ENABLED"  # key for avoiding the mouse bool
@@ -45,6 +49,7 @@ CHECKBOX_PREDISMISSABLE = "CHECKBOX_PREDISMISSABLE"  # key for avoiding the mous
 CHECKBOX_RUNAWAY = "CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
 CHECKBOX_SNOOZABLE = "CHECKBOX_SNOOZABLE"  # key for avoiding the mouse bool
 CHECKBOX_SNOOZED = "CHECKBOX_SNOOZED"  # key for avoiding the mouse bool
+CLOSE_BBOX = "CLOSE_BBOX"  #
 COLOR_ALERT_BACKGROUND = "#662244"  # alert background color
 COLOR_ALERT_TEXT = "#CC4466"  # color of text on alert popup
 COLOR_BACKGROUND = "#331122"  # the background of the main frames
@@ -65,6 +70,18 @@ COLOR_TIME_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
 COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
+COLUMN01 = "COLUMN01"  #
+COLUMN02 = "COLUMN02"  #
+CURRENT_EVENT = "CURRENT_EVENT"  #
+CURRENT_EVENTMODE = "CURRENT_EVENTMODE"  #
+CURRENT_LOCATION = "CURRENT_LOCATION"  #
+CURRENT_MOUSE_LOCATION = "CURRENT_MOUSE_LOCATION"  #
+CURRENT_MOUSE_STATUS = "CURRENT_MOUSE_STATUS"  #
+CURRENT_VALUE = "CURRENT_VALUE"  #
+DICT_KEYS_INT = "DICT_KEYS_INT"  #
+DICT_KEYS_TIME = "DICT_KEYS_TIME"  #
+DICTOUT = "DICTOUT"  #
+DIMMED = "DIMMED"  #
 DISMISSED = "DISMISSED"  # alarm dismissed bool
 EVENT_ENTRIES = "EVENT_ENTRIES"  #
 EVENT_NAME = "EVENT_NAME"  # name of the event
@@ -92,6 +109,16 @@ INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
 INTERVAL_COUNT = "INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
+KEY_DICT = "KEY_DICT"  #
+KEY_DICT_REVERSE = "KEY_DICT_REVERSE"  #
+KEY_LIST_TIMES = "KEY_LIST_TIMES"  #
+LAST_EVENT = "LAST_EVENT"  #
+LAST_LOCATION = "LAST_LOCATION"  #
+LAST_MOUSE_LOCATION = "LAST_MOUSE_LOCATION"  #
+LAST_MOUSE_STATUS = "LAST_MOUSE_STATUS"  #
+LAST_VALUES = "LAST_VALUES"  #
+LAYOUT = "LAYOUT"  #
+MAINFRAME = "MAINFRAME"  #
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
 MOUSE_STATUS_CLOSE_NE = "MOUSE_STATUS_CLOSE_NE"  # mouse is northeast of checked element
@@ -110,8 +137,12 @@ MOUSE_STATUS_S = "MOUSE_STATUS_S"  # mouse is south of checked element
 MOUSE_STATUS_SE = "MOUSE_STATUS_SE"  # mouse is southeast of checked element
 MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
+MPX = "MPX"  #
 NAME_NEXT_EVENT = "NAME_NEXT_EVENT"  # name of the next event up
+PERIODIC = "PERIODIC"  #
 PREDISMISSABLE = "PREDISMISSABLE"  # event can be dismissed in advance
+SCREEN_DIMS = "SCREEN_DIMS"  #
+SIZE = "SIZE"  #
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # is this event snoozed bool
 SZ_ALERT_TEXT = 20  # font size of alert text
@@ -141,6 +172,15 @@ SZ_TIMEMS_BETWEEN_MOVES = 500  # time_ms between moves
 SZ_TIMEMS_BETWEEN_UPDATES = 500  # time_ms between updating windows/frames/etc
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
+TEXT_INTERVAL_COUNT = "TEXT_INTERVAL_COUNT"  #
+TEXT_NAME_NEXT_EVENT = "TEXT_NAME_NEXT_EVENT"  #
+TEXT_TIME_AT_NEXT_ALERT = "TEXT_TIME_AT_NEXT_ALERT"  #
+TEXT_TIME_AT_ZEROELAPSE = "TEXT_TIME_AT_ZEROELAPSE"  #
+TEXT_TIME_CLOCK = "TEXT_TIME_CLOCK"  #
+TEXT_TIME_ELAPSED = "TEXT_TIME_ELAPSED"  #
+TEXT_TIME_TOGO = "TEXT_TIME_TOGO"  #
+THIS_FORM_NAME = "THIS_FORM_NAME"  #
+THIS_KEY_BASE = "THIS_KEY_BASE"  #
 TIME_ALARM = "TIME_ALARM"  # the alarm time
 TIME_AT_LAST_RUN = "TIME_AT_LAST_RUN"  # timeS of last alarm
 TIME_AT_NEXT_ALERT = "TIME_AT_NEXT_ALERT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
@@ -152,6 +192,9 @@ TIME_INTERVAL__BEGIN = "TIME_INTERVAL__BEGIN"  # key for time interval starts al
 TIME_INTERVAL__END = "TIME_INTERVAL__END"  # key for time an interval goes to leep and stops alerting
 TIME_INTERVAL_START = "TIME_INTERVAL_START"  # interval timer starting time, reset each time the interval goes off
 TIME_LEN_OF_ALERT = "TIME_LEN_OF_ALERT"  # length of alerting
+TIME_TO_CHECK_MOUSE = "TIME_TO_CHECK_MOUSE"  #
+TIME_TO_MOVE = "TIME_TO_MOVE"  #
+TIME_TO_UPDATE = "TIME_TO_UPDATE"  #
 TIME_TOGO = "TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 TIMEH_ADJUST_HRS = 0  # comment
 TIMEM_ADJUST_MINS = 0  # comment
@@ -160,6 +203,8 @@ TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
 TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
 TITLE_THECLOCK = "THECLOCK"  # string with window title for APPMODE_CLOCKS
+USE_THIS_KEY = "USE_THIS_KEY"  #
+WINDOW = "WINDOW"  #
 ZERO_CLOCK = 0  # all the zeros
 ZERO_CLOCKSTR = "00:00:00"  # all the zeros
 
@@ -895,28 +940,28 @@ class CLASS_CLOCKS(object):
 		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
-				SG.Spin(  # add a new TEXT element to clocks column
+				SG.Text(  # add a new TEXT element to clocks column
 					**self._TEXT_TIME_CLOCK_  # add the main clock
 				),
 			],
 			[
-				SG.Spin(  # add a new row to clocks column
+				SG.Text(  # add a new row to clocks column
 					**self._TEXT_TIME_AT_ZEROELAPSE_  # add time to go
 				),
-				SG.Spin(  # add a new text element to row01 clocks column
+				SG.Text(  # add a new text element to row01 clocks column
 					**self._TEXT_TIME_ELAPSED_  # add elapsed time
 				),
 			],
 			[
-				SG.Spin(  # add a new text element to row01 clocks column
+				SG.Text(  # add a new text element to row01 clocks column
 					**self._TEXT_TIME_TOGO_  # add elapsed time
 				),
-				SG.Spin(  # add a new row to clocks column
+				SG.Text(  # add a new row to clocks column
 					**self._TEXT_TIME_AT_NEXT_ALERT_  # add time to go
 				),
 			],
 			[
-				SG.Spin(  # add a new text element to row01 clocks column
+				SG.Text(  # add a new text element to row01 clocks column
 					**self._TEXT_NAME_NEXT_EVENT_  # add the main clock
 				),
 			],
@@ -949,7 +994,7 @@ class CLASS_CLOCKS(object):
 				),
 			],
 			[
-				SG.Spin(  # add reset button for elapsed time
+				SG.Text(  # add reset button for elapsed time
 					**self._TEXT_INTERVAL_COUNT_  # add the zero button to clocks
 				),
 			],
