@@ -113,6 +113,7 @@ K_FIRSTRUN = "K_FIRSTRUN"  # True if just started, false after init1()
 K_FORM_NAME = "K_FORM_NAME"  # the name of the form
 K_INDEX_OF_NEXT_EVENT = "K_INDEX_OF_NEXT_EVENT"  # index of the next event to alert
 K_INTERVAL_COUNT = "K_INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
+K_IS_ALERTING_NOW = "K_IS_ALERTING_NOW"  #
 K_KEY_DICT = "K_KEY_DICT"  #
 K_KEY_DICT_REVERSE = "K_KEY_DICT_REVERSE"  #
 K_KEY_LIST_TIMES = "K_KEY_LIST_TIMES"  #
@@ -124,6 +125,7 @@ K_LAST_VALUES = "K_LAST_VALUES"  #
 K_LAYOUT = "K_LAYOUT"  #
 K_MAINFRAME = "K_MAINFRAME"  #
 K_MPX = "K_MPX"  #
+K_NAME = "K_NAME"  #
 K_NAME_NEXT_EVENT = "K_NAME_NEXT_EVENT"  # name of the next event up
 K_PERIODIC = "K_PERIODIC"  #
 K_PREDISMISSABLE = "K_PREDISMISSABLE"  # event can be dismissed in advance
@@ -382,6 +384,11 @@ ALL_THE_FORMS = {  # comment
 # * SCTN0903 lists
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALERTING_LIST = [  # list that holds all currently alarming events
+]
+
+
+APPDS_TIMES_LIST = [  # build the list of all times in APPDS_MAIN that need midnight attention
+	K_TIME_AT_NEXT_ALERT,  # build the list of all times in APPDS_MAIN
 ]
 
 
@@ -785,13 +792,13 @@ class CLASS_CLOCKS(object):
 		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM  #
 		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY  #
 		self._CLOSE_BBOX_ = EMPTY_BBOX  #
+		self._CURRENTLY_DIMMED_ = False  #
 		self._CURRENT_EVENTMODE_ = None  #
 		self._CURRENT_EVENT_ = None  #
 		self._CURRENT_LOCATION_ = EMPTY_XY  #
 		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  #
 		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  #
 		self._CURRENT_VALUES = {}  #
-		self._DIMMED_ = False  #
 		self._KEY_DICT_ = {}  #
 		self._KEY_DICT_REVERSE_ = {}  #
 		self._KEY_LIST_TIMES_ = []  #
@@ -1058,13 +1065,13 @@ class CLASS_CLOCKS(object):
 			K_CHECKBOX_ALPHA_DIM: self._CHECKBOX_ALPHA_DIM_,
 			K_CHECKBOX_RUNAWAY: self._CHECKBOX_RUNAWAY_,
 			K_CLOSE_BBOX: self._CLOSE_BBOX_,
+			K_CURRENTLY_DIMMED: self._CURRENTLY_DIMMED_,
 			K_CURRENT_EVENTMODE: self._CURRENT_EVENTMODE_,
 			K_CURRENT_EVENT: self._CURRENT_EVENT_,
 			K_CURRENT_LOCATION: self._CURRENT_LOCATION_,
 			K_CURRENT_MOUSE_LOCATION: self._CURRENT_MOUSE_LOCATION_,
 			K_CURRENT_MOUSE_STATUS: self._CURRENT_MOUSE_STATUS_,
 			K_CURRENT_VALUE: self._CURRENT_VALUES,
-			K_DIMMED: self._DIMMED_,
 			K_KEY_DICT: self._KEY_DICT_,
 			K_KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
 			K_KEY_LIST_TIMES: self._KEY_LIST_TIMES_,
@@ -1100,8 +1107,7 @@ class CLASS_CLOCKS(object):
 			ALL_THE_FORMS
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_ = SG.Window(**self._WINDOW_).finalize()
-		ALL_THE_FORMS[self._THIS_FORM_NAME_] = self._MAINFRAME_
-		self.init()
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = self
 		# return self
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1219,7 +1225,7 @@ class CLASS_CLOCKS(object):
 			checkboxAlphaDim_=None,
 			checkboxRunaway_=None,
 			eventMode_=None,
-			intervalCount_=None,
+			currentIntervalCount_=None,
 			nameNextEvent_=None,
 			timeAtNext_=None,
 			timeAtZeroelapse_=None,
@@ -1229,19 +1235,19 @@ class CLASS_CLOCKS(object):
 		):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		if nameNextEvent_ is not None:
-			self._DICTIN_[NAME_NEXT_EVENT] = nameNextEvent_
+			self._DICTIN_[K_NAME_NEXT_EVENT] = nameNextEvent_
 
 		if checkboxAlphaDim_ is not None:
-			self._DICTIN_[CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
+			self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
 
 		if checkboxRunaway_ is not None:
-			self._DICTIN_[CHECKBOX_RUNAWAY] = checkboxRunaway_
+			self._DICTIN_[K_CHECKBOX_RUNAWAY] = checkboxRunaway_
 
 		if eventMode_ is not None:
 			self.CURRENT_EVENTMODE = eventMode_
 
-			if intervalCount_ is not None:
-				self._DICTIN_[INTERVAL_COUNT] = intervalCount_
+			if currentIntervalCount_ is not None:
+				self._DICTIN_[K_INTERVAL_COUNT] = currentIntervalCount_
 
 			if (eventMode_ == EVENTMODE_INTERVAL):
 				self.intervalCountOn()
@@ -1249,19 +1255,19 @@ class CLASS_CLOCKS(object):
 				self.intervalCountOff()
 
 		if timeAtNext_ is not None:
-			self._DICTIN_[TIME_AT_NEXT] = timeAtNext_
+			self._DICTIN_[K_TIME_AT_NEXT] = timeAtNext_
 
 		if timeAtZeroelapse_ is not None:
-			self._DICTIN_[TIME_AT_ZEROELAPSE] = timeAtZeroelapse_
+			self._DICTIN_[K_TIME_AT_ZEROELAPSE] = timeAtZeroelapse_
 
 		if timeClock_ is not None:
-			self._DICTIN_[TIME_CLOCK] = timeClock_
+			self._DICTIN_[K_TIME_CLOCK] = timeClock_
 
 		if timeElapsed_ is not None:
-			self._DICTIN_[TIME_ELAPSED] = timeElapsed_
+			self._DICTIN_[K_TIME_ELAPSED] = timeElapsed_
 
 		if timeTogo_ is not None:
-			self._DICTIN_[TIME_TOGO] = timeTogo_
+			self._DICTIN_[K_TIME_TOGO] = timeTogo_
 
 		self.enint()
 		self.updateFromDict()
@@ -1405,6 +1411,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_FIRSTRUN: True,  # are we initializing or not
 			K_FORM_NAME: None,  # time of this event
 			K_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
+			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
 			K_PREDISMISSABLE: True,  # is this event dismissable in advance
 			K_SNOOZABLE: False,  # can this event be snoozed
 			K_SNOOZED: False,  # is this event snoozed
@@ -1578,6 +1585,34 @@ def isInBBox(BBoxIn_, pointIn_):
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# updateInterval
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def updateInterval(eventIndexToDo_):
+	global \
+			APPDS_MAIN
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+
+	_eventToDo_ = APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_]
+	_TInterval_ = _eventToDo_[K_TIME_INTERVAL]
+	_TTimeAtBegin_ = _eventToDo_[K_TIME_INTERVAL__BEGIN]
+	_TTimeSinceBegin_ = NOWS - _TTimeAtBegin_
+	_TTimeAtLastRun_ = _eventToDo_[K_TIME_AT_LAST_RUN]
+	_TTimeAtStart_ = int(_TTimeSinceBegin_ // _TInterval_) * _TInterval_
+	_TTimeAtNext_ = fixTimeAtNext(_TTimeAtStart_ + _TInterval_)
+
+	if _eventToDo_[K_FIRSTRUN] is True:
+#		_TTimeAtStart_ = int(_TTimeSinceBegin_ // _TInterval_) * _TInterval_
+#		_TTimeAtNext_ = fixTimeAtNext(_TTimeAtStart_ + _TInterval_)
+		APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_FIRSTRUN] = False
+		APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_AT_LAST_RUN] = _TTimeAtLastRun_ = _TTimeAtStart_
+
+	APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_INTERVAL_START] = _TTimeAtStart_
+	APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_AT_NEXT_ALERT] = _TTimeAtNext_
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # findNextAlarmEvent
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def findNextAlarmEvent():
@@ -1588,20 +1623,20 @@ def findNextAlarmEvent():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_nextEventList_ = []  # (time, index, mode, name)
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	for _index_, _event_ in APPDS[K_EVENT_ENTRIES].items():
+	for _index_, _event_ in APPDS_MAIN[K_EVENT_ENTRIES].items():
 
 		if _event_ is not None:
-			_TEventMode_ = _event_[EVENTMODE]
+			_TEventMode_ = _event_[K_EVENTMODE]
 
 			if (_TEventMode_ == EVENTMODE_INTERVAL):
 				updateInterval(_index_)
-				_event_ = APPDS[K_EVENT_ENTRIES][_index_]
+				_event_ = APPDS_MAIN[K_EVENT_ENTRIES][_index_]
 
 			elif (_TEventMode_ == EVENTMODE_ALARM):
-				_event_[TIME_AT_NEXT_ALERT] = _event_[TIME_ALARM]
+				_event_[K_TIME_AT_NEXT_ALERT] = _event_[TIME_ALARM]
 
-			if (_event_[DISMISSED] is False) and (_event_[ENABLED] is True) and (_event_[TIME_INTERVAL__BEGIN] <= NOWS < fixTimeAtNext(_event_[TIME_INTERVAL__END])):
-				_nextEventList_.append((fixTimeAtNext(_event_[TIME_AT_NEXT_ALERT]), _index_, _event_[EVENTMODE], _event_[NAME], _event_[INTERVAL_COUNT]))
+			if (_event_[K_DISMISSED] is False) and (_event_[K_ENABLED] is True) and (_event_[K_TIME_INTERVAL__BEGIN] <= NOWS < fixTimeAtNext(_event_[K_TIME_INTERVAL__END])):
+				_nextEventList_.append((fixTimeAtNext(_event_[K_TIME_AT_NEXT_ALERT]), _index_, _event_[K_EVENTMODE], _event_[K_EVENT_NAME], _event_[K_INTERVAL_COUNT]))
 
 	_nextEventList_.sort()
 
@@ -1647,10 +1682,11 @@ def doMidnightWork():
 	for _index_, _event_ in APPDS_MAIN[K_EVENT_ENTRIES].items():
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_event_ is not None):  # and (_event_[EVENTMODE] in [EVENTMODE_ALARM]):
+		if (_event_ is not None):  # and (_event_[K_EVENTMODE] in [EVENTMODE_ALARM]):
 			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			APPDS_MAIN[K_EVENT_ENTRIES][_index_][DISMISSED] = False
-			APPDS_MAIN[K_EVENT_ENTRIES][_index_][IS_ALERTING_NOW] = False
+			if (APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_IS_ALERTING_NOW] is False):
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_DISMISSED] = False
+			# APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_IS_ALERTING_NOW] = False
 
 			# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
 			for _index1_ in APPDS_TIMES_LIST:
@@ -1736,7 +1772,7 @@ edit:
 	delete this event
 	TIME_s
 CLOCKS_FORMMAIN.__dict__["TKroot"].__str__
-CLOCKS_FORMMAIN[TIME_CLOCK].DisplayText
+CLOCKS_FORMMAIN[K_TIME_CLOCK].DisplayText
 CLOCKS_FORMMAIN.Move(10, 10)
 
 """
