@@ -322,6 +322,7 @@ STR_SUBST_DICT = {
 	"%TAB9%": f"""{NTAB(9)}""",
 	"%TABA%": f"""{NTAB(10)}""",
 	"%TQ%": f"""{TRIQT}""",
+	"%REVKEY%": lambda __key__: f"""f{TRIQT}{OBRCE}self._KEY_DICT_REVERSE_[{__key__}]{CBRCE}{TRIQT}"""
 }
 
 

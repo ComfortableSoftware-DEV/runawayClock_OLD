@@ -1691,15 +1691,15 @@ TBGLST = [
 	("PSGVAL__CLOCKS_DICT_KEYS_TIME01", FMAXPSG_SCTN09FF_CLASS_DICT_VV_ADD, "CLOCKS", "_DICT_KEYS_TIME_", "K_TIME_TOGO", "CF.DAYSECS", "",),
 	("PSGVAL__CLOCKS_FORMMAIN", FMAX_NOP, "the form for clocks",),
 	("PSGVAL__CLOCKS_FORMMAIN00", FMAXPSG_SCTN09FF_CLASS_FORMMAIN_DEF, "CLOCKS", "_WINDOW_", "True", "the clocks form defined and done",),
-	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VS_ADD, "CLOCKS", "K_NAME_NEXT_EVENT", "", "name of next event",),
-	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_CHECKBOX_ALPHA_DIM", "False", "value of the alphas dim checkbox",),
-	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_CHECKBOX_RUNAWAY", "False", "value of runaway checkbox",),
-	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_INTERVAL_COUNT", "0", "interval count",),
-	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_TIME_AT_NEXT_ALERT", "ZERO_CLOCK", "time at next event",),
-	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_TIME_AT_ZEROELAPSE", "ZERO_CLOCK", "time at last zero of elapsed timer",),
-	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_TIME_CLOCK", "ZERO_CLOCK", "time clock or wall clock",),
-	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_TIME_ELAPSED", "ZERO_CLOCK", "time elapsed",),
-	("PSGVAL__CLOCKS_FUNC00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_TIME_TOGO", "ZERO_CLOCK", "countdown to next event",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VS_ADD, "CLOCKS", "K_NAME_NEXT_EVENT", "", "True", "name of next event",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_CHECKBOX_ALPHA_DIM", "False", "False", "value of the alphas dim checkbox",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_CHECKBOX_RUNAWAY", "False", "False", "value of runaway checkbox",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_INTERVAL_COUNT", "0", "True", "interval count",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_TIME_AT_NEXT_ALERT", "ZERO_CLOCK", "True", "time at next event",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_TIME_AT_ZEROELAPSE", "ZERO_CLOCK", "True", "time at last zero of elapsed timer",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_TIME_CLOCK", "ZERO_CLOCK", "True", "time clock or wall clock",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_TIME_ELAPSED", "ZERO_CLOCK", "True", "time elapsed",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD, "CLOCKS", "K_TIME_TOGO", "ZERO_CLOCK", "True", "countdown to next event",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT", FMAXPSG_SCTN09FF_CLASS_INIT_DEF, "CLOCKS", ", keyBase_, formName_", "init parms defined",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT000", FMAXPSG_SCTN09FF_CLASS_INIT_VAL1_DEF, "CLOCKS", "_THIS_KEY_BASE_", "keyBase_", "adopt keyBase_",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT001", FMAXPSG_SCTN09FF_CLASS_INIT_LAMBDA1_DEF, "CLOCKS", "_USE_THIS_KEY_", "__KEY_TEXT__: %FTQ%%OBRCE%__KEY_TEXT__%CBRCE%%OBRCE%self._THIS_KEY_BASE_%CBRCE%%TQ%", "make a local key sourcer",),
@@ -2365,9 +2365,9 @@ def makeFM():
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# substLambda
+# subMyPlaceKpr
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def substLambda(sourceStr_):
+def subMyPlaceKpr(sourceStr_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_strToRtn_ = sourceStr_
 	for _thisSrcStr_, _thisDestStr_ in STR_SUBST_DICT.items():
@@ -5457,16 +5457,18 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VS_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if _thisItemLen_ != 6:
-				doErrorItem("not 6 items", _thisItem_)
+			if _thisItemLen_ != 7:
+				doErrorItem("not 7 items", _thisItem_)
 				continue
 
 			_thisClassName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
+			_isARevKeyItem_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+			if (_isARevKeyItem_ is True):
+				FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+				FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}f{TRIQT}self._USE_THIS_KEY_{OPAREN}_thisKey_{CPAREN}{TRIQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5475,19 +5477,22 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN09FF_CLASS_INIT_DICTIN_VV_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if _thisItemLen_ != 6:
-				doErrorItem("not 6 items", _thisItem_)
+			if _thisItemLen_ != 7:
+				doErrorItem("not 7 items", _thisItem_)
 				continue
 
 			_thisClassName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
+			_isARevKeyItem_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+			if (_isARevKeyItem_ is True):
+				FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+				FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}f{TRIQT}self._USE_THIS_KEY_{OPAREN}_thisKey_{CPAREN}{TRIQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
@@ -5501,7 +5506,7 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[3]
 			_thisLambda_ = _thisItem_[4]
 
-			_thisLambda_ = substLambda(_thisLambda_)
+			_thisLambda_ = subMyPlaceKpr(_thisLambda_)
 			FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
@@ -5520,7 +5525,7 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[3]
 			_thisLambda_ = _thisItem_[4]
 
-			_thisLambda_ = substLambda(_thisLambda_)
+			_thisLambda_ = subMyPlaceKpr(_thisLambda_)
 			FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
