@@ -1,8 +1,8 @@
-def intervalCountOff(formToCountOff_):
+def intervalCountOff():
 	global \
 			ALL_THE_FORMS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	ALL_THE_FORMS[formToCountOff_][INTERVAL_COUNT].update(text_color=COLOR_TEXT_INTERVAL_COUNT_INACTIVE)
-	CLOCKS_TEXT_DICT[INTERVAL_COUNT] = f"""{0:04d}"""
-	updateFrameFromDict(CURRENT_FORM_NAME, CLOCKS_TEXT_DICT)
+	ALL_THE_FORMS[self._THIS_FORM_NAME_][INTERVAL_COUNT].update(text_color=COLOR_TEXT_INTERVAL_COUNT_INACTIVE)
+	self._DICTIN_[INTERVAL_COUNT] = 0
+	self._MAINFRAME_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1

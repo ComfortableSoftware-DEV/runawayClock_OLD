@@ -1,6 +1,8 @@
-	def updateFromDict(self, dictToUpdateFrom_=self._DICTIN_):
+	def updateFromDict(self, dictToUpdateFrom_=None):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		self._DICTIN_.update(dictToUpdateFrom_)
+		if dictToUpdateFrom_ is not None:
+			self._DICTIN_.update(dictToUpdateFrom_)
+
 		self.enint()
 		self.enstring()
 		self._MAINFRAME_.fill(self._DICTINSTR_)
