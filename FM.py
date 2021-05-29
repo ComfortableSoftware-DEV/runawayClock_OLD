@@ -4696,7 +4696,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisElementName_ not in FMPSG_SCTN09FF_CLASS_BTNS_DICT[_thisClassName_]:
 				FMPSG_SCTN09FF_CLASS_BTNS_DICT[_thisClassName_][_thisElementName_] = ""
 
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			if _thisClassName_ not in FMPSG_SCTN09FF_CLASS_BTNS_CMNT_DICT:
 				FMPSG_SCTN09FF_CLASS_BTNS_CMNT_DICT[_thisClassName_] = {}
@@ -4775,7 +4775,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT:
 				FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
@@ -4841,7 +4841,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_COLUMN_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN09FF_CLASS_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5389,6 +5389,8 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_INIT_DICT[_thisClassName_] = []
 
 			FMPSG_SCTN09FF_CLASS_INIT_DICT[_thisClassName_].append(f"""{_thisParmStr_}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_DICTIN: self._DICTIN_,{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_DICTINSTR: self._DICTINSTR_,{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
