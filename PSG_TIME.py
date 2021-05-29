@@ -15,11 +15,11 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALARMPOPUP_PROPER = "ALARMPOPUP_PROPER"  # key for the button return for the popup
-ALARMPOPUP_TEXT_TEXT = "ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
-ALPHA_HIGH = "ALPHA_HIGH"  # alphahigh key
-ALPHA_LOW = "ALPHA_LOW"  #
-APPMODE = "APPMODE"  # app mode key
+K_ALARMPOPUP_PROPER = "K_ALARMPOPUP_PROPER"  # key for the button return for the popup
+K_ALARMPOPUP_TEXT_TEXT = "K_ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
+K_ALPHA_HIGH = "K_ALPHA_HIGH"  # alphahigh key
+K_ALPHA_LOW = "K_ALPHA_LOW"  #
+K_APPMODE = "K_APPMODE"  # app mode key
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
@@ -27,28 +27,28 @@ APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # mouseOver mode (xpand from clocks t
 APPMODE_NEW_ALARMPOPUP = "APPMODE_NEW_ALARMPOPUP"  # main mode (xpand from clocks to this)
 APPMODE_NONE = "APPMODE_NONE"  # NONE mode
 APPMODE_THECLOCK = "APPMODE_THECLOCK"  # theClock mode (xpand from clocks to this)
-BBOX = "BBOX"  #
-BTN_DISMISS = "BTN_DISMISS"  # key for all of the button xpand
+K_BBOX = "K_BBOX"  #
+K_BTN_DISMISS = "K_BTN_DISMISS"  # key for all of the button xpand
 BTN_DOWN = "BTN_DOWN"  # key for all of the button xpand
 BTN_EDIT = "BTN_EDIT"  # key for all of the button xpand
-BTN_QUIT_ALL = "BTN_QUIT_ALL"  # key for all of the button xpand
+K_BTN_QUIT_ALL = "K_BTN_QUIT_ALL"  # key for all of the button xpand
 BTN_QUIT_EDITOR = "BTN_QUIT_EDITOR"  # key for all of the button xpand
 BTN_UP = "BTN_UP"  # key for all of the button xpand
 BTN_XPAND = "BTN_XPAND"  # key for all of the button xpand
 BTN_ZERO = "BTN_ZERO"  # key for all of the button xpand
-CHANGED_EVENTS = "CHANGED_EVENTS"  #
-CHANGED_VALUES = "CHANGED_VALUES"  #
-CHECKBOX_ALPHA_DIM = "CHECKBOX_ALPHA_DIM"  # is the clock transparent under mouse (ineffective if mouse is avoided)
-CHECKBOX_DISMISSED = "CHECKBOX_DISMISSED"  # key for avoiding the mouse bool
-CHECKBOX_ENABLED = "CHECKBOX_ENABLED"  # key for avoiding the mouse bool
-CHECKBOX_FIRSTRUN = "CHECKBOX_FIRSTRUN"  # key for avoiding the mouse bool
-CHECKBOX_HOVER_DATE = "CHECKBOX_HOVER_DATE"  # KEY FOR CHECKBOX_HOVER_DATE
-CHECKBOX_IS_ALERTING_NOW = "CHECKBOX_IS_ALERTING_NOW"  # key for avoiding the mouse bool
-CHECKBOX_PREDISMISSABLE = "CHECKBOX_PREDISMISSABLE"  # key for avoiding the mouse bool
-CHECKBOX_RUNAWAY = "CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
-CHECKBOX_SNOOZABLE = "CHECKBOX_SNOOZABLE"  # key for avoiding the mouse bool
-CHECKBOX_SNOOZED = "CHECKBOX_SNOOZED"  # key for avoiding the mouse bool
-CLOSE_BBOX = "CLOSE_BBOX"  #
+K_CHANGED_EVENTS = "K_CHANGED_EVENTS"  #
+K_CHANGED_VALUES = "K_CHANGED_VALUES"  #
+K_CHECKBOX_ALPHA_DIM = "K_CHECKBOX_ALPHA_DIM"  # is the clock transparent under mouse (ineffective if mouse is avoided)
+K_CHECKBOX_DISMISSED = "K_CHECKBOX_DISMISSED"  # key for avoiding the mouse bool
+K_CHECKBOX_ENABLED = "K_CHECKBOX_ENABLED"  # key for avoiding the mouse bool
+K_CHECKBOX_FIRSTRUN = "K_CHECKBOX_FIRSTRUN"  # key for avoiding the mouse bool
+K_CHECKBOX_HOVER_DATE = "K_CHECKBOX_HOVER_DATE"  # KEY FOR K_CHECKBOX_HOVER_DATE
+K_CHECKBOX_IS_ALERTING_NOW = "K_CHECKBOX_IS_ALERTING_NOW"  # key for avoiding the mouse bool
+K_CHECKBOX_PREDISMISSABLE = "K_CHECKBOX_PREDISMISSABLE"  # key for avoiding the mouse bool
+K_CHECKBOX_RUNAWAY = "K_CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
+K_CHECKBOX_SNOOZABLE = "K_CHECKBOX_SNOOZABLE"  # key for avoiding the mouse bool
+K_CHECKBOX_SNOOZED = "K_CHECKBOX_SNOOZED"  # key for avoiding the mouse bool
+K_CLOSE_BBOX = "K_CLOSE_BBOX"  #
 COLOR_ALERT_BACKGROUND = "#662244"  # alert background color
 COLOR_ALERT_TEXT = "#CC4466"  # color of text on alert popup
 COLOR_BACKGROUND = "#331122"  # the background of the main frames
@@ -69,20 +69,20 @@ COLOR_TIME_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
 COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
-COLUMN01 = "COLUMN01"  #
-COLUMN02 = "COLUMN02"  #
-CURRENT_EVENT = "CURRENT_EVENT"  #
-CURRENT_EVENTMODE = "CURRENT_EVENTMODE"  #
-CURRENT_LOCATION = "CURRENT_LOCATION"  #
-CURRENT_MOUSE_LOCATION = "CURRENT_MOUSE_LOCATION"  #
-CURRENT_MOUSE_STATUS = "CURRENT_MOUSE_STATUS"  #
-CURRENT_VALUE = "CURRENT_VALUE"  #
-DICT_KEYS_INT = "DICT_KEYS_INT"  #
-DICT_KEYS_TIME = "DICT_KEYS_TIME"  #
-DICTOUT = "DICTOUT"  #
+K_COLUMN01 = "K_COLUMN01"  #
+K_COLUMN02 = "K_COLUMN02"  #
+K_CURRENT_EVENT = "K_CURRENT_EVENT"  #
+K_CURRENT_EVENTMODE = "K_CURRENT_EVENTMODE"  #
+K_CURRENT_LOCATION = "K_CURRENT_LOCATION"  #
+K_CURRENT_MOUSE_LOCATION = "K_CURRENT_MOUSE_LOCATION"  #
+K_CURRENT_MOUSE_STATUS = "K_CURRENT_MOUSE_STATUS"  #
+K_CURRENT_VALUE = "K_CURRENT_VALUE"  #
+K_DICT_KEYS_INT = "K_DICT_KEYS_INT"  #
+K_DICT_KEYS_TIME = "K_DICT_KEYS_TIME"  #
+K_DICTOUT = "K_DICTOUT"  #
 DIMMED = "DIMMED"  #
 DISMISSED = "DISMISSED"  # alarm dismissed bool
-EVENT_ENTRIES = "EVENT_ENTRIES"  #
+K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  #
 EVENT_NAME = "EVENT_NAME"  # name of the event
 EVENTMODE = "EVENTMODE"  # what mode is this event
 EVENTMODE_ALARM = "EVENTMODE_ALARM"  #
@@ -171,13 +171,13 @@ SZ_TIMEMS_BETWEEN_MOVES = 500  # time_ms between moves
 SZ_TIMEMS_BETWEEN_UPDATES = 500  # time_ms between updating windows/frames/etc
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
-TEXT_INTERVAL_COUNT = "TEXT_INTERVAL_COUNT"  #
-TEXT_NAME_NEXT_EVENT = "TEXT_NAME_NEXT_EVENT"  #
-TEXT_TIME_AT_NEXT_ALERT = "TEXT_TIME_AT_NEXT_ALERT"  #
-TEXT_TIME_AT_ZEROELAPSE = "TEXT_TIME_AT_ZEROELAPSE"  #
-TEXT_TIME_CLOCK = "TEXT_TIME_CLOCK"  #
-TEXT_TIME_ELAPSED = "TEXT_TIME_ELAPSED"  #
-TEXT_TIME_TOGO = "TEXT_TIME_TOGO"  #
+TEXT_INTERVAL_COUNT_KEY = "TEXT_INTERVAL_COUNT_KEY"  #
+TEXT_NAME_NEXT_EVENT_KEY = "TEXT_NAME_NEXT_EVENT_KEY"  #
+TEXT_TIME_AT_NEXT_ALERT_KEY = "TEXT_TIME_AT_NEXT_ALERT_KEY"  #
+TEXT_TIME_AT_ZEROELAPSE_KEY = "TEXT_TIME_AT_ZEROELAPSE_KEY"  #
+TEXT_TIME_CLOCK_KEY = "TEXT_TIME_CLOCK_KEY"  #
+TEXT_TIME_ELAPSED_KEY = "TEXT_TIME_ELAPSED_KEY"  #
+TEXT_TIME_TOGO_KEY = "TEXT_TIME_TOGO_KEY"  #
 THIS_FORM_NAME = "THIS_FORM_NAME"  #
 THIS_KEY_BASE = "THIS_KEY_BASE"  #
 TIME_ALARM = "TIME_ALARM"  # the alarm time
@@ -218,6 +218,7 @@ COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors fo
 COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+CURRENT_EVENTMODE_VAL = EVENTMODE_NONE  # comment
 CURRENT_INTERVAL_COUNT = 0  # comment
 EMPTY_BBOX = (0, 0, 0, 0)  # empty XY dict
 EMPTY_XY = (0, 0)  # empty XY dict
@@ -410,7 +411,7 @@ BTN_DISMISS20 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
-	KEY: BTN_DISMISS,  # button xpand font
+	KEY: K_BTN_DISMISS,  # button xpand font
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -468,7 +469,7 @@ BTN_QUIT20 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
-	KEY: BTN_QUIT_ALL,  # button xpand font
+	KEY: K_BTN_QUIT_ALL,  # button xpand font
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -480,7 +481,7 @@ BTN_QUIT32 = {  #
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
 	FOCUS: True,  # focus on click
 	FONT: FONTSZ_BTNS,  # button xpand font
-	KEY: BTN_QUIT_ALL,  # button xpand font
+	KEY: K_BTN_QUIT_ALL,  # button xpand font
 	PAD: SZ_PAD_ALL,  # button xpand key
 }
 
@@ -562,11 +563,11 @@ BTN_ZERO32 = {  #
 # * SCTN0908 checkbox elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CHECKBOX_ALPHA_DIM01 = {  # checkbox for alpha under mouse
-	TEXT: "ALPHA_DIM",  # simple text reminder
+	TEXT: "K_ALPHA_LOW",  # simple text reminder
 	TOOLTIP: "low alpha under mouse",  # comment
 	DEFAULT: True,  # leave it on by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
-	KEY: CHECKBOX_ALPHA_DIM,  # set the key for the checkbox
+	KEY: K_CHECKBOX_ALPHA_DIM,  # set the key for the checkbox
 }
 
 
@@ -575,7 +576,7 @@ CHECKBOX_DISMISSED01 = {  # checkbox for dismissed from mouse behavior
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
-	KEY: CHECKBOX_DISMISSED,  # set the key for the checkbox
+	KEY: K_CHECKBOX_DISMISSED,  # set the key for the checkbox
 }
 
 
@@ -584,7 +585,7 @@ CHECKBOX_ENABLED01 = {  # checkbox for dismissed from mouse behavior
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
-	KEY: CHECKBOX_ENABLED,  # set the key for the checkbox
+	KEY: K_CHECKBOX_ENABLED,  # set the key for the checkbox
 }
 
 
@@ -593,7 +594,7 @@ CHECKBOX_FIRSTRUN01 = {  # checkbox for dismissed from mouse behavior
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
-	KEY: CHECKBOX_FIRSTRUN,  # set the key for the checkbox
+	KEY: K_CHECKBOX_FIRSTRUN,  # set the key for the checkbox
 }
 
 
@@ -602,7 +603,7 @@ CHECKBOX_HOVER_DATE01 = {  # checkbox for dismissed from mouse behavior
 	TOOLTIP: "show date when hovering over clock",  # tooltip
 	DEFAULT: True,  # leave it on by default
 	ENABLE_EVENTS: True,  # set the events on for the checkbox
-	KEY: CHECKBOX_HOVER_DATE,  # set the key for the checkbox
+	KEY: K_CHECKBOX_HOVER_DATE,  # set the key for the checkbox
 }
 
 
@@ -611,7 +612,7 @@ CHECKBOX_IS_ALERTING_NOW01 = {  # checkbox for dismissed from mouse behavior
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
-	KEY: CHECKBOX_IS_ALERTING_NOW,  # set the key for the checkbox
+	KEY: K_CHECKBOX_IS_ALERTING_NOW,  # set the key for the checkbox
 }
 
 
@@ -620,7 +621,7 @@ CHECKBOX_PREDISMISSABLE01 = {  # checkbox for dismissed from mouse behavior
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
-	KEY: CHECKBOX_PREDISMISSABLE,  # set the key for the checkbox
+	KEY: K_CHECKBOX_PREDISMISSABLE,  # set the key for the checkbox
 }
 
 
@@ -629,7 +630,7 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
-	KEY: CHECKBOX_RUNAWAY,  # set the key for the checkbox
+	KEY: K_CHECKBOX_RUNAWAY,  # set the key for the checkbox
 }
 
 
@@ -638,7 +639,7 @@ CHECKBOX_SNOOZABLE01 = {  # checkbox for dismissed from mouse behavior
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
-	KEY: CHECKBOX_SNOOZABLE,  # set the key for the checkbox
+	KEY: K_CHECKBOX_SNOOZABLE,  # set the key for the checkbox
 }
 
 
@@ -647,7 +648,7 @@ CHECKBOX_SNOOZED01 = {  # checkbox for dismissed from mouse behavior
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
-	KEY: CHECKBOX_SNOOZED,  # set the key for the checkbox
+	KEY: K_CHECKBOX_SNOOZED,  # set the key for the checkbox
 }
 
 
@@ -805,8 +806,8 @@ class CLASS_CLOCKS(object):
 		self._DICTIN_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			NAME_NEXT_EVENT: "",  # name of next event
-			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
-			CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
+			K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
+			K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			INTERVAL_COUNT: 0,  # interval count
 			TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time at next event
 			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
@@ -819,8 +820,8 @@ class CLASS_CLOCKS(object):
 		self._DICTINSTR_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			NAME_NEXT_EVENT: "",  # name of next event
-			CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
-			CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
+			K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
+			K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			INTERVAL_COUNT: 0,  # interval count
 			TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time at next event
 			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
@@ -832,8 +833,8 @@ class CLASS_CLOCKS(object):
 
 		self._DICTOUT_ = {  # holds the values for the clocks frame
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			CHECKBOX_ALPHA_DIM: "True",  # name of next event
-			CHECKBOX_RUNAWAY: False,  # interval count
+			K_CHECKBOX_ALPHA_DIM: "True",  # name of next event
+			K_CHECKBOX_RUNAWAY: False,  # interval count
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1033,29 +1034,29 @@ class CLASS_CLOCKS(object):
 
 		self.__CDS__ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
-			COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
-			DICTOUT: self._DICTOUT_,  # holds the values for the clocks frame
-			DICT_KEYS_INT: self._DICT_KEYS_INT_,  # dict of integer keys and their format
-			DICT_KEYS_TIME: self._DICT_KEYS_TIME_,  # dict of time keys and their max value int seconds
+			K_COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
+			K_COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
+			K_DICTOUT: self._DICTOUT_,  # holds the values for the clocks frame
+			K_DICT_KEYS_INT: self._DICT_KEYS_INT_,  # dict of integer keys and their format
+			K_DICT_KEYS_TIME: self._DICT_KEYS_TIME_,  # dict of time keys and their max value int seconds
 			THIS_KEY_BASE: self._THIS_KEY_BASE_,
 			USE_THIS_KEY: self._USE_THIS_KEY_,
 			THIS_FORM_NAME: self._THIS_FORM_NAME_,
 			ALPHA_CHANNEL: self._ALPHA_CHANNEL_,
-			ALPHA_HIGH: self._ALPHA_HIGH_,
-			ALPHA_LOW: self._ALPHA_LOW_,
-			BBOX: self._BBOX_,
-			CHANGED_EVENTS: self._CHANGED_EVENTS_,
-			CHANGED_VALUES: self._CHANGED_VALUES_,
-			CHECKBOX_ALPHA_DIM: self._CHECKBOX_ALPHA_DIM_,
-			CHECKBOX_RUNAWAY: self._CHECKBOX_RUNAWAY_,
-			CLOSE_BBOX: self._CLOSE_BBOX_,
-			CURRENT_EVENTMODE: self._CURRENT_EVENTMODE_,
-			CURRENT_EVENT: self._CURRENT_EVENT_,
-			CURRENT_LOCATION: self._CURRENT_LOCATION_,
-			CURRENT_MOUSE_LOCATION: self._CURRENT_MOUSE_LOCATION_,
-			CURRENT_MOUSE_STATUS: self._CURRENT_MOUSE_STATUS_,
-			CURRENT_VALUE: self._CURRENT_VALUES,
+			K_ALPHA_HIGH: self._ALPHA_HIGH_,
+			K_ALPHA_LOW: self._ALPHA_LOW_,
+			K_BBOX: self._BBOX_,
+			K_CHANGED_EVENTS: self._CHANGED_EVENTS_,
+			K_CHANGED_VALUES: self._CHANGED_VALUES_,
+			K_CHECKBOX_ALPHA_DIM: self._CHECKBOX_ALPHA_DIM_,
+			K_CHECKBOX_RUNAWAY: self._CHECKBOX_RUNAWAY_,
+			K_CLOSE_BBOX: self._CLOSE_BBOX_,
+			K_CURRENT_EVENTMODE: self._CURRENT_EVENTMODE_,
+			K_CURRENT_EVENT: self._CURRENT_EVENT_,
+			K_CURRENT_LOCATION: self._CURRENT_LOCATION_,
+			K_CURRENT_MOUSE_LOCATION: self._CURRENT_MOUSE_LOCATION_,
+			K_CURRENT_MOUSE_STATUS: self._CURRENT_MOUSE_STATUS_,
+			K_CURRENT_VALUE: self._CURRENT_VALUES,
 			DIMMED: self._DIMMED_,
 			KEY_DICT: self._KEY_DICT_,
 			KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
@@ -1224,13 +1225,13 @@ class CLASS_CLOCKS(object):
 			self._DICTIN_[NAME_NEXT_EVENT] = nameNextEvent_
 
 		if checkboxAlphaDim_ is not None:
-			self._DICTIN_[CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
+			self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
 
 		if checkboxRunaway_ is not None:
-			self._DICTIN_[CHECKBOX_RUNAWAY] = checkboxRunaway_
+			self._DICTIN_[K_CHECKBOX_RUNAWAY] = checkboxRunaway_
 
 		if eventMode_ is not None:
-			self._CURRENT_EVENTMODE_ = eventMode_
+			self.K_CURRENT_EVENTMODE = eventMode_
 
 			if intervalCount_ is not None:
 				self._DICTIN_[INTERVAL_COUNT] = intervalCount_
@@ -1384,11 +1385,11 @@ class CLASS_CLOCKS(object):
 # * SCTN090C APPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and this app
-	APPMODE: APPMODE_NONE,  # default mode is clocks
-	EVENT_ENTRIES: {  # holds events
+	K_APPMODE: APPMODE_NONE,  # default mode is clocks
+	K_EVENT_ENTRIES: {  # holds events
 		0: {
-			ALARMPOPUP_PROPER: None,  # time of this event
-			ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
+			K_ALARMPOPUP_PROPER: None,  # time of this event
+			K_ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
 			AUTO_CLOSE_DURATION: 10,  # time of this event
 			DISMISSED: False,  # is this event dismissed
 			ENABLED: True,  # is this event enabled
@@ -1580,14 +1581,14 @@ def findNextAlarmEvent():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_nextEventList_ = []  # (time, index, mode, name)
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	for _index_, _event_ in APPDS[EVENT_ENTRIES].items():
+	for _index_, _event_ in APPDS[K_EVENT_ENTRIES].items():
 
 		if _event_ is not None:
 			_TEventMode_ = _event_[EVENTMODE]
 
 			if (_TEventMode_ == EVENTMODE_INTERVAL):
 				updateInterval(_index_)
-				_event_ = APPDS[EVENT_ENTRIES][_index_]
+				_event_ = APPDS[K_EVENT_ENTRIES][_index_]
 
 			elif (_TEventMode_ == EVENTMODE_ALARM):
 				_event_[TIME_AT_NEXT_ALERT] = _event_[TIME_ALARM]
@@ -1636,26 +1637,26 @@ def doMidnightWork():
 	TIME_S_AT_NEXT_PERIODIC_JOB = 0
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	for _index_, _event_ in APPDS_MAIN[EVENT_ENTRIES].items():
+	for _index_, _event_ in APPDS_MAIN[K_EVENT_ENTRIES].items():
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (_event_ is not None):  # and (_event_[EVENTMODE] in [EVENTMODE_ALARM]):
 			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			APPDS_MAIN[EVENT_ENTRIES][_index_][DISMISSED] = False
-			APPDS_MAIN[EVENT_ENTRIES][_index_][IS_ALERTING_NOW] = False
+			APPDS_MAIN[K_EVENT_ENTRIES][_index_][DISMISSED] = False
+			APPDS_MAIN[K_EVENT_ENTRIES][_index_][IS_ALERTING_NOW] = False
 
 			# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
 			for _index1_ in APPDS_TIMES_LIST:
 
 				# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
-				if APPDS_MAIN[EVENT_ENTRIES][_index_][_index1_] >= CF.DAYSECS:
+				if APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] >= CF.DAYSECS:
 					# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
-					APPDS_MAIN[EVENT_ENTRIES][_index_][_index1_] -= CF.DAYSECS
+					APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] -= CF.DAYSECS
 
 					# ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥
-					if (APPDS_MAIN[EVENT_ENTRIES][_index_][_index1_] < 0):
+					if (APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] < 0):
 						# 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥
-						APPDS_MAIN[EVENT_ENTRIES][_index_][_index1_] = abs(APPDS_MAIN[EVENT_ENTRIES][_index_][_index1_])
+						APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] = abs(APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_])
 
 						# ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6
 					# ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5
@@ -1679,8 +1680,8 @@ def outerLoop():
 		if _result_ != "__TIMEOUT__":
 			# do all result processing here
 
-			if (_result_ == BTN_QUIT_ALL):
-				return BTN_QUIT_ALL
+			if (_result_ == K_BTN_QUIT_ALL):
+				return K_BTN_QUIT_ALL
 
 		localTimes()
 
@@ -1702,7 +1703,7 @@ def doit():
 		while True:
 			_result_ = outerLoop()
 
-			if _result_ == BTN_QUIT_ALL:
+			if _result_ == K_BTN_QUIT_ALL:
 				break
 
 			elif _result_ == APPMODE_NEW_ALARMPOPUP:
