@@ -115,6 +115,7 @@ PREDISMISSABLE = "PREDISMISSABLE"  # event can be dismissed in advance
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # is this event snoozed bool
 SZ_ALERT_TEXT = 20  # font size of alert text
+SZ_ALPHA_DIM = True  # high alpha
 SZ_ALPHA_HIGH = 1.0  # high alpha
 SZ_ALPHA_LOW = 0.2  # low alpha
 SZ_BORDER_DEPTH = 0  # border depth
@@ -1263,9 +1264,12 @@ class CLASS_CLOCKS(object):
 	def quickRead(self):
 		self._RESULT_ = self._MAINFRAME_.Read(timeout=SZ_TIMEOUT_MS)
 
-	def readToDict(self, dictToReadTo_=self._DICTOUT_, setLocalDict_=True):
-# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+	def readToDict(self, dictToReadTo_=None, setLocalDict_=True):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		_dictToRtn_ = {}
+		if dictToReadTo_ is None:
+			dictToReadTo_ = self._DICTOUT_
+
 		for _key_ in dictToReadTo_:
 			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]
 			if (setLocalDict_ is True):
@@ -1346,7 +1350,6 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			FIRSTRUN: True,  # are we initializing or not
 			FORM_NAME: None,  # time of this event
 			INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
-			KEY_BASE: None,  # count of number of times this has alerted since last reset
 			PREDISMISSABLE: True,  # is this event dismissable in advance
 			SNOOZABLE: False,  # can this event be snoozed
 			SNOOZED: False,  # is this event snoozed
@@ -1355,11 +1358,11 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
 			TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time next time this alarm goes off
 			TIME_ELAPSED: ZERO_CLOCK,  # time next time this alarm goes off
-			TIME_INTERVAL: HALFHOURSECS,  # interval of this event
+			TIME_INTERVAL: CF.HALFHOURSECS,  # interval of this event
 			TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
-			TIME_LEN_RING: ZERO_CLOCK,  # length of time to alert this event before auto closing it
+			TIME_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 	},
 	INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
