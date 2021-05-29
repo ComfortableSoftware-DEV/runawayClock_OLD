@@ -1163,7 +1163,7 @@ class CLASS_CLOCKS(object):
 	def easyUpdate(self,
 			checkboxAlphaDim_=None,
 			checkboxRunaway_=None,
-			eventmode_=None,
+			eventMode_=None,
 			intervalCount_=None,
 			nameNextEvent_=None,
 			timeAtNext_=None,
@@ -1525,8 +1525,7 @@ def isInBBox(BBoxIn_, pointIn_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def findNextAlarmEvent():
 	global \
-			INTERVALLING_LIST, \
-			APPDS, \
+			CURRENT_INTERVAL_COUNT, \
 			NAME_NEXT_EVENT_STR, \
 			TIME_S_AT_NEXT_EVENT
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
@@ -1545,27 +1544,23 @@ def findNextAlarmEvent():
 				_event_[TIME_AT_NEXT_ALERT] = _event_[TIME_ALARM]
 
 			if (_event_[DISMISSED] is False) and (_event_[ENABLED] is True) and (_event_[TIME_INTERVAL__BEGIN] <= NOWS < fixTimeAtNext(_event_[TIME_INTERVAL__END])):
-				_nextEventList_.append((fixTimeAtNext(_event_[TIME_AT_NEXT_ALERT]), _index_, _event_[EVENTMODE], _event_[NAME]))
+				_nextEventList_.append((fixTimeAtNext(_event_[TIME_AT_NEXT_ALERT]), _index_, _event_[EVENTMODE], _event_[NAME], _event_[INTERVAL_COUNT]))
 
 	_nextEventList_.sort()
 
 	if _nextEventList_ != []:
 		if ALL_THE_FORMS[FORM_CLOCKS] is not None:
 			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
-				TIME_AT_NEXT_=_nextEventList_[0][0],
-				NAME_NEXT_EVENT_=_nextEventList_[0][3],
+				eventMode_=_nextEventList_[0][2]
+				currentIntervalCount_=_nextEventList_[0][4]
+				nameNextEvent_=_nextEventList_[0][3],
+				timeAtNext_=_nextEventList_[0][0],
 			)
-		self._DICTIN_[TIME_AT_NEXT_ALERT] = # (time, index, mode, name)
-		TIME_S_AT_NEXT_EVENT = self._DICTIN_[TIME_AT_NEXT_ALERT]
-		NAME_NEXT_EVENT_STR = # (time, index, mode, name)
-		CLOCKS_TEXT_DICT[NAME_NEXT_EVENT] = NAME_NEXT_EVENT_STR
 		CURRENT_EVENTMODE = _nextEventList_[0][2]# (time, index, mode, name)
+		CURRENT_INTERVAL_COUNT = _nextEventList_[0][1]
+		NAME_NEXT_EVENT_STR = _nextEventList_[0][3]# (time, index, mode, name)
+		TIME_S_AT_NEXT_EVENT = _nextEventList_[0][0]
 
-		if (CURRENT_EVENTMODE == EVENTMODE_INTERVAL):
-			CURRENT_INTERVAL_COUNT = APPDS[EVENT_ENTRIES][_nextEventList_[0][1]]
-			updateIntervalCount()
-
-		####updateFrameFromDict(CLOCKS_TEXT_DICT)
 
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
