@@ -115,7 +115,7 @@ PREDISMISSABLE = "PREDISMISSABLE"  # event can be dismissed in advance
 SNOOZABLE = "SNOOZABLE"  # can this event be snoozed
 SNOOZED = "SNOOZED"  # is this event snoozed bool
 SZ_ALERT_TEXT = 20  # font size of alert text
-SZ_ALPHA_DIM = True  # high alpha
+SZ_ALPHA_DIM = True  # default alpha dim state
 SZ_ALPHA_HIGH = 1.0  # high alpha
 SZ_ALPHA_LOW = 0.2  # low alpha
 SZ_BORDER_DEPTH = 0  # border depth
@@ -135,6 +135,7 @@ SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 100  # maximum possible change per move
 SZ_MOVE_DIST = 50  # move by this pixels each jump
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
+SZ_RUNAWAY = False  # default runaway state
 SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
 SZ_TIMEMS_BETWEEN_MOVES = 500  # time_ms between moves
 SZ_TIMEMS_BETWEEN_UPDATES = 500  # time_ms between updating windows/frames/etc
@@ -743,6 +744,7 @@ class CLASS_CLOCKS(object):
 		self._DIMMED_ = False  # 
 		self._KEY_DICT_ = {}  # 
 		self._KEY_DICT_REVERSE_ = {}  # 
+		self._KEY_DICT_TIMES_ = {}  # 
 		self._LAST_EVENT_ = None  # 
 		self._LAST_LOCATION_ = EMPTY_XY  # 
 		self._LAST_MOUSE_LOCATION_ = EMPTY_XY  # 
@@ -799,11 +801,11 @@ class CLASS_CLOCKS(object):
 
 		self._DICT_KEYS_TIME_ = {  # dict of time keys and their max value int seconds
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			TIME_AT_NEXT_ALERT: DAYSECS,  # comment
-			TIME_AT_ZEROELAPSE: DAYSECS,  # comment
-			TIME_CLOCK: DAYSECS,  # 
-			TIME_ELAPSED: TIME995959,  # 
-			TIME_TOGO: DAYSECS,  # 
+			TIME_AT_NEXT_ALERT: CF.DAYSECS,  # comment
+			TIME_AT_ZEROELAPSE: CF.DAYSECS,  # comment
+			TIME_CLOCK: CF.DAYSECS,  # 
+			TIME_ELAPSED: CF.TIME995959,  # 
+			TIME_TOGO: CF.DAYSECS,  # 
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -841,8 +843,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_NEXT_ALERT)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._TIME_KEY_LIST_.append(_TEXT_TIME_AT_NEXT_ALERT_)
-		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_NEXT_ALERT_))
+		self._KEY_DICT_TIMES_.append(_TEXT_TIME_AT_NEXT_ALERT_)
+		self._KEY_DICT_TIMES_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_NEXT_ALERT_))
 		self._KEY_DICT_[TIME_AT_NEXT_ALERT] = f"""{self._USE_THIS_KEY_(TIME_AT_NEXT_ALERT)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_AT_NEXT_ALERT)}"""] = TIME_AT_NEXT_ALERT
 
@@ -852,8 +854,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._TIME_KEY_LIST_.append(_TEXT_TIME_AT_ZEROELAPSE_)
-		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_ZEROELAPSE_))
+		self._KEY_DICT_TIMES_.append(_TEXT_TIME_AT_ZEROELAPSE_)
+		self._KEY_DICT_TIMES_.append(self._USE_THIS_KEY_(_TEXT_TIME_AT_ZEROELAPSE_))
 		self._KEY_DICT_[TIME_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_AT_ZEROELAPSE)}"""] = TIME_AT_ZEROELAPSE
 
@@ -863,8 +865,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_CLOCK)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._TIME_KEY_LIST_.append(_TEXT_TIME_CLOCK_)
-		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_CLOCK_))
+		self._KEY_DICT_TIMES_.append(_TEXT_TIME_CLOCK_)
+		self._KEY_DICT_TIMES_.append(self._USE_THIS_KEY_(_TEXT_TIME_CLOCK_))
 		self._KEY_DICT_[TIME_CLOCK] = f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_CLOCK)}"""] = TIME_CLOCK
 
@@ -874,8 +876,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._TIME_KEY_LIST_.append(_TEXT_TIME_ELAPSED_)
-		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_ELAPSED_))
+		self._KEY_DICT_TIMES_.append(_TEXT_TIME_ELAPSED_)
+		self._KEY_DICT_TIMES_.append(self._USE_THIS_KEY_(_TEXT_TIME_ELAPSED_))
 		self._KEY_DICT_[TIME_ELAPSED] = f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_ELAPSED)}"""] = TIME_ELAPSED
 
@@ -885,8 +887,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(TIME_TOGO)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._TIME_KEY_LIST_.append(_TEXT_TIME_TOGO_)
-		self._TIME_KEY_LIST_.append(self._USE_THIS_KEY_(_TEXT_TIME_TOGO_))
+		self._KEY_DICT_TIMES_.append(_TEXT_TIME_TOGO_)
+		self._KEY_DICT_TIMES_.append(self._USE_THIS_KEY_(_TEXT_TIME_TOGO_))
 		self._KEY_DICT_[TIME_TOGO] = f"""{self._USE_THIS_KEY_(TIME_TOGO)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(TIME_TOGO)}"""] = TIME_TOGO
 
@@ -1013,6 +1015,7 @@ class CLASS_CLOCKS(object):
 			DIMMED: self._DIMMED_,
 			KEY_DICT: self._KEY_DICT_,
 			KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
+			KEY_DICT_TIMES: self._KEY_DICT_TIMES_,
 			LAST_EVENT: self._LAST_EVENT_,
 			LAST_LOCATION: self._LAST_LOCATION_,
 			LAST_MOUSE_LOCATION: self._LAST_MOUSE_LOCATION_,
