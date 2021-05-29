@@ -1257,6 +1257,9 @@ TBGLST = [
 	("PSGVAL_KEY_BTN_DISMISS", FMAXPSG_SCTN0900_KEY_DEF, "K_BTN_DISMISS", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_DOWN", FMAXPSG_SCTN0900_KEY_DEF, "K_BTN_DOWN", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_EDIT", FMAXPSG_SCTN0900_KEY_DEF, "K_BTN_EDIT", "key for all of the button xpand",),
+	("PSGVAL_KEY_ENABLED", FMAXPSG_SCTN0900_KEY_DEF, "K_ENABLED", "key for all of the button xpand",),
+	("PSGVAL_KEY_AUTO_CLOSE_DURATION", FMAXPSG_SCTN0900_KEY_DEF, "K_AUTO_CLOSE_DURATION", "key for all of the button xpand",),
+
 	("PSGVAL_KEY_BTN_QUIT_ALL", FMAXPSG_SCTN0900_KEY_DEF, "K_BTN_QUIT_ALL", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_QUIT_EDITOR", FMAXPSG_SCTN0900_KEY_DEF, "K_BTN_QUIT_EDITOR", "key for all of the button xpand",),
 	("PSGVAL_KEY_BTN_UP", FMAXPSG_SCTN0900_KEY_DEF, "K_BTN_UP", "key for all of the button xpand",),
@@ -1285,6 +1288,8 @@ TBGLST = [
 	("PSGVAL_KEY_CURRENT_VALUE", FMAXPSG_SCTN0900_KEY_DEF, "K_CURRENT_VALUE", "",),
 	("PSGVAL_KEY_DICT_KEYS_INT", FMAXPSG_SCTN0900_KEY_DEF, "K_DICT_KEYS_INT", "",),
 	("PSGVAL_KEY_DICT_KEYS_TIME", FMAXPSG_SCTN0900_KEY_DEF, "K_DICT_KEYS_TIME", "",),
+	("PSGVAL_KEY_DICTIN", FMAXPSG_SCTN0900_KEY_DEF, "K_DICTIN", "",),
+	("PSGVAL_KEY_DICTINSTR", FMAXPSG_SCTN0900_KEY_DEF, "K_DICTINSTR", "",),
 	("PSGVAL_KEY_DICTOUT", FMAXPSG_SCTN0900_KEY_DEF, "K_DICTOUT", "",),
 	("PSGVAL_KEY_CURRENTLY_DIMMED", FMAXPSG_SCTN0900_KEY_DEF, "K_CURRENTLY_DIMMED", "",),
 	("PSGVAL_KEY_DISMISSED", FMAXPSG_SCTN0900_KEY_DEF, "K_DISMISSED", "alarm dismissed bool",),
@@ -1417,9 +1422,9 @@ TBGLST = [
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_ALARMPOPUP_TEXT_TEXT", "get up, move around", "alarm text for this event",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_EVENT_NAME", "MOVE", "this entry's name",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_ALARMPOPUP_PROPER", "None", "time of this event",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "AUTO_CLOSE_DURATION", "10", "time of this event",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_AUTO_CLOSE_DURATION", "10", "time of this event",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_DISMISSED", "False", "is this event dismissed",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "ENABLED", "True", "is this event enabled",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_ENABLED", "True", "is this event enabled",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_FIRSTRUN", "True", "are we initializing or not",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_FORM_NAME", "None", "time of this event",),
@@ -5104,7 +5109,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT:
 				FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisDictName_[1:-1]}: self.{_thisDictName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisDictName_[1:-1]}: self.{_thisDictName_},  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
 
 			continue
@@ -5496,7 +5501,26 @@ def parseTBGLST(FDTBGLST):
 
 			_thisLambda_ = substLambda(_thisLambda_)
 			FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
+
+			continue
+			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
+
+	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
+		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
+		elif _thisAX_ == FMAXPSG_SCTN09FF_CLASS_INIT_LAMBDA2_DEF:
+			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			if _thisItemLen_ != 6:
+				doErrorItem("not 6 items", _thisItem_)
+				continue
+
+			_thisClassName_ = _thisItem_[2]
+			_thisValName_ = _thisItem_[3]
+			_thisLambda_ = _thisItem_[4]
+
+			_thisLambda_ = substLambda(_thisLambda_)
+			FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5546,7 +5570,7 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 
 			FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5564,7 +5588,7 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 
 			FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5582,7 +5606,7 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 
 			FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5600,7 +5624,7 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 
 			FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisValName_[1:-1]}: self.{_thisValName_},{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5630,7 +5654,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_LAYOUT_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN09FF_CLASS_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5867,7 +5891,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_LIST_DICT[_thisClassName_][_thisListName_] = ""
 
 			FMPSG_SCTN09FF_CLASS_LIST_CMNT_DICT[_thisListName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5944,7 +5968,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_SPIN_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN09FF_CLASS_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -6063,7 +6087,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_({_thisElementName_[1:-1]})){NEWLINE}"""
 
 			FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -6176,7 +6200,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_WINDOW_CMNT_DICT[_thisClassName_] = {}
 
 			FMPSG_SCTN09FF_CLASS_WINDOW_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -6219,8 +6243,9 @@ def parseTBGLST(FDTBGLST):
 
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # SCTN09FF_89_ENDS_CLASS_WINDOW
+
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-# FMPSG_PARSE_ENDS_CLASS_WINDOW
+# SCTN09FF_ENDS
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
