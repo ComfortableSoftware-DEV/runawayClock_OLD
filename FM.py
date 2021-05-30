@@ -1746,8 +1746,8 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV, "CLOCKS", "K_TIME_CLOCK", "ZERO_CLOCK", "True", "time clock or wall clock",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV, "CLOCKS", "K_TIME_ELAPSED", "ZERO_CLOCK", "True", "time elapsed",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV, "CLOCKS", "K_TIME_TOGO", "ZERO_CLOCK", "True", "countdown to next event",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT03_KEY01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY, "CLOCKS", "K_CHECKBOX_ALPHA_DIM", "K_CHECKBOX_ALPHA_DIM", "add foreign key for alpha dimming",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT03_KEY01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY, "CLOCKS", "K_CHECKBOX_RUNAWAY", "K_CHECKBOX_RUNAWAY", "add foreign key for runningaway",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT03_KEY01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY, "CLOCKS", "K_CHECKBOX_ALPHA_DIM", "K_CHECKBOX_ALPHA_DIM", "False", "add foreign key for alpha dimming",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT03_KEY01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY, "CLOCKS", "K_CHECKBOX_RUNAWAY", "K_CHECKBOX_RUNAWAY", "False", "add foreign key for runningaway",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "print%OPAREN%%FTQ%self._DICTINSTR_ %OBRCE%self._DICTINSTR_%CBRCE%%TQ%%CPAREN%", "print _KEY_DICT_REVERSE_",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "print%OPAREN%%FTQ%self._DICTIN_ %OBRCE%self._DICTIN_%CBRCE%%TQ%%CPAREN%", "print _KEY_DICT_",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "print%OPAREN%%FTQ%self._KEY_DICT_ %OBRCE%self._KEY_DICT_%CBRCE%%TQ%%CPAREN%", "print _KEY_DICT_",),
@@ -5576,7 +5576,7 @@ def parseTBGLST(FDTBGLST):
 
 			else:
 				FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
-				FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}f{TRIQT}{OBRCE}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+				FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5600,7 +5600,7 @@ def parseTBGLST(FDTBGLST):
 
 			else:
 				FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
-				FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}f{TRIQT}{OBRCE}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+				FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5609,16 +5609,22 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-			if _thisItemLen_ != 6:
-				doErrorItem("not 6 items", _thisItem_)
+			if _thisItemLen_ != 7:
+				doErrorItem("not 7 items", _thisItem_)
 				continue
 
 			_thisClassName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisReverseKey_ = _thisItem_[4]
+			_isARevKeyItem_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{_thisKey_}{CBRKT} = {_thisReverseKey_}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._KEY_DICT_REVERSE_{OBRKT}{_thisReverseKey_}{CBRKT} = {_thisKey_}  # {_thisComment_}{NEWLINE}""")
+			if _isARevKeyItem_ == "True":
+				FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{_thisKey_}{CBRKT} = {_thisReverseKey_}  # {_thisComment_}{NEWLINE}""")
+				FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._KEY_DICT_REVERSE_{OBRKT}{_thisReverseKey_}{CBRKT} = {_thisKey_}  # {_thisComment_}{NEWLINE}""")
+
+			else:
+				FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{_thisKey_}{CBRKT} = {_thisReverseKey_}  # {_thisComment_}{NEWLINE}""")
+				FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._KEY_DICT_REVERSE_{OBRKT}{_thisReverseKey_}{CBRKT} = {_thisKey_}  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2

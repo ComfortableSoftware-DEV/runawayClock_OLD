@@ -837,8 +837,8 @@ class CLASS_CLOCKS(object):
 		self._DICTINSTR_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			f"""{self._USE_THIS_KEY_(K_NAME_NEXT_EVENT)}""": "",  # name of next event
-			f"""{self._USE_THIS_KEY_(K_CHECKBOX_ALPHA_DIM)}""": False,  # value of the alphas dim checkbox
-			f"""{self._USE_THIS_KEY_(K_CHECKBOX_RUNAWAY)}""": False,  # value of runaway checkbox
+			K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
+			K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			f"""{self._USE_THIS_KEY_(K_INTERVAL_COUNT)}""": 0,  # interval count
 			f"""{self._USE_THIS_KEY_(K_TIME_AT_NEXT_ALERT)}""": ZERO_CLOCK,  # time at next event
 			f"""{self._USE_THIS_KEY_(K_TIME_AT_ZEROELAPSE)}""": ZERO_CLOCK,  # time at last zero of elapsed timer
@@ -1333,7 +1333,8 @@ class CLASS_CLOCKS(object):
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
 
 			elif (_thisKey_ in self._DICT_KEYS_INT_):
-				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:self._DICT_KEYS_INT_[_thisKey_]}"""
+				if (self._DICT_KEYS_INT_[_thisKey_] == "04d"):
+					self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:04d}"""
 
 			else:
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
