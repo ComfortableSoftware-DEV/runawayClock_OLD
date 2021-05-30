@@ -1462,6 +1462,7 @@ _DICTINSTR_ {self.dictinstrRepl()}""")
 		if dictToUpdateFrom_ is not None:
 			self._DICTIN_.update(dictToUpdateFrom_)
 
+		dictToUpdateFrom_ = self._DICTIN_
 
 		self.enint()
 		self.enstring()
