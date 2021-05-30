@@ -1100,6 +1100,9 @@ class CLASS_CLOCKS(object):
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
+		print(f"""
+{CF.frameIt("_KEY_DICT_", self._KEY_DICT_)}
+{CF.frameIt("_KEY_DICT_REVERSE_", self._KEY_DICT_REVERSE_)}""")
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	def __enter__(self):
@@ -1227,7 +1230,7 @@ class CLASS_CLOCKS(object):
 			eventMode_=None,
 			currentIntervalCount_=None,
 			nameNextEvent_=None,
-			timeAtNext_=None,
+			timeAtNextAlert_=None,
 			timeAtZeroelapse_=None,
 			timeClock_=None,
 			timeElapsed_=None,
@@ -1254,8 +1257,8 @@ class CLASS_CLOCKS(object):
 			else:
 				self.intervalCountOff()
 
-		if timeAtNext_ is not None:
-			self._DICTIN_[K_TIME_AT_NEXT] = timeAtNext_
+		if timeAtNextAlert_ is not None:
+			self._DICTIN_[K_TIME_AT_NEXT_ALERT] = timeAtNextAlert_
 
 		if timeAtZeroelapse_ is not None:
 			self._DICTIN_[K_TIME_AT_ZEROELAPSE] = timeAtZeroelapse_
@@ -1302,13 +1305,13 @@ class CLASS_CLOCKS(object):
 		for _thisKey_, _thisVal_ in self._DICTIN_.items():
 
 			if (_thisKey_ in self._DICT_KEYS_TIME_):
-				self._DICTINSTR_[self._KEY_DICT_REVERSE_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
+				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
 
 			elif (_thisKey_ in self._DICT_KEYS_INT_):
-				self._DICTINSTR_[_thisKey_] = f"""{_thisVal_:self._DICT_KEYS_INT_[_thisKey_]}"""
+				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:self._DICT_KEYS_INT_[_thisKey_]}"""
 
 			else:
-				self._DICTINSTR_[_thisKey_] = f"""{_thisVal_}"""
+				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
 
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1325,7 +1328,7 @@ class CLASS_CLOCKS(object):
 		global \
 			ALL_THE_FORMS
 		# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-		ALL_THE_FORMS[self._THIS_FORM_NAME_]._MAINFRAME_[K_INTERVAL_COUNT].update(text_color=COLOR_TIME_TOGO)
+		ALL_THE_FORMS[self._THIS_FORM_NAME_]._MAINFRAME_[self._USE_THIS_KEY_(K_INTERVAL_COUNT)].update(text_color=COLOR_TIME_TOGO)
 		self.updateFromDict()
 		# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1653,7 +1656,7 @@ def findNextAlarmEvent():
 				eventMode_=_nextEventList_[0][2],
 				currentIntervalCount_=_nextEventList_[0][4],
 				nameNextEvent_=_nextEventList_[0][3],
-				timeAtNext_=_nextEventList_[0][0],
+				timeAtNextAlert_=_nextEventList_[0][0],
 			)
 		CURRENT_EVENTMODE_VAL = _nextEventList_[0][2]  # (time, index, mode, name, intervalCount)
 		CURRENT_INTERVAL_COUNT = _nextEventList_[0][4]
@@ -1744,9 +1747,10 @@ def outerLoop():
 # doit
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doit():
+	global _pklJar_
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	with CF.withPickles(f"""{CF.CONFIG_DIR}runawayClock/runawayClock.pkl""", APPDS_MAIN), \
-			CLASS_CLOCKS(CF.serializeIt(""), FORM_CLOCKS):
+	with CF.withPickles(f"""{CF.CONFIG_DIR}runawayClock/runawayClock.pkl""", APPDS_MAIN) as _pklJar_, \
+			CLASS_CLOCKS(CF.serializeIt("runawayClock"), FORM_CLOCKS):
 
 		doMidnightWork()
 

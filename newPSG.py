@@ -218,6 +218,7 @@ ZERO_CLOCKSTR = "00:00:00"  # all the zeros
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0901 DEF2
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+_pklJar_ = None  # comment
 COLORS_BTN_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # comment
 COLORS_TEXT_HIGH = (COLOR_TEXT_HIGH, COLOR_BACKGROUND)  # combined colors for a clock text element
 COLORS_TEXT_LOW = (COLOR_TEXT_LOW, COLOR_BACKGROUND)  # combined colors for a clock text element
@@ -1227,7 +1228,7 @@ class CLASS_CLOCKS(object):
 			eventMode_=None,
 			currentIntervalCount_=None,
 			nameNextEvent_=None,
-			timeAtNext_=None,
+			timeAtNextAlert_=None,
 			timeAtZeroelapse_=None,
 			timeClock_=None,
 			timeElapsed_=None,
@@ -1254,8 +1255,8 @@ class CLASS_CLOCKS(object):
 			else:
 				self.intervalCountOff()
 
-		if timeAtNext_ is not None:
-			self._DICTIN_[K_TIME_AT_NEXT] = timeAtNext_
+		if timeAtNextAlert_ is not None:
+			self._DICTIN_[K_TIME_AT_NEXT_ALERT] = timeAtNextAlert_
 
 		if timeAtZeroelapse_ is not None:
 			self._DICTIN_[K_TIME_AT_ZEROELAPSE] = timeAtZeroelapse_
@@ -1302,13 +1303,13 @@ class CLASS_CLOCKS(object):
 		for _thisKey_, _thisVal_ in self._DICTIN_.items():
 
 			if (_thisKey_ in self._DICT_KEYS_TIME_):
-				self._DICTINSTR_[self._KEY_DICT_REVERSE_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
+				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
 
 			elif (_thisKey_ in self._DICT_KEYS_INT_):
-				self._DICTINSTR_[_thisKey_] = f"""{_thisVal_:self._DICT_KEYS_INT_[_thisKey_]}"""
+				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:self._DICT_KEYS_INT_[_thisKey_]}"""
 
 			else:
-				self._DICTINSTR_[_thisKey_] = f"""{_thisVal_}"""
+				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
 
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1325,7 +1326,7 @@ class CLASS_CLOCKS(object):
 		global \
 			ALL_THE_FORMS
 		# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-		ALL_THE_FORMS[self._THIS_FORM_NAME_]._MAINFRAME_[K_INTERVAL_COUNT].update(text_color=COLOR_TIME_TOGO)
+		ALL_THE_FORMS[self._THIS_FORM_NAME_]._MAINFRAME_[self._USE_THIS_KEY_(K_INTERVAL_COUNT)].update(text_color=COLOR_TIME_TOGO)
 		self.updateFromDict()
 		# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 

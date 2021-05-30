@@ -4,7 +4,7 @@
 			eventMode_=None,
 			currentIntervalCount_=None,
 			nameNextEvent_=None,
-			timeAtNext_=None,
+			timeAtNextAlert_=None,
 			timeAtZeroelapse_=None,
 			timeClock_=None,
 			timeElapsed_=None,
@@ -31,8 +31,8 @@
 			else:
 				self.intervalCountOff()
 
-		if timeAtNext_ is not None:
-			self._DICTIN_[K_TIME_AT_NEXT] = timeAtNext_
+		if timeAtNextAlert_ is not None:
+			self._DICTIN_[K_TIME_AT_NEXT_ALERT] = timeAtNextAlert_
 
 		if timeAtZeroelapse_ is not None:
 			self._DICTIN_[K_TIME_AT_ZEROELAPSE] = timeAtZeroelapse_
