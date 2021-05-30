@@ -833,8 +833,8 @@ class CLASS_CLOCKS(object):
 		self._DICTINSTR_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			f"""{self._USE_THIS_KEY_(K_NAME_NEXT_EVENT)}""": "",  # name of next event
-			K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
-			K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
+			f"""{self._USE_THIS_KEY_(K_CHECKBOX_ALPHA_DIM)}""": False,  # value of the alphas dim checkbox
+			f"""{self._USE_THIS_KEY_(K_CHECKBOX_RUNAWAY)}""": False,  # value of runaway checkbox
 			f"""{self._USE_THIS_KEY_(K_INTERVAL_COUNT)}""": 0,  # interval count
 			f"""{self._USE_THIS_KEY_(K_TIME_AT_NEXT_ALERT)}""": ZERO_CLOCK,  # time at next event
 			f"""{self._USE_THIS_KEY_(K_TIME_AT_ZEROELAPSE)}""": ZERO_CLOCK,  # time at last zero of elapsed timer
@@ -1307,7 +1307,10 @@ class CLASS_CLOCKS(object):
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		print(f"""{CF.frameIt("_dictToRtn_", _dictToRtn_)}
+		print(f"""enint
+{CF.frameIt("_dictToRtn_", _dictToRtn_)}
+{CF.frameIt("_KEY_DICT_", self._KEY_DICT_)}
+{CF.frameIt("_KEY_DICT_REVERSE_", self._KEY_DICT_REVERSE_)}
 """)
 		self._DICTIN_ = _dictToRtn_
 

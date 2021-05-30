@@ -783,7 +783,10 @@ class CLASS_CLOCKS(object):
 		self._THIS_KEY_BASE_ = keyBase_  # adopt keyBase_
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""  # make a local key sourcer
 		self._THIS_FORM_NAME_ = formName_  # adopt formName_
+		self._KEY_DICT_REVERSE_ = {}  # 
+		self._KEY_DICT_ = {}  # 
 
+		self._KEY_LIST_TIMES_ = []  # 
 		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  # 
 		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  # 
 		self._ALPHA_LOW_ = SZ_ALPHA_LOW  # 
@@ -800,9 +803,6 @@ class CLASS_CLOCKS(object):
 		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  # 
 		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
 		self._CURRENT_VALUES = {}  # 
-		self._KEY_DICT_ = {}  # 
-		self._KEY_DICT_REVERSE_ = {}  # 
-		self._KEY_LIST_TIMES_ = []  # 
 		self._LAST_EVENT_ = None  # 
 		self._LAST_LOCATION_ = EMPTY_XY  # 
 		self._LAST_MOUSE_LOCATION_ = EMPTY_XY  # 
@@ -833,8 +833,8 @@ class CLASS_CLOCKS(object):
 		self._DICTINSTR_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			f"""{self._USE_THIS_KEY_(K_NAME_NEXT_EVENT)}""": "",  # name of next event
-			K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
-			K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
+			f"""{self._USE_THIS_KEY_(K_CHECKBOX_ALPHA_DIM)}""": False,  # value of the alphas dim checkbox
+			f"""{self._USE_THIS_KEY_(K_CHECKBOX_RUNAWAY)}""": False,  # value of runaway checkbox
 			f"""{self._USE_THIS_KEY_(K_INTERVAL_COUNT)}""": 0,  # interval count
 			f"""{self._USE_THIS_KEY_(K_TIME_AT_NEXT_ALERT)}""": ZERO_CLOCK,  # time at next event
 			f"""{self._USE_THIS_KEY_(K_TIME_AT_ZEROELAPSE)}""": ZERO_CLOCK,  # time at last zero of elapsed timer
@@ -1057,6 +1057,9 @@ class CLASS_CLOCKS(object):
 			K_THIS_KEY_BASE: self._THIS_KEY_BASE_,
 			K_USE_THIS_KEY: self._USE_THIS_KEY_,
 			K_THIS_FORM_NAME: self._THIS_FORM_NAME_,
+			K_KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
+			K_KEY_LIST_TIMES: self._KEY_LIST_TIMES_,
+			K_KEY_DICT: self._KEY_DICT_,
 			K_ALPHA_CHANNEL: self._ALPHA_CHANNEL_,
 			K_ALPHA_HIGH: self._ALPHA_HIGH_,
 			K_ALPHA_LOW: self._ALPHA_LOW_,
@@ -1073,9 +1076,6 @@ class CLASS_CLOCKS(object):
 			K_CURRENT_MOUSE_LOCATION: self._CURRENT_MOUSE_LOCATION_,
 			K_CURRENT_MOUSE_STATUS: self._CURRENT_MOUSE_STATUS_,
 			K_CURRENT_VALUE: self._CURRENT_VALUES,
-			K_KEY_DICT: self._KEY_DICT_,
-			K_KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
-			K_KEY_LIST_TIMES: self._KEY_LIST_TIMES_,
 			K_LAST_EVENT: self._LAST_EVENT_,
 			K_LAST_LOCATION: self._LAST_LOCATION_,
 			K_LAST_MOUSE_LOCATION: self._LAST_MOUSE_LOCATION_,
@@ -1307,7 +1307,10 @@ class CLASS_CLOCKS(object):
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		print(f"""{CF.frameIt("_dictToRtn_", _dictToRtn_)}
+		print(f"""enint
+{CF.frameIt("_dictToRtn_", _dictToRtn_)}
+{CF.frameIt("_KEY_DICT_", self._KEY_DICT_)}
+{CF.frameIt("_KEY_DICT_REVERSE_", self._KEY_DICT_REVERSE_)}
 """)
 		self._DICTIN_ = _dictToRtn_
 

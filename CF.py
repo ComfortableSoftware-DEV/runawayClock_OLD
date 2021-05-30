@@ -1332,6 +1332,7 @@ def serializeIt(UUID_):
 
 		keyToRtn_ = f"""_{SERIALZ[UUID_]:08X}"""
 		SERIALZ[UUID_] += 1
+		SERIALZ[UUID_] = SERIALZ[UUID_] & 0XFFFFFFFF
 		_pklJar_._STUFFTOPKL_ = SERIALZ
 
 	return keyToRtn_
