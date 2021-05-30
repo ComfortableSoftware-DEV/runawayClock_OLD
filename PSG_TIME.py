@@ -367,7 +367,7 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALL_THE_FORMS = {  # comment
+ALL_THE_FRAMES = {  # comment
 	FORM_CLOCKS: None,  # ENTRY IN FORMS
 	FORM_EDITENTRY: None,  # ENTRY IN FORMS
 	FORM_EDITOR: None,  # ENTRY IN FORMS
@@ -776,7 +776,7 @@ TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 class CLASS_CLOCKS(object):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	global \
-		ALL_THE_FORMS
+		ALL_THE_FRAMES
 
 	def __init__(self, keyBase_, formName_):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
@@ -1333,8 +1333,7 @@ class CLASS_CLOCKS(object):
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
 
 			elif (_thisKey_ in self._DICT_KEYS_INT_):
-				if (self._DICT_KEYS_INT_[_thisKey_] == "04d"):
-					self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:04d}"""
+				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:self._DICT_KEYS_INT_[_thisKey_]}"""
 
 			else:
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
@@ -1429,6 +1428,9 @@ class CLASS_CLOCKS(object):
 		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
 		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
 		self._CLOSE_BBOX_ = getCloseBBox(self._LOCATION_, self._SIZE_)
+		self._DICTIN_[K_TIME_CLOCK] = NOWS
+		self._DICTIN_[K_TIME_TOGO] = (self._DICTIN_[K_TIME_AT_NEXT_ALERT] - NOWS)
+		self._DICTIN_[K_TIME_ELAPSED] = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE])
 		self.checkMouse()
 		if (self._CHECKBOX_RUNAWAY_ is True):
 			self.runaway()
@@ -1684,8 +1686,8 @@ def findNextAlarmEvent():
 	_nextEventList_.sort()
 
 	if _nextEventList_ != []:
-		if ALL_THE_FORMS[FORM_CLOCKS] is not None:
-			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+		if ALL_THE_FRAMES[FORM_CLOCKS] is not None:
+			ALL_THE_FRAMES[FORM_CLOCKS].easyUpdate(
 				eventMode_=_nextEventList_[0][2],
 				currentIntervalCount_=_nextEventList_[0][4],
 				nameNextEvent_=_nextEventList_[0][3],
@@ -1781,10 +1783,14 @@ def doStartup():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def outerLoop():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	_oldResults_ = (None, None, None)
 	while True:
-		window_, _result_, _values_ = SG.read_all_windows(timeout=SZ_TIMEOUT_MS)
+		window_, _result_, _values_ = _theseResults_ = SG.read_all_windows(timeout=SZ_TIMEOUT_MS)
 
-		print(f"""_result_ {_result_} _values_ {_values_}""")
+		if (_theseResults_ != _oldResults_):
+			print(f"""_result_ {_result_} _values_ {_values_}""")
+			_oldResults_ = _theseResults_
+
 		if _result_ != "__TIMEOUT__":
 			# do all result processing here
 
@@ -1792,6 +1798,9 @@ def outerLoop():
 				return K_BTN_QUIT_ALL
 
 		localTimes()
+		for _thisFrameName_, _thisFrame_ in ALL_THE_FRAMES.items():
+			if _thisFrame_ is not None:
+				_thisFrame_.update()
 
 		if (NOWMS == 0):
 			doMidnightWork()

@@ -7,6 +7,9 @@
 		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
 		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
 		self._CLOSE_BBOX_ = getCloseBBox(self._LOCATION_, self._SIZE_)
+		self._DICTIN_[K_TIME_CLOCK] = NOWS
+		self._DICTIN_[K_TIME_TOGO] = (self._DICTIN_[K_TIME_AT_NEXT_ALERT] - NOWS)
+		self._DICTIN_[K_TIME_ELAPSED] = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE])
 		self.checkMouse()
 		if (self._CHECKBOX_RUNAWAY_ is True):
 			self.runaway()
