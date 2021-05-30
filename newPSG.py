@@ -45,16 +45,16 @@ COLOR_WHITE = "#FFFFFF"  # white
 EVENTMODE_ALARM = "EVENTMODE_ALARM"  # 
 EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  # 
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
-FORM_CLOCKS = "FORM_CLOCKS"  # holds all of clocks form entries
-FORM_EDITENTRY = "FORM_EDITENTRY"  # holds all of form edit-entry entries
-FORM_EDITOR = "FORM_EDITOR"  # holds all of form editor entries
-FORM_MAIN = "FORM_MAIN"  # holds all of form main entries
-FORM_POPUP01 = "FORM_POPUP01"  # holds all of form popup entries
-FORM_POPUP02 = "FORM_POPUP02"  # holds all of form popup entries
-FORM_POPUP03 = "FORM_POPUP03"  # holds all of form popup entries
-FORM_POPUP04 = "FORM_POPUP04"  # holds all of form popup entries
-FORM_POPUP05 = "FORM_POPUP05"  # holds all of form popup entries
-FORM_THECLOCK = "FORM_THECLOCK"  # holds all of theclock form entries
+FRAME_CLOCKS = "FRAME_CLOCKS"  # holds all of clocks form entries
+FRAME_EDITENTRY = "FRAME_EDITENTRY"  # holds all of form edit-entry entries
+FRAME_EDITOR = "FRAME_EDITOR"  # holds all of form editor entries
+FRAME_MAIN = "FRAME_MAIN"  # holds all of form main entries
+FRAME_POPUP01 = "FRAME_POPUP01"  # holds all of form popup entries
+FRAME_POPUP02 = "FRAME_POPUP02"  # holds all of form popup entries
+FRAME_POPUP03 = "FRAME_POPUP03"  # holds all of form popup entries
+FRAME_POPUP04 = "FRAME_POPUP04"  # holds all of form popup entries
+FRAME_POPUP05 = "FRAME_POPUP05"  # holds all of form popup entries
+FRAME_THECLOCK = "FRAME_THECLOCK"  # holds all of theclock form entries
 INDEX_EAST = 2  # EAST
 INDEX_NORTH = 1  # NORTH
 INDEX_SOUTH = 3  # SOUTH
@@ -111,7 +111,7 @@ K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  #
 K_EVENT_NAME = "K_EVENT_NAME"  # name of the event
 K_EVENTMODE = "K_EVENTMODE"  # what mode is this event
 K_FIRSTRUN = "K_FIRSTRUN"  # True if just started, false after init1()
-K_FORM_NAME = "K_FORM_NAME"  # the name of the form
+K_FRAME_NAME = "K_FRAME_NAME"  # the name of the form
 K_INDEX_OF_NEXT_EVENT = "K_INDEX_OF_NEXT_EVENT"  # index of the next event to alert
 K_INTERVAL_COUNT = "K_INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
 K_IS_ALERTING_NOW = "K_IS_ALERTING_NOW"  # 
@@ -369,16 +369,16 @@ VISIBLE = "visible"  # visibility of elements
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALL_THE_FRAMES = {  # comment
-	FORM_CLOCKS: None,  # ENTRY IN FORMS
-	FORM_EDITENTRY: None,  # ENTRY IN FORMS
-	FORM_EDITOR: None,  # ENTRY IN FORMS
-	FORM_MAIN: None,  # ENTRY IN FORMS
-	FORM_POPUP01: None,  # ENTRY IN FORMS
-	FORM_POPUP02: None,  # ENTRY IN FORMS
-	FORM_POPUP03: None,  # ENTRY IN FORMS
-	FORM_POPUP04: None,  # ENTRY IN FORMS
-	FORM_POPUP05: None,  # ENTRY IN FORMS
-	FORM_THECLOCK: None,  # ENTRY IN FORMS
+	FRAME_CLOCKS: None,  # ENTRY IN FORMS
+	FRAME_EDITENTRY: None,  # ENTRY IN FORMS
+	FRAME_EDITOR: None,  # ENTRY IN FORMS
+	FRAME_MAIN: None,  # ENTRY IN FORMS
+	FRAME_POPUP01: None,  # ENTRY IN FORMS
+	FRAME_POPUP02: None,  # ENTRY IN FORMS
+	FRAME_POPUP03: None,  # ENTRY IN FORMS
+	FRAME_POPUP04: None,  # ENTRY IN FORMS
+	FRAME_POPUP05: None,  # ENTRY IN FORMS
+	FRAME_THECLOCK: None,  # ENTRY IN FORMS
 }
 
 
@@ -1462,10 +1462,10 @@ _DICTINSTR_ {self.dictinstrRepl()}""")
 		if dictToUpdateFrom_ is not None:
 			self._DICTIN_.update(dictToUpdateFrom_)
 
-		dictToUpdateFrom_ = self._DICTIN_
-
 		self.enint()
 		self.enstring()
+		dictToUpdateFrom_ = self._DICTINSTR_
+
 		for _thisKey_, _thisVal_ in dictToUpdateFrom_.items():
 			self._MAINFRAME_[_thisKey_].Update(value=_thisVal_)
 
@@ -1521,7 +1521,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_EVENT_NAME: "MOVE",  # this entry's name
 			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			K_FIRSTRUN: True,  # are we initializing or not
-			K_FORM_NAME: None,  # time of this event
+			K_FRAME_NAME: None,  # time of this event
 			K_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
 			K_PREDISMISSABLE: True,  # is this event dismissable in advance

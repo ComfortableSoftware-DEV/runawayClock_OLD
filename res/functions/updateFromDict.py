@@ -3,10 +3,10 @@
 		if dictToUpdateFrom_ is not None:
 			self._DICTIN_.update(dictToUpdateFrom_)
 
-		dictToUpdateFrom_ = self._DICTIN_
-
 		self.enint()
 		self.enstring()
+		dictToUpdateFrom_ = self._DICTINSTR_
+
 		for _thisKey_, _thisVal_ in dictToUpdateFrom_.items():
 			self._MAINFRAME_[_thisKey_].Update(value=_thisVal_)
 
