@@ -783,7 +783,10 @@ class CLASS_CLOCKS(object):
 		self._THIS_KEY_BASE_ = keyBase_  # adopt keyBase_
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""  # make a local key sourcer
 		self._THIS_FORM_NAME_ = formName_  # adopt formName_
+		self._KEY_DICT_REVERSE_ = {}  #
+		self._KEY_DICT_ = {}  #
 
+		self._KEY_LIST_TIMES_ = []  #
 		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  #
 		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  #
 		self._ALPHA_LOW_ = SZ_ALPHA_LOW  #
@@ -800,9 +803,6 @@ class CLASS_CLOCKS(object):
 		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  #
 		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  #
 		self._CURRENT_VALUES = {}  #
-		self._KEY_DICT_ = {}  #
-		self._KEY_DICT_REVERSE_ = {}  #
-		self._KEY_LIST_TIMES_ = []  #
 		self._LAST_EVENT_ = None  #
 		self._LAST_LOCATION_ = EMPTY_XY  #
 		self._LAST_MOUSE_LOCATION_ = EMPTY_XY  #
@@ -815,6 +815,10 @@ class CLASS_CLOCKS(object):
 		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK  #
 		self._TIME_TO_MOVE_ = ZERO_CLOCK  #
 		self._TIME_TO_UPDATE_ = ZERO_CLOCK  #
+		self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
+		self._KEY_DICT_REVERSE_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
+		self._KEY_DICT_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
+		self._KEY_DICT_REVERSE_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
 
 		self._DICTIN_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1057,6 +1061,9 @@ class CLASS_CLOCKS(object):
 			K_THIS_KEY_BASE: self._THIS_KEY_BASE_,
 			K_USE_THIS_KEY: self._USE_THIS_KEY_,
 			K_THIS_FORM_NAME: self._THIS_FORM_NAME_,
+			K_KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
+			K_KEY_LIST_TIMES: self._KEY_LIST_TIMES_,
+			K_KEY_DICT: self._KEY_DICT_,
 			K_ALPHA_CHANNEL: self._ALPHA_CHANNEL_,
 			K_ALPHA_HIGH: self._ALPHA_HIGH_,
 			K_ALPHA_LOW: self._ALPHA_LOW_,
@@ -1073,9 +1080,6 @@ class CLASS_CLOCKS(object):
 			K_CURRENT_MOUSE_LOCATION: self._CURRENT_MOUSE_LOCATION_,
 			K_CURRENT_MOUSE_STATUS: self._CURRENT_MOUSE_STATUS_,
 			K_CURRENT_VALUE: self._CURRENT_VALUES,
-			K_KEY_DICT: self._KEY_DICT_,
-			K_KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
-			K_KEY_LIST_TIMES: self._KEY_LIST_TIMES_,
 			K_LAST_EVENT: self._LAST_EVENT_,
 			K_LAST_LOCATION: self._LAST_LOCATION_,
 			K_LAST_MOUSE_LOCATION: self._LAST_MOUSE_LOCATION_,
@@ -1100,6 +1104,11 @@ class CLASS_CLOCKS(object):
 			K_WINDOW: self._WINDOW_,  # define the clocks window
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+		print(f"""self._DICTINSTR_ {self._DICTINSTR_}""")  # print _KEY_DICT_REVERSE_
+		print(f"""self._DICTIN_ {self._DICTIN_}""")  # print _KEY_DICT_
+		print(f"""self._KEY_DICT_ {self._KEY_DICT_}""")  # print _KEY_DICT_
+		print(f"""self._KEY_DICT_REVERSE_ {self._KEY_DICT_REVERSE}""")  # print _KEY_DICT_REVERSE_
 
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
