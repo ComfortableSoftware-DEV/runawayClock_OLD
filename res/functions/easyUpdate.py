@@ -27,7 +27,7 @@
 				self._DICTIN_[K_INTERVAL_COUNT] = currentIntervalCount_
 
 			if (eventMode_ == EVENTMODE_INTERVAL):
-				self.intervalCountOn()
+				self.intervalCountOn(currentIntervalCount_)
 			else:
 				self.intervalCountOff()
 
@@ -47,5 +47,8 @@
 			self._DICTIN_[K_TIME_TOGO] = timeTogo_
 
 		self.enint()
+		if (self._DEBUG_PRINT_ is True):
+			print(f"""easyUpdate
+_DICTIN_ {self._DICTIN_}""")
 		self.updateFromDict()
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3

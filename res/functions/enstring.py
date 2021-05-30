@@ -6,12 +6,14 @@
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
 
 			elif (_thisKey_ in self._DICT_KEYS_INT_):
-				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:self._DICT_KEYS_INT_[_thisKey_]}"""
+				if (self._DICT_KEYS_INT_[_thisKey_] == "04d"):
+					self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:04d}"""
 
 			else:
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
 
-		print(f"""{CF.NEWLINE}enstring
+		if (self._DEGUG_PRINT_ is True):
+			print(f"""{CF.NEWLINE}enstring
 {CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}
 """)
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3

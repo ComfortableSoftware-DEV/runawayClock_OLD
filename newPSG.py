@@ -803,6 +803,7 @@ class CLASS_CLOCKS(object):
 		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  # 
 		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
 		self._CURRENT_VALUES = {}  # 
+		self._DEBUG_PRINT_ = True  # debug printing on or off
 		self._LAST_EVENT_ = None  # 
 		self._LAST_LOCATION_ = EMPTY_XY  # 
 		self._LAST_MOUSE_LOCATION_ = EMPTY_XY  # 
@@ -1080,6 +1081,7 @@ class CLASS_CLOCKS(object):
 			K_CURRENT_MOUSE_LOCATION: self._CURRENT_MOUSE_LOCATION_,
 			K_CURRENT_MOUSE_STATUS: self._CURRENT_MOUSE_STATUS_,
 			K_CURRENT_VALUE: self._CURRENT_VALUES,
+			K_DEBUG_PRINT: self._DEBUG_PRINT_,
 			K_LAST_EVENT: self._LAST_EVENT_,
 			K_LAST_LOCATION: self._LAST_LOCATION_,
 			K_LAST_MOUSE_LOCATION: self._LAST_MOUSE_LOCATION_,
@@ -1105,10 +1107,12 @@ class CLASS_CLOCKS(object):
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-		print(f"""self._DICTINSTR_ {self._DICTINSTR_}""")  # print _KEY_DICT_REVERSE_
-		print(f"""self._DICTIN_ {self._DICTIN_}""")  # print _KEY_DICT_
-		print(f"""self._KEY_DICT_ {self._KEY_DICT_}""")  # print _KEY_DICT_
-		print(f"""self._KEY_DICT_REVERSE_ {self._KEY_DICT_REVERSE_}""")  # print _KEY_DICT_REVERSE_
+			print(f"""self._DICTINSTR_ {self._DICTINSTR_}""")  # print _KEY_DICT_REVERSE_
+			print(f"""self._DICTIN_ {self._DICTIN_}""")  # print _KEY_DICT_
+			print(f"""self._KEY_DICT_ {self._KEY_DICT_}""")  # print _KEY_DICT_
+			print(f"""self._KEY_DICT_REVERSE_ {self._KEY_DICT_REVERSE_}""")  # print _KEY_DICT_REVERSE_
+		if (_self._DEGUG_PRINT_ is True):  # see if debug printing is on
+			PRINT("__INIT__3")  # where are we
 
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1260,7 +1264,7 @@ class CLASS_CLOCKS(object):
 				self._DICTIN_[K_INTERVAL_COUNT] = currentIntervalCount_
 
 			if (eventMode_ == EVENTMODE_INTERVAL):
-				self.intervalCountOn()
+				self.intervalCountOn(currentIntervalCount_)
 			else:
 				self.intervalCountOff()
 
@@ -1280,13 +1284,17 @@ class CLASS_CLOCKS(object):
 			self._DICTIN_[K_TIME_TOGO] = timeTogo_
 
 		self.enint()
+		if (self._DEBUG_PRINT_ is True):
+			print(f"""easyUpdate
+_DICTIN_ {self._DICTIN_}""")
 		self.updateFromDict()
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def enint(self):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		_thisDictin_ = self._DICTIN_
-		print(f"""enint
+		if (self._DEGUG_PRINT_ is True):
+			print(f"""enint
 {CF.frameIt("_thisDictin_", _thisDictin_)}
 """)
 		_dictToRtn_ = {}
@@ -1316,7 +1324,8 @@ class CLASS_CLOCKS(object):
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		print(f"""enint
+		if (self._DEGUG_PRINT_ is True):
+			print(f"""enint
 {CF.frameIt("_dictToRtn_", _dictToRtn_)}
 {CF.frameIt("_KEY_DICT_", self._KEY_DICT_)}
 {CF.frameIt("_KEY_DICT_REVERSE_", self._KEY_DICT_REVERSE_)}
@@ -1333,12 +1342,14 @@ class CLASS_CLOCKS(object):
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
 
 			elif (_thisKey_ in self._DICT_KEYS_INT_):
-				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:self._DICT_KEYS_INT_[_thisKey_]}"""
+				if (self._DICT_KEYS_INT_[_thisKey_] == "04d"):
+					self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:04d}"""
 
 			else:
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
 
-		print(f"""{CF.NEWLINE}enstring
+		if (self._DEGUG_PRINT_ is True):
+			print(f"""{CF.NEWLINE}enstring
 {CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}
 """)
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -1409,7 +1420,8 @@ class CLASS_CLOCKS(object):
 
 		self.enint()
 		self.enstring()
-		print(f"""{CF.NEWLINE}updateFromDict
+		if (self._DEGUG_PRINT_ is True):
+			print(f"""{CF.NEWLINE}updateFromDict
 {CF.frameIt("_DICTIN_", self._DICTIN_)}
 {CF.NEWLINE}{CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}{CF.NEWLINE}""")
 		self._MAINFRAME_.fill(self._DICTINSTR_)
