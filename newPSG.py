@@ -1236,13 +1236,32 @@ class CLASS_CLOCKS(object):
 
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
+	def dictinstrRepl(self):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+		_dictToRtn_ = {}
+		for _thisKey_, _thisVal_ in self._DICTINSTR_.items():
+
+			if (_thisKey_ in self._DICT_KEYS_TIME_):
+				_dictToRtn_[_thisKey_] = CF.nrmlIntToHMS(_thisVal_)
+
+			elif (_thisKey_ in self._DICT_KEYS_INT_):
+
+				if (self._DICT_KEYS_INT_[_thisKey_] == "04d"):
+					_dictToRtn_[_thisKey_] = f"""{_thisVal_:04d}"""
+
+			else:
+				_dictToRtn_[_thisKey_] = f"""{_thisVal_}"""
+
+		return _dictToRtn_
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
 	def dictinRepl(self):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		_dictToRtn_ = {}
 		for _thisKey_, _thisVal_ in self._DICTIN_.items():
 
 			if (_thisKey_ in self._DICT_KEYS_TIME_):
-				_dictToRtn_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
+				_dictToRtn_[_thisKey_] = CF.nrmlIntToHMS(_thisVal_)
 
 			elif (_thisKey_ in self._DICT_KEYS_INT_):
 				if (self._DICT_KEYS_INT_[_thisKey_] == "04d"):
@@ -1303,10 +1322,12 @@ class CLASS_CLOCKS(object):
 			self._DICTIN_[K_TIME_TOGO] = timeTogo_
 
 		self.enint()
+		self.updateFromDict()
+
 		if (self._DEBUG_PRINT_ is True):
 			print(f"""easyUpdate
-_DICTIN_ {self._DICTIN_}""")
-		self.updateFromDict()
+_DICTIN_ {self.dictinRepl()}
+_DICTINSTR_ {self.dictstrRepl()}""")
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def enint(self):
@@ -1441,8 +1462,8 @@ _DICTIN_ {self._DICTIN_}""")
 		self.enstring()
 		if (self._DEBUG_PRINT_ is True):
 			print(f"""{CF.NEWLINE}updateFromDict
-{CF.frameIt("_DICTIN_", self._DICTIN_)}
-{CF.NEWLINE}{CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}{CF.NEWLINE}""")
+_DICTIN_ = {self.dictinRepl())}
+_DICTINSTR_ = {self.dictinstrRepl()}{CF.NEWLINE}""")
 		self._MAINFRAME_.fill(self._DICTINSTR_)
 		__dummy__ = self._MAINFRAME_.Read(timeout=1)
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -1452,8 +1473,6 @@ _DICTIN_ {self._DICTIN_}""")
 		if (NOWMS < self._TIME_TO_UPDATE_):
 			return
 
-		if (self._DEBUG_PRINT_ is True):
-			print(f"""updating""")
 		self._TIME_TO_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES
 		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
 		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
@@ -1463,7 +1482,9 @@ _DICTIN_ {self._DICTIN_}""")
 		self._DICTIN_[K_TIME_ELAPSED] = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE])
 		self.checkMouse()
 		if (self._DEBUG_PRINT_ is True):
-			print(f"""_DICTIN_ {self._DICTIN_}""")
+			print(f"""update
+_DICTIN_ = {self.dictinRepl()}
+_DICTINSTR_ = {self.dictinstrRepl()}""")
 
 		if (self._CHECKBOX_RUNAWAY_ is True):
 			self.runaway()

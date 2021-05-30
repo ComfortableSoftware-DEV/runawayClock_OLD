@@ -909,6 +909,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_01_ENTER", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__enter__", "__enter__.py", "define __enter__",),
 	("PSGVAL__CLOCKS_FUNC_02_EXIT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__exit__", "__exit__.py", "define __exit__ in CLOCKS",),
 	("PSGVAL__CLOCKS_FUNC_03_CHECK_MOUSE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "define checkMouse",),
+	("PSGVAL__CLOCKS_FUNC_03_DICTINSTR_REPL", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "dictinstrRepl", "dictinstrRepl.py", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC_03_DICTIN_REPL", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "dictinRepl", "dictinRepl.py", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "easyUpdate.py", "load the whole thing from the file for easyUpdate",),
 	("PSGVAL__CLOCKS_FUNC_03_ENINT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enint", "enint.py", "read the frame and set self._RESULT_",),

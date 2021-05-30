@@ -3,8 +3,6 @@
 		if (NOWMS < self._TIME_TO_UPDATE_):
 			return
 
-		if (self._DEBUG_PRINT_ is True):
-			print(f"""updating""")
 		self._TIME_TO_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES
 		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
 		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
@@ -14,7 +12,9 @@
 		self._DICTIN_[K_TIME_ELAPSED] = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE])
 		self.checkMouse()
 		if (self._DEBUG_PRINT_ is True):
-			print(f"""{self.dictinRepl()}""")
+			print(f"""update
+_DICTIN_ = {self.dictinRepl()}
+_DICTINSTR_ = {self.dictinstrRepl()}""")
 
 		if (self._CHECKBOX_RUNAWAY_ is True):
 			self.runaway()

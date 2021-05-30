@@ -8,8 +8,8 @@
 		self.enstring()
 		if (self._DEBUG_PRINT_ is True):
 			print(f"""{CF.NEWLINE}updateFromDict
-{CF.frameIt("_DICTIN_", self._DICTIN_)}
-{CF.NEWLINE}{CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}{CF.NEWLINE}""")
+_DICTIN_ = {self.dictinRepl())}
+_DICTINSTR_ = {self.dictinstrRepl()}{CF.NEWLINE}""")
 		self._MAINFRAME_.fill(self._DICTINSTR_)
 		__dummy__ = self._MAINFRAME_.Read(timeout=1)
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3

@@ -47,8 +47,10 @@
 			self._DICTIN_[K_TIME_TOGO] = timeTogo_
 
 		self.enint()
+		self.updateFromDict()
+
 		if (self._DEBUG_PRINT_ is True):
 			print(f"""easyUpdate
-_DICTIN_ {self._DICTIN_}""")
-		self.updateFromDict()
+_DICTIN_ {self.dictinRepl()}
+_DICTINSTR_ {self.dictstrRepl()}""")
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
