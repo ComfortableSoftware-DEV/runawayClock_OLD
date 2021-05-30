@@ -1108,7 +1108,7 @@ class CLASS_CLOCKS(object):
 		print(f"""self._DICTINSTR_ {self._DICTINSTR_}""")  # print _KEY_DICT_REVERSE_
 		print(f"""self._DICTIN_ {self._DICTIN_}""")  # print _KEY_DICT_
 		print(f"""self._KEY_DICT_ {self._KEY_DICT_}""")  # print _KEY_DICT_
-		print(f"""self._KEY_DICT_REVERSE_ {self._KEY_DICT_REVERSE}""")  # print _KEY_DICT_REVERSE_
+		print(f"""self._KEY_DICT_REVERSE_ {self._KEY_DICT_REVERSE_}""")  # print _KEY_DICT_REVERSE_
 
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
