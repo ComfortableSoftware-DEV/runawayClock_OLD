@@ -99,6 +99,7 @@ K_CURRENT_MOUSE_LOCATION = "K_CURRENT_MOUSE_LOCATION"  #
 K_CURRENT_MOUSE_STATUS = "K_CURRENT_MOUSE_STATUS"  # 
 K_CURRENT_VALUE = "K_CURRENT_VALUE"  # 
 K_CURRENTLY_DIMMED = "K_CURRENTLY_DIMMED"  # 
+K_DEBUG_PRINT = "K_DEBUG_PRINT"  # debug print key
 K_DICT_KEYS_INT = "K_DICT_KEYS_INT"  # 
 K_DICT_KEYS_TIME = "K_DICT_KEYS_TIME"  # 
 K_DICTIN = "K_DICTIN"  # 
@@ -1107,12 +1108,12 @@ class CLASS_CLOCKS(object):
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
+		if (self._DEBUG_PRINT_ is True):  # see if debug printing is on
+			print("__INIT__3")  # where are we
 			print(f"""self._DICTINSTR_ {self._DICTINSTR_}""")  # print _KEY_DICT_REVERSE_
 			print(f"""self._DICTIN_ {self._DICTIN_}""")  # print _KEY_DICT_
 			print(f"""self._KEY_DICT_ {self._KEY_DICT_}""")  # print _KEY_DICT_
 			print(f"""self._KEY_DICT_REVERSE_ {self._KEY_DICT_REVERSE_}""")  # print _KEY_DICT_REVERSE_
-		if (_self._DEGUG_PRINT_ is True):  # see if debug printing is on
-			PRINT("__INIT__3")  # where are we
 
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1293,7 +1294,7 @@ _DICTIN_ {self._DICTIN_}""")
 	def enint(self):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		_thisDictin_ = self._DICTIN_
-		if (self._DEGUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ is True):
 			print(f"""enint
 {CF.frameIt("_thisDictin_", _thisDictin_)}
 """)
@@ -1324,7 +1325,7 @@ _DICTIN_ {self._DICTIN_}""")
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DEGUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ is True):
 			print(f"""enint
 {CF.frameIt("_dictToRtn_", _dictToRtn_)}
 {CF.frameIt("_KEY_DICT_", self._KEY_DICT_)}
@@ -1348,7 +1349,7 @@ _DICTIN_ {self._DICTIN_}""")
 			else:
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
 
-		if (self._DEGUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ is True):
 			print(f"""{CF.NEWLINE}enstring
 {CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}
 """)
@@ -1420,7 +1421,7 @@ _DICTIN_ {self._DICTIN_}""")
 
 		self.enint()
 		self.enstring()
-		if (self._DEGUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ is True):
 			print(f"""{CF.NEWLINE}updateFromDict
 {CF.frameIt("_DICTIN_", self._DICTIN_)}
 {CF.NEWLINE}{CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}{CF.NEWLINE}""")
@@ -1430,7 +1431,7 @@ _DICTIN_ {self._DICTIN_}""")
 
 	def update(self):
 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		if (NOWMS >= self._TIME_TO_UPDATE_):
+		if (NOWMS < self._TIME_TO_UPDATE_):
 			return
 
 		self._TIME_TO_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES

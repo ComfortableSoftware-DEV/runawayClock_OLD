@@ -6,7 +6,7 @@
 
 		self.enint()
 		self.enstring()
-		if (self._DEGUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ is True):
 			print(f"""{CF.NEWLINE}updateFromDict
 {CF.frameIt("_DICTIN_", self._DICTIN_)}
 {CF.NEWLINE}{CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}{CF.NEWLINE}""")

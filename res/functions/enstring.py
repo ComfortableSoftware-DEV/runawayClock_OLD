@@ -12,7 +12,7 @@
 			else:
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
 
-		if (self._DEGUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ is True):
 			print(f"""{CF.NEWLINE}enstring
 {CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}
 """)
