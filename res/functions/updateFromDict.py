@@ -6,7 +6,9 @@
 
 		self.enint()
 		self.enstring()
-		self._MAINFRAME_.fill(self._DICTINSTR_)
+		for _thisKey_, _thisVal_ in dictToUpdateFrom_.items():
+			self._MAINFRAME_[_thisKey_].Update(value=_thisVal_)
+
 		__dummy__ = self._MAINFRAME_.Read(timeout=1)
 
 		if (self._DEBUG_PRINT_ is True):
