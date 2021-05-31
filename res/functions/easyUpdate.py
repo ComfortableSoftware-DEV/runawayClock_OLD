@@ -69,7 +69,6 @@
 			self.debugPrint(
 				printDictinS_=True,
 				title_="easyUpdate",
-
 				message_=f"""input:
 checkboxAlphaDim_ {checkboxAlphaDim_}
 checkboxRunaway_ {checkboxRunaway_}

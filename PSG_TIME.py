@@ -1318,14 +1318,14 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			_strToPrint_ += f"""{CF.NEWLINE}{title_}{CF.NEWLINE}"""
 
 		if (cfDebugInfo_ is True):
-			_strToPrint_ += f"""{CF.getDebugInfo()}{CF.NEWLINE}"""
+			_strToPrint_ += f"""debuginfo: {CF.getDebugInfo()}{CF.NEWLINE}"""
 
 		if (message_ is not None):
-			_strToPrint_ += f"""{message_}{CF.NEWLINE}"""
+			_strToPrint_ += f"""message: {message_}{CF.NEWLINE}"""
 
 		if (printDictinS_ is True):
-			_strToPrint_ += f"""{self.dictinRepl()}"""
-			_strToPrint_ += f"""{self.dictinstrRepl()}"""
+			_strToPrint_ += f"""_DICTIN_: {self.dictinRepl()}"""
+			_strToPrint_ += f"""_DICTINSTR_: {self.dictinstrRepl()}"""
 
 		_strToPrint_ += f"""{CF.NEWLINE}"""
 		print(_strToPrint_)
@@ -1463,7 +1463,6 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			self.debugPrint(
 				printDictinS_=True,
 				title_="easyUpdate",
-
 				message_=f"""input:
 checkboxAlphaDim_ {checkboxAlphaDim_}
 checkboxRunaway_ {checkboxRunaway_}
@@ -2097,6 +2096,10 @@ def doStartup():
 			checkboxRunaway_=APPDS_MAIN[K_CHECKBOX_RUNAWAY],
 			timeAtZeroelapse_=NOWS,
 		)
+	print(f"""doStartup
+_tempDS_ {_tempDS_}
+
+""")
 
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2114,7 +2117,7 @@ def doFrameClocks(values_):
 		checkboxAlphaDim_=values_[K_CHECKBOX_ALPHA_DIM],
 		checkboxRunaway_=values_[K_CHECKBOX_RUNAWAY],
 	)
-	APPDS_MAIN.update(_values_)
+	APPDS_MAIN.update(values_)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2146,7 +2149,7 @@ def outerLoop():
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (_theseResults_ != _oldResults_):
-			print(f"""_result_ {_result_} _values_ {_values_}""")
+			print(f"""outerloop _result_ {_result_} _values_ {_values_}""")
 			_oldResults_ = _theseResults_
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
@@ -2183,8 +2186,7 @@ def outerLoop():
 		for _thisFrameName_, _thisFrame_ in ALL_THE_FRAMES.items():
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if _thisFrame_ is not None:
-				print(f"""outerloop
-updating frame {_thisFrameName_}""")
+				print(f"""outerloop updating frame {_thisFrameName_}""")
 				_thisFrame_.update()
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
@@ -2218,6 +2220,7 @@ def doit():
 			CLASS_CLOCKS(CF.serializeIt("runawayClock"), FRAME_CLOCKS):
 
 		APPDS_MAIN = _pklJar_._STUFFTOPKL_
+		localTimes()
 		doStartup()
 		doMidnightWork()
 

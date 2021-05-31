@@ -1318,14 +1318,14 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			_strToPrint_ += f"""{CF.NEWLINE}{title_}{CF.NEWLINE}"""
 
 		if (cfDebugInfo_ is True):
-			_strToPrint_ += f"""{CF.getDebugInfo()}{CF.NEWLINE}"""
+			_strToPrint_ += f"""debuginfo: {CF.getDebugInfo()}{CF.NEWLINE}"""
 
 		if (message_ is not None):
-			_strToPrint_ += f"""{message_}{CF.NEWLINE}"""
+			_strToPrint_ += f"""message: {message_}{CF.NEWLINE}"""
 
 		if (printDictinS_ is True):
-			_strToPrint_ += f"""{self.dictinRepl()}"""
-			_strToPrint_ += f"""{self.dictinstrRepl()}"""
+			_strToPrint_ += f"""_DICTIN_: {self.dictinRepl()}"""
+			_strToPrint_ += f"""_DICTINSTR_: {self.dictinstrRepl()}"""
 
 		_strToPrint_ += f"""{CF.NEWLINE}"""
 		print(_strToPrint_)
@@ -1463,7 +1463,6 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			self.debugPrint(
 				printDictinS_=True,
 				title_="easyUpdate",
-
 				message_=f"""input:
 checkboxAlphaDim_ {checkboxAlphaDim_}
 checkboxRunaway_ {checkboxRunaway_}
