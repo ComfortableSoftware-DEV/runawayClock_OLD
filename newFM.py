@@ -184,6 +184,7 @@ PSGTOP_NAME = f"""{CONFIGDIR}PSGTOP.py"""
 QTSET = [DBLQT, SGLQT, BKQT]  # set of all quote characters
 SCTN0102NAME = f"""{CONFIGDIR}SCTN0102.py"""
 SCTNSNAME = f"""{CONFIGDIR}SCTNS.md"""
+SERIALNUMBER = lambda __NUM__: f"""{(__NUM__ % 0XFFFFFFFF):08X}"""
 SP_NAME = "newSP.py"
 SPTOP_NAME = f"""{CONFIGDIR}SPTOP.py"""
 TBGLST_NAME = "TBGLST.py"
