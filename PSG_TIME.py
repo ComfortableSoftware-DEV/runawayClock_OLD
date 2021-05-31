@@ -115,9 +115,10 @@ K_CURRENT_EVENTMODE = "K_CURRENT_EVENTMODE"  #
 K_CURRENT_LOCATION = "K_CURRENT_LOCATION"  #
 K_CURRENT_MOUSE_LOCATION = "K_CURRENT_MOUSE_LOCATION"  #
 K_CURRENT_MOUSE_STATUS = "K_CURRENT_MOUSE_STATUS"  #
+K_CURRENT_RESULT = "K_CURRENT_RESULT"  #
 K_CURRENT_VALUE = "K_CURRENT_VALUE"  #
 K_CURRENTLY_DIMMED = "K_CURRENTLY_DIMMED"  #
-K_DEBUG_PRINT = "K_DEBUG_PRINT"  # debug print key
+K_DEBUG_PRINT_DICT = "K_DEBUG_PRINT_DICT"  # debug print key
 K_DICT_KEYS_INT = "K_DICT_KEYS_INT"  #
 K_DICT_KEYS_TIME = "K_DICT_KEYS_TIME"  #
 K_DICTIN = "K_DICTIN"  #
@@ -1156,12 +1157,12 @@ class CLASS_CLOCKS(object):
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-		if (self._DEBUG_PRINT_ >= 90):  # see if debug printing is on
-			print("__INIT__3")  # where are we
-			print(f"""self._DICTINSTR_ {self._DICTINSTR_}""")  # print _KEY_DICT_REVERSE_
-			print(f"""self._DICTIN_ {self._DICTIN_}""")  # print _KEY_DICT_
-			print(f"""self._KEY_DICT_ {self._KEY_DICT_}""")  # print _KEY_DICT_
-			print(f"""self._KEY_DICT_REVERSE_ {self._KEY_DICT_REVERSE_}""")  # print _KEY_DICT_REVERSE_
+		if (self._DEBUG_PRINT_DICT_[F___INIT__] is True):  # see if debug printing is on
+			self.debugPrint(  # debugPrint
+				title_="__INIT__3",  # print _KEY_DICT_REVERSE_
+				printDictinS_=True,  # print _KEY_DICT_
+				message_=f"""self._KEY_DICT_ {self._KEY_DICT_}  # print _KEY_DICT_
+		self._KEY_DICT_REVERSE_ {self._KEY_DICT_REVERSE_}""")  # print _KEY_DICT_REVERSE_
 
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1323,8 +1324,8 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			_strToPrint_ += f"""{message_}{CF.NEWLINE}"""
 
 		if (printDictinS_ is True):
-			_strToPrint_ += self.dictinRepl()
-			_strToPrint_ += self.dictinstrRepl()
+			_strToPrint_ += f"""{self.dictinRepl()}"""
+			_strToPrint_ += f"""{self.dictinstrRepl()}"""
 
 		_strToPrint_ += f"""{CF.NEWLINE}"""
 		print(_strToPrint_)
@@ -1514,10 +1515,6 @@ alphaChannel_ {alphaChannel_}
 	def enint(self):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		_thisDictin_ = self._DICTIN_
-		if (self._DEBUG_PRINT_ >= 20):
-			print(f"""enint
-{CF.frameIt("_thisDictin_", _thisDictin_)}
-""")
 		_dictToRtn_ = {}
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		for _thisKey_, _thisVal_ in _thisDictin_.items():

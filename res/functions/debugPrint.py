@@ -19,8 +19,8 @@
 			_strToPrint_ += f"""{message_}{CF.NEWLINE}"""
 
 		if (printDictinS_ is True):
-			_strToPrint_ += self.dictinRepl()
-			_strToPrint_ += self.dictinstrRepl()
+			_strToPrint_ += f"""{self.dictinRepl()}"""
+			_strToPrint_ += f"""{self.dictinstrRepl()}"""
 
 		_strToPrint_ += f"""{CF.NEWLINE}"""
 		print(_strToPrint_)
