@@ -880,8 +880,8 @@ class CLASS_CLOCKS(object):
 			F_DEBUGPRINT: False,  # FKEY debugPrint
 			F_DICTINSTRREPL: False,  # FKEY dictinstrRepl
 			F_DICTINREPL: False,  # FKEY dictinRepl
-			F_EASYUPDATE: False,  # FKEY easyUpdate
-			F_EASYUPDATEPARMS: False,  # FKEY easyUpdateParms
+			F_EASYUPDATE: True,  # FKEY easyUpdate
+			F_EASYUPDATEPARMS: True,  # FKEY easyUpdateParms
 			F_ENINT: False,  # FKEY enint
 			F_ENSTRING: False,  # FKEY enstring
 			F___ENTER__: False,  # so the various service lists work for __enter__
