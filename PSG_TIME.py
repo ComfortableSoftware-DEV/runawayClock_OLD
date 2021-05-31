@@ -128,7 +128,6 @@ K_MAINFRAME = "K_MAINFRAME"  #
 K_MPX = "K_MPX"  #
 K_NAME = "K_NAME"  #
 K_NAME_NEXT_EVENT = "K_NAME_NEXT_EVENT"  # name of the next event up
-K_NEW_VERSION = "K_NEW_VERSION"  # True if pkl is to be updated from APPDS_MAIN
 K_PERIODIC = "K_PERIODIC"  #
 K_PREDISMISSABLE = "K_PREDISMISSABLE"  # event can be dismissed in advance
 K_SCREEN_DIMS = "K_SCREEN_DIMS"  #
@@ -160,6 +159,7 @@ K_TIME_TO_MOVE = "K_TIME_TO_MOVE"  #
 K_TIME_TO_UPDATE = "K_TIME_TO_UPDATE"  #
 K_TIME_TOGO = "K_TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 K_USE_THIS_KEY = "K_USE_THIS_KEY"  #
+K_VERSION = "K_VERSION"  # True if pkl is to be updated from APPDS_MAIN
 K_WINDOW = "K_WINDOW"  #
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
@@ -200,6 +200,8 @@ SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 100  # maximum possible change per move
 SZ_MOVE_DIST = 50  # move by this pixels each jump
 SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
+SZ_PKLNAME_DEV = "runawayClock_DEV.pkl"  # name of the pkl file for the app in dev
+SZ_PKLNAME_PROD = "runawayClock.pkl"  # name of the pkl file for the app in use
 SZ_RUNAWAY = False  # default runaway state
 SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
 SZ_TIMEMS_BETWEEN_MOVES = 500  # time_ms between moves
@@ -230,6 +232,7 @@ COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined c
 COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 CURRENT_EVENTMODE_VAL = EVENTMODE_NONE  # comment
 CURRENT_INTERVAL_COUNT = 0  # comment
+DEVMODE = False  # comment
 EMPTY_BBOX = (0, 0, 0, 0)  # empty XY dict
 EMPTY_XY = (0, 0)  # empty XY dict
 FONT_DEFAULT = "Source Code Pro"  # default font my favorite readable font
@@ -1544,7 +1547,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_NEW_VERSION: True,  # bool is this new, or is pkl safe to use
+	K_VERSION: "00000000",  # version number hex string
 }
 
 
