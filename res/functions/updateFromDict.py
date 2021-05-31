@@ -12,10 +12,12 @@
 
 		__dummy__ = self._MAINFRAME_.Read(timeout=1)
 
-		if (self._DEBUG_PRINT_ >= 20):
-			print(f"""{CF.NEWLINE}updateFromDict
-_DICTIN_ = {self.dictinRepl()}
-_DICTINSTR_ = {self.dictinstrRepl()}
+		if (self._DEBUG_PRINT_DICT_[F_UPDATEFROMDICT]):
+			self.debugPrint(
+				title_="updateFromDict",
+				printDictinS_=True,
+				message_=f"""
+dictToUpdateFrom_ {dictToUpdateFrom_}
 __dummy__ {__dummy__}{CF.NEWLINE}""")
 
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
