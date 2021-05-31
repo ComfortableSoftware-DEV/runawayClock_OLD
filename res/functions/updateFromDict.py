@@ -12,7 +12,7 @@
 
 		__dummy__ = self._MAINFRAME_.Read(timeout=1)
 
-		if (self._DEBUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ >= 20):
 			print(f"""{CF.NEWLINE}updateFromDict
 _DICTIN_ = {self.dictinRepl()}
 _DICTINSTR_ = {self.dictinstrRepl()}

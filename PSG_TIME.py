@@ -1113,7 +1113,7 @@ class CLASS_CLOCKS(object):
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-		if (self._DEBUG_PRINT_ is True):  # see if debug printing is on
+		if (self._DEBUG_PRINT_ >= 90):  # see if debug printing is on
 			print("__INIT__3")  # where are we
 			print(f"""self._DICTINSTR_ {self._DICTINSTR_}""")  # print _KEY_DICT_REVERSE_
 			print(f"""self._DICTIN_ {self._DICTIN_}""")  # print _KEY_DICT_
@@ -1334,7 +1334,7 @@ class CLASS_CLOCKS(object):
 		self.enint()
 		self.updateFromDict()
 
-		if (self._DEBUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ >= 20):
 			print(f"""easyUpdate
 _DICTIN_ {self.dictinRepl()}
 _DICTINSTR_ {self.dictinstrRepl()}""")
@@ -1343,7 +1343,7 @@ _DICTINSTR_ {self.dictinstrRepl()}""")
 	def enint(self):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		_thisDictin_ = self._DICTIN_
-		if (self._DEBUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ >= 20):
 			print(f"""enint
 {CF.frameIt("_thisDictin_", _thisDictin_)}
 """)
@@ -1374,7 +1374,7 @@ _DICTINSTR_ {self.dictinstrRepl()}""")
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DEBUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ >= 10):
 			print(f"""enint
 {CF.frameIt("_dictToRtn_", _dictToRtn_)}
 {CF.frameIt("_KEY_DICT_", self._KEY_DICT_)}
@@ -1398,7 +1398,7 @@ _DICTINSTR_ {self.dictinstrRepl()}""")
 			else:
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
 
-		if (self._DEBUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ >= 10):
 			print(f"""{CF.NEWLINE}enstring
 {CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}
 """)
@@ -1476,7 +1476,7 @@ _DICTINSTR_ {self.dictinstrRepl()}""")
 
 		__dummy__ = self._MAINFRAME_.Read(timeout=1)
 
-		if (self._DEBUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ >= 20):
 			print(f"""{CF.NEWLINE}updateFromDict
 _DICTIN_ = {self.dictinRepl()}
 _DICTINSTR_ = {self.dictinstrRepl()}
@@ -1497,7 +1497,7 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 		self._DICTIN_[K_TIME_TOGO] = (self._DICTIN_[K_TIME_AT_NEXT_ALERT] - NOWS)
 		self._DICTIN_[K_TIME_ELAPSED] = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE])
 		self.checkMouse()
-		if (self._DEBUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ > 0):
 			print(f"""update
 _DICTIN_ = {self.dictinRepl()}
 _DICTINSTR_ = {self.dictinstrRepl()}""")

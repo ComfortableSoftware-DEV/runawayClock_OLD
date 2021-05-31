@@ -11,7 +11,7 @@
 		self._DICTIN_[K_TIME_TOGO] = (self._DICTIN_[K_TIME_AT_NEXT_ALERT] - NOWS)
 		self._DICTIN_[K_TIME_ELAPSED] = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE])
 		self.checkMouse()
-		if (self._DEBUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ > 0):
 			print(f"""update
 _DICTIN_ = {self.dictinRepl()}
 _DICTINSTR_ = {self.dictinstrRepl()}""")

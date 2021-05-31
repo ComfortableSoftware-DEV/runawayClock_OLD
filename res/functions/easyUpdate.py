@@ -49,7 +49,7 @@
 		self.enint()
 		self.updateFromDict()
 
-		if (self._DEBUG_PRINT_ is True):
+		if (self._DEBUG_PRINT_ >= 20):
 			print(f"""easyUpdate
 _DICTIN_ {self.dictinRepl()}
 _DICTINSTR_ {self.dictinstrRepl()}""")
