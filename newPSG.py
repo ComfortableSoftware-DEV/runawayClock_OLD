@@ -45,6 +45,24 @@ COLOR_WHITE = "#FFFFFF"  # white
 EVENTMODE_ALARM = "EVENTMODE_ALARM"  # 
 EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  # 
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
+F___ENTER__ = "F___ENTER__"  # so the various service lists work for __enter__
+F___EXIT__ = "F___EXIT__"  # service list key for __exit__
+F___INIT__ = "F___INIT__"  # service list key for __init__
+F_CHECKMOUSE = "F_CHECKMOUSE"  # FKEY checkMouse
+F_DEBUGPRINT = "F_DEBUGPRINT"  # FKEY debugPrint
+F_DICTINREPL = "F_DICTINREPL"  # FKEY dictinRepl
+F_DICTINSTRREPL = "F_DICTINSTRREPL"  # FKEY dictinstrRepl
+F_EASYUPDATE = "F_EASYUPDATE"  # FKEY easyUpdate
+F_EASYUPDATEPARMS = "F_EASYUPDATEPARMS"  # FKEY easyUpdateParms
+F_ENINT = "F_ENINT"  # FKEY enint
+F_ENSTRING = "F_ENSTRING"  # FKEY enstring
+F_INTERVALCOUNTOFF = "F_INTERVALCOUNTOFF"  # FKEY intervalCountOff
+F_INTERVALCOUNTON = "F_INTERVALCOUNTON"  # FKEY intervalCountOn
+F_QUICKREAD = "F_QUICKREAD"  # FKEY quickRead
+F_READTODICT = "F_READTODICT"  # FKEY readToDict
+F_RUNAWAY = "F_RUNAWAY"  # FKEY runaway
+F_UPDATE = "F_UPDATE"  # FKEY update
+F_UPDATEFROMDICT = "F_UPDATEFROMDICT"  # FKEY updateFromDict
 FRAME_CLOCKS = "FRAME_CLOCKS"  # holds all of clocks form entries
 FRAME_EDITENTRY = "FRAME_EDITENTRY"  # holds all of form edit-entry entries
 FRAME_EDITOR = "FRAME_EDITOR"  # holds all of form editor entries
@@ -810,7 +828,6 @@ class CLASS_CLOCKS(object):
 		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  # 
 		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
 		self._CURRENT_VALUES = {}  # 
-		self._DEBUG_PRINT_ = 11  # % of things to print
 		self._LAST_EVENT_ = None  # 
 		self._LAST_LOCATION_ = EMPTY_XY  # 
 		self._LAST_MOUSE_LOCATION_ = EMPTY_XY  # 
@@ -855,6 +872,29 @@ class CLASS_CLOCKS(object):
 			f"""{self._USE_THIS_KEY_(K_TIME_TOGO)}""": ZERO_CLOCK,  # countdown to next event
 		}
 # fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+		self._DEBUG_PRINT_DICT_ = {  # dict of class functions to print debug messages from
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			F_CHECKMOUSE: False,  # FKEY checkMouse
+			F_DEBUGPRINT: False,  # FKEY debugPrint
+			F_DICTINSTRREPL: False,  # FKEY dictinstrRepl
+			F_DICTINREPL: False,  # FKEY dictinRepl
+			F_EASYUPDATE: False,  # FKEY easyUpdate
+			F_EASYUPDATEPARMS: False,  # FKEY easyUpdateParms
+			F_ENINT: False,  # FKEY enint
+			F_ENSTRING: False,  # FKEY enstring
+			F___ENTER__: False,  # so the various service lists work for __enter__
+			F___EXIT__: False,  # service list key for __exit__
+			F___INIT__: False,  # service list key for __init__
+			F_INTERVALCOUNTOFF: False,  # FKEY intervalCountOff
+			F_INTERVALCOUNTON: False,  # FKEY intervalCountOn
+			F_QUICKREAD: False,  # FKEY quickRead
+			F_READTODICT: False,  # FKEY readToDict
+			F_RUNAWAY: False,  # FKEY runaway
+			F_UPDATE: False,  # FKEY update
+			F_UPDATEFROMDICT: False,  # FKEY updateFromDict
+		}
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 		self._DICTOUT_ = {  # holds the values for the clocks frame
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1061,6 +1101,7 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			K_COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
 			K_COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
+			K_DEBUG_PRINT_DICT: self._DEBUG_PRINT_DICT_,  # dict of class functions to print debug messages from
 			K_DICTOUT: self._DICTOUT_,  # holds the values for the clocks frame
 			K_DICT_KEYS_INT: self._DICT_KEYS_INT_,  # dict of integer keys and their format
 			K_DICT_KEYS_TIME: self._DICT_KEYS_TIME_,  # dict of time keys and their max value int seconds
@@ -1088,7 +1129,6 @@ class CLASS_CLOCKS(object):
 			K_CURRENT_MOUSE_LOCATION: self._CURRENT_MOUSE_LOCATION_,
 			K_CURRENT_MOUSE_STATUS: self._CURRENT_MOUSE_STATUS_,
 			K_CURRENT_VALUE: self._CURRENT_VALUES,
-			K_DEBUG_PRINT: self._DEBUG_PRINT_,
 			K_LAST_EVENT: self._LAST_EVENT_,
 			K_LAST_LOCATION: self._LAST_LOCATION_,
 			K_LAST_MOUSE_LOCATION: self._LAST_MOUSE_LOCATION_,
