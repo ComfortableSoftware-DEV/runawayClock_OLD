@@ -809,7 +809,7 @@ class CLASS_CLOCKS(object):
 		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  #
 		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  #
 		self._CURRENT_VALUES = {}  #
-		self._DEBUG_PRINT_ = True  # debug printing on or off
+		self._DEBUG_PRINT_ = 30  # debug printing level
 		self._LAST_EVENT_ = None  #
 		self._LAST_LOCATION_ = EMPTY_XY  #
 		self._LAST_MOUSE_LOCATION_ = EMPTY_XY  #
@@ -1912,15 +1912,18 @@ updating frame {_thisFrameName_}""")
 def doit():
 	global \
 		_pklJar_, \
-		APPDS_MAIN
+		APPDS_MAIN, \
+		DEVMODE
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	if ()
-	with CF.withPickles(f"""{CF.CONFIG_DIR}runawayClock/runawayClock.pkl""", APPDS_MAIN) as _pklJar_, \
-			CLASS_CLOCKS(CF.serializeIt("runawayClock"), FRAME_CLOCKS):
+	if (CF.ABS_DOT.find("_DEV") > -1):
+		_pklName_ = "runawayClock_DEV.pkl"
+		DEVMODE = True
+	else:
+		_pklName_ = "runawayClock.pkl"
+		DEVMODE = False
 
-		if (APPDS_MAIN[K_NEW_VERSION] is True):
-			APPDS_MAIN[K_NEW_VERSION] = False
-			_pklJar_._STUFFTOPKL_.update(APPDS_MAIN)
+	with CF.withPickles(f"""{CF.CONFIG_DIR}runawayClock/{_pklName_}""", APPDS_MAIN) as _pklJar_, \
+			CLASS_CLOCKS(CF.serializeIt("runawayClock"), FRAME_CLOCKS):
 
 		APPDS_MAIN = _pklJar_._STUFFTOPKL_
 		doStartup()
@@ -1930,7 +1933,6 @@ def doit():
 			_result_ = outerLoop()
 
 			if _result_ == K_BTN_QUIT_ALL:
-				_pklJar_._STUFFTOPKL_ = APPDS_MAIN
 				break
 
 			elif _result_ == APPMODE_NEW_ALARMPOPUP:
