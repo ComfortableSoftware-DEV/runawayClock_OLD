@@ -27,6 +27,7 @@ import pprint
 
 
 ABSPATH = OSPATH.abspath
+ABS_DOT = ABSPATH(".")
 EXISTS = OSPATH.exists
 gc.enable()
 HOME = f"{OSPATH.expanduser('~')}"

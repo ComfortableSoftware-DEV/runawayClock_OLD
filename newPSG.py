@@ -111,7 +111,7 @@ K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  #
 K_EVENT_NAME = "K_EVENT_NAME"  # name of the event
 K_EVENTMODE = "K_EVENTMODE"  # what mode is this event
 K_FIRSTRUN = "K_FIRSTRUN"  # True if just started, false after init1()
-K_FRAME_NAME = "K_FRAME_NAME"  # the name of the form
+K_FRAMENAME = "K_FRAMENAME"  # the name of the form
 K_INDEX_OF_NEXT_EVENT = "K_INDEX_OF_NEXT_EVENT"  # index of the next event to alert
 K_INTERVAL_COUNT = "K_INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
 K_IS_ALERTING_NOW = "K_IS_ALERTING_NOW"  # 
@@ -128,6 +128,7 @@ K_MAINFRAME = "K_MAINFRAME"  #
 K_MPX = "K_MPX"  # 
 K_NAME = "K_NAME"  # 
 K_NAME_NEXT_EVENT = "K_NAME_NEXT_EVENT"  # name of the next event up
+K_NEW_VERSION = "K_NEW_VERSION"  # True if pkl is to be updated from APPDS_MAIN
 K_PERIODIC = "K_PERIODIC"  # 
 K_PREDISMISSABLE = "K_PREDISMISSABLE"  # event can be dismissed in advance
 K_SCREEN_DIMS = "K_SCREEN_DIMS"  # 
@@ -310,10 +311,9 @@ JUSTIFICATION_CENTER = "center"  # comment
 JUSTIFICATION_LEFT = "left"  # comment
 JUSTIFICATION_RIGHT = "right"  # comment
 K = "k"  # 
-K_LAYOUT = "layout"  # 
-K_SIZE = "size"  # 
 KEEP_ON_TOP = "keep_on_top"  # 
 KEY = "key"  # 
+LAYOUT = "layout"  # 
 LOCATION = "location"  # 
 MARGINS = "margins"  # 
 METADATA = "metadata"  # 
@@ -342,6 +342,7 @@ RIGHT_CLICK_MENU_TEXT_COLOR = "right_click_menu_text_color"  #
 S = "s"  # 
 SCROLLABLE = "scrollable"  # can this column be scrolled bool
 SET_TO_INDEX = "set_to_index"  # change selection to a particular choice starting with index = 0
+SIZE = "size"  # 
 TARGET = "target"  # 
 TEXT = "text"  # 
 TEXT_COLOR = "text_color"  # 
@@ -675,8 +676,8 @@ TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_INTERVAL_COUNT,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	K_SIZE: (4, 1),  # characters, lines size line
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (4, 1),  # characters, lines size line
 	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 }
 
@@ -687,8 +688,8 @@ TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCK_TIME
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	K_SIZE: (16, 1),  # characters, lines size line
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (16, 1),  # characters, lines size line
 	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 }
 
@@ -698,8 +699,8 @@ TEXT_TIME_AT_NEXT_ALERT = {  # define the text element for CLOCKS_CLOCK_TIME
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	K_SIZE: (8, 1),  # characters, lines size line
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 }
@@ -710,8 +711,8 @@ TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
 	ENABLE_EVENTS: False,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	K_SIZE: (8, 1),  # characters, lines size line
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
 }
@@ -722,8 +723,9 @@ TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
 	ENABLE_EVENTS: True,  # this is clickable
 	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	K_SIZE: (8, 1),  # characters, lines size line
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 }
@@ -733,8 +735,8 @@ TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	K_SIZE: (8, 1),  # characters, lines size line
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
 }
@@ -744,8 +746,8 @@ TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
-	K_SIZE: (8, 1),  # characters, lines size line
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
 	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 }
@@ -1044,7 +1046,7 @@ class CLASS_CLOCKS(object):
 			FORCE_TOPLEVEL: None,  # 
 			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
-			K_LAYOUT: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
+			LAYOUT: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
 			MARGINS: SZ_MARGINS_ALL,  # 
 			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
 			TITLE: TITLE_CLOCKS,  # 
@@ -1510,7 +1512,9 @@ _DICTINSTR_ = {self.dictinstrRepl()}""")
 # * SCTN090C APPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and this app
-	K_APPMODE: APPMODE_NONE,  # default mode is clocks
+	K_APPMODE: APPMODE_NONE,  # no appmode set
+	K_CHECKBOX_ALPHA_DIM: True,  # dim when mouse over bool
+	K_CHECKBOX_RUNAWAY: False,  # runaway from the mouse bool
 	K_EVENT_ENTRIES: {  # holds events
 		0: {
 			K_ALARMPOPUP_PROPER: None,  # time of this event
@@ -1521,7 +1525,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_EVENT_NAME: "MOVE",  # this entry's name
 			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			K_FIRSTRUN: True,  # are we initializing or not
-			K_FRAME_NAME: None,  # time of this event
+			K_FRAMENAME: None,  # time of this event
 			K_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
 			K_PREDISMISSABLE: True,  # is this event dismissable in advance
@@ -1539,7 +1543,8 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_TIME_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 	},
-	K_INDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them
+	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
+	K_NEW_VERSION: True,  # bool is this new, or is pkl safe to use
 }
 
 
