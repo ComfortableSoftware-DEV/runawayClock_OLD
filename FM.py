@@ -1808,26 +1808,6 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_03_RUNAWAY", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC_03_UPDATE_FROM_DICT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFromDict", "updateFromDict.py", "update the displayed info from a dict or the default _DICTIN_",),
 	("PSGVAL__CLOCKS_FUNC_FF_UPDATE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "update", "update.py", "define the required update function",),
-
-	("PSGVAL_FKEY_CHECK_MOUSE", FMAXPSG_SCTN0900_KEY_DEF, "F_CHECKMOUSE", "FKEY checkMouse",),
-	("PSGVAL_FKEY_DEBUG_PRINT", FMAXPSG_SCTN0900_KEY_DEF, "F_DEBUGPRINT", "FKEY debugPrint",),
-	("PSGVAL_FKEY_DICTIN_REPL", FMAXPSG_SCTN0900_KEY_DEF, "F_DICTINREPL", "FKEY dictinRepl",),
-	("PSGVAL_FKEY_DICTINSTR_REPL", FMAXPSG_SCTN0900_KEY_DEF, "F_DICTINSTRREPL", "FKEY dictinstrRepl",),
-	("PSGVAL_FKEY_EASY_UPDATE", FMAXPSG_SCTN0900_KEY_DEF, "F_EASYUPDATE", "FKEY easyUpdate",),
-	("PSGVAL_FKEY_EASY_UPDATEPARMS", FMAXPSG_SCTN0900_KEY_DEF, "F_EASYUPDATEPARMS", "FKEY easyUpdateParms",),
-	("PSGVAL_FKEY_ENINT", FMAXPSG_SCTN0900_KEY_DEF, "F_ENINT", "FKEY enint",),
-	("PSGVAL_FKEY_ENSTRING", FMAXPSG_SCTN0900_KEY_DEF, "F_ENSTRING", "FKEY enstring",),
-	("PSGVAL_FKEY_ENTER", FMAXPSG_SCTN0900_KEY_DEF, "F___ENTER__", "so the various service lists work for __enter__",),
-	("PSGVAL_FKEY_EXIT", FMAXPSG_SCTN0900_KEY_DEF, "F___EXIT__", "service list key for __exit__",),
-	("PSGVAL_FKEY_INIT", FMAXPSG_SCTN0900_KEY_DEF, "F___INIT__", "service list key for __init__",),
-	("PSGVAL_FKEY_INTERVALCOUNTOFF", FMAXPSG_SCTN0900_KEY_DEF, "F_INTERVALCOUNTOFF", "FKEY intervalCountOff",),
-	("PSGVAL_FKEY_INTERVALCOUNTON", FMAXPSG_SCTN0900_KEY_DEF, "F_INTERVALCOUNTON", "FKEY intervalCountOn",),
-	("PSGVAL_FKEY_QUICK_READ", FMAXPSG_SCTN0900_KEY_DEF, "F_QUICKREAD", "FKEY quickRead",),
-	("PSGVAL_FKEY_READ_TO_DICT", FMAXPSG_SCTN0900_KEY_DEF, "F_READTODICT", "FKEY readToDict",),
-	("PSGVAL_FKEY_RUNAWAY", FMAXPSG_SCTN0900_KEY_DEF, "F_RUNAWAY", "FKEY runaway",),
-	("PSGVAL_FKEY_UPDATE_FROM_DICT", FMAXPSG_SCTN0900_KEY_DEF, "F_UPDATEFROMDICT", "FKEY updateFromDict",),
-	("PSGVAL_FKEY_UPDATE", FMAXPSG_SCTN0900_KEY_DEF, "F_UPDATE", "FKEY update",),
-
 	("PSGVAL__CLOCKS_LAYOUT", FMAX_NOP, "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT00", FMAXPSG_SCTN09FF_CLASS_LAYOUT_DEF, "CLOCKS", "_LAYOUT_", "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT01", FMAXPSG_SCTN09FF_CLASS_LAYOUT_ROW_ADD, "CLOCKS", "_LAYOUT_", "LAYOUT_ROW_00", "L03", "add a row to the layout",),
@@ -5288,11 +5268,11 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # SCTN09FF_05_ENDS_CLASS_DICT
 
-# SCTN09FF_05_BEGINS_CLASS_DICT
+# SCTN09FF_05_BEGINS_CLASS_DPD
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_CLASS_DICT_DEF:
+		elif _thisAX_ == FMAXPSG_SCTN09FF_CLASS_DPD_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
@@ -5317,7 +5297,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_CLASS_DICT_VV_ADD:
+		elif _thisAX_ == FMAXPSG_SCTN09FF_CLASS_DPD_VV_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -5328,12 +5308,14 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
+			FMPSG_SCTN0900_DEF1_DICT[_thisKey_] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisKey_] = f"""{_thisComment_}"""
 			FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-# SCTN09FF_05_ENDS_CLASS_DICT
+# SCTN09FF_05_ENDS_CLASS_DPD
 
 # SCTN09FF_04_BEGINS_CLASS_FRAMEELEMENT
 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
