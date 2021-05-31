@@ -1916,6 +1916,7 @@ def doit():
 			CLASS_CLOCKS(CF.serializeIt("runawayClock"), FRAME_CLOCKS):
 
 		if (APPDS_MAIN[K_NEW_VERSION] is True):
+			APPDS_MAIN[K_NEW_VERSION] = False
 			_pklJar_._STUFFTOPKL_.update(APPDS_MAIN)
 
 		APPDS_MAIN = _pklJar_._STUFFTOPKL_
