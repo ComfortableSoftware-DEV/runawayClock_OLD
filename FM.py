@@ -5348,6 +5348,20 @@ def parseTBGLST(FDTBGLST):
 
 			FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
+			FMPSG_SCTN0900_DEF1_DICT[_thisElementName_.upper()] = f"""F_{DBLQT}{_thisElementName_.upper()}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisElementName_.upper()] = f"""{_thisComment_}"""
+			FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_]["_DEBUG_PRINT_DICT_"] += f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+
+			if _thisClassName_ not in FMPSG_SCTN09FF_CLASS_DICT_DICT:
+				FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_] = {}
+			if "_DEBUG_PRINT_DICT" not in FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_]:
+				FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_]["_DEBUG_PRINT_DICT"] = ""
+
+			if _thisClassName_ not in FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT:
+				FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
+
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{"_DEBUG_PRINT_DICT"[1:-1]}: self.{"_DEBUG_PRINT_DICT"},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT[_thisClassName_]["_DEBUG_PRINT_DICT"] = f"""{_thisComment_}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
