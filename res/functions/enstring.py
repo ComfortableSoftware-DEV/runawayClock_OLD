@@ -12,8 +12,9 @@
 			else:
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
 
-		if (self._DEBUG_PRINT_ >= 10):
-			print(f"""{CF.NEWLINE}enstring
-{CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}
-""")
+		if (self._DEBUG_PRINT_DICT_[F_ENSTRING]):
+			self.debugPrint(
+				printDictinS_=True,
+				title_="enstring",
+			)
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3

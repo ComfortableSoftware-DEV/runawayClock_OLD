@@ -94,6 +94,15 @@
 			alphaMode = False
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
+		if (self._DEBUG_PRINT_DICT_[F_CHECKMOUSE] is True):
+			self.debugPrint(
+				title_="checkMouse",
+				message_=f"""returning:
+_LAST_MOUSE_STATUS_ {self._LAST_MOUSE_STATUS_} = _statusToRtn_ {_statusToRtn_}
+_MOUSE_STATUS_ {self._MOUSE_STATUS_} = {_statusToRtn_}
+_MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
+			)
+
 		self._LAST_MOUSE_STATUS_ = _statusToRtn_
 		self._MOUSE_STATUS_ = _statusToRtn_
 		self._MPX_ = _mpxToRtn_

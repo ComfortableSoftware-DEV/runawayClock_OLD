@@ -65,8 +65,22 @@
 		self.updateFromDict()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DEBUG_PRINT_ >= 10):
-			print(f"""easyUpdate
-_DICTIN_ {self.dictinRepl()}
-_DICTINSTR_ {self.dictinstrRepl()}""")
+		if (self._DEBUG_PRINT_DICT_[F_EASYUPDATE]):
+			self.debugPrint(
+				printDictinS_=True,
+				title_="easyUpdate",
+
+				message_=f"""input:
+checkboxAlphaDim_ {checkboxAlphaDim_}
+checkboxRunaway_ {checkboxRunaway_}
+currentIntervalCount_ {currentIntervalCount_}
+eventMode_ {eventMode_}
+nameNextEvent_ {nameNextEvent_}
+timeAtNextAlert_ {timeAtNextAlert_}
+timeAtZeroelapse_ {timeAtZeroelapse_}
+timeClock_ {timeClock_}
+timeElapsed_ {timeElapsed_}
+timeTogo_ {timeTogo_}
+"""
+			)
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
