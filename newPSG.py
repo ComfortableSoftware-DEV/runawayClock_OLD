@@ -55,6 +55,7 @@ F_DEBUGPRINT = "F_DEBUGPRINT"  # FKEY debugPrint
 F_DICTINREPL = "F_DICTINREPL"  # FKEY dictinRepl
 F_DICTINSTRREPL = "F_DICTINSTRREPL"  # FKEY dictinstrRepl
 F_DOFRAMECLOCKS = "F_DOFRAMECLOCKS"  # debugPrintDictRoot entry
+F_DOFRAMETHECLOCK = "F_DOFRAMETHECLOCK"  # debugPrintDictRoot entry
 F_DOIT = "F_DOIT"  # debugPrintDictRoot entry
 F_DOMIDNIGHTWORK = "F_DOMIDNIGHTWORK"  # debugPrintDictRoot entry
 F_DOSTARTUP = "F_DOSTARTUP"  # debugPrintDictRoot entry
@@ -426,6 +427,7 @@ DEBUG_PRINT_DICT_ROOT = {  # comment
 	F_COMPAREBBOX: False,  # debugPrintDictRoot entry
 	F_COMPAREXY: False,  # debugPrintDictRoot entry
 	F_DOFRAMECLOCKS: False,  # debugPrintDictRoot entry
+	F_DOFRAMETHECLOCK: True,  # debugPrintDictRoot entry
 	F_DOIT: False,  # debugPrintDictRoot entry
 	F_DOMIDNIGHTWORK: False,  # debugPrintDictRoot entry
 	F_DOSTARTUP: False,  # debugPrintDictRoot entry

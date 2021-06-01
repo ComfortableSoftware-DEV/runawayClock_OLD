@@ -55,6 +55,7 @@ F_DEBUGPRINT = "F_DEBUGPRINT"  # FKEY debugPrint
 F_DICTINREPL = "F_DICTINREPL"  # FKEY dictinRepl
 F_DICTINSTRREPL = "F_DICTINSTRREPL"  # FKEY dictinstrRepl
 F_DOFRAMECLOCKS = "F_DOFRAMECLOCKS"  # debugPrintDictRoot entry
+F_DOFRAMETHECLOCK = "F_DOFRAMETHECLOCK"  # debugPrintDictRoot entry
 F_DOIT = "F_DOIT"  # debugPrintDictRoot entry
 F_DOMIDNIGHTWORK = "F_DOMIDNIGHTWORK"  # debugPrintDictRoot entry
 F_DOSTARTUP = "F_DOSTARTUP"  # debugPrintDictRoot entry
@@ -426,6 +427,7 @@ DEBUG_PRINT_DICT_ROOT = {  # comment
 	F_COMPAREBBOX: False,  # debugPrintDictRoot entry
 	F_COMPAREXY: False,  # debugPrintDictRoot entry
 	F_DOFRAMECLOCKS: False,  # debugPrintDictRoot entry
+	F_DOFRAMETHECLOCK: True,  # debugPrintDictRoot entry
 	F_DOIT: False,  # debugPrintDictRoot entry
 	F_DOMIDNIGHTWORK: False,  # debugPrintDictRoot entry
 	F_DOSTARTUP: False,  # debugPrintDictRoot entry
@@ -436,7 +438,7 @@ DEBUG_PRINT_DICT_ROOT = {  # comment
 	F_GETMOUSEPOS: False,  # debugPrintDictRoot entry
 	F_ISINBBOX: False,  # debugPrintDictRoot entry
 	F_LOCALTIMES: False,  # debugPrintDictRoot entry
-	F_OUTERLOOP: False,  # debugPrintDictRoot entry
+	F_OUTERLOOP: True,  # debugPrintDictRoot entry
 	F_SPLITBBOXTORAW: False,  # debugPrintDictRoot entry
 	F_SPLITXYTORAW: False,  # debugPrintDictRoot entry
 	F_UPDATEINTERVAL: False,  # debugPrintDictRoot entry
@@ -915,12 +917,12 @@ class CLASS_CLOCKS(object):
 
 		self._DEBUG_PRINT_DICT_ = {  # dict of class functions to print debug messages from
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			F_CHECKMOUSE: True,  # FKEY checkMouse
+			F_CHECKMOUSE: False,  # FKEY checkMouse
 			F_DEBUGPRINT: False,  # FKEY debugPrint
 			F_DICTINSTRREPL: False,  # FKEY dictinstrRepl
 			F_DICTINREPL: False,  # FKEY dictinRepl
-			F_EASYUPDATE: True,  # FKEY easyUpdate
-			F_EASYUPDATEPARMS: True,  # FKEY easyUpdateParms
+			F_EASYUPDATE: False,  # FKEY easyUpdate
+			F_EASYUPDATEPARMS: False,  # FKEY easyUpdateParms
 			F_ENINT: False,  # FKEY enint
 			F_ENSTRING: False,  # FKEY enstring
 			F___ENTER__: False,  # so the various service lists work for __enter__
@@ -2174,6 +2176,14 @@ def doFrameClocks(values_):
 		checkboxRunaway_=values_[K_CHECKBOX_RUNAWAY],
 	)
 	APPDS_MAIN.update(values_)
+
+	if (DEBUG_PRINT_DICT_ROOT[F_DOFRAMECLOCKS] is True):
+		ALL_THE_FRAMES[FRAME_CLOCKS].debugPrint(
+			title_="doFrameClocks",
+			printDictinS_=True,
+			message_=f"""values_ {values_}
+"""
+		)
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2204,9 +2214,16 @@ def outerLoop():
 		_window_, _result_, _values_ = _theseResults_ = SG.read_all_windows(timeout=SZ_TIMEOUT_MS)
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_theseResults_ != _oldResults_):
-			print(f"""outerloop _result_ {_result_} _values_ {_values_}""")
-			_oldResults_ = _theseResults_
+		if (DEBUG_PRINT_DICT_ROOT[F_OUTERLOOP] is True):
+			print(f"""looking at values in outerloop
+_window_ {_window_} ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ {ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_}
+_result_ {_result_}
+_values_ {_values_}""")
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+#		if (_theseResults_ != _oldResults_):
+
+#			_oldResults_ = _theseResults_
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -2228,11 +2245,13 @@ def outerLoop():
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_values_ != _oldValues_):
+		if (_values_ is not None):
+
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if (_window_ == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_):
 				doFrameClocks(_values_)
 
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
 			elif (_window_ == ALL_THE_FRAMES[FRAME_THECLOCK]._MAINFRAME_):
 				doFrameTheclock(_values_)
 
@@ -2242,7 +2261,8 @@ def outerLoop():
 		for _thisFrameName_, _thisFrame_ in ALL_THE_FRAMES.items():
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if _thisFrame_ is not None:
-				print(f"""outerloop updating frame {_thisFrameName_}""")
+				if (DEBUG_PRINT_DICT_ROOT[F_OUTERLOOP] is True):
+					print(f"""outerloop updating frame {_thisFrameName_}""")
 				_thisFrame_.update()
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
