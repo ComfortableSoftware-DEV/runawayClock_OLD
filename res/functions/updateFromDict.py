@@ -12,7 +12,7 @@ _DICTIN_ {self.dictinRepl()}
 """)
 			if (K_CHECKBOX_ALPHA_DIM in dictToUpdateFrom_):
 				__dummy__ = dictToUpdateFrom_.pop(K_CHECKBOX_ALPHA_DIM)
-			
+
 			self._DICTIN_.update(dictToUpdateFrom_)
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
@@ -20,6 +20,10 @@ _DICTIN_ {self.dictinRepl()}
 		self.enint()
 		self.enstring()
 		dictToUpdateFrom_ = self._DICTINSTR_
+
+		if (K_CHECKBOX_ALPHA_DIM in dictToUpdateFrom_):
+			__dummy__ = dictToUpdateFrom_.pop(K_CHECKBOX_ALPHA_DIM)
+
 
 		for _thisKey_, _thisVal_ in dictToUpdateFrom_.items():
 			self._MAINFRAME_[_thisKey_].Update(value=_thisVal_)
