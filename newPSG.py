@@ -76,6 +76,7 @@ F_OUTERLOOP = "F_OUTERLOOP"  # debugPrintDictRoot entry
 F_QUICKREAD = "F_QUICKREAD"  # FKEY quickRead
 F_READTODICT = "F_READTODICT"  # FKEY readToDict
 F_RUNAWAY = "F_RUNAWAY"  # FKEY runaway
+F_SETCHECKBOX = "F_SETCHECKBOX"  # FKEY quickRead
 F_SPLITBBOXTORAW = "F_SPLITBBOXTORAW"  # debugPrintDictRoot entry
 F_SPLITXYTORAW = "F_SPLITXYTORAW"  # debugPrintDictRoot entry
 F_UPDATE = "F_UPDATE"  # FKEY update
@@ -426,7 +427,7 @@ ALL_THE_FRAMES = {  # comment
 DEBUG_PRINT_DICT_ROOT = {  # comment
 	F_COMPAREBBOX: False,  # debugPrintDictRoot entry
 	F_COMPAREXY: False,  # debugPrintDictRoot entry
-	F_DOFRAMECLOCKS: False,  # debugPrintDictRoot entry
+	F_DOFRAMECLOCKS: True,  # debugPrintDictRoot entry
 	F_DOFRAMETHECLOCK: True,  # debugPrintDictRoot entry
 	F_DOIT: False,  # debugPrintDictRoot entry
 	F_DOMIDNIGHTWORK: False,  # debugPrintDictRoot entry
@@ -438,7 +439,7 @@ DEBUG_PRINT_DICT_ROOT = {  # comment
 	F_GETMOUSEPOS: False,  # debugPrintDictRoot entry
 	F_ISINBBOX: False,  # debugPrintDictRoot entry
 	F_LOCALTIMES: False,  # debugPrintDictRoot entry
-	F_OUTERLOOP: False,  # debugPrintDictRoot entry
+	F_OUTERLOOP: True,  # debugPrintDictRoot entry
 	F_SPLITBBOXTORAW: False,  # debugPrintDictRoot entry
 	F_SPLITXYTORAW: False,  # debugPrintDictRoot entry
 	F_UPDATEINTERVAL: False,  # debugPrintDictRoot entry
@@ -917,7 +918,7 @@ class CLASS_CLOCKS(object):
 
 		self._DEBUG_PRINT_DICT_ = {  # dict of class functions to print debug messages from
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			F_CHECKMOUSE: True,  # FKEY checkMouse
+			F_CHECKMOUSE: False,  # FKEY checkMouse
 			F_DEBUGPRINT: False,  # FKEY debugPrint
 			F_DICTINSTRREPL: False,  # FKEY dictinstrRepl
 			F_DICTINREPL: False,  # FKEY dictinRepl
@@ -933,6 +934,7 @@ class CLASS_CLOCKS(object):
 			F_QUICKREAD: False,  # FKEY quickRead
 			F_READTODICT: False,  # FKEY readToDict
 			F_RUNAWAY: False,  # FKEY runaway
+			F_SETCHECKBOX: True,  # FKEY quickRead
 			F_UPDATE: False,  # FKEY update
 			F_UPDATEFROMDICT: False,  # FKEY updateFromDict
 		}
@@ -1467,6 +1469,7 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
 			self._CHECKBOX_ALPHA_DIM_ = checkboxAlphaDim_
 			APPDS_MAIN[K_CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
+			self._MAINFRAME_[self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM]].update(value=checkboxAlphaDim_)
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (checkboxRunaway_ is not None):

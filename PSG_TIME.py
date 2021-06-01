@@ -76,6 +76,7 @@ F_OUTERLOOP = "F_OUTERLOOP"  # debugPrintDictRoot entry
 F_QUICKREAD = "F_QUICKREAD"  # FKEY quickRead
 F_READTODICT = "F_READTODICT"  # FKEY readToDict
 F_RUNAWAY = "F_RUNAWAY"  # FKEY runaway
+F_SETCHECKBOX = "F_SETCHECKBOX"  # FKEY quickRead
 F_SPLITBBOXTORAW = "F_SPLITBBOXTORAW"  # debugPrintDictRoot entry
 F_SPLITXYTORAW = "F_SPLITXYTORAW"  # debugPrintDictRoot entry
 F_UPDATE = "F_UPDATE"  # FKEY update
@@ -427,7 +428,7 @@ DEBUG_PRINT_DICT_ROOT = {  # comment
 	F_COMPAREBBOX: False,  # debugPrintDictRoot entry
 	F_COMPAREXY: False,  # debugPrintDictRoot entry
 	F_DOFRAMECLOCKS: True,  # debugPrintDictRoot entry
-	F_DOFRAMETHECLOCK: False,  # debugPrintDictRoot entry
+	F_DOFRAMETHECLOCK: True,  # debugPrintDictRoot entry
 	F_DOIT: False,  # debugPrintDictRoot entry
 	F_DOMIDNIGHTWORK: False,  # debugPrintDictRoot entry
 	F_DOSTARTUP: False,  # debugPrintDictRoot entry
@@ -921,8 +922,8 @@ class CLASS_CLOCKS(object):
 			F_DEBUGPRINT: False,  # FKEY debugPrint
 			F_DICTINSTRREPL: False,  # FKEY dictinstrRepl
 			F_DICTINREPL: False,  # FKEY dictinRepl
-			F_EASYUPDATE: False,  # FKEY easyUpdate
-			F_EASYUPDATEPARMS: False,  # FKEY easyUpdateParms
+			F_EASYUPDATE: True,  # FKEY easyUpdate
+			F_EASYUPDATEPARMS: True,  # FKEY easyUpdateParms
 			F_ENINT: False,  # FKEY enint
 			F_ENSTRING: False,  # FKEY enstring
 			F___ENTER__: False,  # so the various service lists work for __enter__
@@ -933,6 +934,7 @@ class CLASS_CLOCKS(object):
 			F_QUICKREAD: False,  # FKEY quickRead
 			F_READTODICT: False,  # FKEY readToDict
 			F_RUNAWAY: False,  # FKEY runaway
+			F_SETCHECKBOX: True,  # FKEY quickRead
 			F_UPDATE: False,  # FKEY update
 			F_UPDATEFROMDICT: False,  # FKEY updateFromDict
 		}
@@ -1474,7 +1476,6 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			self._DICTIN_[K_CHECKBOX_RUNAWAY] = checkboxRunaway_
 			self._CHECKBOX_RUNAWAY_ = checkboxRunaway_
 			APPDS_MAIN[K_CHECKBOX_RUNAWAY] = checkboxRunaway_
-			self._MAINFRAME_[self._KEY_DICT_[K_CHECKBOX_RUNAWAY]].update(value=checkboxRunaway_)
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (eventMode_ is not None):
@@ -1543,6 +1544,9 @@ timeTogo_ {timeTogo_}
 			alphaChannel_=None,
 		):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (alphaChannel_ is not None):
@@ -2235,7 +2239,12 @@ _values_ {_values_}""")
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			elif (_result_ == K_BTN_ZERO):
+				_tempCheckboxAlphaDim_ = not APPDS_MAIN[K_CHECKBOX_ALPHA_DIM]
+				if (DEBUG_PRINT_DICT_ROOT[F_OUTERLOOP] is True):
+					print(f"""outerloop K_BTN_ZERO setting K_CHECKBOX_ALPHA_DIM {_tempCheckboxAlphaDim_}""")
+
 				ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+					checkboxAlphaDim_=_tempCheckboxAlphaDim_,
 					timeAtZeroelapse_=NOWS,
 					timeElapsed_=0,
 				)
