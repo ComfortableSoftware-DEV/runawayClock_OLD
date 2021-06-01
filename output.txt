@@ -8,15 +8,15 @@ currentIntervalCount_ None
 eventMode_ None
 nameNextEvent_ None
 timeAtNextAlert_ None
-timeAtZeroelapse_ 4510
+timeAtZeroelapse_ 5084
 timeClock_ None
 timeElapsed_ None
 timeTogo_ None
 
-_DICTIN_: {'K_NAME_NEXT_EVENT': '', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '00:00:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '00:00:00', 'K_TIME_ELAPSED': '00:00:00', 'K_TIME_TOGO': '00:00:00'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': '', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '00:00:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '00:00:00', 'K_TIME_ELAPSED_00000041': '00:00:00', 'K_TIME_TOGO_00000041': '00:00:00'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': '', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '00:00:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '00:00:00', 'K_TIME_ELAPSED': '00:00:00', 'K_TIME_TOGO': '00:00:00'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': '', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '00:00:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '00:00:00', 'K_TIME_ELAPSED_00000043': '00:00:00', 'K_TIME_TOGO_00000043': '00:00:00'}
 
 doStartup
-_tempDS_ {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': True, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 0, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 0, 'K_TIME_LEN_OF_ALERT': 0}
+_tempDS_ {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': True, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 0, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 5084, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 0, 'K_TIME_LEN_OF_ALERT': 0}
 
 
 midnight
@@ -35,7 +35,7 @@ timeClock_ None
 timeElapsed_ None
 timeTogo_ None
 
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '00:00:00', 'K_TIME_ELAPSED': '00:00:00', 'K_TIME_TOGO': '00:00:00'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '00:00:00', 'K_TIME_ELAPSED_00000041': '00:00:00', 'K_TIME_TOGO_00000041': '00:00:00'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '00:00:00', 'K_TIME_ELAPSED': '00:00:00', 'K_TIME_TOGO': '00:00:00'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '00:00:00', 'K_TIME_ELAPSED_00000043': '00:00:00', 'K_TIME_TOGO_00000043': '00:00:00'}
 
 outerloop updating frame FRAME_CLOCKS
 looking at values in outerloop
@@ -129,62 +129,7 @@ _result_ __TIMEOUT__
 _values_ None
 outerloop updating frame FRAME_CLOCKS
 looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f1e7788fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
+_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f5602e0fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
 _result_ K_BTN_ZERO
 _values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
 outerloop K_BTN_ZERO setting K_CHECKBOX_ALPHA_DIM False
@@ -203,7 +148,7 @@ timeClock_ None
 timeElapsed_ None
 timeTogo_ None
 
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:13', 'K_TIME_ELAPSED': '00:00:03', 'K_TIME_TOGO': '00:14:47'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:13', 'K_TIME_ELAPSED_00000041': '00:00:03', 'K_TIME_TOGO_00000041': '00:14:47'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:46', 'K_TIME_ELAPSED': '00:00:02', 'K_TIME_TOGO': '00:05:14'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:46', 'K_TIME_ELAPSED_00000043': '00:00:02', 'K_TIME_TOGO_00000043': '00:05:14'}
 
 
 start of setCheckbox
@@ -212,22 +157,100 @@ K_CHECKBOX_ALPHA_DIM was set False
  -=> 
 
 end of setCheckbox
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:13', 'K_TIME_ELAPSED': '00:00:03', 'K_TIME_TOGO': '00:14:47'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:13', 'K_TIME_ELAPSED_00000041': '00:00:03', 'K_TIME_TOGO_00000041': '00:14:47'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:46', 'K_TIME_ELAPSED': '00:00:02', 'K_TIME_TOGO': '00:05:14'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:46', 'K_TIME_ELAPSED_00000043': '00:00:02', 'K_TIME_TOGO_00000043': '00:05:14'}
 
- -=> 
-
-start of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': False, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:13', 'K_TIME_ELAPSED': '00:00:03', 'K_TIME_TOGO': '00:14:47'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:13', 'K_TIME_ELAPSED_00000041': '00:00:03', 'K_TIME_TOGO_00000041': '00:14:47'}
-
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f5602e0fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
+_result_ K_BTN_ZERO
+_values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
+outerloop K_BTN_ZERO setting K_CHECKBOX_ALPHA_DIM True
  -=> 
 
 easyUpdate
 message: input:
 checkboxAlphaDim_ True
-checkboxRunaway_ True
+checkboxRunaway_ None
 currentIntervalCount_ None
 eventMode_ None
 nameNextEvent_ None
@@ -237,15 +260,16 @@ timeClock_ None
 timeElapsed_ None
 timeTogo_ None
 
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:13', 'K_TIME_ELAPSED': '00:00:03', 'K_TIME_TOGO': '00:14:47'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:13', 'K_TIME_ELAPSED_00000041': '00:00:03', 'K_TIME_TOGO_00000041': '00:14:47'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:47', 'K_TIME_ELAPSED': '00:00:03', 'K_TIME_TOGO': '00:05:13'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:47', 'K_TIME_ELAPSED_00000043': '00:00:03', 'K_TIME_TOGO_00000043': '00:05:13'}
 
+
+start of setCheckbox
+	checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ True
+K_CHECKBOX_ALPHA_DIM was set True
  -=> 
 
-end of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': True, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:13', 'K_TIME_ELAPSED': '00:00:03', 'K_TIME_TOGO': '00:14:47'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:13', 'K_TIME_ELAPSED_00000041': '00:00:03', 'K_TIME_TOGO_00000041': '00:14:47'}
+end of setCheckbox
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:47', 'K_TIME_ELAPSED': '00:00:03', 'K_TIME_TOGO': '00:05:13'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:47', 'K_TIME_ELAPSED_00000043': '00:00:03', 'K_TIME_TOGO_00000043': '00:05:13'}
 
 outerloop updating frame FRAME_CLOCKS
 looking at values in outerloop
@@ -294,7 +318,22 @@ _result_ __TIMEOUT__
 _values_ None
 outerloop updating frame FRAME_CLOCKS
 looking at values in outerloop
-_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f1e7788fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f5602e0fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
 _result_ K_BTN_ZERO
 _values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
 outerloop K_BTN_ZERO setting K_CHECKBOX_ALPHA_DIM False
@@ -313,7 +352,7 @@ timeClock_ None
 timeElapsed_ None
 timeTogo_ None
 
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:14', 'K_TIME_ELAPSED': '00:00:04', 'K_TIME_TOGO': '00:14:46'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:14', 'K_TIME_ELAPSED_00000041': '00:00:04', 'K_TIME_TOGO_00000041': '00:14:46'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:49', 'K_TIME_ELAPSED': '00:00:05', 'K_TIME_TOGO': '00:05:11'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:49', 'K_TIME_ELAPSED_00000043': '00:00:05', 'K_TIME_TOGO_00000043': '00:05:11'}
 
 
 start of setCheckbox
@@ -322,22 +361,85 @@ K_CHECKBOX_ALPHA_DIM was set False
  -=> 
 
 end of setCheckbox
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:14', 'K_TIME_ELAPSED': '00:00:04', 'K_TIME_TOGO': '00:14:46'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:14', 'K_TIME_ELAPSED_00000041': '00:00:04', 'K_TIME_TOGO_00000041': '00:14:46'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:49', 'K_TIME_ELAPSED': '00:00:05', 'K_TIME_TOGO': '00:05:11'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:49', 'K_TIME_ELAPSED_00000043': '00:00:05', 'K_TIME_TOGO_00000043': '00:05:11'}
 
- -=> 
-
-start of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': False, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:14', 'K_TIME_ELAPSED': '00:00:04', 'K_TIME_TOGO': '00:14:46'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:14', 'K_TIME_ELAPSED_00000041': '00:00:04', 'K_TIME_TOGO_00000041': '00:14:46'}
-
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f5602e0fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
+_result_ K_BTN_ZERO
+_values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
+outerloop K_BTN_ZERO setting K_CHECKBOX_ALPHA_DIM True
  -=> 
 
 easyUpdate
 message: input:
 checkboxAlphaDim_ True
-checkboxRunaway_ True
+checkboxRunaway_ None
 currentIntervalCount_ None
 eventMode_ None
 nameNextEvent_ None
@@ -347,15 +449,16 @@ timeClock_ None
 timeElapsed_ None
 timeTogo_ None
 
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:14', 'K_TIME_ELAPSED': '00:00:04', 'K_TIME_TOGO': '00:14:46'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:14', 'K_TIME_ELAPSED_00000041': '00:00:04', 'K_TIME_TOGO_00000041': '00:14:46'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:50', 'K_TIME_ELAPSED': '00:00:06', 'K_TIME_TOGO': '00:05:10'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:50', 'K_TIME_ELAPSED_00000043': '00:00:06', 'K_TIME_TOGO_00000043': '00:05:10'}
 
+
+start of setCheckbox
+	checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ True
+K_CHECKBOX_ALPHA_DIM was set True
  -=> 
 
-end of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': True, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:14', 'K_TIME_ELAPSED': '00:00:04', 'K_TIME_TOGO': '00:14:46'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:14', 'K_TIME_ELAPSED_00000041': '00:00:04', 'K_TIME_TOGO_00000041': '00:14:46'}
+end of setCheckbox
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:50', 'K_TIME_ELAPSED': '00:00:06', 'K_TIME_TOGO': '00:05:10'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:50', 'K_TIME_ELAPSED_00000043': '00:00:06', 'K_TIME_TOGO_00000043': '00:05:10'}
 
 outerloop updating frame FRAME_CLOCKS
 looking at values in outerloop
@@ -409,7 +512,72 @@ _result_ __TIMEOUT__
 _values_ None
 outerloop updating frame FRAME_CLOCKS
 looking at values in outerloop
-_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f1e7788fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f5602e0fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
 _result_ K_BTN_ZERO
 _values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
 outerloop K_BTN_ZERO setting K_CHECKBOX_ALPHA_DIM False
@@ -428,7 +596,7 @@ timeClock_ None
 timeElapsed_ None
 timeTogo_ None
 
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:15', 'K_TIME_ELAPSED': '00:00:05', 'K_TIME_TOGO': '00:14:45'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:15', 'K_TIME_ELAPSED_00000041': '00:00:05', 'K_TIME_TOGO_00000041': '00:14:45'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:52', 'K_TIME_ELAPSED': '00:00:08', 'K_TIME_TOGO': '00:05:08'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:52', 'K_TIME_ELAPSED_00000043': '00:00:08', 'K_TIME_TOGO_00000043': '00:05:08'}
 
 
 start of setCheckbox
@@ -437,22 +605,135 @@ K_CHECKBOX_ALPHA_DIM was set False
  -=> 
 
 end of setCheckbox
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:15', 'K_TIME_ELAPSED': '00:00:05', 'K_TIME_TOGO': '00:14:45'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:15', 'K_TIME_ELAPSED_00000041': '00:00:05', 'K_TIME_TOGO_00000041': '00:14:45'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:52', 'K_TIME_ELAPSED': '00:00:08', 'K_TIME_TOGO': '00:05:08'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:52', 'K_TIME_ELAPSED_00000043': '00:00:08', 'K_TIME_TOGO_00000043': '00:05:08'}
 
- -=> 
-
-start of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': False, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:15', 'K_TIME_ELAPSED': '00:00:05', 'K_TIME_TOGO': '00:14:45'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:15', 'K_TIME_ELAPSED_00000041': '00:00:05', 'K_TIME_TOGO_00000041': '00:14:45'}
-
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f5602e0fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
+_result_ K_BTN_ZERO
+_values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
+outerloop K_BTN_ZERO setting K_CHECKBOX_ALPHA_DIM True
  -=> 
 
 easyUpdate
 message: input:
 checkboxAlphaDim_ True
-checkboxRunaway_ True
+checkboxRunaway_ None
 currentIntervalCount_ None
 eventMode_ None
 nameNextEvent_ None
@@ -462,15 +743,16 @@ timeClock_ None
 timeElapsed_ None
 timeTogo_ None
 
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:15', 'K_TIME_ELAPSED': '00:00:05', 'K_TIME_TOGO': '00:14:45'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:15', 'K_TIME_ELAPSED_00000041': '00:00:05', 'K_TIME_TOGO_00000041': '00:14:45'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:55', 'K_TIME_ELAPSED': '00:00:11', 'K_TIME_TOGO': '00:05:05'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:55', 'K_TIME_ELAPSED_00000043': '00:00:11', 'K_TIME_TOGO_00000043': '00:05:05'}
 
+
+start of setCheckbox
+	checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ True
+K_CHECKBOX_ALPHA_DIM was set True
  -=> 
 
-end of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': True, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:15', 'K_TIME_ELAPSED': '00:00:05', 'K_TIME_TOGO': '00:14:45'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:15', 'K_TIME_ELAPSED_00000041': '00:00:05', 'K_TIME_TOGO_00000041': '00:14:45'}
+end of setCheckbox
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:55', 'K_TIME_ELAPSED': '00:00:11', 'K_TIME_TOGO': '00:05:05'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:55', 'K_TIME_ELAPSED_00000043': '00:00:11', 'K_TIME_TOGO_00000043': '00:05:05'}
 
 outerloop updating frame FRAME_CLOCKS
 looking at values in outerloop
@@ -504,7 +786,157 @@ _result_ __TIMEOUT__
 _values_ None
 outerloop updating frame FRAME_CLOCKS
 looking at values in outerloop
-_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f1e7788fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f5602e0fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
 _result_ K_BTN_ZERO
 _values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
 outerloop K_BTN_ZERO setting K_CHECKBOX_ALPHA_DIM False
@@ -523,7 +955,7 @@ timeClock_ None
 timeElapsed_ None
 timeTogo_ None
 
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:16', 'K_TIME_ELAPSED': '00:00:06', 'K_TIME_TOGO': '00:14:44'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:16', 'K_TIME_ELAPSED_00000041': '00:00:06', 'K_TIME_TOGO_00000041': '00:14:44'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:58', 'K_TIME_ELAPSED': '00:00:14', 'K_TIME_TOGO': '00:05:02'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:58', 'K_TIME_ELAPSED_00000043': '00:00:14', 'K_TIME_TOGO_00000043': '00:05:02'}
 
 
 start of setCheckbox
@@ -532,225 +964,7 @@ K_CHECKBOX_ALPHA_DIM was set False
  -=> 
 
 end of setCheckbox
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:16', 'K_TIME_ELAPSED': '00:00:06', 'K_TIME_TOGO': '00:14:44'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:16', 'K_TIME_ELAPSED_00000041': '00:00:06', 'K_TIME_TOGO_00000041': '00:14:44'}
-
- -=> 
-
-start of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': False, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:16', 'K_TIME_ELAPSED': '00:00:06', 'K_TIME_TOGO': '00:14:44'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:16', 'K_TIME_ELAPSED_00000041': '00:00:06', 'K_TIME_TOGO_00000041': '00:14:44'}
-
- -=> 
-
-easyUpdate
-message: input:
-checkboxAlphaDim_ True
-checkboxRunaway_ True
-currentIntervalCount_ None
-eventMode_ None
-nameNextEvent_ None
-timeAtNextAlert_ None
-timeAtZeroelapse_ None
-timeClock_ None
-timeElapsed_ None
-timeTogo_ None
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:16', 'K_TIME_ELAPSED': '00:00:06', 'K_TIME_TOGO': '00:14:44'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:16', 'K_TIME_ELAPSED_00000041': '00:00:06', 'K_TIME_TOGO_00000041': '00:14:44'}
-
- -=> 
-
-end of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': True, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:16', 'K_TIME_ELAPSED': '00:00:06', 'K_TIME_TOGO': '00:14:44'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:16', 'K_TIME_ELAPSED_00000041': '00:00:06', 'K_TIME_TOGO_00000041': '00:14:44'}
-
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f1e7788fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
-_result_ K_BTN_ZERO
-_values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-outerloop K_BTN_ZERO setting K_CHECKBOX_ALPHA_DIM False
- -=> 
-
-easyUpdate
-message: input:
-checkboxAlphaDim_ False
-checkboxRunaway_ None
-currentIntervalCount_ None
-eventMode_ None
-nameNextEvent_ None
-timeAtNextAlert_ None
-timeAtZeroelapse_ None
-timeClock_ None
-timeElapsed_ None
-timeTogo_ None
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:17', 'K_TIME_ELAPSED': '00:00:07', 'K_TIME_TOGO': '00:14:43'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:17', 'K_TIME_ELAPSED_00000041': '00:00:07', 'K_TIME_TOGO_00000041': '00:14:43'}
-
-
-start of setCheckbox
-	checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ False
-K_CHECKBOX_ALPHA_DIM was set False
- -=> 
-
-end of setCheckbox
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:17', 'K_TIME_ELAPSED': '00:00:07', 'K_TIME_TOGO': '00:14:43'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:17', 'K_TIME_ELAPSED_00000041': '00:00:07', 'K_TIME_TOGO_00000041': '00:14:43'}
-
- -=> 
-
-start of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': False, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:17', 'K_TIME_ELAPSED': '00:00:07', 'K_TIME_TOGO': '00:14:43'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:17', 'K_TIME_ELAPSED_00000041': '00:00:07', 'K_TIME_TOGO_00000041': '00:14:43'}
-
- -=> 
-
-easyUpdate
-message: input:
-checkboxAlphaDim_ True
-checkboxRunaway_ True
-currentIntervalCount_ None
-eventMode_ None
-nameNextEvent_ None
-timeAtNextAlert_ None
-timeAtZeroelapse_ None
-timeClock_ None
-timeElapsed_ None
-timeTogo_ None
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:17', 'K_TIME_ELAPSED': '00:00:07', 'K_TIME_TOGO': '00:14:43'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:17', 'K_TIME_ELAPSED_00000041': '00:00:07', 'K_TIME_TOGO_00000041': '00:14:43'}
-
- -=> 
-
-end of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': True, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:17', 'K_TIME_ELAPSED': '00:00:07', 'K_TIME_TOGO': '00:14:43'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:17', 'K_TIME_ELAPSED_00000041': '00:00:07', 'K_TIME_TOGO_00000041': '00:14:43'}
-
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
-_result_ __TIMEOUT__
-_values_ None
-outerloop updating frame FRAME_CLOCKS
-looking at values in outerloop
-_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f1e7788fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
-_result_ K_BTN_ZERO
-_values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-outerloop K_BTN_ZERO setting K_CHECKBOX_ALPHA_DIM False
- -=> 
-
-easyUpdate
-message: input:
-checkboxAlphaDim_ False
-checkboxRunaway_ None
-currentIntervalCount_ None
-eventMode_ None
-nameNextEvent_ None
-timeAtNextAlert_ None
-timeAtZeroelapse_ None
-timeClock_ None
-timeElapsed_ None
-timeTogo_ None
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:17', 'K_TIME_ELAPSED': '00:00:07', 'K_TIME_TOGO': '00:14:43'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:17', 'K_TIME_ELAPSED_00000041': '00:00:07', 'K_TIME_TOGO_00000041': '00:14:43'}
-
-
-start of setCheckbox
-	checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ False
-K_CHECKBOX_ALPHA_DIM was set False
- -=> 
-
-end of setCheckbox
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:17', 'K_TIME_ELAPSED': '00:00:07', 'K_TIME_TOGO': '00:14:43'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:17', 'K_TIME_ELAPSED_00000041': '00:00:07', 'K_TIME_TOGO_00000041': '00:14:43'}
-
- -=> 
-
-start of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': False, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:17', 'K_TIME_ELAPSED': '00:00:07', 'K_TIME_TOGO': '00:14:43'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:17', 'K_TIME_ELAPSED_00000041': '00:00:07', 'K_TIME_TOGO_00000041': '00:14:43'}
-
- -=> 
-
-easyUpdate
-message: input:
-checkboxAlphaDim_ True
-checkboxRunaway_ True
-currentIntervalCount_ None
-eventMode_ None
-nameNextEvent_ None
-timeAtNextAlert_ None
-timeAtZeroelapse_ None
-timeClock_ None
-timeElapsed_ None
-timeTogo_ None
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:17', 'K_TIME_ELAPSED': '00:00:07', 'K_TIME_TOGO': '00:14:43'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:17', 'K_TIME_ELAPSED_00000041': '00:00:07', 'K_TIME_TOGO_00000041': '00:14:43'}
-
- -=> 
-
-end of doFrameClocks
-message: values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
-APPDS_MAIN {'K_APPMODE': 'APPMODE_NONE', 'K_CHECKBOX_ALPHA_DIM': True, 'K_CHECKBOX_RUNAWAY': True, 'K_EVENT_ENTRIES': {0: {'K_ALARMPOPUP_PROPER': None, 'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around', 'K_AUTO_CLOSE_DURATION': 10, 'K_DISMISSED': False, 'K_ENABLED': True, 'K_EVENT_NAME': 'MOVE', 'K_EVENTMODE': 'EVENTMODE_INTERVAL', 'K_FIRSTRUN': False, 'K_FRAMENAME': None, 'K_INTERVAL_COUNT': 0, 'K_IS_ALERTING_NOW': False, 'K_PREDISMISSABLE': True, 'K_SNOOZABLE': False, 'K_SNOOZED': None, 'K_TIME_ALARM': 0, 'K_TIME_AT_LAST_RUN': 3600, 'K_TIME_AT_NEXT_ALERT': 5400, 'K_TIME_AT_ZEROELAPSE': 4510, 'K_TIME_ELAPSED': 0, 'K_TIME_INTERVAL': 1800, 'K_TIME_INTERVAL__BEGIN': 0, 'K_TIME_INTERVAL__END': 0, 'K_TIME_INTERVAL_START': 3600, 'K_TIME_LEN_OF_ALERT': 0}}, 'K_INDEX_OF_NEXT_EVENT': 0, 'K_VERSION': '00000000'}
-
-_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:15:10', 'K_TIME_CLOCK': '01:15:17', 'K_TIME_ELAPSED': '00:00:07', 'K_TIME_TOGO': '00:14:43'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000041': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000041': '0000', 'K_TIME_AT_NEXT_ALERT_00000041': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000041': '01:15:10', 'K_TIME_CLOCK_00000041': '01:15:17', 'K_TIME_ELAPSED_00000041': '00:00:07', 'K_TIME_TOGO_00000041': '00:14:43'}
+_DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT': '0000', 'K_TIME_AT_NEXT_ALERT': '01:30:00', 'K_TIME_AT_ZEROELAPSE': '01:24:44', 'K_TIME_CLOCK': '01:24:58', 'K_TIME_ELAPSED': '00:00:14', 'K_TIME_TOGO': '00:05:02'}_DICTINSTR_: {'K_NAME_NEXT_EVENT_00000043': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHECKBOX_RUNAWAY': 'True', 'K_INTERVAL_COUNT_00000043': '0000', 'K_TIME_AT_NEXT_ALERT_00000043': '01:30:00', 'K_TIME_AT_ZEROELAPSE_00000043': '01:24:44', 'K_TIME_CLOCK_00000043': '01:24:58', 'K_TIME_ELAPSED_00000043': '00:00:14', 'K_TIME_TOGO_00000043': '00:05:02'}
 
 outerloop updating frame FRAME_CLOCKS
 looking at values in outerloop
@@ -804,6 +1018,216 @@ _result_ __TIMEOUT__
 _values_ None
 outerloop updating frame FRAME_CLOCKS
 looking at values in outerloop
-_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f1e7788fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f5602e0fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
+_result_ K_CHECKBOX_ALPHA_DIM
+_values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': False}
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ None == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ False
+_result_ __TIMEOUT__
+_values_ None
+outerloop updating frame FRAME_CLOCKS
+looking at values in outerloop
+_window_ <PySimpleGUI.PySimpleGUI.Window object at 0x7f5602e0fb80> == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ True
 _result_ K_BTN_QUIT_ALL
 _values_ {'K_CHECKBOX_RUNAWAY': True, 'K_CHECKBOX_ALPHA_DIM': True}
