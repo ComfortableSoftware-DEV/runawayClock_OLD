@@ -110,7 +110,7 @@
 				title_="checkMouse",
 				message_=f"""returning:
 _LAST_MOUSE_STATUS_ {self._LAST_MOUSE_STATUS_} = _statusToRtn_ {_statusToRtn_}
-_MOUSE_STATUS_ {self._MOUSE_STATUS_} = {_statusToRtn_}
+_CURRENT_MOUSE_STATUS_ {self._CURRENT_MOUSE_STATUS_} = {_statusToRtn_}
 _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			)
 

@@ -49,20 +49,37 @@ F___ENTER__ = "F___ENTER__"  # so the various service lists work for __enter__
 F___EXIT__ = "F___EXIT__"  # service list key for __exit__
 F___INIT__ = "F___INIT__"  # service list key for __init__
 F_CHECKMOUSE = "F_CHECKMOUSE"  # FKEY checkMouse
+F_COMPAREBBOX = "F_COMPAREBBOX"  # debugPrintDictRoot entry
+F_COMPAREXY = "F_COMPAREXY"  # debugPrintDictRoot entry
 F_DEBUGPRINT = "F_DEBUGPRINT"  # FKEY debugPrint
 F_DICTINREPL = "F_DICTINREPL"  # FKEY dictinRepl
 F_DICTINSTRREPL = "F_DICTINSTRREPL"  # FKEY dictinstrRepl
+F_DOFRAMECLOCKS = "F_DOFRAMECLOCKS"  # debugPrintDictRoot entry
+F_DOIT = "F_DOIT"  # debugPrintDictRoot entry
+F_DOMIDNIGHTWORK = "F_DOMIDNIGHTWORK"  # debugPrintDictRoot entry
+F_DOSTARTUP = "F_DOSTARTUP"  # debugPrintDictRoot entry
 F_EASYUPDATE = "F_EASYUPDATE"  # FKEY easyUpdate
 F_EASYUPDATEPARMS = "F_EASYUPDATEPARMS"  # FKEY easyUpdateParms
 F_ENINT = "F_ENINT"  # FKEY enint
 F_ENSTRING = "F_ENSTRING"  # FKEY enstring
+F_FINDNEXTALARMEVENT = "F_FINDNEXTALARMEVENT"  # debugPrintDictRoot entry
+F_FIXTIMEATNEXT = "F_FIXTIMEATNEXT"  # debugPrintDictRoot entry
+F_GETBBOX = "F_GETBBOX"  # debugPrintDictRoot entry
+F_GETCLOSEBBOX = "F_GETCLOSEBBOX"  # debugPrintDictRoot entry
+F_GETMOUSEPOS = "F_GETMOUSEPOS"  # debugPrintDictRoot entry
 F_INTERVALCOUNTOFF = "F_INTERVALCOUNTOFF"  # FKEY intervalCountOff
 F_INTERVALCOUNTON = "F_INTERVALCOUNTON"  # FKEY intervalCountOn
+F_ISINBBOX = "F_ISINBBOX"  # debugPrintDictRoot entry
+F_LOCALTIMES = "F_LOCALTIMES"  # debugPrintDictRoot entry
+F_OUTERLOOP = "F_OUTERLOOP"  # debugPrintDictRoot entry
 F_QUICKREAD = "F_QUICKREAD"  # FKEY quickRead
 F_READTODICT = "F_READTODICT"  # FKEY readToDict
 F_RUNAWAY = "F_RUNAWAY"  # FKEY runaway
+F_SPLITBBOXTORAW = "F_SPLITBBOXTORAW"  # debugPrintDictRoot entry
+F_SPLITXYTORAW = "F_SPLITXYTORAW"  # debugPrintDictRoot entry
 F_UPDATE = "F_UPDATE"  # FKEY update
 F_UPDATEFROMDICT = "F_UPDATEFROMDICT"  # FKEY updateFromDict
+F_UPDATEINTERVAL = "F_UPDATEINTERVAL"  # debugPrintDictRoot entry
 FRAME_CLOCKS = "FRAME_CLOCKS"  # holds all of clocks form entries
 FRAME_EDITENTRY = "FRAME_EDITENTRY"  # holds all of form edit-entry entries
 FRAME_EDITOR = "FRAME_EDITOR"  # holds all of form editor entries
@@ -402,6 +419,27 @@ ALL_THE_FRAMES = {  # comment
 	FRAME_POPUP04: None,  # ENTRY IN FORMS
 	FRAME_POPUP05: None,  # ENTRY IN FORMS
 	FRAME_THECLOCK: None,  # ENTRY IN FORMS
+}
+
+
+DEBUG_PRINT_DICT_ROOT = {  # comment
+	F_COMPAREBBOX: False,  # debugPrintDictRoot entry
+	F_COMPAREXY: False,  # debugPrintDictRoot entry
+	F_DOFRAMECLOCKS: False,  # debugPrintDictRoot entry
+	F_DOIT: False,  # debugPrintDictRoot entry
+	F_DOMIDNIGHTWORK: False,  # debugPrintDictRoot entry
+	F_DOSTARTUP: False,  # debugPrintDictRoot entry
+	F_FINDNEXTALARMEVENT: False,  # debugPrintDictRoot entry
+	F_FIXTIMEATNEXT: False,  # debugPrintDictRoot entry
+	F_GETBBOX: False,  # debugPrintDictRoot entry
+	F_GETCLOSEBBOX: False,  # debugPrintDictRoot entry
+	F_GETMOUSEPOS: False,  # debugPrintDictRoot entry
+	F_ISINBBOX: False,  # debugPrintDictRoot entry
+	F_LOCALTIMES: False,  # debugPrintDictRoot entry
+	F_OUTERLOOP: False,  # debugPrintDictRoot entry
+	F_SPLITBBOXTORAW: False,  # debugPrintDictRoot entry
+	F_SPLITXYTORAW: False,  # debugPrintDictRoot entry
+	F_UPDATEINTERVAL: False,  # debugPrintDictRoot entry
 }
 
 
@@ -1304,7 +1342,7 @@ class CLASS_CLOCKS(object):
 				title_="checkMouse",
 				message_=f"""returning:
 _LAST_MOUSE_STATUS_ {self._LAST_MOUSE_STATUS_} = _statusToRtn_ {_statusToRtn_}
-_MOUSE_STATUS_ {self._MOUSE_STATUS_} = {_statusToRtn_}
+_CURRENT_MOUSE_STATUS_ {self._CURRENT_MOUSE_STATUS_} = {_statusToRtn_}
 _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			)
 
@@ -1415,6 +1453,8 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			timeElapsed_=None,
 			timeTogo_=None,
 		):
+		global \
+			APPMODE_MAIN
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (nameNextEvent_ is not None):
@@ -1424,11 +1464,13 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 		if (checkboxAlphaDim_ is not None):
 			self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
 			self._CHECKBOX_ALPHA_DIM_ = checkboxAlphaDim_
+			APPDS_MAIN[K_CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (checkboxRunaway_ is not None):
 			self._DICTIN_[K_CHECKBOX_RUNAWAY] = checkboxRunaway_
 			self._CHECKBOX_RUNAWAY_ = checkboxRunaway_
+			APPDS_MAIN[K_CHECKBOX_RUNAWAY] = checkboxRunaway_
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (eventMode_ is not None):
