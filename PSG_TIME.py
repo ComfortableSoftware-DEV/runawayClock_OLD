@@ -860,7 +860,6 @@ class CLASS_CLOCKS(object):
 		self._BBOX_ = EMPTY_BBOX  #
 		self._CHANGED_EVENTS_ = False  # comment
 		self._CHANGED_VALUES_ = False  # comment
-		self._CHECKBOX_ALPHA_DIM_ = SZ_ALPHA_DIM  #
 		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY  #
 		self._CLOSE_BBOX_ = EMPTY_BBOX  #
 		self._CURRENTLY_DIMMED_ = False  #
@@ -1163,7 +1162,6 @@ class CLASS_CLOCKS(object):
 			K_BBOX: self._BBOX_,
 			K_CHANGED_EVENTS: self._CHANGED_EVENTS_,
 			K_CHANGED_VALUES: self._CHANGED_VALUES_,
-			K_CHECKBOX_ALPHA_DIM: self._CHECKBOX_ALPHA_DIM_,
 			K_CHECKBOX_RUNAWAY: self._CHECKBOX_RUNAWAY_,
 			K_CLOSE_BBOX: self._CLOSE_BBOX_,
 			K_CURRENTLY_DIMMED: self._CURRENTLY_DIMMED_,
@@ -1467,7 +1465,6 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (checkboxAlphaDim_ is not None):
 			self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
-			self._CHECKBOX_ALPHA_DIM_ = checkboxAlphaDim_
 			APPDS_MAIN[K_CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
 			self._MAINFRAME_[self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM]].update(value=checkboxAlphaDim_)
 			__dummy__ = self.quickRead()
@@ -1763,7 +1760,6 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 					value=True,
 				)
 				self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = True
-				self._CHECKBOX_ALPHA_DIM_ = True
 
 				# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 			elif (checkboxValue_ is False):
@@ -1777,11 +1773,10 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 					value=False,
 				)
 				self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = False
-				self._CHECKBOX_ALPHA_DIM_ = False
 
 				# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 			elif (checkboxValue_ is None):
-				_currentValue_ = self._CHECKBOX_ALPHA_DIM_
+				_currentValue_ = self._DICTIN_[K_CHECKBOX_ALPHA_DIM]
 				_newValue_ = not _currentValue_
 
 					# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
@@ -1794,7 +1789,6 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 					value=_newValue_,
 				)
 				self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = _newValue_
-				self._CHECKBOX_ALPHA_DIM_ = _newValue_
 
 			# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
