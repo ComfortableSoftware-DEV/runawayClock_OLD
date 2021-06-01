@@ -987,6 +987,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_03_QUICK_READ", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "quickRead", "quickRead.py", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_READ_TO_DICT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "readToDict", "readToDict.py", "define readToDict",),
 	("PSGVAL__CLOCKS_FUNC_03_RUNAWAY", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "define runaway",),
+	("PSGVAL__CLOCKS_FUNC_03_SETCHECKBOX", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "setCheckbox", "setCheckbox.py", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC_03_UPDATE_FROM_DICT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFromDict", "updateFromDict.py", "update the displayed info from a dict or the default _DICTIN_",),
 	("PSGVAL__CLOCKS_FUNC_FF_UPDATE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "update", "update.py", "define the required update function",),
 	("PSGVAL__CLOCKS_LAYOUT", FMAX_NOP, "layout for APPMODE_CLOCKS",),
