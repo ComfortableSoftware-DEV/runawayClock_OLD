@@ -1470,6 +1470,7 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			self._CHECKBOX_ALPHA_DIM_ = checkboxAlphaDim_
 			APPDS_MAIN[K_CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
 			self._MAINFRAME_[self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM]].update(value=checkboxAlphaDim_)
+			__dummy__ = self.quickRead()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (checkboxRunaway_ is not None):
@@ -1742,7 +1743,7 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 
 			# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 		if (self._DEBUG_PRINT_DICT_[F_SETCHECKBOX] is True):
-					print(f"""start of setCheckbox
+					print(f"""{CF.NEWLINE}start of setCheckbox
 	checkboxKey_ {checkboxKey_}  checkboxValue_ {checkboxValue_}""")
 		# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
 
@@ -1760,7 +1761,6 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 
 				self._MAINFRAME_[self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM]].update(
 					value=True,
-					default=True,
 				)
 				self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = True
 				self._CHECKBOX_ALPHA_DIM_ = True
@@ -1775,7 +1775,6 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 
 				self._MAINFRAME_[self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM]].update(
 					value=False,
-					default=False,
 				)
 				self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = False
 				self._CHECKBOX_ALPHA_DIM_ = False
@@ -1793,7 +1792,6 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 
 				self._MAINFRAME_[self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM]].update(
 					value=_newValue_,
-					default=_newValue_,
 				)
 				self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = _newValue_
 				self._CHECKBOX_ALPHA_DIM_ = _newValue_
@@ -1815,7 +1813,6 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 
 				self._MAINFRAME_[self._KEY_DICT_[K_CHECKBOX_RUNAWAY]].update(
 					value=True,
-					default=True,
 				)
 				self._DICTIN_[K_CHECKBOX_RUNAWAY] = True
 				self._CHECKBOX_RUNAWAY_ = True
@@ -1830,7 +1827,6 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 
 				self._MAINFRAME_[self._KEY_DICT_[K_CHECKBOX_RUNAWAY]].update(
 					value=False,
-					default=False,
 				)
 				self._DICTIN_[K_CHECKBOX_RUNAWAY] = False
 				self._CHECKBOX_RUNAWAY_ = False
@@ -1848,7 +1844,6 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 
 				self._MAINFRAME_[self._KEY_DICT_[K_CHECKBOX_RUNAWAY]].update(
 					value=_newValue_,
-					default=_newValue_,
 				)
 				self._DICTIN_[K_CHECKBOX_RUNAWAY] = _newValue_
 				self._CHECKBOX_RUNAWAY_ = _newValue_
@@ -1887,7 +1882,7 @@ _DICTIN_ {self.dictinRepl()}
 		for _thisKey_, _thisVal_ in dictToUpdateFrom_.items():
 			self._MAINFRAME_[_thisKey_].Update(value=_thisVal_)
 
-		__dummy__ = self._MAINFRAME_.Read(timeout=1)
+		__dummy__ = self.quickRead()
 
 		if (self._DEBUG_PRINT_DICT_[F_UPDATEFROMDICT]):
 			self.debugPrint(
@@ -2314,6 +2309,16 @@ def doFrameClocks(values_):
 		ALL_THE_FRAMES, \
 		APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+
+	if (DEBUG_PRINT_DICT_ROOT[F_DOFRAMECLOCKS] is True):
+		ALL_THE_FRAMES[FRAME_CLOCKS].debugPrint(
+			title_="start of doFrameClocks",
+			printDictinS_=True,
+			message_=f"""values_ {values_}
+APPDS_MAIN {APPDS_MAIN}
+"""
+		)
+
 	ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
 		checkboxAlphaDim_=values_[K_CHECKBOX_ALPHA_DIM],
 		checkboxRunaway_=values_[K_CHECKBOX_RUNAWAY],
@@ -2322,11 +2327,13 @@ def doFrameClocks(values_):
 
 	if (DEBUG_PRINT_DICT_ROOT[F_DOFRAMECLOCKS] is True):
 		ALL_THE_FRAMES[FRAME_CLOCKS].debugPrint(
-			title_="doFrameClocks",
+			title_="end of doFrameClocks",
 			printDictinS_=True,
 			message_=f"""values_ {values_}
+APPDS_MAIN {APPDS_MAIN}
 """
 		)
+
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2364,7 +2371,7 @@ def outerLoop():
 			if _thisFrame_ is not None:
 
 					# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
-				if (DEBUG_PRINT_DICT_ROOT[F_OUTERLOOP] == ""):
+				if (DEBUG_PRINT_DICT_ROOT[F_OUTERLOOP] is True):
 					print(f"""outerloop updating frame {_thisFrameName_}""")
 				_thisFrame_.update()
 
@@ -2405,7 +2412,9 @@ _values_ {_values_}""")
 					print(f"""outerloop K_BTN_ZERO setting K_CHECKBOX_ALPHA_DIM {_tempCheckboxAlphaDim_}""")
 
 				ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+					checkboxAlphaDim_=_tempCheckboxAlphaDim_,
 				)
+				ALL_THE_FRAMES[FRAME_CLOCKS].setCheckbox(K_CHECKBOX_ALPHA_DIM, _tempCheckboxAlphaDim_)
 
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2

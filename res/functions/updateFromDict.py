@@ -20,7 +20,7 @@ _DICTIN_ {self.dictinRepl()}
 		for _thisKey_, _thisVal_ in dictToUpdateFrom_.items():
 			self._MAINFRAME_[_thisKey_].Update(value=_thisVal_)
 
-		__dummy__ = self._MAINFRAME_.Read(timeout=1)
+		__dummy__ = self.quickRead()
 
 		if (self._DEBUG_PRINT_DICT_[F_UPDATEFROMDICT]):
 			self.debugPrint(
