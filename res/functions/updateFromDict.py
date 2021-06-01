@@ -10,8 +10,12 @@
 dictToUpdateFrom_ {self.dictinRepl(dictToUpdateFrom_)}
 _DICTIN_ {self.dictinRepl()}
 """)
+			if (K_CHECKBOX_ALPHA_DIM in dictToUpdateFrom_):
+				__dummy__ = dictToUpdateFrom_.pop(K_CHECKBOX_ALPHA_DIM)
+			
 			self._DICTIN_.update(dictToUpdateFrom_)
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
 
 		self.enint()
 		self.enstring()
