@@ -5427,8 +5427,9 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT:
 				FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{"_DPD_"[1:-1]}: self.{"_DPD_"},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{NTAB(3)}F_{_thisElementName_.upper()}: {_thisDPDBool_},  # {_thisComment_}{NEWLINE}"""
 			FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT[_thisClassName_]["_DPD_"] = f"""{_thisComment_}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 

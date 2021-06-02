@@ -12,6 +12,25 @@ gc.enable()
 
 
 #
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * functions in this file
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * def getMousePos():
+# * def splitBBoxToRaw(BBoxToSplit_):
+# * def splitXYToRaw(XYToSplit_):
+# * def fixTimeAtNext(timeToFix_):
+# * def localTimes(hrs_=None, mins_=None):
+# * def compareXY(XY1_, XY2_):
+# * def compareBBox(BBox1_, BBox2_):
+# * def getBBox(locnToBBox_, sizeToBBox_):
+# * def getCloseBBox(location_, size_, closeEnough_=SZ_CLOSE):
+# * def isInBBox(BBoxIn_, pointIn_):
+# * def updateInterval(eventIndexToDo_):
+# * def findNextAlarmEvent():
+# * def doMidnightWork():
+# * def doStartup():
+# * def outerLoop():
+# * def doit():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -45,43 +64,22 @@ COLOR_WHITE = "#FFFFFF"  # white
 EVENTMODE_ALARM = "EVENTMODE_ALARM"  #
 EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
-F___ENTER__ = "F___ENTER__"  # so the various service lists work for __enter__
-F___EXIT__ = "F___EXIT__"  # service list key for __exit__
-F___INIT__ = "F___INIT__"  # service list key for __init__
-F_CHECKMOUSE = "F_CHECKMOUSE"  # FKEY checkMouse
-F_COMPAREBBOX = "F_COMPAREBBOX"  # debugPrintDictRoot entry
-F_COMPAREXY = "F_COMPAREXY"  # debugPrintDictRoot entry
-F_DEBUGPRINT = "F_DEBUGPRINT"  # FKEY debugPrint
-F_DICTINREPL = "F_DICTINREPL"  # FKEY dictinRepl
-F_DICTINSTRREPL = "F_DICTINSTRREPL"  # FKEY dictinstrRepl
-F_DOFRAMECLOCKS = "F_DOFRAMECLOCKS"  # debugPrintDictRoot entry
-F_DOFRAMETHECLOCK = "F_DOFRAMETHECLOCK"  # debugPrintDictRoot entry
-F_DOIT = "F_DOIT"  # debugPrintDictRoot entry
-F_DOMIDNIGHTWORK = "F_DOMIDNIGHTWORK"  # debugPrintDictRoot entry
-F_DOSTARTUP = "F_DOSTARTUP"  # debugPrintDictRoot entry
-F_EASYUPDATE = "F_EASYUPDATE"  # FKEY easyUpdate
-F_EASYUPDATEPARMS = "F_EASYUPDATEPARMS"  # FKEY easyUpdateParms
-F_ENINT = "F_ENINT"  # FKEY enint
-F_ENSTRING = "F_ENSTRING"  # FKEY enstring
-F_FINDNEXTALARMEVENT = "F_FINDNEXTALARMEVENT"  # debugPrintDictRoot entry
-F_FIXTIMEATNEXT = "F_FIXTIMEATNEXT"  # debugPrintDictRoot entry
-F_GETBBOX = "F_GETBBOX"  # debugPrintDictRoot entry
-F_GETCLOSEBBOX = "F_GETCLOSEBBOX"  # debugPrintDictRoot entry
-F_GETMOUSEPOS = "F_GETMOUSEPOS"  # debugPrintDictRoot entry
-F_INTERVALCOUNTOFF = "F_INTERVALCOUNTOFF"  # FKEY intervalCountOff
-F_INTERVALCOUNTON = "F_INTERVALCOUNTON"  # FKEY intervalCountOn
-F_ISINBBOX = "F_ISINBBOX"  # debugPrintDictRoot entry
-F_LOCALTIMES = "F_LOCALTIMES"  # debugPrintDictRoot entry
-F_OUTERLOOP = "F_OUTERLOOP"  # debugPrintDictRoot entry
-F_QUICKREAD = "F_QUICKREAD"  # FKEY quickRead
-F_READTODICT = "F_READTODICT"  # FKEY readToDict
-F_RUNAWAY = "F_RUNAWAY"  # FKEY runaway
-F_SETCHECKBOX = "F_SETCHECKBOX"  # FKEY quickRead
-F_SPLITBBOXTORAW = "F_SPLITBBOXTORAW"  # debugPrintDictRoot entry
-F_SPLITXYTORAW = "F_SPLITXYTORAW"  # debugPrintDictRoot entry
-F_UPDATE = "F_UPDATE"  # FKEY update
-F_UPDATEFROMDICT = "F_UPDATEFROMDICT"  # FKEY updateFromDict
-F_UPDATEINTERVAL = "F_UPDATEINTERVAL"  # debugPrintDictRoot entry
+F_COMPAREBBOX = "F_COMPAREBBOX"  # FKEY entry compareBBox
+F_COMPAREXY = "F_COMPAREXY"  # FKEY entry compareXY
+F_DOIT = "F_DOIT"  # FKEY entry doit
+F_DOMIDNIGHTWORK = "F_DOMIDNIGHTWORK"  # FKEY entry doMidnightWork
+F_DOSTARTUP = "F_DOSTARTUP"  # FKEY entry doStartup
+F_FINDNEXTALARMEVENT = "F_FINDNEXTALARMEVENT"  # FKEY entry findNextAlarmEvent
+F_FIXTIMEATNEXT = "F_FIXTIMEATNEXT"  # FKEY entry fixTimeAtNext
+F_GETBBOX = "F_GETBBOX"  # FKEY entry getBBox
+F_GETCLOSEBBOX = "F_GETCLOSEBBOX"  # FKEY entry getCloseBBox
+F_GETMOUSEPOS = "F_GETMOUSEPOS"  # FKEY entry getMousePos
+F_ISINBBOX = "F_ISINBBOX"  # FKEY entry isInBBox
+F_LOCALTIMES = "F_LOCALTIMES"  # FKEY entry localTimes
+F_OUTERLOOP = "F_OUTERLOOP"  # FKEY entry outerLoop
+F_SPLITBBOXTORAW = "F_SPLITBBOXTORAW"  # FKEY entry splitBBoxToRaw
+F_SPLITXYTORAW = "F_SPLITXYTORAW"  # FKEY entry splitXYToRaw
+F_UPDATEINTERVAL = "F_UPDATEINTERVAL"  # FKEY entry updateInterval
 FRAME_CLOCKS = "FRAME_CLOCKS"  # holds all of clocks form entries
 FRAME_EDITENTRY = "FRAME_EDITENTRY"  # holds all of form edit-entry entries
 FRAME_EDITOR = "FRAME_EDITOR"  # holds all of form editor entries
@@ -413,37 +411,31 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALL_THE_FRAMES = {  # comment
 	FRAME_CLOCKS: None,  # ENTRY IN FORMS
-	FRAME_EDITENTRY: None,  # ENTRY IN FORMS
-	FRAME_EDITOR: None,  # ENTRY IN FORMS
-	FRAME_MAIN: None,  # ENTRY IN FORMS
 	FRAME_POPUP01: None,  # ENTRY IN FORMS
 	FRAME_POPUP02: None,  # ENTRY IN FORMS
 	FRAME_POPUP03: None,  # ENTRY IN FORMS
 	FRAME_POPUP04: None,  # ENTRY IN FORMS
 	FRAME_POPUP05: None,  # ENTRY IN FORMS
-	FRAME_THECLOCK: None,  # ENTRY IN FORMS
 }
 
 
-DEBUG_PRINT_DICT_ROOT = {  # comment
-	F_COMPAREBBOX: False,  # debugPrintDictRoot entry
-	F_COMPAREXY: False,  # debugPrintDictRoot entry
-	F_DOFRAMECLOCKS: False,  # debugPrintDictRoot entry
-	F_DOFRAMETHECLOCK: False,  # debugPrintDictRoot entry
-	F_DOIT: False,  # debugPrintDictRoot entry
-	F_DOMIDNIGHTWORK: False,  # debugPrintDictRoot entry
-	F_DOSTARTUP: False,  # debugPrintDictRoot entry
-	F_FINDNEXTALARMEVENT: False,  # debugPrintDictRoot entry
-	F_FIXTIMEATNEXT: False,  # debugPrintDictRoot entry
-	F_GETBBOX: False,  # debugPrintDictRoot entry
-	F_GETCLOSEBBOX: False,  # debugPrintDictRoot entry
-	F_GETMOUSEPOS: False,  # debugPrintDictRoot entry
-	F_ISINBBOX: False,  # debugPrintDictRoot entry
-	F_LOCALTIMES: False,  # debugPrintDictRoot entry
-	F_OUTERLOOP: True,  # debugPrintDictRoot entry
-	F_SPLITBBOXTORAW: False,  # debugPrintDictRoot entry
-	F_SPLITXYTORAW: False,  # debugPrintDictRoot entry
-	F_UPDATEINTERVAL: False,  # debugPrintDictRoot entry
+DPD_ROOT = {  # DPD_ROOT defined
+	F_COMPAREBBOX: False,  # DPD_ROOT entry compareBBox
+	F_COMPAREXY: False,  # DPD_ROOT entry compareXY
+	F_DOIT: False,  # DPD_ROOT entry doit
+	F_DOMIDNIGHTWORK: False,  # DPD_ROOT entry doMidnightWork
+	F_DOSTARTUP: False,  # DPD_ROOT entry doStartup
+	F_FINDNEXTALARMEVENT: False,  # DPD_ROOT entry findNextAlarmEvent
+	F_FIXTIMEATNEXT: False,  # DPD_ROOT entry fixTimeAtNext
+	F_GETBBOX: False,  # DPD_ROOT entry getBBox
+	F_GETCLOSEBBOX: False,  # DPD_ROOT entry getCloseBBox
+	F_GETMOUSEPOS: False,  # DPD_ROOT entry getMousePos
+	F_ISINBBOX: False,  # DPD_ROOT entry isInBBox
+	F_LOCALTIMES: False,  # DPD_ROOT entry localTimes
+	F_OUTERLOOP: False,  # DPD_ROOT entry outerLoop
+	F_SPLITBBOXTORAW: False,  # DPD_ROOT entry splitBBoxToRaw
+	F_SPLITXYTORAW: False,  # DPD_ROOT entry splitXYToRaw
+	F_UPDATEINTERVAL: False,  # DPD_ROOT entry updateInterval
 }
 
 
@@ -451,11 +443,6 @@ DEBUG_PRINT_DICT_ROOT = {  # comment
 # * SCTN0903 lists
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALERTING_LIST = [  # list that holds all currently alarming events
-]
-
-
-APPDS_TIMES_LIST = [  # build the list of all times in APPDS_MAIN that need midnight attention
-	K_TIME_AT_NEXT_ALERT,  # build the list of all times in APPDS_MAIN
 ]
 
 
@@ -652,7 +639,7 @@ CHECKBOX_ALPHA_DIM01 = {  # checkbox for alpha under mouse
 
 CHECKBOX_DISMISSED01 = {  # checkbox for dismissed from mouse behavior
 	TEXT: "K_DISMISSED",  # text label
-	TOOLTIP: "run away from mouse when checked",  # tooltip
+	TOOLTIP: "bool dismiss this event early",  # event has been dismissed bool
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
 	KEY: K_CHECKBOX_DISMISSED,  # set the key for the checkbox
@@ -661,7 +648,7 @@ CHECKBOX_DISMISSED01 = {  # checkbox for dismissed from mouse behavior
 
 CHECKBOX_ENABLED01 = {  # checkbox for dismissed from mouse behavior
 	TEXT: "ENABLED",  # text label
-	TOOLTIP: "run away from mouse when checked",  # tooltip
+	TOOLTIP: "event enabled bool",  # tooltip
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
 	KEY: K_CHECKBOX_ENABLED,  # set the key for the checkbox
@@ -670,7 +657,7 @@ CHECKBOX_ENABLED01 = {  # checkbox for dismissed from mouse behavior
 
 CHECKBOX_FIRSTRUN01 = {  # checkbox for dismissed from mouse behavior
 	TEXT: "K_FIRSTRUN",  # text label
-	TOOLTIP: "run away from mouse when checked",  # tooltip
+	TOOLTIP: "first run bool",  # tooltip
 	DEFAULT: False,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
 	KEY: K_CHECKBOX_FIRSTRUN,  # set the key for the checkbox
@@ -916,30 +903,6 @@ class CLASS_CLOCKS(object):
 		}
 # fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-		self._DEBUG_PRINT_DICT_ = {  # dict of class functions to print debug messages from
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			F_CHECKMOUSE: False,  # FKEY checkMouse
-			F_DEBUGPRINT: False,  # FKEY debugPrint
-			F_DICTINSTRREPL: False,  # FKEY dictinstrRepl
-			F_DICTINREPL: False,  # FKEY dictinRepl
-			F_EASYUPDATE: False,  # FKEY easyUpdate
-			F_EASYUPDATEPARMS: False,  # FKEY easyUpdateParms
-			F_ENINT: False,  # FKEY enint
-			F_ENSTRING: False,  # FKEY enstring
-			F___ENTER__: False,  # so the various service lists work for __enter__
-			F___EXIT__: False,  # service list key for __exit__
-			F___INIT__: False,  # service list key for __init__
-			F_INTERVALCOUNTOFF: False,  # FKEY intervalCountOff
-			F_INTERVALCOUNTON: False,  # FKEY intervalCountOn
-			F_QUICKREAD: False,  # FKEY quickRead
-			F_READTODICT: False,  # FKEY readToDict
-			F_RUNAWAY: False,  # FKEY runaway
-			F_SETCHECKBOX: True,  # FKEY quickRead
-			F_UPDATE: False,  # FKEY update
-			F_UPDATEFROMDICT: False,  # FKEY updateFromDict
-		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
 		self._DICT_KEYS_INT_ = {  # dict of integer keys and their format
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			K_INTERVAL_COUNT: "04d",  # intervalCount:04d
@@ -953,6 +916,29 @@ class CLASS_CLOCKS(object):
 			K_TIME_CLOCK: CF.DAYSECS,  #
 			K_TIME_ELAPSED: CF.TIME995959,  #
 			K_TIME_TOGO: CF.DAYSECS,  #
+		}
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+		self._DPD_ = {  # define a DPD /
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			F___ENTER__: False,  # define __enter__
+			F___EXIT__: False,  # define __exit__ in CLOCKS
+			F_CHECKMOUSE: False,  # define checkMouse
+			F_DEBUGPRINT: False,  # read the frame and set self._RESULT_
+			F_DICTINSTRREPL: False,  # define runaway
+			F_DICTINREPL: False,  # define runaway
+			F_EASYUPDATE: False,  # load the whole thing from the file for easyUpdate
+			F_EASYUPDATEPARMS: False,  # load the whole thing from the file for easyUpdate
+			F_ENINT: False,  # read the frame and set self._RESULT_
+			F_ENSTRING: False,  # read the frame and set self._RESULT_
+			F_INTERVALCOUNTOFF: False,  # turn interval count off
+			F_INTERVALCOUNTON: False,  # turn interval count on
+			F_QUICKREAD: False,  # read the frame and set self._RESULT_
+			F_READTODICT: False,  # define readToDict
+			F_RUNAWAY: False,  # define runaway
+			F_SETCHECKBOX: False,  # define runaway
+			F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
+			F_UPDATE: False,  # define the required update function
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -971,8 +957,8 @@ class CLASS_CLOCKS(object):
 			**CHECKBOX_ALPHA_DIM01,  # all the paramaters all we need
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_DICT_[K_CHECKBOX_SNOOZED] = K_CHECKBOX_SNOOZED
-		self._KEY_DICT_REVERSE_[K_CHECKBOX_SNOOZED] = K_CHECKBOX_SNOOZED
+		self._KEY_DICT_[_CHECKBOX_ALPHADIM_] = _CHECKBOX_ALPHADIM_
+		self._KEY_DICT_REVERSE_[_CHECKBOX_ALPHADIM_] = _CHECKBOX_ALPHADIM_
 
 		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1147,9 +1133,9 @@ class CLASS_CLOCKS(object):
 			K_CHECKBOX_ALPHADIM: self._CHECKBOX_ALPHADIM_,  # adopt the checkboxes so we can control them while using the globals
 			K_COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
 			K_COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
-			K_DEBUG_PRINT_DICT: self._DEBUG_PRINT_DICT_,  # dict of class functions to print debug messages from
 			K_DICT_KEYS_INT: self._DICT_KEYS_INT_,  # dict of integer keys and their format
 			K_DICT_KEYS_TIME: self._DICT_KEYS_TIME_,  # dict of time keys and their max value int seconds
+			K_DPD: self._DPD_,  # define a DPD /
 			K_DICTIN: self._DICTIN_,
 			K_DICTINSTR: self._DICTINSTR_,
 			K_THIS_KEY_BASE: self._THIS_KEY_BASE_,
@@ -1199,7 +1185,7 @@ class CLASS_CLOCKS(object):
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-		if (self._DEBUG_PRINT_DICT_[F___INIT__] is True):  # see if debug printing is on
+		if (self._DPD_[F___INIT__] is True):  # see if debug printing is on
 			self.debugPrint(  # debugPrint
 				title_="__INIT__3",  # print _KEY_DICT_REVERSE_
 				printDictinS_=True,  # print _KEY_DICT_
@@ -1895,7 +1881,6 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 	K_CHECKBOX_RUNAWAY: False,  # runaway from the mouse bool
 	K_EVENT_ENTRIES: {  # holds events
 		0: {
-			K_ALARMPOPUP_PROPER: None,  # time of this event
 			K_ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
 			K_AUTO_CLOSE_DURATION: 10,  # time of this event
 			K_DISMISSED: False,  # is this event dismissed
@@ -1912,8 +1897,6 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_TIME_ALARM: 0,  # time of this event if it an alarm
 			K_TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			K_TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_ELAPSED: ZERO_CLOCK,  # time next time this alarm goes off
 			K_TIME_INTERVAL: CF.HALFHOURSECS,  # interval of this event
 			K_TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			K_TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
@@ -1922,7 +1905,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "00000000",  # version number hex string
+	K_VERSION: "00000001",  # version number hex string
 }
 
 
