@@ -1519,6 +1519,10 @@ TBGLST = [
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_INTERVAL__BEGIN", "ZERO_CLOCK", "time of the day this interval is made active",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_INTERVAL__END", "ZERO_CLOCK", "time of the day this interval is no longer active",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_LEN_OF_ALERT", "ZERO_CLOCK", "length of time to alert this event before auto closing it",),
+
+	("PSGVAL__APPDS_TIMES_LIST", FMAXPSG_SCTN0903_LIST_DEF, "APPDS_TIMES_LIST", "list of times to be updated at midnight",),
+	("PSGVAL__APPDS_TIMES_LIST", FMAXPSG_SCTN0903_LIST_VAL_ADD, "APPDS_TIMES_LIST", "K_TIME_AT_NEXT_ALERT", "list of times to be updated at midnight",),
+	
 	("PSGVAL__BTN_DISMISS20", FMAX_NOP, "start of the dismiss button for alarms",),
 	("PSGVAL__BTN_DISMISS2000", FMAXPSG_SCTN0906_BTN_DEF, "BTN_DISMISS20", "",),
 	("PSGVAL__BTN_DISMISS2001", FMAXPSG_SCTN0906_BTN_STR_ADD, "BTN_DISMISS20", "BUTTON_TEXT", "", "button_text empty for the DOWN button",),

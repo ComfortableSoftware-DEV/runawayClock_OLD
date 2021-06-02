@@ -91,7 +91,6 @@ F_ISINBBOX = "F_ISINBBOX"  # FKEY entry isInBBox
 F_LOCALTIMES = "F_LOCALTIMES"  # FKEY entry localTimes
 F_OUTERLOOP = "F_OUTERLOOP"  # FKEY entry outerLoop
 F_QUICKREAD = "F_QUICKREAD"  # read the frame and set self._RESULT_
-F_READTODICT = "F_READTODICT"  # define readToDict
 F_RUNAWAY = "F_RUNAWAY"  # define runaway
 F_SETCHECKBOX = "F_SETCHECKBOX"  # define runaway
 F_SPLITBBOXTORAW = "F_SPLITBBOXTORAW"  # FKEY entry splitBBoxToRaw
@@ -463,6 +462,11 @@ DPD_ROOT = {  # DPD_ROOT defined
 # * SCTN0903 lists
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALERTING_LIST = [  # list that holds all currently alarming events
+]
+
+
+APPDS_TIMES_LIST = [  # list of times to be updated at midnight
+	K_TIME_AT_NEXT_ALERT,  # list of times to be updated at midnight
 ]
 
 
@@ -955,7 +959,6 @@ class CLASS_CLOCKS(object):
 			F_INTERVALCOUNTOFF: False,  # turn interval count off
 			F_INTERVALCOUNTON: False,  # turn interval count on
 			F_QUICKREAD: False,  # read the frame and set self._RESULT_
-			F_READTODICT: False,  # define readToDict
 			F_RUNAWAY: False,  # define runaway
 			F_SETCHECKBOX: False,  # define runaway
 			F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
@@ -1221,7 +1224,7 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_ = SG.Window(**self._WINDOW_).finalize()
 		ALL_THE_FRAMES[self._THIS_FORM_NAME_] = self
-		if (self._DEBUG_PRINT_DICT_[F___ENTER__]):
+		if (self._DPD_[F___ENTER__]):
 			self.debugPrint(
 				message_=f"""enter CLOCKS {self._THIS_FORM_NAME_}""",
 			)
@@ -1235,7 +1238,7 @@ class CLASS_CLOCKS(object):
 		self._MAINFRAME_.close()
 		ALL_THE_FRAMES[self._THIS_FORM_NAME_] = None
 
-		if (self._DEBUG_PRINT_DICT_[F___EXIT__] is True):
+		if (self._DPD_[F___EXIT__] is True):
 			self.debugPrint(
 				message_=f"""exiting CLOCKS {self._THIS_FORM_NAME_}"""
 			)
@@ -1244,7 +1247,7 @@ class CLASS_CLOCKS(object):
 	def checkMouse(self):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DEBUG_PRINT_DICT_[F_CHECKMOUSE] is True):
+		if (self._DPD_[F_CHECKMOUSE] is True):
 			print(f"""checkMouse NOWMS {NOWMS} self._TIME_TO_CHECK_MOUSE_ {self._TIME_TO_CHECK_MOUSE_}""")
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
@@ -1348,7 +1351,7 @@ class CLASS_CLOCKS(object):
 			self._DIMMED_ = False
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		if (self._DEBUG_PRINT_DICT_[F_CHECKMOUSE] is True):
+		if (self._DPD_[F_CHECKMOUSE] is True):
 			self.debugPrint(
 				title_="checkMouse",
 				message_=f"""returning:
@@ -1390,25 +1393,9 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 		_strToPrint_ += f"""{CF.NEWLINE}"""
 		print(_strToPrint_)
 
-		if (self._DEBUG_PRINT_DICT_[F_DEBUGPRINT] is True):
+		if (self._DPD_[F_DEBUGPRINT] is True):
 			print("debugPrinting myself feels weird, redundant, and recursive enough to crash")
 		# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-	def dictinstrRepl(self, dictToRtn_=None):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-
-		if (dictToRtn_ is None):
-			dictToRtn_ = self._DICTINSTR_
-
-		if (self._DEBUG_PRINT_DICT_[F_DICTINSTRREPL] is True):
-			self.debugPrint(
-				title_="dictinstrRepl",
-				message_=f"""returning:
-{dictToRtn_}"""
-			)
-
-		return dictToRtn_
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def dictinRepl(self, dictToRepl_=None):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1440,7 +1427,7 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		if (self._DEBUG_PRINT_DICT_[F_DICTINREPL] is True):
+		if (self._DPD_[F_DICTINREPL] is True):
 			self.debugPrint(
 				title_="dictinRepl",
 				message_=f"""returning:
@@ -1450,6 +1437,22 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 
 
 		return _dictToRtn_
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+	def dictinstrRepl(self, dictToRtn_=None):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+
+		if (dictToRtn_ is None):
+			dictToRtn_ = self._DICTINSTR_
+
+		if (self._DPD_[F_DICTINSTRREPL] is True):
+			self.debugPrint(
+				title_="dictinstrRepl",
+				message_=f"""returning:
+{dictToRtn_}"""
+			)
+
+		return dictToRtn_
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def easyUpdate(self,
@@ -1526,7 +1529,7 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 		self.updateFromDict()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DEBUG_PRINT_DICT_[F_EASYUPDATE]):
+		if (self._DPD_[F_EASYUPDATE]):
 			self.debugPrint(
 				printDictinS_=True,
 				title_="easyUpdate",
@@ -1566,7 +1569,7 @@ timeTogo_ {timeTogo_}
 		self.updateFromDict()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DEBUG_PRINT_DICT_[F_EASYUPDATEPARMS]):
+		if (self._DPD_[F_EASYUPDATEPARMS]):
 			self.debugPrint(
 				printDictinS_=True,
 				title_="easyUpdateParms",
@@ -1608,7 +1611,7 @@ alphaChannel_ {alphaChannel_}
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DEBUG_PRINT_DICT_[F_ENINT]):
+		if (self._DPD_[F_ENINT]):
 			self.debugPrint(
 				printDictinS_=True,
 				title_="enint",
@@ -1629,7 +1632,7 @@ alphaChannel_ {alphaChannel_}
 			else:
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
 
-		if (self._DEBUG_PRINT_DICT_[F_ENSTRING]):
+		if (self._DPD_[F_ENSTRING]):
 			self.debugPrint(
 				printDictinS_=True,
 				title_="enstring",
@@ -1642,7 +1645,7 @@ alphaChannel_ {alphaChannel_}
 		self._DICTIN_[K_INTERVAL_COUNT] = 0
 		self.updateFromDict()
 
-		if (self._DEBUG_PRINT_DICT_[F_INTERVALCOUNTOFF]):
+		if (self._DPD_[F_INTERVALCOUNTOFF]):
 			self.debugPrint(
 				title_="intervalCountOff",
 			)
@@ -1658,7 +1661,7 @@ alphaChannel_ {alphaChannel_}
 		self._DICTIN_[K_INTERVAL_COUNT] = intervalCount_
 		self.updateFromDict()
 
-		if (self._DEBUG_PRINT_DICT_[F_INTERVALCOUNTON]):
+		if (self._DPD_[F_INTERVALCOUNTON]):
 			self.debugPrint(
 				title_="intervalCountOn",
 			)
@@ -1668,38 +1671,13 @@ alphaChannel_ {alphaChannel_}
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._CURRENT_EVENT_, self._CURRENT_VALUES_ = self._MAINFRAME_.Read(timeout=timeout_)
 
-		if (self._DEBUG_PRINT_DICT_[F_QUICKREAD]):
+		if (self._DPD_[F_QUICKREAD]):
 			self.debugPrint(
 				title_="quickRead",
 				message_=f"""set:
 _CURRENT_EVENT_ {self._CURRENT_EVENT_}
 _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 			)
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
-	def readToDict(self, dictToReadTo_=None, setLocalDict_=True):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		_dictToRtn_ = {}
-		if dictToReadTo_ is None:
-			dictToReadTo_ = self._DICTOUT_
-
-		for _key_ in dictToReadTo_:
-			_dictToRtn_[_key_] = self._MAINFRAME_[_key_]
-
-			if (setLocalDict_ is True):
-				self._DICTOUT_[_key_] = _dictToRtn_[_key_]
-
-		if (self._DEBUG_PRINT_DICT_[F_READTODICT]):
-			self.debugPrint(
-				title_="readToDict",
-				printDictinS_=True,
-				message_=f"""
-dictToReadTo_ {dictToReadTo_}
-setLocalDict_ {setLocalDict_}
-_DICTOUT_ {_DICTOUT_}""",
-			)
-
-		return _dictToRtn_
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def runaway(self):
@@ -1729,7 +1707,7 @@ _DICTOUT_ {_DICTOUT_}""",
 
 		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
 
-		if (self._DEBUG_PRINT_DICT_[F_RUNAWAY] is True):
+		if (self._DPD_[F_RUNAWAY] is True):
 			self.debugPrint(
 				title_="runaway",
 				message_=f"""
@@ -1744,13 +1722,10 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def setCheckbox(self, checkboxKey_, checkboxValue_=None):
-		global \
-			APPDS_MAIN
-		# return
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 
 			# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-		if (self._DEBUG_PRINT_DICT_[F_SETCHECKBOX] is True):
+		if (self._DPD_[F_SETCHECKBOX] is True):
 					print(f"""{CF.NEWLINE}start of setCheckbox
 	checkboxKey_ {checkboxKey_}  checkboxValue_ {checkboxValue_}""")
 		# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
@@ -1763,7 +1738,7 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 			if (checkboxValue_ is True):
 
 					# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-				if (self._DEBUG_PRINT_DICT_[F_SETCHECKBOX] is True):
+				if (self._DPD_[F_SETCHECKBOX] is True):
 					print("K_CHECKBOX_ALPHA_DIM was set True")
 				# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
@@ -1776,7 +1751,7 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 			elif (checkboxValue_ is False):
 
 					# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-				if (self._DEBUG_PRINT_DICT_[F_SETCHECKBOX] is True):
+				if (self._DPD_[F_SETCHECKBOX] is True):
 					print("K_CHECKBOX_ALPHA_DIM was set False")
 				# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
@@ -1791,7 +1766,7 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 				_newValue_ = not _currentValue_
 
 					# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-				if (self._DEBUG_PRINT_DICT_[F_SETCHECKBOX] is False):
+				if (self._DPD_[F_SETCHECKBOX] is False):
 					print("""K_CHECKBOX_ALPHA_DIM was {_currentValue_}
 	it will be set {_newValue_}""")
 				# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
@@ -1805,7 +1780,7 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 			# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-		if (self._DEBUG_PRINT_DICT_[F_SETCHECKBOX] is True):
+		if (self._DPD_[F_SETCHECKBOX] is True):
 			self.debugPrint(
 				title_="end of setCheckbox",
 				printDictinS_=True,
@@ -1819,7 +1794,7 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 		if dictToUpdateFrom_ is not None:
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (self._DEBUG_PRINT_DICT_[F_UPDATEFROMDICT] is True):
+			if (self._DPD_[F_UPDATEFROMDICT] is True):
 				print(f"""not default updateFromDict before
 dictToUpdateFrom_ {self.dictinRepl(dictToUpdateFrom_)}
 _DICTIN_ {self.dictinRepl()}
@@ -1844,7 +1819,7 @@ _DICTIN_ {self.dictinRepl()}
 
 		__dummy__ = self.quickRead()
 
-		if (self._DEBUG_PRINT_DICT_[F_UPDATEFROMDICT]):
+		if (self._DPD_[F_UPDATEFROMDICT]):
 			self.debugPrint(
 				title_="updateFromDict",
 				printDictinS_=True,
@@ -1873,7 +1848,7 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 
 		self.updateFromDict()
 
-		if (self._DEBUG_PRINT_DICT_[F_UPDATE] is True):
+		if (self._DPD_[F_UPDATE] is True):
 			self.debugPrint(
 				title_="update",
 				printDictinS_=True,
