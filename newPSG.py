@@ -469,8 +469,30 @@ ALERTING_LIST = [  # list that holds all currently alarming events
 ]
 
 
-APPDS_TIMES_LIST = [  # list of times to be updated at midnight
+ALL_TIMES_LIST = [  # list of all times
+	K_TIME_AT_LAST_RUN,  # list of all times K_TIME_AT_LAST_RUN
+	K_TIME_AT_NEXT_ALERT,  # list of all times K_TIME_AT_NEXT_ALERT
+	K_TIME_AT_ZEROELAPSE,  # list of all times K_TIME_AT_ZEROELAPSE
+	K_TIME_CLOCK,  # list of all times K_TIME_CLOCK
+	K_TIME_ELAPSED,  # list of all times K_TIME_ELAPSED
+	K_TIME_INTERVAL,  # list of all times K_TIME_INTERVAL
+	K_TIME_INTERVAL_START,  # list of all times K_TIME_INTERVAL_START
+	K_TIME_INTERVAL__BEGIN,  # list of all times K_TIME_INTERVAL__BEGIN
+	K_TIME_INTERVAL__END,  # list of all times K_TIME_INTERVAL__END
+	K_TIME_LEN_OF_ALERT,  # list of all times K_TIME_LEN_OF_ALERT
+	K_TIME_TOGO,  # list of all times K_TIME_TOGO
+	K_TIME_TO_CHECK_MOUSE,  # list of all times K_TIME_TO_CHECK_MOUSE
+	K_TIME_TO_MOVE,  # list of all times K_TIME_TO_MOVE
+	K_TIME_TO_UPDATE,  # list of all times K_TIME_TO_UPDATE
+	k_TIME_ALARM,  # list of all times k_TIME_ALARM
+]
+
+
+APPDS_MIDNIGHT_FIX_TIMES_LIST = [  # list of times to be updated at midnight
 	K_TIME_AT_NEXT_ALERT,  # list of times to be updated at midnight
+	K_TIME_TO_CHECK_MOUSE,  # list of times to be updated at midnight
+	K_TIME_TO_MOVE,  # list of times to be updated at midnight
+	K_TIME_TO_UPDATE,  # list of times to be updated at midnight
 ]
 
 
