@@ -1283,6 +1283,7 @@ TBGLST = [
 	("PSGVAL_F_DOSTARTUP", FMAXPSG_SCTN0900_KEY_DEF, "F_DOSTARTUP", "FKEY entry doStartup",),
 	("PSGVAL_F_OUTERLOOP", FMAXPSG_SCTN0900_KEY_DEF, "F_OUTERLOOP", "FKEY entry outerLoop",),
 	("PSGVAL_F_DOIT", FMAXPSG_SCTN0900_KEY_DEF, "F_DOIT", "FKEY entry doit",),
+	("PSGVAL_F___INIT__", FMAXPSG_SCTN0900_KEY_DEF, "F___INIT__", "FKEY entry doit",),
 
 	("PSGVAL_DPD_ROOT00", FMAXPSG_SCTN0902_DICT_DEF, "DPD_ROOT", "DPD_ROOT defined",),
 	("PSGVAL_DPD_ROOT01", FMAXPSG_SCTN0902_DICT_VV_ADD, "DPD_ROOT", "F_GETMOUSEPOS", "False", "DPD_ROOT entry getMousePos",),
@@ -1363,6 +1364,7 @@ TBGLST = [
 	("PSGVAL_KEY_DICT_KEYS_INT", FMAXPSG_SCTN0900_KEY_DEF, "K_DICT_KEYS_INT", "",),
 	("PSGVAL_KEY_DICT_KEYS_TIME", FMAXPSG_SCTN0900_KEY_DEF, "K_DICT_KEYS_TIME", "",),
 	("PSGVAL_KEY_DISMISSED", FMAXPSG_SCTN0900_KEY_DEF, "K_DISMISSED", "alarm dismissed bool",),
+	("PSGVAL_KEY_DPD", FMAXPSG_SCTN0900_KEY_DEF, "K_DPD", "alarm dismissed bool",),
 	("PSGVAL_KEY_ENABLED", FMAXPSG_SCTN0900_KEY_DEF, "K_ENABLED", "",),
 	("PSGVAL_KEY_EVENTMODE", FMAXPSG_SCTN0900_KEY_DEF, "K_EVENTMODE", "what mode is this event",),
 	("PSGVAL_KEY_EVENTMODE_ALARM", FMAXPSG_SCTN0900_KEY_DEF, "EVENTMODE_ALARM", "",),
@@ -4898,7 +4900,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT:
 				FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisElementName_[1:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K{_thisElementName_[:-1]}: self.{_thisElementName_},  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			thisValStr_ = f"""{_thisElementName_}{CPAREN}{CBRCE}{TRIQT}"""
@@ -4908,8 +4910,8 @@ def parseTBGLST(FDTBGLST):
 			if _thisElementName_ not in FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_]:
 				FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
-			FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}{_thisElementName_}{CBRKT} = {_thisElementName_}{NEWLINE}"""
-			FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_REVERSE_{OBRKT}{_thisElementName_}{CBRKT} = {_thisElementName_}{NEWLINE}"""
+			FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}K{_thisElementName_[:-1]}{CBRKT} = K{_thisElementName_[:-1]}{NEWLINE}"""
+			FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_REVERSE_{OBRKT}K{_thisElementName_[:-1]}{CBRKT} = K{_thisElementName_[:-1]}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5254,7 +5256,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT:
 				FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisDictName_[1:-1]}: self.{_thisDictName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K{_thisDictName_[:-1]}: self.{_thisDictName_},  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
 
 			continue
@@ -5355,7 +5357,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT:
 				FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K_{_thisDictName_[1:-1]}: self.{_thisDictName_},  # {_thisComment_}{NEWLINE}""")
+			FMPSG_SCTN09FF_CLASS_CDS_DICT[_thisClassName_].append(f"""{NTAB(3)}K{_thisDictName_[:-1]}: self.{_thisDictName_},  # {_thisComment_}{NEWLINE}""")
 			FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
 
 			continue

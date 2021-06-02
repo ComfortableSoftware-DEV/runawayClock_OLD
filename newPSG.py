@@ -66,6 +66,7 @@ EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
 F___ENTER__ = "F___ENTER__"  # define __enter__
 F___EXIT__ = "F___EXIT__"  # define __exit__ in CLOCKS
+F___INIT__ = "F___INIT__"  # FKEY entry doit
 F_CHECKMOUSE = "F_CHECKMOUSE"  # define checkMouse
 F_COMPAREBBOX = "F_COMPAREBBOX"  # FKEY entry compareBBox
 F_COMPAREXY = "F_COMPAREXY"  # FKEY entry compareXY
@@ -161,6 +162,7 @@ K_DICTIN = "K_DICTIN"  #
 K_DICTINSTR = "K_DICTINSTR"  # 
 K_DICTOUT = "K_DICTOUT"  # 
 K_DISMISSED = "K_DISMISSED"  # alarm dismissed bool
+K_DPD = "K_DPD"  # alarm dismissed bool
 K_ENABLED = "K_ENABLED"  # 
 K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  # 
 K_EVENT_NAME = "K_EVENT_NAME"  # name of the event
@@ -975,8 +977,8 @@ class CLASS_CLOCKS(object):
 			**CHECKBOX_ALPHA_DIM01,  # all the paramaters all we need
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_DICT_[_CHECKBOX_ALPHADIM_] = _CHECKBOX_ALPHADIM_
-		self._KEY_DICT_REVERSE_[_CHECKBOX_ALPHADIM_] = _CHECKBOX_ALPHADIM_
+		self._KEY_DICT_[K_CHECKBOX_ALPHADIM] = K_CHECKBOX_ALPHADIM
+		self._KEY_DICT_REVERSE_[K_CHECKBOX_ALPHADIM] = K_CHECKBOX_ALPHADIM
 
 		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
