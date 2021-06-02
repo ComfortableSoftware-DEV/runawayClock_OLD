@@ -117,6 +117,7 @@ K_BTN_ZERO = "K_BTN_ZERO"  #
 K_CHANGED_EVENTS = "K_CHANGED_EVENTS"  # 
 K_CHANGED_VALUES = "K_CHANGED_VALUES"  # 
 K_CHECKBOX_ALPHA_DIM = "K_CHECKBOX_ALPHA_DIM"  # is the clock transparent under mouse (ineffective if mouse is avoided)
+K_CHECKBOX_ALPHADIM = "K_CHECKBOX_ALPHADIM"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 K_CHECKBOX_DISMISSED = "K_CHECKBOX_DISMISSED"  # key for avoiding the mouse bool
 K_CHECKBOX_ENABLED = "K_CHECKBOX_ENABLED"  # key for avoiding the mouse bool
 K_CHECKBOX_FIRSTRUN = "K_CHECKBOX_FIRSTRUN"  # key for avoiding the mouse bool
@@ -970,8 +971,8 @@ class CLASS_CLOCKS(object):
 			**CHECKBOX_ALPHA_DIM01,  # all the paramaters all we need
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_DICT_[K_CHECKBOX_SNOOZED] = K_CHECKBOX_SNOOZED)}
-		self._KEY_DICT_REVERSE_[K_CHECKBOX_SNOOZED)}] = K_CHECKBOX_SNOOZED
+		self._KEY_DICT_[K_CHECKBOX_SNOOZED] = K_CHECKBOX_SNOOZED
+		self._KEY_DICT_REVERSE_[K_CHECKBOX_SNOOZED] = K_CHECKBOX_SNOOZED
 
 		self._TEXT_INTERVAL_COUNT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
