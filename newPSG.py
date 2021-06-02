@@ -31,6 +31,8 @@ gc.enable()
 # * def doStartup():
 # * def outerLoop():
 # * def doit():
+
+#
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -85,6 +87,7 @@ F_FIXTIMEATNEXT = "F_FIXTIMEATNEXT"  # FKEY entry fixTimeAtNext
 F_GETBBOX = "F_GETBBOX"  # FKEY entry getBBox
 F_GETCLOSEBBOX = "F_GETCLOSEBBOX"  # FKEY entry getCloseBBox
 F_GETMOUSEPOS = "F_GETMOUSEPOS"  # FKEY entry getMousePos
+F_INNERLOOP = "F_INNERLOOP"  # FKEY entry doit
 F_INTERVALCOUNTOFF = "F_INTERVALCOUNTOFF"  # turn interval count off
 F_INTERVALCOUNTON = "F_INTERVALCOUNTON"  # turn interval count on
 F_ISINBBOX = "F_ISINBBOX"  # FKEY entry isInBBox
@@ -449,6 +452,7 @@ DPD_ROOT = {  # DPD_ROOT defined
 	F_GETBBOX: False,  # DPD_ROOT entry getBBox
 	F_GETCLOSEBBOX: False,  # DPD_ROOT entry getCloseBBox
 	F_GETMOUSEPOS: False,  # DPD_ROOT entry getMousePos
+	F_INNERLOOP: False,  # DPD_ROOT entry outerLoop
 	F_ISINBBOX: False,  # DPD_ROOT entry isInBBox
 	F_LOCALTIMES: False,  # DPD_ROOT entry localTimes
 	F_OUTERLOOP: False,  # DPD_ROOT entry outerLoop

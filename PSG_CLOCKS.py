@@ -31,6 +31,8 @@ gc.enable()
 # * def doStartup():
 # * def outerLoop():
 # * def doit():
+
+#
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -85,6 +87,7 @@ F_FIXTIMEATNEXT = "F_FIXTIMEATNEXT"  # FKEY entry fixTimeAtNext
 F_GETBBOX = "F_GETBBOX"  # FKEY entry getBBox
 F_GETCLOSEBBOX = "F_GETCLOSEBBOX"  # FKEY entry getCloseBBox
 F_GETMOUSEPOS = "F_GETMOUSEPOS"  # FKEY entry getMousePos
+F_INNERLOOP = "F_INNERLOOP"  # FKEY entry doit
 F_INTERVALCOUNTOFF = "F_INTERVALCOUNTOFF"  # turn interval count off
 F_INTERVALCOUNTON = "F_INTERVALCOUNTON"  # turn interval count on
 F_ISINBBOX = "F_ISINBBOX"  # FKEY entry isInBBox
@@ -449,6 +452,7 @@ DPD_ROOT = {  # DPD_ROOT defined
 	F_GETBBOX: False,  # DPD_ROOT entry getBBox
 	F_GETCLOSEBBOX: False,  # DPD_ROOT entry getCloseBBox
 	F_GETMOUSEPOS: False,  # DPD_ROOT entry getMousePos
+	F_INNERLOOP: False,  # DPD_ROOT entry outerLoop
 	F_ISINBBOX: False,  # DPD_ROOT entry isInBBox
 	F_LOCALTIMES: False,  # DPD_ROOT entry localTimes
 	F_OUTERLOOP: False,  # DPD_ROOT entry outerLoop
@@ -1924,6 +1928,19 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# appdsRepl
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def appdsRepl(dictIn_=APPDS_MAIN):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	_dictToRtn_ = {}
+	for _thisKey_, _thisVal_ in dictIn_.items():
+		if (isinstance(_thisVal_, dict) is False):
+			if (_thisKey_ in )
+			_dictToRtn_[_thisKey_] = dictIn_[_thisKey_]
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # getMousePos
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*def mousepos():
 def getMousePos():
@@ -2308,7 +2325,8 @@ _values_ {_values_}""")
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if (_window_ == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_):
-				doFrameClocks(_values_)
+				if (_values_ != _oldValues_):
+					APPDS_MAIN.update(_values_)
 
 				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
 			elif (_window_ == ALL_THE_FRAMES[FRAME_THECLOCK]._MAINFRAME_):
