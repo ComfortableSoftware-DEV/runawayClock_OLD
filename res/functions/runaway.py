@@ -25,7 +25,7 @@
 
 		self._MAINFRAME_.Move(_moveToX_, _moveToY_)
 
-		if (self._DEBUG_PRINT_DICT_[F_RUNAWAY] is True):
+		if (self._DPD_[F_RUNAWAY] is True):
 			self.debugPrint(
 				title_="runaway",
 				message_=f"""

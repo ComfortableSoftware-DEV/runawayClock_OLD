@@ -4,7 +4,7 @@
 		self._DICTIN_[K_INTERVAL_COUNT] = 0
 		self.updateFromDict()
 
-		if (self._DEBUG_PRINT_DICT_[F_INTERVALCOUNTOFF]):
+		if (self._DPD_[F_INTERVALCOUNTOFF]):
 			self.debugPrint(
 				title_="intervalCountOff",
 			)

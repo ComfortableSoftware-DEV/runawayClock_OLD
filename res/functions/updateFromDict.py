@@ -5,7 +5,7 @@
 		if dictToUpdateFrom_ is not None:
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (self._DEBUG_PRINT_DICT_[F_UPDATEFROMDICT] is True):
+			if (self._DPD_[F_UPDATEFROMDICT] is True):
 				print(f"""not default updateFromDict before
 dictToUpdateFrom_ {self.dictinRepl(dictToUpdateFrom_)}
 _DICTIN_ {self.dictinRepl()}
@@ -30,7 +30,7 @@ _DICTIN_ {self.dictinRepl()}
 
 		__dummy__ = self.quickRead()
 
-		if (self._DEBUG_PRINT_DICT_[F_UPDATEFROMDICT]):
+		if (self._DPD_[F_UPDATEFROMDICT]):
 			self.debugPrint(
 				title_="updateFromDict",
 				printDictinS_=True,

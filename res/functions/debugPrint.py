@@ -25,6 +25,6 @@
 		_strToPrint_ += f"""{CF.NEWLINE}"""
 		print(_strToPrint_)
 
-		if (self._DEBUG_PRINT_DICT_[F_DEBUGPRINT] is True):
+		if (self._DPD_[F_DEBUGPRINT] is True):
 			print("debugPrinting myself feels weird, redundant, and recursive enough to crash")
 		# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1

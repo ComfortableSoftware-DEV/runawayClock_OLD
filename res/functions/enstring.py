@@ -12,7 +12,7 @@
 			else:
 				self._DICTINSTR_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
 
-		if (self._DEBUG_PRINT_DICT_[F_ENSTRING]):
+		if (self._DPD_[F_ENSTRING]):
 			self.debugPrint(
 				printDictinS_=True,
 				title_="enstring",

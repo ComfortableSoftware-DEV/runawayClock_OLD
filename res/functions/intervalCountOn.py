@@ -7,7 +7,7 @@
 		self._DICTIN_[K_INTERVAL_COUNT] = intervalCount_
 		self.updateFromDict()
 
-		if (self._DEBUG_PRINT_DICT_[F_INTERVALCOUNTON]):
+		if (self._DPD_[F_INTERVALCOUNTON]):
 			self.debugPrint(
 				title_="intervalCountOn",
 			)

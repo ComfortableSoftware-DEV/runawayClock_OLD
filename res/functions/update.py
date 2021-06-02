@@ -17,7 +17,7 @@
 
 		self.updateFromDict()
 
-		if (self._DEBUG_PRINT_DICT_[F_UPDATE] is True):
+		if (self._DPD_[F_UPDATE] is True):
 			self.debugPrint(
 				title_="update",
 				printDictinS_=True,

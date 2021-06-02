@@ -66,7 +66,7 @@ EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
 F___ENTER__ = "F___ENTER__"  # define __enter__
 F___EXIT__ = "F___EXIT__"  # define __exit__ in CLOCKS
-F___INIT__ = "F___INIT__"  # FKEY entry doit
+F___INIT__ = "F___INIT__"  # define a DPD /
 F_CHECKMOUSE = "F_CHECKMOUSE"  # define checkMouse
 F_COMPAREBBOX = "F_COMPAREBBOX"  # FKEY entry compareBBox
 F_COMPAREXY = "F_COMPAREXY"  # FKEY entry compareXY
@@ -941,6 +941,7 @@ class CLASS_CLOCKS(object):
 
 		self._DPD_ = {  # define a DPD /
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			F___INIT__: True,  # define a DPD /
 			F___ENTER__: False,  # define __enter__
 			F___EXIT__: False,  # define __exit__ in CLOCKS
 			F_CHECKMOUSE: False,  # define checkMouse

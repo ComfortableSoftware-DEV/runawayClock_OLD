@@ -10,7 +10,7 @@
 			if (setLocalDict_ is True):
 				self._DICTOUT_[_key_] = _dictToRtn_[_key_]
 
-		if (self._DEBUG_PRINT_DICT_[F_READTODICT]):
+		if (self._DPD_[F_READTODICT]):
 			self.debugPrint(
 				title_="readToDict",
 				printDictinS_=True,
