@@ -9,8 +9,9 @@
 		self._MAINFRAME_[self._KEY_DICT_[checkboxKey_]].update(
 			value=checkboxValue_,
 		)
-		self._DICTIN_[checkboxKey_] = checkboxValue_
+		# self._VALUES_[checkboxKey_] = checkboxValue_
 		APPDS_MAIN[checkboxKey_] = checkboxValue_
+		self._DICTIN_[checkboxKey_] = checkboxValue_
 
 			# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 		if (self._DPD_[F_SETCHECKBOX] is True):

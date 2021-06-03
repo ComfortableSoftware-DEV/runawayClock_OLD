@@ -137,7 +137,6 @@ K_BTN_ZERO = "K_BTN_ZERO"  #
 K_CHANGED_EVENTS = "K_CHANGED_EVENTS"  # 
 K_CHANGED_VALUES = "K_CHANGED_VALUES"  # 
 K_CHECKBOX_ALPHA_DIM = "K_CHECKBOX_ALPHA_DIM"  # is the clock transparent under mouse (ineffective if mouse is avoided)
-K_CHECKBOX_ALPHADIM = "K_CHECKBOX_ALPHADIM"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 K_CHECKBOX_DISMISSED = "K_CHECKBOX_DISMISSED"  # key for avoiding the mouse bool
 K_CHECKBOX_ENABLED = "K_CHECKBOX_ENABLED"  # key for avoiding the mouse bool
 K_CHECKBOX_FIRSTRUN = "K_CHECKBOX_FIRSTRUN"  # key for avoiding the mouse bool
@@ -1755,8 +1754,9 @@ _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX
 		self._MAINFRAME_[self._KEY_DICT_[checkboxKey_]].update(
 			value=checkboxValue_,
 		)
-		self._DICTIN_[checkboxKey_] = checkboxValue_
+		# self._VALUES_[checkboxKey_] = checkboxValue_
 		APPDS_MAIN[checkboxKey_] = checkboxValue_
+		self._DICTIN_[checkboxKey_] = checkboxValue_
 
 			# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 		if (self._DPD_[F_SETCHECKBOX] is True):
