@@ -6,7 +6,7 @@
 		self._TIME_TO_MOVE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
 		_screenSZX_, _screenSZY_ = self._SCREEN_DIMS_
 		_sizeX_, _sizeY_ = self._SIZE_
-		_lcnX_, _lcnY_ = self._LOCATION_
+		_lcnX_, _lcnY_ = self._CURRENT_LOCATION_
 		_moveToX_ = _lcnX_ + (self._MPX_[INDEX_X] * SZ_MOVE_DIST)
 		_moveToY_ = _lcnY_ + (self._MPX_[INDEX_Y] * SZ_MOVE_DIST)
 
@@ -32,7 +32,7 @@
 self._TIME_TO_MOVE_ {self._TIME_TO_MOVE_} = NOWMS {NOWMS} + SZ_TIMEMS_BETWEEN_MOVES {SZ_TIMEMS_BETWEEN_MOVES}
 _screenSZX_ {_screenSZX_}, _screenSZY_ {_screenSZY_} = self._SCREEN_DIMS_
 _sizeX_ {_sizeX_}, _sizeY_ {_sizeY_} = self._SIZE_
-_lcnX_ {_lcnX_}, _lcnY_ {_lcnY_} = self._LOCATION_
+_lcnX_ {_lcnX_}, _lcnY_ {_lcnY_} = self._CURRENT_LOCATION_
 _moveToX_ {_moveToX_} = _lcnX_ {_lcnX_} + (self._MPX_[INDEX_X] {self._MPX_[INDEX_X]} * SZ_MOVE_DIST {SZ_MOVE_DIST})
 _moveToY_ {_moveToY_} = _lcnY_ {_lcnY_} + (self._MPX_[INDEX_Y] {self._MPX_[INDEX_Y]} * SZ_MOVE_DIST {SZ_MOVE_DIST})
 """
