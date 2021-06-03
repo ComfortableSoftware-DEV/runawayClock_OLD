@@ -913,7 +913,6 @@ class CLASS_CLOCKS(object):
 		self._BBOX_ = EMPTY_BBOX  #
 		self._CHANGED_EVENTS_ = False  # comment
 		self._CHANGED_VALUES_ = False  # comment
-		self._CHECKBOX_RUNAWAY_ = SZ_RUNAWAY  #
 		self._CLOSE_BBOX_ = EMPTY_BBOX  #
 		self._CURRENTLY_DIMMED_ = False  #
 		self._CURRENT_EVENTMODE_ = None  #
@@ -989,7 +988,7 @@ class CLASS_CLOCKS(object):
 			F___INIT__: True,  # define a DPD /
 			F___ENTER__: False,  # define __enter__
 			F___EXIT__: False,  # define __exit__ in CLOCKS
-			F_CHECKMOUSE: False,  # define checkMouse
+			F_CHECKMOUSE: True,  # define checkMouse
 			F_DEBUGPRINT: False,  # read the frame and set self._RESULT_
 			F_DICTINSTRREPL: False,  # define runaway
 			F_DICTINREPL: False,  # define runaway
@@ -1196,7 +1195,6 @@ class CLASS_CLOCKS(object):
 			K_BBOX: self._BBOX_,
 			K_CHANGED_EVENTS: self._CHANGED_EVENTS_,
 			K_CHANGED_VALUES: self._CHANGED_VALUES_,
-			K_CHECKBOX_RUNAWAY: self._CHECKBOX_RUNAWAY_,
 			K_CLOSE_BBOX: self._CLOSE_BBOX_,
 			K_CURRENTLY_DIMMED: self._CURRENTLY_DIMMED_,
 			K_CURRENT_EVENTMODE: self._CURRENT_EVENTMODE_,
@@ -1364,26 +1362,39 @@ APPDS_MAIN {APPDS_MAIN}
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (self._DPD_[F_CHECKMOUSE] == 99):
+			self.debugPrint(
+				title_="checkMouse",
+				printDictinS_=True,
+				message_=f"""returning:
+_LAST_MOUSE_STATUS_ {self._LAST_MOUSE_STATUS_} = _statusToRtn_ {_statusToRtn_}
+_CURRENT_MOUSE_STATUS_ {self._CURRENT_MOUSE_STATUS_} = {_statusToRtn_}
+_MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
+			)
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (self._DPD_[F_CHECKMOUSE] is True):
+			print(f"""_statusToRtn_ {_statusToRtn_} _LAST_MOUSE_STATUS_ {self._LAST_MOUSE_STATUS_} _DICTIN_[K_CHECKBOX_ALPHA_DIM] {self._DICTIN_[K_CHECKBOX_ALPHA_DIM]}""")
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (_statusToRtn_ == MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ != MOUSE_STATUS_OVER) and (self._DICTIN_[K_CHECKBOX_ALPHA_DIM] is True):
 			self._MAINFRAME_.AlphaChannel = self._ALPHA_LOW_
 			self._DIMMED_ = True
 
+			if (self._DPD_[F_CHECKMOUSE] is True):
+				print(f"""mouseOver alpha dimming""")
 
 			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER)) or \
 				((self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER) and (self._DIMMED_ is True) and (self._DICTIN_[K_CHECKBOX_ALPHA_DIM] is False)):
 			self._MAINFRAME_.AlphaChannel = self._ALPHA_HIGH_
 			self._DIMMED_ = False
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		if (self._DPD_[F_CHECKMOUSE] is True):
-			self.debugPrint(
-				title_="checkMouse",
-				message_=f"""returning:
-_LAST_MOUSE_STATUS_ {self._LAST_MOUSE_STATUS_} = _statusToRtn_ {_statusToRtn_}
-_CURRENT_MOUSE_STATUS_ {self._CURRENT_MOUSE_STATUS_} = {_statusToRtn_}
-_MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
-			)
+			if (self._DPD_[F_CHECKMOUSE] is True):
+				print(f"""mouseOver alpha **NOT** dimming""")
+
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		self._LAST_MOUSE_STATUS_ = _statusToRtn_
 		self._MOUSE_STATUS_ = _statusToRtn_
@@ -1830,7 +1841,7 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 		self._DICTIN_[K_TIME_ELAPSED] = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE])
 		self.checkMouse()
 
-		if (self._CHECKBOX_RUNAWAY_ is True):
+		if (self._DICTIN_[K_CHECKBOX_ALPHA_DIM] is True):
 			self.runaway()
 
 		self.updateFromDict()
@@ -2234,7 +2245,7 @@ def doStartup():
 		APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	for _index_ in APPDS_MAIN[K_EVENT_ENTRIES]:
-		_tempDS_ = APPDS_MAIN[K_EVENT_ENTRIES][_index_]
+		_tempDS_ = CF.quickCopyDict(APPDS_MAIN[K_EVENT_ENTRIES][_index_])
 		_tempDS_[K_ALARMPOPUP_PROPER] = None
 		_tempDS_[K_DISMISSED] = False
 		_tempDS_[K_FIRSTRUN] = True
@@ -2244,7 +2255,7 @@ def doStartup():
 		_tempDS_[K_TIME_AT_LAST_RUN] = 0
 		_tempDS_[K_TIME_INTERVAL_START] = 0
 		_tempDS_[K_TIME_AT_ZEROELAPSE] = NOWS
-		APPDS_MAIN[K_EVENT_ENTRIES][_index_] = _tempDS_
+		APPDS_MAIN[K_EVENT_ENTRIES][_index_] = CF.quickCopyDict(_tempDS_)
 
 	if (ALL_THE_FRAMES[FRAME_CLOCKS] is not None):
 		ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
@@ -2252,6 +2263,8 @@ def doStartup():
 			checkboxRunaway_=APPDS_MAIN[K_CHECKBOX_RUNAWAY],
 			timeAtZeroelapse_=NOWS,
 		)
+		ALL_THE_FRAMES[FRAME_CLOCKS]._SIZE_
+
 	if (DPD_ROOT[F_DOSTARTUP] is True):
 		print(f"""doStartup
 _tempDS_ {_tempDS_}
