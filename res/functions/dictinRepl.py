@@ -2,14 +2,14 @@
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 
 		if (dictToRtn_ is None):
-			dictToRtn_ = CF.quickCopyDict(self._DICTINSTR_)
+			dictToRtn_ = CF.quickCopyDict(self._DICTIN_)
 
 		if (self._DPD_[F_DICTINREPL] is True):
 			self.debugPrint(
 				printDictinS_=True,
 				title_="dictinRepl",
 				message_=f"""returning:
-{dictToRtn_}"""
+{dictToRtn_}""",
 			)
 
 		return dictToRtn_
