@@ -2500,7 +2500,8 @@ def makePSGClasses():
 		_strToRtn_ += f"""class CLASS_{_thisClassName_}{OPAREN}object{CPAREN}:
 {NTAB(1)}{FOLD1STARTHERE}
 {NTAB(1)}global {BKSLSH}
-{NTAB(2)}ALL_THE_FRAMES{NEWLINE}
+{NTAB(2)}ALL_THE_FRAMES, {BKSLSH}
+{NTAB(2)}APPDS_MAIN{NEWLINE}
 """
 		_strToRtn_ += f"""{NTAB(1)}def __init__{OPAREN}self{FMPSG_SCTN09FF_CLASS_INIT_DICT[_thisClassName_].pop(0)}{CPAREN}:{NEWLINE}{NTAB(2)}{FOLD2STARTHERELN}"""
 
