@@ -996,8 +996,8 @@ class CLASS_CLOCKS(object):
 			F_DICTINREPL: False,  # define runaway
 			F_EASYUPDATE: False,  # load the whole thing from the file for easyUpdate
 			F_EASYUPDATEPARMS: False,  # load the whole thing from the file for easyUpdate
-			F_ENINT: False,  # read the frame and set self._RESULT_
-			F_ENSTRING: False,  # read the frame and set self._RESULT_
+			F_ENINT: True,  # read the frame and set self._RESULT_
+			F_ENSTRING: True,  # read the frame and set self._RESULT_
 			F_INTERVALCOUNTOFF: False,  # turn interval count off
 			F_INTERVALCOUNTON: False,  # turn interval count on
 			F_QUICKREAD: False,  # read the frame and set self._RESULT_
