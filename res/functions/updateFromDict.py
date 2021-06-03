@@ -21,6 +21,7 @@ _DICTIN_ {self.dictinRepl()}
 		self.enstring()
 		dictToUpdateFrom_ = self._DICTINSTR_
 
+
 		if (K_CHECKBOX_ALPHA_DIM in dictToUpdateFrom_):
 			__dummy__ = dictToUpdateFrom_.pop(K_CHECKBOX_ALPHA_DIM)
 
