@@ -120,8 +120,8 @@ INDEX_X = 0  # X
 INDEX_Y = 1  # Y
 K_ALARMPOPUP_PROPER = "K_ALARMPOPUP_PROPER"  # key for the button return for the popup
 K_ALARMPOPUP_TEXT_TEXT = "K_ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
-K_ALPHA_CHANNEL = "K_ALPHA_CHANNEL"  # alpha channel key
-K_ALPHA_HIGH = "K_ALPHA_HIGH"  # alphahigh key
+K_ALPHA_CHANNEL = "K_ALPHA_CHANNEL"  # 
+K_ALPHA_HIGH = "K_ALPHA_HIGH"  # 
 K_ALPHA_LOW = "K_ALPHA_LOW"  # 
 K_APPMODE = "K_APPMODE"  # app mode key
 K_AUTO_CLOSE_DURATION = "K_AUTO_CLOSE_DURATION"  # 
@@ -134,8 +134,11 @@ K_BTN_QUIT_EDITOR = "K_BTN_QUIT_EDITOR"  #
 K_BTN_UP = "K_BTN_UP"  # 
 K_BTN_XPAND = "K_BTN_XPAND"  # 
 K_BTN_ZERO = "K_BTN_ZERO"  # 
+K_CHANGED_EVENT = "K_CHANGED_EVENT"  # comment
 K_CHANGED_EVENTS = "K_CHANGED_EVENTS"  # 
-K_CHANGED_VALUES = "K_CHANGED_VALUES"  # 
+K_CHANGED_LOCATION = "K_CHANGED_LOCATION"  # comment
+K_CHANGED_MOUSE_LOCATION = "K_CHANGED_MOUSE_LOCATION"  # comment
+K_CHANGED_VALUES = "K_CHANGED_VALUES"  # comment
 K_CHECKBOX_ALPHA_DIM = "K_CHECKBOX_ALPHA_DIM"  # is the clock transparent under mouse (ineffective if mouse is avoided)
 K_CHECKBOX_DISMISSED = "K_CHECKBOX_DISMISSED"  # key for avoiding the mouse bool
 K_CHECKBOX_ENABLED = "K_CHECKBOX_ENABLED"  # key for avoiding the mouse bool
@@ -184,7 +187,7 @@ K_LAST_MOUSE_STATUS = "K_LAST_MOUSE_STATUS"  #
 K_LAST_VALUES = "K_LAST_VALUES"  # 
 K_LAYOUT = "K_LAYOUT"  # 
 K_MAINFRAME = "K_MAINFRAME"  # 
-K_MPX = "K_MPX"  # 
+K_MPX = "K_MPX"  # comment
 K_NAME = "K_NAME"  # 
 K_NAME_NEXT_EVENT = "K_NAME_NEXT_EVENT"  # name of the next event up
 K_PERIODIC = "K_PERIODIC"  # 
@@ -200,8 +203,8 @@ K_TEXT_TIME_AT_ZEROELAPSE = "K_TEXT_TIME_AT_ZEROELAPSE"  #
 K_TEXT_TIME_CLOCK = "K_TEXT_TIME_CLOCK"  # 
 K_TEXT_TIME_ELAPSED = "K_TEXT_TIME_ELAPSED"  # 
 K_TEXT_TIME_TOGO = "K_TEXT_TIME_TOGO"  # 
-K_THIS_FORM_NAME = "K_THIS_FORM_NAME"  # 
-K_THIS_KEY_BASE = "K_THIS_KEY_BASE"  # 
+K_THIS_FORM_NAME = "K_THIS_FORM_NAME"  # adopt formName_
+K_THIS_KEY_BASE = "K_THIS_KEY_BASE"  # adopt keyBase_
 K_TIME_ALARM = "K_TIME_ALARM"  # the alarm time
 K_TIME_AT_LAST_RUN = "K_TIME_AT_LAST_RUN"  # timeS of last alarm 
 K_TIME_AT_NEXT_ALERT = "K_TIME_AT_NEXT_ALERT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
@@ -217,7 +220,6 @@ K_TIME_TO_CHECK_MOUSE = "K_TIME_TO_CHECK_MOUSE"  #
 K_TIME_TO_MOVE = "K_TIME_TO_MOVE"  # 
 K_TIME_TO_UPDATE = "K_TIME_TO_UPDATE"  # 
 K_TIME_TOGO = "K_TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
-K_USE_THIS_KEY = "K_USE_THIS_KEY"  # 
 K_VERSION = "K_VERSION"  # True if pkl is to be updated from APPDS_MAIN
 K_WINDOW = "K_WINDOW"  # 
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
@@ -911,7 +913,9 @@ class CLASS_CLOCKS(object):
 		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  # 
 		self._ALPHA_LOW_ = SZ_ALPHA_LOW  # 
 		self._BBOX_ = EMPTY_BBOX  # 
-		self._CHANGED_EVENTS_ = False  # comment
+		self._CHANGED_EVENT_ = False  # comment
+		self._CHANGED_LOCATION_ = False  # comment
+		self._CHANGED_MOUSE_LOCATION_ = False  # comment
 		self._CHANGED_VALUES_ = False  # comment
 		self._CLOSE_BBOX_ = EMPTY_BBOX  # 
 		self._CURRENTLY_DIMMED_ = False  # 
@@ -920,13 +924,7 @@ class CLASS_CLOCKS(object):
 		self._CURRENT_LOCATION_ = EMPTY_XY  # 
 		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  # 
 		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
-		self._CURRENT_RESULT_ = None  # comment
 		self._CURRENT_VALUES = {}  # 
-		self._LAST_EVENT_ = None  # 
-		self._LAST_LOCATION_ = EMPTY_XY  # 
-		self._LAST_MOUSE_LOCATION_ = EMPTY_XY  # 
-		self._LAST_MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
-		self._LAST_VALUES_ = {}  # 
 		self._MAINFRAME_ = None  # 
 		self._MPX_ = EMPTY_XY  # comment
 		self._SCREEN_DIMS_ = EMPTY_XY  # 
@@ -1002,7 +1000,7 @@ class CLASS_CLOCKS(object):
 			F_RUNAWAY: False,  # define runaway
 			F_SETCHECKBOX: False,  # define runaway
 			F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
-			F_UPDATE: False,  # define the required update function
+			F_UPDATE: True,  # define the required update function
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1174,60 +1172,6 @@ class CLASS_CLOCKS(object):
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-		self.__CDS__ = {
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			K_COLUMN01: self._COLUMN01_,  # the column that puts the two smaller clocks below the main one
-			K_COLUMN02: self._COLUMN02_,  # the column that puts the two smaller clocks below the main one
-			K_DICT_KEYS_INT: self._DICT_KEYS_INT_,  # dict of integer keys and their format
-			K_DICT_KEYS_TIME: self._DICT_KEYS_TIME_,  # dict of time keys and their max value int seconds
-			K_DPD: self._DPD_,  # define a DPD CLOCKS:/
-			K_DICTIN: self._DICTIN_,
-			K_DICTINSTR: self._DICTINSTR_,
-			K_THIS_KEY_BASE: self._THIS_KEY_BASE_,
-			K_USE_THIS_KEY: self._USE_THIS_KEY_,
-			K_THIS_FORM_NAME: self._THIS_FORM_NAME_,
-			K_KEY_DICT_REVERSE: self._KEY_DICT_REVERSE_,
-			K_KEY_LIST_TIMES: self._KEY_LIST_TIMES_,
-			K_KEY_DICT: self._KEY_DICT_,
-			K_ALPHA_CHANNEL: self._ALPHA_CHANNEL_,
-			K_ALPHA_HIGH: self._ALPHA_HIGH_,
-			K_ALPHA_LOW: self._ALPHA_LOW_,
-			K_BBOX: self._BBOX_,
-			K_CHANGED_EVENTS: self._CHANGED_EVENTS_,
-			K_CHANGED_VALUES: self._CHANGED_VALUES_,
-			K_CLOSE_BBOX: self._CLOSE_BBOX_,
-			K_CURRENTLY_DIMMED: self._CURRENTLY_DIMMED_,
-			K_CURRENT_EVENTMODE: self._CURRENT_EVENTMODE_,
-			K_CURRENT_EVENT: self._CURRENT_EVENT_,
-			K_CURRENT_LOCATION: self._CURRENT_LOCATION_,
-			K_CURRENT_MOUSE_LOCATION: self._CURRENT_MOUSE_LOCATION_,
-			K_CURRENT_MOUSE_STATUS: self._CURRENT_MOUSE_STATUS_,
-			K_CURRENT_RESULT: self._CURRENT_RESULT_,
-			K_CURRENT_VALUE: self._CURRENT_VALUES,
-			K_LAST_EVENT: self._LAST_EVENT_,
-			K_LAST_LOCATION: self._LAST_LOCATION_,
-			K_LAST_MOUSE_LOCATION: self._LAST_MOUSE_LOCATION_,
-			K_LAST_MOUSE_STATUS: self._LAST_MOUSE_STATUS_,
-			K_LAST_VALUES: self._LAST_VALUES_,
-			K_MAINFRAME: self._MAINFRAME_,
-			K_MPX: self._MPX_,
-			K_SCREEN_DIMS: self._SCREEN_DIMS_,
-			K_SIZE: self._SIZE_,
-			K_TIME_TO_CHECK_MOUSE: self._TIME_TO_CHECK_MOUSE_,
-			K_TIME_TO_MOVE: self._TIME_TO_MOVE_,
-			K_TIME_TO_UPDATE: self._TIME_TO_UPDATE_,
-			K_LAYOUT: self._LAYOUT_,  # layout for APPMODE_CLOCKS
-			K_TEXT_INTERVAL_COUNT: self._TEXT_INTERVAL_COUNT_,  # class text for interval count
-			K_TEXT_NAME_NEXT_EVENT: self._TEXT_NAME_NEXT_EVENT_,  # class text for interval count
-			K_TEXT_TIME_AT_NEXT_ALERT: self._TEXT_TIME_AT_NEXT_ALERT_,  # class text for interval count
-			K_TEXT_TIME_AT_ZEROELAPSE: self._TEXT_TIME_AT_ZEROELAPSE_,  # class text for interval count
-			K_TEXT_TIME_CLOCK: self._TEXT_TIME_CLOCK_,  # class text for interval count
-			K_TEXT_TIME_ELAPSED: self._TEXT_TIME_ELAPSED_,  # class text for interval count
-			K_TEXT_TIME_TOGO: self._TEXT_TIME_TOGO_,  # class text for interval count
-			K_WINDOW: self._WINDOW_,  # define the clocks window
-		}
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
 		if (self._DPD_[F___INIT__] is True):  # see if debug printing is on
 			self.debugPrint(  # debugPrint
 				title_="__INIT__3",  # print _KEY_DICT_REVERSE_
@@ -1243,6 +1187,7 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_ = SG.Window(**self._WINDOW_).finalize()
 		ALL_THE_FRAMES[self._THIS_FORM_NAME_] = self
+		self._SIZE_ = self._MAINFRAME_.Size
 		if (self._DPD_[F___ENTER__]):
 			self.debugPrint(
 				message_=f"""enter CLOCKS {self._THIS_FORM_NAME_}""",
@@ -1285,6 +1230,17 @@ APPDS_MAIN {APPDS_MAIN}
 		_TLcn_ = self._LOCATION_
 		_TSizeX_, _TSizeY_ = _TSize_ = self._SIZE_
 		_TMouseLcnX_, _TMouseLcnY_ = _TMouseLcn_ = getMousePos()
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_TMouseLcn_ != self._CURRENT_MOUSE_LOCATION_):
+			self._CHANGED_MOUSE_LOCATION_ = True
+			self._CURRENT_MOUSE_LOCATION_ = _TMouseLcn_
+			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		else:
+			self._CHANGED_MOUSE_LOCATION_ = False
+
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
 		_TBBoxWest_, _TBBoxNorth_, _TBBoxEast_, _TBBoxSouth_ = _TBBox_ = self._BBOX_
 		_TCloseBBox_ = self._CLOSE_BBOX_
 		_isInCloseBBox_ = isInBBox(_TCloseBBox_, _TMouseLcn_)
@@ -1378,7 +1334,7 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			print(f"""_statusToRtn_ {_statusToRtn_} _LAST_MOUSE_STATUS_ {self._LAST_MOUSE_STATUS_} _DICTIN_[K_CHECKBOX_ALPHA_DIM] {self._DICTIN_[K_CHECKBOX_ALPHA_DIM]}""")
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_statusToRtn_ == MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ != MOUSE_STATUS_OVER) and (self._DICTIN_[K_CHECKBOX_ALPHA_DIM] is True):
+		if (_statusToRtn_ == MOUSE_STATUS_OVER) and (self._CURRENT_MOUSE_STATUS_ != MOUSE_STATUS_OVER) and (self._DICTIN_[K_CHECKBOX_ALPHA_DIM] is True):
 			self._MAINFRAME_.AlphaChannel = self._ALPHA_LOW_
 			self._DIMMED_ = True
 
@@ -1386,7 +1342,7 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 				print(f"""mouseOver alpha dimming""")
 
 			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-		elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER)) or \
+		elif ((_statusToRtn_ != MOUSE_STATUS_OVER) and (self._CURRENT_MOUSE_STATUS_ == MOUSE_STATUS_OVER)) or \
 				((self._LAST_MOUSE_STATUS_ == MOUSE_STATUS_OVER) and (self._DIMMED_ is True) and (self._DICTIN_[K_CHECKBOX_ALPHA_DIM] is False)):
 			self._MAINFRAME_.AlphaChannel = self._ALPHA_HIGH_
 			self._DIMMED_ = False
@@ -1397,7 +1353,7 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		self._LAST_MOUSE_STATUS_ = _statusToRtn_
-		self._MOUSE_STATUS_ = _statusToRtn_
+		self._CURRENT_MOUSE_STATUS_ = _statusToRtn_
 		self._MPX_ = _mpxToRtn_
 
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -1833,23 +1789,51 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 			return
 
 		self._TIME_TO_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES
-		self._LOCATION_ = self._MAINFRAME_.CurrentLocation()
-		self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
-		self._CLOSE_BBOX_ = getCloseBBox(self._LOCATION_, self._SIZE_)
+		_TLcn_ = self._MAINFRAME_.CurrentLocation()
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_TLcn_ != self._LOCATION_):
+			self._CHANGED_LOCATION_ = True
+			self._LOCATION_ = _TLcn_
+			self._BBOX_ = getBBox(self._LOCATION_, self._SIZE_)
+			self._CLOSE_BBOX_ = getCloseBBox(self._LOCATION_, self._SIZE_)
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
 		self._DICTIN_[K_TIME_CLOCK] = NOWS
 		self._DICTIN_[K_TIME_TOGO] = (self._DICTIN_[K_TIME_AT_NEXT_ALERT] - NOWS)
 		self._DICTIN_[K_TIME_ELAPSED] = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE])
 		self.checkMouse()
+		_event_, _values_ = self.quickRead()
 
-		if (self._DICTIN_[K_CHECKBOX_ALPHA_DIM] is True):
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_event_ != self._CURRENT_EVENT_):
+			self._CHANGED_EVENT_ = True
+			self._CURRENT_EVENT_ = _event_
+
+			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		else:
+			self._CHANGED_EVENT_ = False
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_values_ != self._LAST_VALUES_):
+			self._CHANGED_VALUES_ = True
+			self._CURRENT_VALUES_ = _values_
+			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		else:
+			self._CHANGED_VALUES_ = False
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		if (self._DICTIN_[K_CHECKBOX_RUNAWAY] is True):
 			self.runaway()
 
 		self.updateFromDict()
 
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (self._DPD_[F_UPDATE] is True):
 			self.debugPrint(
 				title_="update",
-				printDictinS_=True,
+				printDictinS_=False,
 				message_ = f"""
 self._TIME_TO_UPDATE_ {self._TIME_TO_UPDATE_} = NOWMS {NOWMS} + SZ_TIMEMS_BETWEEN_UPDATES {SZ_TIMEMS_BETWEEN_UPDATES}
 self._LOCATION_ {self._LOCATION_} = self._MAINFRAME_.CurrentLocation()
@@ -1861,6 +1845,8 @@ self._DICTIN_[K_TIME_ELAPSED] {self._DICTIN_[K_TIME_ELAPSED]} = (NOWS - self._DI
  self._CURRENT_MOUSE_LOCATION_ {self._CURRENT_MOUSE_LOCATION_}, self._CURRENT_MOUSE_STATUS_ {self._CURRENT_MOUSE_STATUS_} = self.checkMouse()
 """,
 			)
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
