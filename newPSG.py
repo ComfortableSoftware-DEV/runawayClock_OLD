@@ -510,16 +510,16 @@ CLOSE_LIST = [  # list with close statuses
 
 
 DNUPDATE_LIST = [  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
-	K_CHECKBOX_ALPHA_DIM01,  # checkbox for alpha under mouse
-	K_CHECKBOX_DISMISSED01,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_ENABLED01,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_FIRSTRUN01,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_HOVER_DATE01,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_IS_ALERTING_NOW01,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_PREDISMISSABLE01,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_RUNAWAY01,  # checkbox for runaway from mouse behavior
-	K_CHECKBOX_SNOOZABLE01,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_SNOOZED01,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
+	K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_FIRSTRUN,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_HOVER_DATE,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_IS_ALERTING_NOW,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_PREDISMISSABLE,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_RUNAWAY,  # checkbox for runaway from mouse behavior
+	K_CHECKBOX_SNOOZABLE,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_SNOOZED,  # checkbox for dismissed from mouse behavior
 ]
 
 

@@ -3940,7 +3940,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0908_CHECKBOX_DICT[_thisElementName_] = ""
 
 			FMPSG_SCTN0908_CHECKBOX_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0903_LIST_DICT["DNUPDATE_LIST"] += f"""{NTAB(1)}K_{_thisElementName_.upper()},  # {_thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0903_LIST_DICT["DNUPDATE_LIST"] += f"""{NTAB(1)}K_{_thisElementName_[:-2].upper()},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
