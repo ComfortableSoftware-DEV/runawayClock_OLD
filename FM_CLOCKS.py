@@ -1228,7 +1228,6 @@ TBGLST = [
 	("PSGVAL_ALERTING_LIST", FMAXPSG_SCTN0903_LIST_DEF, "ALERTING_LIST", "list that holds all currently alarming events",),
 
 	("PSGVAL_CHECKBOX_LIST00", FMAXPSG_SCTN0903_LIST_DEF, "CHECKBOX_LIST", "list of all checkboxes defined outside of a class",),
-	("PSGVAL_CHECKBOX_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CHECKBOX_LIST", "", "list of all checkboxes defined outside of a class",),
 
 	("PSGVAL_CLOSE_LIST", FMAXPSG_SCTN0903_LIST_DEF, "CLOSE_LIST", "list with close statuses",),
 	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_E", "easet close entry",),
@@ -3932,13 +3931,19 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN0908_CHECKBOX_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+
 			if _thisItemLen_ != 4:
 				doErrorItem("not 4 items", _thisItem_)
 				continue
+
 			_thisElementName_ = _thisItem_[2]
+
 			if _thisElementName_ not in FMPSG_SCTN0908_CHECKBOX_DICT:
 				FMPSG_SCTN0908_CHECKBOX_DICT[_thisElementName_] = ""
+
 			FMPSG_SCTN0908_CHECKBOX_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0903_LIST_DICT["CHECKBOX_LIST"] += f"""{NTAB(1)}K_{_thisElementName_.upper()},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
