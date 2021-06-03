@@ -497,7 +497,19 @@ APPDS_MIDNIGHT_FIX_TIMES_LIST = [  # list of times to be updated at midnight
 ]
 
 
-CHECKBOXLIST = [  # list of all checkboxes defined outside of a class
+CLOSE_LIST = [  # list with close statuses
+	MOUSE_STATUS_CLOSE_E,  # easet close entry
+	MOUSE_STATUS_CLOSE_N,  # easet close entry
+	MOUSE_STATUS_CLOSE_NE,  # easet close entry
+	MOUSE_STATUS_CLOSE_NW,  # easet close entry
+	MOUSE_STATUS_CLOSE_S,  # easet close entry
+	MOUSE_STATUS_CLOSE_SE,  # easet close entry
+	MOUSE_STATUS_CLOSE_SW,  # easet close entry
+	MOUSE_STATUS_CLOSE_W,  # easet close entry
+]
+
+
+DNUPDATE_LIST = [  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
 	K_CHECKBOX_ALPHA_DIM01,  # checkbox for alpha under mouse
 	K_CHECKBOX_DISMISSED01,  # checkbox for dismissed from mouse behavior
 	K_CHECKBOX_ENABLED01,  # checkbox for dismissed from mouse behavior
@@ -508,18 +520,6 @@ CHECKBOXLIST = [  # list of all checkboxes defined outside of a class
 	K_CHECKBOX_RUNAWAY01,  # checkbox for runaway from mouse behavior
 	K_CHECKBOX_SNOOZABLE01,  # checkbox for dismissed from mouse behavior
 	K_CHECKBOX_SNOOZED01,  # checkbox for dismissed from mouse behavior
-]
-
-
-CLOSE_LIST = [  # list with close statuses
-	MOUSE_STATUS_CLOSE_E,  # easet close entry
-	MOUSE_STATUS_CLOSE_N,  # easet close entry
-	MOUSE_STATUS_CLOSE_NE,  # easet close entry
-	MOUSE_STATUS_CLOSE_NW,  # easet close entry
-	MOUSE_STATUS_CLOSE_S,  # easet close entry
-	MOUSE_STATUS_CLOSE_SE,  # easet close entry
-	MOUSE_STATUS_CLOSE_SW,  # easet close entry
-	MOUSE_STATUS_CLOSE_W,  # easet close entry
 ]
 
 
@@ -1770,9 +1770,13 @@ checkboxValue_ {checkboxValue_}
 
 	def updateFromDict(self, dictToUpdateFrom_=None):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		def popCheckboxes(dictToPopFrom_):
-			_dictToRtn_ = {}
-			for _keys_ in CHECKBOXLIST
+#		def popCheckboxes(dictToPopFrom_):
+#			_dictToRtn_ = {}
+#			for _thisKey_, _thisVal_ in dictToPopFrom_.items():
+#				if( _thisKey_ not in CHECKBOXLIST):
+#					_dictToRtn_[_thisKey_] = _thisVal_
+#			return _dictToRtn_
+
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if dictToUpdateFrom_ is not None:
 
@@ -1782,24 +1786,18 @@ checkboxValue_ {checkboxValue_}
 dictToUpdateFrom_ {self.dictinRepl(dictToUpdateFrom_)}
 _DICTIN_ {self.dictinRepl()}
 """)
-			if (K_CHECKBOX_ALPHA_DIM in dictToUpdateFrom_):
-				__dummy__ = dictToUpdateFrom_.pop(K_CHECKBOX_ALPHA_DIM)
 
+			# dictToUpdateFrom_ = popCheckboxes(dictToUpdateFrom_)
 			self._DICTIN_.update(dictToUpdateFrom_)
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-
 		self.enint()
 		self.enstring()
-		dictToUpdateFrom_ = self._DICTINSTR_
-
-
-		if (K_CHECKBOX_ALPHA_DIM in dictToUpdateFrom_):
-			__dummy__ = dictToUpdateFrom_.pop(K_CHECKBOX_ALPHA_DIM)
-
+		# dictToUpdateFrom_ = popCheckboxes(self._DICTINSTR_)
 
 		for _thisKey_, _thisVal_ in dictToUpdateFrom_.items():
-			self._MAINFRAME_[_thisKey_].Update(value=_thisVal_)
+			if (_thisKey_ not in ELEMENTS_NOT_TO_UPDATE_LIST):
+				self._MAINFRAME_[_thisKey_].Update(value=_thisVal_)
 
 		__dummy__ = self.quickRead()
 

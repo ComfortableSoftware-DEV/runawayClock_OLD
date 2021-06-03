@@ -1226,7 +1226,7 @@ TBGLST = [
 	("FMVAl_TABLEVEL", FMAXFM_SCTN0102_STR_DEF, "TABLEVEL", "TABLEVEL", "key for tab levels",),
 	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
 	("PSGVAL_ALERTING_LIST", FMAXPSG_SCTN0903_LIST_DEF, "ALERTING_LIST", "list that holds all currently alarming events",),
-	("PSGVAL_CHECKBOXLIST00", FMAXPSG_SCTN0903_LIST_DEF, "CHECKBOXLIST", "list of all checkboxes defined outside of a class",),
+	("PSGVAL_DNUPDATE_LIST00", FMAXPSG_SCTN0903_LIST_DEF, "DNUPDATE_LIST", "list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)",),
 	("PSGVAL_CLOSE_LIST", FMAXPSG_SCTN0903_LIST_DEF, "CLOSE_LIST", "list with close statuses",),
 	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_E", "easet close entry",),
 	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_N", "easet close entry",),
@@ -3940,7 +3940,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0908_CHECKBOX_DICT[_thisElementName_] = ""
 
 			FMPSG_SCTN0908_CHECKBOX_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0903_LIST_DICT["CHECKBOXLIST"] += f"""{NTAB(1)}K_{_thisElementName_.upper()},  # {_thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0903_LIST_DICT["DNUPDATE_LIST"] += f"""{NTAB(1)}K_{_thisElementName_.upper()},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -4931,6 +4931,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisElementName_ not in FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_]:
 				FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
+			FMPSG_SCTN0903_LIST_DICT["DNUPDATE_LIST"] += f"""{NTAB(1)}K_{_thisElementName_.upper()},  # {_thisComment_}{NEWLINE}"""
 			FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_{OBRKT}K{_thisElementName_[:-1]}{CBRKT} = K{_thisElementName_[:-1]}{NEWLINE}"""
 			FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_DICT_REVERSE_{OBRKT}K{_thisElementName_[:-1]}{CBRKT} = K{_thisElementName_[:-1]}{NEWLINE}"""
 
