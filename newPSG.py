@@ -497,7 +497,7 @@ APPDS_MIDNIGHT_FIX_TIMES_LIST = [  # list of times to be updated at midnight
 ]
 
 
-CHECKBOX_LIST = [  # list of all checkboxes defined outside of a class
+CHECKBOXLIST = [  # list of all checkboxes defined outside of a class
 	K_CHECKBOX_ALPHA_DIM01,  # checkbox for alpha under mouse
 	K_CHECKBOX_DISMISSED01,  # checkbox for dismissed from mouse behavior
 	K_CHECKBOX_ENABLED01,  # checkbox for dismissed from mouse behavior
@@ -1770,7 +1770,9 @@ checkboxValue_ {checkboxValue_}
 
 	def updateFromDict(self, dictToUpdateFrom_=None):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-
+		def popCheckboxes(dictToPopFrom_):
+			_dictToRtn_ = {}
+			for _keys_ in CHECKBOXLIST
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if dictToUpdateFrom_ is not None:
 

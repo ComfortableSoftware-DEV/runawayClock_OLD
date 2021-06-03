@@ -361,7 +361,7 @@ TBGLST = [
 	("FMVAl_TABLEVEL", FMAXFM_SCTN0102_STR_DEF, "TABLEVEL", "TABLEVEL", "key for tab levels",),
 	("PSGVAL", FMAX_NOP, "FMPSG_BEGINS",),
 	("PSGVAL_ALERTING_LIST", FMAXPSG_SCTN0903_LIST_DEF, "ALERTING_LIST", "list that holds all currently alarming events",),
-	("PSGVAL_CHECKBOX_LIST00", FMAXPSG_SCTN0903_LIST_DEF, "CHECKBOX_LIST", "list of all checkboxes defined outside of a class",),
+	("PSGVAL_CHECKBOXLIST00", FMAXPSG_SCTN0903_LIST_DEF, "CHECKBOXLIST", "list of all checkboxes defined outside of a class",),
 	("PSGVAL_CLOSE_LIST", FMAXPSG_SCTN0903_LIST_DEF, "CLOSE_LIST", "list with close statuses",),
 	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_E", "easet close entry",),
 	("PSGVAL_CLOSE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "CLOSE_LIST", "MOUSE_STATUS_CLOSE_N", "easet close entry",),
