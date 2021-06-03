@@ -497,6 +497,20 @@ APPDS_MIDNIGHT_FIX_TIMES_LIST = [  # list of times to be updated at midnight
 ]
 
 
+CHECKBOX_LIST = [  # list of all checkboxes defined outside of a class
+	K_CHECKBOX_ALPHA_DIM01,  # checkbox for alpha under mouse
+	K_CHECKBOX_DISMISSED01,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_ENABLED01,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_FIRSTRUN01,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_HOVER_DATE01,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_IS_ALERTING_NOW01,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_PREDISMISSABLE01,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_RUNAWAY01,  # checkbox for runaway from mouse behavior
+	K_CHECKBOX_SNOOZABLE01,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_SNOOZED01,  # checkbox for dismissed from mouse behavior
+]
+
+
 CLOSE_LIST = [  # list with close statuses
 	MOUSE_STATUS_CLOSE_E,  # easet close entry
 	MOUSE_STATUS_CLOSE_N,  # easet close entry
@@ -1776,6 +1790,7 @@ _DICTIN_ {self.dictinRepl()}
 		self.enint()
 		self.enstring()
 		dictToUpdateFrom_ = self._DICTINSTR_
+
 
 		if (K_CHECKBOX_ALPHA_DIM in dictToUpdateFrom_):
 			__dummy__ = dictToUpdateFrom_.pop(K_CHECKBOX_ALPHA_DIM)
