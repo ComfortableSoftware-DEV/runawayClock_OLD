@@ -988,7 +988,7 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			F___INIT__: True,  # define a DPD /
 			F___ENTER__: False,  # define __enter__
-			F___EXIT__: False,  # define __exit__ in CLOCKS
+			F___EXIT__: True,  # define __exit__ in CLOCKS
 			F_CHECKMOUSE: False,  # define checkMouse
 			F_DEBUGPRINT: False,  # read the frame and set self._RESULT_
 			F_DICTINSTRREPL: False,  # define runaway
@@ -1254,15 +1254,21 @@ class CLASS_CLOCKS(object):
 
 	def __exit__(self, *args_):
 		global \
-			ALL_THE_FRAMES
+			ALL_THE_FRAMES, \
+			APPDS_MAIN
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		self._MAINFRAME_.close()
+		APPDS_MAIN[K_CHECKBOX_ALPHA_DIM] = self._DICTIN_[K_CHECKBOX_ALPHA_DIM]
+		APPDS_MAIN[K_CHECKBOX_RUNAWAY] = self._DICTIN_[K_CHECKBOX_RUNAWAY]
 		ALL_THE_FRAMES[self._THIS_FORM_NAME_] = None
 
 		if (self._DPD_[F___EXIT__] is True):
 			self.debugPrint(
-				message_=f"""exiting CLOCKS {self._THIS_FORM_NAME_}"""
+				printDictinS_=True,
+				message_=f"""exiting CLOCKS {self._THIS_FORM_NAME_}
+APPDS_MAIN {APPDS_MAIN}
+"""
 			)
+		self._MAINFRAME_.close()
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def checkMouse(self):
@@ -1496,16 +1502,14 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 			self._DICTIN_[K_NAME_NEXT_EVENT] = nameNextEvent_
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (checkboxAlphaDim_ == 42):
-			self._DICTIN_[K_CHECKBOX_ALPHA_DIM] = checkboxAlphaDim_
-			# self._MAINFRAME_[self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM]].update(value=checkboxAlphaDim_)
+		if (checkboxAlphaDim_ is not None):
+			self.setCheckbox(K_CHECKBOX_ALPHA_DIM, checkboxAlphaDim_)
 			__dummy__ = self.quickRead()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (checkboxRunaway_ is not None):
-			self._DICTIN_[K_CHECKBOX_RUNAWAY] = checkboxRunaway_
-			self._CHECKBOX_RUNAWAY_ = checkboxRunaway_
-			APPDS_MAIN[K_CHECKBOX_RUNAWAY] = checkboxRunaway_
+			self.setCheckbox(K_CHECKBOX_RUNAWAY, checkboxRunaway_)
+			__dummy__ = self.quickRead()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (eventMode_ is not None):
