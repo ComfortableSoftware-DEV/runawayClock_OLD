@@ -988,7 +988,7 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			F___INIT__: True,  # define a DPD /
 			F___ENTER__: False,  # define __enter__
-			F___EXIT__: True,  # define __exit__ in CLOCKS
+			F___EXIT__: False,  # define __exit__ in CLOCKS
 			F_CHECKMOUSE: False,  # define checkMouse
 			F_DEBUGPRINT: False,  # read the frame and set self._RESULT_
 			F_DICTINSTRREPL: False,  # define runaway
@@ -1257,8 +1257,6 @@ class CLASS_CLOCKS(object):
 			ALL_THE_FRAMES, \
 			APPDS_MAIN
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		APPDS_MAIN[K_CHECKBOX_ALPHA_DIM] = self._DICTIN_[K_CHECKBOX_ALPHA_DIM]
-		APPDS_MAIN[K_CHECKBOX_RUNAWAY] = self._DICTIN_[K_CHECKBOX_RUNAWAY]
 		ALL_THE_FRAMES[self._THIS_FORM_NAME_] = None
 
 		if (self._DPD_[F___EXIT__] is True):
