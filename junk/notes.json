@@ -161,3 +161,129 @@ class CLASS_POPUP_INTERVAL(object):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
+
+makePSG
+_dictToUse_ {
+	'ALERTING_LIST':
+		'',
+	'ALL_TIMES_LIST':
+		'K_TIME_ALARM,  # list of all times	K_TIME_ALARM
+		K_TIME_AT_LAST_RUN,  # list of all times	K_TIME_AT_LAST_RUN
+		K_TIME_AT_NEXT_ALERT,  # list of all times K_TIME_AT_NEXT_ALERT
+		K_TIME_AT_ZEROELAPSE,  # list of all times K_TIME_AT_ZEROELAPSE
+		K_TIME_CLOCK,  # list of all times K_TIME_CLOCK
+		K_TIME_ELAPSED,  # list of all times K_TIME_ELAPSED
+		K_TIME_INTERVAL,  # list of all times K_TIME_INTERVAL
+		K_TIME_INTERVAL_START,  # list of all times K_TIME_INTERVAL_START
+		K_TIME_INTERVAL__BEGIN,  # list of all times K_TIME_INTERVAL__BEGIN
+		K_TIME_INTERVAL__END,  # list of all times K_TIME_INTERVAL__END
+		K_TIME_LEN_OF_ALERT,  # list of all times K_TIME_LEN_OF_ALERT
+		K_TIME_TOGO,  # list of all times K_TIME_TOGO
+		K_TIME_TO_CHECK_MOUSE,  # list of all times K_TIME_TO_CHECK_MOUSE
+		K_TIME_TO_MOVE,  # list of all times K_TIME_TO_MOVE
+		K_TIME_TO_UPDATE,  # list of all times K_TIME_TO_UPDATE',
+
+	'APPDS_MIDNIGHT_FIX_TIMES_LIST':
+		'K_TIME_AT_NEXT_ALERT,  # list of times to be updated at midnight
+		K_TIME_TO_CHECK_MOUSE,  # list of times to be updated at midnight
+		K_TIME_TO_MOVE,  # list of times to be updated at midnight
+		K_TIME_TO_UPDATE,  # list of times to be updated at midnight',
+
+	'CLOSE_LIST':
+		'MOUSE_STATUS_CLOSE_E,  # easet close entry
+		MOUSE_STATUS_CLOSE_N,  # easet close entry
+		MOUSE_STATUS_CLOSE_NE,  # easet close entry
+		MOUSE_STATUS_CLOSE_NW,  # easet close entry
+		MOUSE_STATUS_CLOSE_S,  # easet close entry
+		MOUSE_STATUS_CLOSE_SE,  # easet close entry
+		MOUSE_STATUS_CLOSE_SW,  # easet close entry
+		MOUSE_STATUS_CLOSE_W,  # easet close entry',
+
+	'DNUPDATE_LIST':
+		'K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
+		K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_FIRSTRUN,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_HOVER_DATE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_IS_ALERTING_NOW,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_PREDISMISSABLE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_RUNAWAY,  # checkbox for runaway from mouse behavior
+		K_CHECKBOX_SNOOZABLE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_SNOOZED,  # checkbox for dismissed from mouse behavior',
+
+	'POPUP_LIST':
+		'FRAME_POPUP01,  # popup list entry FRAME_POPUP01
+		FRAME_POPUP02,  # popup list entry FRAME_POPUP02
+		FRAME_POPUP03,  # popup list entry FRAME_POPUP03
+		FRAME_POPUP04,  # popup list entry FRAME_POPUP04
+		FRAME_POPUP05,  # popup list entry FRAME_POPUP05'
+	}
+
+FMPSG_SCTN0903_LIST_DICT {
+	'ALERTING_LIST':
+		'',
+	'CLOSE_LIST':
+		'MOUSE_STATUS_CLOSE_E,  # easet close entry
+		MOUSE_STATUS_CLOSE_N,  # easet close entry
+		MOUSE_STATUS_CLOSE_NE,  # easet close entry
+		MOUSE_STATUS_CLOSE_NW,  # easet close entry
+		MOUSE_STATUS_CLOSE_S,  # easet close entry
+		MOUSE_STATUS_CLOSE_SE,  # easet close entry
+		MOUSE_STATUS_CLOSE_SW,  # easet close entry
+		MOUSE_STATUS_CLOSE_W,  # easet close entry',
+
+	'DNUPDATE_LIST':
+		'K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
+		K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_FIRSTRUN,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_HOVER_DATE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_IS_ALERTING_NOW,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_PREDISMISSABLE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_RUNAWAY,  # checkbox for runaway from mouse behavior
+		K_CHECKBOX_SNOOZABLE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_SNOOZED,  # checkbox for dismissed from mouse behavior',
+
+	'POPUP_LIST':
+		'FRAME_POPUP01,  # popup list entry FRAME_POPUP01
+		FRAME_POPUP02,  # popup list entry FRAME_POPUP02
+		FRAME_POPUP03,  # popup list entry FRAME_POPUP03
+		FRAME_POPUP04,  # popup list entry FRAME_POPUP04
+		FRAME_POPUP05,  # popup list entry FRAME_POPUP05',
+
+	'ALL_TIMES_LIST':
+		'K_TIME_ALARM,  # list of all times K_TIME_ALARM
+		K_TIME_AT_LAST_RUN,  # list of all times K_TIME_AT_LAST_RUN
+		K_TIME_AT_NEXT_ALERT,  # list of all times K_TIME_AT_NEXT_ALERT
+		K_TIME_AT_ZEROELAPSE,  # list of all times K_TIME_AT_ZEROELAPSE
+		K_TIME_CLOCK,  # list of all times K_TIME_CLOCK
+		K_TIME_ELAPSED,  # list of all times K_TIME_ELAPSED
+		K_TIME_INTERVAL,  # list of all times K_TIME_INTERVAL
+		K_TIME_INTERVAL_START,  # list of all times K_TIME_INTERVAL_START
+		K_TIME_INTERVAL__BEGIN,  # list of all times K_TIME_INTERVAL__BEGIN
+		K_TIME_INTERVAL__END,  # list of all times K_TIME_INTERVAL__END
+		K_TIME_LEN_OF_ALERT,  # list of all times K_TIME_LEN_OF_ALERT
+		K_TIME_TOGO,  # list of all times K_TIME_TOGO
+		K_TIME_TO_CHECK_MOUSE,  # list of all times K_TIME_TO_CHECK_MOUSE
+		K_TIME_TO_MOVE,  # list of all times K_TIME_TO_MOVE
+		K_TIME_TO_UPDATE,  # list of all times K_TIME_TO_UPDATE',
+
+	'APPDS_MIDNIGHT_FIX_TIMES_LIST':
+		'K_TIME_AT_NEXT_ALERT,  # list of times to be updated at midnight
+		K_TIME_TO_CHECK_MOUSE,  # list of times to be updated at midnight
+		K_TIME_TO_MOVE,  # list of times to be updated at midnight
+		K_TIME_TO_UPDATE,  # list of times to be updated at midnight'
+	}
+
+FMPSG_SCTN0903_LIST_CMNT_DICT {
+	'ALERTING_LIST':
+		'list that holds all currently alarming events',
+	'CLOSE_LIST':
+		'list with close statuses',
+	'DNUPDATE_LIST':
+		'list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)',
+	'ALL_TIMES_LIST':
+		'list of all times',
+	'APPDS_MIDNIGHT_FIX_TIMES_LIST':
+		'list of times to be updated at midnight'
+	}

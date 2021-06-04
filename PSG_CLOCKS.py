@@ -118,7 +118,6 @@ INDEX_SOUTH = 3  # SOUTH
 INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
-K_ALARMPOPUP_PROPER = "K_ALARMPOPUP_PROPER"  # key for the button return for the popup
 K_ALARMPOPUP_TEXT_TEXT = "K_ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
 K_ALPHA_CHANNEL = "K_ALPHA_CHANNEL"  #
 K_ALPHA_HIGH = "K_ALPHA_HIGH"  #
@@ -305,6 +304,7 @@ FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for 
 FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
 FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
+NAME_NEXT_EVENT_STR = ""  # comment
 NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
@@ -522,6 +522,15 @@ DNUPDATE_LIST = [  # list of all element key not to update through the normal me
 	K_CHECKBOX_RUNAWAY,  # checkbox for runaway from mouse behavior
 	K_CHECKBOX_SNOOZABLE,  # checkbox for dismissed from mouse behavior
 	K_CHECKBOX_SNOOZED,  # checkbox for dismissed from mouse behavior
+]
+
+
+POPUP_LIST = [  # popup list
+	FRAME_POPUP01,  # popup list entry FRAME_POPUP01
+	FRAME_POPUP02,  # popup list entry FRAME_POPUP02
+	FRAME_POPUP03,  # popup list entry FRAME_POPUP03
+	FRAME_POPUP04,  # popup list entry FRAME_POPUP04
+	FRAME_POPUP05,  # popup list entry FRAME_POPUP05
 ]
 
 
