@@ -437,7 +437,7 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALL_THE_FRAMES = {  # comment
+ALL_THE_FORMS = {  # comment
 	FRAME_CLOCKS: None,  # ENTRY IN FORMS
 	FRAME_POPUP01: None,  # ENTRY IN FORMS
 	FRAME_POPUP02: None,  # ENTRY IN FORMS
@@ -922,7 +922,7 @@ TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 
 class CLASS_CLOCKS(object):
 	global \
-		ALL_THE_FRAMES, \
+		ALL_THE_FORMS, \
 		APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
@@ -1213,10 +1213,10 @@ class CLASS_CLOCKS(object):
 
 	def __enter__(self):
 		global \
-			ALL_THE_FRAMES
+			ALL_THE_FORMS
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_ = SG.Window(**self._WINDOW_).finalize()
-		ALL_THE_FRAMES[self._THIS_FORM_NAME_] = self
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = self
 		self._SIZE_ = self._MAINFRAME_.Size
 		if (self._DPD_[F___ENTER__]):
 			self.debugPrint(
@@ -1227,10 +1227,10 @@ class CLASS_CLOCKS(object):
 
 	def __exit__(self, *args_):
 		global \
-			ALL_THE_FRAMES, \
+			ALL_THE_FORMS, \
 			APPDS_MAIN
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		ALL_THE_FRAMES[self._THIS_FORM_NAME_] = None
+		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
 		if (self._DPD_[F___EXIT__] is True):
 			self.debugPrint(
@@ -2246,7 +2246,7 @@ def findNextAlarmEvents():
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (len(_nextEventList_) == 1):
-			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+			ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
 				eventMode_=_eventMode0_,
 				currentIntervalCount_=_currentIntervalCount0_,
 				nameNextEvent_=_nameNextEvent0_,
@@ -2261,7 +2261,7 @@ def findNextAlarmEvents():
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (_nextEventList_[1][0] > _timeAtNextAlert0_):
-			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+			ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
 				eventMode_=_eventMode0_,
 				currentIntervalCount_=_currentIntervalCount0_,
 				nameNextEvent_=_nameNextEvent0_,
@@ -2293,7 +2293,7 @@ def findNextAlarmEvents():
 				_eventMode_ = EVENTMODE_ALARM
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+			ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
 				eventMode_=_eventMode_,
 				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_],
 				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_],
@@ -2326,7 +2326,7 @@ def findNextAlarmEvents():
 				_eventMode_ = EVENTMODE_ALARM
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+			ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
 				eventMode_=_eventMode_,
 				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_],
 				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_],
@@ -2360,7 +2360,7 @@ def findNextAlarmEvents():
 				_eventMode_ = EVENTMODE_ALARM
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+			ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
 				eventMode_=_eventMode_,
 				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCoun3_],
 				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_],
@@ -2391,7 +2391,7 @@ def findNextAlarmEvents():
 			_eventMode_ = EVENTMODE_ALARM
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+		ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
 			eventMode_=_eventMode_,
 			currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCoun3_, _currentIntervalCount4_],
 			nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_, _nameNextEvent4_],
@@ -2505,13 +2505,13 @@ def doMidnightWork():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doStartup():
 	global \
-		ALL_THE_FRAMES, \
+		ALL_THE_FORMS, \
 		APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	if (DPD_ROOT[F_DOSTARTUP] is True):
 		print(f"""doStartup
 {CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
-{ALL_THE_FRAMES[FRAME_CLOCKS].debugPrint(
+{ALL_THE_FORMS[FRAME_CLOCKS].debugPrint(
 	printDictinS_=True,
 )}
 """)
@@ -2534,18 +2534,18 @@ def doStartup():
 		_tempDS_[K_TIME_AT_ZEROELAPSE] = NOWS
 		APPDS_MAIN[K_EVENT_ENTRIES][_index_] = CF.quickCopyDict(_tempDS_)
 
-	ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+	ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
 		checkboxAlphaDim_=APPDS_MAIN[K_CHECKBOX_ALPHA_DIM],
 		checkboxRunaway_=APPDS_MAIN[K_CHECKBOX_RUNAWAY],
 		timeAtZeroelapse_=NOWS,
 	)
-	ALL_THE_FRAMES[FRAME_CLOCKS]._SIZE_
+	ALL_THE_FORMS[FRAME_CLOCKS]._SIZE_
 
 	if (DPD_ROOT[F_DOSTARTUP] is True):
 		print(f"""doStartup
 {CF.frameIt("_tempDS_", _tempDS_)}
 {CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
-{ALL_THE_FRAMES[FRAME_CLOCKS].debugPrint(
+{ALL_THE_FORMS[FRAME_CLOCKS].debugPrint(
 	printDictinS_=True,
 )}
 """)
@@ -2559,7 +2559,7 @@ def doStartup():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def outerLoop():
 	global \
-		ALL_THE_FRAMES, \
+		ALL_THE_FORMS, \
 		APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_oldResults_ = (None, None, None)
@@ -2570,7 +2570,7 @@ def outerLoop():
 
 		localTimes()
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		for _thisFrameName_, _thisFrame_ in ALL_THE_FRAMES.items():
+		for _thisFrameName_, _thisFrame_ in ALL_THE_FORMS.items():
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if _thisFrame_ is not None:
@@ -2603,7 +2603,7 @@ def outerLoop():
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (DPD_ROOT[F_OUTERLOOP] is True):
 			print(f"""looking at values in outerloop
-_window_ {_window_} == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_ {(_window_ == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_)}
+_window_ {_window_} == ALL_THE_FORMS[FRAME_CLOCKS]._MAINFRAME_ {(_window_ == ALL_THE_FORMS[FRAME_CLOCKS]._MAINFRAME_)}
 _event_ {_event_}
 _values_ {_values_}""")
 
@@ -2623,7 +2623,7 @@ _values_ {_values_}""")
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			elif (_event_ == K_BTN_ZERO):
-				ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+				ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
 					timeAtZeroelapse_=NOWS,
 					timeElapsed_=ZERO_CLOCK,
 				)
@@ -2634,12 +2634,12 @@ _values_ {_values_}""")
 		if (_values_ is not None):
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (_window_ == ALL_THE_FRAMES[FRAME_CLOCKS]._MAINFRAME_):
+			if (_window_ == ALL_THE_FORMS[FRAME_CLOCKS]._MAINFRAME_):
 				if (_values_ != _oldValues_):
 					APPDS_MAIN.update(_values_)
 
 				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
-			elif (_window_ == ALL_THE_FRAMES[FRAME_THECLOCK]._MAINFRAME_):
+			elif (_window_ == ALL_THE_FORMS[FRAME_THECLOCK]._MAINFRAME_):
 				doFrameTheclock(_values_)
 
 	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
