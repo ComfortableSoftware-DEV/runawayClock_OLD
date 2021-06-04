@@ -513,6 +513,7 @@ CLOSE_LIST = [  # list with close statuses
 
 
 DNUPDATE_LIST = [  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
+	K_NAME_NEXT_EVENT,  # deal with the list of names for the event(s) to come
 	K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
 	K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
 	K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
@@ -523,6 +524,10 @@ DNUPDATE_LIST = [  # list of all element key not to update through the normal me
 	K_CHECKBOX_RUNAWAY,  # checkbox for runaway from mouse behavior
 	K_CHECKBOX_SNOOZABLE,  # checkbox for dismissed from mouse behavior
 	K_CHECKBOX_SNOOZED,  # checkbox for dismissed from mouse behavior
+]
+
+
+NEXT_ALARM_NAME_LIST = [  # holds all of the names of the next time an alert happens
 ]
 
 
@@ -2184,7 +2189,7 @@ APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_] {APPDS_MAIN[K_EVENT_ENTRIES][eventI
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # findNextAlarmEvent
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def findNextAlarmEvent():
+def findNextAlarmEvents():
 	global \
 			CURRENT_EVENTMODE, \
 			CURRENT_INTERVAL_COUNT, \
@@ -2246,15 +2251,32 @@ def doEvent():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_eventIndex_ = APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]
 	_event_ = CF.quickCopyDict(APPDS_MAIN[K_EVENT_ENTRIES][_eventIndex_])
-	APPDS_MAIN[K_EVENT_ENTRIES][_eventIndex_]][K_IS_ALERTING_NOW] = True
-	APPDS_MAIN[K_EVENT_ENTRIES][_eventIndex_]][K_INTERVAL_COUNT] += 1
-	APPDS_MAIN[K_EVENT_ENTRIES][_eventIndex_]][K_TIME_AT_LAST_RUN] = NOWS
+
+		# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	if (_values_[K_EVENTMODE] == EVENTMODE_INTERVAL):
+		APPDS_MAIN[K_EVENT_ENTRIES][_eventIndex_]][K_INTERVAL_COUNT] += 1
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	for _index_, _values_ in APPDS_MAIN[K_EVENT_ENTRIES].items():
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_index_ != _eventIndex_) and \
-				(_values_[K_TIME_AT_NEXT_ALERT] == NOWS):
+		if (_values_[K_TIME_AT_NEXT_ALERT] == NOWS):
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_values_[K_EVENTMODE] == EVENTMODE_INTERVAL):
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_]][K_INTERVAL_COUNT] += 1
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_AT_NEXT_ALERT] = fixTimeAtNext(NOWS + APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_INTERVAL])
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_INTERVAL_START] = NOWS
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			elif (_values_[K_EVENTMODE] == EVENTMODE_ALARM):
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_AT_NEXT_ALERT] = fixTimeAtNext(NOWS + CF.DAYSECS)
+
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+			APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_AT_LAST_RUN] = NOWS
+			THIS_ALARM_POPUP_TEXT_LIST.append(APPDS_MAIN[K_EVENT_ENTRIES])
+
+
 
 	findNextAlarmEvent()
 	return APPMODE_NEW_ALARMPOPUP, _eventIndex_

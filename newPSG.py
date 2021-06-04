@@ -513,6 +513,7 @@ CLOSE_LIST = [  # list with close statuses
 
 
 DNUPDATE_LIST = [  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
+	K_NAME_NEXT_EVENT,  # deal with the list of names for the event(s) to come
 	K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
 	K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
 	K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
@@ -523,6 +524,10 @@ DNUPDATE_LIST = [  # list of all element key not to update through the normal me
 	K_CHECKBOX_RUNAWAY,  # checkbox for runaway from mouse behavior
 	K_CHECKBOX_SNOOZABLE,  # checkbox for dismissed from mouse behavior
 	K_CHECKBOX_SNOOZED,  # checkbox for dismissed from mouse behavior
+]
+
+
+NEXT_ALARM_NAME_LIST = [  # holds all of the names of the next time an alert happens
 ]
 
 
