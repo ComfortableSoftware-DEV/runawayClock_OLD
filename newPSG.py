@@ -68,7 +68,7 @@ EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
 F___ENTER__ = "F___ENTER__"  # define __enter__
 F___EXIT__ = "F___EXIT__"  # define __exit__ in CLOCKS
-F___INIT__ = "F___INIT__"  # define a DPD /
+F___INIT__ = "F___INIT__"  # define a DPD at /
 F_APPDSDECODE = "F_APPDSDECODE"  # fkey ENTRY appdsDecode
 F_CHECKMOUSE = "F_CHECKMOUSE"  # define checkMouse
 F_COMPAREBBOX = "F_COMPAREBBOX"  # FKEY entry compareBBox
@@ -449,7 +449,7 @@ DPD_ROOT = {  # DPD_ROOT defined
 	F_COMPAREXY: False,  # DPD_ROOT entry compareXY
 	F_DOIT: False,  # DPD_ROOT entry doit
 	F_DOMIDNIGHTWORK: False,  # DPD_ROOT entry doMidnightWork
-	F_DOSTARTUP: True,  # DPD_ROOT entry doStartup
+	F_DOSTARTUP: False,  # DPD_ROOT entry doStartup
 	F_FINDNEXTALARMEVENT: False,  # DPD_ROOT entry findNextAlarmEvent
 	F_FIXTIMEATNEXT: False,  # DPD_ROOT entry fixTimeAtNext
 	F_GETBBOX: False,  # DPD_ROOT entry getBBox
@@ -993,7 +993,7 @@ class CLASS_CLOCKS(object):
 
 		self._DPD_ = {  # define a DPD CLOCKS:/
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			F___INIT__: True,  # define a DPD /
+			F___INIT__: False,  # define a DPD at /
 			F___ENTER__: False,  # define __enter__
 			F___EXIT__: False,  # define __exit__ in CLOCKS
 			F_CHECKMOUSE: False,  # define checkMouse
@@ -1916,7 +1916,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "00000003",  # version number hex string
+	K_VERSION: "00000004",  # version number hex string
 }
 
 
