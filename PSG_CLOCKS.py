@@ -2245,29 +2245,34 @@ def findNextAlarmEvents():
 			return
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		_eventMode_ = [_nextEventList_[0][2]],
-		_currentIntervalCount_ = [_nextEventList_[0][4]],
-		_nameNextEvent_ = [_nextEventList_[0][3]],
-		_timeAtNextAlert_ = [_nextEventList_[0][0]],
-
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_nextEventList_[0][0] == _nextEventList_[1][0]):
-			_eventMode_.append([_nextEventList_[1][2]])
-			_currentIntervalCount_.append([_nextEventList_[1][4]])
-			_nameNextEvent_.append([_nextEventList_[1][3]])
-			_timeAtNextAlert_.append([_nextEventList_[1][0]])
+		if (_nextEventList_[1][0] > _nextEventList_[0][0]):
+			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+				eventMode_=_nextEventList_[0][2],
+				currentIntervalCount_=_nextEventList_[0][4],
+				nameNextEvent_=_nextEventList_[0][3],
+				timeAtNextAlert_=_nextEventList_[0][0],
+			)
+			CURRENT_EVENTMODE_VAL = _nextEventList_[0][2]  # (time, index, mode, name, intervalCount)
+			CURRENT_INTERVAL_COUNT = _nextEventList_[0][4]
+			NAME_NEXT_EVENT_STR = _nextEventList_[0][3]  # (time, index, mode, name, intervalCount)
+			TIME_S_AT_NEXT_EVENT = _nextEventList_[0][0]
+			return
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (len(_nextEventList_) == 2):
 
-				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (_eventMode_[0] == EVENTMODE_INTERVAL) or \
-					(_eventMode_[1] == EVENTMODE_INTERVAL):
-				_eventMode_ = EVENTMODE_INTERVAL
-			ZM3E
+		_currentIntervalCount0_ = _nextEventList_[0][4]
+		_eventMode0_ = _nextEventList_[0][2]
+		_nameNextEvent0_ = _nextEventList_[0][3]
+		_timeAtNextAlert0_ = _nextEventList_[0][0]
+		_currentIntervalCount1_ = _nextEventList_[1][4]
+		_eventMode1_ = _nextEventList_[1][2]
+		_nameNextEvent1_ = _nextEventList_[1][3]
+		_timeAtNextAlert1_ = _nextEventList_[1][0]
 
-
+		if (len(_nextEventList_) == 2) or \
+				(_nextEventList_[2][0] > _timeAtNextAlert1_):
+			
 
 			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
 				eventMode_=_nextEventList_[0][2],
