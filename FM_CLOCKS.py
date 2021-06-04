@@ -1302,7 +1302,6 @@ TBGLST = [
 	("PSGVAL_INDEX_X", FMAXPSG_SCTN0900_VAL_DEF, "INDEX_X", "0", "X",),
 	("PSGVAL_INDEX_Y", FMAXPSG_SCTN0900_VAL_DEF, "INDEX_Y", "1", "Y",),
 	("PSGVAL_KEY", FMAX_NOP, "keys defined",),
-	("PSGVAL_KEY_ALARMPOPUP_PROPER", FMAXPSG_SCTN0900_KEY_DEF, "K_ALARMPOPUP_PROPER", "key for the button return for the popup",),
 	("PSGVAL_KEY_ALARMPOPUP_TEXT_TEXT", FMAXPSG_SCTN0900_KEY_DEF, "K_ALARMPOPUP_TEXT_TEXT", "key for the text on a popup",),
 	("PSGVAL_KEY_ALPHA_CHANNEL", FMAXPSG_SCTN0900_KEY_DEF, "K_ALPHA_CHANNEL", "alpha channel key",),
 	("PSGVAL_KEY_ALPHA_HIGH", FMAXPSG_SCTN0900_KEY_DEF, "K_ALPHA_HIGH", "alphahigh key",),
@@ -1374,6 +1373,14 @@ TBGLST = [
 	("PSGVAL_KEY_FRAME_POPUP03", FMAXPSG_SCTN0900_KEY_DEF, "FRAME_POPUP03", "holds all of form popup entries",),
 	("PSGVAL_KEY_FRAME_POPUP04", FMAXPSG_SCTN0900_KEY_DEF, "FRAME_POPUP04", "holds all of form popup entries",),
 	("PSGVAL_KEY_FRAME_POPUP05", FMAXPSG_SCTN0900_KEY_DEF, "FRAME_POPUP05", "holds all of form popup entries",),
+
+	("PSGVAL_POPUP_LIST00", FMAXPSG_SCTN0903_LIST_DEF, "POPUP_LIST" "popup list",),
+	("PSGVAL_POPUP_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "POPUP_LIST", "FRAME_POPUP01", "popup list entry FRAME_POPUP01",),
+	("PSGVAL_POPUP_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "POPUP_LIST", "FRAME_POPUP02", "popup list entry FRAME_POPUP02",),
+	("PSGVAL_POPUP_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "POPUP_LIST", "FRAME_POPUP03", "popup list entry FRAME_POPUP03",),
+	("PSGVAL_POPUP_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "POPUP_LIST", "FRAME_POPUP04", "popup list entry FRAME_POPUP04",),
+	("PSGVAL_POPUP_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "POPUP_LIST", "FRAME_POPUP05", "popup list entry FRAME_POPUP05",),
+
 	("PSGVAL_KEY_FRAME_THECLOCK", FMAXPSG_SCTN0900_KEY_DEF, "FRAME_THECLOCK", "holds all of theclock form entries",),
 	("PSGVAL_KEY_INDEX_OF_NEXT_EVENT", FMAXPSG_SCTN0900_KEY_DEF, "K_INDEX_OF_NEXT_EVENT", "index of the next event to alert",),
 	("PSGVAL_KEY_INTERVAL_COUNT", FMAXPSG_SCTN0900_KEY_DEF, "K_INTERVAL_COUNT", "count of the number of times since last reset this interval has triggered an alert",),
@@ -1985,6 +1992,8 @@ TBGLST = [
 	("PSGVAL__VNOWM", FMAXPSG_SCTN0901_VAL_DEF, "NOWM", "0", "comment",),
 	("PSGVAL__VNOWMS", FMAXPSG_SCTN0901_VAL_DEF, "NOWMS", "0", "comment",),
 	("PSGVAL__VNOWS", FMAXPSG_SCTN0901_VAL_DEF, "NOWS", "0", "comment",),
+	("PSGVAL__VNAME_NEXT_EVENT_STR", FMAXPSG_SCTN0901_STR_DEF, "NAME_NEXT_EVENT_STR", "", "comment",),
+
 	("PSGVAL__VNOW_NOMS", FMAXPSG_SCTN0901_VAL_DEF, "NOW_NOMS", "0", "comment",),
 	("PSGVAL__VPKLJAR", FMAXPSG_SCTN0901_VAL_DEF, "_pklJar_", "None", "comment",),
 	("PSGVAL__VTIMEMS_NEXT_MOUSE_CHECK", FMAXPSG_SCTN0901_VAL_DEF, "TIMEMS_NEXT_MOUSE_CHECK", "0", "comment",),
@@ -3615,13 +3624,22 @@ def parseTBGLST(FDTBGLST):
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 		elif _thisAX_ == FMAXPSG_SCTN0903_LIST_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if _thisItemLen_ != 4:
 				doErrorItem("not 4 items", _thisItem_)
 				continue
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
 			_thisListName_ = _thisItem_[2]
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if _thisListName_ not in FMPSG_SCTN0903_LIST_DICT:
 				FMPSG_SCTN0903_LIST_DICT[_thisListName_] = ""
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
 			FMPSG_SCTN0903_LIST_CMNT_DICT[_thisListName_] = f"""{_thisComment_}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
