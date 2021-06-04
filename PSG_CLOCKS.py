@@ -311,13 +311,12 @@ NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
-THIS_ALARM_POPUP_DURATION = 0  # collects the LONGEST time until dismiss (-1 for must be clicked) to popup
 TIME_S_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
 TIME_S_AT_NEXT_EVENT = 0  # comment
 TIME_S_AT_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
 TIMEMS_NEXT_MOUSE_CHECK = 0  # comment
-TIMEMS_NEXT_MOVED = 0  # comment
-TIMEMS_NEXT_UPDATED = 0  # comment
+TIMEMS_AT_NEXT_MOVED = 0  # comment
+TIMEMS_AT_NEXT_UPDATE = 0  # comment
 TIMES_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
 
 
@@ -2454,8 +2453,8 @@ def doMidnightWork():
 	global \
 		APPDS_MAIN, \
 		TIME_MS_NEXT_MOUSE_CHECK, \
-		TIMEMS_NEXT_MOVED, \
-		TIMEMS_NEXT_UPDATED, \
+		TIMEMS_AT_NEXT_MOVED, \
+		TIMEMS_AT_NEXT_UPDATE, \
 		TIME_S_AT_NEXT_EVENT, \
 		TIME_S_AT_NEXT_PERIODIC_JOB
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
@@ -2463,8 +2462,8 @@ def doMidnightWork():
 		localTimes()
 
 	TIME_MS_NEXT_MOUSE_CHECK = 0
-	TIMEMS_NEXT_MOVED = 0
-	TIMEMS_NEXT_UPDATED = 0
+	TIMEMS_AT_NEXT_MOVED = 0
+	TIMEMS_AT_NEXT_UPDATE = 0
 	TIME_S_AT_NEXT_EVENT = 0
 	TIME_S_AT_NEXT_PERIODIC_JOB = 0
 
