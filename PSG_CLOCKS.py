@@ -449,7 +449,7 @@ DPD_ROOT = {  # DPD_ROOT defined
 	F_COMPAREXY: False,  # DPD_ROOT entry compareXY
 	F_DOIT: False,  # DPD_ROOT entry doit
 	F_DOMIDNIGHTWORK: False,  # DPD_ROOT entry doMidnightWork
-	F_DOSTARTUP: False,  # DPD_ROOT entry doStartup
+	F_DOSTARTUP: True,  # DPD_ROOT entry doStartup
 	F_FINDNEXTALARMEVENT: False,  # DPD_ROOT entry findNextAlarmEvent
 	F_FIXTIMEATNEXT: False,  # DPD_ROOT entry fixTimeAtNext
 	F_GETBBOX: False,  # DPD_ROOT entry getBBox
@@ -1885,7 +1885,30 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_TIME_ALARM: 0,  # time of this event if it an alarm
 			K_TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			K_TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_INTERVAL: CF.HALFHOURSECS,  # interval of this event
+			K_TIME_INTERVAL: 60,  # interval of this event
+			K_TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			K_TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			K_TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			K_TIME_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
+		},
+		1: {
+			K_ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
+			K_AUTO_CLOSE_DURATION: 10,  # time of this event
+			K_DISMISSED: False,  # is this event dismissed
+			K_ENABLED: True,  # is this event enabled
+			K_EVENT_NAME: "2nd event",  # this entry's name
+			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
+			K_FIRSTRUN: True,  # are we initializing or not
+			K_FRAMENAME: None,  # time of this event
+			K_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
+			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
+			K_PREDISMISSABLE: True,  # is this event dismissable in advance
+			K_SNOOZABLE: False,  # can this event be snoozed
+			K_SNOOZED: False,  # is this event snoozed
+			K_TIME_ALARM: 0,  # time of this event if it an alarm
+			K_TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
+			K_TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
+			K_TIME_INTERVAL: 120,  # interval of this event
 			K_TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			K_TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			K_TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
@@ -1893,7 +1916,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "00000002",  # version number hex string
+	K_VERSION: "00000003",  # version number hex string
 }
 
 
@@ -2209,8 +2232,8 @@ def doEvent():
 		APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_event_ = APPDS_MAIN[K_EVENT_ENTRIES][APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]]
-	APPDS_MAIN[K_EVENT_ENTRIES][K_IS_ALERTING_NOW] = True
-	return K_POPUP_NEW_ALERT
+	APPDS_MAIN[K_EVENT_ENTRIES][APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]][K_IS_ALERTING_NOW] = True
+	return APPMODE_NEW_ALARMPOPUP
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2277,7 +2300,21 @@ def doStartup():
 		ALL_THE_FRAMES, \
 		APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if (DPD_ROOT[F_DOSTARTUP] is True):
+		print(f"""doStartup
+{CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
+{ALL_THE_FRAMES[FRAME_CLOCKS].debugPrint(
+	printDictinS_=True,
+)}
+""")
+
 	for _index_ in APPDS_MAIN[K_EVENT_ENTRIES]:
+
+		if (DPD_ROOT[F_DOSTARTUP] is True):
+			print(f"""
+{CF.frameIt("_index_", _index_)}
+{CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
+""")
 		_tempDS_ = CF.quickCopyDict(APPDS_MAIN[K_EVENT_ENTRIES][_index_])
 		_tempDS_[K_DISMISSED] = False
 		_tempDS_[K_FIRSTRUN] = True
@@ -2289,19 +2326,20 @@ def doStartup():
 		_tempDS_[K_TIME_AT_ZEROELAPSE] = NOWS
 		APPDS_MAIN[K_EVENT_ENTRIES][_index_] = CF.quickCopyDict(_tempDS_)
 
-	if (ALL_THE_FRAMES[FRAME_CLOCKS] is not None):
-		ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
-			checkboxAlphaDim_=APPDS_MAIN[K_CHECKBOX_ALPHA_DIM],
-			checkboxRunaway_=APPDS_MAIN[K_CHECKBOX_RUNAWAY],
-			timeAtZeroelapse_=NOWS,
-		)
-		ALL_THE_FRAMES[FRAME_CLOCKS]._SIZE_
+	ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+		checkboxAlphaDim_=APPDS_MAIN[K_CHECKBOX_ALPHA_DIM],
+		checkboxRunaway_=APPDS_MAIN[K_CHECKBOX_RUNAWAY],
+		timeAtZeroelapse_=NOWS,
+	)
+	ALL_THE_FRAMES[FRAME_CLOCKS]._SIZE_
 
 	if (DPD_ROOT[F_DOSTARTUP] is True):
 		print(f"""doStartup
-_tempDS_ {_tempDS_}
-ALL_THE_FRAMES[FRAME_CLOCKS].debugPrint(title_="doStartup", printDictinS_=True) {ALL_THE_FRAMES[FRAME_CLOCKS].debugPrint(title_="doStartup", printDictinS_=True)}
-APPDS_MAIN {APPDS_MAIN}
+{CF.frameIt("_tempDS_", _tempDS_)}
+{CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
+{ALL_THE_FRAMES[FRAME_CLOCKS].debugPrint(
+	printDictinS_=True,
+)}
 """)
 
 
@@ -2347,6 +2385,10 @@ def outerLoop():
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (NOWS == TIME_S_AT_NEXT_EVENT):
 			_result_ = doEvent()
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_result_ == APPMODE_NEW_ALARMPOPUP):
+				print(f"""adding a new popup would happen here if this were live""")
 
 			# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
