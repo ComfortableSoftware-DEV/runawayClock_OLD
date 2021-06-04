@@ -309,6 +309,7 @@ NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
+THIS_ALARM_POPUP_DURATION = 0  # collects the LONGEST time until dismiss (-1 for must be clicked) to popup
 TIME_S_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
 TIME_S_AT_NEXT_EVENT = 0  # comment
 TIME_S_AT_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
@@ -461,7 +462,7 @@ DPD_ROOT = {  # DPD_ROOT defined
 	F_OUTERLOOP: False,  # DPD_ROOT entry outerLoop
 	F_SPLITBBOXTORAW: False,  # DPD_ROOT entry splitBBoxToRaw
 	F_SPLITXYTORAW: False,  # DPD_ROOT entry splitXYToRaw
-	F_UPDATEINTERVAL: False,  # DPD_ROOT entry updateInterval
+	F_UPDATEINTERVAL: True,  # DPD_ROOT entry updateInterval
 }
 
 
@@ -531,6 +532,11 @@ POPUP_LIST = [  # popup list
 	FRAME_POPUP03,  # popup list entry FRAME_POPUP03
 	FRAME_POPUP04,  # popup list entry FRAME_POPUP04
 	FRAME_POPUP05,  # popup list entry FRAME_POPUP05
+]
+
+
+THIS_ALARM_POPUP_TEXT_LIST = [  # collects the text to popup
+	"One or more events has alerted at %NOWS%",  # collects the text to popup
 ]
 
 
@@ -1869,7 +1875,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 	K_CHECKBOX_RUNAWAY: False,  # runaway from the mouse bool
 	K_EVENT_ENTRIES: {  # holds events
 		0: {
-			K_ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
+			K_ALARMPOPUP_TEXT_TEXT: "first event",  # alarm text for this event
 			K_AUTO_CLOSE_DURATION: 10,  # time of this event
 			K_DISMISSED: False,  # is this event dismissed
 			K_ENABLED: True,  # is this event enabled
@@ -1885,7 +1891,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_TIME_ALARM: 0,  # time of this event if it an alarm
 			K_TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			K_TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_INTERVAL: 60,  # interval of this event
+			K_TIME_INTERVAL: 30,  # interval of this event
 			K_TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			K_TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			K_TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
@@ -1908,7 +1914,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_TIME_ALARM: 0,  # time of this event if it an alarm
 			K_TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			K_TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_INTERVAL: 120,  # interval of this event
+			K_TIME_INTERVAL: 20,  # interval of this event
 			K_TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			K_TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			K_TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started

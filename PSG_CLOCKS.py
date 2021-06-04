@@ -309,6 +309,7 @@ NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
+THIS_ALARM_POPUP_DURATION = 0  # collects the LONGEST time until dismiss (-1 for must be clicked) to popup
 TIME_S_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
 TIME_S_AT_NEXT_EVENT = 0  # comment
 TIME_S_AT_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
@@ -531,6 +532,11 @@ POPUP_LIST = [  # popup list
 	FRAME_POPUP03,  # popup list entry FRAME_POPUP03
 	FRAME_POPUP04,  # popup list entry FRAME_POPUP04
 	FRAME_POPUP05,  # popup list entry FRAME_POPUP05
+]
+
+
+THIS_ALARM_POPUP_TEXT_LIST = [  # collects the text to popup
+	"One or more events has alerted at %NOWS%",  # collects the text to popup
 ]
 
 
@@ -1869,7 +1875,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 	K_CHECKBOX_RUNAWAY: False,  # runaway from the mouse bool
 	K_EVENT_ENTRIES: {  # holds events
 		0: {
-			K_ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
+			K_ALARMPOPUP_TEXT_TEXT: "first event",  # alarm text for this event
 			K_AUTO_CLOSE_DURATION: 10,  # time of this event
 			K_DISMISSED: False,  # is this event dismissed
 			K_ENABLED: True,  # is this event enabled
@@ -1885,7 +1891,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_TIME_ALARM: 0,  # time of this event if it an alarm
 			K_TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			K_TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_INTERVAL: 60,  # interval of this event
+			K_TIME_INTERVAL: 30,  # interval of this event
 			K_TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			K_TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			K_TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
@@ -1908,7 +1914,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_TIME_ALARM: 0,  # time of this event if it an alarm
 			K_TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			K_TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_INTERVAL: 120,  # interval of this event
+			K_TIME_INTERVAL: 20,  # interval of this event
 			K_TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			K_TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			K_TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
@@ -2206,7 +2212,6 @@ def findNextAlarmEvent():
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if (_event_[K_DISMISSED] is False) and \
 					(_event_[K_ENABLED] is True) and \
-					(_event_[K_IS_ALERTING_NOW] is False) and \
 					(_event_[K_TIME_INTERVAL__BEGIN] <= NOWS < fixTimeAtNext(_event_[K_TIME_INTERVAL__END])):
 				# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
 				_nextEventList_.append((fixTimeAtNext(_event_[K_TIME_AT_NEXT_ALERT]), _index_, _event_[K_EVENTMODE], _event_[K_EVENT_NAME], _event_[K_INTERVAL_COUNT]))
@@ -2239,11 +2244,20 @@ def doEvent():
 	global \
 		APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_event_ = APPDS_MAIN[K_EVENT_ENTRIES][APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]]
-	APPDS_MAIN[K_EVENT_ENTRIES][APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]][K_IS_ALERTING_NOW] = True
-	APPDS_MAIN[K_EVENT_ENTRIES][APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]][K_INTERVAL_COUNT] += 1
+	_eventIndex_ = APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]
+	_event_ = CF.quickCopyDict(APPDS_MAIN[K_EVENT_ENTRIES][_eventIndex_])
+	APPDS_MAIN[K_EVENT_ENTRIES][_eventIndex_]][K_IS_ALERTING_NOW] = True
+	APPDS_MAIN[K_EVENT_ENTRIES][_eventIndex_]][K_INTERVAL_COUNT] += 1
+	APPDS_MAIN[K_EVENT_ENTRIES][_eventIndex_]][K_TIME_AT_LAST_RUN] = NOWS
+
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	for _index_, _values_ in APPDS_MAIN[K_EVENT_ENTRIES].items():
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_index_ != _eventIndex_) and \
+				(_values_[K_TIME_AT_NEXT_ALERT] == NOWS):
+
 	findNextAlarmEvent()
-	return APPMODE_NEW_ALARMPOPUP
+	return APPMODE_NEW_ALARMPOPUP, _eventIndex_
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
