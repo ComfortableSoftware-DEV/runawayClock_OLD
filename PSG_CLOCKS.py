@@ -461,7 +461,7 @@ DPD_ROOT = {  # DPD_ROOT defined
 	F_OUTERLOOP: False,  # DPD_ROOT entry outerLoop
 	F_SPLITBBOXTORAW: False,  # DPD_ROOT entry splitBBoxToRaw
 	F_SPLITXYTORAW: False,  # DPD_ROOT entry splitXYToRaw
-	F_UPDATEINTERVAL: False,  # DPD_ROOT entry updateInterval
+	F_UPDATEINTERVAL: True,  # DPD_ROOT entry updateInterval
 }
 
 
@@ -1873,7 +1873,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_AUTO_CLOSE_DURATION: 10,  # time of this event
 			K_DISMISSED: False,  # is this event dismissed
 			K_ENABLED: True,  # is this event enabled
-			K_EVENT_NAME: "MOVE",  # this entry's name
+			K_EVENT_NAME: "event 1",  # this entry's name
 			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			K_FIRSTRUN: True,  # are we initializing or not
 			K_FRAMENAME: None,  # time of this event
@@ -1916,7 +1916,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "00000004",  # version number hex string
+	K_VERSION: "00000005",  # version number hex string
 }
 
 
@@ -2147,6 +2147,10 @@ def updateInterval(eventIndexToDo_):
 			APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
+	if (DPD_ROOT[F_UPDATEINTERVAL] is True):
+		print(f"""updateInterval start
+APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_] {APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_]}
+""")
 	_eventToDo_ = CF.quickCopyDict(APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_])
 	_TInterval_ = _eventToDo_[K_TIME_INTERVAL]
 	_TTimeAtBegin_ = _eventToDo_[K_TIME_INTERVAL__BEGIN]
@@ -2155,7 +2159,7 @@ def updateInterval(eventIndexToDo_):
 	_TTimeAtStart_ = int(_TTimeSinceBegin_ // _TInterval_) * _TInterval_
 	_TTimeAtNext_ = fixTimeAtNext(_TTimeAtStart_ + _TInterval_)
 
-	if _eventToDo_[K_FIRSTRUN] is True:
+	if (_eventToDo_[K_FIRSTRUN] is True):
 #		_TTimeAtStart_ = int(_TTimeSinceBegin_ // _TInterval_) * _TInterval_
 #		_TTimeAtNext_ = fixTimeAtNext(_TTimeAtStart_ + _TInterval_)
 		APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_FIRSTRUN] = False
@@ -2164,6 +2168,10 @@ def updateInterval(eventIndexToDo_):
 	APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_INTERVAL_START] = _TTimeAtStart_
 	APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_AT_NEXT_ALERT] = _TTimeAtNext_
 
+	if (DPD_ROOT[F_UPDATEINTERVAL] is True):
+		print(f"""updateInterval finish
+APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_] {APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_]}
+""")
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2233,7 +2241,8 @@ def doEvent():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_event_ = APPDS_MAIN[K_EVENT_ENTRIES][APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]]
 	APPDS_MAIN[K_EVENT_ENTRIES][APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]][K_IS_ALERTING_NOW] = True
-	updateInterval(APPDS_MAIN[K_INDEX_OF_NEXT_EVENT])
+	APPDS_MAIN[K_EVENT_ENTRIES][APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]][K_INTERVAL_COUNT] += 1
+	findNextAlarmEvent()
 	return APPMODE_NEW_ALARMPOPUP
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1

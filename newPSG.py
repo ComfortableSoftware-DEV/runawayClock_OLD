@@ -1873,7 +1873,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_AUTO_CLOSE_DURATION: 10,  # time of this event
 			K_DISMISSED: False,  # is this event dismissed
 			K_ENABLED: True,  # is this event enabled
-			K_EVENT_NAME: "MOVE",  # this entry's name
+			K_EVENT_NAME: "event 1",  # this entry's name
 			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			K_FIRSTRUN: True,  # are we initializing or not
 			K_FRAMENAME: None,  # time of this event
@@ -1916,7 +1916,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "00000004",  # version number hex string
+	K_VERSION: "00000005",  # version number hex string
 }
 
 
