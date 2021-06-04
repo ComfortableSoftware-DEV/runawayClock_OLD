@@ -996,7 +996,7 @@ class CLASS_CLOCKS(object):
 			F___INIT__: True,  # define a DPD /
 			F___ENTER__: False,  # define __enter__
 			F___EXIT__: False,  # define __exit__ in CLOCKS
-			F_CHECKMOUSE: True,  # define checkMouse
+			F_CHECKMOUSE: False,  # define checkMouse
 			F_DEBUGPRINT: False,  # read the frame and set self._RESULT_
 			F_DICTINSTRREPL: False,  # define runaway
 			F_DICTINREPL: False,  # define runaway
@@ -1010,7 +1010,7 @@ class CLASS_CLOCKS(object):
 			F_RUNAWAY: False,  # define runaway
 			F_SETCHECKBOX: False,  # define runaway
 			F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
-			F_UPDATE: True,  # define the required update function
+			F_UPDATE: False,  # define the required update function
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1842,14 +1842,14 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 			self.debugPrint(
 				title_="update",
 				printDictinS_=False,
-				message_ = f"""
-self._TIME_TO_UPDATE_ {self._TIME_TO_UPDATE_} = NOWMS {NOWMS} + SZ_TIMEMS_BETWEEN_UPDATES {SZ_TIMEMS_BETWEEN_UPDATES}
+				message_=f"""
+self._TIME_TO_UPDATE_ {CF.frameItMS("_TIME_TO_UPDATE_", self._TIME_TO_UPDATE_)} = {CF.frameItMS("NOWMS", NOWMS)} + SZ_TIMEMS_BETWEEN_UPDATES {SZ_TIMEMS_BETWEEN_UPDATES / 1000}
 self._CURRENT_LOCATION_ {self._CURRENT_LOCATION_} = self._MAINFRAME_.CurrentLocation()
 self._BBOX_ {self._BBOX_} = getBBox(self._CURRENT_LOCATION_, self._SIZE_ {self._SIZE_})
 self._CLOSE_BBOX_ {self._CLOSE_BBOX_} = getCloseBBox(self._CURRENT_LOCATION_, self._SIZE_)
-self._DICTIN_[K_TIME_CLOCK] {self._DICTIN_[K_TIME_CLOCK]} = NOWS
-self._DICTIN_[K_TIME_TOGO] {self._DICTIN_[K_TIME_TOGO]} = (self._DICTIN_[K_TIME_AT_NEXT_ALERT] {self._DICTIN_[K_TIME_AT_NEXT_ALERT]} - NOWS)
-self._DICTIN_[K_TIME_ELAPSED] {self._DICTIN_[K_TIME_ELAPSED]} = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE] {self._DICTIN_[K_TIME_AT_ZEROELAPSE]})
+self._DICTIN_[K_TIME_CLOCK] {CF.frameItHMS("K_TIME_CLOCK", self._DICTIN_[K_TIME_CLOCK])} = {CF.frameItHMS("NOWS", NOWS)}
+self._DICTIN_[K_TIME_TOGO] {CF.frameItHMS("K_TIME_TOGO", self._DICTIN_[K_TIME_TOGO])} = (self._DICTIN_[K_TIME_AT_NEXT_ALERT] {CF.frameItHMS("K_TIME_AT_NEXT_ALERT", self._DICTIN_[K_TIME_AT_NEXT_ALERT])} - NOWS  {CF.frameItHMS("NOWS", NOWS)})
+self._DICTIN_[K_TIME_ELAPSED] {CF.frameItHMS("K_TIME_ELAPSED", self._DICTIN_[K_TIME_ELAPSED])} = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE] {CF.frameItHMS("K_TIME_AT_ZEROELAPSE", self._DICTIN_[K_TIME_AT_ZEROELAPSE])})
  self._CURRENT_MOUSE_LOCATION_ {self._CURRENT_MOUSE_LOCATION_}, self._CURRENT_MOUSE_STATUS_ {self._CURRENT_MOUSE_STATUS_} = self.checkMouse()
 """,
 			)
