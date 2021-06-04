@@ -1468,6 +1468,7 @@ TBGLST = [
 	("PSGVAL_SZ_TIMES_BETWEEN_PERIODIC_JOB", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMES_BTWN_PERIODIC_JOB", "900", "time between periodic job runnings",),
 	("PSGVAL_THIS_ALARM_POPUP_TEXT_LIST", FMAXPSG_SCTN0903_LIST_DEF, "THIS_ALARM_POPUP_TEXT_LIST", "collects the text to popup",),
 	("PSGVAL_THIS_ALARM_POPUP_TEXT_LIST", FMAXPSG_SCTN0903_LIST_STR_ADD, "THIS_ALARM_POPUP_TEXT_LIST", "One or more events has alerted at %NOWS%", "collects the text to popup",),
+	("PSGVAL_SZ_ALARM_POPUP_TEXT", FMAXPSG_SCTN0900_STR_DEF, "SZ_ALARM_POPUP_TEXT", "One or more events has alerted at %NOWS%", "default popup text first line",),
 	("PSGVAL_TIMEH_ADJUST_HRS", FMAXPSG_SCTN0900_VAL_DEF, "TIMEH_ADJUST_HRS", "0", "comment",),
 	("PSGVAL_TIMEM_ADJUST_MINS", FMAXPSG_SCTN0900_VAL_DEF, "TIMEM_ADJUST_MINS", "0", "comment",),
 	("PSGVAL_TITLE", FMAX_NOP, "titles start here",),

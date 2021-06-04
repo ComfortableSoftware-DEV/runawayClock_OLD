@@ -2230,66 +2230,105 @@ def findNextAlarmEvents():
 		# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	if _nextEventList_ != []:
 
-			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if len(_nextEventList_ == 1):
-			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
-				eventMode_=_nextEventList_[0][2],
-				currentIntervalCount_=_nextEventList_[0][4],
-				nameNextEvent_=_nextEventList_[0][3],
-				timeAtNextAlert_=_nextEventList_[0][0],
-			)
-			CURRENT_EVENTMODE_VAL = _nextEventList_[0][2]  # (time, index, mode, name, intervalCount)
-			CURRENT_INTERVAL_COUNT = _nextEventList_[0][4]
-			NAME_NEXT_EVENT_STR = _nextEventList_[0][3]  # (time, index, mode, name, intervalCount)
-			TIME_S_AT_NEXT_EVENT = _nextEventList_[0][0]
-			return
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-
-			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_nextEventList_[1][0] > _nextEventList_[0][0]):
-			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
-				eventMode_=_nextEventList_[0][2],
-				currentIntervalCount_=_nextEventList_[0][4],
-				nameNextEvent_=_nextEventList_[0][3],
-				timeAtNextAlert_=_nextEventList_[0][0],
-			)
-			CURRENT_EVENTMODE_VAL = _nextEventList_[0][2]  # (time, index, mode, name, intervalCount)
-			CURRENT_INTERVAL_COUNT = _nextEventList_[0][4]
-			NAME_NEXT_EVENT_STR = _nextEventList_[0][3]  # (time, index, mode, name, intervalCount)
-			TIME_S_AT_NEXT_EVENT = _nextEventList_[0][0]
-			return
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-
-
 		_currentIntervalCount0_ = _nextEventList_[0][4]
 		_eventMode0_ = _nextEventList_[0][2]
 		_nameNextEvent0_ = _nextEventList_[0][3]
 		_timeAtNextAlert0_ = _nextEventList_[0][0]
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if len(_nextEventList_ == 1):
+			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+				eventMode_=_eventMode0_,
+				currentIntervalCount_=_currentIntervalCount0_,
+				nameNextEvent_=_nameNextEvent0_,
+				timeAtNextAlert_=_timeAtNextAlert0_,
+			)
+			CURRENT_EVENTMODE_VAL = _eventMode0_  # (time, index, mode, name, intervalCount)
+			CURRENT_INTERVAL_COUNT = _currentIntervalCount0_
+			NAME_NEXT_EVENT_STR = _nameNextEvent0_  # (time, index, mode, name, intervalCount)
+			TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
+			return
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_nextEventList_[1][0] > _timeAtNextAlert0_):
+			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+				eventMode_=_eventMode0_,
+				currentIntervalCount_=_currentIntervalCount0_,
+				nameNextEvent_=_nameNextEvent0_,
+				timeAtNextAlert_=_timeAtNextAlert0_,
+			)
+			CURRENT_EVENTMODE_VAL = _eventMode0_  # (time, index, mode, name, intervalCount)
+			CURRENT_INTERVAL_COUNT = _currentIntervalCount0_
+			NAME_NEXT_EVENT_STR = _nameNextEvent0_  # (time, index, mode, name, intervalCount)
+			TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
+			return
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
 		_currentIntervalCount1_ = _nextEventList_[1][4]
 		_eventMode1_ = _nextEventList_[1][2]
 		_nameNextEvent1_ = _nextEventList_[1][3]
 		_timeAtNextAlert1_ = _nextEventList_[1][0]
 
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (len(_nextEventList_) == 2) or \
 				(_nextEventList_[2][0] > _timeAtNextAlert1_):
+
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (_currentIntervalCount0_ > _currentIntervalCount1_):
-				_currentIntervalCount_ = _currentIntervalCount0_
+			if (_eventMode0_ == EVENTMODE_INTERVAL) or \
+					(_eventMode1_ == EVENTMODE_INTERVAL):
+				_eventMode_ = EVENTMODE_INTERVAL
+
 				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
 			else:
-				_currentIntervalCount_ = _currentIntervalCount1_
+				_eventMode_ = EVENTMODE_ALARM
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
 			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
-				eventMode_=_nextEventList_[0][2],
-				currentIntervalCount_=_nextEventList_[0][4],
-				nameNextEvent_=_nextEventList_[0][3],
-				timeAtNextAlert_=_nextEventList_[0][0],
+				eventMode_=_eventMode_,
+				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_],
+				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_],
+				timeAtNextAlert_=_timeAtNextAlert0_,
 			)
-			CURRENT_EVENTMODE_VAL = _nextEventList_[0][2]  # (time, index, mode, name, intervalCount)
-			CURRENT_INTERVAL_COUNT = _nextEventList_[0][4]
-			NAME_NEXT_EVENT_STR = _nextEventList_[0][3]  # (time, index, mode, name, intervalCount)
-			TIME_S_AT_NEXT_EVENT = _nextEventList_[0][0]
+			CURRENT_EVENTMODE_VAL = _eventMode_
+			CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_]
+			NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_]
+			TIME_S_AT_NEXT_EVENT = _
 			return
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		_currentIntervalCount2_ = _nextEventList_[2][4]
+		_eventMode2_ = _nextEventList_[2][2]
+		_nameNextEvent2_ = _nextEventList_[2][3]
+		_timeAtNextAlert2_ = _nextEventList_[2][0]
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (len(_nextEventList_) == 3) or \
+				(_nextEventList_[3][0] > _timeAtNextAlert2_):
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_eventMode0_ == EVENTMODE_INTERVAL) or \
+					(_eventMode1_ == EVENTMODE_INTERVAL) or \
+					(_eventMode2_ == EVENTMODE_INTERVAL):
+				_eventMode_ = EVENTMODE_INTERVAL
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			else:
+				_eventMode_ = EVENTMODE_ALARM
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+				eventMode_=_eventMode_,
+				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_],
+				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_],
+				timeAtNextAlert_=_timeAtNextAlert0_,
+			)
+			CURRENT_EVENTMODE_VAL = _eventMode_
+			CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_]
+			NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_]
+			TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
+			return
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
