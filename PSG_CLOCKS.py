@@ -2325,12 +2325,73 @@ def findNextAlarmEvents():
 			)
 			CURRENT_EVENTMODE_VAL = _eventMode_
 			CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_]
-			NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_]
+			NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_]
 			TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
 			return
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
+		_currentIntervalCount3_ = _nextEventList_[3][4]
+		_eventMode3_ = _nextEventList_[3][2]
+		_nameNextEvent3_ = _nextEventList_[3][3]
+		_timeAtNextAlert3_ = _nextEventList_[3][0]
 
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (len(_nextEventList_) == 4) or \
+				(_nextEventList_[4][0] > _timeAtNextAlert3_):
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_eventMode0_ == EVENTMODE_INTERVAL) or \
+					(_eventMode1_ == EVENTMODE_INTERVAL) or \
+					(_eventMode2_ == EVENTMODE_INTERVAL) or \
+					(_eventMode3_ == EVENTMODE_INTERVAL):
+				_eventMode_ = EVENTMODE_INTERVAL
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			else:
+				_eventMode_ = EVENTMODE_ALARM
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+			ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+				eventMode_=_eventMode_,
+				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCoun3_],
+				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_],
+				timeAtNextAlert_=_timeAtNextAlert0_,
+			)
+			CURRENT_EVENTMODE_VAL = _eventMode_
+			CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCount3_]
+			NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_]
+			TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
+			return
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		_currentIntervalCount4_ = _nextEventList_[4][4]
+		_eventMode4_ = _nextEventList_[4][2]
+		_nameNextEvent4_ = _nextEventList_[4][3]
+		_timeAtNextAlert4_ = _nextEventList_[4][0]
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_eventMode0_ == EVENTMODE_INTERVAL) or \
+				(_eventMode1_ == EVENTMODE_INTERVAL) or \
+				(_eventMode2_ == EVENTMODE_INTERVAL) or \
+				(_eventMode3_ == EVENTMODE_INTERVAL) or \
+				(_eventMode4_ == EVENTMODE_INTERVAL):
+			_eventMode_ = EVENTMODE_INTERVAL
+
+			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		else:
+			_eventMode_ = EVENTMODE_ALARM
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		ALL_THE_FRAMES[FRAME_CLOCKS].easyUpdate(
+			eventMode_=_eventMode_,
+			currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCoun3_, _currentIntervalCount4_],
+			nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_, _nameNextEvent4_],
+			timeAtNextAlert_=_timeAtNextAlert0_,
+		)
+		CURRENT_EVENTMODE_VAL = _eventMode_
+		CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCount3_, _currentIntervalCount4_]
+		NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_, _nameNextEvent4_]
+		TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
