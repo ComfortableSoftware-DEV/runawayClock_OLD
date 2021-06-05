@@ -6411,7 +6411,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_LIST_TIMES_.append({_thisElementName_[1:-1]}){NEWLINE}"""
 				FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_({_thisElementName_[1:-1]})){NEWLINE}"""
 
-			FMPSG_SCTN09FF_CLASS_DEF_DICT[F"""K_{_thisElementName_}"""]
+			FMPSG_SCTN09FF_CLASS_DEF_DICT[F"""K{_thisElementName_}"""] = f"""{DBLQT}k{_thisElementName_}"""
 			FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
