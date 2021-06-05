@@ -450,18 +450,18 @@ DPD_ROOT = {  # DPD_ROOT defined
 	F_DOIT: False,  # DPD_ROOT entry doit
 	F_DOMIDNIGHTWORK: False,  # DPD_ROOT entry doMidnightWork
 	F_DOSTARTUP: False,  # DPD_ROOT entry doStartup
-	F_FINDNEXTALARMEVENT: False,  # DPD_ROOT entry findNextAlarmEvent
+	F_FINDNEXTALARMEVENT: True,  # DPD_ROOT entry findNextAlarmEvent
 	F_FIXTIMEATNEXT: False,  # DPD_ROOT entry fixTimeAtNext
 	F_GETBBOX: False,  # DPD_ROOT entry getBBox
 	F_GETCLOSEBBOX: False,  # DPD_ROOT entry getCloseBBox
 	F_GETMOUSEPOS: False,  # DPD_ROOT entry getMousePos
 	F_INNERLOOP: False,  # DPD_ROOT entry outerLoop
 	F_ISINBBOX: False,  # DPD_ROOT entry isInBBox
-	F_LOCALTIMES: False,  # DPD_ROOT entry localTimes
+	F_LOCALTIMES: True,  # DPD_ROOT entry localTimes
 	F_OUTERLOOP: False,  # DPD_ROOT entry outerLoop
 	F_SPLITBBOXTORAW: False,  # DPD_ROOT entry splitBBoxToRaw
 	F_SPLITXYTORAW: False,  # DPD_ROOT entry splitXYToRaw
-	F_UPDATEINTERVAL: True,  # DPD_ROOT entry updateInterval
+	F_UPDATEINTERVAL: False,  # DPD_ROOT entry updateInterval
 }
 
 
@@ -1020,7 +1020,7 @@ class CLASS_CLOCKS(object):
 			F_DEBUGPRINT: False,  # read the frame and set self._RESULT_
 			F_DICTINSTRREPL: False,  # define runaway
 			F_DICTINREPL: False,  # define runaway
-			F_EASYUPDATE: False,  # load the whole thing from the file for easyUpdate
+			F_EASYUPDATE: True,  # load the whole thing from the file for easyUpdate
 			F_EASYUPDATEPARMS: False,  # load the whole thing from the file for easyUpdate
 			F_ENINT: False,  # read the frame and set self._RESULT_
 			F_ENSTRING: False,  # read the frame and set self._RESULT_
@@ -1030,7 +1030,7 @@ class CLASS_CLOCKS(object):
 			F_RUNAWAY: False,  # define runaway
 			F_SETCHECKBOX: False,  # define runaway
 			F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
-			F_UPDATE: False,  # define the required update function
+			F_UPDATE: True,  # define the required update function
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1755,13 +1755,13 @@ alphaChannel_ {alphaChannel_}
 
 					# ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥
 				else:
-					_dictToRtn_[_thisKey_] = _thisItem_
+					_dictToRtn_[_thisKey_] = _thisVal_
 
 				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
 
 				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
 			else:
-				_dictToRtn_[_thisKey_] = _thisItem_
+				_dictToRtn_[_thisKey_] = _thisVal_
 
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
