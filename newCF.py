@@ -301,6 +301,7 @@ STR_SUBST_DICT = {
 	"%CBRKT%": f"""{CBRKT}""",
 	"%CPAREN%": f"""{CPAREN}""",
 	"%DQ%": f"""{DBLQT}""",
+	"%ESCLN%": f""" {BKSLSH}{NEWLINE}""",
 	"%FOLDLN1E%": f"""{FOLD1ENDHERELN}""",
 	"%FOLDLN2E%": f"""{FOLD2ENDHERELN}""",
 	"%FOLDLN3E%": f"""{FOLD3ENDHERELN}""",

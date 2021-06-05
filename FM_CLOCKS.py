@@ -212,6 +212,7 @@ STR_SUBST_DICT = {
 	"%CBRKT%": f"""{CBRKT}""",
 	"%CPAREN%": f"""{CPAREN}""",
 	"%DQ%": f"""{DBLQT}""",
+	"%ESCLN%": f""" {BKSLSH}{NEWLINE}""",
 	"%FOLDLN1E%": f"""{FOLD1ENDHERELN}""",
 	"%FOLDLN2E%": f"""{FOLD2ENDHERELN}""",
 	"%FOLDLN3E%": f"""{FOLD3ENDHERELN}""",
@@ -1255,10 +1256,10 @@ TBGLST = [
 	("PSGVAL_COLOR_TIME_TOGO", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TIME_TOGO", "#AA6600", "color of the clock on any window/frame/etc.",),
 	("PSGVAL_COLOR_WHITE", FMAXPSG_SCTN0900_STR_DEF, "COLOR_WHITE", "#FFFFFF", "white",),
 	("PSGVAL_DNUPDATE_LIST00", FMAXPSG_SCTN0903_LIST_DEF, "DNUPDATE_LIST", "list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)",),
-	("PSGVAL_DNUPDATE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "DNUPDATE_LIST", "K_NAME_NEXT_EVENT", "deal with the list of names for the event(s) to come",),
 	("PSGVAL_DNUPDATE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "DNUPDATE_LIST", "K_ALARMPOPUP_TEXT_TEXT", "deal with the list of names for the event(s) to come",),
-	("PSGVAL_DNUPDATE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "DNUPDATE_LIST", "K_INTERVAL_COUNT", "deal with the list of names for the event(s) to come",),
 	("PSGVAL_DNUPDATE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "DNUPDATE_LIST", "K_INDEXES", "deal with the list of names for the event(s) to come",),
+	("PSGVAL_DNUPDATE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "DNUPDATE_LIST", "K_INTERVAL_COUNT", "deal with the list of names for the event(s) to come",),
+	("PSGVAL_DNUPDATE_LIST01", FMAXPSG_SCTN0903_LIST_VAL_ADD, "DNUPDATE_LIST", "K_NAME_NEXT_EVENT", "deal with the list of names for the event(s) to come",),
 	("PSGVAL_DPD_ROOT00", FMAXPSG_SCTN0902_DICT_DEF, "DPD_ROOT", "DPD_ROOT defined",),
 	("PSGVAL_DPD_ROOT01", FMAXPSG_SCTN0902_DICT_VV_ADD, "DPD_ROOT", "F_COMPAREBBOX", "False", "DPD_ROOT entry compareBBox",),
 	("PSGVAL_DPD_ROOT01", FMAXPSG_SCTN0902_DICT_VV_ADD, "DPD_ROOT", "F_COMPAREXY", "False", "DPD_ROOT entry compareXY",),
@@ -1465,9 +1466,9 @@ TBGLST = [
 	("PSGVAL_SZ_PKLNAME_DEV", FMAXPSG_SCTN0900_STR_DEF, "SZ_PKLNAME_DEV", "runawayClock_DEV.pkl", "name of the pkl file for the app in dev",),
 	("PSGVAL_SZ_PKLNAME_PROD", FMAXPSG_SCTN0900_STR_DEF, "SZ_PKLNAME_PROD", "runawayClock.pkl", "name of the pkl file for the app in use",),
 	("PSGVAL_SZ_RUNAWAY", FMAXPSG_SCTN0900_VAL_DEF, "SZ_RUNAWAY", "False", "default runaway state",),
-	("PSGVAL_SZ_TIMEMS_BETWEEN_NEXT_DISPLAYS", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMEMS_BETWEEN_NEXT_DISPLAYS", "300", "throttle mouse checking",),
 	("PSGVAL_SZ_TIMEMS_BETWEEN_MOUSE_CHECKS", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMEMS_BETWEEN_MOUSE_CHECKS", "300", "throttle mouse checking",),
 	("PSGVAL_SZ_TIMEMS_BETWEEN_MOVES", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMEMS_BETWEEN_MOVES", "500", "time_ms between moves",),
+	("PSGVAL_SZ_TIMEMS_BETWEEN_NEXT_DISPLAYS", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMEMS_BETWEEN_NEXT_DISPLAYS", "300", "throttle mouse checking",),
 	("PSGVAL_SZ_TIMEMS_BETWEEN_UPDATES", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMEMS_BETWEEN_UPDATES", "500", "time_ms between updating windows/frames/etc",),
 	("PSGVAL_SZ_TIMEOUT_MS", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMEOUT_MS", "100", "timeout for PSG",),
 	("PSGVAL_SZ_TIMES_BETWEEN_PERIODIC_JOB", FMAXPSG_SCTN0900_VAL_DEF, "SZ_TIMES_BTWN_PERIODIC_JOB", "900", "time between periodic job runnings",),
@@ -1851,9 +1852,9 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV, "CLOCKS", "K_TIME_CLOCK", "ZERO_CLOCK", "True", "time clock or wall clock",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV, "CLOCKS", "K_TIME_ELAPSED", "ZERO_CLOCK", "True", "time elapsed",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV, "CLOCKS", "K_TIME_TOGO", "ZERO_CLOCK", "True", "countdown to next event",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT03_KEY01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY, "CLOCKS", "K_INDEXES", "K_CHECKBOX_ALPHA_DIM", "False", "add foreign key for alpha dimming",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_KEY01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY, "CLOCKS", "K_CHECKBOX_ALPHA_DIM", "K_CHECKBOX_ALPHA_DIM", "False", "add foreign key for alpha dimming",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_KEY01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY, "CLOCKS", "K_CHECKBOX_RUNAWAY", "K_CHECKBOX_RUNAWAY", "False", "add foreign key for runningaway",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT03_KEY01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY, "CLOCKS", "K_INDEXES", "K_CHECKBOX_ALPHA_DIM", "False", "add foreign key for alpha dimming",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0100", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "if (self._DPD_[F___INIT__] is True):", "see if debug printing is on",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0101", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "%TAB1%self.debugPrint(", "debugPrint",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0102", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "%TAB2%title_=%DQ%__INIT__3%DQ%,", "print _KEY_DICT_REVERSE_",),
@@ -1866,7 +1867,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_03_DEBUG_PRINT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "debugPrint", "debugPrint.py", "False", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_DICTINSTR_REPL", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "dictinstrRepl", "dictinstrRepl.py", "False", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC_03_DICTIN_REPL", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "dictinRepl", "dictinRepl.py", "False", "define runaway",),
-	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "CLOCKS/easyUpdate", "easyUpdate.py", "False", "load the whole thing from the file for easyUpdate",),
+	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "CLOCKS/easyUpdate.py", "False", "load the whole thing from the file for easyUpdate",),
 	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATEPARMS", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdateParms", "easyUpdateParms.py", "False", "load the whole thing from the file for easyUpdate",),
 	("PSGVAL__CLOCKS_FUNC_03_ENINT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enint", "enint.py", "False", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_ENSTRING", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enstring", "enstring.py", "False", "read the frame and set self._RESULT_",),
@@ -2026,7 +2027,7 @@ TBGLST = [
 	("PSGVAL__VNOWS", FMAXPSG_SCTN0901_VAL_DEF, "NOWS", "0", "comment",),
 	("PSGVAL__VNOW_NOMS", FMAXPSG_SCTN0901_VAL_DEF, "NOW_NOMS", "0", "comment",),
 	("PSGVAL__VPKLJAR", FMAXPSG_SCTN0901_VAL_DEF, "_pklJar_", "None", "comment",),
-	("PSGVAL__VTIME_MS_AT_NEXT_MOUSE_CHECK", FMAX_NOP, FMAXPSG_SCTN0901_VAL_DEF, "TIME_MS_AT_NEXT_MOUSE_CHECK", "0", "comment",),
+	("PSGVAL__VTIME_MS_AT_NEXT_MOUSE_CHECK", FMAX_NOP, "FMAXPSG_SCTN0901_VAL_DEF", "TIME_MS_AT_NEXT_MOUSE_CHECK", "0", "comment",),
 	("PSGVAL__VTIME_MS_AT_NEXT_MOVED", FMAXPSG_SCTN0901_VAL_DEF, "TIME_MS_AT_NEXT_MOVED", "0", "comment",),
 	("PSGVAL__VTIME_MS_AT_NEXT_UPDATE", FMAXPSG_SCTN0901_VAL_DEF, "TIME_MS_AT_NEXT_UPDATE", "0", "comment",),
 	("PSGVAL__VTIME_S_ADJUST_VALUE", FMAXPSG_SCTN0901_VAL_DEF, "TIME_S_ADJUST_VALUE", "lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))", "comment",),
@@ -6594,7 +6595,7 @@ def __main__():
 	# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# FMPSG_MAIN_ENDS
 
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1ff
 
 
 if __name__ == "__main__":
