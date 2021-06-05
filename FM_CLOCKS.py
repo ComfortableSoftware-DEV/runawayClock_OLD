@@ -1866,7 +1866,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_03_DEBUG_PRINT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "debugPrint", "debugPrint.py", "False", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_DICTINSTR_REPL", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "dictinstrRepl", "dictinstrRepl.py", "False", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC_03_DICTIN_REPL", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "dictinRepl", "dictinRepl.py", "False", "define runaway",),
-	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "easyUpdate.py", "False", "load the whole thing from the file for easyUpdate",),
+	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "CLOCKS/easyUpdate", "easyUpdate.py", "False", "load the whole thing from the file for easyUpdate",),
 	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATEPARMS", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdateParms", "easyUpdateParms.py", "False", "load the whole thing from the file for easyUpdate",),
 	("PSGVAL__CLOCKS_FUNC_03_ENINT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enint", "enint.py", "False", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_ENSTRING", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enstring", "enstring.py", "False", "read the frame and set self._RESULT_",),
