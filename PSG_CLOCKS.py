@@ -102,15 +102,15 @@ F_SPLITXYTORAW = "F_SPLITXYTORAW"  # FKEY entry splitXYToRaw
 F_UPDATE = "F_UPDATE"  # define the required update function
 F_UPDATEFROMDICT = "F_UPDATEFROMDICT"  # update the displayed info from a dict or the default _DICTIN_
 F_UPDATEINTERVAL = "F_UPDATEINTERVAL"  # FKEY entry updateInterval
-FRAME_CLOCKS = "FRAME_CLOCKS"  # holds all of clocks form entries
+FORM_CLOCKS = "FORM_CLOCKS"  # holds all of clocks form entries
 FRAME_EDITENTRY = "FRAME_EDITENTRY"  # holds all of form edit-entry entries
 FRAME_EDITOR = "FRAME_EDITOR"  # holds all of form editor entries
 FRAME_MAIN = "FRAME_MAIN"  # holds all of form main entries
-FRAME_POPUP01 = "FRAME_POPUP01"  # holds all of form popup entries
-FRAME_POPUP02 = "FRAME_POPUP02"  # holds all of form popup entries
-FRAME_POPUP03 = "FRAME_POPUP03"  # holds all of form popup entries
-FRAME_POPUP04 = "FRAME_POPUP04"  # holds all of form popup entries
-FRAME_POPUP05 = "FRAME_POPUP05"  # holds all of form popup entries
+FORM_POPUP01 = "FORM_POPUP01"  # holds all of form popup entries
+FORM_POPUP02 = "FORM_POPUP02"  # holds all of form popup entries
+FORM_POPUP03 = "FORM_POPUP03"  # holds all of form popup entries
+FORM_POPUP04 = "FORM_POPUP04"  # holds all of form popup entries
+FORM_POPUP05 = "FORM_POPUP05"  # holds all of form popup entries
 FRAME_THECLOCK = "FRAME_THECLOCK"  # holds all of theclock form entries
 INDEX_EAST = 2  # EAST
 INDEX_NORTH = 1  # NORTH
@@ -435,12 +435,12 @@ VISIBLE = "visible"  # visibility of elements
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALL_THE_FORMS = {  # comment
-	FRAME_CLOCKS: None,  # ENTRY IN FORMS
-	FRAME_POPUP01: None,  # ENTRY IN FORMS
-	FRAME_POPUP02: None,  # ENTRY IN FORMS
-	FRAME_POPUP03: None,  # ENTRY IN FORMS
-	FRAME_POPUP04: None,  # ENTRY IN FORMS
-	FRAME_POPUP05: None,  # ENTRY IN FORMS
+	FORM_CLOCKS: None,  # ENTRY IN FORMS
+	FORM_POPUP01: None,  # ENTRY IN FORMS
+	FORM_POPUP02: None,  # ENTRY IN FORMS
+	FORM_POPUP03: None,  # ENTRY IN FORMS
+	FORM_POPUP04: None,  # ENTRY IN FORMS
+	FORM_POPUP05: None,  # ENTRY IN FORMS
 }
 
 
@@ -534,11 +534,11 @@ NEXT_ALARM_NAME_LIST = [  # holds all of the names of the next time an alert hap
 
 
 POPUP_LIST = [  # popup list
-	FRAME_POPUP01,  # popup list entry FRAME_POPUP01
-	FRAME_POPUP02,  # popup list entry FRAME_POPUP02
-	FRAME_POPUP03,  # popup list entry FRAME_POPUP03
-	FRAME_POPUP04,  # popup list entry FRAME_POPUP04
-	FRAME_POPUP05,  # popup list entry FRAME_POPUP05
+	FORM_POPUP01,  # popup list entry FORM_POPUP01
+	FORM_POPUP02,  # popup list entry FORM_POPUP02
+	FORM_POPUP03,  # popup list entry FORM_POPUP03
+	FORM_POPUP04,  # popup list entry FORM_POPUP04
+	FORM_POPUP05,  # popup list entry FORM_POPUP05
 ]
 
 
@@ -2013,52 +2013,52 @@ checkboxValue_ {checkboxValue_}
 			)
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-	def updateFromDict(self,
-			dictToUpdateFrom_=None):
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if dictToUpdateFrom_ is None:
-			dictToUpdateFrom_ = CF.quickCopyDict(self._DICTIN_)
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._DICTIN_.update(dictToUpdateFrom_)
 
-			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DPD_[F_UPDATEFROMDICT] is True):
-			print(f"""not default updateFromDict before
-dictToUpdateFrom_ {self.dictinRepl(dictToUpdateFrom_)}
-_DICTIN_ {self.dictinRepl()}
-""")
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self.enint()
-		self.enstring()
-		dictToUpdateFrom_ = CF.quickCopyDict(self._DICTINSTR_)
 
-		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		for _thisKey_, _thisVal_ in dictToUpdateFrom_.items():
+
+
+
+
+
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (_thisKey_ not in DNUPDATE_LIST):
-				self._MAINFRAME_[_thisKey_].Update(value=_thisVal_)
-			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
-
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-
-		__dummy__ = self.quickRead()
-
-			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DPD_[F_UPDATEFROMDICT]):
-			self.debugPrint(
-				title_="updateFromDict",
-				printDictinS_=True,
 				message_=f"""
-dictToUpdateFrom_ {dictToUpdateFrom_}
-__dummy__ {__dummy__}{CF.NEWLINE}""")
+				printDictinS_=True,
+				self._MAINFRAME_[_thisKey_].Update(value=_thisVal_)
+				title_="updateFromDict",
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+			dictToUpdateFrom_ = CF.quickCopyDict(self._DICTIN_)
+			dictToUpdateFrom_=None):
+			if (_thisKey_ not in DNUPDATE_LIST):
+			print(f"""not default updateFromDict before
+			self.debugPrint(
+		__dummy__ = self.quickRead()
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+		dictToUpdateFrom_ = CF.quickCopyDict(self._DICTINSTR_)
+		for _thisKey_, _thisVal_ in dictToUpdateFrom_.items():
+		if (self._DPD_[F_UPDATEFROMDICT] is True):
+		if (self._DPD_[F_UPDATEFROMDICT]):
+		if dictToUpdateFrom_ is None:
+		self._DICTIN_.update(dictToUpdateFrom_)
+		self.enint()
+		self.enstring()
+	def updateFromDict(self,
+__dummy__ {__dummy__}{CF.NEWLINE}""")
+_DICTIN_ {self.dictinRepl()}
+""")
+dictToUpdateFrom_ {dictToUpdateFrom_}
+dictToUpdateFrom_ {self.dictinRepl(dictToUpdateFrom_)}
 	def update(self):
 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		if (NOWMS < self._TIME_TO_UPDATE_):
@@ -2475,7 +2475,7 @@ def findNextAlarmEvent():
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (len(_nextEventList_) == 1):
-			ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
+			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 				eventMode_=_eventMode0_,
 				currentIntervalCount_=_currentIntervalCount0_,
 				nameNextEvent_=_nameNextEvent0_,
@@ -2490,7 +2490,7 @@ def findNextAlarmEvent():
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (_nextEventList_[1][0] > _timeAtNextAlert0_):
-			ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
+			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 				eventMode_=_eventMode0_,
 				currentIntervalCount_=_currentIntervalCount0_,
 				nameNextEvent_=_nameNextEvent0_,
@@ -2522,7 +2522,7 @@ def findNextAlarmEvent():
 				_eventMode_ = EVENTMODE_ALARM
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
+			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 				eventMode_=_eventMode_,
 				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_],
 				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_],
@@ -2555,7 +2555,7 @@ def findNextAlarmEvent():
 				_eventMode_ = EVENTMODE_ALARM
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
+			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 				eventMode_=_eventMode_,
 				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_],
 				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_],
@@ -2589,7 +2589,7 @@ def findNextAlarmEvent():
 				_eventMode_ = EVENTMODE_ALARM
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
+			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 				eventMode_=_eventMode_,
 				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCoun3_],
 				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_],
@@ -2620,7 +2620,7 @@ def findNextAlarmEvent():
 			_eventMode_ = EVENTMODE_ALARM
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
+		ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 			eventMode_=_eventMode_,
 			currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCoun3_, _currentIntervalCount4_],
 			nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_, _nameNextEvent4_],
@@ -2740,7 +2740,7 @@ def doStartup():
 	if (DPD_ROOT[F_DOSTARTUP] is True):
 		print(f"""doStartup
 {CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
-{ALL_THE_FORMS[FRAME_CLOCKS].debugPrint(
+{ALL_THE_FORMS[FORM_CLOCKS].debugPrint(
 	printDictinS_=True,
 )}
 """)
@@ -2763,18 +2763,18 @@ def doStartup():
 		_tempDS_[K_TIME_AT_ZEROELAPSE] = NOWS
 		APPDS_MAIN[K_EVENT_ENTRIES][_index_] = CF.quickCopyDict(_tempDS_)
 
-	ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
+	ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 		checkboxAlphaDim_=APPDS_MAIN[K_CHECKBOX_ALPHA_DIM],
 		checkboxRunaway_=APPDS_MAIN[K_CHECKBOX_RUNAWAY],
 		timeAtZeroelapse_=NOWS,
 	)
-	ALL_THE_FORMS[FRAME_CLOCKS]._SIZE_
+	ALL_THE_FORMS[FORM_CLOCKS]._SIZE_
 
 	if (DPD_ROOT[F_DOSTARTUP] is True):
 		print(f"""doStartup
 {CF.frameIt("_tempDS_", _tempDS_)}
 {CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
-{ALL_THE_FORMS[FRAME_CLOCKS].debugPrint(
+{ALL_THE_FORMS[FORM_CLOCKS].debugPrint(
 	printDictinS_=True,
 )}
 """)
@@ -2832,7 +2832,7 @@ def outerLoop():
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (DPD_ROOT[F_OUTERLOOP] is True):
 			print(f"""looking at values in outerloop
-_window_ {_window_} == ALL_THE_FORMS[FRAME_CLOCKS]._MAINFRAME_ {(_window_ == ALL_THE_FORMS[FRAME_CLOCKS]._MAINFRAME_)}
+_window_ {_window_} == ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_ {(_window_ == ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_)}
 _event_ {_event_}
 _values_ {_values_}""")
 
@@ -2852,7 +2852,7 @@ _values_ {_values_}""")
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			elif (_event_ == K_BTN_ZERO):
-				ALL_THE_FORMS[FRAME_CLOCKS].easyUpdate(
+				ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 					timeAtZeroelapse_=NOWS,
 					timeElapsed_=ZERO_CLOCK,
 				)
@@ -2863,7 +2863,7 @@ _values_ {_values_}""")
 		if (_values_ is not None):
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (_window_ == ALL_THE_FORMS[FRAME_CLOCKS]._MAINFRAME_):
+			if (_window_ == ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_):
 				if (_values_ != _oldValues_):
 					APPDS_MAIN.update(_values_)
 
@@ -2893,7 +2893,7 @@ def doit():
 		DEVMODE = False
 
 	with CF.withPickles(f"""{CF.CONFIG_DIR}runawayClock/{_pklName_}""", APPDS_MAIN) as _pklJar_, \
-			CLASS_CLOCKS(CF.serializeIt("runawayClock"), FRAME_CLOCKS):
+			CLASS_CLOCKS(CF.serializeIt("runawayClock"), FORM_CLOCKS):
 
 		APPDS_MAIN = _pklJar_._STUFFTOPKL_
 		localTimes()
