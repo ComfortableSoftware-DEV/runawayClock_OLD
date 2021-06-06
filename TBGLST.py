@@ -1011,7 +1011,7 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTOFF", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOff", "intervalCountOff.py", "False", "turn interval count off",),
 	("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTON", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOn", "intervalCountOn.py", "False", "turn interval count on",),
 	("PSGVAL__CLOCKS_FUNC_03_QUICK_READ", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "quickRead", "quickRead.py", "False", "read the frame and set self._RESULT_",),
-	("PSGVAL__CLOCKS_FUNC_03_RUNAWAY", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "False", "define runaway",),
+	("PSGVAL__CLOCKS_FUNC_03_RUNAWAY", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "True", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC_03_SETCHECKBOX", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "setCheckbox", "setCheckbox.py", "False", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC_03_UPDATE_FROM_DICT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFromDict", "updateFromDict.py", "False", "update the displayed info from a dict or the default _DICTIN_",),
 	("PSGVAL__CLOCKS_FUNC_FF_UPDATE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "update", "CLOCKS/update.py", "False", "define the required update function",),
