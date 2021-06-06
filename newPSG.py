@@ -102,16 +102,16 @@ F_SPLITXYTORAW = "F_SPLITXYTORAW"  # FKEY entry splitXYToRaw
 F_UPDATE = "F_UPDATE"  # define the required update function
 F_UPDATEFROMDICT = "F_UPDATEFROMDICT"  # update the displayed info from a dict or the default _DICTIN_
 F_UPDATEINTERVAL = "F_UPDATEINTERVAL"  # FKEY entry updateInterval
-FRAME_CLOCKS = "FRAME_CLOCKS"  # holds all of clocks form entries
-FRAME_EDITENTRY = "FRAME_EDITENTRY"  # holds all of form edit-entry entries
-FRAME_EDITOR = "FRAME_EDITOR"  # holds all of form editor entries
-FRAME_MAIN = "FRAME_MAIN"  # holds all of form main entries
-FRAME_POPUP01 = "FRAME_POPUP01"  # holds all of form popup entries
-FRAME_POPUP02 = "FRAME_POPUP02"  # holds all of form popup entries
-FRAME_POPUP03 = "FRAME_POPUP03"  # holds all of form popup entries
-FRAME_POPUP04 = "FRAME_POPUP04"  # holds all of form popup entries
-FRAME_POPUP05 = "FRAME_POPUP05"  # holds all of form popup entries
-FRAME_THECLOCK = "FRAME_THECLOCK"  # holds all of theclock form entries
+FORM_CLOCKS = "FORM_CLOCKS"  # holds all of clocks form entries
+FORM_EDITENTRY = "FORM_EDITENTRY"  # holds all of form edit-entry entries
+FORM_EDITOR = "FORM_EDITOR"  # holds all of form editor entries
+FORM_MAIN = "FORM_MAIN"  # holds all of form main entries
+FORM_POPUP01 = "FORM_POPUP01"  # holds all of form popup entries
+FORM_POPUP02 = "FORM_POPUP02"  # holds all of form popup entries
+FORM_POPUP03 = "FORM_POPUP03"  # holds all of form popup entries
+FORM_POPUP04 = "FORM_POPUP04"  # holds all of form popup entries
+FORM_POPUP05 = "FORM_POPUP05"  # holds all of form popup entries
+FORM_THECLOCK = "FORM_THECLOCK"  # holds all of theclock form entries
 INDEX_EAST = 2  # EAST
 INDEX_NORTH = 1  # NORTH
 INDEX_SOUTH = 3  # SOUTH
@@ -435,12 +435,12 @@ VISIBLE = "visible"  # visibility of elements
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 ALL_THE_FORMS = {  # comment
-	FRAME_CLOCKS: None,  # ENTRY IN FORMS
-	FRAME_POPUP01: None,  # ENTRY IN FORMS
-	FRAME_POPUP02: None,  # ENTRY IN FORMS
-	FRAME_POPUP03: None,  # ENTRY IN FORMS
-	FRAME_POPUP04: None,  # ENTRY IN FORMS
-	FRAME_POPUP05: None,  # ENTRY IN FORMS
+	FORM_CLOCKS: None,  # ENTRY IN FORMS
+	FORM_POPUP01: None,  # ENTRY IN FORMS
+	FORM_POPUP02: None,  # ENTRY IN FORMS
+	FORM_POPUP03: None,  # ENTRY IN FORMS
+	FORM_POPUP04: None,  # ENTRY IN FORMS
+	FORM_POPUP05: None,  # ENTRY IN FORMS
 }
 
 
@@ -534,11 +534,11 @@ NEXT_ALARM_NAME_LIST = [  # holds all of the names of the next time an alert hap
 
 
 POPUP_LIST = [  # popup list
-	FRAME_POPUP01,  # popup list entry FRAME_POPUP01
-	FRAME_POPUP02,  # popup list entry FRAME_POPUP02
-	FRAME_POPUP03,  # popup list entry FRAME_POPUP03
-	FRAME_POPUP04,  # popup list entry FRAME_POPUP04
-	FRAME_POPUP05,  # popup list entry FRAME_POPUP05
+	FORM_POPUP01,  # popup list entry FORM_POPUP01
+	FORM_POPUP02,  # popup list entry FORM_POPUP02
+	FORM_POPUP03,  # popup list entry FORM_POPUP03
+	FORM_POPUP04,  # popup list entry FORM_POPUP04
+	FORM_POPUP05,  # popup list entry FORM_POPUP05
 ]
 
 
@@ -1029,7 +1029,7 @@ class CLASS_CLOCKS(object):
 			F_QUICKREAD: False,  # read the frame and set self._RESULT_
 			F_RUNAWAY: False,  # define runaway
 			F_SETCHECKBOX: False,  # define runaway
-			F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
+			F_UPDATEFROMDICT: True,  # update the displayed info from a dict or the default _DICTIN_
 			F_UPDATE: True,  # define the required update function
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -1798,11 +1798,11 @@ alphaChannel_ {alphaChannel_}
 
 							# 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥
 						if (self._DICT_KEYS_INT_[_thisKey_] == "04d"):
-							_dictToRtn_[self._KEY_DICT_[_thisKey_]].append(f"""{_thisItem_:04d}""")
+							_dictToRtn_[_thisKey_].append(f"""{_thisItem_:04d}""")
 
 							# ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥
 						else:
-							_dictToRtn_[self._KEY_DICT_[_thisKey_]].append(f"""{_thisItem_}""")
+							_dictToRtn_[_thisKey_].append(f"""{_thisItem_}""")
 
 						# ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6
 
@@ -2019,7 +2019,10 @@ checkboxValue_ {checkboxValue_}
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if dictToUpdateFrom_ is None:
 			dictToUpdateFrom_ = CF.quickCopyDict(self._DICTIN_)
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		else:
+			self._DICTIN_.update(dictToUpdateFrom_)
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (self._DPD_[F_UPDATEFROMDICT] is True):
@@ -2027,13 +2030,21 @@ checkboxValue_ {checkboxValue_}
 dictToUpdateFrom_ {self.dictinRepl(dictToUpdateFrom_)}
 _DICTIN_ {self.dictinRepl()}
 """)
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._DICTIN_.update(dictToUpdateFrom_)
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		self.enint()
 		self.enstring()
 		dictToUpdateFrom_ = CF.quickCopyDict(self._DICTINSTR_)
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (self._DPD_[F_UPDATEFROMDICT] is True):
+			print(f"""not default updateFromDict after CF.quickCopyDict(self._DICTINSTR_)
+dictToUpdateFrom_ {self.dictinRepl(dictToUpdateFrom_)}
+_DICTINSTR_ {self.dictinstrRepl()}
+""")
+
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		for _thisKey_, _thisVal_ in dictToUpdateFrom_.items():
