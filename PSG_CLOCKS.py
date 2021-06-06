@@ -1527,8 +1527,14 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 
 						# 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥
 						for _thisItem_ in _thisVal_:
-							_dictToRtn_[_thisKey_].append(f"""{_thisItem_:04d}""")
 
+								# 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥ 7⥥
+							if (isinstance(_thisItem_, int) is True):
+								_dictToRtn_[_thisKey_].append(f"""{_thisItem_:04d}""")
+
+								# ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥ ⥣7⥥
+							else:
+								_dictToRtn_[_thisKey_].append(f"""{_thisItem_}""")
 						# ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6
 					# ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5
 				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
@@ -1954,7 +1960,7 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._TIME_TO_MOVE_ = NOWMS + SZ_TIME_MS_BETWEEN_MOVES
+		self._TIME_TO_MOVE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
 		_screenSZX_, _screenSZY_ = self._SCREEN_DIMS_
 		_sizeX_, _sizeY_ = self._SIZE_
 		_lcnX_, _lcnY_ = self._CURRENT_LOCATION_
@@ -1994,7 +2000,7 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 			self.debugPrint(
 				title_="runaway",
 				message_=f"""
-self._TIME_TO_MOVE_ {self._TIME_TO_MOVE_} = NOWMS {NOWMS} + SZ_TIME_MS_BETWEEN_MOVES {SZ_TIME_MS_BETWEEN_MOVES}
+self._TIME_TO_MOVE_ {self._TIME_TO_MOVE_} = NOWMS {NOWMS} + SZ_TIMEMS_BETWEEN_MOVES {SZ_TIMEMS_BETWEEN_MOVES}
 _screenSZX_ {_screenSZX_}, _screenSZY_ {_screenSZY_} = self._SCREEN_DIMS_
 _sizeX_ {_sizeX_}, _sizeY_ {_sizeY_} = self._SIZE_
 _lcnX_ {_lcnX_}, _lcnY_ {_lcnY_} = self._CURRENT_LOCATION_
