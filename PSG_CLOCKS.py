@@ -59,9 +59,9 @@ COLOR_TEXT_INTERVAL_COUNT_INACTIVE = "#999988"  # the GRAY color used when the n
 COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
 COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
 COLOR_TEXT_SPIN = "#CCFF66"  # the color the clock digits are
-COLOR_TIME_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
-COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
-COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
+COLOR_TIME_S_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
+COLOR_TIME_S_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
+COLOR_TIME_S_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
 EVENTMODE_ALARM = "EVENTMODE_ALARM"  #
 EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
@@ -199,28 +199,29 @@ K_SNOOZABLE = "K_SNOOZABLE"  # can this event be snoozed
 K_SNOOZED = "K_SNOOZED"  # is this event snoozed bool
 K_TEXT_INTERVAL_COUNT = "K_TEXT_INTERVAL_COUNT"  #
 K_TEXT_NAME_NEXT_EVENT = "K_TEXT_NAME_NEXT_EVENT"  #
-K_TEXT_TIME_AT_NEXT_ALERT = "K_TEXT_TIME_AT_NEXT_ALERT"  #
-K_TEXT_TIME_AT_ZEROELAPSE = "K_TEXT_TIME_AT_ZEROELAPSE"  #
-K_TEXT_TIME_CLOCK = "K_TEXT_TIME_CLOCK"  #
-K_TEXT_TIME_ELAPSED = "K_TEXT_TIME_ELAPSED"  #
-K_TEXT_TIME_TOGO = "K_TEXT_TIME_TOGO"  #
+K_TEXT_TIME_S_AT_NEXT_ALERT = "K_TEXT_TIME_S_AT_NEXT_ALERT"  #
+K_TEXT_TIME_S_AT_ZEROELAPSE = "K_TEXT_TIME_S_AT_ZEROELAPSE"  #
+K_TEXT_TIME_S_CLOCK = "K_TEXT_TIME_S_CLOCK"  #
+K_TEXT_TIME_S_ELAPSED = "K_TEXT_TIME_S_ELAPSED"  #
+K_TEXT_TIME_S_TOGO = "K_TEXT_TIME_S_TOGO"  #
 K_THIS_FORM_NAME = "K_THIS_FORM_NAME"  # adopt formName_
 K_THIS_KEY_BASE = "K_THIS_KEY_BASE"  # adopt keyBase_
-K_TIME_ALARM = "K_TIME_ALARM"  # the alarm time
-K_TIME_AT_LAST_RUN = "K_TIME_AT_LAST_RUN"  # timeS of last alarm
-K_TIME_AT_NEXT_ALERT = "K_TIME_AT_NEXT_ALERT"  # what time is the next alarm, == KEY_TIME_ALARM is tomorrow
-K_TIME_AT_ZEROELAPSE = "K_TIME_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
-K_TIME_CLOCK = "K_TIME_CLOCK"  # the main clock time
-K_TIME_ELAPSED = "K_TIME_ELAPSED"  # key for all clocks elapsed
-K_TIME_INTERVAL = "K_TIME_INTERVAL"  # interval timer starting time, reset each time the interval goes off
-K_TIME_INTERVAL__BEGIN = "K_TIME_INTERVAL__BEGIN"  # key for time interval starts alerting
-K_TIME_INTERVAL__END = "K_TIME_INTERVAL__END"  # key for time an interval goes to leep and stops alerting
-K_TIME_INTERVAL_START = "K_TIME_INTERVAL_START"  # interval timer starting time, reset each time the interval goes off
-K_TIME_LEN_OF_ALERT = "K_TIME_LEN_OF_ALERT"  # length of alerting
-K_TIME_TO_CHECK_MOUSE = "K_TIME_TO_CHECK_MOUSE"  #
-K_TIME_TO_MOVE = "K_TIME_TO_MOVE"  #
-K_TIME_TO_UPDATE = "K_TIME_TO_UPDATE"  #
-K_TIME_TOGO = "K_TIME_TOGO"  # down counter to next event on this window/alarm/interval/reminder
+K_TIME_S_AT_ALARM = "K_TIME_S_AT_ALARM"  # the alarm time
+K_TIME_S_AT_CHECK_MOUSE = "K_TIME_S_AT_CHECK_MOUSE"  #
+K_TIME_S_AT_FLIP = "K_TIME_S_AT_FLIP"  #
+K_TIME_S_AT_LAST_RUN = "K_TIME_S_AT_LAST_RUN"  # timeS of last alarm
+K_TIME_S_AT_MOVE = "K_TIME_S_AT_MOVE"  #
+K_TIME_S_AT_NEXT_ALERT = "K_TIME_S_AT_NEXT_ALERT"  # what time is the next alarm, == KEY_TIME_S_AT_ALARM is tomorrow
+K_TIME_S_AT_UPDATE = "K_TIME_S_AT_UPDATE"  #
+K_TIME_S_AT_ZEROELAPSE = "K_TIME_S_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
+K_TIME_S_CLOCK = "K_TIME_S_CLOCK"  # the main clock time
+K_TIME_S_ELAPSED = "K_TIME_S_ELAPSED"  # key for all clocks elapsed
+K_TIME_S_INTERVAL = "K_TIME_S_INTERVAL"  # interval timer starting time, reset each time the interval goes off
+K_TIME_S_INTERVAL__BEGIN = "K_TIME_S_INTERVAL__BEGIN"  # key for time interval starts alerting
+K_TIME_S_INTERVAL__END = "K_TIME_S_INTERVAL__END"  # key for time an interval goes to leep and stops alerting
+K_TIME_S_INTERVAL_START = "K_TIME_S_INTERVAL_START"  # interval timer starting time, reset each time the interval goes off
+K_TIME_S_LEN_OF_ALERT = "K_TIME_S_LEN_OF_ALERT"  # length of alerting
+K_TIME_S_TOGO = "K_TIME_S_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 K_VERSION = "K_VERSION"  # True if pkl is to be updated from APPDS_MAIN
 K_WINDOW = "K_WINDOW"  #
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
@@ -247,17 +248,17 @@ SZ_ALPHA_HIGH = 1.0  # high alpha
 SZ_ALPHA_LOW = 0.2  # low alpha
 SZ_BORDER_DEPTH = 0  # border depth
 SZ_BTNS = 6  # font size for button text
-SZ_CLOCKS_TIME_CLOCK = 26  # font size of the main clock on the clocks only floating widget
-SZ_CLOCKS_TIME_ELAPSED = 13  # font size of the elapsed clock on the clocks only floating widget
-SZ_CLOCKS_TIME_TOGO = 13  # font size of the main togo clock on the clocks only floating widget
+SZ_CLOCKS_TIME_S_CLOCK = 26  # font size of the main clock on the clocks only floating widget
+SZ_CLOCKS_TIME_S_ELAPSED = 13  # font size of the elapsed clock on the clocks only floating widget
+SZ_CLOCKS_TIME_S_TOGO = 13  # font size of the main togo clock on the clocks only floating widget
 SZ_CLOSE = 80  # close enough to move from the mouse
-SZ_EDIT_TIME_CLOCK = 20  # font size of the main clock on the clocks only floating widget
-SZ_EDIT_TIME_ELAPSED = 10  # font size of the elapsed clock on the clocks only floating widget
-SZ_EDIT_TIME_TOGO = 10  # font size of the main togo clock on the clocks only floating widget
+SZ_EDIT_TIME_S_CLOCK = 20  # font size of the main clock on the clocks only floating widget
+SZ_EDIT_TIME_S_ELAPSED = 10  # font size of the elapsed clock on the clocks only floating widget
+SZ_EDIT_TIME_S_TOGO = 10  # font size of the main togo clock on the clocks only floating widget
 SZ_INTERVAL_COUNT = 10  # font size of the main interval count
-SZ_MAIN_TIME_CLOCK = 60  # font size of the main clock on the clocks only floating widget
-SZ_MAIN_TIME_ELAPSED = 30  # font size of the elapsed clock on the clocks only floating widget
-SZ_MAIN_TIME_TOGO = 30  # font size of the main togo clock on the clocks only floating widget
+SZ_MAIN_TIME_S_CLOCK = 60  # font size of the main clock on the clocks only floating widget
+SZ_MAIN_TIME_S_ELAPSED = 30  # font size of the elapsed clock on the clocks only floating widget
+SZ_MAIN_TIME_S_TOGO = 30  # font size of the main togo clock on the clocks only floating widget
 SZ_MARGINS_ALL = (0, 0)  # all margins default
 SZ_MAX_DELTA = 100  # maximum possible change per move
 SZ_MOVE_DIST = 50  # move by this pixels each jump
@@ -265,14 +266,14 @@ SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_PKLNAME_DEV = "runawayClock_DEV.pkl"  # name of the pkl file for the app in dev
 SZ_PKLNAME_PROD = "runawayClock.pkl"  # name of the pkl file for the app in use
 SZ_RUNAWAY = False  # default runaway state
-SZ_TIMEMS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
-SZ_TIMEMS_BETWEEN_MOVES = 500  # time_ms between moves
-SZ_TIMEMS_BETWEEN_NEXT_DISPLAYS = 300  # throttle mouse checking
-SZ_TIMEMS_BETWEEN_UPDATES = 500  # time_ms between updating windows/frames/etc
+SZ_TIME_MS_BETWEEN_LIST_FLIPS = 300  # throttle mouse checking
+SZ_TIME_MS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
+SZ_TIME_MS_BETWEEN_MOVES = 500  # time_ms between moves
+SZ_TIME_MS_BETWEEN_UPDATES = 500  # time_ms between updating windows/frames/etc
+SZ_TIME_S_BETWEEN_PERIODIC_JOB = 900  # time between periodic job runnings
 SZ_TIMEOUT_MS = 100  # timeout for PSG
-SZ_TIMES_BTWN_PERIODIC_JOB = 900  # time between periodic job runnings
-TIMEH_ADJUST_HRS = 0  # comment
-TIMEM_ADJUST_MINS = 0  # comment
+TIME_H_ADJUST_HRS = 0  # comment
+TIME_M_ADJUST_MINS = 0  # comment
 TITLE_ALARMPOPUP = "ALERT"  # string with window title for APPMODE_CLOCKS
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
@@ -290,9 +291,9 @@ COLORS_BTN_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # comment
 COLORS_TEXT_HIGH = (COLOR_TEXT_HIGH, COLOR_BACKGROUND)  # combined colors for a clock text element
 COLORS_TEXT_LOW = (COLOR_TEXT_LOW, COLOR_BACKGROUND)  # combined colors for a clock text element
 COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors for a clock text element
-COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_S_CLOCK = (COLOR_TIME_S_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_S_ELAPSED = (COLOR_TIME_S_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_S_TOGO = (COLOR_TIME_S_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 CURRENT_EVENTMODE_VAL = EVENTMODE_NONE  # comment
 CURRENT_INTERVAL_COUNT = 0  # comment
 DEVMODE = False  # comment
@@ -302,20 +303,20 @@ FONT_DEFAULT = "Source Code Pro"  # default font my favorite readable font
 FONTSZ_ALERT_TEXT = (FONT_DEFAULT, SZ_ALERT_TEXT)  # the font for the clocks only clock
 FONTSZ_BTNS = (FONT_DEFAULT, SZ_BTNS)  # comment
 FONTSZ_CLOCKS_INTERVAL_COUNT = (FONT_DEFAULT, SZ_INTERVAL_COUNT)  # the font for the clocks only clock
-FONTSZ_CLOCKS_TIME_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_CLOCK)  # the font for the clocks only clock
-FONTSZ_CLOCKS_TIME_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_ELAPSED)  # the font for the clocks only clock
-FONTSZ_CLOCKS_TIME_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_TOGO)  # the font for the clocks only clock
+FONTSZ_CLOCKS_TIME_S_CLOCK = (FONT_DEFAULT, SZ_CLOCKS_TIME_S_CLOCK)  # the font for the clocks only clock
+FONTSZ_CLOCKS_TIME_S_ELAPSED = (FONT_DEFAULT, SZ_CLOCKS_TIME_S_ELAPSED)  # the font for the clocks only clock
+FONTSZ_CLOCKS_TIME_S_TOGO = (FONT_DEFAULT, SZ_CLOCKS_TIME_S_TOGO)  # the font for the clocks only clock
 MLCN = DISP.Display().screen().root.query_pointer  # short cut to get mouse position
 NAME_NEXT_EVENT_STR = ""  # comment
 NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
-TIME_MS_AT_NEXT_MOVED = 0  # comment
-TIME_MS_AT_NEXT_UPDATE = 0  # comment
+TIME_MS_AT_NEXT_MOVED_VAL = 0  # comment
+TIME_MS_AT_NEXT_UPDATE_VAL = 0  # comment
 TIME_S_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
-TIME_S_AT_NEXT_EVENT = 0  # comment
-TIME_S_AT_NEXT_PERIODIC_JOB = 0  # seconds till next housekeeping, check for next times, etc.
+TIME_S_AT_NEXT_EVENT_VAL = 0  # comment
+TIME_S_AT_NEXT_PERIODIC_JOB_VAL = 0  # seconds till next housekeeping, check for next times, etc.
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -473,29 +474,29 @@ ALERTING_LIST = [  # list that holds all currently alarming events
 
 
 ALL_TIMES_LIST = [  # list of all times
-	K_TIME_ALARM,  # list of all times K_TIME_ALARM
-	K_TIME_AT_LAST_RUN,  # list of all times K_TIME_AT_LAST_RUN
-	K_TIME_AT_NEXT_ALERT,  # list of all times K_TIME_AT_NEXT_ALERT
-	K_TIME_AT_ZEROELAPSE,  # list of all times K_TIME_AT_ZEROELAPSE
-	K_TIME_CLOCK,  # list of all times K_TIME_CLOCK
-	K_TIME_ELAPSED,  # list of all times K_TIME_ELAPSED
-	K_TIME_INTERVAL,  # list of all times K_TIME_INTERVAL
-	K_TIME_INTERVAL_START,  # list of all times K_TIME_INTERVAL_START
-	K_TIME_INTERVAL__BEGIN,  # list of all times K_TIME_INTERVAL__BEGIN
-	K_TIME_INTERVAL__END,  # list of all times K_TIME_INTERVAL__END
-	K_TIME_LEN_OF_ALERT,  # list of all times K_TIME_LEN_OF_ALERT
-	K_TIME_TOGO,  # list of all times K_TIME_TOGO
-	K_TIME_TO_CHECK_MOUSE,  # list of all times K_TIME_TO_CHECK_MOUSE
-	K_TIME_TO_MOVE,  # list of all times K_TIME_TO_MOVE
-	K_TIME_TO_UPDATE,  # list of all times K_TIME_TO_UPDATE
+	K_TIME_S_AT_ALARM,  # list of all times K_TIME_S_AT_ALARM
+	K_TIME_S_AT_CHECK_MOUSE,  # list of all times K_TIME_S_AT_CHECK_MOUSE
+	K_TIME_S_AT_LAST_RUN,  # list of all times TIME_S_AT_LAST_RUN
+	K_TIME_S_AT_MOVE,  # list of all times K_TIME_S_AT_MOVE
+	K_TIME_S_AT_NEXT_ALERT,  # list of all times K_TIME_S_AT_NEXT_ALERT
+	K_TIME_S_AT_UPDATE,  # list of all times K_TIME_S_AT_UPDATE
+	K_TIME_S_AT_ZEROELAPSE,  # list of all times K_TIME_S_AT_ZEROELAPSE
+	K_TIME_S_CLOCK,  # list of all times K_TIME_S_CLOCK
+	K_TIME_S_ELAPSED,  # list of all times K_TIME_S_ELAPSED
+	K_TIME_S_INTERVAL,  # list of all times K_TIME_S_INTERVAL
+	K_TIME_S_INTERVAL_START,  # list of all times K_TIME_S_INTERVAL_START
+	K_TIME_S_INTERVAL__BEGIN,  # list of all times K_TIME_S_INTERVAL__BEGIN
+	K_TIME_S_INTERVAL__END,  # list of all times K_TIME_S_INTERVAL__END
+	K_TIME_S_LEN_OF_ALERT,  # list of all times K_TIME_S_LEN_OF_ALERT
+	K_TIME_S_TOGO,  # list of all times K_TIME_S_TOGO
 ]
 
 
 APPDS_MIDNIGHT_FIX_TIMES_LIST = [  # list of times to be updated at midnight
-	K_TIME_AT_NEXT_ALERT,  # list of times to be updated at midnight
-	K_TIME_TO_CHECK_MOUSE,  # list of times to be updated at midnight
-	K_TIME_TO_MOVE,  # list of times to be updated at midnight
-	K_TIME_TO_UPDATE,  # list of times to be updated at midnight
+	K_TIME_S_AT_CHECK_MOUSE,  # list of times to be updated at midnight
+	K_TIME_S_AT_MOVE,  # list of times to be updated at midnight
+	K_TIME_S_AT_NEXT_ALERT,  # list of times to be updated at midnight
+	K_TIME_S_AT_UPDATE,  # list of times to be updated at midnight
 ]
 
 
@@ -818,7 +819,7 @@ TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (4, 1),  # characters, lines size line
-	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_S_TOGO,  # the text color for a clock_time element
 }
 
 
@@ -826,71 +827,71 @@ TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCK_TIME
 	TEXT: "",  # the text to fill in
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+	FONT: FONTSZ_CLOCKS_TIME_S_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (16, 1),  # characters, lines size line
-	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_S_TOGO,  # the text color for a clock_time element
 }
 
 
-TEXT_TIME_AT_NEXT_ALERT = {  # define the text element for CLOCKS_CLOCK_TIME
+TEXT_TIME_S_AT_NEXT_ALERT = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+	FONT: FONTSZ_CLOCKS_TIME_S_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_S_TOGO,  # the text color for a clock_time element
 }
 
 
-TEXT_TIME_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
+TEXT_TIME_S_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: False,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
+	FONT: FONTSZ_CLOCKS_TIME_S_ELAPSED,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_S_ELAPSED,  # the text color for a clock_time element
 }
 
 
-TEXT_TIME_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
+TEXT_TIME_S_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
 	TOOLTIP: "Tue_March(03)_10_1964",  # date in the tooltip for the clock
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
 	ENABLE_EVENTS: True,  # this is clickable
-	FONT: FONTSZ_CLOCKS_TIME_CLOCK,  # font+size line
+	FONT: FONTSZ_CLOCKS_TIME_S_CLOCK,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_S_CLOCK,  # the text color for a clock_time element
 }
 
 
-TEXT_TIME_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
+TEXT_TIME_S_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-	FONT: FONTSZ_CLOCKS_TIME_ELAPSED,  # font+size line
+	FONT: FONTSZ_CLOCKS_TIME_S_ELAPSED,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_S_ELAPSED,  # the text color for a clock_time element
 }
 
 
-TEXT_TIME_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
+TEXT_TIME_S_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
-	FONT: FONTSZ_CLOCKS_TIME_TOGO,  # font+size line
+	FONT: FONTSZ_CLOCKS_TIME_S_TOGO,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_S_TOGO,  # the text color for a clock_time element
 }
 
 
@@ -955,9 +956,10 @@ class CLASS_CLOCKS(object):
 		self._MPX_ = EMPTY_XY  # comment
 		self._SCREEN_DIMS_ = EMPTY_XY  #
 		self._SIZE_ = EMPTY_XY  #
-		self._TIME_TO_CHECK_MOUSE_ = ZERO_CLOCK  #
-		self._TIME_TO_MOVE_ = ZERO_CLOCK  #
-		self._TIME_TO_UPDATE_ = ZERO_CLOCK  #
+		self._TIME_S_AT_CHECK_MOUSE_ = ZERO_CLOCK  #
+		self._TIME_S_AT_FLIP_ = ZERO_CLOCK  #
+		self._TIME_S_AT_MOVE_ = ZERO_CLOCK  #
+		self._TIME_S_AT_UPDATE_ = ZERO_CLOCK  #
 		self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._KEY_DICT_REVERSE_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._KEY_DICT_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
@@ -972,11 +974,11 @@ class CLASS_CLOCKS(object):
 			K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			K_INDEXES: [],  # holds the index(es)of the currently awaited events
 			K_INTERVAL_COUNT: 0,  # interval count
-			K_TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time at next event
-			K_TIME_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
-			K_TIME_CLOCK: ZERO_CLOCK,  # time clock or wall clock
-			K_TIME_ELAPSED: ZERO_CLOCK,  # time elapsed
-			K_TIME_TOGO: ZERO_CLOCK,  # countdown to next event
+			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time at next event
+			K_TIME_S_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
+			K_TIME_S_CLOCK: ZERO_CLOCK,  # time clock or wall clock
+			K_TIME_S_ELAPSED: ZERO_CLOCK,  # time elapsed
+			K_TIME_S_TOGO: ZERO_CLOCK,  # countdown to next event
 		}
 # fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -987,11 +989,11 @@ class CLASS_CLOCKS(object):
 			K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			K_INDEXES: [],  # holds the index(es)of the currently awaited events
 			f"""{self._USE_THIS_KEY_(K_INTERVAL_COUNT)}""": 0,  # interval count
-			f"""{self._USE_THIS_KEY_(K_TIME_AT_NEXT_ALERT)}""": ZERO_CLOCK,  # time at next event
-			f"""{self._USE_THIS_KEY_(K_TIME_AT_ZEROELAPSE)}""": ZERO_CLOCK,  # time at last zero of elapsed timer
-			f"""{self._USE_THIS_KEY_(K_TIME_CLOCK)}""": ZERO_CLOCK,  # time clock or wall clock
-			f"""{self._USE_THIS_KEY_(K_TIME_ELAPSED)}""": ZERO_CLOCK,  # time elapsed
-			f"""{self._USE_THIS_KEY_(K_TIME_TOGO)}""": ZERO_CLOCK,  # countdown to next event
+			f"""{self._USE_THIS_KEY_(K_TIME_S_AT_NEXT_ALERT)}""": ZERO_CLOCK,  # time at next event
+			f"""{self._USE_THIS_KEY_(K_TIME_S_AT_ZEROELAPSE)}""": ZERO_CLOCK,  # time at last zero of elapsed timer
+			f"""{self._USE_THIS_KEY_(K_TIME_S_CLOCK)}""": ZERO_CLOCK,  # time clock or wall clock
+			f"""{self._USE_THIS_KEY_(K_TIME_S_ELAPSED)}""": ZERO_CLOCK,  # time elapsed
+			f"""{self._USE_THIS_KEY_(K_TIME_S_TOGO)}""": ZERO_CLOCK,  # countdown to next event
 		}
 # fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1003,11 +1005,11 @@ class CLASS_CLOCKS(object):
 
 		self._DICT_KEYS_TIME_ = {  # dict of time keys and their max value int seconds
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			K_TIME_AT_NEXT_ALERT: CF.DAYSECS,  # comment
-			K_TIME_AT_ZEROELAPSE: CF.DAYSECS,  # comment
-			K_TIME_CLOCK: CF.DAYSECS,  #
-			K_TIME_ELAPSED: CF.TIME995959,  #
-			K_TIME_TOGO: CF.DAYSECS,  #
+			K_TIME_S_AT_NEXT_ALERT: CF.DAYSECS,  # comment
+			K_TIME_S_AT_ZEROELAPSE: CF.DAYSECS,  # comment
+			K_TIME_S_CLOCK: CF.DAYSECS,  #
+			K_TIME_S_ELAPSED: CF.TIME995959,  #
+			K_TIME_S_TOGO: CF.DAYSECS,  #
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1052,82 +1054,82 @@ class CLASS_CLOCKS(object):
 		self._KEY_DICT_[K_NAME_NEXT_EVENT] = f"""{self._USE_THIS_KEY_(K_NAME_NEXT_EVENT)}"""
 		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_NAME_NEXT_EVENT)}"""] = K_NAME_NEXT_EVENT
 
-		self._TEXT_TIME_AT_NEXT_ALERT_ = {  # class text for interval count
+		self._TEXT_TIME_S_AT_ZEROELAPSE_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			**TEXT_TIME_AT_NEXT_ALERT,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(K_TIME_AT_NEXT_ALERT)}""",  # interval count template
+			**TEXT_TIME_S_AT_ZEROELAPSE,  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(K_TIME_S_AT_ZEROELAPSE)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_LIST_TIMES_.append(TEXT_TIME_AT_NEXT_ALERT)
-		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_AT_NEXT_ALERT))
-		self._KEY_DICT_[K_TIME_AT_NEXT_ALERT] = f"""{self._USE_THIS_KEY_(K_TIME_AT_NEXT_ALERT)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_AT_NEXT_ALERT)}"""] = K_TIME_AT_NEXT_ALERT
+		self._KEY_LIST_TIMES_.append(TEXT_TIME_S_AT_ZEROELAPSE)
+		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_S_AT_ZEROELAPSE))
+		self._KEY_DICT_[K_TIME_S_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(K_TIME_S_AT_ZEROELAPSE)}"""
+		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_AT_ZEROELAPSE)}"""] = K_TIME_S_AT_ZEROELAPSE
 
-		self._TEXT_TIME_AT_ZEROELAPSE_ = {  # class text for interval count
+		self._TEXT_TIME_S_AT_NEXT_ALERT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			**TEXT_TIME_AT_ZEROELAPSE,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(K_TIME_AT_ZEROELAPSE)}""",  # interval count template
+			**TEXT_TIME_S_AT_NEXT_ALERT,  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(K_TIME_S_AT_NEXT_ALERT)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_LIST_TIMES_.append(TEXT_TIME_AT_ZEROELAPSE)
-		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_AT_ZEROELAPSE))
-		self._KEY_DICT_[K_TIME_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(K_TIME_AT_ZEROELAPSE)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_AT_ZEROELAPSE)}"""] = K_TIME_AT_ZEROELAPSE
+		self._KEY_LIST_TIMES_.append(TEXT_TIME_S_AT_NEXT_ALERT)
+		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_S_AT_NEXT_ALERT))
+		self._KEY_DICT_[K_TIME_S_AT_NEXT_ALERT] = f"""{self._USE_THIS_KEY_(K_TIME_S_AT_NEXT_ALERT)}"""
+		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_AT_NEXT_ALERT)}"""] = K_TIME_S_AT_NEXT_ALERT
 
-		self._TEXT_TIME_CLOCK_ = {  # class text for interval count
+		self._TEXT_TIME_S_CLOCK_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			**TEXT_TIME_CLOCK,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(K_TIME_CLOCK)}""",  # interval count template
+			**TEXT_TIME_S_CLOCK,  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(K_TIME_S_CLOCK)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_LIST_TIMES_.append(TEXT_TIME_CLOCK)
-		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_CLOCK))
-		self._KEY_DICT_[K_TIME_CLOCK] = f"""{self._USE_THIS_KEY_(K_TIME_CLOCK)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_CLOCK)}"""] = K_TIME_CLOCK
+		self._KEY_LIST_TIMES_.append(TEXT_TIME_S_CLOCK)
+		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_S_CLOCK))
+		self._KEY_DICT_[K_TIME_S_CLOCK] = f"""{self._USE_THIS_KEY_(K_TIME_S_CLOCK)}"""
+		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_CLOCK)}"""] = K_TIME_S_CLOCK
 
-		self._TEXT_TIME_ELAPSED_ = {  # class text for interval count
+		self._TEXT_TIME_S_ELAPSED_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			**TEXT_TIME_ELAPSED,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(K_TIME_ELAPSED)}""",  # interval count template
+			**TEXT_TIME_S_ELAPSED,  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(K_TIME_S_ELAPSED)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_LIST_TIMES_.append(TEXT_TIME_ELAPSED)
-		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_ELAPSED))
-		self._KEY_DICT_[K_TIME_ELAPSED] = f"""{self._USE_THIS_KEY_(K_TIME_ELAPSED)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_ELAPSED)}"""] = K_TIME_ELAPSED
+		self._KEY_LIST_TIMES_.append(TEXT_TIME_S_ELAPSED)
+		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_S_ELAPSED))
+		self._KEY_DICT_[K_TIME_S_ELAPSED] = f"""{self._USE_THIS_KEY_(K_TIME_S_ELAPSED)}"""
+		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_ELAPSED)}"""] = K_TIME_S_ELAPSED
 
-		self._TEXT_TIME_TOGO_ = {  # class text for interval count
+		self._TEXT_TIME_S_TOGO_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			**TEXT_TIME_TOGO,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(K_TIME_TOGO)}""",  # interval count template
+			**TEXT_TIME_S_TOGO,  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(K_TIME_S_TOGO)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_LIST_TIMES_.append(TEXT_TIME_TOGO)
-		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_TOGO))
-		self._KEY_DICT_[K_TIME_TOGO] = f"""{self._USE_THIS_KEY_(K_TIME_TOGO)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_TOGO)}"""] = K_TIME_TOGO
+		self._KEY_LIST_TIMES_.append(TEXT_TIME_S_TOGO)
+		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_S_TOGO))
+		self._KEY_DICT_[K_TIME_S_TOGO] = f"""{self._USE_THIS_KEY_(K_TIME_S_TOGO)}"""
+		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_TOGO)}"""] = K_TIME_S_TOGO
 
 		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
 				SG.Text(  # add a new TEXT element to clocks column
-					**self._TEXT_TIME_CLOCK_  # add the main clock
+					**self._TEXT_TIME_S_CLOCK_  # add the main clock
 				),
 			],
 			[
 				SG.Text(  # add a new row to clocks column
-					**self._TEXT_TIME_AT_ZEROELAPSE_  # add time to go
+					**self._TEXT_TIME_S_AT_ZEROELAPSE_  # add time to go
 				),
 				SG.Text(  # add a new text element to row01 clocks column
-					**self._TEXT_TIME_ELAPSED_  # add elapsed time
+					**self._TEXT_TIME_S_ELAPSED_  # add elapsed time
 				),
 			],
 			[
 				SG.Text(  # add a new text element to row01 clocks column
-					**self._TEXT_TIME_TOGO_  # add elapsed time
+					**self._TEXT_TIME_S_TOGO_  # add elapsed time
 				),
 				SG.Text(  # add a new row to clocks column
-					**self._TEXT_TIME_AT_NEXT_ALERT_  # add time to go
+					**self._TEXT_TIME_S_AT_NEXT_ALERT_  # add time to go
 				),
 			],
 			[
@@ -1625,23 +1627,23 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (timeAtNextAlert_ is not None):
-			self._DICTIN_[K_TIME_AT_NEXT_ALERT] = timeAtNextAlert_
+			self._DICTIN_[K_TIME_S_AT_NEXT_ALERT] = timeAtNextAlert_
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (timeAtZeroelapse_ is not None):
-			self._DICTIN_[K_TIME_AT_ZEROELAPSE] = timeAtZeroelapse_
+			self._DICTIN_[K_TIME_S_AT_ZEROELAPSE] = timeAtZeroelapse_
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (timeClock_ is not None):
-			self._DICTIN_[K_TIME_CLOCK] = timeClock_
+			self._DICTIN_[K_TIME_S_CLOCK] = timeClock_
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (timeElapsed_ is not None):
-			self._DICTIN_[K_TIME_ELAPSED] = timeElapsed_
+			self._DICTIN_[K_TIME_S_ELAPSED] = timeElapsed_
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (timeTogo_ is not None):
-			self._DICTIN_[K_TIME_TOGO] = timeTogo_
+			self._DICTIN_[K_TIME_S_TOGO] = timeTogo_
 
 		self.enint()
 		self.updateFromDict()
@@ -1897,7 +1899,7 @@ alphaChannel_ {alphaChannel_}
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._MAINFRAME_[self._USE_THIS_KEY_(K_INTERVAL_COUNT)].update(text_color=COLOR_TIME_TOGO)
+		self._MAINFRAME_[self._USE_THIS_KEY_(K_INTERVAL_COUNT)].update(text_color=COLOR_TIME_S_TOGO)
 		self._DICTIN_[K_INTERVAL_COUNT] = intervalCount_
 		self.updateFromDict()
 
@@ -2090,10 +2092,10 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 
 	def update(self):
 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		if (NOWMS < self._TIME_TO_UPDATE_):
+		if (NOWMS < self._TIME_S_AT_UPDATE_):
 			return
 
-		self._TIME_TO_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES
+		self._TIME_S_AT_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES
 		_TLcn_ = self._MAINFRAME_.CurrentLocation()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -2104,9 +2106,9 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 			self._CLOSE_BBOX_ = getCloseBBox(self._CURRENT_LOCATION_, self._SIZE_)
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._DICTIN_[K_TIME_CLOCK] = NOWS
-		self._DICTIN_[K_TIME_TOGO] = (self._DICTIN_[K_TIME_AT_NEXT_ALERT] - NOWS)
-		self._DICTIN_[K_TIME_ELAPSED] = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE])
+		self._DICTIN_[K_TIME_S_CLOCK] = NOWS
+		self._DICTIN_[K_TIME_S_TOGO] = (self._DICTIN_[K_TIME_S_AT_NEXT_ALERT] - NOWS)
+		self._DICTIN_[K_TIME_S_ELAPSED] = (NOWS - self._DICTIN_[K_TIME_S_AT_ZEROELAPSE])
 		self.checkMouse()
 		self.quickRead()
 
@@ -2121,13 +2123,13 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 				title_="update",
 				printDictinS_=False,
 				message_=f"""
-self._TIME_TO_UPDATE_ {CF.frameItMS("_TIME_TO_UPDATE_", self._TIME_TO_UPDATE_)} = {CF.frameItMS("NOWMS", NOWMS)} + SZ_TIMEMS_BETWEEN_UPDATES {SZ_TIMEMS_BETWEEN_UPDATES / 1000}
+self._TIME_S_AT_UPDATE_ {CF.frameItMS("_TIME_S_AT_UPDATE_", self._TIME_S_AT_UPDATE_)} = {CF.frameItMS("NOWMS", NOWMS)} + SZ_TIMEMS_BETWEEN_UPDATES {SZ_TIMEMS_BETWEEN_UPDATES / 1000}
 self._CURRENT_LOCATION_ {self._CURRENT_LOCATION_} = self._MAINFRAME_.CurrentLocation()
 self._BBOX_ {self._BBOX_} = getBBox(self._CURRENT_LOCATION_, self._SIZE_ {self._SIZE_})
 self._CLOSE_BBOX_ {self._CLOSE_BBOX_} = getCloseBBox(self._CURRENT_LOCATION_, self._SIZE_)
-self._DICTIN_[K_TIME_CLOCK] {CF.frameItHMS("K_TIME_CLOCK", self._DICTIN_[K_TIME_CLOCK])} = {CF.frameItHMS("NOWS", NOWS)}
-self._DICTIN_[K_TIME_TOGO] {CF.frameItHMS("K_TIME_TOGO", self._DICTIN_[K_TIME_TOGO])} = (self._DICTIN_[K_TIME_AT_NEXT_ALERT] {CF.frameItHMS("K_TIME_AT_NEXT_ALERT", self._DICTIN_[K_TIME_AT_NEXT_ALERT])} - NOWS  {CF.frameItHMS("NOWS", NOWS)})
-self._DICTIN_[K_TIME_ELAPSED] {CF.frameItHMS("K_TIME_ELAPSED", self._DICTIN_[K_TIME_ELAPSED])} = (NOWS - self._DICTIN_[K_TIME_AT_ZEROELAPSE] {CF.frameItHMS("K_TIME_AT_ZEROELAPSE", self._DICTIN_[K_TIME_AT_ZEROELAPSE])})
+self._DICTIN_[K_TIME_S_CLOCK] {CF.frameItHMS("K_TIME_S_CLOCK", self._DICTIN_[K_TIME_S_CLOCK])} = {CF.frameItHMS("NOWS", NOWS)}
+self._DICTIN_[K_TIME_S_TOGO] {CF.frameItHMS("K_TIME_S_TOGO", self._DICTIN_[K_TIME_S_TOGO])} = (self._DICTIN_[K_TIME_S_AT_NEXT_ALERT] {CF.frameItHMS("K_TIME_S_AT_NEXT_ALERT", self._DICTIN_[K_TIME_S_AT_NEXT_ALERT])} - NOWS  {CF.frameItHMS("NOWS", NOWS)})
+self._DICTIN_[K_TIME_S_ELAPSED] {CF.frameItHMS("K_TIME_S_ELAPSED", self._DICTIN_[K_TIME_S_ELAPSED])} = (NOWS - self._DICTIN_[K_TIME_S_AT_ZEROELAPSE] {CF.frameItHMS("K_TIME_S_AT_ZEROELAPSE", self._DICTIN_[K_TIME_S_AT_ZEROELAPSE])})
  self._CURRENT_MOUSE_LOCATION_ {self._CURRENT_MOUSE_LOCATION_}, self._CURRENT_MOUSE_STATUS_ {self._CURRENT_MOUSE_STATUS_} = self.checkMouse()
 """,
 			)
@@ -2160,14 +2162,14 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_PREDISMISSABLE: True,  # is this event dismissable in advance
 			K_SNOOZABLE: False,  # can this event be snoozed
 			K_SNOOZED: False,  # is this event snoozed
-			K_TIME_ALARM: 0,  # time of this event if it an alarm
-			K_TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
-			K_TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_INTERVAL: 30,  # interval of this event
-			K_TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
-			K_TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
-			K_TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
-			K_TIME_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
+			K_TIME_S_AT_ALARM: 0,  # time of this event if it an alarm
+			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
+			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
+			K_TIME_S_INTERVAL: 30,  # interval of this event
+			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 		1: {
 			K_ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
@@ -2183,14 +2185,14 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_PREDISMISSABLE: True,  # is this event dismissable in advance
 			K_SNOOZABLE: False,  # can this event be snoozed
 			K_SNOOZED: False,  # is this event snoozed
-			K_TIME_ALARM: 0,  # time of this event if it an alarm
-			K_TIME_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
-			K_TIME_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_INTERVAL: 20,  # interval of this event
-			K_TIME_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
-			K_TIME_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
-			K_TIME_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
-			K_TIME_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
+			K_TIME_S_AT_ALARM: 0,  # time of this event if it an alarm
+			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
+			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
+			K_TIME_S_INTERVAL: 20,  # interval of this event
+			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
@@ -2316,10 +2318,10 @@ def localTimes(hrs_=None, mins_=None):
 		NOWS
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	if hrs_ is None:
-		hrs_ = TIMEH_ADJUST_HRS
+		hrs_ = TIME_H_ADJUST_HRS
 
 	if mins_ is None:
-		mins_ = TIMEM_ADJUST_MINS
+		mins_ = TIME_M_ADJUST_MINS
 
 	_adjSecs_ = CF.MTSS() - TIME_S_ADJUST_VALUE(hrs_, mins_)
 	if _adjSecs_ < 0:
@@ -2430,10 +2432,10 @@ def updateInterval(eventIndexToDo_):
 APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_] {APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_]}
 """)
 	_eventToDo_ = CF.quickCopyDict(APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_])
-	_TInterval_ = _eventToDo_[K_TIME_INTERVAL]
-	_TTimeAtBegin_ = _eventToDo_[K_TIME_INTERVAL__BEGIN]
+	_TInterval_ = _eventToDo_[K_TIME_S_INTERVAL]
+	_TTimeAtBegin_ = _eventToDo_[K_TIME_S_INTERVAL__BEGIN]
 	_TTimeSinceBegin_ = NOWS - _TTimeAtBegin_
-	_TTimeAtLastRun_ = _eventToDo_[K_TIME_AT_LAST_RUN]
+	_TTimeAtLastRun_ = _eventToDo_[K_TIME_S_AT_LAST_RUN]
 	_TTimeAtStart_ = int(_TTimeSinceBegin_ // _TInterval_) * _TInterval_
 	_TTimeAtNext_ = fixTimeAtNext(_TTimeAtStart_ + _TInterval_)
 
@@ -2441,10 +2443,10 @@ APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_] {APPDS_MAIN[K_EVENT_ENTRIES][eventI
 #		_TTimeAtStart_ = int(_TTimeSinceBegin_ // _TInterval_) * _TInterval_
 #		_TTimeAtNext_ = fixTimeAtNext(_TTimeAtStart_ + _TInterval_)
 		APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_FIRSTRUN] = False
-		APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_AT_LAST_RUN] = _TTimeAtLastRun_ = _TTimeAtStart_
+		APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_S_AT_LAST_RUN] = _TTimeAtLastRun_ = _TTimeAtStart_
 
-	APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_INTERVAL_START] = _TTimeAtStart_
-	APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_AT_NEXT_ALERT] = _TTimeAtNext_
+	APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_S_INTERVAL_START] = _TTimeAtStart_
+	APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_S_AT_NEXT_ALERT] = _TTimeAtNext_
 
 	if (DPD_ROOT[F_UPDATEINTERVAL] is True):
 		print(f"""updateInterval finish
@@ -2461,7 +2463,7 @@ def findNextAlarmEvent():
 			CURRENT_EVENTMODE, \
 			CURRENT_INTERVAL_COUNT, \
 			NAME_NEXT_EVENT_STR, \
-			TIME_S_AT_NEXT_EVENT
+			TIME_S_AT_NEXT_EVENT_VAL
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_nextEventList_ = []  # (time, index, mode, name)
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
@@ -2478,15 +2480,15 @@ def findNextAlarmEvent():
 
 				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
 			elif (_TEventMode_ == EVENTMODE_ALARM):
-				_event_[K_TIME_AT_NEXT_ALERT] = _event_[TIME_ALARM]
+				_event_[K_TIME_S_AT_NEXT_ALERT] = _event_[TIME_ALARM]
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if (_event_[K_DISMISSED] is False) and \
 					(_event_[K_ENABLED] is True) and \
-					(_event_[K_TIME_INTERVAL__BEGIN] <= NOWS < fixTimeAtNext(_event_[K_TIME_INTERVAL__END])):
+					(_event_[K_TIME_S_INTERVAL__BEGIN] <= NOWS < fixTimeAtNext(_event_[K_TIME_S_INTERVAL__END])):
 				# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
-				_nextEventList_.append((fixTimeAtNext(_event_[K_TIME_AT_NEXT_ALERT]), _index_, _event_[K_EVENTMODE], _event_[K_EVENT_NAME], _event_[K_INTERVAL_COUNT]))
+				_nextEventList_.append((fixTimeAtNext(_event_[K_TIME_S_AT_NEXT_ALERT]), _index_, _event_[K_EVENTMODE], _event_[K_EVENT_NAME], _event_[K_INTERVAL_COUNT]))
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
@@ -2513,7 +2515,7 @@ def findNextAlarmEvent():
 			CURRENT_EVENTMODE_VAL = _eventMode0_  # (time, index, mode, name, intervalCount)
 			CURRENT_INTERVAL_COUNT = _currentIntervalCount0_
 			NAME_NEXT_EVENT_STR = _nameNextEvent0_  # (time, index, mode, name, intervalCount)
-			TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
+			TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
 			return
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
@@ -2528,7 +2530,7 @@ def findNextAlarmEvent():
 			CURRENT_EVENTMODE_VAL = _eventMode0_  # (time, index, mode, name, intervalCount)
 			CURRENT_INTERVAL_COUNT = _currentIntervalCount0_
 			NAME_NEXT_EVENT_STR = _nameNextEvent0_  # (time, index, mode, name, intervalCount)
-			TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
+			TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
 			return
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
@@ -2560,7 +2562,7 @@ def findNextAlarmEvent():
 			CURRENT_EVENTMODE_VAL = _eventMode_
 			CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_]
 			NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_]
-			TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
+			TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
 			return
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
@@ -2593,7 +2595,7 @@ def findNextAlarmEvent():
 			CURRENT_EVENTMODE_VAL = _eventMode_
 			CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_]
 			NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_]
-			TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
+			TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
 			return
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
@@ -2627,7 +2629,7 @@ def findNextAlarmEvent():
 			CURRENT_EVENTMODE_VAL = _eventMode_
 			CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCount3_]
 			NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_]
-			TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
+			TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
 			return
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
@@ -2658,7 +2660,7 @@ def findNextAlarmEvent():
 		CURRENT_EVENTMODE_VAL = _eventMode_
 		CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCount3_, _currentIntervalCount4_]
 		NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_, _nameNextEvent4_]
-		TIME_S_AT_NEXT_EVENT = _timeAtNextAlert0_
+		TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
@@ -2680,20 +2682,20 @@ def doEvent():
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	for _index_, _values_ in APPDS_MAIN[K_EVENT_ENTRIES].items():
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_values_[K_TIME_AT_NEXT_ALERT] == NOWS):
+		if (_values_[K_TIME_S_AT_NEXT_ALERT] == NOWS):
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if (_values_[K_EVENTMODE] == EVENTMODE_INTERVAL):
 				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_INTERVAL_COUNT] += 1
-				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_AT_NEXT_ALERT] = fixTimeAtNext(NOWS + APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_INTERVAL])
-				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_INTERVAL_START] = NOWS
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_AT_NEXT_ALERT] = fixTimeAtNext(NOWS + APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_INTERVAL])
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_INTERVAL_START] = NOWS
 
 				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
 			elif (_values_[K_EVENTMODE] == EVENTMODE_ALARM):
-				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_AT_NEXT_ALERT] = fixTimeAtNext(NOWS + CF.DAYSECS)
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_AT_NEXT_ALERT] = fixTimeAtNext(NOWS + CF.DAYSECS)
 
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_AT_LAST_RUN] = NOWS
+			APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_AT_LAST_RUN] = NOWS
 			THIS_ALARM_POPUP_TEXT_LIST.append(APPDS_MAIN[K_EVENT_ENTRIES])
 
 
@@ -2712,19 +2714,19 @@ def doMidnightWork():
 	global \
 		APPDS_MAIN, \
 		TIME_MS_AT_NEXT_MOUSE_CHECK, \
-		TIME_MS_AT_NEXT_MOVED, \
-		TIME_MS_AT_NEXT_UPDATE, \
-		TIME_S_AT_NEXT_EVENT, \
-		TIME_S_AT_NEXT_PERIODIC_JOB
+		TIME_MS_AT_NEXT_MOVED_VAL, \
+		TIME_MS_AT_NEXT_UPDATE_VAL, \
+		TIME_S_AT_NEXT_EVENT_VAL, \
+		TIME_S_AT_NEXT_PERIODIC_JOB_VAL
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	while NOWMS < 1:
 		localTimes()
 
 	TIME_MS_AT_NEXT_MOUSE_CHECK = 0
-	TIME_MS_AT_NEXT_MOVED = 0
-	TIME_MS_AT_NEXT_UPDATE = 0
-	TIME_S_AT_NEXT_EVENT = 0
-	TIME_S_AT_NEXT_PERIODIC_JOB = 0
+	TIME_MS_AT_NEXT_MOVED_VAL = 0
+	TIME_MS_AT_NEXT_UPDATE_VAL = 0
+	TIME_S_AT_NEXT_EVENT_VAL = 0
+	TIME_S_AT_NEXT_PERIODIC_JOB_VAL = 0
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	for _index_, _event_ in APPDS_MAIN[K_EVENT_ENTRIES].items():
@@ -2787,9 +2789,9 @@ def doStartup():
 		_tempDS_[K_INTERVAL_COUNT] = 0
 		_tempDS_[K_IS_ALERTING_NOW] = False
 		_tempDS_[K_SNOOZED] = None
-		_tempDS_[K_TIME_AT_LAST_RUN] = 0
-		_tempDS_[K_TIME_INTERVAL_START] = 0
-		_tempDS_[K_TIME_AT_ZEROELAPSE] = NOWS
+		_tempDS_[K_TIME_S_AT_LAST_RUN] = 0
+		_tempDS_[K_TIME_S_INTERVAL_START] = 0
+		_tempDS_[K_TIME_S_AT_ZEROELAPSE] = NOWS
 		APPDS_MAIN[K_EVENT_ENTRIES][_index_] = CF.quickCopyDict(_tempDS_)
 
 	ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
@@ -2850,7 +2852,7 @@ def outerLoop():
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (NOWS == TIME_S_AT_NEXT_EVENT):
+		if (NOWS == TIME_S_AT_NEXT_EVENT_VAL):
 			_result_ = doEvent()
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
@@ -2966,7 +2968,7 @@ edit:
 	delete this event
 	TIME_s
 CLOCKS_FORMMAIN.__dict__["TKroot"].__str__
-CLOCKS_FORMMAIN[K_TIME_CLOCK].DisplayText
+CLOCKS_FORMMAIN[K_TIME_S_CLOCK].DisplayText
 CLOCKS_FORMMAIN.Move(10, 10)
 
 """
