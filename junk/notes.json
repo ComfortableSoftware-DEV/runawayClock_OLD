@@ -1,0 +1,327 @@
+file /rcr/0-utils/0-desktop/runawayClock_DEV/PSG.py, line 2393, function findNextAlarmEvent
+        NOWS updated next event |73795|20:29:55
+        EVENT_ENTRIES |
+{
+	0: {
+		'ALARMPOPUP_TEXT_TEXT': 'time to start toward bed',
+		'DISMISSED': False,
+		'enabled': True,
+		'EVENTMODE': 'EVENTMODE_INTERVAL',
+		'FIRSTRUN': False,
+		'IS_ALERTING_NOW': False,
+		'NAME': 'wind it up',
+		'PREDISMISSABLE': True,
+		'SNOOZABLE': False,
+		'SNOOZED': False,
+		'TIME_ALARM': 12600,
+		'TIME_AT_LAST_RUN': None,
+		'TIME_AT_NEXT': 73920,
+		'TIME_INTERVAL': 240,
+		'TIME_INTERVAL__BEGIN': 0,
+		'TIME_INTERVAL__END': 0,
+		'TIME_INTERVAL_START': 73680,
+		'TIME_LEN_RING': 0
+	},
+	1: {
+		'ALARMPOPUP_TEXT_TEXT': 'MOVE',
+		'DISMISSED': False,
+		'enabled': True,
+		'EVENTMODE': 'EVENTMODE_INTERVAL',
+		'FIRSTRUN': False,
+		'IS_ALERTING_NOW': False,
+		'NAME': 'off you go then',
+		'PREDISMISSABLE': True,
+		'SNOOZABLE': False,
+		'SNOOZED': False,
+		'TIME_ALARM': 0,
+		'TIME_AT_LAST_RUN': None,
+		'TIME_AT_NEXT': 73845,
+		'TIME_INTERVAL': 135,
+		'TIME_INTERVAL__BEGIN': 0,
+		'TIME_INTERVAL__END': 0,
+		'TIME_INTERVAL_START': 73710,
+		'TIME_LEN_RING': 0
+	}
+}|
+nextEventList_ |[
+	(73845, 1, 'EVENTMODE_INTERVAL', 'off you go then'),
+	(73920, 0, 'EVENTMODE_INTERVAL', 'wind it up')]|
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# SCTN0915 POPUPDIALOG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+class CLASS_POPUP_INTERVAL(object):
+
+	def __init__(self, title_, count_, splatArgs_=[]):
+		self.POPUP_INTERVAL_DICT = {
+			title: title_,
+			auto_close: True,
+			auto_close_duration: 5,
+			non_blocking: True,
+			no_titlebar: True,
+			grab_anywhere: True,
+			keep_on_top: True,
+			modal: True,
+			font: FONTSZ_ALERT_TEXT,
+		}
+
+		self.POPUP_INTERVAL_LIST = [
+			f"""INTERVAL {title_} has expired {count_} times""",
+			f"""clock OK to dismiss now or wait {self.POPUP_INTERVAL_DICT[auto_close_duration]}""",
+		]
+
+
+	def __enter__(self):
+		SG.PopupAutoClose(
+			*self.POPUP_INTERVAL_LIST,
+			**self.POPUP_INTERVAL_DICT,
+		)
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# SCTN0915 POPUPDIALOG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+class CLASS_POPUP_INTERVAL(object):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+
+	def __init__(self, title_, count_, splatArgs_=[]):
+		self.POPUP_INTERVAL_DICT = {
+			title: title_,
+			auto_close: True,
+			auto_close_duration: 5,
+			non_blocking: True,
+			no_titlebar: True,
+			grab_anywhere: True,
+			keep_on_top: True,
+			modal: True,
+		}
+
+		self.POPUP_INTERVAL_LIST = [
+			f"""INTERVAL {title_} has expired {count_} times""",
+			f"""click OK to dismiss now or wait {self.POPUP_INTERVAL_DICT[auto_close_duration]}""",
+		].append(*splatArgs_)
+
+		return self
+
+
+	def __enter__(self):
+		SG.PopupAutoClose(
+			*self.POPUP_INTERVAL_LIST,
+			**self.POPUP_INTERVAL_DICT,
+		)
+
+
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * POPUP_INTERVAL PUDLG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+class CLASS_POPUP_INTERVAL(object):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	POPUP_INTERVAL_DICT = None
+	POPUP_INTERVAL_LIST = None
+	POPUP_INTERVAL_OBJ = None
+
+	def __init__(self, title_, count_, splatArgs_=[]):
+		self.POPUP_INTERVAL_DICT = {
+			TITLE: "",  # title of the alert window
+			AUTO_CLOSE: True,  # interval timers get auto dismiss by default
+			AUTO_CLOSE_DURATION: 5,  # 5 seconds before auto closing an interval alert
+			FONT: FONTSZ_ALERT_TEXT,  # no title bar on our popup
+			GRAB_ANYWHERE: True,  # grab anywhere on our popup
+			KEEP_ON_TOP: True,  # keep our popup on top
+			MODAL: True,  # grab anywhere on our popup
+			NON_BLOCKING: True,  # carry on with everything else
+			NO_TITLEBAR: True,  # no title bar on our popup
+			TIMEOUT_KEY: "__DISMISSED__",
+		}
+
+		self.POPUP_INTERVAL_LIST = [
+			f"""INTERVAL {title_} has expired {count_} times""",
+			f"""click OK to dismiss, or wait {self.POPUP_INTERVAL_DICT[AUTO_CLOSE_DURATION]}seconds from alarm""",
+		]
+
+		self.POPUP_INTERVAL_LIST.append(splatArgs_)
+		self.POPUP_INTERVAL_OBJ = SG.popup_auto_close(
+			*self.POPUP_INTERVAL_LIST,
+			**self.POPUP_INTERVAL_DICT,
+		)
+		print(f"""{CF.NEWLINE}{CF.getDebugInfo()}
+		{CF.IGMPP(self)}""")
+
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+#
+
+makePSG
+_dictToUse_ {
+	'ALERTING_LIST':
+		'',
+	'ALL_TIMES_LIST':
+		'K_TIME_ALARM,  # list of all times	K_TIME_ALARM
+		K_TIME_AT_LAST_RUN,  # list of all times	K_TIME_AT_LAST_RUN
+		K_TIME_AT_NEXT_ALERT,  # list of all times K_TIME_AT_NEXT_ALERT
+		K_TIME_AT_ZEROELAPSE,  # list of all times K_TIME_AT_ZEROELAPSE
+		K_TIME_CLOCK,  # list of all times K_TIME_CLOCK
+		K_TIME_ELAPSED,  # list of all times K_TIME_ELAPSED
+		K_TIME_INTERVAL,  # list of all times K_TIME_INTERVAL
+		K_TIME_INTERVAL_START,  # list of all times K_TIME_INTERVAL_START
+		K_TIME_INTERVAL__BEGIN,  # list of all times K_TIME_INTERVAL__BEGIN
+		K_TIME_INTERVAL__END,  # list of all times K_TIME_INTERVAL__END
+		K_TIME_LEN_OF_ALERT,  # list of all times K_TIME_LEN_OF_ALERT
+		K_TIME_TOGO,  # list of all times K_TIME_TOGO
+		K_TIME_TO_CHECK_MOUSE,  # list of all times K_TIME_TO_CHECK_MOUSE
+		K_TIME_TO_MOVE,  # list of all times K_TIME_TO_MOVE
+		K_TIME_TO_UPDATE,  # list of all times K_TIME_TO_UPDATE',
+
+	'APPDS_MIDNIGHT_FIX_TIMES_LIST':
+		'K_TIME_AT_NEXT_ALERT,  # list of times to be updated at midnight
+		K_TIME_TO_CHECK_MOUSE,  # list of times to be updated at midnight
+		K_TIME_TO_MOVE,  # list of times to be updated at midnight
+		K_TIME_TO_UPDATE,  # list of times to be updated at midnight',
+
+	'CLOSE_LIST':
+		'MOUSE_STATUS_CLOSE_E,  # easet close entry
+		MOUSE_STATUS_CLOSE_N,  # easet close entry
+		MOUSE_STATUS_CLOSE_NE,  # easet close entry
+		MOUSE_STATUS_CLOSE_NW,  # easet close entry
+		MOUSE_STATUS_CLOSE_S,  # easet close entry
+		MOUSE_STATUS_CLOSE_SE,  # easet close entry
+		MOUSE_STATUS_CLOSE_SW,  # easet close entry
+		MOUSE_STATUS_CLOSE_W,  # easet close entry',
+
+	'DNUPDATE_LIST':
+		'K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
+		K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_FIRSTRUN,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_HOVER_DATE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_IS_ALERTING_NOW,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_PREDISMISSABLE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_RUNAWAY,  # checkbox for runaway from mouse behavior
+		K_CHECKBOX_SNOOZABLE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_SNOOZED,  # checkbox for dismissed from mouse behavior',
+
+	'POPUP_LIST':
+		'FRAME_POPUP01,  # popup list entry FRAME_POPUP01
+		FRAME_POPUP02,  # popup list entry FRAME_POPUP02
+		FRAME_POPUP03,  # popup list entry FRAME_POPUP03
+		FRAME_POPUP04,  # popup list entry FRAME_POPUP04
+		FRAME_POPUP05,  # popup list entry FRAME_POPUP05'
+	}
+
+FMPSG_SCTN0903_LIST_DICT {
+	'ALERTING_LIST':
+		'',
+	'CLOSE_LIST':
+		'MOUSE_STATUS_CLOSE_E,  # easet close entry
+		MOUSE_STATUS_CLOSE_N,  # easet close entry
+		MOUSE_STATUS_CLOSE_NE,  # easet close entry
+		MOUSE_STATUS_CLOSE_NW,  # easet close entry
+		MOUSE_STATUS_CLOSE_S,  # easet close entry
+		MOUSE_STATUS_CLOSE_SE,  # easet close entry
+		MOUSE_STATUS_CLOSE_SW,  # easet close entry
+		MOUSE_STATUS_CLOSE_W,  # easet close entry',
+
+	'DNUPDATE_LIST':
+		'K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
+		K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_FIRSTRUN,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_HOVER_DATE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_IS_ALERTING_NOW,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_PREDISMISSABLE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_RUNAWAY,  # checkbox for runaway from mouse behavior
+		K_CHECKBOX_SNOOZABLE,  # checkbox for dismissed from mouse behavior
+		K_CHECKBOX_SNOOZED,  # checkbox for dismissed from mouse behavior',
+
+	'POPUP_LIST':
+		'FRAME_POPUP01,  # popup list entry FRAME_POPUP01
+		FRAME_POPUP02,  # popup list entry FRAME_POPUP02
+		FRAME_POPUP03,  # popup list entry FRAME_POPUP03
+		FRAME_POPUP04,  # popup list entry FRAME_POPUP04
+		FRAME_POPUP05,  # popup list entry FRAME_POPUP05',
+
+	'ALL_TIMES_LIST':
+		'K_TIME_ALARM,  # list of all times K_TIME_ALARM
+		K_TIME_AT_LAST_RUN,  # list of all times K_TIME_AT_LAST_RUN
+		K_TIME_AT_NEXT_ALERT,  # list of all times K_TIME_AT_NEXT_ALERT
+		K_TIME_AT_ZEROELAPSE,  # list of all times K_TIME_AT_ZEROELAPSE
+		K_TIME_CLOCK,  # list of all times K_TIME_CLOCK
+		K_TIME_ELAPSED,  # list of all times K_TIME_ELAPSED
+		K_TIME_INTERVAL,  # list of all times K_TIME_INTERVAL
+		K_TIME_INTERVAL_START,  # list of all times K_TIME_INTERVAL_START
+		K_TIME_INTERVAL__BEGIN,  # list of all times K_TIME_INTERVAL__BEGIN
+		K_TIME_INTERVAL__END,  # list of all times K_TIME_INTERVAL__END
+		K_TIME_LEN_OF_ALERT,  # list of all times K_TIME_LEN_OF_ALERT
+		K_TIME_TOGO,  # list of all times K_TIME_TOGO
+		K_TIME_TO_CHECK_MOUSE,  # list of all times K_TIME_TO_CHECK_MOUSE
+		K_TIME_TO_MOVE,  # list of all times K_TIME_TO_MOVE
+		K_TIME_TO_UPDATE,  # list of all times K_TIME_TO_UPDATE',
+
+	'APPDS_MIDNIGHT_FIX_TIMES_LIST':
+		'K_TIME_AT_NEXT_ALERT,  # list of times to be updated at midnight
+		K_TIME_TO_CHECK_MOUSE,  # list of times to be updated at midnight
+		K_TIME_TO_MOVE,  # list of times to be updated at midnight
+		K_TIME_TO_UPDATE,  # list of times to be updated at midnight'
+	}
+
+FMPSG_SCTN0903_LIST_CMNT_DICT {
+	'ALERTING_LIST':
+		'list that holds all currently alarming events',
+	'CLOSE_LIST':
+		'list with close statuses',
+	'DNUPDATE_LIST':
+		'list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)',
+	'ALL_TIMES_LIST':
+		'list of all times',
+	'APPDS_MIDNIGHT_FIX_TIMES_LIST':
+		'list of times to be updated at midnight'
+	}
+
+doStartup
+APPDS_MAIN |{
+	'K_APPMODE': 'APPMODE_NONE',
+	'K_CHECKBOX_ALPHA_DIM': True,
+	'K_CHECKBOX_RUNAWAY': False,
+	'K_EVENT_ENTRIES': {
+		0: {
+			'K_ALARMPOPUP_TEXT_TEXT': 'get up, move around',
+			'K_AUTO_CLOSE_DURATION': 10,
+			'K_DISMISSED': False,
+			'K_ENABLED': True,
+			'K_EVENT_NAME': 'MOVE',
+			'K_EVENTMODE': 'EVENTMODE_INTERVAL',
+			'K_FIRSTRUN': True,
+			'K_FRAMENAME': None,
+			'K_INTERVAL_COUNT': 0,
+			'K_IS_ALERTING_NOW': False,
+			'K_PREDISMISSABLE': True,
+			'K_SNOOZABLE': False,
+			'K_SNOOZED': None,
+			'K_TIME_ALARM': 0,
+			'K_TIME_AT_LAST_RUN': 0,
+			'K_TIME_AT_NEXT_ALERT': 79200,
+			'K_TIME_INTERVAL': 1800,
+			'K_TIME_INTERVAL__BEGIN': 0,
+			'K_TIME_INTERVAL__END': 0,
+			'K_TIME_INTERVAL_START': 0,
+			'K_TIME_LEN_OF_ALERT': 0,
+			'K_ALARMPOPUP_PROPER': None,
+			'K_TIME_AT_ZEROELAPSE': 79819
+		},
+	'K_IS_ALERTING_NOW': True
+	},
+	'K_INDEX_OF_NEXT_EVENT': 0,
+	'K_VERSION': '00000002'
+}|
+None

@@ -63,8 +63,8 @@ COLOR_TIME_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
 COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
 COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
-EVENTMODE_ALARM = "EVENTMODE_ALARM"  # 
-EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  # 
+EVENTMODE_ALARM = "EVENTMODE_ALARM"  #
+EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
 F___ENTER__ = "F___ENTER__"  # define __enter__
 F___EXIT__ = "F___EXIT__"  # define __exit__ in CLOCKS
@@ -119,22 +119,22 @@ INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
 K_ALARMPOPUP_TEXT_TEXT = "K_ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
-K_ALPHA_CHANNEL = "K_ALPHA_CHANNEL"  # 
-K_ALPHA_HIGH = "K_ALPHA_HIGH"  # 
-K_ALPHA_LOW = "K_ALPHA_LOW"  # 
+K_ALPHA_CHANNEL = "K_ALPHA_CHANNEL"  #
+K_ALPHA_HIGH = "K_ALPHA_HIGH"  #
+K_ALPHA_LOW = "K_ALPHA_LOW"  #
 K_APPMODE = "K_APPMODE"  # app mode key
-K_AUTO_CLOSE_DURATION = "K_AUTO_CLOSE_DURATION"  # 
-K_BBOX = "K_BBOX"  # 
-K_BTN_DISMISS = "K_BTN_DISMISS"  # 
-K_BTN_DOWN = "K_BTN_DOWN"  # 
-K_BTN_EDIT = "K_BTN_EDIT"  # 
-K_BTN_QUIT_ALL = "K_BTN_QUIT_ALL"  # 
-K_BTN_QUIT_EDITOR = "K_BTN_QUIT_EDITOR"  # 
-K_BTN_UP = "K_BTN_UP"  # 
-K_BTN_XPAND = "K_BTN_XPAND"  # 
-K_BTN_ZERO = "K_BTN_ZERO"  # 
+K_AUTO_CLOSE_DURATION = "K_AUTO_CLOSE_DURATION"  #
+K_BBOX = "K_BBOX"  #
+K_BTN_DISMISS = "K_BTN_DISMISS"  #
+K_BTN_DOWN = "K_BTN_DOWN"  #
+K_BTN_EDIT = "K_BTN_EDIT"  #
+K_BTN_QUIT_ALL = "K_BTN_QUIT_ALL"  #
+K_BTN_QUIT_EDITOR = "K_BTN_QUIT_EDITOR"  #
+K_BTN_UP = "K_BTN_UP"  #
+K_BTN_XPAND = "K_BTN_XPAND"  #
+K_BTN_ZERO = "K_BTN_ZERO"  #
 K_CHANGED_EVENT = "K_CHANGED_EVENT"  # comment
-K_CHANGED_EVENTS = "K_CHANGED_EVENTS"  # 
+K_CHANGED_EVENTS = "K_CHANGED_EVENTS"  #
 K_CHANGED_LOCATION = "K_CHANGED_LOCATION"  # comment
 K_CHANGED_MOUSE_LOCATION = "K_CHANGED_MOUSE_LOCATION"  # comment
 K_CHANGED_VALUES = "K_CHANGED_VALUES"  # comment
@@ -148,28 +148,28 @@ K_CHECKBOX_PREDISMISSABLE = "K_CHECKBOX_PREDISMISSABLE"  # key for avoiding the 
 K_CHECKBOX_RUNAWAY = "K_CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
 K_CHECKBOX_SNOOZABLE = "K_CHECKBOX_SNOOZABLE"  # key for avoiding the mouse bool
 K_CHECKBOX_SNOOZED = "K_CHECKBOX_SNOOZED"  # key for avoiding the mouse bool
-K_CLOSE_BBOX = "K_CLOSE_BBOX"  # 
-K_COLUMN01 = "K_COLUMN01"  # 
-K_COLUMN02 = "K_COLUMN02"  # 
-K_CURRENT_EVENT = "K_CURRENT_EVENT"  # 
-K_CURRENT_EVENTMODE = "K_CURRENT_EVENTMODE"  # 
-K_CURRENT_LOCATION = "K_CURRENT_LOCATION"  # 
-K_CURRENT_MOUSE_LOCATION = "K_CURRENT_MOUSE_LOCATION"  # 
-K_CURRENT_MOUSE_STATUS = "K_CURRENT_MOUSE_STATUS"  # 
-K_CURRENT_RESULT = "K_CURRENT_RESULT"  # 
-K_CURRENT_VALUE = "K_CURRENT_VALUE"  # 
-K_CURRENT_VALUES = "K_CURRENT_VALUES"  # 
-K_CURRENTLY_DIMMED = "K_CURRENTLY_DIMMED"  # 
+K_CLOSE_BBOX = "K_CLOSE_BBOX"  #
+K_COLUMN01 = "K_COLUMN01"  #
+K_COLUMN02 = "K_COLUMN02"  #
+K_CURRENT_EVENT = "K_CURRENT_EVENT"  #
+K_CURRENT_EVENTMODE = "K_CURRENT_EVENTMODE"  #
+K_CURRENT_LOCATION = "K_CURRENT_LOCATION"  #
+K_CURRENT_MOUSE_LOCATION = "K_CURRENT_MOUSE_LOCATION"  #
+K_CURRENT_MOUSE_STATUS = "K_CURRENT_MOUSE_STATUS"  #
+K_CURRENT_RESULT = "K_CURRENT_RESULT"  #
+K_CURRENT_VALUE = "K_CURRENT_VALUE"  #
+K_CURRENT_VALUES = "K_CURRENT_VALUES"  #
+K_CURRENTLY_DIMMED = "K_CURRENTLY_DIMMED"  #
 K_DEBUG_PRINT_DICT = "K_DEBUG_PRINT_DICT"  # debug print key
-K_DICT_KEYS_INT = "K_DICT_KEYS_INT"  # 
-K_DICT_KEYS_TIME = "K_DICT_KEYS_TIME"  # 
-K_DICTIN = "K_DICTIN"  # 
-K_DICTINSTR = "K_DICTINSTR"  # 
-K_DICTOUT = "K_DICTOUT"  # 
+K_DICT_KEYS_INT = "K_DICT_KEYS_INT"  #
+K_DICT_KEYS_TIME = "K_DICT_KEYS_TIME"  #
+K_DICTIN = "K_DICTIN"  #
+K_DICTINSTR = "K_DICTINSTR"  #
+K_DICTOUT = "K_DICTOUT"  #
 K_DISMISSED = "K_DISMISSED"  # alarm dismissed bool
 K_DPD = "K_DPD"  # alarm dismissed bool
-K_ENABLED = "K_ENABLED"  # 
-K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  # 
+K_ENABLED = "K_ENABLED"  #
+K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  #
 K_EVENT_NAME = "K_EVENT_NAME"  # name of the event
 K_EVENTMODE = "K_EVENTMODE"  # what mode is this event
 K_FIRSTRUN = "K_FIRSTRUN"  # True if just started, false after init1()
@@ -177,41 +177,41 @@ K_FORMNAME = "K_FORMNAME"  # the name of the form
 K_INDEX_OF_NEXT_EVENT = "K_INDEX_OF_NEXT_EVENT"  # index of the next event to alert
 K_INDEXES = "K_INDEXES"  # holds the index(es) of the currently awaited event(s)
 K_INTERVAL_COUNT = "K_INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
-K_IS_ALERTING_NOW = "K_IS_ALERTING_NOW"  # 
-K_KEY_DICT = "K_KEY_DICT"  # 
-K_KEY_DICT_REVERSE = "K_KEY_DICT_REVERSE"  # 
-K_KEY_LIST_TIMES = "K_KEY_LIST_TIMES"  # 
-K_LAST_EVENT = "K_LAST_EVENT"  # 
-K_LAST_LOCATION = "K_LAST_LOCATION"  # 
-K_LAST_MOUSE_LOCATION = "K_LAST_MOUSE_LOCATION"  # 
-K_LAST_MOUSE_STATUS = "K_LAST_MOUSE_STATUS"  # 
-K_LAST_VALUES = "K_LAST_VALUES"  # 
-K_LAYOUT = "K_LAYOUT"  # 
-K_MAINFRAME = "K_MAINFRAME"  # 
+K_IS_ALERTING_NOW = "K_IS_ALERTING_NOW"  #
+K_KEY_DICT = "K_KEY_DICT"  #
+K_KEY_DICT_REVERSE = "K_KEY_DICT_REVERSE"  #
+K_KEY_LIST_TIMES = "K_KEY_LIST_TIMES"  #
+K_LAST_EVENT = "K_LAST_EVENT"  #
+K_LAST_LOCATION = "K_LAST_LOCATION"  #
+K_LAST_MOUSE_LOCATION = "K_LAST_MOUSE_LOCATION"  #
+K_LAST_MOUSE_STATUS = "K_LAST_MOUSE_STATUS"  #
+K_LAST_VALUES = "K_LAST_VALUES"  #
+K_LAYOUT = "K_LAYOUT"  #
+K_MAINFRAME = "K_MAINFRAME"  #
 K_MPX = "K_MPX"  # comment
-K_NAME = "K_NAME"  # 
+K_NAME = "K_NAME"  #
 K_NAME_NEXT_EVENT = "K_NAME_NEXT_EVENT"  # name of the next event up
-K_PERIODIC = "K_PERIODIC"  # 
+K_PERIODIC = "K_PERIODIC"  #
 K_PREDISMISSABLE = "K_PREDISMISSABLE"  # event can be dismissed in advance
-K_SCREEN_DIMS = "K_SCREEN_DIMS"  # 
-K_SIZE = "K_SIZE"  # 
+K_SCREEN_DIMS = "K_SCREEN_DIMS"  #
+K_SIZE = "K_SIZE"  #
 K_SNOOZABLE = "K_SNOOZABLE"  # can this event be snoozed
 K_SNOOZED = "K_SNOOZED"  # is this event snoozed bool
-K_TEXT_INTERVAL_COUNT = "K_TEXT_INTERVAL_COUNT"  # 
-K_TEXT_NAME_NEXT_EVENT = "K_TEXT_NAME_NEXT_EVENT"  # 
-K_TEXT_TIME_MS_AT_NEXT_ALERT = "K_TEXT_TIME_MS_AT_NEXT_ALERT"  # 
-K_TEXT_TIME_MS_AT_ZEROELAPSE = "K_TEXT_TIME_MS_AT_ZEROELAPSE"  # 
-K_TEXT_TIME_S_CLOCK = "K_TEXT_TIME_S_CLOCK"  # 
-K_TEXT_TIME_S_ELAPSED = "K_TEXT_TIME_S_ELAPSED"  # 
-K_TEXT_TIME_S_TOGO = "K_TEXT_TIME_S_TOGO"  # 
+K_TEXT_INTERVAL_COUNT = "K_TEXT_INTERVAL_COUNT"  #
+K_TEXT_NAME_NEXT_EVENT = "K_TEXT_NAME_NEXT_EVENT"  #
+K_TEXT_TIME_MS_AT_NEXT_ALERT = "K_TEXT_TIME_MS_AT_NEXT_ALERT"  #
+K_TEXT_TIME_MS_AT_ZEROELAPSE = "K_TEXT_TIME_MS_AT_ZEROELAPSE"  #
+K_TEXT_TIME_S_CLOCK = "K_TEXT_TIME_S_CLOCK"  #
+K_TEXT_TIME_S_ELAPSED = "K_TEXT_TIME_S_ELAPSED"  #
+K_TEXT_TIME_S_TOGO = "K_TEXT_TIME_S_TOGO"  #
 K_THIS_FORM_NAME = "K_THIS_FORM_NAME"  # adopt formName_
 K_THIS_KEY_BASE = "K_THIS_KEY_BASE"  # adopt keyBase_
-K_TIME_MS_AT_CHECK_MOUSE = "K_TIME_MS_AT_CHECK_MOUSE"  # 
-K_TIME_MS_AT_FLIP = "K_TIME_MS_AT_FLIP"  # 
-K_TIME_MS_AT_MOVE = "K_TIME_MS_AT_MOVE"  # 
-K_TIME_MS_AT_UPDATE = "K_TIME_MS_AT_UPDATE"  # 
+K_TIME_MS_AT_CHECK_MOUSE = "K_TIME_MS_AT_CHECK_MOUSE"  #
+K_TIME_MS_AT_FLIP = "K_TIME_MS_AT_FLIP"  #
+K_TIME_MS_AT_MOVE = "K_TIME_MS_AT_MOVE"  #
+K_TIME_MS_AT_UPDATE = "K_TIME_MS_AT_UPDATE"  #
 K_TIME_S_AT_ALARM = "K_TIME_S_AT_ALARM"  # the alarm time
-K_TIME_S_AT_LAST_RUN = "K_TIME_S_AT_LAST_RUN"  # timeS of last alarm 
+K_TIME_S_AT_LAST_RUN = "K_TIME_S_AT_LAST_RUN"  # timeS of last alarm
 K_TIME_S_AT_NEXT_ALERT = "K_TIME_S_AT_NEXT_ALERT"  # what time is the next alarm, == KEY_TIME_S_AT_ALARM is tomorrow
 K_TIME_S_AT_ZEROELAPSE = "K_TIME_S_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
 K_TIME_S_CLOCK = "K_TIME_S_CLOCK"  # the main clock time
@@ -223,7 +223,7 @@ K_TIME_S_INTERVAL_START = "K_TIME_S_INTERVAL_START"  # interval timer starting t
 K_TIME_S_LEN_OF_ALERT = "K_TIME_S_LEN_OF_ALERT"  # length of alerting
 K_TIME_S_TOGO = "K_TIME_S_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 K_VERSION = "K_VERSION"  # True if pkl is to be updated from APPDS_MAIN
-K_WINDOW = "K_WINDOW"  # 
+K_WINDOW = "K_WINDOW"  #
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
 MOUSE_STATUS_CLOSE_NE = "MOUSE_STATUS_CLOSE_NE"  # mouse is northeast of checked element
@@ -322,113 +322,113 @@ TIME_S_AT_NEXT_PERIODIC_JOB_VAL = 0  # seconds till next housekeeping, check for
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0910 DEF3
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALPHA_CHANNEL = "alpha_channel"  # 
-AUTO_CLOSE = "auto_close"  # 
-AUTO_CLOSE_DURATION = "auto_close_duration"  # 
-AUTO_SIZE_BUTTON = "auto_size_button"  # 
-AUTO_SIZE_BUTTONS = "auto_size_buttons"  # 
-AUTO_SIZE_TEXT = "auto_size_text"  # 
-BACKGROUND_COLOR = "background_color"  # 
-BIND_RETURN_KEY = "bind_return_key"  # 
-BORDER_DEPTH = "border_depth"  # 
-BORDER_WIDTH = "border_width"  # 
-BUTTON_COLOR = "button_color"  # 
-BUTTON_TEXT = "button_text"  # 
-BUTTON_TYPE = "button_type"  # 
-CHANGE_SUBMITS = "change_submits"  # 
+ALPHA_CHANNEL = "alpha_channel"  #
+AUTO_CLOSE = "auto_close"  #
+AUTO_CLOSE_DURATION = "auto_close_duration"  #
+AUTO_SIZE_BUTTON = "auto_size_button"  #
+AUTO_SIZE_BUTTONS = "auto_size_buttons"  #
+AUTO_SIZE_TEXT = "auto_size_text"  #
+BACKGROUND_COLOR = "background_color"  #
+BIND_RETURN_KEY = "bind_return_key"  #
+BORDER_DEPTH = "border_depth"  #
+BORDER_WIDTH = "border_width"  #
+BUTTON_COLOR = "button_color"  #
+BUTTON_TEXT = "button_text"  #
+BUTTON_TYPE = "button_type"  #
+CHANGE_SUBMITS = "change_submits"  #
 CHECKBOX_COLOR = "checkbox_color"  # color of background of the box that has the check mark in it. The checkmark is the same color as the text
-CIRCLE_COLOR = "circle_color"  # 
-CLICK_SUBMITS = "click_submits"  # 
-DEBUGGER_ENABLED = "debugger_enabled"  # 
-DEFAULT = "default"  # 
-DEFAULT_BUTTON_ELEMENT_SIZE = "default_button_element_size"  # 
-DEFAULT_ELEMENT_SIZE = "default_element_size"  # 
-DEFAULT_EXTENSION = "default_extension"  # 
-DEFAULT_VALUE = "default_value"  # 
-DISABLE_CLOSE = "disable_close"  # 
-DISABLE_MINIMIZE = "disable_minimize"  # 
-DISABLED = "disabled"  # 
-DISABLED_BUTTON_COLOR = "disabled_button_color"  # 
-ELEMENT_JUSTIFICATION = "element_justification"  # 
-ELEMENT_PADDING = "element_padding"  # 
-ENABLE_CLOSE_ATTEMPTED_EVENT = "enable_close_attempted_event"  # 
-ENABLE_EVENTS = "enable_events"  # 
-ENABLED = "enabled"  # 
-EXPAND_X = "expand_x"  # 
-EXPAND_Y = "expand_y"  # 
-FILE_TYPES = "file_types"  # 
-FINALIZE = "finalize"  # 
-FOCUS = "focus"  # 
-FONT = "font"  # 
-FORCE_TOPLEVEL = "force_toplevel"  # 
-GRAB = "grab"  # 
-GRAB_ANYWHERE = "grab_anywhere"  # 
-GROUP_ID = "group_id"  # 
-HIGHLIGHT_COLORS = "highlight_colors"  # 
-ICON = "icon"  # 
-IMAGE_DATA = "image_data"  # 
-IMAGE_FILENAME = "image_filename"  # 
-IMAGE_SIZE = "image_size"  # 
-IMAGE_SUBSAMPLE = "image_subsample"  # 
-INITIAL_FOLDER = "initial_folder"  # 
-INITIAL_VALUE = "initial_value"  # 
-JUSTIFICATION = "justification"  # 
+CIRCLE_COLOR = "circle_color"  #
+CLICK_SUBMITS = "click_submits"  #
+DEBUGGER_ENABLED = "debugger_enabled"  #
+DEFAULT = "default"  #
+DEFAULT_BUTTON_ELEMENT_SIZE = "default_button_element_size"  #
+DEFAULT_ELEMENT_SIZE = "default_element_size"  #
+DEFAULT_EXTENSION = "default_extension"  #
+DEFAULT_VALUE = "default_value"  #
+DISABLE_CLOSE = "disable_close"  #
+DISABLE_MINIMIZE = "disable_minimize"  #
+DISABLED = "disabled"  #
+DISABLED_BUTTON_COLOR = "disabled_button_color"  #
+ELEMENT_JUSTIFICATION = "element_justification"  #
+ELEMENT_PADDING = "element_padding"  #
+ENABLE_CLOSE_ATTEMPTED_EVENT = "enable_close_attempted_event"  #
+ENABLE_EVENTS = "enable_events"  #
+ENABLED = "enabled"  #
+EXPAND_X = "expand_x"  #
+EXPAND_Y = "expand_y"  #
+FILE_TYPES = "file_types"  #
+FINALIZE = "finalize"  #
+FOCUS = "focus"  #
+FONT = "font"  #
+FORCE_TOPLEVEL = "force_toplevel"  #
+GRAB = "grab"  #
+GRAB_ANYWHERE = "grab_anywhere"  #
+GROUP_ID = "group_id"  #
+HIGHLIGHT_COLORS = "highlight_colors"  #
+ICON = "icon"  #
+IMAGE_DATA = "image_data"  #
+IMAGE_FILENAME = "image_filename"  #
+IMAGE_SIZE = "image_size"  #
+IMAGE_SUBSAMPLE = "image_subsample"  #
+INITIAL_FOLDER = "initial_folder"  #
+INITIAL_VALUE = "initial_value"  #
+JUSTIFICATION = "justification"  #
 JUSTIFICATION_CENTER = "center"  # comment
 JUSTIFICATION_LEFT = "left"  # comment
 JUSTIFICATION_RIGHT = "right"  # comment
-K = "k"  # 
-KEEP_ON_TOP = "keep_on_top"  # 
-KEY = "key"  # 
-LAYOUT = "layout"  # 
-LOCATION = "location"  # 
-MARGINS = "margins"  # 
-METADATA = "metadata"  # 
-MODAL = "modal"  # 
-NO_TITLEBAR = "no_titlebar"  # 
-NON_BLOCKING = "non_blocking"  # 
-PAD = "pad"  # 
-PROGRESS_BAR_COLOR = "progress_bar_color"  # 
-READONLY = "readonly"  # 
-RELIEF = "relief"  # 
+K = "k"  #
+KEEP_ON_TOP = "keep_on_top"  #
+KEY = "key"  #
+LAYOUT = "layout"  #
+LOCATION = "location"  #
+MARGINS = "margins"  #
+METADATA = "metadata"  #
+MODAL = "modal"  #
+NO_TITLEBAR = "no_titlebar"  #
+NON_BLOCKING = "non_blocking"  #
+PAD = "pad"  #
+PROGRESS_BAR_COLOR = "progress_bar_color"  #
+READONLY = "readonly"  #
+RELIEF = "relief"  #
 RELIEF_FLAT = "flat"  # comment
-RELIEF_GROOVE = "groove"  # 
-RELIEF_RAISED = "raised"  # 
-RELIEF_RIDGE = "ridge"  # 
-RELIEF_SOLID = "solid"  # 
-RELIEF_SUNKEN = "sunken"  # 
-RESIZABLE = "resizable"  # 
-RETURN_KEYBOARD_EVENTS = "return_keyboard_events"  # 
-RIGHT_CLICK_MENU = "right_click_menu"  # 
-RIGHT_CLICK_MENU_BACKGROUND_COLOR = "right_click_menu_background_color"  # 
-RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR = "right_click_menu_disabled_text_color"  # 
-RIGHT_CLICK_MENU_FONT = "right_click_menu_font"  # 
-RIGHT_CLICK_MENU_SELECTED_COLORS = "right_click_menu_selected_colors"  # 
-RIGHT_CLICK_MENU_TEAROFF = "right_click_menu_tearoff"  # 
-RIGHT_CLICK_MENU_TEXT_COLOR = "right_click_menu_text_color"  # 
-S = "s"  # 
+RELIEF_GROOVE = "groove"  #
+RELIEF_RAISED = "raised"  #
+RELIEF_RIDGE = "ridge"  #
+RELIEF_SOLID = "solid"  #
+RELIEF_SUNKEN = "sunken"  #
+RESIZABLE = "resizable"  #
+RETURN_KEYBOARD_EVENTS = "return_keyboard_events"  #
+RIGHT_CLICK_MENU = "right_click_menu"  #
+RIGHT_CLICK_MENU_BACKGROUND_COLOR = "right_click_menu_background_color"  #
+RIGHT_CLICK_MENU_DISABLED_TEXT_COLOR = "right_click_menu_disabled_text_color"  #
+RIGHT_CLICK_MENU_FONT = "right_click_menu_font"  #
+RIGHT_CLICK_MENU_SELECTED_COLORS = "right_click_menu_selected_colors"  #
+RIGHT_CLICK_MENU_TEAROFF = "right_click_menu_tearoff"  #
+RIGHT_CLICK_MENU_TEXT_COLOR = "right_click_menu_text_color"  #
+S = "s"  #
 SCROLLABLE = "scrollable"  # can this column be scrolled bool
 SET_TO_INDEX = "set_to_index"  # change selection to a particular choice starting with index = 0
-SIZE = "size"  # 
-TARGET = "target"  # 
-TEXT = "text"  # 
-TEXT_COLOR = "text_color"  # 
-TEXT_JUSTIFICATION = "text_justification"  # 
-TIMEOUT_KEY = "timeout_key"  # 
-TITLE = "title"  # 
-TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  # 
-TITLEBAR_FONT = "titlebar_font"  # 
-TITLEBAR_ICON = "titlebar_icon"  # 
-TITLEBAR_TEXT_COLOR = "titlebar_text_color"  # 
-TOOLTIP = "tooltip"  # 
-TRANSPARENT_COLOR = "transparent_color"  # 
-TTK_THEME = "ttk_theme"  # 
-USE_CUSTOM_TITLEBAR = "use_custom_titlebar"  # 
-USE_DEFAULT_FOCUS = "use_default_focus"  # 
-USE_TTK_BUTTONS = "use_ttk_buttons"  # 
+SIZE = "size"  #
+TARGET = "target"  #
+TEXT = "text"  #
+TEXT_COLOR = "text_color"  #
+TEXT_JUSTIFICATION = "text_justification"  #
+TIMEOUT_KEY = "timeout_key"  #
+TITLE = "title"  #
+TITLEBAR_BACKGROUND_COLOR = "titlebar_background_color"  #
+TITLEBAR_FONT = "titlebar_font"  #
+TITLEBAR_ICON = "titlebar_icon"  #
+TITLEBAR_TEXT_COLOR = "titlebar_text_color"  #
+TOOLTIP = "tooltip"  #
+TRANSPARENT_COLOR = "transparent_color"  #
+TTK_THEME = "ttk_theme"  #
+USE_CUSTOM_TITLEBAR = "use_custom_titlebar"  #
+USE_DEFAULT_FOCUS = "use_default_focus"  #
+USE_TTK_BUTTONS = "use_ttk_buttons"  #
 VALUE = "value"  # the value of the element
 VALUES = "values"  # list of values
-VERTICAL_ALIGNMENT = "vertical_alignment"  # 
-VERTICAL_SCROLL_ONLY = "verticale_scroll_only"  # 
+VERTICAL_ALIGNMENT = "vertical_alignment"  #
+VERTICAL_SCROLL_ONLY = "verticale_scroll_only"  #
 VISIBLE = "visible"  # visibility of elements
 
 
@@ -561,7 +561,7 @@ THIS_ALARM_POPUP_TEXT_LIST = [  # collects the text to popup
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0906 button elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-BTN_DISMISS20 = {  # 
+BTN_DISMISS20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the DOWN button
 	IMAGE_FILENAME: "res/dismiss20.png",  # filename for the button icon
 	BORDER_WIDTH: 0,  # button xpand key
@@ -573,7 +573,7 @@ BTN_DISMISS20 = {  #
 }
 
 
-BTN_DOWN20 = {  # 
+BTN_DOWN20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the DOWN button
 	IMAGE_FILENAME: "res/down20.png",  # filename for the button icon
 	BORDER_WIDTH: 0,  # button xpand key
@@ -585,7 +585,7 @@ BTN_DOWN20 = {  #
 }
 
 
-BTN_DOWN32 = {  # 
+BTN_DOWN32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the DOWN button
 	IMAGE_FILENAME: "res/down32.png",  # filename for the button icon
 	BORDER_WIDTH: 0,  # button xpand key
@@ -597,7 +597,7 @@ BTN_DOWN32 = {  #
 }
 
 
-BTN_EDIT20 = {  # 
+BTN_EDIT20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the EDIT button
 	IMAGE_FILENAME: "res/edit20.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -608,7 +608,7 @@ BTN_EDIT20 = {  #
 }
 
 
-BTN_EDIT32 = {  # 
+BTN_EDIT32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the EDIT button
 	IMAGE_FILENAME: "res/edit32.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -619,7 +619,7 @@ BTN_EDIT32 = {  #
 }
 
 
-BTN_QUIT20 = {  # 
+BTN_QUIT20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the QUIT button
 	IMAGE_FILENAME: "res/quit20.png",  # filename for the button icon
 	TOOLTIP: "quit the app",  # button_text empty for the QUIT button
@@ -631,7 +631,7 @@ BTN_QUIT20 = {  #
 }
 
 
-BTN_QUIT32 = {  # 
+BTN_QUIT32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the QUIT button
 	IMAGE_FILENAME: "res/quit32.png",  # filename for the button icon
 	TOOLTIP: "quit the app",  # button_text empty for the QUIT button
@@ -643,7 +643,7 @@ BTN_QUIT32 = {  #
 }
 
 
-BTN_UP20 = {  # 
+BTN_UP20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the UP button
 	IMAGE_FILENAME: "res/up20.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -654,7 +654,7 @@ BTN_UP20 = {  #
 }
 
 
-BTN_UP32 = {  # 
+BTN_UP32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the UP button
 	IMAGE_FILENAME: "res/up32.png",  # filename for the button icon
 	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
@@ -665,7 +665,7 @@ BTN_UP32 = {  #
 }
 
 
-BTN_XPAND20 = {  # 
+BTN_XPAND20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the XPAND button
 	IMAGE_FILENAME: "res/xpand20.png",  # filename for the button icon
 	TOOLTIP: "expand to the big window from where you can edit events",  # tooltip
@@ -677,7 +677,7 @@ BTN_XPAND20 = {  #
 }
 
 
-BTN_XPAND32 = {  # 
+BTN_XPAND32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the XPAND button
 	IMAGE_FILENAME: "res/xpand32.png",  # filename for the button icon
 	TOOLTIP: "expand to the big window from where you can edit events",  # tooltip
@@ -689,7 +689,7 @@ BTN_XPAND32 = {  #
 }
 
 
-BTN_ZERO20 = {  # 
+BTN_ZERO20 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the ZERO button
 	IMAGE_FILENAME: "res/zero20.png",  # filename for the button icon
 	TOOLTIP: "zero the elapsed timer",  # tooltip
@@ -701,7 +701,7 @@ BTN_ZERO20 = {  #
 }
 
 
-BTN_ZERO32 = {  # 
+BTN_ZERO32 = {  #
 	BUTTON_TEXT: "",  # button_text empty for the ZERO button
 	IMAGE_FILENAME: "res/zero32.png",  # filename for the button icon
 	TOOLTIP: "zero the elapsed timer",  # tooltip
@@ -933,34 +933,34 @@ class CLASS_CLOCKS(object):
 		self._THIS_KEY_BASE_ = keyBase_  # adopt keyBase_
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""  # make a local key sourcer
 		self._THIS_FORM_NAME_ = formName_  # adopt formName_
-		self._KEY_DICT_REVERSE_ = {}  # 
-		self._KEY_DICT_ = {}  # 
+		self._KEY_DICT_REVERSE_ = {}  #
+		self._KEY_DICT_ = {}  #
 
-		self._KEY_LIST_TIMES_ = []  # 
-		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  # 
-		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  # 
-		self._ALPHA_LOW_ = SZ_ALPHA_LOW  # 
-		self._BBOX_ = EMPTY_BBOX  # 
+		self._KEY_LIST_TIMES_ = []  #
+		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  #
+		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  #
+		self._ALPHA_LOW_ = SZ_ALPHA_LOW  #
+		self._BBOX_ = EMPTY_BBOX  #
 		self._CHANGED_EVENT_ = False  # comment
 		self._CHANGED_LOCATION_ = False  # comment
 		self._CHANGED_MOUSE_LOCATION_ = False  # comment
 		self._CHANGED_VALUES_ = False  # comment
-		self._CLOSE_BBOX_ = EMPTY_BBOX  # 
-		self._CURRENTLY_DIMMED_ = False  # 
-		self._CURRENT_EVENTMODE_ = None  # 
-		self._CURRENT_EVENT_ = None  # 
-		self._CURRENT_LOCATION_ = EMPTY_XY  # 
-		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  # 
-		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  # 
-		self._CURRENT_VALUES_ = {}  # 
-		self._MAINFRAME_ = None  # 
+		self._CLOSE_BBOX_ = EMPTY_BBOX  #
+		self._CURRENTLY_DIMMED_ = False  #
+		self._CURRENT_EVENTMODE_ = None  #
+		self._CURRENT_EVENT_ = None  #
+		self._CURRENT_LOCATION_ = EMPTY_XY  #
+		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  #
+		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  #
+		self._CURRENT_VALUES_ = {}  #
+		self._MAINFRAME_ = None  #
 		self._MPX_ = EMPTY_XY  # comment
-		self._SCREEN_DIMS_ = EMPTY_XY  # 
-		self._SIZE_ = EMPTY_XY  # 
-		self._TIME_MS_AT_CHECK_MOUSE_ = ZERO_CLOCK  # 
-		self._TIME_MS_AT_FLIP_ = ZERO_CLOCK  # 
-		self._TIME_MS_AT_MOVE_ = ZERO_CLOCK  # 
-		self._TIME_MS_AT_UPDATE_ = ZERO_CLOCK  # 
+		self._SCREEN_DIMS_ = EMPTY_XY  #
+		self._SIZE_ = EMPTY_XY  #
+		self._TIME_MS_AT_CHECK_MOUSE_ = ZERO_CLOCK  #
+		self._TIME_MS_AT_FLIP_ = ZERO_CLOCK  #
+		self._TIME_MS_AT_MOVE_ = ZERO_CLOCK  #
+		self._TIME_MS_AT_UPDATE_ = ZERO_CLOCK  #
 		self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._KEY_DICT_REVERSE_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._KEY_DICT_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
@@ -1008,9 +1008,9 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			K_TIME_S_AT_NEXT_ALERT: CF.DAYSECS,  # comment
 			K_TIME_S_AT_ZEROELAPSE: CF.DAYSECS,  # comment
-			K_TIME_S_CLOCK: CF.DAYSECS,  # 
-			K_TIME_S_ELAPSED: CF.TIME995959,  # 
-			K_TIME_S_TOGO: CF.DAYSECS,  # 
+			K_TIME_S_CLOCK: CF.DAYSECS,  #
+			K_TIME_S_ELAPSED: CF.TIME995959,  #
+			K_TIME_S_TOGO: CF.DAYSECS,  #
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1195,13 +1195,13 @@ class CLASS_CLOCKS(object):
 			BACKGROUND_COLOR: COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
 			BORDER_DEPTH: SZ_BORDER_DEPTH,  # border depth to zero
 			ELEMENT_PADDING: SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
-			FORCE_TOPLEVEL: None,  # 
+			FORCE_TOPLEVEL: None,  #
 			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
 			LAYOUT: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
-			MARGINS: SZ_MARGINS_ALL,  # 
+			MARGINS: SZ_MARGINS_ALL,  #
 			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
-			TITLE: TITLE_CLOCKS,  # 
+			TITLE: TITLE_CLOCKS,  #
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -2024,7 +2024,7 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 			print(f"""runaway: ready to move to {CF.OPAREN}{_moveToX_}, {_moveToY_}{CF.CPAREN}""")
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-		
+
 #			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 #		if (abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA):
 #			return
@@ -2238,3 +2238,768 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 #
 
 
+# <<>>
+#
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# start of unmanaged sections of py
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+#
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# appdsDecode
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def appdsDecode(dictIn_=None):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	_dictToRtn_ = {}
+	_dictToRtn_[K_EVENT_ENTRIES] = {}
+
+		# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	if (dictIn_ is None):
+		dictIn_ = CF.quickCopyDict(APPDS_MAIN)
+
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	for _thisKey_, _thisVal_ in dictIn_.items():
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (isinstance(_thisVal_, dict) is False):
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_thisKey_ in ALL_TIMES_LIST):
+				dictToRtn_[_thisKey_] = CF.nrmlIntToHMS(_thisVal_)
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			else:
+				dictToRtn_[_thisKey_] = dictIn_[_thisKey_]
+
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	for _thisKey_, _thisVal_ in dictIn_[K_EVENT_ENTRIES].items():
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_thisKey_ in ALL_TIMES_LIST):
+			_dictToRtn_[K_EVENT_ENTRIES][_thisKey_] = CF.nrmlIntToHMS(dictIn_[K_EVENT_ENTRIES][_thisKey_])
+
+			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		else:
+			_dictToRtn_[K_EVENT_ENTRIES][_thisKey_] = dictIn_[K_EVENT_ENTRIES][_thisKey_]
+
+	return _dictToRtn_
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# getMousePos
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*def mousepos():
+def getMousePos():
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	# mseData_ = DISP.Display().screen().root.query_pointer()._data
+	mseData_ = MLCN()._data
+	locationToRtn_ = (mseData_["root_x"], mseData_["root_y"])
+	# el(mseData_)
+	return locationToRtn_
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# splitBBoxToRaw
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def splitBBoxToRaw(BBoxToSplit_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	return BBoxToSplit_[INDEX_WEST], BBoxToSplit_[INDEX_NORTH], BBoxToSplit_[INDEX_EAST], BBoxToSplit_[INDEX_SOUTH]
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# splitBBoxToRaw
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def splitXYToRaw(XYToSplit_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	return XYToSplit_[INDEX_X], XYToSplit_[INDEX_Y]
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# fixTimeAtNext
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def fixTimeAtNext(timeToFix_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+
+	if timeToFix_ < NOWS:
+		timeToFix_ += CF.DAYSECS
+
+	return timeToFix_
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# localTimes
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def localTimes(hrs_=None, mins_=None):
+	global \
+		NOW_NOMS, \
+		NOWM, \
+		NOWMS, \
+		NOWS
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if hrs_ is None:
+		hrs_ = TIME_H_ADJUST_HRS
+
+	if mins_ is None:
+		mins_ = TIME_M_ADJUST_MINS
+
+	_adjSecs_ = CF.MTSS() - TIME_S_ADJUST_VALUE(hrs_, mins_)
+	if _adjSecs_ < 0:
+		_adjSecs_ += CF.DAYSECS
+
+	_adjSecs_ = _adjSecs_ % CF.DAYSECS
+	NOWS = _adjSecs_
+	NOW_NOMS = int(NOWS)
+	NOWM = CF.loseTheSecs(_adjSecs_)
+	NOWMS = int(NOWS * 1000)
+
+		# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	if (DPD_ROOT[F_LOCALTIMES] is True):
+		print(f"""{CF.getDebugInfo()}
+{CF.frameItHMS("_adjSecs_", _adjSecs_)}
+{CF.frameItHMS("TIME_S_ADJUST_VALUE(hrs_, mins_)", TIME_S_ADJUST_VALUE(hrs_, mins_))}
+	NOWS {CF.nrmlIntToHMS(NOWS)} = _adjSecs_
+	NOW_NOMS {CF.nrmlIntToHMS(NOW_NOMS)} = int(NOWS)
+	NOWM {CF.nrmlIntToHMS(NOWM)} = CF.loseTheSecs(_adjSecs_)
+	NOWMS {CF.nrmlIntToHMS(NOWMS)} = int(NOWS * 1000)
+""")
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# compareXY
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def compareXY(XY1_, XY2_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if (XY1_[INDEX_X] == XY2_[INDEX_X]) and (XY1_[INDEX_Y] == XY2_[INDEX_Y]):
+		return True
+	else:
+		return False
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# compareBBox
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def compareBBox(BBox1_, BBox2_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if ((BBox1_[INDEX_NORTH] == BBox2_[INDEX_NORTH]) and (BBox1_[INDEX_WEST] == BBox2_[INDEX_WEST]) and (BBox1_[INDEX_SOUTH] == BBox2_[INDEX_SOUTH]) and (BBox1_[INDEX_EAST] == BBox2_[INDEX_EAST])):
+		return True
+	else:
+		return False
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# getBBox
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def getBBox(locnToBBox_, sizeToBBox_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	_TLcnX_ = locnToBBox_[INDEX_X]
+	_TLcnY_ = locnToBBox_[INDEX_Y]
+	_TSizeX_ = sizeToBBox_[INDEX_X]
+	_TSizeY_ = sizeToBBox_[INDEX_Y]
+
+	return (
+		_TLcnX_,
+		_TLcnY_,
+		(_TLcnX_ + _TSizeX_),
+		(_TLcnY_ + _TSizeY_),
+	)
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# getCloseBBox
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def getCloseBBox(location_, size_, closeEnough_=SZ_CLOSE):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	_TLcnX_ = location_[INDEX_X]
+	_TLcnY_ = location_[INDEX_Y]
+	_TSizeX_ = size_[INDEX_X]
+	_TSizeY_ = size_[INDEX_Y]
+	return (
+		(_TLcnX_ - closeEnough_),
+		(_TLcnY_ - closeEnough_),
+		(_TLcnX_ + _TSizeX_ + closeEnough_),
+		(_TLcnY_ + _TSizeY_ + closeEnough_)
+	)
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# isInBBox
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def isInBBox(BBoxIn_, pointIn_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if (BBoxIn_[INDEX_NORTH] < pointIn_[INDEX_Y] < BBoxIn_[INDEX_SOUTH]) and (BBoxIn_[INDEX_WEST] < pointIn_[INDEX_X] < BBoxIn_[INDEX_EAST]):
+		return True
+	else:
+		return False
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# updateInterval
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def updateInterval(eventIndexToDo_):
+	global \
+			APPDS_MAIN
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+
+	if (DPD_ROOT[F_UPDATEINTERVAL] is True):
+		print(f"""updateInterval start
+APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_] {APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_]}
+""")
+	_eventToDo_ = CF.quickCopyDict(APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_])
+	print(f"""updateInterval
+_eventToDo_ {_eventToDo_}""")
+	_TInterval_ = _eventToDo_[K_TIME_S_INTERVAL]
+	_TTimeAtBegin_ = _eventToDo_[K_TIME_S_INTERVAL__BEGIN]
+	_TTimeSinceBegin_ = NOWS - _TTimeAtBegin_
+	_TTimeAtLastRun_ = _eventToDo_[K_TIME_S_AT_LAST_RUN]
+	_TTimeAtStart_ = int(_TTimeSinceBegin_ // _TInterval_) * _TInterval_
+	_TTimeAtNext_ = fixTimeAtNext(_TTimeAtStart_ + _TInterval_)
+
+	if (_eventToDo_[K_FIRSTRUN] is True):
+#		_TTimeAtStart_ = int(_TTimeSinceBegin_ // _TInterval_) * _TInterval_
+#		_TTimeAtNext_ = fixTimeAtNext(_TTimeAtStart_ + _TInterval_)
+		APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_FIRSTRUN] = False
+		APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_S_AT_LAST_RUN] = _TTimeAtLastRun_ = _TTimeAtStart_
+
+	APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_S_INTERVAL_START] = _TTimeAtStart_
+	APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_][K_TIME_S_AT_NEXT_ALERT] = _TTimeAtNext_
+
+	if (DPD_ROOT[F_UPDATEINTERVAL] is True):
+		print(f"""updateInterval finish
+APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_] {APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_]}
+""")
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# findNextAlarmEvent
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def findNextAlarmEvent():
+	global \
+			CURRENT_EVENTMODE, \
+			CURRENT_INTERVAL_COUNT, \
+			NAME_NEXT_EVENT_STR, \
+			TIME_S_AT_NEXT_EVENT_VAL
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	_nextEventList_ = []  # (time, index, mode, name)
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	for _index_, _event_ in APPDS_MAIN[K_EVENT_ENTRIES].items():
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if _event_ is not None:
+			_TEventMode_ = _event_[K_EVENTMODE]
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_TEventMode_ == EVENTMODE_INTERVAL):
+				updateInterval(_index_)
+				_event_ = APPDS_MAIN[K_EVENT_ENTRIES][_index_]
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			elif (_TEventMode_ == EVENTMODE_ALARM):
+				_event_[K_TIME_S_AT_NEXT_ALERT] = _event_[TIME_ALARM]
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_event_[K_DISMISSED] is False) and \
+					(_event_[K_ENABLED] is True) and \
+					(_event_[K_TIME_S_INTERVAL__BEGIN] <= NOWS < fixTimeAtNext(_event_[K_TIME_S_INTERVAL__END])):
+				# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
+				_nextEventList_.append((fixTimeAtNext(_event_[K_TIME_S_AT_NEXT_ALERT]), _index_, _event_[K_EVENTMODE], _event_[K_EVENT_NAME], _event_[K_INTERVAL_COUNT]))
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+
+	_nextEventList_.sort()
+
+		# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	if _nextEventList_ != []:
+
+		_currentIntervalCount0_ = _nextEventList_[0][4]
+		_eventMode0_ = _nextEventList_[0][2]
+		_nameNextEvent0_ = _nextEventList_[0][3]
+		_timeAtNextAlert0_ = _nextEventList_[0][0]
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (len(_nextEventList_) == 1):
+			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+				eventMode_=_eventMode0_,
+				currentIntervalCount_=_currentIntervalCount0_,
+				nameNextEvent_=_nameNextEvent0_,
+				timeAtNextAlert_=_timeAtNextAlert0_,
+			)
+			CURRENT_EVENTMODE_VAL = _eventMode0_  # (time, index, mode, name, intervalCount)
+			CURRENT_INTERVAL_COUNT = _currentIntervalCount0_
+			NAME_NEXT_EVENT_STR = _nameNextEvent0_  # (time, index, mode, name, intervalCount)
+			TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
+			return
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_nextEventList_[1][0] > _timeAtNextAlert0_):
+			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+				eventMode_=_eventMode0_,
+				currentIntervalCount_=_currentIntervalCount0_,
+				nameNextEvent_=_nameNextEvent0_,
+				timeAtNextAlert_=_timeAtNextAlert0_,
+			)
+			CURRENT_EVENTMODE_VAL = _eventMode0_  # (time, index, mode, name, intervalCount)
+			CURRENT_INTERVAL_COUNT = _currentIntervalCount0_
+			NAME_NEXT_EVENT_STR = _nameNextEvent0_  # (time, index, mode, name, intervalCount)
+			TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
+			return
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		_currentIntervalCount1_ = _nextEventList_[1][4]
+		_eventMode1_ = _nextEventList_[1][2]
+		_nameNextEvent1_ = _nextEventList_[1][3]
+		_timeAtNextAlert1_ = _nextEventList_[1][0]
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (len(_nextEventList_) == 2) or \
+				(_nextEventList_[2][0] > _timeAtNextAlert1_):
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_eventMode0_ == EVENTMODE_INTERVAL) or \
+					(_eventMode1_ == EVENTMODE_INTERVAL):
+				_eventMode_ = EVENTMODE_INTERVAL
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			else:
+				_eventMode_ = EVENTMODE_ALARM
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+				eventMode_=_eventMode_,
+				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_],
+				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_],
+				timeAtNextAlert_=_timeAtNextAlert0_,
+			)
+			CURRENT_EVENTMODE_VAL = _eventMode_
+			CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_]
+			NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_]
+			TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
+			return
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		_currentIntervalCount2_ = _nextEventList_[2][4]
+		_eventMode2_ = _nextEventList_[2][2]
+		_nameNextEvent2_ = _nextEventList_[2][3]
+		_timeAtNextAlert2_ = _nextEventList_[2][0]
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (len(_nextEventList_) == 3) or \
+				(_nextEventList_[3][0] > _timeAtNextAlert2_):
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_eventMode0_ == EVENTMODE_INTERVAL) or \
+					(_eventMode1_ == EVENTMODE_INTERVAL) or \
+					(_eventMode2_ == EVENTMODE_INTERVAL):
+				_eventMode_ = EVENTMODE_INTERVAL
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			else:
+				_eventMode_ = EVENTMODE_ALARM
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+				eventMode_=_eventMode_,
+				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_],
+				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_],
+				timeAtNextAlert_=_timeAtNextAlert0_,
+			)
+			CURRENT_EVENTMODE_VAL = _eventMode_
+			CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_]
+			NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_]
+			TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
+			return
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		_currentIntervalCount3_ = _nextEventList_[3][4]
+		_eventMode3_ = _nextEventList_[3][2]
+		_nameNextEvent3_ = _nextEventList_[3][3]
+		_timeAtNextAlert3_ = _nextEventList_[3][0]
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (len(_nextEventList_) == 4) or \
+				(_nextEventList_[4][0] > _timeAtNextAlert3_):
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_eventMode0_ == EVENTMODE_INTERVAL) or \
+					(_eventMode1_ == EVENTMODE_INTERVAL) or \
+					(_eventMode2_ == EVENTMODE_INTERVAL) or \
+					(_eventMode3_ == EVENTMODE_INTERVAL):
+				_eventMode_ = EVENTMODE_INTERVAL
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			else:
+				_eventMode_ = EVENTMODE_ALARM
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+				eventMode_=_eventMode_,
+				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCoun3_],
+				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_],
+				timeAtNextAlert_=_timeAtNextAlert0_,
+			)
+			CURRENT_EVENTMODE_VAL = _eventMode_
+			CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCount3_]
+			NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_]
+			TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
+			return
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		_currentIntervalCount4_ = _nextEventList_[4][4]
+		_eventMode4_ = _nextEventList_[4][2]
+		_nameNextEvent4_ = _nextEventList_[4][3]
+		_timeAtNextAlert4_ = _nextEventList_[4][0]
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_eventMode0_ == EVENTMODE_INTERVAL) or \
+				(_eventMode1_ == EVENTMODE_INTERVAL) or \
+				(_eventMode2_ == EVENTMODE_INTERVAL) or \
+				(_eventMode3_ == EVENTMODE_INTERVAL) or \
+				(_eventMode4_ == EVENTMODE_INTERVAL):
+			_eventMode_ = EVENTMODE_INTERVAL
+
+			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		else:
+			_eventMode_ = EVENTMODE_ALARM
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+			eventMode_=_eventMode_,
+			currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCoun3_, _currentIntervalCount4_],
+			nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_, _nameNextEvent4_],
+			timeAtNextAlert_=_timeAtNextAlert0_,
+		)
+		CURRENT_EVENTMODE_VAL = _eventMode_
+		CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCount3_, _currentIntervalCount4_]
+		NAME_NEXT_EVENT_STR = [_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_, _nameNextEvent4_]
+		TIME_S_AT_NEXT_EVENT_VAL = _timeAtNextAlert0_
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# doEvent
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def doEvent():
+	global \
+		APPDS_MAIN
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	_eventIndex_ = APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]
+	_event_ = CF.quickCopyDict(APPDS_MAIN[K_EVENT_ENTRIES][_eventIndex_])
+
+		# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	if (_event_[K_EVENTMODE] == EVENTMODE_INTERVAL):
+		APPDS_MAIN[K_EVENT_ENTRIES][_eventIndex_][K_INTERVAL_COUNT] += 1
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	for _index_, _values_ in APPDS_MAIN[K_EVENT_ENTRIES].items():
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_values_[K_TIME_S_AT_NEXT_ALERT] == NOWS):
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_values_[K_EVENTMODE] == EVENTMODE_INTERVAL):
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_INTERVAL_COUNT] += 1
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_AT_NEXT_ALERT] = fixTimeAtNext(NOWS + APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_INTERVAL])
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_INTERVAL_START] = NOWS
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			elif (_values_[K_EVENTMODE] == EVENTMODE_ALARM):
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_AT_NEXT_ALERT] = fixTimeAtNext(NOWS + CF.DAYSECS)
+
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+			APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_AT_LAST_RUN] = NOWS
+			THIS_ALARM_POPUP_TEXT_LIST.append(APPDS_MAIN[K_EVENT_ENTRIES])
+
+
+
+	findNextAlarmEvent()
+	return APPMODE_NEW_ALARMPOPUP, _eventIndex_
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# doMidnightWork
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def doMidnightWork():
+	print("midnight")
+	global \
+		APPDS_MAIN, \
+		TIME_MS_AT_NEXT_MOUSE_CHECK, \
+		TIME_MS_AT_NEXT_MOVED_VAL, \
+		TIME_MS_AT_NEXT_UPDATE_VAL, \
+		TIME_S_AT_NEXT_EVENT_VAL, \
+		TIME_S_AT_NEXT_PERIODIC_JOB_VAL
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	while NOWMS < 1:
+		localTimes()
+
+	TIME_MS_AT_NEXT_MOUSE_CHECK = 0
+	TIME_MS_AT_NEXT_MOVED_VAL = 0
+	TIME_MS_AT_NEXT_UPDATE_VAL = 0
+	TIME_S_AT_NEXT_EVENT_VAL = 0
+	TIME_S_AT_NEXT_PERIODIC_JOB_VAL = 0
+
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	for _index_, _event_ in APPDS_MAIN[K_EVENT_ENTRIES].items():
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_event_ is not None):  # and (_event_[K_EVENTMODE] in [EVENTMODE_ALARM]):
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_IS_ALERTING_NOW] is False):
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_DISMISSED] = False
+
+			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			for _index1_ in ALL_TIMES_LIST:
+
+					# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
+				if (_index1_ in _event_) and (APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] >= CF.DAYSECS):
+					APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] -= CF.DAYSECS
+
+						# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
+					if (APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] < 0):
+						APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] = abs(APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_])
+
+					# ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5
+				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+
+	findNextAlarmEvent()
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# doStartup
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def doStartup():
+	global \
+		ALL_THE_FORMS, \
+		APPDS_MAIN
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if (DPD_ROOT[F_DOSTARTUP] is True):
+		print(f"""doStartup
+{CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
+{ALL_THE_FORMS[FORM_CLOCKS].debugPrint(
+	printDictinS_=True,
+)}
+""")
+
+	for _index_ in APPDS_MAIN[K_EVENT_ENTRIES]:
+
+		if (DPD_ROOT[F_DOSTARTUP] is True):
+			print(f"""
+{CF.frameIt("_index_", _index_)}
+{CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
+""")
+		_tempDS_ = CF.quickCopyDict(APPDS_MAIN[K_EVENT_ENTRIES][_index_])
+		_tempDS_[K_DISMISSED] = False
+		_tempDS_[K_FIRSTRUN] = True
+		_tempDS_[K_INTERVAL_COUNT] = 0
+		_tempDS_[K_IS_ALERTING_NOW] = False
+		_tempDS_[K_SNOOZED] = None
+		_tempDS_[K_TIME_S_AT_LAST_RUN] = 0
+		_tempDS_[K_TIME_S_INTERVAL_START] = 0
+		_tempDS_[K_TIME_S_AT_ZEROELAPSE] = NOWS
+		APPDS_MAIN[K_EVENT_ENTRIES][_index_] = CF.quickCopyDict(_tempDS_)
+
+	ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+		checkboxAlphaDim_=APPDS_MAIN[K_CHECKBOX_ALPHA_DIM],
+		checkboxRunaway_=APPDS_MAIN[K_CHECKBOX_RUNAWAY],
+		timeAtZeroelapse_=NOWS,
+		timeClock_=NOWS,
+	)
+	ALL_THE_FORMS[FORM_CLOCKS]._SIZE_
+
+	if (DPD_ROOT[F_DOSTARTUP] is True):
+		print(f"""doStartup
+{CF.frameIt("_tempDS_", _tempDS_)}
+{CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
+{ALL_THE_FORMS[FORM_CLOCKS].debugPrint(
+	printDictinS_=True,
+)}
+""")
+
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# outerLoop
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def outerLoop():
+	global \
+		ALL_THE_FORMS, \
+		APPDS_MAIN
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	_oldResults_ = (None, None, None)
+	_oldValues_ = None
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	while True:
+		_window_, _event_, _values_ = _theseResults_ = SG.read_all_windows(timeout=SZ_TIMEOUT_MS)
+
+		localTimes()
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		for _thisFrameName_, _thisFrame_ in ALL_THE_FORMS.items():
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if _thisFrame_ is not None:
+
+					# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
+				if (DPD_ROOT[F_INNERLOOP] is True):
+					print(f"""outerloop updating frame {_thisFrameName_}""")
+				_thisFrame_.update()
+				_thisFrame_.quickRead()
+
+				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (NOWMS == 0):
+			doMidnightWork()
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (NOWS == TIME_S_AT_NEXT_EVENT_VAL):
+			_result_ = doEvent()
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_result_ == APPMODE_NEW_ALARMPOPUP):
+				return _result_
+
+			# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (DPD_ROOT[F_OUTERLOOP] is True):
+			print(f"""looking at values in outerloop
+_window_ {_window_} == ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_ {(_window_ == ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_)}
+_event_ {_event_}
+_values_ {_values_}""")
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+#		if (_theseResults_ != _oldResults_):
+
+#			_oldResults_ = _theseResults_
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if _event_ != "__TIMEOUT__":
+			# do all result processing here
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_event_ == K_BTN_QUIT_ALL):
+				return K_BTN_QUIT_ALL
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			elif (_event_ == K_BTN_ZERO):
+				ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+					timeAtZeroelapse_=NOWS,
+					timeElapsed_=ZERO_CLOCK,
+				)
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (_values_ is not None):
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_window_ == ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_):
+				if (_values_ != _oldValues_):
+					APPDS_MAIN.update(_values_)
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			elif (_window_ == ALL_THE_FORMS[FRAME_THECLOCK]._MAINFRAME_):
+				doFrameTheclock(_values_)
+
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# doit
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def doit():
+	global \
+		_pklJar_, \
+		APPDS_MAIN, \
+		DEVMODE
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if (CF.ABS_DOT.find("_DEV") > -1):
+		_pklName_ = "runawayClock_DEV.pkl"
+		DEVMODE = True
+	else:
+		_pklName_ = "runawayClock.pkl"
+		DEVMODE = False
+
+	with CF.withPickles(f"""{CF.CONFIG_DIR}runawayClock/{_pklName_}""", APPDS_MAIN) as _pklJar_, \
+			CLASS_CLOCKS(CF.serializeIt("runawayClock"), FORM_CLOCKS):
+
+		APPDS_MAIN = _pklJar_._STUFFTOPKL_
+		localTimes()
+		doStartup()
+		doMidnightWork()
+
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		while True:
+			_result_ = outerLoop()
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if _result_ == K_BTN_QUIT_ALL:
+				_pklJar_._STUFFTOPKL_ = APPDS_MAIN
+				break
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			elif _result_ == APPMODE_NEW_ALARMPOPUP:
+				print(f"""a popup would happen here""")
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			else:
+				print(f"""I don't know how to handle {CF.frameIt("_result_", _result_)}""")
+				break
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+#
+#
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# end of PSG_TIME.py
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+#
+"""
+edit:
+	radio: EVENTMODE
+	add new events
+	delete this event
+	TIME_s
+CLOCKS_FORMMAIN.__dict__["TKroot"].__str__
+CLOCKS_FORMMAIN[K_TIME_S_CLOCK].DisplayText
+CLOCKS_FORMMAIN.Move(10, 10)
+
+"""
