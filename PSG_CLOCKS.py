@@ -173,7 +173,7 @@ K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  #
 K_EVENT_NAME = "K_EVENT_NAME"  # name of the event
 K_EVENTMODE = "K_EVENTMODE"  # what mode is this event
 K_FIRSTRUN = "K_FIRSTRUN"  # True if just started, false after init1()
-K_FRAMENAME = "K_FRAMENAME"  # the name of the form
+K_FORMNAME = "K_FORMNAME"  # the name of the form
 K_INDEX_OF_NEXT_EVENT = "K_INDEX_OF_NEXT_EVENT"  # index of the next event to alert
 K_INDEXES = "K_INDEXES"  # holds the index(es) of the currently awaited event(s)
 K_INTERVAL_COUNT = "K_INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
@@ -266,7 +266,7 @@ SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_PKLNAME_DEV = "runawayClock_DEV.pkl"  # name of the pkl file for the app in dev
 SZ_PKLNAME_PROD = "runawayClock.pkl"  # name of the pkl file for the app in use
 SZ_RUNAWAY = False  # default runaway state
-SZ_TIME_MS_BETWEEN_LIST_FLIPS = 300  # throttle mouse checking
+SZ_TIME_MS_BETWEEN_FLIPS = 300  # throttle mouse checking
 SZ_TIME_MS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
 SZ_TIME_MS_BETWEEN_MOVES = 500  # time_ms between moves
 SZ_TIME_MS_BETWEEN_UPDATES = 500  # time_ms between updating windows/frames/etc
@@ -476,6 +476,7 @@ ALERTING_LIST = [  # list that holds all currently alarming events
 ALL_TIMES_LIST = [  # list of all times
 	K_TIME_S_AT_ALARM,  # list of all times K_TIME_S_AT_ALARM
 	K_TIME_S_AT_CHECK_MOUSE,  # list of all times K_TIME_S_AT_CHECK_MOUSE
+	K_TIME_S_AT_FLIP,  # list of all times K_TIME_S_AT_UPDATE
 	K_TIME_S_AT_LAST_RUN,  # list of all times TIME_S_AT_LAST_RUN
 	K_TIME_S_AT_MOVE,  # list of all times K_TIME_S_AT_MOVE
 	K_TIME_S_AT_NEXT_ALERT,  # list of all times K_TIME_S_AT_NEXT_ALERT
@@ -2162,7 +2163,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_EVENT_NAME: "event 1",  # this entry's name
 			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			K_FIRSTRUN: True,  # are we initializing or not
-			K_FRAMENAME: None,  # time of this event
+			K_FORMNAME: None,  # time of this event
 			K_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
 			K_PREDISMISSABLE: True,  # is this event dismissable in advance
@@ -2185,7 +2186,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_EVENT_NAME: "2nd event",  # this entry's name
 			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			K_FIRSTRUN: True,  # are we initializing or not
-			K_FRAMENAME: None,  # time of this event
+			K_FORMNAME: None,  # time of this event
 			K_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
 			K_PREDISMISSABLE: True,  # is this event dismissable in advance
