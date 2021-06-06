@@ -59,9 +59,9 @@ COLOR_TEXT_INTERVAL_COUNT_INACTIVE = "#999988"  # the GRAY color used when the n
 COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
 COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
 COLOR_TEXT_SPIN = "#CCFF66"  # the color the clock digits are
-COLOR_TIME_S_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
-COLOR_TIME_S_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
-COLOR_TIME_S_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
+COLOR_TIME_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
+COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
+COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
 COLOR_WHITE = "#FFFFFF"  # white
 EVENTMODE_ALARM = "EVENTMODE_ALARM"  #
 EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
@@ -291,9 +291,9 @@ COLORS_BTN_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # comment
 COLORS_TEXT_HIGH = (COLOR_TEXT_HIGH, COLOR_BACKGROUND)  # combined colors for a clock text element
 COLORS_TEXT_LOW = (COLOR_TEXT_LOW, COLOR_BACKGROUND)  # combined colors for a clock text element
 COLORS_TEXT_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # combined colors for a clock text element
-COLORS_TIME_S_CLOCK = (COLOR_TIME_S_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-COLORS_TIME_S_ELAPSED = (COLOR_TIME_S_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
-COLORS_TIME_S_TOGO = (COLOR_TIME_S_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_CLOCK = (COLOR_TIME_CLOCK, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_ELAPSED = (COLOR_TIME_ELAPSED, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
+COLORS_TIME_TOGO = (COLOR_TIME_TOGO, COLOR_CLOCK_BACKGROUND)  # combined colors for a clock text element
 CURRENT_EVENTMODE_VAL = EVENTMODE_NONE  # comment
 CURRENT_INTERVAL_COUNT = 0  # comment
 DEVMODE = False  # comment
@@ -819,7 +819,7 @@ TEXT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (4, 1),  # characters, lines size line
-	TEXT_COLOR: COLOR_TIME_S_TOGO,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 }
 
 
@@ -831,7 +831,7 @@ TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCK_TIME
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (16, 1),  # characters, lines size line
-	TEXT_COLOR: COLOR_TIME_S_TOGO,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 }
 
 
@@ -843,7 +843,7 @@ TEXT_TIME_S_AT_NEXT_ALERT = {  # define the text element for CLOCKS_CLOCK_TIME
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_S_TOGO,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 }
 
 
@@ -855,7 +855,7 @@ TEXT_TIME_S_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_S_ELAPSED,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
 }
 
 
@@ -869,7 +869,7 @@ TEXT_TIME_S_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
 	SIZE: (8, 1),  # characters, lines size line
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_S_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
 }
 
 
@@ -880,7 +880,7 @@ TEXT_TIME_S_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_S_ELAPSED,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
 }
 
 
@@ -891,7 +891,7 @@ TEXT_TIME_S_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
 	SIZE: (8, 1),  # characters, lines size line
 	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
-	TEXT_COLOR: COLOR_TIME_S_TOGO,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
 }
 
 
@@ -1257,17 +1257,17 @@ APPDS_MAIN {APPDS_MAIN}
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (self._DPD_[F_CHECKMOUSE] is True):
-			print(f"""checkMouse NOWMS {NOWMS} self._TIME_TO_CHECK_MOUSE_ {self._TIME_TO_CHECK_MOUSE_}""")
+			print(f"""checkMouse NOWMS {NOWMS} self._TIME_S_AT_CHECK_MOUSE_ {self._TIME_S_AT_CHECK_MOUSE_}""")
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if NOWMS < self._TIME_TO_CHECK_MOUSE_:
+		if NOWMS < self._TIME_S_AT_CHECK_MOUSE_:
 			return
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._TIME_TO_CHECK_MOUSE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOUSE_CHECKS
+		self._TIME_S_AT_CHECK_MOUSE_ = NOWMS + SZ_TIME_MS_BETWEEN_MOUSE_CHECKS
 		_statusToRtn_ = None
 		_mpxToRtn_ = (0, 0)
 		_TLcn_ = self._CURRENT_LOCATION_
@@ -1899,7 +1899,7 @@ alphaChannel_ {alphaChannel_}
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._MAINFRAME_[self._USE_THIS_KEY_(K_INTERVAL_COUNT)].update(text_color=COLOR_TIME_S_TOGO)
+		self._MAINFRAME_[self._USE_THIS_KEY_(K_INTERVAL_COUNT)].update(text_color=COLOR_TIME_TOGO)
 		self._DICTIN_[K_INTERVAL_COUNT] = intervalCount_
 		self.updateFromDict()
 
@@ -1954,7 +1954,7 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._TIME_TO_MOVE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
+		self._TIME_TO_MOVE_ = NOWMS + SZ_TIME_MS_BETWEEN_MOVES
 		_screenSZX_, _screenSZY_ = self._SCREEN_DIMS_
 		_sizeX_, _sizeY_ = self._SIZE_
 		_lcnX_, _lcnY_ = self._CURRENT_LOCATION_
@@ -1994,7 +1994,7 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 			self.debugPrint(
 				title_="runaway",
 				message_=f"""
-self._TIME_TO_MOVE_ {self._TIME_TO_MOVE_} = NOWMS {NOWMS} + SZ_TIMEMS_BETWEEN_MOVES {SZ_TIMEMS_BETWEEN_MOVES}
+self._TIME_TO_MOVE_ {self._TIME_TO_MOVE_} = NOWMS {NOWMS} + SZ_TIME_MS_BETWEEN_MOVES {SZ_TIME_MS_BETWEEN_MOVES}
 _screenSZX_ {_screenSZX_}, _screenSZY_ {_screenSZY_} = self._SCREEN_DIMS_
 _sizeX_ {_sizeX_}, _sizeY_ {_sizeY_} = self._SIZE_
 _lcnX_ {_lcnX_}, _lcnY_ {_lcnY_} = self._CURRENT_LOCATION_
@@ -2095,7 +2095,7 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 		if (NOWMS < self._TIME_S_AT_UPDATE_):
 			return
 
-		self._TIME_S_AT_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES
+		self._TIME_S_AT_UPDATE_ = NOWMS + SZ_TIME_MS_BETWEEN_UPDATES
 		_TLcn_ = self._MAINFRAME_.CurrentLocation()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -2123,7 +2123,7 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 				title_="update",
 				printDictinS_=False,
 				message_=f"""
-self._TIME_S_AT_UPDATE_ {CF.frameItMS("_TIME_S_AT_UPDATE_", self._TIME_S_AT_UPDATE_)} = {CF.frameItMS("NOWMS", NOWMS)} + SZ_TIMEMS_BETWEEN_UPDATES {SZ_TIMEMS_BETWEEN_UPDATES / 1000}
+self._TIME_S_AT_UPDATE_ {CF.frameItMS("_TIME_S_AT_UPDATE_", self._TIME_S_AT_UPDATE_)} = {CF.frameItMS("NOWMS", NOWMS)} + SZ_TIME_MS_BETWEEN_UPDATES {SZ_TIME_MS_BETWEEN_UPDATES / 1000}
 self._CURRENT_LOCATION_ {self._CURRENT_LOCATION_} = self._MAINFRAME_.CurrentLocation()
 self._BBOX_ {self._BBOX_} = getBBox(self._CURRENT_LOCATION_, self._SIZE_ {self._SIZE_})
 self._CLOSE_BBOX_ {self._CLOSE_BBOX_} = getCloseBBox(self._CURRENT_LOCATION_, self._SIZE_)
@@ -2196,7 +2196,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "00000005",  # version number hex string
+	K_VERSION: "00000006",  # version number hex string
 }
 
 
@@ -2432,6 +2432,8 @@ def updateInterval(eventIndexToDo_):
 APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_] {APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_]}
 """)
 	_eventToDo_ = CF.quickCopyDict(APPDS_MAIN[K_EVENT_ENTRIES][eventIndexToDo_])
+	print(f"""updateInterval
+_eventToDo_ {_eventToDo_}""")
 	_TInterval_ = _eventToDo_[K_TIME_S_INTERVAL]
 	_TTimeAtBegin_ = _eventToDo_[K_TIME_S_INTERVAL__BEGIN]
 	_TTimeSinceBegin_ = NOWS - _TTimeAtBegin_

@@ -3,7 +3,7 @@
 		if (NOWMS < self._TIME_S_AT_UPDATE_):
 			return
 
-		self._TIME_S_AT_UPDATE_ = NOWMS + SZ_TIMEMS_BETWEEN_UPDATES
+		self._TIME_S_AT_UPDATE_ = NOWMS + SZ_TIME_MS_BETWEEN_UPDATES
 		_TLcn_ = self._MAINFRAME_.CurrentLocation()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -31,7 +31,7 @@
 				title_="update",
 				printDictinS_=False,
 				message_=f"""
-self._TIME_S_AT_UPDATE_ {CF.frameItMS("_TIME_S_AT_UPDATE_", self._TIME_S_AT_UPDATE_)} = {CF.frameItMS("NOWMS", NOWMS)} + SZ_TIMEMS_BETWEEN_UPDATES {SZ_TIMEMS_BETWEEN_UPDATES / 1000}
+self._TIME_S_AT_UPDATE_ {CF.frameItMS("_TIME_S_AT_UPDATE_", self._TIME_S_AT_UPDATE_)} = {CF.frameItMS("NOWMS", NOWMS)} + SZ_TIME_MS_BETWEEN_UPDATES {SZ_TIME_MS_BETWEEN_UPDATES / 1000}
 self._CURRENT_LOCATION_ {self._CURRENT_LOCATION_} = self._MAINFRAME_.CurrentLocation()
 self._BBOX_ {self._BBOX_} = getBBox(self._CURRENT_LOCATION_, self._SIZE_ {self._SIZE_})
 self._CLOSE_BBOX_ {self._CLOSE_BBOX_} = getCloseBBox(self._CURRENT_LOCATION_, self._SIZE_)
