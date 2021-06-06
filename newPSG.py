@@ -450,14 +450,14 @@ DPD_ROOT = {  # DPD_ROOT defined
 	F_DOIT: False,  # DPD_ROOT entry doit
 	F_DOMIDNIGHTWORK: False,  # DPD_ROOT entry doMidnightWork
 	F_DOSTARTUP: False,  # DPD_ROOT entry doStartup
-	F_FINDNEXTALARMEVENT: True,  # DPD_ROOT entry findNextAlarmEvent
+	F_FINDNEXTALARMEVENT: False,  # DPD_ROOT entry findNextAlarmEvent
 	F_FIXTIMEATNEXT: False,  # DPD_ROOT entry fixTimeAtNext
 	F_GETBBOX: False,  # DPD_ROOT entry getBBox
 	F_GETCLOSEBBOX: False,  # DPD_ROOT entry getCloseBBox
 	F_GETMOUSEPOS: False,  # DPD_ROOT entry getMousePos
 	F_INNERLOOP: False,  # DPD_ROOT entry outerLoop
 	F_ISINBBOX: False,  # DPD_ROOT entry isInBBox
-	F_LOCALTIMES: True,  # DPD_ROOT entry localTimes
+	F_LOCALTIMES: False,  # DPD_ROOT entry localTimes
 	F_OUTERLOOP: False,  # DPD_ROOT entry outerLoop
 	F_SPLITBBOXTORAW: False,  # DPD_ROOT entry splitBBoxToRaw
 	F_SPLITXYTORAW: False,  # DPD_ROOT entry splitXYToRaw
@@ -1020,17 +1020,17 @@ class CLASS_CLOCKS(object):
 			F_DEBUGPRINT: False,  # read the frame and set self._RESULT_
 			F_DICTINSTRREPL: False,  # define runaway
 			F_DICTINREPL: False,  # define runaway
-			F_EASYUPDATE: True,  # load the whole thing from the file for easyUpdate
+			F_EASYUPDATE: False,  # load the whole thing from the file for easyUpdate
 			F_EASYUPDATEPARMS: False,  # load the whole thing from the file for easyUpdate
-			F_ENINT: True,  # read the frame and set self._RESULT_
+			F_ENINT: False,  # read the frame and set self._RESULT_
 			F_ENSTRING: True,  # read the frame and set self._RESULT_
 			F_INTERVALCOUNTOFF: False,  # turn interval count off
 			F_INTERVALCOUNTON: False,  # turn interval count on
 			F_QUICKREAD: False,  # read the frame and set self._RESULT_
 			F_RUNAWAY: False,  # define runaway
 			F_SETCHECKBOX: False,  # define runaway
-			F_UPDATEFROMDICT: True,  # update the displayed info from a dict or the default _DICTIN_
-			F_UPDATE: True,  # define the required update function
+			F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
+			F_UPDATE: False,  # define the required update function
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -1778,9 +1778,18 @@ alphaChannel_ {alphaChannel_}
 
 	def enstring(self):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (self._DPD_[F_ENSTRING]):
+			self.debugPrint(
+				printDictinS_=True,
+				title_="start of enstring",
+			)
+
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		_dictToRtn_ = {}
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		for _thisKey_, _thisVal_ in self._DICTIN_.items():
-			_dictToRtn_ = {}
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if (isinstance(_thisVal_, list) is True):
@@ -1845,6 +1854,7 @@ alphaChannel_ {alphaChannel_}
 					# ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥
 				else:
 					_dictToRtn_[_thisKey_] = (f"""{_thisVal_}""")
+					print(f"""normal key {_thisKey_}: {_thisVal_}""")
 
 				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
@@ -1857,7 +1867,7 @@ alphaChannel_ {alphaChannel_}
 		if (self._DPD_[F_ENSTRING]):
 			self.debugPrint(
 				printDictinS_=True,
-				title_="enstring",
+				title_="end of enstring",
 				message_=f"""{CF.frameIt("_DICTINSTR_", self._DICTINSTR_)}""",
 			)
 
