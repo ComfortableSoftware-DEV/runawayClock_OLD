@@ -199,20 +199,20 @@ K_SNOOZABLE = "K_SNOOZABLE"  # can this event be snoozed
 K_SNOOZED = "K_SNOOZED"  # is this event snoozed bool
 K_TEXT_INTERVAL_COUNT = "K_TEXT_INTERVAL_COUNT"  # 
 K_TEXT_NAME_NEXT_EVENT = "K_TEXT_NAME_NEXT_EVENT"  # 
-K_TEXT_TIME_S_AT_NEXT_ALERT = "K_TEXT_TIME_S_AT_NEXT_ALERT"  # 
-K_TEXT_TIME_S_AT_ZEROELAPSE = "K_TEXT_TIME_S_AT_ZEROELAPSE"  # 
+K_TEXT_TIME_MS_AT_NEXT_ALERT = "K_TEXT_TIME_MS_AT_NEXT_ALERT"  # 
+K_TEXT_TIME_MS_AT_ZEROELAPSE = "K_TEXT_TIME_MS_AT_ZEROELAPSE"  # 
 K_TEXT_TIME_S_CLOCK = "K_TEXT_TIME_S_CLOCK"  # 
 K_TEXT_TIME_S_ELAPSED = "K_TEXT_TIME_S_ELAPSED"  # 
 K_TEXT_TIME_S_TOGO = "K_TEXT_TIME_S_TOGO"  # 
 K_THIS_FORM_NAME = "K_THIS_FORM_NAME"  # adopt formName_
 K_THIS_KEY_BASE = "K_THIS_KEY_BASE"  # adopt keyBase_
+K_TIME_MS_AT_CHECK_MOUSE = "K_TIME_MS_AT_CHECK_MOUSE"  # 
+K_TIME_MS_AT_FLIP = "K_TIME_MS_AT_FLIP"  # 
+K_TIME_MS_AT_MOVE = "K_TIME_MS_AT_MOVE"  # 
+K_TIME_MS_AT_UPDATE = "K_TIME_MS_AT_UPDATE"  # 
 K_TIME_S_AT_ALARM = "K_TIME_S_AT_ALARM"  # the alarm time
-K_TIME_S_AT_CHECK_MOUSE = "K_TIME_S_AT_CHECK_MOUSE"  # 
-K_TIME_S_AT_FLIP = "K_TIME_S_AT_FLIP"  # 
 K_TIME_S_AT_LAST_RUN = "K_TIME_S_AT_LAST_RUN"  # timeS of last alarm 
-K_TIME_S_AT_MOVE = "K_TIME_S_AT_MOVE"  # 
 K_TIME_S_AT_NEXT_ALERT = "K_TIME_S_AT_NEXT_ALERT"  # what time is the next alarm, == KEY_TIME_S_AT_ALARM is tomorrow
-K_TIME_S_AT_UPDATE = "K_TIME_S_AT_UPDATE"  # 
 K_TIME_S_AT_ZEROELAPSE = "K_TIME_S_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
 K_TIME_S_CLOCK = "K_TIME_S_CLOCK"  # the main clock time
 K_TIME_S_ELAPSED = "K_TIME_S_ELAPSED"  # key for all clocks elapsed
@@ -312,7 +312,7 @@ NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
-TIME_MS_AT_NEXT_MOVED_VAL = 0  # comment
+TIME_MS_AT_NEXT_MOVE_VAL = 0  # comment
 TIME_MS_AT_NEXT_UPDATE_VAL = 0  # comment
 TIME_S_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
 TIME_S_AT_NEXT_EVENT_VAL = 0  # comment
@@ -474,13 +474,13 @@ ALERTING_LIST = [  # list that holds all currently alarming events
 
 
 ALL_TIMES_LIST = [  # list of all times
+	K_TIME_MS_AT_CHECK_MOUSE,  # list of all times K_TIME_S_AT_CHECK_MOUSE
+	K_TIME_MS_AT_FLIP,  # list of all times K_TIME_MS_AT_UPDATE
+	K_TIME_MS_AT_MOVE,  # list of all times K_TIME_MS_AT_MOVE
+	K_TIME_MS_AT_UPDATE,  # list of all times K_TIME_MS_AT_UPDATE
 	K_TIME_S_AT_ALARM,  # list of all times K_TIME_S_AT_ALARM
-	K_TIME_S_AT_CHECK_MOUSE,  # list of all times K_TIME_S_AT_CHECK_MOUSE
-	K_TIME_S_AT_FLIP,  # list of all times K_TIME_S_AT_UPDATE
 	K_TIME_S_AT_LAST_RUN,  # list of all times TIME_S_AT_LAST_RUN
-	K_TIME_S_AT_MOVE,  # list of all times K_TIME_S_AT_MOVE
 	K_TIME_S_AT_NEXT_ALERT,  # list of all times K_TIME_S_AT_NEXT_ALERT
-	K_TIME_S_AT_UPDATE,  # list of all times K_TIME_S_AT_UPDATE
 	K_TIME_S_AT_ZEROELAPSE,  # list of all times K_TIME_S_AT_ZEROELAPSE
 	K_TIME_S_CLOCK,  # list of all times K_TIME_S_CLOCK
 	K_TIME_S_ELAPSED,  # list of all times K_TIME_S_ELAPSED
@@ -494,10 +494,10 @@ ALL_TIMES_LIST = [  # list of all times
 
 
 APPDS_MIDNIGHT_FIX_TIMES_LIST = [  # list of times to be updated at midnight
-	K_TIME_S_AT_CHECK_MOUSE,  # list of times to be updated at midnight
-	K_TIME_S_AT_MOVE,  # list of times to be updated at midnight
+	K_TIME_MS_AT_CHECK_MOUSE,  # list of times to be updated at midnight
+	K_TIME_MS_AT_MOVE,  # list of times to be updated at midnight
+	K_TIME_MS_AT_UPDATE,  # list of times to be updated at midnight
 	K_TIME_S_AT_NEXT_ALERT,  # list of times to be updated at midnight
-	K_TIME_S_AT_UPDATE,  # list of times to be updated at midnight
 ]
 
 
@@ -957,10 +957,10 @@ class CLASS_CLOCKS(object):
 		self._MPX_ = EMPTY_XY  # comment
 		self._SCREEN_DIMS_ = EMPTY_XY  # 
 		self._SIZE_ = EMPTY_XY  # 
-		self._TIME_S_AT_CHECK_MOUSE_ = ZERO_CLOCK  # 
-		self._TIME_S_AT_FLIP_ = ZERO_CLOCK  # 
-		self._TIME_S_AT_MOVE_ = ZERO_CLOCK  # 
-		self._TIME_S_AT_UPDATE_ = ZERO_CLOCK  # 
+		self._TIME_MS_AT_CHECK_MOUSE_ = ZERO_CLOCK  # 
+		self._TIME_MS_AT_FLIP_ = ZERO_CLOCK  # 
+		self._TIME_MS_AT_MOVE_ = ZERO_CLOCK  # 
+		self._TIME_MS_AT_UPDATE_ = ZERO_CLOCK  # 
 		self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._KEY_DICT_REVERSE_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._KEY_DICT_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
@@ -1976,12 +1976,12 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 	def runaway(self):
 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (NOWMS < self._TIME_TO_MOVE_):
+		if (NOWMS < self._TIME_MS_AT_MOVE_):
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._TIME_TO_MOVE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
+		self._TIME_MS_AT_MOVE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
 		_screenSZX_, _screenSZY_ = self._SCREEN_DIMS_
 		_sizeX_, _sizeY_ = self._SIZE_
 		_lcnX_, _lcnY_ = self._CURRENT_LOCATION_

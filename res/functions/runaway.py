@@ -1,12 +1,12 @@
 	def runaway(self):
 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (NOWMS < self._TIME_TO_MOVE_):
+		if (NOWMS < self._TIME_MS_AT_MOVE_):
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._TIME_TO_MOVE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
+		self._TIME_MS_AT_MOVE_ = NOWMS + SZ_TIME_MS_BETWEEN_MOVES
 		_screenSZX_, _screenSZY_ = self._SCREEN_DIMS_
 		_sizeX_, _sizeY_ = self._SIZE_
 		_lcnX_, _lcnY_ = self._CURRENT_LOCATION_
@@ -46,7 +46,7 @@
 			self.debugPrint(
 				title_="runaway",
 				message_=f"""
-self._TIME_TO_MOVE_ {self._TIME_TO_MOVE_} = NOWMS {NOWMS} + SZ_TIMEMS_BETWEEN_MOVES {SZ_TIMEMS_BETWEEN_MOVES}
+self._TIME_TO_MOVE_ {self._TIME_TO_MOVE_} = NOWMS {NOWMS} + SZ_TIME_MS_BETWEEN_MOVES {SZ_TIME_MS_BETWEEN_MOVES}
 _screenSZX_ {_screenSZX_}, _screenSZY_ {_screenSZY_} = self._SCREEN_DIMS_
 _sizeX_ {_sizeX_}, _sizeY_ {_sizeY_} = self._SIZE_
 _lcnX_ {_lcnX_}, _lcnY_ {_lcnY_} = self._CURRENT_LOCATION_

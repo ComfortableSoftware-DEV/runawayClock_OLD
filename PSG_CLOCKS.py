@@ -199,20 +199,20 @@ K_SNOOZABLE = "K_SNOOZABLE"  # can this event be snoozed
 K_SNOOZED = "K_SNOOZED"  # is this event snoozed bool
 K_TEXT_INTERVAL_COUNT = "K_TEXT_INTERVAL_COUNT"  #
 K_TEXT_NAME_NEXT_EVENT = "K_TEXT_NAME_NEXT_EVENT"  #
-K_TEXT_TIME_S_AT_NEXT_ALERT = "K_TEXT_TIME_S_AT_NEXT_ALERT"  #
-K_TEXT_TIME_S_AT_ZEROELAPSE = "K_TEXT_TIME_S_AT_ZEROELAPSE"  #
+K_TEXT_TIME_MS_AT_NEXT_ALERT = "K_TEXT_TIME_MS_AT_NEXT_ALERT"  #
+K_TEXT_TIME_MS_AT_ZEROELAPSE = "K_TEXT_TIME_MS_AT_ZEROELAPSE"  #
 K_TEXT_TIME_S_CLOCK = "K_TEXT_TIME_S_CLOCK"  #
 K_TEXT_TIME_S_ELAPSED = "K_TEXT_TIME_S_ELAPSED"  #
 K_TEXT_TIME_S_TOGO = "K_TEXT_TIME_S_TOGO"  #
 K_THIS_FORM_NAME = "K_THIS_FORM_NAME"  # adopt formName_
 K_THIS_KEY_BASE = "K_THIS_KEY_BASE"  # adopt keyBase_
+K_TIME_MS_AT_CHECK_MOUSE = "K_TIME_MS_AT_CHECK_MOUSE"  #
+K_TIME_MS_AT_FLIP = "K_TIME_MS_AT_FLIP"  #
+K_TIME_MS_AT_MOVE = "K_TIME_MS_AT_MOVE"  #
+K_TIME_MS_AT_UPDATE = "K_TIME_MS_AT_UPDATE"  #
 K_TIME_S_AT_ALARM = "K_TIME_S_AT_ALARM"  # the alarm time
-K_TIME_S_AT_CHECK_MOUSE = "K_TIME_S_AT_CHECK_MOUSE"  #
-K_TIME_S_AT_FLIP = "K_TIME_S_AT_FLIP"  #
 K_TIME_S_AT_LAST_RUN = "K_TIME_S_AT_LAST_RUN"  # timeS of last alarm
-K_TIME_S_AT_MOVE = "K_TIME_S_AT_MOVE"  #
 K_TIME_S_AT_NEXT_ALERT = "K_TIME_S_AT_NEXT_ALERT"  # what time is the next alarm, == KEY_TIME_S_AT_ALARM is tomorrow
-K_TIME_S_AT_UPDATE = "K_TIME_S_AT_UPDATE"  #
 K_TIME_S_AT_ZEROELAPSE = "K_TIME_S_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
 K_TIME_S_CLOCK = "K_TIME_S_CLOCK"  # the main clock time
 K_TIME_S_ELAPSED = "K_TIME_S_ELAPSED"  # key for all clocks elapsed
@@ -312,7 +312,7 @@ NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
-TIME_MS_AT_NEXT_MOVED_VAL = 0  # comment
+TIME_MS_AT_NEXT_MOVE_VAL = 0  # comment
 TIME_MS_AT_NEXT_UPDATE_VAL = 0  # comment
 TIME_S_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
 TIME_S_AT_NEXT_EVENT_VAL = 0  # comment
@@ -474,13 +474,13 @@ ALERTING_LIST = [  # list that holds all currently alarming events
 
 
 ALL_TIMES_LIST = [  # list of all times
+	K_TIME_MS_AT_CHECK_MOUSE,  # list of all times K_TIME_MS_AT_CHECK_MOUSE
+	K_TIME_MS_AT_FLIP,  # list of all times K_TIME_MS_AT_UPDATE
+	K_TIME_MS_AT_MOVE,  # list of all times K_TIME_MS_AT_MOVE
+	K_TIME_MS_AT_UPDATE,  # list of all times K_TIME_MS_AT_UPDATE
 	K_TIME_S_AT_ALARM,  # list of all times K_TIME_S_AT_ALARM
-	K_TIME_S_AT_CHECK_MOUSE,  # list of all times K_TIME_S_AT_CHECK_MOUSE
-	K_TIME_S_AT_FLIP,  # list of all times K_TIME_S_AT_UPDATE
 	K_TIME_S_AT_LAST_RUN,  # list of all times TIME_S_AT_LAST_RUN
-	K_TIME_S_AT_MOVE,  # list of all times K_TIME_S_AT_MOVE
 	K_TIME_S_AT_NEXT_ALERT,  # list of all times K_TIME_S_AT_NEXT_ALERT
-	K_TIME_S_AT_UPDATE,  # list of all times K_TIME_S_AT_UPDATE
 	K_TIME_S_AT_ZEROELAPSE,  # list of all times K_TIME_S_AT_ZEROELAPSE
 	K_TIME_S_CLOCK,  # list of all times K_TIME_S_CLOCK
 	K_TIME_S_ELAPSED,  # list of all times K_TIME_S_ELAPSED
@@ -494,10 +494,10 @@ ALL_TIMES_LIST = [  # list of all times
 
 
 APPDS_MIDNIGHT_FIX_TIMES_LIST = [  # list of times to be updated at midnight
-	K_TIME_S_AT_CHECK_MOUSE,  # list of times to be updated at midnight
-	K_TIME_S_AT_MOVE,  # list of times to be updated at midnight
+	K_TIME_MS_AT_CHECK_MOUSE,  # list of times to be updated at midnight
+	K_TIME_MS_AT_MOVE,  # list of times to be updated at midnight
+	K_TIME_MS_AT_UPDATE,  # list of times to be updated at midnight
 	K_TIME_S_AT_NEXT_ALERT,  # list of times to be updated at midnight
-	K_TIME_S_AT_UPDATE,  # list of times to be updated at midnight
 ]
 
 
@@ -957,10 +957,10 @@ class CLASS_CLOCKS(object):
 		self._MPX_ = EMPTY_XY  # comment
 		self._SCREEN_DIMS_ = EMPTY_XY  #
 		self._SIZE_ = EMPTY_XY  #
-		self._TIME_S_AT_CHECK_MOUSE_ = ZERO_CLOCK  #
-		self._TIME_S_AT_FLIP_ = ZERO_CLOCK  #
-		self._TIME_S_AT_MOVE_ = ZERO_CLOCK  #
-		self._TIME_S_AT_UPDATE_ = ZERO_CLOCK  #
+		self._TIME_MS_AT_CHECK_MOUSE_ = ZERO_CLOCK  #
+		self._TIME_MS_AT_FLIP_ = ZERO_CLOCK  #
+		self._TIME_MS_AT_MOVE_ = ZERO_CLOCK  #
+		self._TIME_MS_AT_UPDATE_ = ZERO_CLOCK  #
 		self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._KEY_DICT_REVERSE_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._KEY_DICT_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
@@ -1258,17 +1258,17 @@ APPDS_MAIN {APPDS_MAIN}
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (self._DPD_[F_CHECKMOUSE] is True):
-			print(f"""checkMouse NOWMS {NOWMS} self._TIME_S_AT_CHECK_MOUSE_ {self._TIME_S_AT_CHECK_MOUSE_}""")
+			print(f"""checkMouse NOWMS {NOWMS} self._TIME_MS_AT_CHECK_MOUSE_ {self._TIME_MS_AT_CHECK_MOUSE_}""")
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if NOWMS < self._TIME_S_AT_CHECK_MOUSE_:
+		if NOWMS < self._TIME_MS_AT_CHECK_MOUSE_:
 			return
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._TIME_S_AT_CHECK_MOUSE_ = NOWMS + SZ_TIME_MS_BETWEEN_MOUSE_CHECKS
+		self._TIME_MS_AT_CHECK_MOUSE_ = NOWMS + SZ_TIME_MS_BETWEEN_MOUSE_CHECKS
 		_statusToRtn_ = None
 		_mpxToRtn_ = (0, 0)
 		_TLcn_ = self._CURRENT_LOCATION_
@@ -1803,7 +1803,12 @@ alphaChannel_ {alphaChannel_}
 			if (isinstance(_thisVal_, list) is True):
 				# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 				_dictToRtn_[_thisKey_] = []
-				print(f"""list {_thisKey_}: {_thisVal_}""")
+
+					# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
+				if (self._DPD_[F_ENSTRING] is True):
+					print(f"""list {_thisKey_}: {_thisVal_}""")
+
+				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
 
 				# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
 				for _thisItem_ in _thisVal_:
@@ -1842,7 +1847,11 @@ alphaChannel_ {alphaChannel_}
 					# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
 				if (_thisKey_ in self._DICT_KEYS_TIME_):
 					_dictToRtn_[self._KEY_DICT_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
-					print(f"""time element in enstrging {_thisKey_}: {_thisVal_}""")
+
+						# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
+					if (self._DPD_[F_ENSTRING] is True):
+						print(f"""time element in enstrging {_thisKey_}: {_thisVal_}""")
+					# ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5
 
 					# ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥
 				elif (_thisKey_ in self._DICT_KEYS_INT_):
@@ -1850,19 +1859,30 @@ alphaChannel_ {alphaChannel_}
 						# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
 					if (self._DICT_KEYS_INT_[_thisKey_] == "04d"):
 						_dictToRtn_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:04d}"""
-						print(f"""int04d element in enstrging {_thisKey_}: {_thisVal_}""")
+
+							# 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥
+						if (self._DPD_[F_ENSTRING] is True):
+							print(f"""int04d element in enstrging {_thisKey_}: {_thisVal_}""")
+
+						# ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6
 
 						# ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥
 					else:
 						_dictToRtn_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
-						print(f"""time element in enstrging {_thisKey_}: {_thisVal_}""")
+
+							# 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥
+						if (self._DPD_[F_ENSTRING] is True):
+							print(f"""time element in enstrging {_thisKey_}: {_thisVal_}""")
 
 					# ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥
 
 					# ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥
 				else:
 					_dictToRtn_[_thisKey_] = (f"""{_thisVal_}""")
-					print(f"""normal key {_thisKey_}: {_thisVal_}""")
+
+						# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
+					if (self._DPD_[F_ENSTRING] is True):
+						print(f"""normal key {_thisKey_}: {_thisVal_}""")
 
 				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
@@ -1956,12 +1976,12 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 	def runaway(self):
 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (NOWMS < self._TIME_TO_MOVE_):
+		if (NOWMS < self._TIME_MS_AT_MOVE_):
 			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._TIME_TO_MOVE_ = NOWMS + SZ_TIMEMS_BETWEEN_MOVES
+		self._TIME_MS_AT_MOVE_ = NOWMS + SZ_TIME_MS_BETWEEN_MOVES
 		_screenSZX_, _screenSZY_ = self._SCREEN_DIMS_
 		_sizeX_, _sizeY_ = self._SIZE_
 		_lcnX_, _lcnY_ = self._CURRENT_LOCATION_
@@ -2001,7 +2021,7 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 			self.debugPrint(
 				title_="runaway",
 				message_=f"""
-self._TIME_TO_MOVE_ {self._TIME_TO_MOVE_} = NOWMS {NOWMS} + SZ_TIMEMS_BETWEEN_MOVES {SZ_TIMEMS_BETWEEN_MOVES}
+self._TIME_TO_MOVE_ {self._TIME_TO_MOVE_} = NOWMS {NOWMS} + SZ_TIME_MS_BETWEEN_MOVES {SZ_TIME_MS_BETWEEN_MOVES}
 _screenSZX_ {_screenSZX_}, _screenSZY_ {_screenSZY_} = self._SCREEN_DIMS_
 _sizeX_ {_sizeX_}, _sizeY_ {_sizeY_} = self._SIZE_
 _lcnX_ {_lcnX_}, _lcnY_ {_lcnY_} = self._CURRENT_LOCATION_
@@ -2099,10 +2119,10 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 
 	def update(self):
 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		if (NOWMS < self._TIME_S_AT_UPDATE_):
+		if (NOWMS < self._TIME_MS_AT_UPDATE_):
 			return
 
-		self._TIME_S_AT_UPDATE_ = NOWMS + SZ_TIME_MS_BETWEEN_UPDATES
+		self._TIME_MS_AT_UPDATE_ = NOWMS + SZ_TIME_MS_BETWEEN_UPDATES
 		_TLcn_ = self._MAINFRAME_.CurrentLocation()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -2130,7 +2150,7 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 				title_="update",
 				printDictinS_=False,
 				message_=f"""
-self._TIME_S_AT_UPDATE_ {CF.frameItMS("_TIME_S_AT_UPDATE_", self._TIME_S_AT_UPDATE_)} = {CF.frameItMS("NOWMS", NOWMS)} + SZ_TIME_MS_BETWEEN_UPDATES {SZ_TIME_MS_BETWEEN_UPDATES / 1000}
+self._TIME_MS_AT_UPDATE_ {CF.frameItMS("_TIME_MS_AT_UPDATE_", self._TIME_MS_AT_UPDATE_)} = {CF.frameItMS("NOWMS", NOWMS)} + SZ_TIME_MS_BETWEEN_UPDATES {SZ_TIME_MS_BETWEEN_UPDATES / 1000}
 self._CURRENT_LOCATION_ {self._CURRENT_LOCATION_} = self._MAINFRAME_.CurrentLocation()
 self._BBOX_ {self._BBOX_} = getBBox(self._CURRENT_LOCATION_, self._SIZE_ {self._SIZE_})
 self._CLOSE_BBOX_ {self._CLOSE_BBOX_} = getCloseBBox(self._CURRENT_LOCATION_, self._SIZE_)
