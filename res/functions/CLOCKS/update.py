@@ -20,7 +20,7 @@
 		self.checkMouse()
 		self.quickRead()
 
-		if (self._DICTIN_[K_CHECKBOX_RUNAWAY] is True):
+		if (self._DICTIN_[K_CHECKBOX_RUNAWAY] is True) and (self._CURRENT_MOUSE_STATUS_ in CLOSE_LIST):
 			self.runaway()
 
 		self.updateFromDict()

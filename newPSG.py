@@ -1991,7 +1991,7 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (self._DPD_[F_RUNAWAY] is True):
 			print(f"""{CF.getDebugInfo()}
-{CF.frameItMS("_TIME_MS_AT_MOVE_", self._TIME_MS_AT_MOVE_)} = {CF.frameItMS("NOWMS", NOWMS)} + {CF.frameItMS(SZ_TIME_MS_BETWEEN_MOVES)}
+{CF.frameItMS("_TIME_MS_AT_MOVE_", self._TIME_MS_AT_MOVE_)} = {CF.frameItMS("NOWMS", NOWMS)} + {CF.frameItMS("SZ_TIME_MS_BETWEEN_MOVES", SZ_TIME_MS_BETWEEN_MOVES)}
 {CF.frameIt("_screenSZX_", _screenSZX_)}, {CF.frameIt("_screenSZY_", _screenSZY_)} = {CF.frameIt("self._SCREEN_DIMS_", self._SCREEN_DIMS_)}
 {CF.frameIt("_sizeX_", _sizeX_)}, {CF.frameIt("_sizeY_", _sizeY_)} = {CF.frameIt("self._SIZE_", self._SIZE_)}
 {CF.frameIt("_lcnX_", _lcnX_)}, {CF.frameIt("_lcnY_", _lcnY_)} = {CF.frameIt("_CURRENT_LOCATION_", self._CURRENT_LOCATION_)}
@@ -2020,8 +2020,14 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA):
-			return
+		if (self._DPD_[F_RUNAWAY] is True):
+			print(f"""runaway: ready to move to {CF.OPAREN}{_moveToX_}, {_moveToY_}{CF.CPAREN}""")
+
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+		
+#			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+#		if (abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA):
+#			return
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
@@ -2135,7 +2141,7 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 		self.checkMouse()
 		self.quickRead()
 
-		if (self._DICTIN_[K_CHECKBOX_RUNAWAY] is True):
+		if (self._DICTIN_[K_CHECKBOX_RUNAWAY] is True) and (self._CURRENT_MOUSE_STATUS_ in CLOSE_LIST):
 			self.runaway()
 
 		self.updateFromDict()
