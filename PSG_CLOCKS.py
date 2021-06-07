@@ -100,6 +100,7 @@ F_SETCHECKBOX = "F_SETCHECKBOX"  # define runaway
 F_SPLITBBOXTORAW = "F_SPLITBBOXTORAW"  # FKEY entry splitBBoxToRaw
 F_SPLITXYTORAW = "F_SPLITXYTORAW"  # FKEY entry splitXYToRaw
 F_UPDATE = "F_UPDATE"  # define the required update function
+F_UPDATEFLIPPEDITEMS = "F_UPDATEFLIPPEDITEMS"  # read the frame and set self._RESULT_
 F_UPDATEFROMDICT = "F_UPDATEFROMDICT"  # update the displayed info from a dict or the default _DICTIN_
 F_UPDATEINTERVAL = "F_UPDATEINTERVAL"  # FKEY entry updateInterval
 FORM_CLOCKS = "FORM_CLOCKS"  # holds all of clocks form entries
@@ -181,6 +182,7 @@ K_COLUMN02 = "K_COLUMN02"  # the column that puts the two smaller clocks below t
 K_CURRENT_EVENT = "K_CURRENT_EVENT"  #
 K_CURRENT_EVENTMODE = "K_CURRENT_EVENTMODE"  #
 K_CURRENT_EVENTMODE_VAL = "K_CURRENT_EVENTMODE_VAL"  # comment
+K_CURRENT_FLIP_INDEX = "K_CURRENT_FLIP_INDEX"  #
 K_CURRENT_INTERVAL_COUNT = "K_CURRENT_INTERVAL_COUNT"  # comment
 K_CURRENT_LOCATION = "K_CURRENT_LOCATION"  #
 K_CURRENT_MOUSE_LOCATION = "K_CURRENT_MOUSE_LOCATION"  #
@@ -1025,6 +1027,7 @@ class CLASS_CLOCKS(object):
 		self._CURRENTLY_DIMMED_ = False  #
 		self._CURRENT_EVENTMODE_ = None  #
 		self._CURRENT_EVENT_ = None  #
+		self._CURRENT_FLIP_INDEX_ = 0  #
 		self._CURRENT_LOCATION_ = EMPTY_XY  #
 		self._CURRENT_MOUSE_LOCATION_ = EMPTY_XY  #
 		self._CURRENT_MOUSE_STATUS_ = MOUSE_STATUS_NONE  #
@@ -1108,6 +1111,7 @@ class CLASS_CLOCKS(object):
 			F_QUICKREAD: False,  # read the frame and set self._RESULT_
 			F_RUNAWAY: True,  # define runaway
 			F_SETCHECKBOX: False,  # define runaway
+			F_UPDATEFLIPPEDITEMS: False,  # read the frame and set self._RESULT_
 			F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
 			F_UPDATE: False,  # define the required update function
 		}
@@ -2147,6 +2151,23 @@ checkboxKey_ {checkboxKey_}
 checkboxValue_ {checkboxValue_}
 """
 			)
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+	def updateFlippedItems(self):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (NOWMS < self._TIME_MS_AT_FLIP_):
+			return  # wait until the timer has expired between doing anything
+
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		for _thisKey_, _thisVal_ in self._DICTIN_.items():
+			_isInstanceOfList_ = isinstance(_thisVal_, list)
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_isInstanceOfList_ is True):
+				_thisFlippedItem_ = _thisVal_[self._INDE]
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def updateFromDict(self,
