@@ -3801,6 +3801,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 4:
 				doErrorItem("not 4 items", _thisItem_)
 				continue
+
 			_thisTupdictName_ = _thisItem_[2]
 
 			if _thisTupdictName_ not in FMPSG_SCTN0905_TUPDICT_DICT:
@@ -4093,7 +4094,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0908_CHECKBOX_DICT[_thisElementName_] = ""
 
 			FMPSG_SCTN0908_CHECKBOX_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0903_LIST_DICT["LIST_DNUPDATE"] += f"""{NTAB(1)}K{_thisElementName_[:-1].upper()},  # {_thisComment_}{NEWLINE}"""
+			FMPSG_SCTN0903_LIST_DICT["LIST_DNUPDATE"] += f"""{NTAB(1)}K_{_thisElementName_[:-2].upper()},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5633,7 +5634,7 @@ def parseTBGLST(FDTBGLST):
 
 			FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN0900_DEF1_DICT[_thisElementName_.upper()] = f"""F_{DBLQT}{_thisElementName_.upper()}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_DICT[_thisElementName_.upper()] = f"""{DBLQT}F_{_thisElementName_.upper()}{DBLQT}"""
 			FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisElementName_.upper()] = f"""{_thisComment_}"""
 			FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{NTAB(3)}{_thisKey_}: {_thisDPDBool_},  # {_thisComment_}{NEWLINE}"""
 
@@ -5893,8 +5894,8 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			FMPSG_SCTN0900_DEF1_CMNT_DICT[F"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[F"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
 			FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
 
 			continue
@@ -5913,8 +5914,8 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 
 			FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN0900_DEF1_DICT[F"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
-			FMPSG_SCTN0900_DEF1_CMNT_DICT[F"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -6004,7 +6005,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
 
 			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{_thisKey_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -6081,8 +6082,8 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 
 			FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN0900_DEF1_DICT[F"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
-			FMPSG_SCTN0900_DEF1_CMNT_DICT[F"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -6100,8 +6101,8 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 
 			FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN0900_DEF1_DICT[F"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
-			FMPSG_SCTN0900_DEF1_CMNT_DICT[F"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -6598,7 +6599,7 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._LIST_KEYS_TIME_.append({_thisElementName_[1:-1]}){NEWLINE}"""
 				FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_({_thisElementName_[1:-1]})){NEWLINE}"""
 
-			FMPSG_SCTN09FF_CLASS_DEF_DICT[F"""K{_thisElementName_}"""] = f"""{DBLQT}k{_thisElementName_}"""
+			FMPSG_SCTN09FF_CLASS_DEF_DICT[f"""K{_thisElementName_}"""] = f"""{DBLQT}k{_thisElementName_}"""
 			FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			continue

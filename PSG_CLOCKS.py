@@ -139,14 +139,14 @@ K_CHANGED_EVENTS = "K_CHANGED_EVENTS"  # comment
 K_CHANGED_LOCATION = "K_CHANGED_LOCATION"  # comment
 K_CHANGED_MOUSE_LOCATION = "K_CHANGED_MOUSE_LOCATION"  # comment
 K_CHANGED_VALUES = "K_CHANGED_VALUES"  # comment
-K_CHECKBOX_ALPHA_DIM = K_CHECKBOX_ALPHA_DIM  # value of the alphas dim checkbox
+K_CHECKBOX_ALPHA_DIM = "K_CHECKBOX_ALPHA_DIM"  # value of the alphas dim checkbox
 K_CHECKBOX_DISMISSED = "K_CHECKBOX_DISMISSED"  # set the key for the checkbox
 K_CHECKBOX_ENABLED = "K_CHECKBOX_ENABLED"  # set the key for the checkbox
 K_CHECKBOX_FIRSTRUN = "K_CHECKBOX_FIRSTRUN"  # set the key for the checkbox
 K_CHECKBOX_HOVER_DATE = "K_CHECKBOX_HOVER_DATE"  # set the key for the checkbox
 K_CHECKBOX_IS_ALERTING_NOW = "K_CHECKBOX_IS_ALERTING_NOW"  # set the key for the checkbox
 K_CHECKBOX_PREDISMISSABLE = "K_CHECKBOX_PREDISMISSABLE"  # set the key for the checkbox
-K_CHECKBOX_RUNAWAY = K_CHECKBOX_RUNAWAY  # value of runaway checkbox
+K_CHECKBOX_RUNAWAY = "K_CHECKBOX_RUNAWAY"  # value of runaway checkbox
 K_CHECKBOX_SNOOZABLE = "K_CHECKBOX_SNOOZABLE"  # set the key for the checkbox
 K_CHECKBOX_SNOOZED = "K_CHECKBOX_SNOOZED"  # set the key for the checkbox
 K_CLOSE_BBOX = "K_CLOSE_BBOX"  #
@@ -209,7 +209,7 @@ K_INDEX_SOUTH = "K_INDEX_SOUTH"  # SOUTH
 K_INDEX_WEST = "K_INDEX_WEST"  # WEST
 K_INDEX_X = "K_INDEX_X"  # X
 K_INDEX_Y = "K_INDEX_Y"  # Y
-K_INDEXES = K_INDEXES  # holds the index(es)of the currently awaited events
+K_INDEXES = "K_INDEXES"  # holds the index(es)of the currently awaited events
 K_INTERVAL_COUNT = "K_INTERVAL_COUNT"  # interval count template
 K_LIST_ALL_TIMES = "K_LIST_ALL_TIMES"  # list of all times
 K_LIST_APPDS_MIDNIGHT_FIX_TIMES = "K_LIST_APPDS_MIDNIGHT_FIX_TIMES"  # list of times to be updated at midnight
@@ -586,16 +586,16 @@ LIST_DNUPDATE = [  # list of all element key not to update through the normal me
 	K_INDEXES,  # deal with the list of names for the event(s) to come
 	K_INTERVAL_COUNT,  # deal with the list of names for the event(s) to come
 	K_NAME_NEXT_EVENT,  # deal with the list of names for the event(s) to come
-	KCHECKBOX_ALPHA_DIM0,  # checkbox for alpha under mouse
-	KCHECKBOX_DISMISSED0,  # checkbox for dismissed from mouse behavior
-	KCHECKBOX_ENABLED0,  # checkbox for dismissed from mouse behavior
-	KCHECKBOX_FIRSTRUN0,  # checkbox for dismissed from mouse behavior
-	KCHECKBOX_HOVER_DATE0,  # checkbox for dismissed from mouse behavior
-	KCHECKBOX_IS_ALERTING_NOW0,  # checkbox for dismissed from mouse behavior
-	KCHECKBOX_PREDISMISSABLE0,  # checkbox for dismissed from mouse behavior
-	KCHECKBOX_RUNAWAY0,  # checkbox for runaway from mouse behavior
-	KCHECKBOX_SNOOZABLE0,  # checkbox for dismissed from mouse behavior
-	KCHECKBOX_SNOOZED0,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
+	K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_FIRSTRUN,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_HOVER_DATE,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_IS_ALERTING_NOW,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_PREDISMISSABLE,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_RUNAWAY,  # checkbox for runaway from mouse behavior
+	K_CHECKBOX_SNOOZABLE,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_SNOOZED,  # checkbox for dismissed from mouse behavior
 ]
 
 
