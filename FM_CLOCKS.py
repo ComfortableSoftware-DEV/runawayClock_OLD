@@ -1483,13 +1483,13 @@ TBGLST = [
 	("PSGVAL_TITLE_THECLOCK", FMAXPSG_SCTN0900_STR_DEF, "TITLE_THECLOCK", "THECLOCK", "string with window title for APPMODE_CLOCKS",),
 	("PSGVAL_ZERO_CLOCK", FMAXPSG_SCTN0900_VAL_DEF, "ZERO_CLOCK", "0", "all the zeros",),
 	("PSGVAL_ZERO_CLOCKSTR", FMAXPSG_SCTN0900_STR_DEF, "ZERO_CLOCKSTR", "00:00:00", "all the zeros",),
-	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_DEF, "ALL_THE_FORMS", "comment",),
-	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORM_CLOCKS", "None", "ENTRY IN FORMS",),
-	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORM_POPUP01", "None", "ENTRY IN FORMS",),
-	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORM_POPUP02", "None", "ENTRY IN FORMS",),
-	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORM_POPUP03", "None", "ENTRY IN FORMS",),
-	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORM_POPUP04", "None", "ENTRY IN FORMS",),
-	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "ALL_THE_FORMS", "FORM_POPUP05", "None", "ENTRY IN FORMS",),
+	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_DEF, "DICT_ALL_THE_FORMS", "comment",),
+	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "DICT_ALL_THE_FORMS", "FORM_CLOCKS", "None", "ENTRY IN FORMS",),
+	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "DICT_ALL_THE_FORMS", "FORM_POPUP01", "None", "ENTRY IN FORMS",),
+	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "DICT_ALL_THE_FORMS", "FORM_POPUP02", "None", "ENTRY IN FORMS",),
+	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "DICT_ALL_THE_FORMS", "FORM_POPUP03", "None", "ENTRY IN FORMS",),
+	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "DICT_ALL_THE_FORMS", "FORM_POPUP04", "None", "ENTRY IN FORMS",),
+	("PSGVAL__ALL_THE_FORMS", FMAXPSG_SCTN0902_DICT_VV_ADD, "DICT_ALL_THE_FORMS", "FORM_POPUP05", "None", "ENTRY IN FORMS",),
 	("PSGVAL__APPDS", FMAX_NOP, "APP Data Storage",),
 	("PSGVAL__APPDS_MAIN_00", FMAXPSG_SCTN090C_APPDS_DEF, "APPDS_MAIN", "the struct holding everything passed betwixt PySimpleGUI and this app",),
 	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VS_ADD, "APPDS_MAIN", "K_VERSION", "00000006", "version number hex string",),
@@ -1794,9 +1794,9 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_00_INIT000", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_THIS_KEY_BASE_", "keyBase_", "adopt keyBase_",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT001", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_LAMBDA, "CLOCKS", "_USE_THIS_KEY_", "__KEY_TEXT__: %FTQ%%OBRCE%__KEY_TEXT__%CBRCE%%OBRCE%self._THIS_KEY_BASE_%CBRCE%%TQ%", "make a local key sourcer",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_THIS_FORM_NAME_", "formName_", "adopt formName_",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT003", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_REVERSE_", "{}", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_REVERSE_", "{}", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT003", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_LIST_KEYS_TIME_", "[]", "",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS", "{}", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT004", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_", "{}", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_CHANNEL_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_HIGH_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_LOW_", "SZ_ALPHA_LOW", "",),
@@ -4474,10 +4474,14 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 4:
 				doErrorItem("not 4 items", _thisItem_)
 				continue
+
 			_thisAPPDSName_ = _thisItem_[2]
+
 			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDS_DICT:
 				FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
+
 			FMPSG_SCTN090C_APPDS_CMNT_DICT[_thisAPPDSName_] = f"""{_thisComment_}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4502,6 +4506,8 @@ def parseTBGLST(FDTBGLST):
 			if _thisIndexNum_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
 				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
 
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
 			FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisDictName_] = f"""{NTAB(1)}{_thisDictName_}: {OBRCE}  # {_thisComment_}{NEWLINE}"""
 
 			continue
@@ -4528,7 +4534,7 @@ def parseTBGLST(FDTBGLST):
 			if _thisIndexNum_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
 				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
 
-			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisKey_}"""] = f"""{_thisComment_}"""
 			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisKey_}"""] = f"""{DBLQT}K_{_thisKey_}{DBLQT}"""
 			FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_][_thisKey_] = f"""{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
@@ -4556,9 +4562,10 @@ def parseTBGLST(FDTBGLST):
 			if _thisIndexNum_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
 				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
 
-			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisKey_}"""] = f"""{DBLQT}K_{_thisKey_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
 			FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_][_thisKey_] = f"""{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4569,12 +4576,18 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
 				continue
+
 			_thisAPPDSName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
+
 			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDS_DICT:
 				FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
+
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
 			FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisKey_] = f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4585,12 +4598,18 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
 				continue
+
 			_thisAPPDSName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
+
 			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDS_DICT:
 				FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
+
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
 			FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisKey_] = f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
