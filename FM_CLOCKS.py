@@ -1793,10 +1793,10 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_00_INIT", FMAXPSG_SCTN09FF_CLASS_INIT_DEF, "CLOCKS", ",%ESCLN%%TAB3%keyBase_,%ESCLN%%TAB3%formName_%NEWLINE%%TAB2%", "init parms defined",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT000", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_THIS_KEY_BASE_", "keyBase_", "adopt keyBase_",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT001", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_LAMBDA, "CLOCKS", "_USE_THIS_KEY_", "__KEY_TEXT__: %FTQ%%OBRCE%__KEY_TEXT__%CBRCE%%OBRCE%self._THIS_KEY_BASE_%CBRCE%%TQ%", "make a local key sourcer",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_REVERSE_", "{}", "",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_THIS_FORM_NAME_", "formName_", "adopt formName_",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_LIST_KEYS_TIME_", "[]", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_", "{}", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_REVERSE_", "{}", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_LIST_KEYS_TIME_", "[]", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_THIS_FORM_NAME_", "formName_", "adopt formName_",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_CHANNEL_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_HIGH_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_LOW_", "SZ_ALPHA_LOW", "",),
@@ -1850,13 +1850,13 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "CLOCKS/easyUpdate.py", "False", "load the whole thing from the file for easyUpdate",),
 	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATEPARMS", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdateParms", "easyUpdateParms.py", "False", "load the whole thing from the file for easyUpdate",),
 	("PSGVAL__CLOCKS_FUNC_03_ENINT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enint", "enint.py", "False", "read the frame and set self._RESULT_",),
-	("PSGVAL__CLOCKS_FUNC_03_UPDATE_FLIPPED_ITEMS", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFlippedItems", "updateFlippedItems.py", "False", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_ENSTRING", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enstring", "enstring.py", "False", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTOFF", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOff", "intervalCountOff.py", "False", "turn interval count off",),
 	("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTON", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOn", "intervalCountOn.py", "False", "turn interval count on",),
 	("PSGVAL__CLOCKS_FUNC_03_QUICK_READ", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "quickRead", "quickRead.py", "False", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_RUNAWAY", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "True", "define runaway",),
 	("PSGVAL__CLOCKS_FUNC_03_SETCHECKBOX", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "setCheckbox", "setCheckbox.py", "False", "define runaway",),
+	("PSGVAL__CLOCKS_FUNC_03_UPDATE_FLIPPED_ITEMS", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFlippedItems", "updateFlippedItems.py", "False", "read the frame and set self._RESULT_",),
 	("PSGVAL__CLOCKS_FUNC_03_UPDATE_FROM_DICT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFromDict", "updateFromDict.py", "False", "update the displayed info from a dict or the default _DICTIN_",),
 	("PSGVAL__CLOCKS_FUNC_FF_UPDATE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "update", "CLOCKS/update.py", "False", "define the required update function",),
 	("PSGVAL__CLOCKS_LAYOUT", FMAX_NOP, "layout for APPMODE_CLOCKS",),
@@ -1868,9 +1868,9 @@ TBGLST = [
 	("PSGVAL__CLOCKS_LAYOUT05", FMAXPSG_SCTN09FF_CLASS_LAYOUT_COLUMN_ADD, "CLOCKS", "_LAYOUT_", "LAYOUT_ROW_00", "L04", "LAYOUT_E02", "add a column",),
 	("PSGVAL__CLOCKS_LAYOUT06", FMAXPSG_SCTN09FF_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "_LAYOUT_", "LAYOUT_ROW_00", "L05", "LAYOUT_E02", "layout", "self._COLUMN02_", "comment",),
 	("PSGVAL__CLOCKS_LAYOUT07", FMAXPSG_SCTN09FF_CLASS_LAYOUT_PARM_VAL_ADD, "CLOCKS", "_LAYOUT_", "LAYOUT_ROW_00", "L05", "LAYOUT_E02", "pad", "SZ_PAD_ALL", "comment",),
-	("PSGVAL__CLOCKS_LIST_FLIPPABLE_KEYS00", FMAXPSG_SCTN09FF_CLASS_LIST_DEF, "CLOCKS", "_LIST_FLIPPABLE_KEYS_", "K_TEXT_NAME_NEXT_EVENT", "list of the items that can be str|list[str, str, ..]",),
+	("PSGVAL__CLOCKS_LIST_FLIPPABLE_KEYS00", FMAXPSG_SCTN09FF_CLASS_LIST_DEF, "CLOCKS", "_LIST_FLIPPABLE_KEYS_", "list of the items that can be str|list[str, str, ..]",),
 	("PSGVAL__CLOCKS_LIST_FLIPPABLE_KEYS01", FMAXPSG_SCTN09FF_CLASS_LIST_VAL_ADD, "CLOCKS", "_LIST_FLIPPABLE_KEYS_", "K_TEXT_INTERVAL_COUNT", "list of the items that can be str|list[str, str, ..]",),
-	("PSGVAL__CLOCKS_LIST_FLIPPABLE_KEYS01", FMAXPSG_SCTN09FF_CLASS_LIST_VAL_ADD, "CLOCKS", "_LIST_FLIPPABLE_KEYS_", "list of the items that can be str|list[str, str, ..]",),
+	("PSGVAL__CLOCKS_LIST_FLIPPABLE_KEYS01", FMAXPSG_SCTN09FF_CLASS_LIST_VAL_ADD, "CLOCKS", "_LIST_FLIPPABLE_KEYS_", "K_TEXT_NAME_NEXT_EVENT", "list of the items that can be str|list[str, str, ..]",),
 	("PSGVAL__CLOCKS_RCMENU01", FMAXPSG_SCTN09FF_CLASS_RCMENU_DEF, "CLOCKS", "_RCMENU01_", "right click to do the things",),
 	("PSGVAL__CLOCKS_RCMENU0101", FMAXPSG_SCTN09FF_CLASS_RCMENU_VAL_ADD, "CLOCKS", "_RCMENU01_", "K_BTN_QUIT_ALL", "quit by right click",),
 	("PSGVAL__CLOCKS_RCMENU0101", FMAXPSG_SCTN09FF_CLASS_RCMENU_VAL_ADD, "CLOCKS", "_RCMENU01_", "K_BTN_XPAND", "quit by right click",),
@@ -2591,7 +2591,7 @@ def makePSGClasses():
 			# print(f"""FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT {FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT}""")
 			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN09FF_CLASS_LIST_DICT[_thisClassName_].items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisElementName_]}
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN09FF_CLASS_LIST_CMNT_DICT[_thisClassName_][_thisElementName_]}
 {NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRKT}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}"""
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
@@ -6409,7 +6409,7 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN0903_LIST_DEF:
+		elif _thisAX_ == FMAXPSG_SCTN09FF_CLASS_LIST_DEF:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
@@ -6422,15 +6422,17 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_LIST_DICT[_thisClassName_] = {}
 			if _thisListName_ not in FMPSG_SCTN09FF_CLASS_LIST_DICT[_thisClassName_]:
 				FMPSG_SCTN09FF_CLASS_LIST_DICT[_thisClassName_][_thisListName_] = ""
+			if _thisClassName_ not in FMPSG_SCTN09FF_CLASS_LIST_CMNT_DICT:
+				FMPSG_SCTN09FF_CLASS_LIST_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_CLASS_LIST_CMNT_DICT[_thisListName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN09FF_CLASS_LIST_CMNT_DICT[_thisClassName_][_thisListName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ for _thisItem_ in TBGLST:
 		# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN0903_LIST_STR_ADD:
+		elif _thisAX_ == FMAXPSG_SCTN09FF_CLASS_LIST_STR_ADD:
 			# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
@@ -6439,7 +6441,7 @@ def parseTBGLST(FDTBGLST):
 			_thisListName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
 
-			FMPSG_SCTN0903_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMPSG_SCTN09FF_CLASS_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
