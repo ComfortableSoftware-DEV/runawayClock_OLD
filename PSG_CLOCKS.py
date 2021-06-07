@@ -180,7 +180,7 @@ K_INDEXES = "K_INDEXES"  # holds the index(es) of the currently awaited event(s)
 K_INTERVAL_COUNT = "K_INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
 K_IS_ALERTING_NOW = "K_IS_ALERTING_NOW"  #
 K_KEY_DICT = "K_KEY_DICT"  #
-K_KEY_DICT_REVERSE = "K_KEY_DICT_REVERSE"  #
+K_DICT_KEYS_REVERSE = "K_DICT_KEYS_REVERSE"  #
 K_KEY_LIST_TIMES = "K_KEY_LIST_TIMES"  #
 K_LAST_EVENT = "K_LAST_EVENT"  #
 K_LAST_LOCATION = "K_LAST_LOCATION"  #
@@ -436,7 +436,7 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALL_THE_FORMS = {  # comment
+DICT_ALL_THE_FORMS = {  # comment
 	FORM_CLOCKS: None,  # ENTRY IN FORMS
 	FORM_POPUP01: None,  # ENTRY IN FORMS
 	FORM_POPUP02: None,  # ENTRY IN FORMS
@@ -470,11 +470,11 @@ DPD_ROOT = {  # DPD_ROOT defined
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0903 lists
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-ALERTING_LIST = [  # list that holds all currently alarming events
+LIST_ALERTING = [  # list that holds all currently alarming events
 ]
 
 
-ALL_TIMES_LIST = [  # list of all times
+LIST_ALL_TIMES = [  # list of all times
 	K_TIME_MS_AT_CHECK_MOUSE,  # list of all times K_TIME_S_AT_CHECK_MOUSE
 	K_TIME_MS_AT_FLIP,  # list of all times K_TIME_MS_AT_UPDATE
 	K_TIME_MS_AT_MOVE,  # list of all times K_TIME_MS_AT_MOVE
@@ -494,7 +494,7 @@ ALL_TIMES_LIST = [  # list of all times
 ]
 
 
-APPDS_MIDNIGHT_FIX_TIMES_LIST = [  # list of times to be updated at midnight
+LIST_MIDNIGHT_FIX_TIMES = [  # list of times to be updated at midnight
 	K_TIME_MS_AT_CHECK_MOUSE,  # list of times to be updated at midnight
 	K_TIME_MS_AT_MOVE,  # list of times to be updated at midnight
 	K_TIME_MS_AT_UPDATE,  # list of times to be updated at midnight
@@ -502,7 +502,7 @@ APPDS_MIDNIGHT_FIX_TIMES_LIST = [  # list of times to be updated at midnight
 ]
 
 
-CLOSE_LIST = [  # list with close statuses
+LIST_CLOSE = [  # list with close statuses
 	MOUSE_STATUS_CLOSE_E,  # easet close entry
 	MOUSE_STATUS_CLOSE_N,  # easet close entry
 	MOUSE_STATUS_CLOSE_NE,  # easet close entry
@@ -514,7 +514,7 @@ CLOSE_LIST = [  # list with close statuses
 ]
 
 
-DNUPDATE_LIST = [  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
+LIST_DNUPDATE = [  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
 	K_ALARMPOPUP_TEXT_TEXT,  # deal with the list of names for the event(s) to come
 	K_INDEXES,  # deal with the list of names for the event(s) to come
 	K_INTERVAL_COUNT,  # deal with the list of names for the event(s) to come
@@ -532,11 +532,11 @@ DNUPDATE_LIST = [  # list of all element key not to update through the normal me
 ]
 
 
-NEXT_ALARM_NAME_LIST = [  # holds all of the names of the next time an alert happens
+LIST_NEXT_ALARM_NAME = [  # holds all of the names of the next time an alert happens
 ]
 
 
-POPUP_LIST = [  # popup list
+LIST_POPUP = [  # popup list
 	FORM_POPUP01,  # popup list entry FORM_POPUP01
 	FORM_POPUP02,  # popup list entry FORM_POPUP02
 	FORM_POPUP03,  # popup list entry FORM_POPUP03
@@ -545,7 +545,7 @@ POPUP_LIST = [  # popup list
 ]
 
 
-THIS_ALARM_POPUP_TEXT_LIST = [  # collects the text to popup
+LIST_THIS_ALARM_POPUP_TEXT = [  # collects the text to popup
 	"One or more events has alerted at %NOWS%",  # collects the text to popup
 ]
 
@@ -922,7 +922,7 @@ TEXT_TIME_S_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 
 class CLASS_CLOCKS(object):
 	global \
-		ALL_THE_FORMS, \
+		DICT_ALL_THE_FORMS, \
 		APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
@@ -934,10 +934,10 @@ class CLASS_CLOCKS(object):
 		self._THIS_KEY_BASE_ = keyBase_  # adopt keyBase_
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""  # make a local key sourcer
 		self._THIS_FORM_NAME_ = formName_  # adopt formName_
-		self._KEY_DICT_REVERSE_ = {}  #
-		self._KEY_DICT_ = {}  #
+		self._DICT_KEYS_REVERSE_ = {}  #
+		self._DICT_KEYS_ = {}  #
 
-		self._KEY_LIST_TIMES_ = []  #
+		self._LIST_KEYS_TIME_ = []  #
 		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  #
 		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  #
 		self._ALPHA_LOW_ = SZ_ALPHA_LOW  #
@@ -962,12 +962,12 @@ class CLASS_CLOCKS(object):
 		self._TIME_MS_AT_FLIP_ = ZERO_CLOCK  #
 		self._TIME_MS_AT_MOVE_ = ZERO_CLOCK  #
 		self._TIME_MS_AT_UPDATE_ = ZERO_CLOCK  #
-		self._KEY_DICT_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
-		self._KEY_DICT_REVERSE_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
-		self._KEY_DICT_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
-		self._KEY_DICT_REVERSE_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
-		self._KEY_DICT_[K_INDEXES] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
-		self._KEY_DICT_REVERSE_[K_CHECKBOX_ALPHA_DIM] = K_INDEXES  # add foreign key for alpha dimming
+		self._DICT_KEYS_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
+		self._DICT_KEYS_REVERSE_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
+		self._DICT_KEYS_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
+		self._DICT_KEYS_REVERSE_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
+		self._DICT_KEYS_[K_INDEXES] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
+		self._DICT_KEYS_REVERSE_[K_CHECKBOX_ALPHA_DIM] = K_INDEXES  # add foreign key for alpha dimming
 
 		self._DICTIN_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1044,8 +1044,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(K_INTERVAL_COUNT)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_DICT_[K_INTERVAL_COUNT] = f"""{self._USE_THIS_KEY_(K_INTERVAL_COUNT)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_INTERVAL_COUNT)}"""] = K_INTERVAL_COUNT
+		self._DICT_KEYS_[K_INTERVAL_COUNT] = f"""{self._USE_THIS_KEY_(K_INTERVAL_COUNT)}"""
+		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(K_INTERVAL_COUNT)}"""] = K_INTERVAL_COUNT
 
 		self._TEXT_NAME_NEXT_EVENT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1053,8 +1053,8 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(K_NAME_NEXT_EVENT)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_DICT_[K_NAME_NEXT_EVENT] = f"""{self._USE_THIS_KEY_(K_NAME_NEXT_EVENT)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_NAME_NEXT_EVENT)}"""] = K_NAME_NEXT_EVENT
+		self._DICT_KEYS_[K_NAME_NEXT_EVENT] = f"""{self._USE_THIS_KEY_(K_NAME_NEXT_EVENT)}"""
+		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(K_NAME_NEXT_EVENT)}"""] = K_NAME_NEXT_EVENT
 
 		self._TEXT_TIME_S_AT_ZEROELAPSE_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1062,10 +1062,10 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(K_TIME_S_AT_ZEROELAPSE)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_LIST_TIMES_.append(TEXT_TIME_S_AT_ZEROELAPSE)
-		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_S_AT_ZEROELAPSE))
-		self._KEY_DICT_[K_TIME_S_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(K_TIME_S_AT_ZEROELAPSE)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_AT_ZEROELAPSE)}"""] = K_TIME_S_AT_ZEROELAPSE
+		self._LIST_KEYS_TIME_.append(TEXT_TIME_S_AT_ZEROELAPSE)
+		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(TEXT_TIME_S_AT_ZEROELAPSE))
+		self._DICT_KEYS_[K_TIME_S_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(K_TIME_S_AT_ZEROELAPSE)}"""
+		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_AT_ZEROELAPSE)}"""] = K_TIME_S_AT_ZEROELAPSE
 
 		self._TEXT_TIME_S_AT_NEXT_ALERT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1073,10 +1073,10 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(K_TIME_S_AT_NEXT_ALERT)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_LIST_TIMES_.append(TEXT_TIME_S_AT_NEXT_ALERT)
-		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_S_AT_NEXT_ALERT))
-		self._KEY_DICT_[K_TIME_S_AT_NEXT_ALERT] = f"""{self._USE_THIS_KEY_(K_TIME_S_AT_NEXT_ALERT)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_AT_NEXT_ALERT)}"""] = K_TIME_S_AT_NEXT_ALERT
+		self._LIST_KEYS_TIME_.append(TEXT_TIME_S_AT_NEXT_ALERT)
+		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(TEXT_TIME_S_AT_NEXT_ALERT))
+		self._DICT_KEYS_[K_TIME_S_AT_NEXT_ALERT] = f"""{self._USE_THIS_KEY_(K_TIME_S_AT_NEXT_ALERT)}"""
+		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_AT_NEXT_ALERT)}"""] = K_TIME_S_AT_NEXT_ALERT
 
 		self._TEXT_TIME_S_CLOCK_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1084,10 +1084,10 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(K_TIME_S_CLOCK)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_LIST_TIMES_.append(TEXT_TIME_S_CLOCK)
-		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_S_CLOCK))
-		self._KEY_DICT_[K_TIME_S_CLOCK] = f"""{self._USE_THIS_KEY_(K_TIME_S_CLOCK)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_CLOCK)}"""] = K_TIME_S_CLOCK
+		self._LIST_KEYS_TIME_.append(TEXT_TIME_S_CLOCK)
+		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(TEXT_TIME_S_CLOCK))
+		self._DICT_KEYS_[K_TIME_S_CLOCK] = f"""{self._USE_THIS_KEY_(K_TIME_S_CLOCK)}"""
+		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_CLOCK)}"""] = K_TIME_S_CLOCK
 
 		self._TEXT_TIME_S_ELAPSED_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1095,10 +1095,10 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(K_TIME_S_ELAPSED)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_LIST_TIMES_.append(TEXT_TIME_S_ELAPSED)
-		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_S_ELAPSED))
-		self._KEY_DICT_[K_TIME_S_ELAPSED] = f"""{self._USE_THIS_KEY_(K_TIME_S_ELAPSED)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_ELAPSED)}"""] = K_TIME_S_ELAPSED
+		self._LIST_KEYS_TIME_.append(TEXT_TIME_S_ELAPSED)
+		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(TEXT_TIME_S_ELAPSED))
+		self._DICT_KEYS_[K_TIME_S_ELAPSED] = f"""{self._USE_THIS_KEY_(K_TIME_S_ELAPSED)}"""
+		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_ELAPSED)}"""] = K_TIME_S_ELAPSED
 
 		self._TEXT_TIME_S_TOGO_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1106,10 +1106,10 @@ class CLASS_CLOCKS(object):
 			KEY: f"""{self._USE_THIS_KEY_(K_TIME_S_TOGO)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._KEY_LIST_TIMES_.append(TEXT_TIME_S_TOGO)
-		self._KEY_LIST_TIMES_.append(self._USE_THIS_KEY_(TEXT_TIME_S_TOGO))
-		self._KEY_DICT_[K_TIME_S_TOGO] = f"""{self._USE_THIS_KEY_(K_TIME_S_TOGO)}"""
-		self._KEY_DICT_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_TOGO)}"""] = K_TIME_S_TOGO
+		self._LIST_KEYS_TIME_.append(TEXT_TIME_S_TOGO)
+		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(TEXT_TIME_S_TOGO))
+		self._DICT_KEYS_[K_TIME_S_TOGO] = f"""{self._USE_THIS_KEY_(K_TIME_S_TOGO)}"""
+		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(K_TIME_S_TOGO)}"""] = K_TIME_S_TOGO
 
 		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1208,19 +1208,19 @@ class CLASS_CLOCKS(object):
 
 		if (self._DPD_[F___INIT__] is True):  # see if debug printing is on
 			self.debugPrint(  # debugPrint
-				title_="__INIT__3",  # print _KEY_DICT_REVERSE_
-				printDictinS_=True,  # print _KEY_DICT_
-				message_=f"""self._KEY_DICT_ {self._KEY_DICT_}  # print _KEY_DICT_
-		self._KEY_DICT_REVERSE_ {self._KEY_DICT_REVERSE_}""")  # print _KEY_DICT_REVERSE_
+				title_="__INIT__3",  # print _DICT_KEYS_REVERSE_
+				printDictinS_=True,  # print _DICT_KEYS_
+				message_=f"""self._DICT_KEYS_ {self._DICT_KEYS_}  # print _DICT_KEYS_
+		self._DICT_KEYS_REVERSE_ {self._DICT_KEYS_REVERSE_}""")  # print _DICT_KEYS_REVERSE_
 
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 	def __enter__(self):
 		global \
-			ALL_THE_FORMS
+			DICT_ALL_THE_FORMS
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_ = SG.Window(**self._WINDOW_).finalize()
-		ALL_THE_FORMS[self._THIS_FORM_NAME_] = self
+		DICT_ALL_THE_FORMS[self._THIS_FORM_NAME_] = self
 		self._SIZE_ = self._MAINFRAME_.Size
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -1236,10 +1236,10 @@ class CLASS_CLOCKS(object):
 
 	def __exit__(self, *args_):
 		global \
-			ALL_THE_FORMS, \
+			DICT_ALL_THE_FORMS, \
 			APPDS_MAIN
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-		ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
+		DICT_ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (self._DPD_[F___EXIT__] is True):
@@ -1816,7 +1816,7 @@ alphaChannel_ {alphaChannel_}
 
 						# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
 					if (_thisKey_ in self._DICT_KEYS_TIME_):
-						_dictToRtn_[self._KEY_DICT_[_thisKey_]].append(CF.nrmlIntToHMS(_thisItem_))
+						_dictToRtn_[self._DICT_KEYS_[_thisKey_]].append(CF.nrmlIntToHMS(_thisItem_))
 
 						# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
 					elif (_thisKey_ in self._DICT_KEYS_INT_):
@@ -1847,7 +1847,7 @@ alphaChannel_ {alphaChannel_}
 
 					# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
 				if (_thisKey_ in self._DICT_KEYS_TIME_):
-					_dictToRtn_[self._KEY_DICT_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
+					_dictToRtn_[self._DICT_KEYS_[_thisKey_]] = CF.nrmlIntToHMS(_thisVal_)
 
 						# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
 					if (self._DPD_[F_ENSTRING] is True):
@@ -1859,7 +1859,7 @@ alphaChannel_ {alphaChannel_}
 
 						# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
 					if (self._DICT_KEYS_INT_[_thisKey_] == "04d"):
-						_dictToRtn_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_:04d}"""
+						_dictToRtn_[self._DICT_KEYS_[_thisKey_]] = f"""{_thisVal_:04d}"""
 
 							# 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥
 						if (self._DPD_[F_ENSTRING] is True):
@@ -1869,7 +1869,7 @@ alphaChannel_ {alphaChannel_}
 
 						# ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥ ⥣5⥥
 					else:
-						_dictToRtn_[self._KEY_DICT_[_thisKey_]] = f"""{_thisVal_}"""
+						_dictToRtn_[self._DICT_KEYS_[_thisKey_]] = f"""{_thisVal_}"""
 
 							# 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥
 						if (self._DPD_[F_ENSTRING] is True):
@@ -2045,7 +2045,7 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 		if (checkboxValue_ is None):
 			checkboxValue_ = not self._DICTIN_[checkboxKey_]
 
-		self._MAINFRAME_[self._KEY_DICT_[checkboxKey_]].update(
+		self._MAINFRAME_[self._DICT_KEYS_[checkboxKey_]].update(
 			value=checkboxValue_,
 		)
 		# self._VALUES_[checkboxKey_] = checkboxValue_
@@ -2100,7 +2100,7 @@ _DICTINSTR_ {self.dictinstrRepl()}
 		for _thisKey_, _thisVal_ in dictToUpdateFrom_.items():
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (_thisKey_ not in DNUPDATE_LIST):
+			if (_thisKey_ not in LIST_DNUPDATE):
 				self._MAINFRAME_[_thisKey_].Update(value=_thisVal_)
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
@@ -2142,7 +2142,7 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 		self.checkMouse()
 		self.quickRead()
 
-		if (self._DICTIN_[K_CHECKBOX_RUNAWAY] is True) and (self._CURRENT_MOUSE_STATUS_ in CLOSE_LIST):
+		if (self._DICTIN_[K_CHECKBOX_RUNAWAY] is True) and (self._CURRENT_MOUSE_STATUS_ in LIST_CLOSE):
 			self.runaway()
 
 		self.updateFromDict()
@@ -2267,7 +2267,7 @@ def appdsDecode(dictIn_=None):
 		if (isinstance(_thisVal_, dict) is False):
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (_thisKey_ in ALL_TIMES_LIST):
+			if (_thisKey_ in LIST_ALL_TIMES):
 				dictToRtn_[_thisKey_] = CF.nrmlIntToHMS(_thisVal_)
 
 				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
@@ -2282,7 +2282,7 @@ def appdsDecode(dictIn_=None):
 	for _thisKey_, _thisVal_ in dictIn_[K_EVENT_ENTRIES].items():
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_thisKey_ in ALL_TIMES_LIST):
+		if (_thisKey_ in LIST_ALL_TIMES):
 			_dictToRtn_[K_EVENT_ENTRIES][_thisKey_] = CF.nrmlIntToHMS(dictIn_[K_EVENT_ENTRIES][_thisKey_])
 
 			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
@@ -2538,7 +2538,7 @@ def findNextAlarmEvent():
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (len(_nextEventList_) == 1):
-			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+			DICT_ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 				eventMode_=_eventMode0_,
 				currentIntervalCount_=_currentIntervalCount0_,
 				nameNextEvent_=_nameNextEvent0_,
@@ -2553,7 +2553,7 @@ def findNextAlarmEvent():
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (_nextEventList_[1][0] > _timeAtNextAlert0_):
-			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+			DICT_ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 				eventMode_=_eventMode0_,
 				currentIntervalCount_=_currentIntervalCount0_,
 				nameNextEvent_=_nameNextEvent0_,
@@ -2585,7 +2585,7 @@ def findNextAlarmEvent():
 				_eventMode_ = EVENTMODE_ALARM
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+			DICT_ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 				eventMode_=_eventMode_,
 				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_],
 				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_],
@@ -2618,7 +2618,7 @@ def findNextAlarmEvent():
 				_eventMode_ = EVENTMODE_ALARM
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+			DICT_ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 				eventMode_=_eventMode_,
 				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_],
 				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_],
@@ -2652,7 +2652,7 @@ def findNextAlarmEvent():
 				_eventMode_ = EVENTMODE_ALARM
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+			DICT_ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 				eventMode_=_eventMode_,
 				currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCoun3_],
 				nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_],
@@ -2683,7 +2683,7 @@ def findNextAlarmEvent():
 			_eventMode_ = EVENTMODE_ALARM
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+		DICT_ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 			eventMode_=_eventMode_,
 			currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCoun3_, _currentIntervalCount4_],
 			nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_, _nameNextEvent4_],
@@ -2728,7 +2728,7 @@ def doEvent():
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
 			APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_AT_LAST_RUN] = NOWS
-			THIS_ALARM_POPUP_TEXT_LIST.append(APPDS_MAIN[K_EVENT_ENTRIES])
+			LIST_THIS_ALARM_POPUP_TEXT.append(APPDS_MAIN[K_EVENT_ENTRIES])
 
 
 
@@ -2771,7 +2771,7 @@ def doMidnightWork():
 				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_DISMISSED] = False
 
 			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			for _index1_ in ALL_TIMES_LIST:
+			for _index1_ in LIST_ALL_TIMES:
 
 					# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
 				if (_index1_ in _event_) and (APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] >= CF.DAYSECS):
@@ -2797,13 +2797,13 @@ def doMidnightWork():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doStartup():
 	global \
-		ALL_THE_FORMS, \
+		DICT_ALL_THE_FORMS, \
 		APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	if (DPD_ROOT[F_DOSTARTUP] is True):
 		print(f"""doStartup
 {CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
-{ALL_THE_FORMS[FORM_CLOCKS].debugPrint(
+{DICT_ALL_THE_FORMS[FORM_CLOCKS].debugPrint(
 	printDictinS_=True,
 )}
 """)
@@ -2826,19 +2826,19 @@ def doStartup():
 		_tempDS_[K_TIME_S_AT_ZEROELAPSE] = NOWS
 		APPDS_MAIN[K_EVENT_ENTRIES][_index_] = CF.quickCopyDict(_tempDS_)
 
-	ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+	DICT_ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 		checkboxAlphaDim_=APPDS_MAIN[K_CHECKBOX_ALPHA_DIM],
 		checkboxRunaway_=APPDS_MAIN[K_CHECKBOX_RUNAWAY],
 		timeAtZeroelapse_=NOWS,
 		timeClock_=NOWS,
 	)
-	ALL_THE_FORMS[FORM_CLOCKS]._SIZE_
+	DICT_ALL_THE_FORMS[FORM_CLOCKS]._SIZE_
 
 	if (DPD_ROOT[F_DOSTARTUP] is True):
 		print(f"""doStartup
 {CF.frameIt("_tempDS_", _tempDS_)}
 {CF.frameIt("APPDS_MAIN", APPDS_MAIN)}
-{ALL_THE_FORMS[FORM_CLOCKS].debugPrint(
+{DICT_ALL_THE_FORMS[FORM_CLOCKS].debugPrint(
 	printDictinS_=True,
 )}
 """)
@@ -2852,7 +2852,7 @@ def doStartup():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def outerLoop():
 	global \
-		ALL_THE_FORMS, \
+		DICT_ALL_THE_FORMS, \
 		APPDS_MAIN
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_oldResults_ = (None, None, None)
@@ -2863,7 +2863,7 @@ def outerLoop():
 
 		localTimes()
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		for _thisFrameName_, _thisFrame_ in ALL_THE_FORMS.items():
+		for _thisFrameName_, _thisFrame_ in DICT_ALL_THE_FORMS.items():
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if _thisFrame_ is not None:
@@ -2896,7 +2896,7 @@ def outerLoop():
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (DPD_ROOT[F_OUTERLOOP] is True):
 			print(f"""looking at values in outerloop
-_window_ {_window_} == ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_ {(_window_ == ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_)}
+_window_ {_window_} == DICT_ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_ {(_window_ == DICT_ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_)}
 _event_ {_event_}
 _values_ {_values_}""")
 
@@ -2916,7 +2916,7 @@ _values_ {_values_}""")
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			elif (_event_ == K_BTN_ZERO):
-				ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
+				DICT_ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
 					timeAtZeroelapse_=NOWS,
 					timeElapsed_=ZERO_CLOCK,
 				)
@@ -2927,12 +2927,12 @@ _values_ {_values_}""")
 		if (_values_ is not None):
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (_window_ == ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_):
+			if (_window_ == DICT_ALL_THE_FORMS[FORM_CLOCKS]._MAINFRAME_):
 				if (_values_ != _oldValues_):
 					APPDS_MAIN.update(_values_)
 
 				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
-			elif (_window_ == ALL_THE_FORMS[FRAME_THECLOCK]._MAINFRAME_):
+			elif (_window_ == DICT_ALL_THE_FORMS[FRAME_THECLOCK]._MAINFRAME_):
 				doFrameTheclock(_values_)
 
 	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
