@@ -20,12 +20,14 @@
 []  | length of alarms
 []  | lowercase all parm keys to match PySimpleGui conventions
 []  | make event entries work from FM.py on
+[]  | make sure doEvent() clears events before each findNextAlarmEvent()
 []  | make the clocks mode able to invisible all except when over
 []  | mv PSG.py PSG_TIME.py to make sure these special modifications to PSG earn their keep
 []  | see below for clock rearrange
 []  | snoozing times and settings
 []  | switch to automatic _DICTIN_, _DICTOUT_, and __CDS__ from a bool in TBGLST
 []  | time until dismissed timer
+[]  | update all flipped items to lists
 [X] | (abandoned) convert all passed about things to a dict (ended up going back to tuples for all of these)
 [X] | (abandoned) convert all tupdict here to tupdict_dict -=> the infamous TDD
 [X] | (abandoned) main all seeing mode
