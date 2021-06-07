@@ -3443,9 +3443,8 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
 
-			FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{DBLQT}{_thisValName_}{DBLQT}"""
 			FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
-
 			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
 			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 
@@ -3463,9 +3462,8 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
 
-			FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{_thisVal_}"""
+			FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{_thisValName_}"""
 			FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
-
 			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
 			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 
@@ -3488,13 +3486,10 @@ def parseTBGLST(FDTBGLST):
 			_thisVal1_ = _thisItem_[3]
 			_thisVal2_ = _thisItem_[4]
 
-			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{DBLQT}{_thisVal1_}{DBLQT}, {DBLQT}{_thisVal2_}{DBLQT}{CPAREN},"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
 			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
-
-				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
-				FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{DBLQT}{_thisVal1_}{DBLQT}, {DBLQT}{_thisVal2_}{DBLQT}{CPAREN},"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -3511,13 +3506,10 @@ def parseTBGLST(FDTBGLST):
 			_thisVal1_ = _thisItem_[3]
 			_thisVal2_ = _thisItem_[4]
 
-			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{DBLQT}{_thisVal1_}{DBLQT}, {_thisVal2_}{CPAREN},"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
 			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
-
-				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
-				FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{DBLQT}{_thisVal1_}{DBLQT}, {_thisVal2_}{CPAREN},"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -3529,11 +3521,16 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
 				continue
+
 			_thisValName_ = _thisItem_[2]
 			_thisVal1_ = _thisItem_[3]
 			_thisVal2_ = _thisItem_[4]
-			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{_thisVal1_}, {DBLQT}{_thisVal2_}{DBLQT}{CPAREN},"""
+
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
 			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{_thisVal1_}, {DBLQT}{_thisVal2_}{DBLQT}{CPAREN},"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3544,11 +3541,16 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
 				continue
+
 			_thisValName_ = _thisItem_[2]
 			_thisVal1_ = _thisItem_[3]
 			_thisVal2_ = _thisItem_[4]
-			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{_thisVal1_}, {_thisVal2_}{CPAREN}"""
+
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
 			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{_thisVal1_}, {_thisVal2_}{CPAREN}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3559,7 +3561,9 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 4:
 				doErrorItem("not 4 items", _thisItem_)
 				continue
+
 			_thisValName_ = _thisItem_[2]
+
 			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{DBLQT}{_thisValName_}{DBLQT}"""
 			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 			continue
@@ -3572,10 +3576,15 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
 				continue
+
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
+
+			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3586,10 +3595,15 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
 				continue
+
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
+
+			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{_thisVal_}"""
 			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -3604,10 +3618,16 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 4:
 				doErrorItem("not 4 items", _thisItem_)
 				continue
+
 			_thisDictName_ = _thisItem_[2]
+
 			if _thisDictName_ not in FMPSG_SCTN0902_DICT_DICT:
 				FMPSG_SCTN0902_DICT_DICT[_thisDictName_] = ""
+
+			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisDictName_}"""] = f"""{DBLQT}K_{_thisDictName_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisDictName_}"""] = f"""{_thisComment_}"""
 			FMPSG_SCTN0902_DICT_CMNT_DICT[_thisDictName_] = f"""{_thisComment_}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
