@@ -1049,7 +1049,7 @@ TBGLST = [
 	("FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_SV", FMAXFM_SCTN0101_AX_DEF, "add a str-val to a dict <NAC><CLASSNAME><STR><VAL>",),
 	("FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VS", FMAXFM_SCTN0101_AX_DEF, "add a str to a dict <NAC><CLASSNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV", FMAXFM_SCTN0101_AX_DEF, "add a val to a dict in PSG <NAC><CLASSNAME><KEY><VAL>",),
-	("FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY", FMAXFM_SCTN0101_AX_DEF, "add values to _KEY_DICT_, _KEY_DICT_REVERSE_ for external elements like buttons and checkboxes <NAC><CLASSNAME><KEY>",),
+	("FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY", FMAXFM_SCTN0101_AX_DEF, "add values to _DICT_KEYS, _DICT_KEYS_REVERSE_ for external elements like buttons and checkboxes <NAC><CLASSNAME><KEY>",),
 	("FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_LAMBDA", FMAXFM_SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><VALNAME><VAL>",),
 	("FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_LINE", FMAXFM_SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><LINE>",),
 	("FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_READ_FROM_FILE", FMAXFM_SCTN0101_AX_DEF, "read a section of __init__ from a file in res/functions <NAC><CLASSNAME><FILENAME>",),
@@ -1816,9 +1816,9 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_00_INIT000", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_THIS_KEY_BASE_", "keyBase_", "adopt keyBase_",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT001", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_LAMBDA, "CLOCKS", "_USE_THIS_KEY_", "__KEY_TEXT__: %FTQ%%OBRCE%__KEY_TEXT__%CBRCE%%OBRCE%self._THIS_KEY_BASE_%CBRCE%%TQ%", "make a local key sourcer",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_THIS_FORM_NAME_", "formName_", "adopt formName_",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT003", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_KEY_DICT_REVERSE_", "{}", "",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT003", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_KEY_LIST_TIMES_", "[]", "",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_KEY_DICT_", "{}", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT003", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_REVERSE_", "{}", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT003", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_LIST_KEYS_TIME_", "[]", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS", "{}", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_CHANNEL_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_HIGH_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_LOW_", "SZ_ALPHA_LOW", "",),
@@ -1858,10 +1858,10 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_KEY01", FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY, "CLOCKS", "K_INDEXES", "K_CHECKBOX_ALPHA_DIM", "False", "add foreign key for alpha dimming",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0100", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "if (self._DPD_[F___INIT__] is True):", "see if debug printing is on",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0101", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "%TAB1%self.debugPrint(", "debugPrint",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0102", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "%TAB2%title_=%DQ%__INIT__3%DQ%,", "print _KEY_DICT_REVERSE_",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0103", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "%TAB2%printDictinS_=True,", "print _KEY_DICT_",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0104", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "%TAB2%message_=%FTQ%self._KEY_DICT_ {self._KEY_DICT_}", "print _KEY_DICT_",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0105", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "self._KEY_DICT_REVERSE_ {self._KEY_DICT_REVERSE_}%TQ%)", "print _KEY_DICT_REVERSE_",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0102", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "%TAB2%title_=%DQ%__INIT__3%DQ%,", "print _DICT_KEYS_REVERSE_",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0103", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "%TAB2%printDictinS_=True,", "print _DICT_KEYS",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0104", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "%TAB2%message_=%FTQ%self._DICT_KEYS {self._DICT_KEYS}", "print _DICT_KEYS",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0105", FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "self._DICT_KEYS_REVERSE_ {self._DICT_KEYS_REVERSE_}%TQ%)", "print _DICT_KEYS_REVERSE_",),
 	("PSGVAL__CLOCKS_FUNC_01_ENTER", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__enter__", "__enter__.py", "False", "define __enter__",),
 	("PSGVAL__CLOCKS_FUNC_02_EXIT", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__exit__", "__exit__.py", "False", "define __exit__ in CLOCKS",),
 	("PSGVAL__CLOCKS_FUNC_03_CHECK_MOUSE", FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "False", "define checkMouse",),
@@ -3462,7 +3462,7 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
 
-			FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{_thisValName_}"""
+			FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{DBLQT}{_thisValName_}{DBLQT}"""
 			FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
 			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
@@ -3638,12 +3638,16 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
 				continue
+
 			_thisDictName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
+
 			if _thisDictName_ not in FMPSG_SCTN0902_DICT_DICT:
 				FMPSG_SCTN0902_DICT_DICT[_thisDictName_] = ""
+
 			FMPSG_SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3654,12 +3658,16 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
 				continue
+
 			_thisDictName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
+
 			if _thisDictName_ not in FMPSG_SCTN0902_DICT_DICT:
 				FMPSG_SCTN0902_DICT_DICT[_thisDictName_] = ""
+
 			FMPSG_SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3670,12 +3678,16 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
 				continue
+
 			_thisDictName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
+
 			if _thisDictName_ not in FMPSG_SCTN0902_DICT_DICT:
 				FMPSG_SCTN0902_DICT_DICT[_thisDictName_] = ""
+
 			FMPSG_SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -3686,12 +3698,16 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
 				continue
+
 			_thisDictName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
+
 			if _thisDictName_ not in FMPSG_SCTN0902_DICT_DICT:
 				FMPSG_SCTN0902_DICT_DICT[_thisDictName_] = ""
+
 			FMPSG_SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 	# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -3717,6 +3733,8 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN0903_LIST_DICT[_thisListName_] = ""
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
+			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisListName_}"""] = f"""{DBLQT}K_{_thisListName_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisListName_}"""] = f"""{_thisComment_}"""
 			FMPSG_SCTN0903_LIST_CMNT_DICT[_thisListName_] = f"""{_thisComment_}"""
 
 			continue
@@ -3784,10 +3802,15 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 4 items", _thisItem_)
 				continue
 			_thisTupdictName_ = _thisItem_[2]
+
 			if _thisTupdictName_ not in FMPSG_SCTN0905_TUPDICT_DICT:
 				FMPSG_SCTN0905_TUPDICT_DICT[_thisTupdictName_] = ""
 				FMPSG_SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] = ""
+
+			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisTupdictName_}"""] = f"""{DBLQT}K_{_thisTupdictName_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisTupdictName_}"""] = f"""{_thisComment_}"""
 			FMPSG_SCTN0905_TUPDICT_CMNT_DICT[_thisTupdictName_] = f"""{_thisComment_}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 

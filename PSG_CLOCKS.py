@@ -1,6 +1,5 @@
 
 
-
 from Xlib import display as DISP
 import gc
 import PySimpleGUI as SG
@@ -44,26 +43,26 @@ APPMODE_MOUSE_OVER = "APPMODE_MOUSE_OVER"  # mouseOver mode (xpand from clocks t
 APPMODE_NEW_ALARMPOPUP = "APPMODE_NEW_ALARMPOPUP"  # main mode (xpand from clocks to this)
 APPMODE_NONE = "APPMODE_NONE"  # NONE mode
 APPMODE_THECLOCK = "APPMODE_THECLOCK"  # theClock mode (xpand from clocks to this)
-COLOR_ALERT_BACKGROUND = "#662244"  # alert background color
-COLOR_ALERT_TEXT = "#CC4466"  # color of text on alert popup
-COLOR_BACKGROUND = "#331122"  # the background of the main frames
-COLOR_BLACK = "#000000"  # black
-COLOR_BTN_BACKGROUND = "#441133"  # background color on buttons by default
-COLOR_BTN_TEXT = "#660044"  # text color on buttons by default
-COLOR_CLOCK_BACKGROUND = "#221133"  # the background of the main frames
-COLOR_GRAY3 = "#333333"  # gray 3
-COLOR_GRAY6 = "#666666"  # gray 6
-COLOR_GRAY9 = "#999999"  # gray 9
-COLOR_GRAYC = "#CCCCCC"  # gray C
-COLOR_TEXT_HIGH = "#9900FF"  # the highlight color used in blinking bits when they are 'lit'
-COLOR_TEXT_INTERVAL_COUNT_INACTIVE = "#999988"  # the GRAY color used when the next event is not an interval
-COLOR_TEXT_LOW = "#330022"  # the color the clock digits are
-COLOR_TEXT_NORMAL = "#660044"  # the color the clock digits are
-COLOR_TEXT_SPIN = "#CCFF66"  # the color the clock digits are
-COLOR_TIME_CLOCK = "#CC66FF"  # color of the clock on any window/frame/etc.
-COLOR_TIME_ELAPSED = "#447733"  # color of the clock on any window/frame/etc.
-COLOR_TIME_TOGO = "#AA6600"  # color of the clock on any window/frame/etc.
-COLOR_WHITE = "#FFFFFF"  # white
+COLOR_ALERT_BACKGROUND = "COLOR_ALERT_BACKGROUND"  # alert background color
+COLOR_ALERT_TEXT = "COLOR_ALERT_TEXT"  # color of text on alert popup
+COLOR_BACKGROUND = "COLOR_BACKGROUND"  # the background of the main frames
+COLOR_BLACK = "COLOR_BLACK"  # black
+COLOR_BTN_BACKGROUND = "COLOR_BTN_BACKGROUND"  # background color on buttons by default
+COLOR_BTN_TEXT = "COLOR_BTN_TEXT"  # text color on buttons by default
+COLOR_CLOCK_BACKGROUND = "COLOR_CLOCK_BACKGROUND"  # the background of the main frames
+COLOR_GRAY3 = "COLOR_GRAY3"  # gray 3
+COLOR_GRAY6 = "COLOR_GRAY6"  # gray 6
+COLOR_GRAY9 = "COLOR_GRAY9"  # gray 9
+COLOR_GRAYC = "COLOR_GRAYC"  # gray C
+COLOR_TEXT_HIGH = "COLOR_TEXT_HIGH"  # the highlight color used in blinking bits when they are 'lit'
+COLOR_TEXT_INTERVAL_COUNT_INACTIVE = "COLOR_TEXT_INTERVAL_COUNT_INACTIVE"  # the GRAY color used when the next event is not an interval
+COLOR_TEXT_LOW = "COLOR_TEXT_LOW"  # the color the clock digits are
+COLOR_TEXT_NORMAL = "COLOR_TEXT_NORMAL"  # the color the clock digits are
+COLOR_TEXT_SPIN = "COLOR_TEXT_SPIN"  # the color the clock digits are
+COLOR_TIME_CLOCK = "COLOR_TIME_CLOCK"  # color of the clock on any window/frame/etc.
+COLOR_TIME_ELAPSED = "COLOR_TIME_ELAPSED"  # color of the clock on any window/frame/etc.
+COLOR_TIME_TOGO = "COLOR_TIME_TOGO"  # color of the clock on any window/frame/etc.
+COLOR_WHITE = "COLOR_WHITE"  # white
 EVENTMODE_ALARM = "EVENTMODE_ALARM"  #
 EVENTMODE_INTERVAL = "EVENTMODE_INTERVAL"  #
 EVENTMODE_NONE = "EVENTMODE_NONE"  # what mode is this event
@@ -113,118 +112,175 @@ FORM_POPUP03 = "FORM_POPUP03"  # holds all of form popup entries
 FORM_POPUP04 = "FORM_POPUP04"  # holds all of form popup entries
 FORM_POPUP05 = "FORM_POPUP05"  # holds all of form popup entries
 FORM_THECLOCK = "FORM_THECLOCK"  # holds all of theclock form entries
-INDEX_EAST = 2  # EAST
-INDEX_NORTH = 1  # NORTH
-INDEX_SOUTH = 3  # SOUTH
-INDEX_WEST = 0  # WEST
-INDEX_X = 0  # X
-INDEX_Y = 1  # Y
+INDEX_EAST = INDEX_EAST  # EAST
+INDEX_NORTH = INDEX_NORTH  # NORTH
+INDEX_SOUTH = INDEX_SOUTH  # SOUTH
+INDEX_WEST = INDEX_WEST  # WEST
+INDEX_X = INDEX_X  # X
+INDEX_Y = INDEX_Y  # Y
+K__pklJar_ = "K__pklJar_"  # comment
 K_ALARMPOPUP_TEXT_TEXT = "K_ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
+K_ALERTING_LIST = "K_ALERTING_LIST"  # list that holds all currently alarming events
+K_ALL_THE_FORMS = "K_ALL_THE_FORMS"  # comment
 K_ALPHA_CHANNEL = "K_ALPHA_CHANNEL"  #
 K_ALPHA_HIGH = "K_ALPHA_HIGH"  #
 K_ALPHA_LOW = "K_ALPHA_LOW"  #
 K_APPMODE = "K_APPMODE"  # app mode key
 K_AUTO_CLOSE_DURATION = "K_AUTO_CLOSE_DURATION"  #
 K_BBOX = "K_BBOX"  #
-K_BTN_DISMISS = "K_BTN_DISMISS"  #
-K_BTN_DOWN = "K_BTN_DOWN"  #
-K_BTN_EDIT = "K_BTN_EDIT"  #
-K_BTN_QUIT_ALL = "K_BTN_QUIT_ALL"  #
-K_BTN_QUIT_EDITOR = "K_BTN_QUIT_EDITOR"  #
-K_BTN_UP = "K_BTN_UP"  #
-K_BTN_XPAND = "K_BTN_XPAND"  #
-K_BTN_ZERO = "K_BTN_ZERO"  #
-K_CHANGED_EVENT = "K_CHANGED_EVENT"  # comment
-K_CHANGED_EVENTS = "K_CHANGED_EVENTS"  #
+K_BTN_DISMISS = "K_BTN_DISMISS"  # button xpand font
+K_BTN_DOWN = "K_BTN_DOWN"  # focus on click
+K_BTN_EDIT = "K_BTN_EDIT"  # button xpand key
+K_BTN_QUIT_ALL = "K_BTN_QUIT_ALL"  # button xpand font
+K_BTN_UP = "K_BTN_UP"  # button up key
+K_BTN_XPAND = "K_BTN_XPAND"  # button xpand font
+K_BTN_ZERO = "K_BTN_ZERO"  # button zero key
+K_CHANGED_EVENTS = "K_CHANGED_EVENTS"  # comment
 K_CHANGED_LOCATION = "K_CHANGED_LOCATION"  # comment
 K_CHANGED_MOUSE_LOCATION = "K_CHANGED_MOUSE_LOCATION"  # comment
 K_CHANGED_VALUES = "K_CHANGED_VALUES"  # comment
-K_CHECKBOX_ALPHA_DIM = "K_CHECKBOX_ALPHA_DIM"  # is the clock transparent under mouse (ineffective if mouse is avoided)
-K_CHECKBOX_DISMISSED = "K_CHECKBOX_DISMISSED"  # key for avoiding the mouse bool
-K_CHECKBOX_ENABLED = "K_CHECKBOX_ENABLED"  # key for avoiding the mouse bool
-K_CHECKBOX_FIRSTRUN = "K_CHECKBOX_FIRSTRUN"  # key for avoiding the mouse bool
-K_CHECKBOX_HOVER_DATE = "K_CHECKBOX_HOVER_DATE"  # KEY FOR K_CHECKBOX_HOVER_DATE
-K_CHECKBOX_IS_ALERTING_NOW = "K_CHECKBOX_IS_ALERTING_NOW"  # key for avoiding the mouse bool
-K_CHECKBOX_PREDISMISSABLE = "K_CHECKBOX_PREDISMISSABLE"  # key for avoiding the mouse bool
-K_CHECKBOX_RUNAWAY = "K_CHECKBOX_RUNAWAY"  # key for avoiding the mouse bool
-K_CHECKBOX_SNOOZABLE = "K_CHECKBOX_SNOOZABLE"  # key for avoiding the mouse bool
-K_CHECKBOX_SNOOZED = "K_CHECKBOX_SNOOZED"  # key for avoiding the mouse bool
+K_CHECKBOX_ALPHA_DIM = "K_CHECKBOX_ALPHA_DIM"  # set the key for the checkbox
+K_CHECKBOX_DISMISSED = "K_CHECKBOX_DISMISSED"  # set the key for the checkbox
+K_CHECKBOX_ENABLED = "K_CHECKBOX_ENABLED"  # set the key for the checkbox
+K_CHECKBOX_FIRSTRUN = "K_CHECKBOX_FIRSTRUN"  # set the key for the checkbox
+K_CHECKBOX_HOVER_DATE = "K_CHECKBOX_HOVER_DATE"  # set the key for the checkbox
+K_CHECKBOX_IS_ALERTING_NOW = "K_CHECKBOX_IS_ALERTING_NOW"  # set the key for the checkbox
+K_CHECKBOX_PREDISMISSABLE = "K_CHECKBOX_PREDISMISSABLE"  # set the key for the checkbox
+K_CHECKBOX_RUNAWAY = "K_CHECKBOX_RUNAWAY"  # set the key for the checkbox
+K_CHECKBOX_SNOOZABLE = "K_CHECKBOX_SNOOZABLE"  # set the key for the checkbox
+K_CHECKBOX_SNOOZED = "K_CHECKBOX_SNOOZED"  # set the key for the checkbox
 K_CLOSE_BBOX = "K_CLOSE_BBOX"  #
-K_COLUMN01 = "K_COLUMN01"  #
-K_COLUMN02 = "K_COLUMN02"  #
+K_CLOSE_LIST = "K_CLOSE_LIST"  # list with close statuses
+K_COLOR_ALERT_BACKGROUND = "K_COLOR_ALERT_BACKGROUND"  # alert background color
+K_COLOR_ALERT_TEXT = "K_COLOR_ALERT_TEXT"  # color of text on alert popup
+K_COLOR_BACKGROUND = "K_COLOR_BACKGROUND"  # the background of the main frames
+K_COLOR_BLACK = "K_COLOR_BLACK"  # black
+K_COLOR_BTN_BACKGROUND = "K_COLOR_BTN_BACKGROUND"  # background color on buttons by default
+K_COLOR_BTN_TEXT = "K_COLOR_BTN_TEXT"  # text color on buttons by default
+K_COLOR_CLOCK_BACKGROUND = "K_COLOR_CLOCK_BACKGROUND"  # the background of the main frames
+K_COLOR_GRAY3 = "K_COLOR_GRAY3"  # gray 3
+K_COLOR_GRAY6 = "K_COLOR_GRAY6"  # gray 6
+K_COLOR_GRAY9 = "K_COLOR_GRAY9"  # gray 9
+K_COLOR_GRAYC = "K_COLOR_GRAYC"  # gray C
+K_COLOR_TEXT_HIGH = "K_COLOR_TEXT_HIGH"  # the highlight color used in blinking bits when they are 'lit'
+K_COLOR_TEXT_INTERVAL_COUNT_INACTIVE = "K_COLOR_TEXT_INTERVAL_COUNT_INACTIVE"  # the GRAY color used when the next event is not an interval
+K_COLOR_TEXT_LOW = "K_COLOR_TEXT_LOW"  # the color the clock digits are
+K_COLOR_TEXT_NORMAL = "K_COLOR_TEXT_NORMAL"  # the color the clock digits are
+K_COLOR_TEXT_SPIN = "K_COLOR_TEXT_SPIN"  # the color the clock digits are
+K_COLOR_TIME_CLOCK = "K_COLOR_TIME_CLOCK"  # color of the clock on any window/frame/etc.
+K_COLOR_TIME_ELAPSED = "K_COLOR_TIME_ELAPSED"  # color of the clock on any window/frame/etc.
+K_COLOR_TIME_TOGO = "K_COLOR_TIME_TOGO"  # color of the clock on any window/frame/etc.
+K_COLOR_WHITE = "K_COLOR_WHITE"  # white
+K_COLORS_BTN_NORMAL = "K_COLORS_BTN_NORMAL"  # comment
+K_COLORS_TEXT_HIGH = "K_COLORS_TEXT_HIGH"  # combined colors for a clock text element
+K_COLORS_TEXT_LOW = "K_COLORS_TEXT_LOW"  # combined colors for a clock text element
+K_COLORS_TEXT_NORMAL = "K_COLORS_TEXT_NORMAL"  # combined colors for a clock text element
+K_COLORS_TIME_CLOCK = "K_COLORS_TIME_CLOCK"  # combined colors for a clock text element
+K_COLORS_TIME_ELAPSED = "K_COLORS_TIME_ELAPSED"  # combined colors for a clock text element
+K_COLORS_TIME_TOGO = "K_COLORS_TIME_TOGO"  # combined colors for a clock text element
 K_CURRENT_EVENT = "K_CURRENT_EVENT"  #
 K_CURRENT_EVENTMODE = "K_CURRENT_EVENTMODE"  #
+K_CURRENT_EVENTMODE_VAL = "K_CURRENT_EVENTMODE_VAL"  # comment
+K_CURRENT_INTERVAL_COUNT = "K_CURRENT_INTERVAL_COUNT"  # comment
 K_CURRENT_LOCATION = "K_CURRENT_LOCATION"  #
 K_CURRENT_MOUSE_LOCATION = "K_CURRENT_MOUSE_LOCATION"  #
 K_CURRENT_MOUSE_STATUS = "K_CURRENT_MOUSE_STATUS"  #
-K_CURRENT_RESULT = "K_CURRENT_RESULT"  #
-K_CURRENT_VALUE = "K_CURRENT_VALUE"  #
 K_CURRENT_VALUES = "K_CURRENT_VALUES"  #
 K_CURRENTLY_DIMMED = "K_CURRENTLY_DIMMED"  #
-K_DEBUG_PRINT_DICT = "K_DEBUG_PRINT_DICT"  # debug print key
-K_DICT_KEYS_INT = "K_DICT_KEYS_INT"  #
-K_DICT_KEYS_TIME = "K_DICT_KEYS_TIME"  #
-K_DICTIN = "K_DICTIN"  #
-K_DICTINSTR = "K_DICTINSTR"  #
-K_DICTOUT = "K_DICTOUT"  #
-K_DISMISSED = "K_DISMISSED"  # alarm dismissed bool
-K_DPD = "K_DPD"  # alarm dismissed bool
-K_ENABLED = "K_ENABLED"  #
+K_DEVMODE = "K_DEVMODE"  # comment
+K_DICT_KEY = "K_DICT_KEY"  #
+K_DICT_KEYS_REVERSE = "K_DICT_KEYS_REVERSE"  #
+K_DPD_ROOT = "K_DPD_ROOT"  # DPD_ROOT defined
+K_EMPTY_BBOX = "K_EMPTY_BBOX"  # empty XY dict
+K_EMPTY_XY = "K_EMPTY_XY"  # empty XY dict
 K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  #
 K_EVENT_NAME = "K_EVENT_NAME"  # name of the event
-K_EVENTMODE = "K_EVENTMODE"  # what mode is this event
-K_FIRSTRUN = "K_FIRSTRUN"  # True if just started, false after init1()
-K_FORMNAME = "K_FORMNAME"  # the name of the form
-K_INDEX_OF_NEXT_EVENT = "K_INDEX_OF_NEXT_EVENT"  # index of the next event to alert
-K_INDEXES = "K_INDEXES"  # holds the index(es) of the currently awaited event(s)
-K_INTERVAL_COUNT = "K_INTERVAL_COUNT"  # count of the number of times since last reset this interval has triggered an alert
-K_IS_ALERTING_NOW = "K_IS_ALERTING_NOW"  #
-K_KEY_DICT = "K_KEY_DICT"  #
-K_DICT_KEYS_REVERSE = "K_DICT_KEYS_REVERSE"  #
-K_KEY_LIST_TIMES = "K_KEY_LIST_TIMES"  #
-K_LAST_EVENT = "K_LAST_EVENT"  #
-K_LAST_LOCATION = "K_LAST_LOCATION"  #
-K_LAST_MOUSE_LOCATION = "K_LAST_MOUSE_LOCATION"  #
-K_LAST_MOUSE_STATUS = "K_LAST_MOUSE_STATUS"  #
-K_LAST_VALUES = "K_LAST_VALUES"  #
-K_LAYOUT = "K_LAYOUT"  #
+K_FONT_DEFAULT = "K_FONT_DEFAULT"  # default font my favorite readable font
+K_FONTSZ_ALERT_TEXT = "K_FONTSZ_ALERT_TEXT"  # the font for the clocks only clock
+K_FONTSZ_BTNS = "K_FONTSZ_BTNS"  # comment
+K_FONTSZ_CLOCKS_INTERVAL_COUNT = "K_FONTSZ_CLOCKS_INTERVAL_COUNT"  # the font for the clocks only clock
+K_FONTSZ_CLOCKS_TIME_S_CLOCK = "K_FONTSZ_CLOCKS_TIME_S_CLOCK"  # the font for the clocks only clock
+K_FONTSZ_CLOCKS_TIME_S_ELAPSED = "K_FONTSZ_CLOCKS_TIME_S_ELAPSED"  # the font for the clocks only clock
+K_FONTSZ_CLOCKS_TIME_S_TOGO = "K_FONTSZ_CLOCKS_TIME_S_TOGO"  # the font for the clocks only clock
+K_INDEX_EAST = "K_INDEX_EAST"  # EAST
+K_INDEX_NORTH = "K_INDEX_NORTH"  # NORTH
+K_INDEX_SOUTH = "K_INDEX_SOUTH"  # SOUTH
+K_INDEX_WEST = "K_INDEX_WEST"  # WEST
+K_INDEX_X = "K_INDEX_X"  # X
+K_INDEX_Y = "K_INDEX_Y"  # Y
+K_INTERVAL_COUNT = "K_INTERVAL_COUNT"  # interval count template
+K_LIST_ALL_TIMES = "K_LIST_ALL_TIMES"  # list of all times
+K_LIST_APPDS_MIDNIGHT_FIX_TIMES = "K_LIST_APPDS_MIDNIGHT_FIX_TIMES"  # list of times to be updated at midnight
+K_LIST_DNUPDATE = "K_LIST_DNUPDATE"  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
+K_LIST_KEYS_TIME = "K_LIST_KEYS_TIME"  #
+K_LIST_POPUP = "K_LIST_POPUP"  # popup list
+K_LIST_THIS_ALARM_POPUP_TEXT = "K_LIST_THIS_ALARM_POPUP_TEXT"  # collects the text to popup
 K_MAINFRAME = "K_MAINFRAME"  #
+K_MLCN = "K_MLCN"  # short cut to get mouse position
 K_MPX = "K_MPX"  # comment
-K_NAME = "K_NAME"  #
-K_NAME_NEXT_EVENT = "K_NAME_NEXT_EVENT"  # name of the next event up
-K_PERIODIC = "K_PERIODIC"  #
-K_PREDISMISSABLE = "K_PREDISMISSABLE"  # event can be dismissed in advance
+K_NAME_NEXT_EVENT = "K_NAME_NEXT_EVENT"  # interval count template
+K_NAME_NEXT_EVENT_STR = "K_NAME_NEXT_EVENT_STR"  # comment
+K_NOW_NOMS = "K_NOW_NOMS"  # comment
+K_NOWM = "K_NOWM"  # comment
+K_NOWMS = "K_NOWMS"  # comment
+K_NOWS = "K_NOWS"  # comment
 K_SCREEN_DIMS = "K_SCREEN_DIMS"  #
 K_SIZE = "K_SIZE"  #
-K_SNOOZABLE = "K_SNOOZABLE"  # can this event be snoozed
-K_SNOOZED = "K_SNOOZED"  # is this event snoozed bool
-K_TEXT_INTERVAL_COUNT = "K_TEXT_INTERVAL_COUNT"  #
-K_TEXT_NAME_NEXT_EVENT = "K_TEXT_NAME_NEXT_EVENT"  #
-K_TEXT_TIME_MS_AT_NEXT_ALERT = "K_TEXT_TIME_MS_AT_NEXT_ALERT"  #
-K_TEXT_TIME_MS_AT_ZEROELAPSE = "K_TEXT_TIME_MS_AT_ZEROELAPSE"  #
-K_TEXT_TIME_S_CLOCK = "K_TEXT_TIME_S_CLOCK"  #
-K_TEXT_TIME_S_ELAPSED = "K_TEXT_TIME_S_ELAPSED"  #
-K_TEXT_TIME_S_TOGO = "K_TEXT_TIME_S_TOGO"  #
+K_SZ_ALERT_TEXT = "K_SZ_ALERT_TEXT"  # font size of alert text
+K_SZ_ALPHA_DIM = "K_SZ_ALPHA_DIM"  # default alpha dim state
+K_SZ_ALPHA_HIGH = "K_SZ_ALPHA_HIGH"  # high alpha
+K_SZ_ALPHA_LOW = "K_SZ_ALPHA_LOW"  # low alpha
+K_SZ_BORDER_DEPTH = "K_SZ_BORDER_DEPTH"  # border depth
+K_SZ_BTNS = "K_SZ_BTNS"  # font size for button text
+K_SZ_CLOCKS_TIME_S_CLOCK = "K_SZ_CLOCKS_TIME_S_CLOCK"  # font size of the main clock on the clocks only floating widget
+K_SZ_CLOCKS_TIME_S_ELAPSED = "K_SZ_CLOCKS_TIME_S_ELAPSED"  # font size of the elapsed clock on the clocks only floating widget
+K_SZ_CLOCKS_TIME_S_TOGO = "K_SZ_CLOCKS_TIME_S_TOGO"  # font size of the main togo clock on the clocks only floating widget
+K_SZ_CLOSE = "K_SZ_CLOSE"  # close enough to move from the mouse
+K_SZ_EDIT_TIME_S_CLOCK = "K_SZ_EDIT_TIME_S_CLOCK"  # font size of the main clock on the clocks only floating widget
+K_SZ_EDIT_TIME_S_ELAPSED = "K_SZ_EDIT_TIME_S_ELAPSED"  # font size of the elapsed clock on the clocks only floating widget
+K_SZ_EDIT_TIME_S_TOGO = "K_SZ_EDIT_TIME_S_TOGO"  # font size of the main togo clock on the clocks only floating widget
+K_SZ_INTERVAL_COUNT = "K_SZ_INTERVAL_COUNT"  # font size of the main interval count
+K_SZ_MAIN_TIME_S_CLOCK = "K_SZ_MAIN_TIME_S_CLOCK"  # font size of the main clock on the clocks only floating widget
+K_SZ_MAIN_TIME_S_ELAPSED = "K_SZ_MAIN_TIME_S_ELAPSED"  # font size of the elapsed clock on the clocks only floating widget
+K_SZ_MAIN_TIME_S_TOGO = "K_SZ_MAIN_TIME_S_TOGO"  # font size of the main togo clock on the clocks only floating widget
+K_SZ_MARGINS_ALL = "K_SZ_MARGINS_ALL"  # all margins default
+K_SZ_MAX_DELTA = "K_SZ_MAX_DELTA"  # maximum possible change per move
+K_SZ_MOVE_DIST = "K_SZ_MOVE_DIST"  # move by this pixels each jump
+K_SZ_PAD_ALL = "K_SZ_PAD_ALL"  # add padding to all the things
+K_SZ_PKLNAME_DEV = "K_SZ_PKLNAME_DEV"  # name of the pkl file for the app in dev
+K_SZ_PKLNAME_PROD = "K_SZ_PKLNAME_PROD"  # name of the pkl file for the app in use
+K_SZ_RUNAWAY = "K_SZ_RUNAWAY"  # default runaway state
+K_SZ_TIME_MS_BETWEEN_FLIPS = "K_SZ_TIME_MS_BETWEEN_FLIPS"  # throttle mouse checking
+K_SZ_TIME_MS_BETWEEN_MOUSE_CHECKS = "K_SZ_TIME_MS_BETWEEN_MOUSE_CHECKS"  # throttle mouse checking
+K_SZ_TIME_MS_BETWEEN_MOVES = "K_SZ_TIME_MS_BETWEEN_MOVES"  # time_ms between moves
+K_SZ_TIME_MS_BETWEEN_UPDATES = "K_SZ_TIME_MS_BETWEEN_UPDATES"  # time_ms between updating windows/frames/etc
+K_SZ_TIME_S_BETWEEN_PERIODIC_JOB = "K_SZ_TIME_S_BETWEEN_PERIODIC_JOB"  # time between periodic job runnings
+K_SZ_TIMEOUT_MS = "K_SZ_TIMEOUT_MS"  # timeout for PSG
 K_THIS_FORM_NAME = "K_THIS_FORM_NAME"  # adopt formName_
 K_THIS_KEY_BASE = "K_THIS_KEY_BASE"  # adopt keyBase_
+K_TIME_H_ADJUST_HRS = "K_TIME_H_ADJUST_HRS"  # comment
+K_TIME_M_ADJUST_MINS = "K_TIME_M_ADJUST_MINS"  # comment
 K_TIME_MS_AT_CHECK_MOUSE = "K_TIME_MS_AT_CHECK_MOUSE"  #
 K_TIME_MS_AT_FLIP = "K_TIME_MS_AT_FLIP"  #
 K_TIME_MS_AT_MOVE = "K_TIME_MS_AT_MOVE"  #
+K_TIME_MS_AT_NEXT_MOVE_VAL = "K_TIME_MS_AT_NEXT_MOVE_VAL"  # comment
+K_TIME_MS_AT_NEXT_UPDATE_VAL = "K_TIME_MS_AT_NEXT_UPDATE_VAL"  # comment
 K_TIME_MS_AT_UPDATE = "K_TIME_MS_AT_UPDATE"  #
-K_TIME_S_AT_ALARM = "K_TIME_S_AT_ALARM"  # the alarm time
-K_TIME_S_AT_LAST_RUN = "K_TIME_S_AT_LAST_RUN"  # timeS of last alarm
-K_TIME_S_AT_NEXT_ALERT = "K_TIME_S_AT_NEXT_ALERT"  # what time is the next alarm, == KEY_TIME_S_AT_ALARM is tomorrow
-K_TIME_S_AT_ZEROELAPSE = "K_TIME_S_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
-K_TIME_S_CLOCK = "K_TIME_S_CLOCK"  # the main clock time
-K_TIME_S_ELAPSED = "K_TIME_S_ELAPSED"  # key for all clocks elapsed
-K_TIME_S_INTERVAL = "K_TIME_S_INTERVAL"  # interval timer starting time, reset each time the interval goes off
-K_TIME_S_INTERVAL__BEGIN = "K_TIME_S_INTERVAL__BEGIN"  # key for time interval starts alerting
-K_TIME_S_INTERVAL__END = "K_TIME_S_INTERVAL__END"  # key for time an interval goes to leep and stops alerting
-K_TIME_S_INTERVAL_START = "K_TIME_S_INTERVAL_START"  # interval timer starting time, reset each time the interval goes off
-K_TIME_S_LEN_OF_ALERT = "K_TIME_S_LEN_OF_ALERT"  # length of alerting
-K_TIME_S_TOGO = "K_TIME_S_TOGO"  # down counter to next event on this window/alarm/interval/reminder
-K_VERSION = "K_VERSION"  # True if pkl is to be updated from APPDS_MAIN
-K_WINDOW = "K_WINDOW"  #
+K_TIME_S_ADJUST_VALUE = "K_TIME_S_ADJUST_VALUE"  # comment
+K_TIME_S_AT_NEXT_ALERT = "K_TIME_S_AT_NEXT_ALERT"  # interval count template
+K_TIME_S_AT_NEXT_EVENT_VAL = "K_TIME_S_AT_NEXT_EVENT_VAL"  # comment
+K_TIME_S_AT_NEXT_PERIODIC_JOB_VAL = "K_TIME_S_AT_NEXT_PERIODIC_JOB_VAL"  # seconds till next housekeeping, check for next times, etc.
+K_TIME_S_AT_ZEROELAPSE = "K_TIME_S_AT_ZEROELAPSE"  # interval count template
+K_TIME_S_CLOCK = "K_TIME_S_CLOCK"  # interval count template
+K_TIME_S_ELAPSED = "K_TIME_S_ELAPSED"  # interval count template
+K_TIME_S_TOGO = "K_TIME_S_TOGO"  # interval count template
+K_TITLE_ALARMPOPUP = "K_TITLE_ALARMPOPUP"  # string with window title for APPMODE_CLOCKS
+K_TITLE_CLOCKS = "K_TITLE_CLOCKS"  # string with window title for APPMODE_CLOCKS
+K_TITLE_EDIT = "K_TITLE_EDIT"  # string with window title for APPMODE_CLOCKS
+K_TITLE_MAIN = "K_TITLE_MAIN"  # string with window title for APPMODE_CLOCKS
+K_TITLE_THECLOCK = "K_TITLE_THECLOCK"  # string with window title for APPMODE_CLOCKS
+K_ZERO_CLOCK = "K_ZERO_CLOCK"  # all the zeros
+K_ZERO_CLOCKSTR = "K_ZERO_CLOCKSTR"  # all the zeros
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
 MOUSE_STATUS_CLOSE_N = "MOUSE_STATUS_CLOSE_N"  # mouse is north of checked element
 MOUSE_STATUS_CLOSE_NE = "MOUSE_STATUS_CLOSE_NE"  # mouse is northeast of checked element
@@ -243,45 +299,45 @@ MOUSE_STATUS_S = "MOUSE_STATUS_S"  # mouse is south of checked element
 MOUSE_STATUS_SE = "MOUSE_STATUS_SE"  # mouse is southeast of checked element
 MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
-SZ_ALERT_TEXT = 20  # font size of alert text
-SZ_ALPHA_DIM = True  # default alpha dim state
-SZ_ALPHA_HIGH = 1.0  # high alpha
-SZ_ALPHA_LOW = 0.2  # low alpha
-SZ_BORDER_DEPTH = 0  # border depth
-SZ_BTNS = 6  # font size for button text
-SZ_CLOCKS_TIME_S_CLOCK = 26  # font size of the main clock on the clocks only floating widget
-SZ_CLOCKS_TIME_S_ELAPSED = 13  # font size of the elapsed clock on the clocks only floating widget
-SZ_CLOCKS_TIME_S_TOGO = 13  # font size of the main togo clock on the clocks only floating widget
-SZ_CLOSE = 80  # close enough to move from the mouse
-SZ_EDIT_TIME_S_CLOCK = 20  # font size of the main clock on the clocks only floating widget
-SZ_EDIT_TIME_S_ELAPSED = 10  # font size of the elapsed clock on the clocks only floating widget
-SZ_EDIT_TIME_S_TOGO = 10  # font size of the main togo clock on the clocks only floating widget
-SZ_INTERVAL_COUNT = 10  # font size of the main interval count
-SZ_MAIN_TIME_S_CLOCK = 60  # font size of the main clock on the clocks only floating widget
-SZ_MAIN_TIME_S_ELAPSED = 30  # font size of the elapsed clock on the clocks only floating widget
-SZ_MAIN_TIME_S_TOGO = 30  # font size of the main togo clock on the clocks only floating widget
-SZ_MARGINS_ALL = (0, 0)  # all margins default
-SZ_MAX_DELTA = 100  # maximum possible change per move
-SZ_MOVE_DIST = 50  # move by this pixels each jump
-SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
-SZ_PKLNAME_DEV = "runawayClock_DEV.pkl"  # name of the pkl file for the app in dev
-SZ_PKLNAME_PROD = "runawayClock.pkl"  # name of the pkl file for the app in use
-SZ_RUNAWAY = False  # default runaway state
-SZ_TIME_MS_BETWEEN_FLIPS = 300  # throttle mouse checking
-SZ_TIME_MS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
-SZ_TIME_MS_BETWEEN_MOVES = 500  # time_ms between moves
-SZ_TIME_MS_BETWEEN_UPDATES = 500  # time_ms between updating windows/frames/etc
-SZ_TIME_S_BETWEEN_PERIODIC_JOB = 900  # time between periodic job runnings
-SZ_TIMEOUT_MS = 100  # timeout for PSG
-TIME_H_ADJUST_HRS = 0  # comment
-TIME_M_ADJUST_MINS = 0  # comment
-TITLE_ALARMPOPUP = "ALERT"  # string with window title for APPMODE_CLOCKS
-TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
-TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
-TITLE_MAIN = "Main window which is xpanded from CLOCKS window and pops up EDIT windows"  # string with window title for APPMODE_CLOCKS
-TITLE_THECLOCK = "THECLOCK"  # string with window title for APPMODE_CLOCKS
-ZERO_CLOCK = 0  # all the zeros
-ZERO_CLOCKSTR = "00:00:00"  # all the zeros
+SZ_ALERT_TEXT = SZ_ALERT_TEXT  # font size of alert text
+SZ_ALPHA_DIM = SZ_ALPHA_DIM  # default alpha dim state
+SZ_ALPHA_HIGH = SZ_ALPHA_HIGH  # high alpha
+SZ_ALPHA_LOW = SZ_ALPHA_LOW  # low alpha
+SZ_BORDER_DEPTH = SZ_BORDER_DEPTH  # border depth
+SZ_BTNS = SZ_BTNS  # font size for button text
+SZ_CLOCKS_TIME_S_CLOCK = SZ_CLOCKS_TIME_S_CLOCK  # font size of the main clock on the clocks only floating widget
+SZ_CLOCKS_TIME_S_ELAPSED = SZ_CLOCKS_TIME_S_ELAPSED  # font size of the elapsed clock on the clocks only floating widget
+SZ_CLOCKS_TIME_S_TOGO = SZ_CLOCKS_TIME_S_TOGO  # font size of the main togo clock on the clocks only floating widget
+SZ_CLOSE = SZ_CLOSE  # close enough to move from the mouse
+SZ_EDIT_TIME_S_CLOCK = SZ_EDIT_TIME_S_CLOCK  # font size of the main clock on the clocks only floating widget
+SZ_EDIT_TIME_S_ELAPSED = SZ_EDIT_TIME_S_ELAPSED  # font size of the elapsed clock on the clocks only floating widget
+SZ_EDIT_TIME_S_TOGO = SZ_EDIT_TIME_S_TOGO  # font size of the main togo clock on the clocks only floating widget
+SZ_INTERVAL_COUNT = SZ_INTERVAL_COUNT  # font size of the main interval count
+SZ_MAIN_TIME_S_CLOCK = SZ_MAIN_TIME_S_CLOCK  # font size of the main clock on the clocks only floating widget
+SZ_MAIN_TIME_S_ELAPSED = SZ_MAIN_TIME_S_ELAPSED  # font size of the elapsed clock on the clocks only floating widget
+SZ_MAIN_TIME_S_TOGO = SZ_MAIN_TIME_S_TOGO  # font size of the main togo clock on the clocks only floating widget
+SZ_MARGINS_ALL = SZ_MARGINS_ALL  # all margins default
+SZ_MAX_DELTA = SZ_MAX_DELTA  # maximum possible change per move
+SZ_MOVE_DIST = SZ_MOVE_DIST  # move by this pixels each jump
+SZ_PAD_ALL = SZ_PAD_ALL  # add padding to all the things
+SZ_PKLNAME_DEV = "SZ_PKLNAME_DEV"  # name of the pkl file for the app in dev
+SZ_PKLNAME_PROD = "SZ_PKLNAME_PROD"  # name of the pkl file for the app in use
+SZ_RUNAWAY = SZ_RUNAWAY  # default runaway state
+SZ_TIME_MS_BETWEEN_FLIPS = SZ_TIME_MS_BETWEEN_FLIPS  # throttle mouse checking
+SZ_TIME_MS_BETWEEN_MOUSE_CHECKS = SZ_TIME_MS_BETWEEN_MOUSE_CHECKS  # throttle mouse checking
+SZ_TIME_MS_BETWEEN_MOVES = SZ_TIME_MS_BETWEEN_MOVES  # time_ms between moves
+SZ_TIME_MS_BETWEEN_UPDATES = SZ_TIME_MS_BETWEEN_UPDATES  # time_ms between updating windows/frames/etc
+SZ_TIME_S_BETWEEN_PERIODIC_JOB = SZ_TIME_S_BETWEEN_PERIODIC_JOB  # time between periodic job runnings
+SZ_TIMEOUT_MS = SZ_TIMEOUT_MS  # timeout for PSG
+TIME_H_ADJUST_HRS = TIME_H_ADJUST_HRS  # comment
+TIME_M_ADJUST_MINS = TIME_M_ADJUST_MINS  # comment
+TITLE_ALARMPOPUP = "TITLE_ALARMPOPUP"  # string with window title for APPMODE_CLOCKS
+TITLE_CLOCKS = "TITLE_CLOCKS"  # string with window title for APPMODE_CLOCKS
+TITLE_EDIT = "TITLE_EDIT"  # string with window title for APPMODE_CLOCKS
+TITLE_MAIN = "TITLE_MAIN"  # string with window title for APPMODE_CLOCKS
+TITLE_THECLOCK = "TITLE_THECLOCK"  # string with window title for APPMODE_CLOCKS
+ZERO_CLOCK = ZERO_CLOCK  # all the zeros
+ZERO_CLOCKSTR = "ZERO_CLOCKSTR"  # all the zeros
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -436,7 +492,7 @@ VISIBLE = "visible"  # visibility of elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0902 dicts
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-DICT_ALL_THE_FORMS = {  # comment
+ALL_THE_FORMS = {  # comment
 	FORM_CLOCKS: None,  # ENTRY IN FORMS
 	FORM_POPUP01: None,  # ENTRY IN FORMS
 	FORM_POPUP02: None,  # ENTRY IN FORMS
@@ -470,7 +526,19 @@ DPD_ROOT = {  # DPD_ROOT defined
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0903 lists
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-LIST_ALERTING = [  # list that holds all currently alarming events
+ALERTING_LIST = [  # list that holds all currently alarming events
+]
+
+
+CLOSE_LIST = [  # list with close statuses
+	MOUSE_STATUS_CLOSE_E,  # easet close entry
+	MOUSE_STATUS_CLOSE_N,  # easet close entry
+	MOUSE_STATUS_CLOSE_NE,  # easet close entry
+	MOUSE_STATUS_CLOSE_NW,  # easet close entry
+	MOUSE_STATUS_CLOSE_S,  # easet close entry
+	MOUSE_STATUS_CLOSE_SE,  # easet close entry
+	MOUSE_STATUS_CLOSE_SW,  # easet close entry
+	MOUSE_STATUS_CLOSE_W,  # easet close entry
 ]
 
 
@@ -494,23 +562,11 @@ LIST_ALL_TIMES = [  # list of all times
 ]
 
 
-LIST_MIDNIGHT_FIX_TIMES = [  # list of times to be updated at midnight
+LIST_APPDS_MIDNIGHT_FIX_TIMES = [  # list of times to be updated at midnight
 	K_TIME_MS_AT_CHECK_MOUSE,  # list of times to be updated at midnight
 	K_TIME_MS_AT_MOVE,  # list of times to be updated at midnight
 	K_TIME_MS_AT_UPDATE,  # list of times to be updated at midnight
 	K_TIME_S_AT_NEXT_ALERT,  # list of times to be updated at midnight
-]
-
-
-LIST_CLOSE = [  # list with close statuses
-	MOUSE_STATUS_CLOSE_E,  # easet close entry
-	MOUSE_STATUS_CLOSE_N,  # easet close entry
-	MOUSE_STATUS_CLOSE_NE,  # easet close entry
-	MOUSE_STATUS_CLOSE_NW,  # easet close entry
-	MOUSE_STATUS_CLOSE_S,  # easet close entry
-	MOUSE_STATUS_CLOSE_SE,  # easet close entry
-	MOUSE_STATUS_CLOSE_SW,  # easet close entry
-	MOUSE_STATUS_CLOSE_W,  # easet close entry
 ]
 
 
@@ -519,20 +575,16 @@ LIST_DNUPDATE = [  # list of all element key not to update through the normal me
 	K_INDEXES,  # deal with the list of names for the event(s) to come
 	K_INTERVAL_COUNT,  # deal with the list of names for the event(s) to come
 	K_NAME_NEXT_EVENT,  # deal with the list of names for the event(s) to come
-	K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
-	K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_FIRSTRUN,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_HOVER_DATE,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_IS_ALERTING_NOW,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_PREDISMISSABLE,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_RUNAWAY,  # checkbox for runaway from mouse behavior
-	K_CHECKBOX_SNOOZABLE,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_SNOOZED,  # checkbox for dismissed from mouse behavior
-]
-
-
-LIST_NEXT_ALARM_NAME = [  # holds all of the names of the next time an alert happens
+	KCHECKBOX_ALPHA_DIM0,  # checkbox for alpha under mouse
+	KCHECKBOX_DISMISSED0,  # checkbox for dismissed from mouse behavior
+	KCHECKBOX_ENABLED0,  # checkbox for dismissed from mouse behavior
+	KCHECKBOX_FIRSTRUN0,  # checkbox for dismissed from mouse behavior
+	KCHECKBOX_HOVER_DATE0,  # checkbox for dismissed from mouse behavior
+	KCHECKBOX_IS_ALERTING_NOW0,  # checkbox for dismissed from mouse behavior
+	KCHECKBOX_PREDISMISSABLE0,  # checkbox for dismissed from mouse behavior
+	KCHECKBOX_RUNAWAY0,  # checkbox for runaway from mouse behavior
+	KCHECKBOX_SNOOZABLE0,  # checkbox for dismissed from mouse behavior
+	KCHECKBOX_SNOOZED0,  # checkbox for dismissed from mouse behavior
 ]
 
 
@@ -935,14 +987,14 @@ class CLASS_CLOCKS(object):
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""  # make a local key sourcer
 		self._THIS_FORM_NAME_ = formName_  # adopt formName_
 		self._DICT_KEYS_REVERSE_ = {}  #
-		self._DICT_KEYS_ = {}  #
+		self._DICT_KEYS = {}  #
 
 		self._LIST_KEYS_TIME_ = []  #
 		self._ALPHA_CHANNEL_ = SZ_ALPHA_HIGH  #
 		self._ALPHA_HIGH_ = SZ_ALPHA_HIGH  #
 		self._ALPHA_LOW_ = SZ_ALPHA_LOW  #
 		self._BBOX_ = EMPTY_BBOX  #
-		self._CHANGED_EVENT_ = False  # comment
+		self._CHANGED_EVENTS_ = False  # comment
 		self._CHANGED_LOCATION_ = False  # comment
 		self._CHANGED_MOUSE_LOCATION_ = False  # comment
 		self._CHANGED_VALUES_ = False  # comment
@@ -1209,8 +1261,8 @@ class CLASS_CLOCKS(object):
 		if (self._DPD_[F___INIT__] is True):  # see if debug printing is on
 			self.debugPrint(  # debugPrint
 				title_="__INIT__3",  # print _DICT_KEYS_REVERSE_
-				printDictinS_=True,  # print _DICT_KEYS_
-				message_=f"""self._DICT_KEYS_ {self._DICT_KEYS_}  # print _DICT_KEYS_
+				printDictinS_=True,  # print _DICT_KEYS
+				message_=f"""self._DICT_KEYS {self._DICT_KEYS}  # print _DICT_KEYS
 		self._DICT_KEYS_REVERSE_ {self._DICT_KEYS_REVERSE_}""")  # print _DICT_KEYS_REVERSE_
 
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -1677,8 +1729,8 @@ timeTogo_ {timeTogo_}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def easyUpdateParms(self,
-			tooltip_=None,
-			alphaChannel_=None,
+			tooltip_=None,  # (key_, val_)
+			alphaChannel_=None,  # float
 		):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -1904,16 +1956,27 @@ alphaChannel_ {alphaChannel_}
 
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-	def intervalCountOff(self):
+	def intervalCountOn(self,
+			intervalCount_=None):
 		# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-		self._MAINFRAME_[K_INTERVAL_COUNT].update(text_color=COLOR_TEXT_INTERVAL_COUNT_INACTIVE)
-		self._DICTIN_[K_INTERVAL_COUNT] = 0
+
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (intervalCount_ is None):
+			intervalCount_ = self._DICTIN_[K_INTERVAL_COUNT]
+
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		self._MAINFRAME_[self._USE_THIS_KEY_(K_INTERVAL_COUNT)].update(text_color=COLOR_TIME_TOGO)
+		self._DICTIN_[K_INTERVAL_COUNT] = intervalCount_
 		self.updateFromDict()
 
-		if (self._DPD_[F_INTERVALCOUNTOFF]):
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (self._DPD_[F_INTERVALCOUNTON]):
 			self.debugPrint(
-				title_="intervalCountOff",
+				title_="intervalCountOn",
 			)
+
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -2105,7 +2168,7 @@ _DICTINSTR_ {self.dictinstrRepl()}
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-
+		self.updateFlippedItems()
 		__dummy__ = self.quickRead()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -2141,11 +2204,11 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 		self._DICTIN_[K_TIME_S_ELAPSED] = (NOWS - self._DICTIN_[K_TIME_S_AT_ZEROELAPSE])
 		self.checkMouse()
 		self.quickRead()
+		self.updateFromDict()
+		self.updateFlippedItems()
 
 		if (self._DICTIN_[K_CHECKBOX_RUNAWAY] is True) and (self._CURRENT_MOUSE_STATUS_ in LIST_CLOSE):
 			self.runaway()
-
-		self.updateFromDict()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (self._DPD_[F_UPDATE] is True):
