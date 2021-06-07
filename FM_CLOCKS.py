@@ -4488,9 +4488,11 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
 				continue
+
 			_thisAPPDSName_ = _thisItem_[2]
 			_thisDictName_ = _thisItem_[3]
 			_thisIndexNum_ = _thisItem_[4]
+
 			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDS_DICT:
 				FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
 			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDSDICT_DICT:
@@ -4499,7 +4501,9 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_] = {}
 			if _thisIndexNum_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
 				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
+
 			FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisDictName_] = f"""{NTAB(1)}{_thisDictName_}: {OBRCE}  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4510,18 +4514,24 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 8:
 				doErrorItem("not 8 items", _thisItem_)
 				continue
+
 			_thisAPPDSName_ = _thisItem_[2]
 			_thisDictName_ = _thisItem_[3]
 			_thisIndexNum_ = _thisItem_[4]
 			_thisKey_ = _thisItem_[5]
 			_thisVal_ = _thisItem_[6]
+
 			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDSDICT_DICT:
 				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_] = {}
 			if _thisDictName_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_]:
 				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_] = {}
 			if _thisIndexNum_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
 				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
+
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisKey_}"""] = f"""{DBLQT}K_{_thisKey_}{DBLQT}"""
 			FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_][_thisKey_] = f"""{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -4532,17 +4542,22 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 8:
 				doErrorItem("not 8 items", _thisItem_)
 				continue
+
 			_thisAPPDSName_ = _thisItem_[2]
 			_thisDictName_ = _thisItem_[3]
 			_thisIndexNum_ = _thisItem_[4]
 			_thisKey_ = _thisItem_[5]
 			_thisVal_ = _thisItem_[6]
+
 			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDSDICT_DICT:
 				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_] = {}
 			if _thisDictName_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_]:
 				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_] = {}
 			if _thisIndexNum_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
 				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
+
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisKey_}"""] = f"""{DBLQT}K_{_thisKey_}{DBLQT}"""
 			FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_][_thisKey_] = f"""{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
