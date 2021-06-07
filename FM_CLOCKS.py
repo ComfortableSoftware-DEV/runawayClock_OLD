@@ -1320,7 +1320,7 @@ TBGLST = [
 	("PSGVAL_APPMODE_NONE", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_NONE", "NONE mode",),
 	("PSGVAL_APPMODE_THECLOCK", FMAXPSG_SCTN0900_KEY_DEF, "APPMODE_THECLOCK", "theClock mode (xpand from clocks to this)",),
 	("PSGVAL_KEY_AUTO_CLOSE_DURATION", FMAXPSG_SCTN0900_KEY_DEF, "K_AUTO_CLOSE_DURATION", "",),
-	("PSGVAL_KEY_BBOX", FMAXPSG_SCTN0900_KEY_DEF, "K_BBOX", "",),
+	("PSGVAL_KEY_BBOX", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_BBOX", "",),
 	("PSGVAL_KEY_BTN_DISMISS", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_BTN_DISMISS", "",),
 	("PSGVAL_KEY_BTN_DOWN", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_BTN_DOWN", "",),
 	("PSGVAL_KEY_BTN_EDIT", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_BTN_EDIT", "",),
@@ -1427,19 +1427,19 @@ TBGLST = [
 	("PSGVAL_KEY_TIME_MS_AT_CHECK_MOUSE", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_MS_AT_CHECK_MOUSE", "",),
 	("PSGVAL_KEY_TIME_MS_AT_MOVE", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_MS_AT_MOVE", "",),
 	("PSGVAL_KEY_TIME_MS_AT_UPDATE", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_MS_AT_UPDATE", "",),
-	("PSGVAL_KEY_TIME_S_AT_ALARM", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_AT_ALARM", "the alarm time",),
-	("PSGVAL_KEY_TIME_S_AT_LAST_RUN", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_AT_LAST_RUN", "timeS of last alarm ",),
-	("PSGVAL_KEY_TIME_S_AT_NEXT_ALERT", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_AT_NEXT_ALERT", "what time is the next alarm, == KEY_TIME_S_AT_ALARM is tomorrow",),
-	("PSGVAL_KEY_TIME_S_AT_ZEROELAPSE", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_AT_ZEROELAPSE", "the time at last zero to keep elapsed time accurate despite other things hogging CPU time",),
-	("PSGVAL_KEY_TIME_S_CLOCK", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_CLOCK", "the main clock time",),
-	("PSGVAL_KEY_TIME_S_ELAPSED", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_ELAPSED", "key for all clocks elapsed",),
-	("PSGVAL_KEY_TIME_S_INTERVAL", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_INTERVAL", "interval timer starting time, reset each time the interval goes off",),
-	("PSGVAL_KEY_TIME_S_INTERVAL_START", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_INTERVAL_START", "interval timer starting time, reset each time the interval goes off",),
-	("PSGVAL_KEY_TIME_S_INTERVAL__BEGIN", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_INTERVAL__BEGIN", "key for time interval starts alerting",),
-	("PSGVAL_KEY_TIME_S_INTERVAL__END", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_INTERVAL__END", "key for time an interval goes to leep and stops alerting",),
-	("PSGVAL_KEY_TIME_S_LEN_OF_ALERT", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_LEN_OF_ALERT", "length of alerting",),
-	("PSGVAL_KEY_TIME_S_TOGO", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_TOGO", "down counter to next event on this window/alarm/interval/reminder",),
-	("PSGVAL_KEY_VERSION", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_VERSION", "True if pkl is to be updated from APPDS_MAIN",),
+	("PSGVAL_KEY_TIME_S_AT_ALARM", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_AT_ALARM", "the alarm time",),
+	("PSGVAL_KEY_TIME_S_AT_LAST_RUN", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_AT_LAST_RUN", "timeS of last alarm ",),
+	("PSGVAL_KEY_TIME_S_AT_NEXT_ALERT", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_AT_NEXT_ALERT", "what time is the next alarm, == KEY_TIME_S_AT_ALARM is tomorrow",),
+	("PSGVAL_KEY_TIME_S_AT_ZEROELAPSE", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_AT_ZEROELAPSE", "the time at last zero to keep elapsed time accurate despite other things hogging CPU time",),
+	("PSGVAL_KEY_TIME_S_CLOCK", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_CLOCK", "the main clock time",),
+	("PSGVAL_KEY_TIME_S_ELAPSED", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_ELAPSED", "key for all clocks elapsed",),
+	("PSGVAL_KEY_TIME_S_INTERVAL", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_INTERVAL", "interval timer starting time, reset each time the interval goes off",),
+	("PSGVAL_KEY_TIME_S_INTERVAL_START", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_INTERVAL_START", "interval timer starting time, reset each time the interval goes off",),
+	("PSGVAL_KEY_TIME_S_INTERVAL__BEGIN", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_INTERVAL__BEGIN", "key for time interval starts alerting",),
+	("PSGVAL_KEY_TIME_S_INTERVAL__END", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_INTERVAL__END", "key for time an interval goes to leep and stops alerting",),
+	("PSGVAL_KEY_TIME_S_LEN_OF_ALERT", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_LEN_OF_ALERT", "length of alerting",),
+	("PSGVAL_KEY_TIME_S_TOGO", FMAXPSG_SCTN0900_KEY_DEF, "K_TIME_S_TOGO", "down counter to next event on this window/alarm/interval/reminder",),
+	("PSGVAL_KEY_VERSION", FMAXPSG_SCTN0900_KEY_DEF, "K_VERSION", "True if pkl is to be updated from APPDS_MAIN",),
 	("PSGVAL_KEY_WINDOW", FMAX_NOP, FMAXPSG_SCTN0900_KEY_DEF, "K_WINDOW", "",),
 	("PSGVAL_SZ_ALERT_TEXT", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALERT_TEXT", "20", "font size of alert text",),
 	("PSGVAL_SZ_ALPHA_DIM", FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_DIM", "True", "default alpha dim state",),
@@ -5209,6 +5209,8 @@ def parseTBGLST(FDTBGLST):
 			if _thisClassName_ not in FMPSG_SCTN09FF_CLASS_COLUMN_CMNT_DICT:
 				FMPSG_SCTN09FF_CLASS_COLUMN_CMNT_DICT[_thisClassName_] = {}
 
+			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisElementName_[:-1]}"""] = f"""K{_thisElementName_[:-1]}"""
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K{_thisElementName_[:-1]}"""] = _thisComment_
 			FMPSG_SCTN09FF_CLASS_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
@@ -5891,9 +5893,9 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN0900_DEF1_DICT[F"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
 			FMPSG_SCTN0900_DEF1_CMNT_DICT[F"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[F"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
+			FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -5974,6 +5976,9 @@ def parseTBGLST(FDTBGLST):
 				FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
 				FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
 
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K{_thisKey_[:-1]}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisKey_[:-1]}"""] = f"""K{_thisKey_[:-1]}"""
+
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -5997,6 +6002,9 @@ def parseTBGLST(FDTBGLST):
 			else:
 				FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
 				FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+
+			FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K{_thisKey_[:-1]}"""] = f"""{_thisComment_}"""
+			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisKey_[:-1]}"""] = f"""K{_thisKey_[:-1]}"""
 
 			continue
 			# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
