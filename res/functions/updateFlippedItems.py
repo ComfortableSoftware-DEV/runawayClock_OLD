@@ -9,7 +9,8 @@
 		_TIME_MS_AT_FLIP_ = NOWMS + SZ_TIME_MS_BETWEEN_FLIPS
 
 		self.enstring()
-		_thisInfo_ = self._DICTIN_[K_LIST_FLIP_INFO].pop(0)
+
+		_thisInfo_ = self._DICTIN_[K_LIST_FLIP_INFO].pop(0, None)
 		self._DICTIN_[K_LIST_FLIP_INFO].append(_thisInfo_)
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
