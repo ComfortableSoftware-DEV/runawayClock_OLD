@@ -197,6 +197,7 @@ K_DICT_KEYS_REVERSE = "K_DICT_KEYS_REVERSE"  #
 K_DISMISSED = "K_DISMISSED"  # is this event dismissed
 K_DPD_ROOT = "K_DPD_ROOT"  # DPD_ROOT defined
 K_EMPTY_BBOX = "K_EMPTY_BBOX"  # empty XY dict
+K_EMPTY_TUPDICT_FLIP_INFO = "K_EMPTY_TUPDICT_FLIP_INFO"  # easy dict for flip info in class passed as a list of these dicts
 K_EMPTY_XY = "K_EMPTY_XY"  # empty XY dict
 K_ENABLED = "K_ENABLED"  # is this event enabled
 K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  # 
@@ -226,7 +227,7 @@ K_LIST_ALL_TIMES = "K_LIST_ALL_TIMES"  # list of all times
 K_LIST_APPDS_MIDNIGHT_FIX_TIMES = "K_LIST_APPDS_MIDNIGHT_FIX_TIMES"  # list of times to be updated at midnight
 K_LIST_CLOSE = "K_LIST_CLOSE"  # list with close statuses
 K_LIST_DNUPDATE = "K_LIST_DNUPDATE"  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
-K_LIST_FLIP_INFO = "K_LIST_FLIP_INFO"  # the interval count and name list tup(K_INTERVAL_COUNT, K_NAME_NEXT_EVENT, [K_ALARMPOPUP_TEXT_TEXT])
+K_LIST_FLIP_INFO = "K_LIST_FLIP_INFO"  # the interval count and name list tup(K_INTERVAL_COUNT, K_NAME_NEXT_EVENT)
 K_LIST_KEYS_TIME = "K_LIST_KEYS_TIME"  # 
 K_LIST_POPUP = "K_LIST_POPUP"  # popup list
 K_LIST_THIS_ALARM_POPUP_TEXT = "K_LIST_THIS_ALARM_POPUP_TEXT"  # collects the text to popup
@@ -631,6 +632,25 @@ LIST_THIS_ALARM_POPUP_TEXT = [  # collects the text to popup
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0905 tupdict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of EMPTY_TUPDICT_FLIP_INFO structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+EMPTY_TUPDICT_FLIP_INFOTUP = (
+	(K_NAME_NEXT_EVENT, ""),  # name of next event in TUPDICT FLIP_INFO
+	(K_INTERVAL_COUNT, 0),  # name of next event in TUPDICT FLIP_INFO
+)
+
+def EMPTY_TUPDICT_FLIP_INFODICT():
+	return dict((x, y) for x, y in EMPTY_TUPDICT_FLIP_INFOTUP)
+
+
+EMPTY_TUPDICT_FLIP_INFO_TDD = {
+	K_NAME_NEXT_EVENT: "",  # name of next event in TUPDICT FLIP_INFO
+	K_INTERVAL_COUNT: 0,  # name of next event in TUPDICT FLIP_INFO
+}
+
+
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0913 right click menu options
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1047,7 +1067,7 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
 			K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
-			K_LIST_FLIP_INFO: [],  # the interval count and name list tup(K_INTERVAL_COUNT, K_NAME_NEXT_EVENT, [K_ALARMPOPUP_TEXT_TEXT])
+			K_LIST_FLIP_INFO: [],  # the interval count and name list tup(K_INTERVAL_COUNT, K_NAME_NEXT_EVENT)
 			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time at next event
 			K_TIME_S_AT_ZEROELAPSE: ZERO_CLOCK,  # time at last zero of elapsed timer
 			K_TIME_S_CLOCK: ZERO_CLOCK,  # time clock or wall clock
@@ -1060,7 +1080,7 @@ class CLASS_CLOCKS(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
 			K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
-			f"""{self._USE_THIS_KEY_(K_LIST_FLIP_INFO)}""": [],  # the interval count and name list tup(K_INTERVAL_COUNT, K_NAME_NEXT_EVENT, [K_ALARMPOPUP_TEXT_TEXT])
+			f"""{self._USE_THIS_KEY_(K_LIST_FLIP_INFO)}""": [],  # the interval count and name list tup(K_INTERVAL_COUNT, K_NAME_NEXT_EVENT)
 			f"""{self._USE_THIS_KEY_(K_TIME_S_AT_NEXT_ALERT)}""": ZERO_CLOCK,  # time at next event
 			f"""{self._USE_THIS_KEY_(K_TIME_S_AT_ZEROELAPSE)}""": ZERO_CLOCK,  # time at last zero of elapsed timer
 			f"""{self._USE_THIS_KEY_(K_TIME_S_CLOCK)}""": ZERO_CLOCK,  # time clock or wall clock
@@ -2189,6 +2209,8 @@ checkboxValue_ {checkboxValue_}
 			return  # wait until the timer has expired between doing anything
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		_TIME_MS_AT_FLIP_ = NOWMS + SZ_TIME_MS_BETWEEN_FLIPS
 
 		_dictToRtn_ = {}
 		self.enstring()
