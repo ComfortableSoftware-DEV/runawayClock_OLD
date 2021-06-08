@@ -2879,6 +2879,8 @@ def findNextAlarmEvent():
 				currentFlipInfo_=[
 					_flipInfo0_,
 					_flipInfo1_,
+					_flipInfo2_,
+					_flipInfo3_,
 				],
 			)
 			CURRENT_EVENTMODE_VAL = _eventMode_
@@ -2888,9 +2890,9 @@ def findNextAlarmEvent():
 			return
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		_flipInfo0_ = {
-			K_CURRENT_INTERVAL_COUNT: _nextEventList_[0][4],
-			K_NAME_NEXT_EVENT: _nextEventList_[0][3],
+		_flipInfo4_ = {
+			K_CURRENT_INTERVAL_COUNT: _nextEventList_[4][4],
+			K_NAME_NEXT_EVENT: _nextEventList_[4][3],
 		}
 		_currentIntervalCount4_ = _nextEventList_[4][4]
 		_eventMode4_ = _nextEventList_[4][2]
@@ -2911,10 +2913,14 @@ def findNextAlarmEvent():
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		DICT_ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
-			eventMode_=_eventMode_,
-			currentIntervalCount_=[_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCoun3_, _currentIntervalCount4_],
-			nameNextEvent_=[_nameNextEvent0_, _nameNextEvent1_, _nameNextEvent2_, _nameNextEvent3_, _nameNextEvent4_],
-			timeAtNextAlert_=_timeAtNextAlert0_,
+				eventMode_=_eventMode_,
+				timeAtNextAlert_=_timeAtNextAlert0_,
+				currentFlipInfo_=[
+					_flipInfo0_,
+					_flipInfo1_,
+					_flipInfo3_,
+					_flipInfo4_,
+				],
 		)
 		CURRENT_EVENTMODE_VAL = _eventMode_
 		CURRENT_INTERVAL_COUNT = [_currentIntervalCount0_, _currentIntervalCount1_, _currentIntervalCount2_, _currentIntervalCount3_, _currentIntervalCount4_]
