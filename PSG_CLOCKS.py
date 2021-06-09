@@ -1112,15 +1112,15 @@ class CLASS_CLOCKS(object):
 			F_DEBUGPRINT: False,  # read the frame and set self._RESULT_
 			F_EASYUPDATE: False,  # load the whole thing from the file for easyUpdate
 			F_EASYUPDATEPARMS: False,  # load the whole thing from the file for easyUpdate
-			F_ENINT: True,  # read the frame and set self._RESULT_
-			F_ENSTRING: True,  # read the frame and set self._RESULT_
+			F_ENINT: False,  # read the frame and set self._RESULT_
+			F_ENSTRING: False,  # read the frame and set self._RESULT_
 			F_INTERVALCOUNTOFF: False,  # turn interval count off
 			F_INTERVALCOUNTON: False,  # turn interval count on
 			F_QUICKREAD: False,  # read the frame and set self._RESULT_
 			F_RUNAWAY: False,  # define runaway
 			F_SETCHECKBOX: False,  # define runaway
-			F_UPDATEFLIPPEDITEMS: False,  # read the frame and set self._RESULT_
-			F_UPDATEFROMDICT: True,  # update the displayed info from a dict or the default _DICTIN_
+			F_UPDATEFLIPPEDITEMS: True,  # read the frame and set self._RESULT_
+			F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
 			F_ZEROFLIPPED: False,  # update the displayed info from a dict or the default _DICTIN_
 			F_UPDATE: False,  # define the required update function
 		}
