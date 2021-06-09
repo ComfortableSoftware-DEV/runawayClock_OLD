@@ -28,8 +28,10 @@
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (printDictinS_ is True):
-			_strToPrint_ += f"""_DICTIN_: {self.enstring(self._DICTIN_)}{CF.NEWLINE}"""
-			_strToPrint_ += f"""_DICTINSTR_: {self.enstring(self._DICTINSTR_)}{CF.NEWLINE}"""
+#			_strToPrint_ += f"""_DICTIN_: {self.enstring(self._DICTIN_)}{CF.NEWLINE}"""
+#			_strToPrint_ += f"""_DICTINSTR_: {self.enstring(self._DICTINSTR_)}{CF.NEWLINE}"""
+			_strToPrint_ += f"""_DICTIN_: {self._DICTIN_}{CF.NEWLINE}"""
+			_strToPrint_ += f"""_DICTINSTR_: {self._DICTINSTR_}{CF.NEWLINE}"""
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
