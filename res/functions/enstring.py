@@ -15,7 +15,7 @@
 			self.debugPrint(
 				printDictinS_=True,
 				title_="start of enstring",
-				message_= f"""dictToUse_ {self.dictinstrRepl(dictToUse_)}
+				message_= f"""dictToUse_ {self.enstring(dictToUse_)}
 {CF.frameIt("_returnMode_", _returnMode_)}"""
 			)
 
