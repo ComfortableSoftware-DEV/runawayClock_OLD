@@ -1060,6 +1060,8 @@ class CLASS_CLOCKS(object):
 		self._DICT_KEYS_REVERSE_[K_CHECKBOX_ALPHA_DIM] = K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._DICT_KEYS_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
 		self._DICT_KEYS_REVERSE_[K_CHECKBOX_RUNAWAY] = K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
+		self._DICT_KEYS_[K_CURRENT_INTERVAL_COUNT] = self._USE_THIS_KEY_(K_CURRENT_INTERVAL_COUNT)  # add foreign key for INTERVAL_COUNT
+		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(K_CURRENT_INTERVAL_COUNT)] = K_CURRENT_INTERVAL_COUNT  # add foreign key for INTERVAL_COUNT
 
 		self._DICTIN_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -1302,8 +1304,8 @@ class CLASS_CLOCKS(object):
 		if (self._DPD_[F___INIT__] is True):  # see if debug printing is on
 			self.debugPrint(  # debugPrint
 				title_="__INIT__3",  # print _DICT_KEYS_REVERSE_
-				printDictinS_=True,  # print _DICT_KEYS
-				message_=f"""self._DICT_KEYS {self._DICT_KEYS}  # print _DICT_KEYS
+				printDictinS_=True,  # print _DICT_KEYS_
+				message_=f"""self._DICT_KEYS {self._DICT_KEYS_}  # print _DICT_KEYS_
 		self._DICT_KEYS_REVERSE_ {self._DICT_KEYS_REVERSE_}""")  # print _DICT_KEYS_REVERSE_
 
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
