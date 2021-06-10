@@ -250,7 +250,6 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 ]
 
 #
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN003 TYPEs and lambda
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1250,8 +1249,8 @@ TBGLST = [
 	("PSGVAL_COLOR_GRAY6", FMAXPSG_SCTN0900_STR_DEF, "COLOR_GRAY6", "#666666", "gray 6",),
 	("PSGVAL_COLOR_GRAY9", FMAXPSG_SCTN0900_STR_DEF, "COLOR_GRAY9", "#999999", "gray 9",),
 	("PSGVAL_COLOR_GRAYC", FMAXPSG_SCTN0900_STR_DEF, "COLOR_GRAYC", "#CCCCCC", "gray C",),
-	("PSGVAL_COLOR_TEXT_HIGH", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TEXT_HIGH", "#9900FF", "the highlight color used in blinking bits when they are 'lit'",),
 	("PSGVAL_COLOR_TEXT_CURRENT_INTERVAL_COUNT_INACTIVE", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TEXT_CURRENT_INTERVAL_COUNT_INACTIVE", "#999988", "the GRAY color used when the next event is not an interval",),
+	("PSGVAL_COLOR_TEXT_HIGH", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TEXT_HIGH", "#9900FF", "the highlight color used in blinking bits when they are 'lit'",),
 	("PSGVAL_COLOR_TEXT_LOW", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TEXT_LOW", "#330022", "the color the clock digits are",),
 	("PSGVAL_COLOR_TEXT_NORMAL", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TEXT_NORMAL", "#660044", "the color the clock digits are",),
 	("PSGVAL_COLOR_TEXT_SPIN", FMAXPSG_SCTN0900_STR_DEF, "COLOR_TEXT_SPIN", "#CCFF66", "the color the clock digits are",),
@@ -1278,10 +1277,10 @@ TBGLST = [
 	("PSGVAL_DPD_ROOT01", FMAXPSG_SCTN0902_DICT_VV_ADD, "DPD_ROOT", "F_SPLITXYTORAW", "False", "DPD_ROOT entry splitXYToRaw",),
 	("PSGVAL_DPD_ROOT01", FMAXPSG_SCTN0902_DICT_VV_ADD, "DPD_ROOT", "F_UPDATEINTERVAL", "False", "DPD_ROOT entry updateInterval",),
 	("PSGVAL_EMPTY_BBOX", FMAXPSG_SCTN0901_VAL_DEF, "EMPTY_BBOX", "(0, 0, 0, 0)", "empty XY dict",),
-	("PSGVAL_EMPTY_XY", FMAXPSG_SCTN0901_VAL_DEF, "EMPTY_XY", "(0, 0)", "empty XY dict",),
 	("PSGVAL_EMPTY_DICT_FLIP_INFO00", FMAXPSG_SCTN0905_TUPDICT_DEF, "EMPTY_TUPDICT_FLIP_INFO", "easy dict for flip info in class passed as a list of these dicts",),
 	("PSGVAL_EMPTY_DICT_FLIP_INFO01", FMAXPSG_SCTN0905_TUPDICT_VS_ADD, "EMPTY_TUPDICT_FLIP_INFO", "K_NAME_NEXT_EVENT", "", "name of next event in TUPDICT FLIP_INFO",),
 	("PSGVAL_EMPTY_DICT_FLIP_INFO01", FMAXPSG_SCTN0905_TUPDICT_VV_ADD, "EMPTY_TUPDICT_FLIP_INFO", "K_CURRENT_INTERVAL_COUNT", "0", "name of next event in TUPDICT FLIP_INFO",),
+	("PSGVAL_EMPTY_XY", FMAXPSG_SCTN0901_VAL_DEF, "EMPTY_XY", "(0, 0)", "empty XY dict",),
 	("PSGVAL_FONT_DEFAULT", FMAXPSG_SCTN0901_STR_DEF, "FONT_DEFAULT", "Source Code Pro", "default font my favorite readable font",),
 	("PSGVAL_F_APPDSDECODE", FMAXPSG_SCTN0900_KEY_DEF, "F_APPDSDECODE", "fkey ENTRY appdsDecode",),
 	("PSGVAL_F_COMPAREBBOX", FMAXPSG_SCTN0900_KEY_DEF, "F_COMPAREBBOX", "FKEY entry compareBBox",),
@@ -1341,6 +1340,7 @@ TBGLST = [
 	("PSGVAL_KEY_CURRENTLY_DIMMED", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_CURRENTLY_DIMMED", "",),
 	("PSGVAL_KEY_CURRENT_EVENT", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_CURRENT_EVENT", "",),
 	("PSGVAL_KEY_CURRENT_EVENTMODE", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_CURRENT_EVENTMODE", "",),
+	("PSGVAL_KEY_CURRENT_INTERVAL_COUNT", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_CURRENT_INTERVAL_COUNT", "count of the number of times since last reset this interval has triggered an alert",),
 	("PSGVAL_KEY_CURRENT_LOCATION", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_CURRENT_LOCATION", "",),
 	("PSGVAL_KEY_CURRENT_MOUSE_LOCATION", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_CURRENT_MOUSE_LOCATION", "",),
 	("PSGVAL_KEY_CURRENT_MOUSE_STATUS", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_CURRENT_MOUSE_STATUS", "",),
@@ -1374,7 +1374,6 @@ TBGLST = [
 	("PSGVAL_KEY_FORM_POPUP05", FMAXPSG_SCTN0900_KEY_DEF, "FORM_POPUP05", "holds all of form popup entries",),
 	("PSGVAL_KEY_FORM_THECLOCK", FMAXPSG_SCTN0900_KEY_DEF, "FORM_THECLOCK", "holds all of theclock form entries",),
 	("PSGVAL_KEY_INDEX_OF_NEXT_EVENT", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_INDEX_OF_NEXT_EVENT", "index of the next event to alert",),
-	("PSGVAL_KEY_CURRENT_INTERVAL_COUNT", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_CURRENT_INTERVAL_COUNT", "count of the number of times since last reset this interval has triggered an alert",),
 	("PSGVAL_KEY_IS_ALERTING_NOW", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_IS_ALERTING_NOW", "",),
 	("PSGVAL_KEY_LAST_EVENT", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_LAST_EVENT", "",),
 	("PSGVAL_KEY_LAST_LOCATION", FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_LAST_LOCATION", "",),
@@ -1457,10 +1456,10 @@ TBGLST = [
 	("PSGVAL_SZ_CLOCKS_TIME_S_ELAPSED", FMAXPSG_SCTN0900_VAL_DEF, "SZ_CLOCKS_TIME_S_ELAPSED", "13", "font size of the elapsed clock on the clocks only floating widget",),
 	("PSGVAL_SZ_CLOCKS_TIME_S_TOGO", FMAXPSG_SCTN0900_VAL_DEF, "SZ_CLOCKS_TIME_S_TOGO", "13", "font size of the main togo clock on the clocks only floating widget",),
 	("PSGVAL_SZ_CLOSE", FMAXPSG_SCTN0900_VAL_DEF, "SZ_CLOSE", "80", "close enough to move from the mouse",),
+	("PSGVAL_SZ_CURRENT_INTERVAL_COUNT", FMAXPSG_SCTN0900_VAL_DEF, "SZ_CURRENT_INTERVAL_COUNT", "10", "font size of the main interval count",),
 	("PSGVAL_SZ_EDIT_TIME_S_CLOCK", FMAXPSG_SCTN0900_VAL_DEF, "SZ_EDIT_TIME_S_CLOCK", "20", "font size of the main clock on the clocks only floating widget",),
 	("PSGVAL_SZ_EDIT_TIME_S_ELAPSED", FMAXPSG_SCTN0900_VAL_DEF, "SZ_EDIT_TIME_S_ELAPSED", "10", "font size of the elapsed clock on the clocks only floating widget",),
 	("PSGVAL_SZ_EDIT_TIME_S_TOGO", FMAXPSG_SCTN0900_VAL_DEF, "SZ_EDIT_TIME_S_TOGO", "10", "font size of the main togo clock on the clocks only floating widget",),
-	("PSGVAL_SZ_CURRENT_INTERVAL_COUNT", FMAXPSG_SCTN0900_VAL_DEF, "SZ_CURRENT_INTERVAL_COUNT", "10", "font size of the main interval count",),
 	("PSGVAL_SZ_MAIN_TIME_S_CLOCK", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MAIN_TIME_S_CLOCK", "60", "font size of the main clock on the clocks only floating widget",),
 	("PSGVAL_SZ_MAIN_TIME_S_ELAPSED", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MAIN_TIME_S_ELAPSED", "30", "font size of the elapsed clock on the clocks only floating widget",),
 	("PSGVAL_SZ_MAIN_TIME_S_TOGO", FMAXPSG_SCTN0900_VAL_DEF, "SZ_MAIN_TIME_S_TOGO", "30", "font size of the main togo clock on the clocks only floating widget",),
@@ -1505,12 +1504,12 @@ TBGLST = [
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_ALARMPOPUP_TEXT_TEXT", "first event", "alarm text for this event",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_EVENT_NAME", "event 1", "this entry's name",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_AUTO_CLOSE_DURATION", "10", "time of this event",),
+	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_CURRENT_INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_DISMISSED", "False", "is this event dismissed",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_ENABLED", "True", "is this event enabled",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_FIRSTRUN", "True", "are we initializing or not",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_FORMNAME", "None", "time of this event",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_CURRENT_INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_IS_ALERTING_NOW", "False", "count of number of times this has alerted since last reset",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_PREDISMISSABLE", "True", "is this event dismissable in advance",),
 	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_SNOOZABLE", "False", "can this event be snoozed",),
@@ -1527,12 +1526,12 @@ TBGLST = [
 	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_ALARMPOPUP_TEXT_TEXT", "get up, move around", "alarm text for this event",),
 	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_EVENT_NAME", "2nd event", "this entry's name",),
 	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_AUTO_CLOSE_DURATION", "10", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_CURRENT_INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
 	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_DISMISSED", "False", "is this event dismissed",),
 	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_ENABLED", "True", "is this event enabled",),
 	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
 	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_FIRSTRUN", "True", "are we initializing or not",),
 	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_FORMNAME", "None", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_CURRENT_INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
 	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_IS_ALERTING_NOW", "False", "count of number of times this has alerted since last reset",),
 	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_PREDISMISSABLE", "True", "is this event dismissable in advance",),
 	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_SNOOZABLE", "False", "can this event be snoozed",),
@@ -2452,7 +2451,7 @@ def makeFM():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	_strToRtn_ = ""
-	_strToRtn_ += f"""{readFileToStr(FMTOP_NAME)}{readFileToStr(SCTN0102NAME)}"""
+	_strToRtn_ += f"""{readFileToStr(NAME_GLBL_TOP_PY("FM"))}{readFileToStr(NAME_GLBL_ROOT_PY("SCTN0102.py"))}"""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 	_strToRtn_ += f"""{makeAComment("SCTN003 TYPEs and lambda")}"""
@@ -2760,7 +2759,7 @@ def makePSG():
 	_strToRtn_ = ""
 
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
-	_strToRtn_ += f"""{readFileToStr(f"{PSGTOP_NAME}")}{makeAComment("SCTN0900 DEF1")}"""
+	_strToRtn_ += f"""{readFileToStr(NAME_GLBL_TOP_PY("PSG"))}{makeAComment("SCTN0900 DEF1")}"""
 	_dictToUse_ = sortADict(FMPSG_SCTN0900_DEF1_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
 		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisName_]}{NEWLINE}"""
