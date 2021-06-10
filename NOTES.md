@@ -64,4 +64,5 @@
 * possibly redden the TIME_CLOCK, and darken
 * darken all text
 * try text only buttons
-*
+* add 3 digit days to elapsed timer
+* 
