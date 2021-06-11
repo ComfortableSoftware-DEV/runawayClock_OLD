@@ -19,3 +19,10 @@
       * ###### FMAXPSG_SCTN0902_DICT_SV_ADD
       * ###### FMAXPSG_SCTN0902_DICT_VS_ADD
       * ###### FMAXPSG_SCTN0902_DICT_VV_ADD
+    * ##### 0903 LIST
+      * ###### FMAXPSG_SCTN0903_LIST_DEF
+      * ###### FMAXPSG_SCTN0903_LIST_STR_ADD
+      * ###### FMAXPSG_SCTN0903_LIST_VAL_ADD
+
+
+#
