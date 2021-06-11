@@ -138,11 +138,11 @@ SPCSTR = " "  # SPACE character"
 TABSTR = "\t"  # TAB
 
 CMNTLEN = 200
-CONFIGDIR = "/rcr/0-units/python/"
 FOLDLEN = 200
+GLOBAL_CACHE_DIR = "/home/will/.cache/"
+GLOBAL_CONFIG_DIR = "/home/will/.config/"
+PY_CONFIG_DIR = "/rcr/0-units/python/"
 TRIQT = f"""{DBLQT}{DBLQT}{DBLQT}"""
-CACHE_DIR = "/home/will/.cache/"
-CONFIG_DIR = "/home/will/.config/"
 
 
 #
@@ -153,36 +153,23 @@ CONFIG_DIR = "/home/will/.config/"
 #
 
 
-AO_NAME = "newAO.py"
-AOTOP_NAME = f"""{CONFIGDIR}AOTOP.py"""
 BIN04 = lambda __X__: f"""{__X__:04b}"""
 BIN08 = lambda __X__: f"""{__X__:08b}"""
 BIN16 = lambda __X__: f"""{__X__:016b}"""
 BIN32 = lambda __X__: f"""{__X__:032b}"""
 BIN64 = lambda __X__: f"""{__X__:064b}"""
-CF_NAME = "newCF.py"
-CFTOP_NAME = f"""{CONFIGDIR}CFTOP.py"""
 CLRALL = f"""{ESC}[2J"""
 CLRDOWN = f"""{ESC}[J"""
 CLREOL = f"""{ESC}[K"""
 CMNTLINE = f"""# * {"#*" * (CMNTLEN // 2)}"""
-DBSQLT_NAME = "newDBSQLT.py"
 DICTMODE_KEYSTR = "DICTMODE_KEYSTR"  # define dictmode 'key':val
 DICTMODE_KEYVAL = "DICTMODE_KEYVAL"  # define dictmode key:val
-DO_NAME = "newDO.py"
-DOHBI_NAME = "newDOHBI.py"
-DOHBIBTM_NAME = f"""{CONFIGDIR}DO_HBIBTM.py"""
-DOHBITOP_NAME = f"""{CONFIGDIR}DO_HBITOP.py"""
-DOTOP_NAME = f"""{CONFIGDIR}DOTOP.py"""
 EEOL = f"""{ESC}[K"""
 EMPTY_DICT = {}
 EMPTY_LIST = []
 EMPTY_STR = ""
 EMPTY_TUPLE = ()
 EMPTYSTRLST = [None, "", DBLQT, f"""{DBLQT}{DBLQT}""", SGLQT, f"""{SGLQT}{SGLQT}""", BKQT, "None", "\r", NEWLINE, "\r\n", "\n\r", ]
-FM_NAME = "newFM.py"
-FMTOP_NAME = f"""{CONFIGDIR}FMTOP.py"""
-FO_NAME = "newFO.py"
 FOLD1ENDHERE = f"""# fold here {"⥣1" * (FOLDLEN // 2)}"""
 FOLD1ENDHERELN = f"""# fold here {"⥣1" * (FOLDLEN // 2)}{NEWLINE}"""
 FOLD1STARTHERE = f"""# fold here {"⥥1" * (FOLDLEN // 2)}"""
@@ -195,7 +182,6 @@ FOLD3ENDHERE = f"""# fold here {"⥣3" * (FOLDLEN // 2)}"""
 FOLD3ENDHERELN = f"""# fold here {"⥣3" * (FOLDLEN // 2)}{NEWLINE}"""
 FOLD3STARTHERE = f"""# fold here {"⥥3" * (FOLDLEN // 2)}"""
 FOLD3STARTHERELN = f"""# fold here {"⥥3" * (FOLDLEN // 2)}{NEWLINE}"""
-FOTOP_NAME = f"""{CONFIGDIR}FOTOP.py"""
 HEX08 = lambda __X__: f"""{__X__:02H}"""  # {thisComment_}
 HEX16 = lambda __X__: f"""{__X__:04H}"""  # {thisComment_}
 HEX32 = lambda __X__: f"""{__X__:08H}"""  # {thisComment_}
@@ -204,8 +190,6 @@ IMPORTANTSTR = f"""# * {"!-" * (CMNTLEN // 2)}"""  # important line marker
 INDENTIN = " -=> "  # display arrow RIGHT
 INDENTOUT = " <=- "  # display arrow LEFT
 INFOSTR = f"""# * {"%_" * (CMNTLEN // 2)}"""  # INFO _STR_ line
-IO_NAME = "newIO.py"
-IOTOP_NAME = f"""{CONFIGDIR}IOTOP.py"""
 LINESUP = lambda __NUM__: f"""{ESC}[{__NUM__}A"""
 MARK1END = lambda __TAG__: f"""# {"⥣1 " * (CMNTLEN // 3)} {__TAG__}"""
 MARK1ENDLN = lambda __TAG__: f"""# {"⥣1 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
@@ -261,39 +245,63 @@ MARK9MID = lambda __TAG__: f"""# {"⥣9⥥ " * (CMNTLEN // 4)} {__TAG__}"""
 MARK9MIDLN = lambda __TAG__: f"""# {"⥣9⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
 MARK9START = lambda __TAG__: f"""# {"9⥥ " * (CMNTLEN // 3)} {__TAG__}"""
 MARK9STARTLN = lambda __TAG__: f"""# {"9⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARKLINES_NAME = f"""{CONFIGDIR}MARKLINES.py"""
 MOVELEFT = lambda __NUM__: f"""{ESC}[{__NUM__}D"""
 MOVETO = lambda __LN__, __COL__: f"""{ESC}[{__LN__};{__COL__}H"""
 NCR = lambda __NUM__: f"""{CRSTR * __NUM__}"""
 NNL = lambda __NUM__: f"""{NEWLINE * __NUM__}"""
 NSPC = lambda __NUM__: f"""{SPCSTR * __NUM__}"""  # returns a string with __NUM__ SPC
 NTAB = lambda __NUM__: f"""{TABSTR * __NUM__}"""  # returns a string with __NUM__ TAB
-PSG_NAME = f"""newPSG.py"""
-PSGTOP_NAME = f"""{CONFIGDIR}PSGTOP.py"""
 QTSET = [DBLQT, SGLQT, BKQT]  # set of all quote characters
-SCTN0102NAME = f"""{CONFIGDIR}SCTN0102.py"""
-SCTNSNAME = f"""{CONFIGDIR}SCTNS.md"""
 SERIALNUMBER = lambda __NUM__: f"""{(__NUM__ % 0XFFFFFFFF):08X}"""
-SP_NAME = "newSP.py"
-SPTOP_NAME = f"""{CONFIGDIR}SPTOP.py"""
-TBGLST_NAME = "TBGLST.py"
 USER_CACHE_URL = lambda __FILENAME__: f"""{USER_CACHE_DIR}{__FILENAME__}"""
 USER_CONFIG_URL = lambda __FILENAME__: f"""{USER_CONFIG_DIR}{__FILENAME__}"""
-VO_NAME = "newVO.py"
-VOTOP_NAME = f"""{CONFIGDIR}VOTOP.py"""
 WHIRLCOUNT = 0
 WHIRLSTR = f"""-{BKSLSH}|/*"""
 
 
-DAYMS = (60 * 60 * 24 * 1000)  # 86400000
-DAYSECS = (60 * 60 * 24)  # 86400
-HALFDAYSECS = (60 * 60 * 12)  # 43200
-HALFHOURSECS = (60 * 30)  # 1800
-HOURSECS = (60 * 60)  # 3600
-MINUTESECS = 60 # 60
-QUARTERDAYSECS = (60 * 60 * 6)
-QUARTERHOURSECS = (60 * 15)  # 900
-TIME995959 = (60 * 60 * 100)  # 360000
+DAY_MS = (60 * 60 * 24 * 1000)  # 86400000
+DAY_S = (60 * 60 * 24)  # 86400
+HALFDAY_S = (60 * 60 * 12)  # 43200
+HALFHOUR_S = (60 * 30)  # 1800
+HOUR_S = (60 * 60)  # 3600
+MINUTE_S = 60 # 60
+QUARTERDAY_S = (60 * 60 * 6)
+QUARTERHOUR_S = (60 * 15)  # 900
+TIME_S_995959 = (60 * 60 * 100)  # 360000
+TIME_S_DDD235959 = (60 * 60 * 24 * 1000)
+
+
+NAME_GLBL_BTM_PY = lambda __NAME__: f"""{PY_CONFIG_DIR}/{__NAME__}/{__NAME__}_BTM.py"""
+NAME_GLBL_IMG_PY = lambda __NAME__, __FILENAME__: f"""{PY_CONFIG_DIR}res/IMG/{__NAME__}/{__FILENAME__}"""
+NAME_GLBL_IMG_ROOT_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/IMG/{__FILENAME__}"""
+NAME_GLBL_MD_PY = lambda __NAME__: f"""{PY_CONFIG_DIR}res/MARKDOWN/{__NAME__}.md"""
+NAME_GLBL_NEW_PY = lambda __NAME__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_NEW.py"""
+NAME_GLBL_RES_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/{__FILENAME__}"""
+NAME_GLBL_ROOT_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}__ROOT__/{__FILENAME__}"""
+NAME_GLBL_SUB_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}.py"""
+NAME_GLBL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_BTM.py"""
+NAME_GLBL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
+NAME_GLBL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
+NAME_GLBL_TOP_PY = lambda __NAME__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_TOP.py"""
+
+
+NAME_HOME_CACHE = lambda __FILENAME__: f"""/home/will/.cache/{__FILENAME__}"""
+NAME_HOME_CONFIG = lambda __FILENAME__: f"""/home/will/.config/{__FILENAME__}"""
+NAME_HOME_SELF_CACHE = lambda __NAME__, __FILENAME__: f"""/home/will/.cache/{__NAME__}/{__FILENAME__}"""
+NAME_HOME_SELF_CONFIG = lambda __NAME__, __FILENAME__: f"""/home/will/.config/{__NAME__}/{__FILENAME__}"""
+
+
+NAME_LCL_BTM_PY = lambda __NAME__: f"""{__NAME__}_BTM.py"""
+NAME_LCL_IMG_PY = lambda __FILENAME__: f"""res/IMG/{__FILENAME__}"""
+NAME_LCL_MD_PY = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}.md"""
+NAME_LCL_NEW_PY = lambda __NAME__: f"""{__NAME__}_NEW.py"""
+NAME_LCL_RES_PY = lambda __FILENAME__: f"""res/{__FILENAME__}"""
+NAME_LCL_ROOT_PY = lambda __FILENAME__: f"""{__FILENAME__}"""
+NAME_LCL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_BTM.py"""
+NAME_LCL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
+NAME_LCL_SUB_PY = lambda __NAME__, __SUB__: f"""{__NAME__}_{__SUB__}.py"""
+NAME_LCL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
+NAME_LCL_TOP_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_TOP.py"""
 
 
 STR_SUBST_DICT = {
@@ -309,6 +317,7 @@ STR_SUBST_DICT = {
 	"%FOLDLN2S%": f"""{FOLD2STARTHERELN}""",
 	"%FOLDLN3S%": f"""{FOLD3STARTHERELN}""",
 	"%FTQ%": f"""f{TRIQT}""",
+	"%FTQTQ%": f"""f{TRIQT}{TRIQT}""",
 	"%NEWLINE%": f"""{NEWLINE}""",
 	"%OBRCE%": f"""{OBRCE}""",
 	"%OBRKT%": f"""{OBRKT}""",
@@ -335,6 +344,8 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 	f"{ESC}[35m",  # entry for ESC-[35m
 	f"{ESC}[36m",  # entry for ESC-[36m
 ]
+
+#
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0201 CF defines
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1340,7 +1351,7 @@ def IGMPP(objToIP_):
 def serializeIt(UUID_):
 	global SERIALZ
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	with withPickles(f"""{CONFIG_DIR}SERIALZ.pkl""", SERIALZ) as _pklJar_:
+	with withPickles(f"""{NAME_HOME_CONFIG("SERIALZ.pkl")}""", SERIALZ) as _pklJar_:
 		SERIALZ = _pklJar_._STUFFTOPKL_
 		if UUID_ not in SERIALZ:
 			SERIALZ[UUID_] = 0
@@ -1376,6 +1387,19 @@ def quickCopyDict(dictIn_):
 		_dictToRtn_[_thisKey_] = _thisVal_
 
 	return _dictToRtn_
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# updateList
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def updateList(listIn_, itemToUpdate_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	if (itemToUpdate_ in listIn_):
+		return listIn_
+	else:
+		listIn_.append(itemToUpdate_)
+		return listIn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 

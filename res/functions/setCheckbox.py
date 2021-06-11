@@ -6,7 +6,7 @@
 		if (checkboxValue_ is None):
 			checkboxValue_ = not self._DICTIN_[checkboxKey_]
 
-		self._MAINFRAME_[self._KEY_DICT_[checkboxKey_]].update(
+		self._MAINFRAME_[self._DICT_KEYS_[checkboxKey_]].update(
 			value=checkboxValue_,
 		)
 		# self._VALUES_[checkboxKey_] = checkboxValue_

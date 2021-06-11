@@ -138,11 +138,11 @@ SPCSTR = " "  # SPACE character"
 TABSTR = "\t"  # TAB
 
 CMNTLEN = 200
-CONFIGDIR = "/rcr/0-units/python/"
 FOLDLEN = 200
+GLOBAL_CACHE_DIR = "/home/will/.cache/"
+GLOBAL_CONFIG_DIR = "/home/will/.config/"
+PY_CONFIG_DIR = "/rcr/0-units/python/"
 TRIQT = f"""{DBLQT}{DBLQT}{DBLQT}"""
-CACHE_DIR = "/home/will/.cache/"
-CONFIG_DIR = "/home/will/.config/"
 
 
 #
@@ -259,45 +259,49 @@ WHIRLCOUNT = 0
 WHIRLSTR = f"""-{BKSLSH}|/*"""
 
 
-DAYMS = (60 * 60 * 24 * 1000)  # 86400000
-DAYSECS = (60 * 60 * 24)  # 86400
-HALFDAYSECS = (60 * 60 * 12)  # 43200
-HALFHOURSECS = (60 * 30)  # 1800
-HOURSECS = (60 * 60)  # 3600
-MINUTESECS = 60 # 60
-QUARTERDAYSECS = (60 * 60 * 6)
-QUARTERHOURSECS = (60 * 15)  # 900
-TIME995959 = (60 * 60 * 100)  # 360000
+DAY_MS = (60 * 60 * 24 * 1000)  # 86400000
+DAY_S = (60 * 60 * 24)  # 86400
+HALFDAY_S = (60 * 60 * 12)  # 43200
+HALFHOUR_S = (60 * 30)  # 1800
+HOUR_S = (60 * 60)  # 3600
+MINUTE_S = 60 # 60
+QUARTERDAY_S = (60 * 60 * 6)
+QUARTERHOUR_S = (60 * 15)  # 900
+TIME_S_995959 = (60 * 60 * 100)  # 360000
+TIME_S_DDD235959 = (60 * 60 * 24 * 1000)
 
 
-NAME_NEW_PY = lambda __NAME__: f"""/rcr/0-units/python/{__NAME__}new.py"""
-NAME_TOP_PY = lambda __NAME__: dhgfsdgfh
-AO_NAME = "newAO.py"
-AOTOP_NAME = f"""{CONFIGDIR}AOTOP.py"""
-CF_NAME = "newCF.py"
-CFTOP_NAME = f"""{CONFIGDIR}CFTOP.py"""
-DBSQLT_NAME = "newDBSQLT.py"
-DO_NAME = "newDO.py"
-DOHBI_NAME = "newDOHBI.py"
-DOHBIBTM_NAME = f"""{CONFIGDIR}DO_HBIBTM.py"""
-DOHBITOP_NAME = f"""{CONFIGDIR}DO_HBITOP.py"""
-DOTOP_NAME = f"""{CONFIGDIR}DOTOP.py"""
-FM_NAME = "newFM.py"
-FMTOP_NAME = f"""{CONFIGDIR}FMTOP.py"""
-FO_NAME = "newFO.py"
-FOTOP_NAME = f"""{CONFIGDIR}FOTOP.py"""
-IO_NAME = "newIO.py"
-IOTOP_NAME = f"""{CONFIGDIR}IOTOP.py"""
-MARKLINES_NAME = f"""{CONFIGDIR}MARKLINES.py"""
-PSG_NAME = f"""newPSG.py"""
-PSGTOP_NAME = f"""{CONFIGDIR}PSGTOP.py"""
-SCTN0102NAME = f"""{CONFIGDIR}SCTN0102.py"""
-SCTNSNAME = f"""{CONFIGDIR}SCTNS.md"""
-SP_NAME = "newSP.py"
-SPTOP_NAME = f"""{CONFIGDIR}SPTOP.py"""
-TBGLST_NAME = "TBGLST.py"
-VO_NAME = "newVO.py"
-VOTOP_NAME = f"""{CONFIGDIR}VOTOP.py"""
+NAME_GLBL_BTM_PY = lambda __NAME__: f"""{PY_CONFIG_DIR}/{__NAME__}/{__NAME__}_BTM.py"""
+NAME_GLBL_IMG_PY = lambda __NAME__, __FILENAME__: f"""{PY_CONFIG_DIR}res/IMG/{__NAME__}/{__FILENAME__}"""
+NAME_GLBL_IMG_ROOT_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/IMG/{__FILENAME__}"""
+NAME_GLBL_MD_PY = lambda __NAME__: f"""{PY_CONFIG_DIR}res/MARKDOWN/{__NAME__}.md"""
+NAME_GLBL_NEW_PY = lambda __NAME__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_NEW.py"""
+NAME_GLBL_RES_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/{__FILENAME__}"""
+NAME_GLBL_ROOT_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}__ROOT__/{__FILENAME__}"""
+NAME_GLBL_SUB_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}.py"""
+NAME_GLBL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_BTM.py"""
+NAME_GLBL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
+NAME_GLBL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
+NAME_GLBL_TOP_PY = lambda __NAME__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_TOP.py"""
+
+
+NAME_HOME_CACHE = lambda __FILENAME__: f"""/home/will/.cache/{__FILENAME__}"""
+NAME_HOME_CONFIG = lambda __FILENAME__: f"""/home/will/.config/{__FILENAME__}"""
+NAME_HOME_SELF_CACHE = lambda __NAME__, __FILENAME__: f"""/home/will/.cache/{__NAME__}/{__FILENAME__}"""
+NAME_HOME_SELF_CONFIG = lambda __NAME__, __FILENAME__: f"""/home/will/.config/{__NAME__}/{__FILENAME__}"""
+
+
+NAME_LCL_BTM_PY = lambda __NAME__: f"""{__NAME__}_BTM.py"""
+NAME_LCL_IMG_PY = lambda __FILENAME__: f"""res/IMG/{__FILENAME__}"""
+NAME_LCL_MD_PY = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}.md"""
+NAME_LCL_NEW_PY = lambda __NAME__: f"""{__NAME__}_NEW.py"""
+NAME_LCL_RES_PY = lambda __FILENAME__: f"""res/{__FILENAME__}"""
+NAME_LCL_ROOT_PY = lambda __FILENAME__: f"""{__FILENAME__}"""
+NAME_LCL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_BTM.py"""
+NAME_LCL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
+NAME_LCL_SUB_PY = lambda __NAME__, __SUB__: f"""{__NAME__}_{__SUB__}.py"""
+NAME_LCL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
+NAME_LCL_TOP_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_TOP.py"""
 
 
 STR_SUBST_DICT = {
@@ -340,6 +344,8 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 	f"{ESC}[35m",  # entry for ESC-[35m
 	f"{ESC}[36m",  # entry for ESC-[36m
 ]
+
+#
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0201 CF defines
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -369,3 +375,6 @@ OPTIONSDICT = {
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
+
+
+ 
