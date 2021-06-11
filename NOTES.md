@@ -12,6 +12,7 @@
 []  | auto dismiss, time 0 for no auto dismiss
 []  | check for dict or tdd data in MAPPDS before updating it, translate them back to tuples
 []  | clocks mode can be separated
+[]  | convert APPDS_MAIN\[K_EVENT_ENTRIES\]\[K_ALARMPOPUP_TEXT_TEXT\] from "" to \[""\]
 []  | default intervals to 5 seconds to start
 []  | document naming of things such as checkboxes between inside and outside the classes, etc
 []  | edit mode, use combo for selecting which EVENT_ENTRIES entry to use
