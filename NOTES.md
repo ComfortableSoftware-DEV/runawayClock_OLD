@@ -5,6 +5,8 @@
 ----|-------------------------------------------------------------------------------------------------------
 []  | auto create res/MARKDOWN/__SCTNS__.md
 []  | auto create res/MARKDOWN/ files
+[]  |  including functions in main section of all managed files
+[]  |  
 []  | actually make the bool flags work
 []  | add a counter of intervals, and a reset when counter clicked
 []  | alarm in time count
