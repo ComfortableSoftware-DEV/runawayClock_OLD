@@ -4,6 +4,7 @@
 # abbreviations I use often, most make sense in a python aclimated head
 <p>&nbsp;</p>
 
+
 - sg or SG or PySimpleGUI the awesome GUI framework I (ab)use
 - FM* any of the filemaker modules in this package
 - CF the constantly used functionality module

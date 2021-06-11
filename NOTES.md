@@ -3,7 +3,8 @@
 
 [ ] | item
 ----|-------------------------------------------------------------------------------------------------------
-[]  | ** idea ran away before I could get it written **
+[]  | auto create res/MARKDOWN/__SCTNS__.md
+[]  | auto create res/MARKDOWN/ files
 []  | actually make the bool flags work
 []  | add a counter of intervals, and a reset when counter clicked
 []  | alarm in time count
