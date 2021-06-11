@@ -1096,11 +1096,11 @@ class CLASS_CLOCKS(object):
 
 		self._DICT_KEYS_TIME_ = {  # dict of time keys and their max value int seconds
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			K_TIME_S_AT_NEXT_ALERT: CF.DAYSECS,  # comment
-			K_TIME_S_AT_ZEROELAPSE: CF.DAYSECS,  # comment
-			K_TIME_S_CLOCK: CF.DAYSECS,  #
-			K_TIME_S_ELAPSED: CF.TIME995959,  #
-			K_TIME_S_TOGO: CF.DAYSECS,  #
+			K_TIME_S_AT_NEXT_ALERT: CF.DAY_S,  # comment
+			K_TIME_S_AT_ZEROELAPSE: CF.DAY_S,  # comment
+			K_TIME_S_CLOCK: CF.DAY_S,  #
+			K_TIME_S_ELAPSED: CF.TIME_S_995959,  #
+			K_TIME_S_TOGO: CF.DAY_S,  #
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -2414,7 +2414,7 @@ def fixTimeAtNext(timeToFix_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	if timeToFix_ < NOWS:
-		timeToFix_ += CF.DAYSECS
+		timeToFix_ += CF.DAY_S
 
 	return timeToFix_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
@@ -2438,9 +2438,9 @@ def localTimes(hrs_=None, mins_=None):
 
 	_adjSecs_ = CF.MTSS() - TIME_S_ADJUST_VALUE(hrs_, mins_)
 	if _adjSecs_ < 0:
-		_adjSecs_ += CF.DAYSECS
+		_adjSecs_ += CF.DAY_S
 
-	_adjSecs_ = _adjSecs_ % CF.DAYSECS
+	_adjSecs_ = _adjSecs_ % CF.DAY_S
 	NOWS = _adjSecs_
 	NOW_NOMS = int(NOWS)
 	NOWM = CF.loseTheSecs(_adjSecs_)
@@ -2617,7 +2617,7 @@ def findNextAlarmEvent():
 	if _nextEventList_ != []:
 
 		_flipInfo0_ = {
-			K_CURRENT_CURRENT_INTERVAL_COUNT: _nextEventList_[0][4],
+			K_CURRENT_INTERVAL_COUNT: _nextEventList_[0][4],
 			K_NAME_NEXT_EVENT: _nextEventList_[0][3],
 		}
 		_currentIntervalCount0_ = _nextEventList_[0][4]
@@ -2829,7 +2829,7 @@ def doEvent():
 
 				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
 			elif (_values_[K_EVENTMODE] == EVENTMODE_ALARM):
-				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_AT_NEXT_ALERT] = fixTimeAtNext(NOWS + CF.DAYSECS)
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_AT_NEXT_ALERT] = fixTimeAtNext(NOWS + CF.DAY_S)
 
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
@@ -2880,8 +2880,8 @@ def doMidnightWork():
 			for _index1_ in LIST_ALL_TIMES:
 
 					# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
-				if (_index1_ in _event_) and (APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] >= CF.DAYSECS):
-					APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] -= CF.DAYSECS
+				if (_index1_ in _event_) and (APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] >= CF.DAY_S):
+					APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] -= CF.DAY_S
 
 						# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
 					if (APPDS_MAIN[K_EVENT_ENTRIES][_index_][_index1_] < 0):
