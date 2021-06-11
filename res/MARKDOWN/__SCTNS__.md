@@ -1,5 +1,5 @@
 # SECTIONS IN runawayClock
-
+## IN ORDER OF SCTN????
   * ### 0900..09FF
     * #### 0900 DEF1
       * ##### FUNCTIONS
@@ -11,24 +11,19 @@
           * etc
         * ###### FMAXPSG_SCTN0900_STR_DEF
         * ###### FMAXPSG_SCTN0900_VAL_DEF
-    * #### 0901 DEF2
-      * ###### FMAXPSG_SCTN0901_DUBLT_SS_DEF
-      * ###### FMAXPSG_SCTN0901_DUBLT_SV_DEF
-      * ###### FMAXPSG_SCTN0901_DUBLT_VS_DEF
-      * ###### FMAXPSG_SCTN0901_DUBLT_VV_DEF
-      * ###### FMAXPSG_SCTN0901_KEY_DEF
-      * ###### FMAXPSG_SCTN0901_STR_DEF
-      * ###### FMAXPSG_SCTN0901_VAL_DEF
-    * #### 0902 DICT
-      * ###### FMAXPSG_SCTN0902_DICT_DEF
-      * ###### FMAXPSG_SCTN0902_DICT_SS_ADD
-      * ###### FMAXPSG_SCTN0902_DICT_SV_ADD
-      * ###### FMAXPSG_SCTN0902_DICT_VS_ADD
-      * ###### FMAXPSG_SCTN0902_DICT_VV_ADD
-    * #### 0903 LIST
-      * ###### FMAXPSG_SCTN0903_LIST_DEF
-      * ###### FMAXPSG_SCTN0903_LIST_STR_ADD
-      * ###### FMAXPSG_SCTN0903_LIST_VAL_ADD
+
+## IN ORDER OF USE IN THE _NEW.py FILE
+  * ### 0900..09FF
+    * #### 0900 DEF1
+      * ##### FUNCTIONS
+        def bar(parms):
+      * ##### VARIABLES
+        * ###### FMAXPSG_SCTN0900_KEY_DEF
+          * description
+          * notes
+          * etc
+        * ###### FMAXPSG_SCTN0900_STR_DEF
+        * ###### FMAXPSG_SCTN0900_VAL_DEF
 
 
 #
