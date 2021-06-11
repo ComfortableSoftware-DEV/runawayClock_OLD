@@ -3064,7 +3064,7 @@ def doit():
 		_pklName_ = "runawayClock.pkl"
 		DEVMODE = False
 
-	with CF.withPickles(f"""{CF.CONFIG_DIR}runawayClock/{_pklName_}""", APPDS_MAIN) as _pklJar_, \
+	with CF.withPickles(f"""{CF.NAME_HOME_SELF_CONFIG("runawayClock", _pklName_)}""", APPDS_MAIN) as _pklJar_, \
 			CLASS_CLOCKS(CF.serializeIt("runawayClock"), FORM_CLOCKS):
 
 		APPDS_MAIN = _pklJar_._STUFFTOPKL_

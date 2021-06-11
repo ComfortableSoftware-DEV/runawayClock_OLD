@@ -195,6 +195,12 @@ NAME_GLBL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{
 NAME_GLBL_TOP_PY = lambda __NAME__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_TOP.py"""
 
 
+NAME_HOME_CACHE = lambda __FILENAME__: f"""/home/will/.cache/{__FILENAME__}"""
+NAME_HOME_CONFIG = lambda __FILENAME__: f"""/home/will/.config/{__FILENAME__}"""
+NAME_HOME_SELF_CACHE = lambda __NAME__, __FILENAME__: f"""/home/will/.cache/{__NAME__}/{__FILENAME__}"""
+NAME_HOME_SELF_CONFIG = lambda __NAME__, __FILENAME__: f"""/home/will/.config/{__NAME__}/{__FILENAME__}"""
+
+
 NAME_LCL_BTM_PY = lambda __NAME__: f"""{__NAME__}_BTM.py"""
 NAME_LCL_IMG_PY = lambda __FILENAME__: f"""res/IMG/{__FILENAME__}"""
 NAME_LCL_MD_PY = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}.md"""
