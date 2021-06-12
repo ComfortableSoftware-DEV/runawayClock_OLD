@@ -118,7 +118,7 @@ INDEX_SOUTH = 3  # SOUTH
 INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
-K__pklJar_ = "K__pklJar_"  # comment
+K_PKLJAR = "K_PKLJAR"  # comment
 K_ALARMPOPUP_TEXT_TEXT = "K_ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
 K_ALERTING_LIST = "K_ALERTING_LIST"  # list that holds all currently alarming events
 K_ALPHA_CHANNEL = "K_ALPHA_CHANNEL"  #
@@ -367,7 +367,7 @@ ZERO_CLOCKSTR = "00:00:00"  # all the zeros
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0901 DEF2
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-_pklJar_ = None  # comment
+PKLJAR = None  # comment
 COLORS_BTN_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # comment
 COLORS_TEXT_HIGH = (COLOR_TEXT_HIGH, COLOR_BACKGROUND)  # combined colors for a clock text element
 COLORS_TEXT_LOW = (COLOR_TEXT_LOW, COLOR_BACKGROUND)  # combined colors for a clock text element
@@ -3053,7 +3053,7 @@ _values_ {_values_}""")
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def doit():
 	global \
-		_pklJar_, \
+		PKLJAR, \
 		APPDS_MAIN, \
 		DEVMODE
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
@@ -3064,10 +3064,10 @@ def doit():
 		_pklName_ = "runawayClock.pkl"
 		DEVMODE = False
 
-	with CF.withPickles(f"""{CF.NAME_HOME_SELF_CONFIG("runawayClock", _pklName_)}""", APPDS_MAIN) as _pklJar_, \
+	with CF.withPickles(f"""{CF.NAME_HOME_SELF_CONFIG("runawayClock", _pklName_)}""", APPDS_MAIN) as PKLJAR, \
 			CLASS_CLOCKS(CF.serializeIt("runawayClock"), FORM_CLOCKS):
 
-		APPDS_MAIN = _pklJar_._STUFFTOPKL_
+		APPDS_MAIN = PKLJAR._STUFFTOPKL_
 		localTimes()
 		doStartup()
 		doMidnightWork()
@@ -3078,7 +3078,7 @@ def doit():
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if _result_ == K_BTN_QUIT_ALL:
-				_pklJar_._STUFFTOPKL_ = APPDS_MAIN
+				PKLJAR._STUFFTOPKL_ = APPDS_MAIN
 				break
 
 				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
