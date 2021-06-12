@@ -1,0 +1,8 @@
+
+
+__FILENAME__ = "FM_TBGLST_PSG_POPUP_ALERT.py"
+__CLASS__ = "POPUP_ALERT"
+TBGLST = [
+	(__FILENAME__, ("CLASS_POPUP_ALERT", FMAXPSG_SCTN09FF_CLASS_DEF, __CLASS__, "start the POPUP_ALERT class",),),
+	(__FILENAME__, ("CLASS_POPUP_ALERT", FMAX, parms, "comment",),),
+]
