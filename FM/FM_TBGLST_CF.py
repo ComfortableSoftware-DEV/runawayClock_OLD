@@ -1,4 +1,6 @@
 
+
+__FILENAME__ = "FM_TBGLST_CF.py"
 TBGLST = [
 	("CFVAL", FMAX_NOP, "CFVAL_BEGINS",),
 	("CFVAL_____", FMAX_NOP, "CFVAL_ENDS",),
