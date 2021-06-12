@@ -1150,8 +1150,8 @@ def makeFM():
 		_strToRtn_ = ""
 
 		_strToRtn_ += f"""{makeAWideComment(f"start of file {NAME_LCL_MD_PY("__SCTNS__")}")}{NEWLINE}"""
-		with (open(f"""{NAME_LCL_SUB_NEW_PY("FM", "TBGLST")}""", "tw")) as __FDOut__:
-			for
+		with (open(f"""{NAME_LCL_MD_PY("__SCTNS__")}""", "tw")) as __FDOut__:
+			for _thisName_, thisEntry_ in FMFM_SCTN0116
 
 
 #
