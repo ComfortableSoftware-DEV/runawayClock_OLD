@@ -6,6 +6,7 @@ class TBGLST():
 		__TBGLST__ = []
 		import FM_TBGLST_CF
 		__TBGLST__.extend(FM_TBGLST_CF.TBGLST)
+		
 		self._TBGLST_ = [
 			("FMAXPSG", FMAX_NOP, "FMAXPSG_BEGINS",),
 			("FMAXPSG_SCTN0900_KEY_DEF", FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py",),
