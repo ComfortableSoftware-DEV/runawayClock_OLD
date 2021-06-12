@@ -3,15 +3,22 @@
 class TBGLST():
 
 	def __init__(self):
-		__TBGLST__ = []
-		import FM_TBGLST_CF
-		__TBGLST__.extend(FM_TBGLST_CF.TBGLST)
+		self.__TBGLST__ = []
 
-		self._TBGLST_ = [
+		import FM_TBGLST_CF
+		self.__TBGLST__.extend(FM_TBGLST_CF.TBGLST)
+
+		import FM_TBGLST_FM
+		self.__TBGLST__.extend(FM_TBGLST_FM.TBGLST)
+
+		import FM_TBGLST_PSG
+		self.__TBGLST__.extend(FM_TBGLST_PSG.TBGLST)
+
+		self._TBGLST_.extend([
 			("FM_TBGLST.py", ("FMAX_NOP", FMAXFM_SCTN0101_AX_DEF, "ignore the remainder of the line"))
 			("FMVAl_TABLEVEL", FMAXFM_SCTN0102_STR_DEF, "TABLEVEL", "TABLEVEL", "key for tab levels",),
-			# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-		]
+		])
+		
 		self._TBGLST_.sort()
 
 	def __iter__(self):

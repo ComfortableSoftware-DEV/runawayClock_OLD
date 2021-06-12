@@ -30,6 +30,7 @@
 
 
 
+
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0001 _CHR_ _CONST_
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -213,6 +214,10 @@ NAME_LCL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB
 NAME_LCL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
 NAME_LCL_SUB_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}.py"""
 NAME_LCL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
+NAME_LCL_SUB01_BTM_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_BTM.py"""
+NAME_LCL_SUB01_NEW_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_NEW.py"""
+NAME_LCL_SUB01_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}.py"""
+NAME_LCL_SUB01_TOP_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_TOP.py"""
 NAME_LCL_TOP_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_TOP.py"""
 
 
@@ -257,6 +262,8 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 	f"{ESC}[36m",  # entry for ESC-[36m
 ]
 
+
+#
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1105,11 +1112,7 @@ def __main__():
 	# FMFM_MAIN_BEGINS
 	# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 	import FM_parseTBGLST
-
-	with open(NAME_LCL_SUB_NEW_PY("FM", "TBGLST"), "tw") as __FDOut__:
-		__FDOut__.write(f"""TBGLST = {OBRKT}{NEWLINE}{NTAB(1)}#{FOLD1STARTHERE}{NEWLINE}""")
-		__FDOut__.write("""FM_parseTBGLST(__FDOut__)""")
-		__FDOut__.write(f"""{NTAB(1)}#{FOLD1ENDHERE}{NEWLINE}{CBRKT}{NEWLINE}""")
+	FM_parseTBGLST.parseTBGLST()
 
 	with open(NAME_LCL_NEW_PY("FM"), "tw") as __FDOut__:
 		strToWrt_ = makeFM()

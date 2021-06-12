@@ -1,8 +1,7 @@
 
 
-	__FILENAME__ = "FM_TBGLST_PSG.py"
-	TBGLST = [
-	(__FILENAME__, ("FMAXPSG", FMAX_NOP, "FMAXPSG_BEGINS",),),
+__FILENAME__ = "FM_TBGLST_PSG.py"
+TBGLST = [
 	(__FILENAME__, ("FMAXPSG_SCTN0900_KEY_DEF", FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py",),),
 	(__FILENAME__, ("FMAXPSG_SCTN0900_STR_DEF", FMAXFM_SCTN0101_AX_DEF, "define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>",),),
 	(__FILENAME__, ("FMAXPSG_SCTN0900_VAL_DEF", FMAXFM_SCTN0101_AX_DEF, "define a value in the first define section in PSG.py <NAC><VALNAME><VAL>",),),
@@ -1096,3 +1095,12 @@
 	("PSGVAL___VERTICAL_SCROLL_ONLY", FMAXPSG_SCTN0910_STR_DEF, "VERTICAL_SCROLL_ONLY", "verticale_scroll_only", "",),
 	("PSGVAL___VISIBLE", FMAXPSG_SCTN0910_STR_DEF, "VISIBLE", "visible", "visibility of elements",),
 ]
+
+
+#
+#
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# end of FM_TBGLST_PSG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+#

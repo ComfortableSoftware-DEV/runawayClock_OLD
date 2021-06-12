@@ -118,6 +118,7 @@ HASH_sha3_512 = HL.sha3_512()  # 64 byte hash
 HASH_sha384 = HL.sha384()  # 48 byte hash",),
 HASH_sha512 = HL.sha512()  # 64 byte hash",),
 
+
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0001 _CHR_ _CONST_
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -291,16 +292,20 @@ NAME_HOME_SELF_CACHE = lambda __NAME__, __FILENAME__: f"""/home/will/.cache/{__N
 NAME_HOME_SELF_CONFIG = lambda __NAME__, __FILENAME__: f"""/home/will/.config/{__NAME__}/{__FILENAME__}"""
 
 
-NAME_LCL_BTM_PY = lambda __NAME__: f"""{__NAME__}_BTM.py"""
+NAME_LCL_BTM_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_BTM.py"""
 NAME_LCL_IMG_PY = lambda __FILENAME__: f"""res/IMG/{__FILENAME__}"""
 NAME_LCL_MD_PY = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}.md"""
-NAME_LCL_NEW_PY = lambda __NAME__: f"""{__NAME__}_NEW.py"""
+NAME_LCL_NEW_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_NEW.py"""
 NAME_LCL_RES_PY = lambda __FILENAME__: f"""res/{__FILENAME__}"""
 NAME_LCL_ROOT_PY = lambda __FILENAME__: f"""{__FILENAME__}"""
-NAME_LCL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_BTM.py"""
-NAME_LCL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
-NAME_LCL_SUB_PY = lambda __NAME__, __SUB__: f"""{__NAME__}_{__SUB__}.py"""
-NAME_LCL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
+NAME_LCL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_BTM.py"""
+NAME_LCL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
+NAME_LCL_SUB_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}.py"""
+NAME_LCL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
+NAME_LCL_SUB01_BTM_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_BTM.py"""
+NAME_LCL_SUB01_NEW_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_NEW.py"""
+NAME_LCL_SUB01_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}.py"""
+NAME_LCL_SUB01_TOP_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_TOP.py"""
 NAME_LCL_TOP_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_TOP.py"""
 
 
@@ -345,7 +350,6 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 	f"{ESC}[36m",  # entry for ESC-[36m
 ]
 
-#
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0201 CF defines
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
