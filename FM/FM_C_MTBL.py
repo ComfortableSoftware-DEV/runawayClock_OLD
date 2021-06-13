@@ -57,7 +57,7 @@ itemToExplode_ {itemToExplode_}
 				self.__FILE_DICT__[_fileData_[1]] = open(_fileData_[1], "tw")
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			_strToWrt_ = f"""{FM.NTAB(1)}{FM.OPAREN}{FM.OPAREN}{FM.DBLQT}{_fileData_[0]}, {FM.DBLQT}{_fileData_[1]}{FM.DBLQT}{FM.CPAREN}, {FM.DBLQT}{itemToExplode_[0]}{FM.DBLQT}, {itemToExplode_[1]}, """
+			_strToWrt_ = f"""{FM.NTAB(1)}{FM.OPAREN}{FM.OPAREN}{FM.DBLQT}{_fileData_[0]}, {FM.DBLQT}{_fileData_[1]}{FM.DBLQT}{FM.CPAREN}, {FM.DBLQT}{itemToExplode_[0]}{FM.DBLQT}, FM.{itemToExplode_[1]}, """
 
 			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			for _index_ in range(2, len(itemToExplode_)):

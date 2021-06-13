@@ -1,0 +1,1 @@
+	(("CF, "FM/FM_TBGLST_CF_NEW.py"), "CFVAL", FMAX_NOP, "CFVAL_BEGINS",),

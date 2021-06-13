@@ -1,3 +1,3 @@
 	(("FM, "FM/FM_TBGLST_NEW.py"), "FM_00_ORIGIN", FMAX_NOP, "start of FM_TBGLST",),
 	(("FM, "FM/FM_TBGLST_NEW.py"), "FM_00_ORIGIN", FMAX_NOP, "start of FM_TBGLST",),
-	(("CF, "FM/FM_TBGLST_CF.py"), "CFVAL", FMAX_NOP, "CFVAL_BEGINS",),
+	(("CF, "FM/FM_TBGLST_CF_NEW.py"), "CFVAL", FMAX_NOP, "CFVAL_BEGINS",),
