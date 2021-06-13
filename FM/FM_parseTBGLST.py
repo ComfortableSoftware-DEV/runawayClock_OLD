@@ -1075,8 +1075,8 @@ def parseTBGLST():
 
 				_thisElementName_ = _thisItem_[2]
 
-				if _thisElementName_ not in FM.TMFM.FMPSG_SCTN0909_TEXT_DICT:
-					FM.TMFM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] = ""
+				if _thisElementName_ not in FM.FMPSG_SCTN0909_TEXT_DICT:
+					FM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] = ""
 
 				FM.FMPSG_SCTN0909_TEXT_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
 
@@ -1095,15 +1095,15 @@ def parseTBGLST():
 				_thisKey_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
 
-				if _thisElementName_ not in FM.TMFM.FMPSG_SCTN0909_TEXT_DICT:
-					FM.TMFM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] = ""
+				if _thisElementName_ not in FM.FMPSG_SCTN0909_TEXT_DICT:
+					FM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] = ""
 
 					# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
 					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-				FM.TMFM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] += f"""{FM.NTAB(1)}{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
+				FM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] += f"""{FM.NTAB(1)}{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -1120,15 +1120,15 @@ def parseTBGLST():
 				_thisKey_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
 
-				if _thisElementName_ not in FM.TMFM.FMPSG_SCTN0909_TEXT_DICT:
-					FM.TMFM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] = ""
+				if _thisElementName_ not in FM.FMPSG_SCTN0909_TEXT_DICT:
+					FM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] = ""
 
 					# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
 					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-				FM.TMFM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] += f"""{FM.NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
+				FM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] += f"""{FM.NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
