@@ -7,15 +7,16 @@ class TBGLST():
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 		self.__TBGLST__ = []
 		self.__RESULT__ = None
-
+		print(f"""swallowing CF""")
 		from FM import FM_TBGLST_CF
 		self.__TBGLST__.extend(FM_TBGLST_CF.TBGLST)
-
+		print(f"""swallowing FM""")
 		from FM import FM_TBGLST_FM
 		self.__TBGLST__.extend(FM_TBGLST_FM.TBGLST)
-
+		print(f"""swallowing PSG""")
 		from FM import FM_TBGLST_PSG
 		self.__TBGLST__.extend(FM_TBGLST_PSG.TBGLST)
+		print("all swallowed")
 
 #		for _thisElement_ in self.__TBGLST__:
 #			print(f"""{_thisElement_}""")
@@ -34,7 +35,7 @@ class TBGLST():
 		try:
 			self.__RESULT__ = self.__TBGLST__.pop(0)
 			return self.__RESULT__
-		except:
+		except IndexError:
 			raise StopIteration
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 

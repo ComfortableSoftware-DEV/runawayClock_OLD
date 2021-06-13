@@ -213,14 +213,14 @@ NAME_LCL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB
 NAME_LCL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
 NAME_LCL_SUB_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}.py"""
 NAME_LCL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
-NAME_LCL_SUB01_BTM_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_BTM.py"""
-NAME_LCL_SUB01_NEW_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_NEW.py"""
-NAME_LCL_SUB01_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}.py"""
-NAME_LCL_SUB01_TOP_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_TOP.py"""
-NAME_LCL_SUB02_BTM_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_BTM.py"""
-NAME_LCL_SUB02_NEW_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_NEW.py"""
-NAME_LCL_SUB02_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}.py"""
-NAME_LCL_SUB02_TOP_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_TOP.py"""
+NAME_LCL_SUB1_BTM_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_BTM.py"""
+NAME_LCL_SUB1_NEW_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_NEW.py"""
+NAME_LCL_SUB1_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}.py"""
+NAME_LCL_SUB1_TOP_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_TOP.py"""
+NAME_LCL_SUB2_BTM_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_BTM.py"""
+NAME_LCL_SUB2_NEW_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_NEW.py"""
+NAME_LCL_SUB2_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}.py"""
+NAME_LCL_SUB2_TOP_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_TOP.py"""
 NAME_LCL_TOP_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_TOP.py"""
 
 
@@ -266,7 +266,6 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 ]
 
 #
-
 
 #
 #
