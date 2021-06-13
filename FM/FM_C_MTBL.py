@@ -43,23 +43,29 @@ TBGLST = {FM.OBRKT}
 
 	def write(self, itemToExplode_):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (itemToExplode_ is not None):
 			_fileData_ = itemToExplode_.pop(0)
 
-			if (_fileData_[1] in self.__FILE_DICT__):
-				_strToWrt_ = f"""{NTAB(1)}{FM.OPAREN}{FM.OPAREN}{FM.DBLQT}{_fileData_[0]}, {FM.DBLQT}{_fileData_[1]}{FM.DBLQT}{FM.CPAREN}, {FM.DBLQT}{itemToExplode_[0]}{FM.DBLQT}, {itemToExplode_[1]}, """
-				self.__FILE_DICT__[_fileData_[1]].write(_strToWrt_)
-
-			else:
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_fileData_[1] not in self.__FILE_DICT__):
 				self.__FILE_DICT__[_fileData_[1]] = open(CF.NAME_LCL_SUB_NEW_PY(_fileData_), "tw")
-				self.startSubFile(_fileData_)
-				self.__FILE_DICT__[_fileData_[1]].write(f"""{NTAB(1)}{OPAREN}{_fileData_[1]}, {DBLQT}{itemToExplode_[0]}{DBLQT}, {itemToExplode_[1]}, """)
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
+			_strToWrt_ = f"""{NTAB(1)}{FM.OPAREN}{FM.OPAREN}{FM.DBLQT}{_fileData_[0]}, {FM.DBLQT}{_fileData_[1]}{FM.DBLQT}{FM.CPAREN}, {FM.DBLQT}{itemToExplode_[0]}{FM.DBLQT}, {itemToExplode_[1]}, """
+
+			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			for _index_ in range(2, len(itemToExplode_)):
-				self.__FILE_DICT__[_fileData_[1]].write(f"""{DBLQT}{itemToExplode_[_index_]}{DBLQT}, """)
+				_strToWrt_ += f"""{DBLQT}{itemToExplode_[_index_]}{DBLQT}, """)
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 
-			self.__FILE_DICT__[_fileData_[1]].write(f"""{_strToRtn_[:-1]}{CPAREN},{NEWLINE}""")
-			return itemToExplode_
+			_strToWrt_ = _strToWrt_[:-1] + f"""{FM.CPAREN},{FM.NEWLINE}"""
+			self.__FILE_DICT__[_fileData_[1]].write(_strToWrt_)
+			self.__FILE_DICT__[FM.NAME_LCL_SUB_NEW_PY("FM", "TBGLST")].write(_strToWrt_)
+
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+		return itemToExplode_
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 
