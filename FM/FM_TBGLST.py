@@ -17,8 +17,8 @@ class TBGLST():
 		from FM import FM_TBGLST_PSG
 		self.__TBGLST__.extend(FM_TBGLST_PSG.TBGLST)
 
-		for _thisElement_ in self.__TBGLST__:
-			print(f"""{_thisElement_}""")
+#		for _thisElement_ in self.__TBGLST__:
+#			print(f"""{_thisElement_}""")
 
 		self.__TBGLST__.sort()
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
