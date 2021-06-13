@@ -8,7 +8,6 @@ class TBGLST():
 		self.__TBGLST__ = []
 		self.__RESULT__ = None
 
-
 		from FM import FM_TBGLST_CF
 		self.__TBGLST__.extend(FM_TBGLST_CF.TBGLST)
 

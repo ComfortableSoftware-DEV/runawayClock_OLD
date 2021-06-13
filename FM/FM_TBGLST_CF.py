@@ -1,7 +1,10 @@
 
 
 from FM import FM
-__FILENAME__ = "FM_TBGLST_CF.py"
+
+
+__MODULE_NAME__ = "CF"
+__FILENAME__ = F"""{FM.NAME_LCL_SUB01_PY(__MODULE_NAME__, "TBGLST", f"{__MODULE_NAME__}")}"""
 TBGLST = [
 	(__FILENAME__, "CFVAL", FM.FMAX_NOP, "CFVAL_BEGINS",),
 	(__FILENAME__, "CFVAL_____", FM.FMAX_NOP, "CFVAL_ENDS",),

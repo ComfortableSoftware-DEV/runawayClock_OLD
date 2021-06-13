@@ -29,6 +29,7 @@
 # * def __main__():
 
 
+
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0001 _CHR_ _CONST_
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -216,6 +217,10 @@ NAME_LCL_SUB01_BTM_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NA
 NAME_LCL_SUB01_NEW_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_NEW.py"""
 NAME_LCL_SUB01_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}.py"""
 NAME_LCL_SUB01_TOP_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_TOP.py"""
+NAME_LCL_SUB02_BTM_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_BTM.py"""
+NAME_LCL_SUB02_NEW_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_NEW.py"""
+NAME_LCL_SUB02_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}.py"""
+NAME_LCL_SUB02_TOP_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_TOP.py"""
 NAME_LCL_TOP_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_TOP.py"""
 
 
@@ -259,6 +264,8 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 	f"{ESC}[35m",  # entry for ESC-[35m
 	f"{ESC}[36m",  # entry for ESC-[36m
 ]
+
+#
 
 
 #
@@ -1088,38 +1095,22 @@ def doErrorItem(message_, itemToError_):
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# explodeItem
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def explodeItem(itemToExplode_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	if (itemToExplode_ is not None):
-		_filename_ = itemToExplode_.pop(0)
-		_strToRtn_ = ""
-		_strToRtn_ += f"""{NTAB(1)}{OPAREN}{DBLQT}{itemToExplode_[0]}{DBLQT}, {itemToExplode_[1]}, """
-		for _index_ in range(2, len(itemToExplode_)):
-			_strToRtn_ += f"""{DBLQT}{itemToExplode_[_index_]}{DBLQT}, """
-		_strToRtn_ = f"""{_strToRtn_[:-1]}{CPAREN},{NEWLINE}"""
-		return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # FM
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def FM():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	from FM import FM_parseTBGLST
-	FM_parseTBGLST.parseTBGLST()
+		from FM import FM_parseTBGLST
+		FM_parseTBGLST.parseTBGLST()
 
-	from FM import FM_makeCF
-	FM_makeCF.makeCF()
+		from FM import FM_makeCF
+		FM_makeCF.makeCF()
 
-	from FM import FM_makeFM
-	FM_makeFM.makeFM()
+		from FM import FM_makeFM
+		FM_makeFM.makeFM()
 
-	from FM import FM_makePSG
-	FM_makePSG.makePSG()
+		from FM import FM_makePSG
+		FM_makePSG.makePSG()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1ff
 
