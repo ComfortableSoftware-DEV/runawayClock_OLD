@@ -1,44 +1,47 @@
 
 
+from FM import FM
+
+
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # makeCF
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def makeCF():
 	## fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_strToRtn_ = ""
-	_strToRtn_ += f"""{readFileToStr(NAME_GLBL_TOP_PY("CF"))}{readFileToStr(NAME_GLBL_ROOT_PY("SCTN0102.py"))}"""
+	_strToRtn_ += f"""{FM.readFileToStr(FM.NAME_GLBL_TOP_PY("CF"))}{FM.readFileToStr(FM.NAME_GLBL_ROOT_PY("SCTN0102.py"))}"""
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	_strToRtn_ += f"""{makeAComment("SCTN0201 CF defines")}"""
-	_dictToUse_ = sortADict(FM.FMCF_SCTN0201_DEF_DICT)
+	_strToRtn_ += f"""{FM.makeAComment("SCTN0201 CF defines")}"""
+	_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0201_DEF_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FM.FMCF_SCTN0201_DEF_CMNT_DICT[_thisName_]}{NEWLINE}"""
-	_strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
+		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FM.FMCF_SCTN0201_DEF_CMNT_DICT[_thisName_]}{FM.NEWLINE}"""
+	_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}"""
 	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	_strToRtn_ += f"""{makeAComment("SCTN0202 options structures")}"""
+	_strToRtn_ += f"""{FM.makeAComment("SCTN0202 options structures")}"""
 	_strToRtn1_ = ""
 	_strToRtn2_ = ""
-	_strToRtn1_ += f"""OPTIONS = {OBRCE}{NEWLINE}{FOLD1STARTHERELN}"""
-	_strToRtn2_ += f"""OPTIONSHELPDICT = {OBRCE}{NEWLINE}{FOLD1STARTHERELN}"""
-	_dictToUse_ = sortADict(FM.FMCF_SCTN0202_OPTIONS_DICT)
+	_strToRtn1_ += f"""OPTIONS = {FM.OBRCE}{FM.NEWLINE}{FM.FOLD1STARTHERELN}"""
+	_strToRtn2_ += f"""OPTIONSHELPDICT = {FM.OBRCE}{FM.NEWLINE}{FM.FOLD1STARTHERELN}"""
+	_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0202_OPTIONS_DICT)
 	for _thisName_, _values_ in _dictToUse_.items():
-		_strToRtn1_ += f"""{NTAB(1)}{DBLQT}{_thisName_}{DBLQT}: {OBRCE}{NEWLINE}{NTAB(1)}{FOLD2STARTHERELN}{_values_}{NTAB(1)}{CBRCE},{NEWLINE}{NTAB(1)}{FOLD2ENDHERELN}"""
-		_strToRtn2_ += f"""{NTAB(1)}{DBLQT}{_thisName_}{DBLQT}: {NEWLINE}{NTAB(1)}{FOLD2STARTHERELN}{TRIQT}{FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisName_]}{NTAB(1)}{TRIQT},{NEWLINE}{NTAB(1)}{FOLD2ENDHERELN}"""
-	_strToRtn1_ += f"""{CBRCE}{NEWLINE}{FOLD1ENDHERELN}{NEWLINE}"""
-	_strToRtn2_ += f"""{CBRCE}{NEWLINE}{FOLD1ENDHERELN}{NEWLINE}"""
+		_strToRtn1_ += f"""{FM.NTAB(1)}{FM.DBLQT}{_thisName_}{FM.DBLQT}: {FM.OBRCE}{FM.NEWLINE}{FM.NTAB(1)}{FM.FOLD2STARTHERELN}{_values_}{FM.NTAB(1)}{FM.CBRCE},{FM.NEWLINE}{FM.NTAB(1)}{FM.FOLD2ENDHERELN}"""
+		_strToRtn2_ += f"""{FM.NTAB(1)}{FM.DBLQT}{_thisName_}{FM.DBLQT}: {FM.NEWLINE}{FM.NTAB(1)}{FM.FOLD2STARTHERELN}{FM.TRIQT}{FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisName_]}{FM.NTAB(1)}{FM.TRIQT},{FM.NEWLINE}{FM.NTAB(1)}{FM.FOLD2ENDHERELN}"""
+	_strToRtn1_ += f"""{FM.CBRCE}{FM.NEWLINE}{FM.FOLD1ENDHERELN}{FM.NEWLINE}"""
+	_strToRtn2_ += f"""{FM.CBRCE}{FM.NEWLINE}{FM.FOLD1ENDHERELN}{FM.NEWLINE}"""
 	_strToRtn_ += f"""{_strToRtn1_}{_strToRtn2_}"""
 
 	# ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥ ⥣1⥥
-	_strToRtn_ += f"""OPTIONSDICT = {OBRCE}{NEWLINE}"""
-	_dictToUse_ = sortADict(FM.FMCF_SCTN0202_OPTIONSDICT_DICT)
+	_strToRtn_ += f"""OPTIONSDICT = {FM.OBRCE}{FM.NEWLINE}"""
+	_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0202_OPTIONSDICT_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
 		_strToRtn_ += f"""{_value_}"""
-	_strToRtn_ += f"""{CBRCE}{NEWLINE}{NEWLINE}{NEWLINE}"""
+	_strToRtn_ += f"""{FM.CBRCE}{FM.NEWLINE}{FM.NEWLINE}{FM.NEWLINE}"""
 	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
 
-	_strToRtn_ += f"""{makeAWideComment("end of managed sections of CF.py")}{NEWLINE}{NEWLINE}"""
+	_strToRtn_ += f"""{FM.makeAWideComment("end of managed sections of CF.py")}{FM.NEWLINE}{FM.NEWLINE}"""
 	return _strToRtn_
 
 	## fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
