@@ -4,7 +4,7 @@ from FM import FM
 
 
 __MODULE_NAME__ = "CF"
-__FILENAME__ = F"""{FM.NAME_LCL_SUB1_PY("FM", "TBGLST", __MODULE_NAME__)}"""
+__FILENAME__ = f"""{FM.NAME_LCL_SUB1_NEW_PY("FM", "TBGLST", __MODULE_NAME__)}"""
 __ID__ = (__MODULE_NAME__, __FILENAME__)
 TBGLST = [
 	(__ID__, "CFVAL", FM.FMAX_NOP, "CFVAL_BEGINS",),

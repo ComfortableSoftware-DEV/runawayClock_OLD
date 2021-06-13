@@ -4,7 +4,7 @@ from FM import FM
 
 
 __MODULE_NAME__ = "FM"
-__FILENAME__ = F"""{FM.NAME_LCL_SUB1_PY("FM", "TBGLST", __MODULE_NAME__)}"""
+__FILENAME__ = f"""{FM.NAME_LCL_SUB1_NEW_PY("FM", "TBGLST", __MODULE_NAME__)}"""
 __ID__ = (__MODULE_NAME__, __FILENAME__)
 TBGLST = [
 	(__ID__, "FMAX_NOP", FM.FMAXFM_SCTN0101_AX_DEF, "ignore the remainder of the line"),
