@@ -63,8 +63,8 @@ def parseTBGLST():
 				_thisLambdaName_ = _thisItem_[2]
 				thisLambdaVal_ = _thisItem_[3]
 
-				FMCF_SCTN0003_TYPE_DICT[_thisLambdaName_] = f"lambda {thisLambdaVal_}"
-				FMCF_SCTN0003_TYPE_CMNT_DICT[_thisLambdaName_] = "{_thisComment_}"
+				FM.FMCF_SCTN0003_TYPE_DICT[_thisLambdaName_] = f"lambda {thisLambdaVal_}"
+				FM.FMCF_SCTN0003_TYPE_CMNT_DICT[_thisLambdaName_] = "{_thisComment_}"
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -80,8 +80,8 @@ def parseTBGLST():
 				_thisTypeName_ = _thisItem_[2]
 				_thisType_ = _thisItem_[3]
 
-				FMCF_SCTN0003_TYPE_DICT[_thisTypeName_] = f"{FM.DBLQT}{_thisType_}{FM.DBLQT}"
-				FMCF_SCTN0003_TYPE_CMNT_DICT[_thisTypeName_] = f"{_thisComment_}"
+				FM.FMCF_SCTN0003_TYPE_DICT[_thisTypeName_] = f"{FM.DBLQT}{_thisType_}{FM.DBLQT}"
+				FM.FMCF_SCTN0003_TYPE_CMNT_DICT[_thisTypeName_] = f"{_thisComment_}"
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -97,8 +97,8 @@ def parseTBGLST():
 				_thisValName_ = _thisItem_[2]
 				_thisVal_ = _thisItem_[3]
 
-				FMCF_SCTN0201_DEF_DICT[_thisValName_] = f"{FM.DBLQT}{_thisVal_}{FM.DBLQT}"
-				FMCF_SCTN0201_DEF_CMNT_DICT[_thisValName_] = f"{_thisComment_}"
+				FM.FMCF_SCTN0201_DEF_DICT[_thisValName_] = f"{FM.DBLQT}{_thisVal_}{FM.DBLQT}"
+				FM.FMCF_SCTN0201_DEF_CMNT_DICT[_thisValName_] = f"{_thisComment_}"
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -114,8 +114,8 @@ def parseTBGLST():
 				_thisValName_ = _thisItem_[2]
 				_thisVal_ = _thisItem_[3]
 
-				FMCF_SCTN0201_DEF_DICT[_thisValName_] = f"{_thisVal_}"
-				FMCF_SCTN0201_DEF_CMNT_DICT[_thisValName_] = f"{_thisComment_}"
+				FM.FMCF_SCTN0201_DEF_DICT[_thisValName_] = f"{_thisVal_}"
+				FM.FMCF_SCTN0201_DEF_CMNT_DICT[_thisValName_] = f"{_thisComment_}"
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -130,10 +130,10 @@ def parseTBGLST():
 
 				_thisParm_ = _thisItem_[2]
 
-				if _thisParm_ not in FMCF_SCTN0202_OPTIONSHELPDICT_DICT:
-					FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
+				if _thisParm_ not in FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT:
+					FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
 
-				FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
+				FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -150,13 +150,13 @@ def parseTBGLST():
 				_thisKey_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
 
-				if _thisParm_ not in FMCF_SCTN0202_OPTIONS_DICT:
-					FMCF_SCTN0202_OPTIONS_DICT[_thisParm_] = ""
-				if _thisParm_ not in FMCF_SCTN0202_OPTIONSHELPDICT_DICT:
-					FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
+				if _thisParm_ not in FM.FMCF_SCTN0202_OPTIONS_DICT:
+					FM.FMCF_SCTN0202_OPTIONS_DICT[_thisParm_] = ""
+				if _thisParm_ not in FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT:
+					FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
 
-				FMCF_SCTN0202_OPTIONS_DICT[_thisParm_] += f"""{NTAB(2)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{NEWLINE}"""
-				FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
+				FM.FMCF_SCTN0202_OPTIONS_DICT[_thisParm_] += f"""{NTAB(2)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{NEWLINE}"""
+				FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -171,12 +171,12 @@ def parseTBGLST():
 				_thisParm_ = _thisItem_[2]
 				_thisKey_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
-				if _thisParm_ not in FMCF_SCTN0202_OPTIONS_DICT:
-					FMCF_SCTN0202_OPTIONS_DICT[_thisParm_] = ""
-				if _thisParm_ not in FMCF_SCTN0202_OPTIONSHELPDICT_DICT:
-					FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
-				FMCF_SCTN0202_OPTIONS_DICT[_thisParm_] += f"""{NTAB(2)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
-				FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
+				if _thisParm_ not in FM.FMCF_SCTN0202_OPTIONS_DICT:
+					FM.FMCF_SCTN0202_OPTIONS_DICT[_thisParm_] = ""
+				if _thisParm_ not in FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT:
+					FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
+				FM.FMCF_SCTN0202_OPTIONS_DICT[_thisParm_] += f"""{NTAB(2)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+				FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -189,7 +189,7 @@ def parseTBGLST():
 					continue
 				_thisKey_ = _thisItem_[2]
 				_thisVal_ = _thisItem_[3]
-				FMCF_SCTN0202_OPTIONSDICT_DICT[_thisName_] = f"{NTAB(1)}{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{NEWLINE}"
+				FM.FMCF_SCTN0202_OPTIONSDICT_DICT[_thisName_] = f"{NTAB(1)}{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{NEWLINE}"
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -202,7 +202,7 @@ def parseTBGLST():
 					continue
 				_thisKey_ = _thisItem_[2]
 				_thisVal_ = _thisItem_[3]
-				FMCF_SCTN0202_OPTIONSDICT_DICT[_thisName_] = f"{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"
+				FM.FMCF_SCTN0202_OPTIONSDICT_DICT[_thisName_] = f"{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
