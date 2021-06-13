@@ -1092,12 +1092,14 @@ def doErrorItem(message_, itemToError_):
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def explodeItem(itemToExplode_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn_ += f"""{NTAB(1)}{OPAREN}{DBLQT}{itemToExplode_[0]}{DBLQT}, {itemToExplode_[1]}, """
-	for _index_ in range(2, len(itemToExplode_)):
-		_strToRtn_ += f"""{DBLQT}{itemToExplode_[_index_]}{DBLQT}, """
-	_strToRtn_ = f"""{_strToRtn_[:-1]}{CPAREN},{NEWLINE}"""
-	return _strToRtn_
+	if (itemToExplode_ is not None):
+		_filename_ = itemToExplode_.pop(0)
+		_strToRtn_ = ""
+		_strToRtn_ += f"""{NTAB(1)}{OPAREN}{DBLQT}{itemToExplode_[0]}{DBLQT}, {itemToExplode_[1]}, """
+		for _index_ in range(2, len(itemToExplode_)):
+			_strToRtn_ += f"""{DBLQT}{itemToExplode_[_index_]}{DBLQT}, """
+		_strToRtn_ = f"""{_strToRtn_[:-1]}{CPAREN},{NEWLINE}"""
+		return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
