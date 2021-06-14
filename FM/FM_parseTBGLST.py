@@ -306,11 +306,15 @@ def parseTBGLST():
 			# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 			elif _thisAX_ == FM.FMAXFM_SCTN0103_DICT_DEF:
 				# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-				if _thisItemLen_ != 3:
-					FM.doErrorItem("not 3 items", _thisItem_)
+				if _thisItemLen_ != 4:
+					FM.doErrorItem("not 4 items", _thisItem_)
 					continue
-				FM.FMFM_SCTN0103_DICT_DICT[_thisName_] = f"{FM.OBRCE}{FM.CBRCE}"
-				FM.FMFM_SCTN0103_DICT_CMNT_DICT[_thisName_] = f"{_thisComment_}"
+
+				_thisDictName_ = _thisItem_[2]
+
+				FM.FMFM_SCTN0103_DICT_DICT[_thisDictName_] = f"{FM.OBRCE}{FM.CBRCE}"
+				FM.FMFM_SCTN0103_DICT_CMNT_DICT[_thisDictName_] = f"{_thisComment_}"
+
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
