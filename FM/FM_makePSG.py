@@ -173,8 +173,7 @@ def makePSG():
 # {FM.NTAB(3)}**self.{_thisName_}_DICT,
 # {FM.NTAB(2)}{FM.CPAREN}{FM.NEWLINE}{FM.NTAB(1)}{FM.FOLD1ENDHERELN}{FM.NEWLINE}
 # """
-
-from FM import FM_makePSGClasses
+	from FM import FM_makePSGClasses
 	_strToRtn_ += FM_makePSGClasses.makePSGClasses()
 
 #
