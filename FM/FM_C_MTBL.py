@@ -9,12 +9,17 @@ class C_MTBL():
 	def __init__(self):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 		self.__FILE_DICT__ = {}
-		_filename_ = FM.NAME_LCL_SUB_NEW_PY("FM", "TBGLST")
+		_newFilename_ = FM.NAME_LCL_SUB_NEW_PY("FM", "TBGLST")
+		_filename_ = FM.NAME_LCL_SUB_PY("FM", "TBGLST")
 		_tupleToRtn_ = (
-			("FM", _filename_),
+			{
+				"moduleName_": "FM",
+				"sub_": "TBGLST",
+				"filename_": _newFilename_,
+			},
 			"FM_00_ORIGIN",
 			FM.FMAX_NOP,
-			"start of FM_TBGLST",
+			f"""start of {_filename_}""",
 		)
 		self.write(_tupleToRtn_)
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
