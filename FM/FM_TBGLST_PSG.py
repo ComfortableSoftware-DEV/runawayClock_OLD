@@ -3,9 +3,16 @@
 from FM import FM
 
 
-__MODULE_NAME__ = "PSG"
-__FILENAME__ = f"""{FM.NAME_LCL_SUB1_NEW_PY("FM", "TBGLST", __MODULE_NAME__)}"""
-__ID__ = (__MODULE_NAME__, __FILENAME__)
+__MODULE_NAME__ = "FM"
+__SUB__ = "TBGLST"
+__SUB1__ = "PSG"
+__FILENAME__ = f"""{FM.NAME_LCL_SUB1_PY(__MODULE_NAME__, __SUB__, __SUB1__)}"""  #
+__ID__ = {
+	"moduleName_": __MODULE_NAME__,  # FM
+	"sub_": __SUB__,  # TBGLST
+	"sub1_": __SUB1__,  # PSG
+	"filename_": __FILENAME__,  #
+}
 TBGLST = [
 	(__ID__, "FMAXPSG_SCTN0900_KEY_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py",),
 	(__ID__, "FMAXPSG_SCTN0900_STR_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>",),
