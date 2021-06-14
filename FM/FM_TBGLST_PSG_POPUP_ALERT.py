@@ -1,5 +1,8 @@
 
 
+return
+
+
 __CLASS__ = "POPUP_ALERT"
 __MODULE_NAME__ = "PSG"
 __FILENAME__ = "FM_TBGLST_PSG_POPUP_ALERT.py"
