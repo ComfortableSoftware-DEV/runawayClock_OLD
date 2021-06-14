@@ -31,7 +31,7 @@ class C_MTBL():
 			_thisFD_.close()
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
-	def startNewFile(self, * moduleName_, **KWargs_):
+	def startLclNewFile(self, * moduleName_, **KWargs_):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 		_strToRtn_ = ""
 
@@ -39,11 +39,15 @@ class C_MTBL():
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (("sub_" not in KWargs_) and ("sub1_" not in KWargs_) and ("sub2_" not in KWargs_) and ("class_" not in KWargs_)):
 			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			_filename_ = FM.NAME_LCL_NEW_PY(moduleName_)
+			_newFilename_ = FM.NAME_LCL_NEW_PY(moduleName_)
+			_filename_ = FM.NAME_LCL_PY(moduleName_)
 			_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}{FM.NEWLINE}
 __MODULE_NAME__ = {FM.DBLQT}{moduleName_}{FM.DBLQT}
-__FILENAME__ = {FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_NEW_PY(__MODULE_NAME__){FM.CBRCE}{FM.TRIQT}
-__ID__ = (__MODULE_NAME__, __FILENAME__)
+__FILENAME__ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_PY(__MODULE_NAME__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
+__ID__ = {FM.OBRCE}
+{FM.NTAB(1)}{FM.DBLQT}moduleName_{FM.DBLQT}: __MODULE_NAME__,  # {moduleName_}
+{FM.NTAB(1)}{FM.DBLQT}filename_{FM.DBLQT}: __FILENAME__,  # {_filename_}
+{FM.CBRCE}
 TBGLST = {FM.OBRKT}
 {FM.NTAB(1)}{FM.OPAREN}__ID__, {FM.DBLQT}00_{moduleName_}_BEGINS{FM.DBLQT}, FMAX_NOP, {FM.DBLQT}start of {_filename_}{FM.DBLQT},{FM.CPAREN},{FM.NEWLINE}"""
 		self.__FILE_DICT__[_filename_].write(_strToRtn_)
@@ -54,13 +58,17 @@ TBGLST = {FM.OBRKT}
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (("sub_" not in KWargs_) and ("sub1_" not in KWargs_) and ("sub2_" not in KWargs_) and ("class_" in KWargs_)):
 			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			_filename_ = f"""{FM.NAME_LCL_NEW_PY(moduleName_)}"""
 			_class_ = f"""{KWargs["class_"]}"""
+			_filename_ = f"""{FM.NAME_LCL_CLASS_NEW_PY(moduleName_, _class_)}"""
 			_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}{FM.NEWLINE}
 __MODULE_NAME__ = {FM.DBLQT}{moduleName_}{FM.DBLQT}
 __CLASS__ = {FM.DBLQT}{KWargs_["class_"]}{FM.DBLQT}
-__FILENAME__ = {FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_CLASS_NEW_PY(__MODULE_NAME__, __CLASS__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
-__ID__ = (__MODULE_NAME__, __FILENAME__)  # ({moduleName_}, {_filename_})
+__FILENAME__ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_CLASS_NEW_PY(__MODULE_NAME__, __CLASS__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
+__ID__ = {FM.OBRCE}
+{FM.NTAB(1)}{FM.DBLQT}moduleName_{FM.DBLQT}: __MODULE_NAME__,  # {moduleName_}
+{FM.NTAB(1)}{FM.DBLQT}filename_{FM.DBLQT}: __FILENAME__,  # {_filename_}
+{FM.NTAB(1)}"class_": __CLASS__,  # {_class_}
+{FM.CBRCE}
 TBGLST = {FM.OBRKT}
 {FM.NTAB(1)}{FM.OPAREN}__ID__, {FM.DBLQT}00_{moduleName_}_BEGINS{FM.DBLQT}, FMAX_NOP, {FM.DBLQT}start of {_filename_}{FM.DBLQT},{FM.CPAREN},{FM.NEWLINE}"""
 		self.__FILE_DICT__[_filename_].write(_strToRtn_)
