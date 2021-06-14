@@ -43,7 +43,7 @@ def makeFM():
 		_dictToUse_ = FM.sortADict(FM.FMFM_SCTN0103_DICT_DICT)
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		for _thisName_, _value_ in _dictToUse_.items():
-			_FDmakeFM_.write(f"""{_thisName_} = {FM.OBRCE}99{FM.CBRCE}  # {FM.FMFM_SCTN0103_DICT_CMNT_DICT[_thisName_]}{FM.NEWLINE}""")
+			_FDmakeFM_.write(f"""{_thisName_} = {FM.OBRCE}{FM.CBRCE}  # {FM.FMFM_SCTN0103_DICT_CMNT_DICT[_thisName_]}{FM.NEWLINE}""")
 		_FDmakeFM_.write(f"""{FM.NEWLINE}{FM.NEWLINE}""")
 	# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
