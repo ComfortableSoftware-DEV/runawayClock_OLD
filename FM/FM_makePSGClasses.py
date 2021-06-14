@@ -10,7 +10,7 @@ def makePSGClasses():
 	_strToRtn_ += f"""{FM.makeAComment("SCTN09FF classes")}{FM.NEWLINE}{FM.NEWLINE}"""
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	_dictToUse1_ = sortADict(FM.FMPSG_SCTN09FF_CLASS_DICT)
+	_dictToUse1_ = FM.sortADict(FM.FMPSG_SCTN09FF_CLASS_DICT)
 	for _thisClassName_, _theseVars_ in _dictToUse1_.items():
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 
@@ -149,7 +149,7 @@ def makePSGClasses():
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		if _thisClassName_ in FM.FMPSG_SCTN09FF_CLASS_COLUMN_DICT:
-			_dictToUse2_ = sortADict(FM.FMPSG_SCTN09FF_CLASS_COLUMN_DICT[_thisClassName_])
+			_dictToUse2_ = FM.sortADict(FM.FMPSG_SCTN09FF_CLASS_COLUMN_DICT[_thisClassName_])
 
 			for _thisElementName_, _vals1_ in _dictToUse2_.items():
 				_strToRtn_ += f"""{FM.NTAB(2)}self.{_thisElementName_} = {FM.OBRKT}  # {FM.FMPSG_SCTN09FF_CLASS_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_]}{FM.NEWLINE}{FM.NTAB(2)}{FM.FOLD3STARTHERELN}"""
@@ -173,7 +173,7 @@ def makePSGClasses():
 	# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
 		if _thisClassName_ in FM.FMPSG_SCTN09FF_CLASS_LAYOUT_DICT:
-			_dictToUse2_ = sortADict(FM.FMPSG_SCTN09FF_CLASS_LAYOUT_DICT[_thisClassName_])
+			_dictToUse2_ = FM.sortADict(FM.FMPSG_SCTN09FF_CLASS_LAYOUT_DICT[_thisClassName_])
 
 			for _thisElementName_, _vals1_ in _dictToUse2_.items():
 				_strToRtn_ += f"""{FM.NTAB(2)}self.{_thisElementName_} = {FM.OBRKT}  # {FM.FMPSG_SCTN09FF_CLASS_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_]}{FM.NEWLINE}{FM.NTAB(2)}{FM.FOLD3STARTHERELN}"""
