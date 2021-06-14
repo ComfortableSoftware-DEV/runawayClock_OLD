@@ -731,123 +731,7 @@ TABLEVEL = "TABLEVEL"  # key for tab levels
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN103 _DICT_ _DEF_
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-FMCF_SCTN0003_TYPE_CMNT_DICT = {}
-FMCF_SCTN0003_TYPE_DICT = {}
-FMCF_SCTN0201_DEF_CMNT_DICT = {}
-FMCF_SCTN0201_DEF_DICT = {}
-FMCF_SCTN0202_OPTIONSDICT_CMNT_DICT = {}
-FMCF_SCTN0202_OPTIONSDICT_DICT = {}
-FMCF_SCTN0202_OPTIONSHELPDICT_DICT = {}
-FMCF_SCTN0202_OPTIONS_CMNT_DICT = {}
-FMCF_SCTN0202_OPTIONS_DICT = {}
-FMCF_SCTN0203_DICT_CMNT_DICT = {}
-FMCF_SCTN0203_DICT_DICT = {}
-FMCF_SCTN0204_LIST_CMNT_DICT = {}
-
-FMPSG_SCTN0916_CLASS_SPIN_LIST_DICT = {}
-FMPSG_SCTN0900_DEF1_CMNT_DICT = {}
-FMPSG_SCTN0900_DEF1_DICT = {}
-FMPSG_SCTN0901_DEF2_CMNT_DICT = {}
-FMPSG_SCTN0901_DEF2_DICT = {}
-FMPSG_SCTN0902_DICT_CMNT_DICT = {}
-FMPSG_SCTN0902_DICT_DICT = {}
-FMPSG_SCTN0903_LIST_CMNT_DICT = {}
-FMPSG_SCTN0903_LIST_DICT = {}
-FMPSG_SCTN0904_PLATEQ_INNER_CMNT_DICT = {}
-FMPSG_SCTN0904_PLATEQ_INNER_DICT = {}
-FMPSG_SCTN0904_PLATEQ_OUTER_CMNT_DICT = {}
-FMPSG_SCTN0904_PLATEQ_OUTER_DICT = {}
-FMPSG_SCTN0905_TUPDICT_CMNT_DICT = {}
-FMPSG_SCTN0905_TUPDICT_DICT = {}
-FMPSG_SCTN0905_TUPDICT_TDD_DICT = {}
-FMPSG_SCTN0906_BTNS_CMNT_DICT = {}
-FMPSG_SCTN0906_BTNS_DICT = {}
-FMPSG_SCTN0907_SPIN_CMNT_DICT = {}
-FMPSG_SCTN0907_SPIN_DICT = {}
-FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = {}
-FMPSG_SCTN0908_CHECKBOX_CMNT_DICT = {}
-FMPSG_SCTN0908_CHECKBOX_DICT = {}
-FMPSG_SCTN0909_TEXT_CMNT_DICT = {}
-FMPSG_SCTN0909_TEXT_DICT = {}
-FMPSG_SCTN090A_RADIO_CMNT_DICT = {}
-FMPSG_SCTN090A_RADIO_DICT = {}
-FMPSG_SCTN090B_COLUMN_CMNT_DICT = {}
-FMPSG_SCTN090B_COLUMN_DICT = {}
-FMPSG_SCTN090B_COLUMN_PARMS_DICT = {}
-FMPSG_SCTN090C_APPDS_CMNT_DICT = {}
-FMPSG_SCTN090C_APPDS_DICT = {}
-FMPSG_SCTN090C_APPDSDICT_DICT = {}
-FMPSG_SCTN090D_FORMMAIN_CMNT_DICT = {}
-FMPSG_SCTN090D_FORMMAIN_DICT = {}
-FMPSG_SCTN090E_LAYOUT_CMNT_DICT = {}
-FMPSG_SCTN090E_LAYOUT_DICT = {}
-FMPSG_SCTN090F_WINDOW_CMNT_DICT = {}
-FMPSG_SCTN090F_WINDOW_DICT = {}
-FMPSG_SCTN0910_DEF3_CMNT_DICT = {}
-FMPSG_SCTN0910_DEF3_DICT = {}
-FMPSG_SCTN0911_COMBO_CMNT_DICT = {}
-FMPSG_SCTN0911_COMBO_DICT = {}
-FMPSG_SCTN0912_FRAME_CMNT_DICT = {}
-FMPSG_SCTN0912_FRAME_DICT = {}
-FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}
-FMPSG_SCTN0913_RCMENU_DICT = {}
-FMPSG_SCTN0914_FORMPOPUP_CMNT_DICT = {}
-FMPSG_SCTN0914_FORMPOPUP_DICT = {}
-FMPSG_SCTN0915_PUDLG_CMNT_DICT = {}
-FMPSG_SCTN0915_PUDLG_DICT_DICT = {}
-FMPSG_SCTN0915_PUDLG_LIST_DICT = {}
-FMPSG_SCTN0915_PUDLG_TYPE_DICT = {}
-FMPSG_SCTN09FF_CLASS_BTNS_ADDON_DICT = {}
-FMPSG_SCTN09FF_CLASS_BTNS_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_BTNS_DICT = {}
-FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT = {}
-FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_CHECKBOX_DICT = {}
-FMPSG_SCTN09FF_CLASS_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_COLUMN_ADDON_DICT = {}
-FMPSG_SCTN09FF_CLASS_COLUMN_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_COLUMN_DICT = {}
-FMPSG_SCTN09FF_CLASS_COLUMN_PARMS_DICT = {}
-FMPSG_SCTN09FF_CLASS_COMBO_ADDON_DICT = {}
-FMPSG_SCTN09FF_CLASS_COMBO_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_COMBO_DICT = {}
-FMPSG_SCTN09FF_CLASS_DEF_DICT = {}
-FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_DICT_DICT = {}
-FMPSG_SCTN09FF_CLASS_DICT = {}
-FMPSG_SCTN09FF_CLASS_FRAME_ADDON_DICT = {}
-FMPSG_SCTN09FF_CLASS_FRAME_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_FRAME_DICT = {}
-FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_FUNCTION_DEF1_DICT = {}
-FMPSG_SCTN09FF_CLASS_FUNCTION_DEF2_DICT = {}
-FMPSG_SCTN09FF_CLASS_FUNCTION_DICT = {}
-FMPSG_SCTN09FF_CLASS_INIT_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT = {}
-FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT = {}
-FMPSG_SCTN09FF_CLASS_INIT_DEF3_DICT = {}
-FMPSG_SCTN09FF_CLASS_INIT_DICT = {}
-FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT = {}
-FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT = {}
-FMPSG_SCTN09FF_CLASS_LAYOUT_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_LAYOUT_DICT = {}
-FMPSG_SCTN09FF_CLASS_LIST_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_LIST_DICT = {}
-FMPSG_SCTN09FF_CLASS_RADIO_ADDON_DICT = {}
-FMPSG_SCTN09FF_CLASS_RADIO_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_RADIO_DICT = {}
-FMPSG_SCTN09FF_CLASS_RCMENU_ADDON_DICT = {}
-FMPSG_SCTN09FF_CLASS_RCMENU_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_RCMENU_DICT = {}
-FMPSG_SCTN09FF_CLASS_SPIN_ADDON_DICT = {}
-FMPSG_SCTN09FF_CLASS_SPIN_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_SPIN_DICT = {}
-FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT = {}
-FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_TEXT_DICT = {}
-FMPSG_SCTN09FF_CLASS_WINDOW_CMNT_DICT = {}
-FMPSG_SCTN09FF_CLASS_WINDOW_DICT = {}
-FMCF_SCTN0204_LIST_DICTFMFM_SCTN0101_AX_CMNT_DICT = {}  # SCTN101 FMAX defined
+FMFM_SCTN0101_AX_CMNT_DICT = {}  # SCTN101 FMAX defined
 FMFM_SCTN0101_AX_DICT = {}  # SCTN101 FMAX defined
 FMFM_SCTN0102_VAL_CMNT_DICT = {}  # SCTN102 val
 FMFM_SCTN0102_VAL_DICT = {}  # SCTN102 val
@@ -862,8 +746,8 @@ FMFM_SCTN0106_SCTN_DICT = {}  # everything h3 and bigger, and their immediate su
 FMFM_SCTN0106_SCTN_FUNC_DICT = {}  # holds anything under the h5:FUNCTIONS
 FMFM_SCTN0106_SCTN_VAR_DICT = {}  # holds anything under the h5:VARIABLES
 FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
-FMPSG_SCTN0900_DEF1_CMNT_DICT = {}  #
-FMPSG_SCTN0900_DEF1_DICT = {}  #
+FMPSG_SCTN0900_DEF1_CMNT_DICT = {}  # 
+FMPSG_SCTN0900_DEF1_DICT = {}  # 
 FMPSG_SCTN0901_DEF2_CMNT_DICT = {}  # define the dict to hold everything in SCTN0901
 FMPSG_SCTN0901_DEF2_DICT = {}  # define the dict to hold everything in SCTN0901
 FMPSG_SCTN0902_DICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0902
@@ -877,93 +761,93 @@ FMPSG_SCTN0904_PLATEQ_OUTER_DICT = {}  # define the dict to hold everything in S
 FMPSG_SCTN0905_TUPDICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0905
 FMPSG_SCTN0905_TUPDICT_DICT = {}  # define the dict to hold everything in SCTN0905
 FMPSG_SCTN0905_TUPDICT_TDD_DICT = {}  # define the dict to hold everything in SCTN0905
-FMPSG_SCTN0906_BTNS_CMNT_DICT = {}  #
-FMPSG_SCTN0906_BTNS_DICT = {}  #
+FMPSG_SCTN0906_BTNS_CMNT_DICT = {}  # 
+FMPSG_SCTN0906_BTNS_DICT = {}  # 
 FMPSG_SCTN0907_SPIN_CMNT_DICT = {}  # holds the spin element stuffs (TUPDICT)f
 FMPSG_SCTN0907_SPIN_DICT = {}  # holds the spin element stuffs (TUPDICT)
 FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
-FMPSG_SCTN0908_CHECKBOX_CMNT_DICT = {}  #
-FMPSG_SCTN0908_CHECKBOX_DICT = {}  #
-FMPSG_SCTN0909_TEXT_CMNT_DICT = {}  #
-FMPSG_SCTN0909_TEXT_DICT = {}  #
-FMPSG_SCTN090A_RADIO_CMNT_DICT = {}  #
-FMPSG_SCTN090A_RADIO_DICT = {}  #
-FMPSG_SCTN090B_COLUMN_CMNT_DICT = {}  #
-FMPSG_SCTN090B_COLUMN_DICT = {}  #
-FMPSG_SCTN090B_COLUMN_PARMS_DICT = {}  #
+FMPSG_SCTN0908_CHECKBOX_CMNT_DICT = {}  # 
+FMPSG_SCTN0908_CHECKBOX_DICT = {}  # 
+FMPSG_SCTN0909_TEXT_CMNT_DICT = {}  # 
+FMPSG_SCTN0909_TEXT_DICT = {}  # 
+FMPSG_SCTN090A_RADIO_CMNT_DICT = {}  # 
+FMPSG_SCTN090A_RADIO_DICT = {}  # 
+FMPSG_SCTN090B_COLUMN_CMNT_DICT = {}  # 
+FMPSG_SCTN090B_COLUMN_DICT = {}  # 
+FMPSG_SCTN090B_COLUMN_PARMS_DICT = {}  # 
 FMPSG_SCTN090C_APPDS_CMNT_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090C_APPDS_DICT = {}  # the main app dict for this app
 FMPSG_SCTN090C_APPDSDICT_DICT = {}  # the main app dict+dict for this app
-FMPSG_SCTN090D_FORMMAIN_CMNT_DICT = {}  #
-FMPSG_SCTN090D_FORMMAIN_DICT = {}  #
-FMPSG_SCTN090E_LAYOUT_CMNT_DICT = {}  #
-FMPSG_SCTN090E_LAYOUT_DICT = {}  #
-FMPSG_SCTN090F_WINDOW_CMNT_DICT = {}  #
-FMPSG_SCTN090F_WINDOW_DICT = {}  #
-FMPSG_SCTN0910_DEF3_CMNT_DICT = {}  #
-FMPSG_SCTN0910_DEF3_DICT = {}  #
-FMPSG_SCTN0911_COMBO_CMNT_DICT = {}  #
-FMPSG_SCTN0911_COMBO_DICT = {}  #
-FMPSG_SCTN0912_FRAME_CMNT_DICT = {}  #
-FMPSG_SCTN0912_FRAME_DICT = {}  #
-FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  #
-FMPSG_SCTN0913_RCMENU_DICT = {}  #
-FMPSG_SCTN0914_FORMPOPUP_CMNT_DICT = {}  #
-FMPSG_SCTN0914_FORMPOPUP_DICT = {}  #
-FMPSG_SCTN0915_PUDLG_CMNT_DICT = {}  #
-FMPSG_SCTN0915_PUDLG_DICT_DICT = {}  #
-FMPSG_SCTN0915_PUDLG_LIST_DICT = {}  #
-FMPSG_SCTN0915_PUDLG_TYPE_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_BTNS_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_BTNS_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_BTNS_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_CHECKBOX_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_COLUMN_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_COLUMN_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_COLUMN_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_COLUMN_PARMS_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_COMBO_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_COMBO_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_COMBO_DICT = {}  #
+FMPSG_SCTN090D_FORMMAIN_CMNT_DICT = {}  # 
+FMPSG_SCTN090D_FORMMAIN_DICT = {}  # 
+FMPSG_SCTN090E_LAYOUT_CMNT_DICT = {}  # 
+FMPSG_SCTN090E_LAYOUT_DICT = {}  # 
+FMPSG_SCTN090F_WINDOW_CMNT_DICT = {}  # 
+FMPSG_SCTN090F_WINDOW_DICT = {}  # 
+FMPSG_SCTN0910_DEF3_CMNT_DICT = {}  # 
+FMPSG_SCTN0910_DEF3_DICT = {}  # 
+FMPSG_SCTN0911_COMBO_CMNT_DICT = {}  # 
+FMPSG_SCTN0911_COMBO_DICT = {}  # 
+FMPSG_SCTN0912_FRAME_CMNT_DICT = {}  # 
+FMPSG_SCTN0912_FRAME_DICT = {}  # 
+FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  # 
+FMPSG_SCTN0913_RCMENU_DICT = {}  # 
+FMPSG_SCTN0914_FORMPOPUP_CMNT_DICT = {}  # 
+FMPSG_SCTN0914_FORMPOPUP_DICT = {}  # 
+FMPSG_SCTN0915_PUDLG_CMNT_DICT = {}  # 
+FMPSG_SCTN0915_PUDLG_DICT_DICT = {}  # 
+FMPSG_SCTN0915_PUDLG_LIST_DICT = {}  # 
+FMPSG_SCTN0915_PUDLG_TYPE_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_BTNS_ADDON_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_BTNS_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_BTNS_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_CHECKBOX_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_COLUMN_ADDON_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_COLUMN_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_COLUMN_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_COLUMN_PARMS_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_COMBO_ADDON_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_COMBO_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_COMBO_DICT = {}  # 
 FMPSG_SCTN09FF_CLASS_DEF_DICT = {}  # str and val defines in a class
-FMPSG_SCTN09FF_CLASS_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_DICT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_FRAME_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_FRAME_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_FRAME_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_FUNCTION_DEF1_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_FUNCTION_DEF2_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_FUNCTION_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_INIT_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_INIT_DEF3_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_INIT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_LAYOUT_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_LAYOUT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_LIST_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_LIST_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_RADIO_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_RADIO_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_RADIO_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_RCMENU_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_RCMENU_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_RCMENU_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_SPIN_ADDON_DICT = {}  #
+FMPSG_SCTN09FF_CLASS_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_DICT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_FRAME_ADDON_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_FRAME_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_FRAME_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_FUNCTION_DEF1_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_FUNCTION_DEF2_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_FUNCTION_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_INIT_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_INIT_DEF3_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_INIT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_LAYOUT_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_LAYOUT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_LIST_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_LIST_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_RADIO_ADDON_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_RADIO_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_RADIO_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_RCMENU_ADDON_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_RCMENU_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_RCMENU_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_SPIN_ADDON_DICT = {}  # 
 FMPSG_SCTN09FF_CLASS_SPIN_CMNT_DICT = {}  # holds the spin element stuffs (TUPDICT)f
 FMPSG_SCTN09FF_CLASS_SPIN_DICT = {}  # holds the spin element stuffs (TUPDICT)
-FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_TEXT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_WINDOW_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CLASS_WINDOW_DICT = {}  #
+FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_TEXT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_WINDOW_CMNT_DICT = {}  # 
+FMPSG_SCTN09FF_CLASS_WINDOW_DICT = {}  # 
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -980,255 +864,123 @@ FMPSG_SCTN09FF_CLASS_WINDOW_DICT = {}  #
 #
 
 
-# <<>>
-#
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of unmanaged sections of FM.py
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-#
-#
+	global {
+		TABLEVEL, {
+		FMFM_SCTN0101_AX_CMNT_DICT, {
+		FMFM_SCTN0101_AX_DICT, {
+		FMFM_SCTN0102_VAL_CMNT_DICT, {
+		FMFM_SCTN0102_VAL_DICT, {
+		FMFM_SCTN0103_DICT_CMNT_DICT, {
+		FMFM_SCTN0103_DICT_DICT, {
+		FMFM_SCTN0104_LIST_CMNT_DICT, {
+		FMFM_SCTN0104_LIST_DICT, {
+		FMFM_SCTN0105_LDICT_CMNT_DICT, {
+		FMFM_SCTN0105_LDICT_DICT, {
+		FMFM_SCTN0106_SCTN_CLASS_DICT, {
+		FMFM_SCTN0106_SCTN_DICT, {
+		FMFM_SCTN0106_SCTN_FUNC_DICT, {
+		FMFM_SCTN0106_SCTN_VAR_DICT, {
+		FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT, {
+		FMPSG_SCTN0900_DEF1_CMNT_DICT, {
+		FMPSG_SCTN0900_DEF1_DICT, {
+		FMPSG_SCTN0901_DEF2_CMNT_DICT, {
+		FMPSG_SCTN0901_DEF2_DICT, {
+		FMPSG_SCTN0902_DICT_CMNT_DICT, {
+		FMPSG_SCTN0902_DICT_DICT, {
+		FMPSG_SCTN0903_LIST_CMNT_DICT, {
+		FMPSG_SCTN0903_LIST_DICT, {
+		FMPSG_SCTN0904_PLATEQ_INNER_CMNT_DICT, {
+		FMPSG_SCTN0904_PLATEQ_INNER_DICT, {
+		FMPSG_SCTN0904_PLATEQ_OUTER_CMNT_DICT, {
+		FMPSG_SCTN0904_PLATEQ_OUTER_DICT, {
+		FMPSG_SCTN0905_TUPDICT_CMNT_DICT, {
+		FMPSG_SCTN0905_TUPDICT_DICT, {
+		FMPSG_SCTN0905_TUPDICT_TDD_DICT, {
+		FMPSG_SCTN0906_BTNS_CMNT_DICT, {
+		FMPSG_SCTN0906_BTNS_DICT, {
+		FMPSG_SCTN0907_SPIN_CMNT_DICT, {
+		FMPSG_SCTN0907_SPIN_DICT, {
+		FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT, {
+		FMPSG_SCTN0908_CHECKBOX_CMNT_DICT, {
+		FMPSG_SCTN0908_CHECKBOX_DICT, {
+		FMPSG_SCTN0909_TEXT_CMNT_DICT, {
+		FMPSG_SCTN0909_TEXT_DICT, {
+		FMPSG_SCTN090A_RADIO_CMNT_DICT, {
+		FMPSG_SCTN090A_RADIO_DICT, {
+		FMPSG_SCTN090B_COLUMN_CMNT_DICT, {
+		FMPSG_SCTN090B_COLUMN_DICT, {
+		FMPSG_SCTN090B_COLUMN_PARMS_DICT, {
+		FMPSG_SCTN090C_APPDS_CMNT_DICT, {
+		FMPSG_SCTN090C_APPDS_DICT, {
+		FMPSG_SCTN090C_APPDSDICT_DICT, {
+		FMPSG_SCTN090D_FORMMAIN_CMNT_DICT, {
+		FMPSG_SCTN090D_FORMMAIN_DICT, {
+		FMPSG_SCTN090E_LAYOUT_CMNT_DICT, {
+		FMPSG_SCTN090E_LAYOUT_DICT, {
+		FMPSG_SCTN090F_WINDOW_CMNT_DICT, {
+		FMPSG_SCTN090F_WINDOW_DICT, {
+		FMPSG_SCTN0910_DEF3_CMNT_DICT, {
+		FMPSG_SCTN0910_DEF3_DICT, {
+		FMPSG_SCTN0911_COMBO_CMNT_DICT, {
+		FMPSG_SCTN0911_COMBO_DICT, {
+		FMPSG_SCTN0912_FRAME_CMNT_DICT, {
+		FMPSG_SCTN0912_FRAME_DICT, {
+		FMPSG_SCTN0913_RCMENU_CMNT_DICT, {
+		FMPSG_SCTN0913_RCMENU_DICT, {
+		FMPSG_SCTN0914_FORMPOPUP_CMNT_DICT, {
+		FMPSG_SCTN0914_FORMPOPUP_DICT, {
+		FMPSG_SCTN0915_PUDLG_CMNT_DICT, {
+		FMPSG_SCTN0915_PUDLG_DICT_DICT, {
+		FMPSG_SCTN0915_PUDLG_LIST_DICT, {
+		FMPSG_SCTN0915_PUDLG_TYPE_DICT, {
+		FMPSG_SCTN09FF_CLASS_BTNS_ADDON_DICT, {
+		FMPSG_SCTN09FF_CLASS_BTNS_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_BTNS_DICT, {
+		FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT, {
+		FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_CHECKBOX_DICT, {
+		FMPSG_SCTN09FF_CLASS_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_COLUMN_ADDON_DICT, {
+		FMPSG_SCTN09FF_CLASS_COLUMN_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_COLUMN_DICT, {
+		FMPSG_SCTN09FF_CLASS_COLUMN_PARMS_DICT, {
+		FMPSG_SCTN09FF_CLASS_COMBO_ADDON_DICT, {
+		FMPSG_SCTN09FF_CLASS_COMBO_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_COMBO_DICT, {
+		FMPSG_SCTN09FF_CLASS_DEF_DICT, {
+		FMPSG_SCTN09FF_CLASS_DICT, {
+		FMPSG_SCTN09FF_CLASS_DICT_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_DICT_DICT, {
+		FMPSG_SCTN09FF_CLASS_FRAME_ADDON_DICT, {
+		FMPSG_SCTN09FF_CLASS_FRAME_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_FRAME_DICT, {
+		FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_FUNCTION_DEF1_DICT, {
+		FMPSG_SCTN09FF_CLASS_FUNCTION_DEF2_DICT, {
+		FMPSG_SCTN09FF_CLASS_FUNCTION_DICT, {
+		FMPSG_SCTN09FF_CLASS_INIT_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT, {
+		FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT, {
+		FMPSG_SCTN09FF_CLASS_INIT_DEF3_DICT, {
+		FMPSG_SCTN09FF_CLASS_INIT_DICT, {
+		FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT, {
+		FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT, {
+		FMPSG_SCTN09FF_CLASS_LAYOUT_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_LAYOUT_DICT, {
+		FMPSG_SCTN09FF_CLASS_LIST_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_LIST_DICT, {
+		FMPSG_SCTN09FF_CLASS_RADIO_ADDON_DICT, {
+		FMPSG_SCTN09FF_CLASS_RADIO_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_RADIO_DICT, {
+		FMPSG_SCTN09FF_CLASS_RCMENU_ADDON_DICT, {
+		FMPSG_SCTN09FF_CLASS_RCMENU_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_RCMENU_DICT, {
+		FMPSG_SCTN09FF_CLASS_SPIN_ADDON_DICT, {
+		FMPSG_SCTN09FF_CLASS_SPIN_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_SPIN_DICT, {
+		FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT, {
+		FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_TEXT_DICT, {
+		FMPSG_SCTN09FF_CLASS_WINDOW_CMNT_DICT, {
+		FMPSG_SCTN09FF_CLASS_WINDOW_DICT, {
 
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# makeAComment
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def makeAComment(comment_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn_ += f"""{CMNTLINE}{NEWLINE}# * {comment_}{NEWLINE}{CMNTLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# makeAComment
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def makeAWideComment(comment_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	"""Short summary.
-
-	Parameters
-	----------
-	comment_ : string
-			a string to be inserted in the middle of 7 lines, outer two are attention getters
-
-	Returns
-	-------
-	string
-		contains the comment_ and surrounding lines, plus two # lines above and below
-
-"""
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn_ += f"""#{NEWLINE}#{NEWLINE}{CMNTLINE}{NEWLINE}# * {comment_}{NEWLINE}{CMNTLINE}{NEWLINE}#{NEWLINE}#{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# subMyPlaceKpr
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def subMyPlaceKpr(sourceStr_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = sourceStr_
-	for _thisSrcStr_, _thisDestStr_ in STR_SUBST_DICT.items():
-		_strToRtn_ = _strToRtn_.replace(_thisSrcStr_, _thisDestStr_)
-
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# makeADict
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def makeADict(dictName_, dictComment_, dictItems_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn_ += f"""{dictName_} = {OBRCE}  # {dictComment_}
-{dictItems_}{CBRCE}{NEWLINE}{NEWLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# sortADict
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def sortADict(dictToSort_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_dictToRtn_ = {}
-	for _thisKey_ in sorted(dictToSort_.keys(), key=lambda __KEY__: __KEY__.lower()):
-		_dictToRtn_[_thisKey_] = dictToSort_[_thisKey_]
-	return _dictToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# makeAList
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def makeAList(listName_, listComment_, listItems_, listItemCmntDict_=None, addQuotes_=False):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn_ += f"""{listName_} = {OBRKT}  # {listComment_}{NEWLINE}"""
-	for _thisItem_ in listItems_:
-		if listItemCmntDict_ is None:
-			if addQuotes_ is True:
-				_strToRtn_ += f"""{NTAB(1)}{DBLQT}{_thisItem_}{DBLQT}"""
-			else:
-				_strToRtn_ += f"""{NTAB(1)}{_thisItem_}"""
-		else:
-			if addQuotes_ is True:
-				_strToRtn_ += f"""{NTAB(1)}{DBLQT}{_thisItem_}{DBLQT},  # {listItemCmntDict_[_thisItem_]}{NEWLINE}"""
-			else:
-				_strToRtn_ += f"""{NTAB(1)}{_thisItem_},  # {listItemCmntDict_[_thisItem_]}{NEWLINE}"""
-	_strToRtn_ += f"""{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# makeANormalTDD
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def makeANormalTDD(tupDictName_, tupDictItems_, TDDItems_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn1_ = ""
-
-	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	_strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}
-{tupDictName_}TUP = {OPAREN}
-{tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{CPAREN}:
-{NTAB(1)}return dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}{NEWLINE}
-{tupDictName_}_TDD = {OBRCE}{NEWLINE}{TDDItems_}{CBRCE}{NEWLINE}{NEWLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# makeANormalTupDict
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def makeANormalTupDict(tupDictName_, tupDictItems_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn1_ = ""
-
-	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	_strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}
-{tupDictName_}TUP = {OPAREN}
-{tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{CPAREN}:
-{NTAB(1)}return dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}{NEWLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# makeASidecarTupDic
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def makeASidecarTupDic(tupDictName_, tupDictItems_, tupDictSidecars_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn1_ = ""
-	_strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}{NEWLINE}"""
-	for _key_, _items_ in tupDictSidecars_.items():
-		_strToRtn_ += f"""{tupDictName_}_{_key_}TUP = {OPAREN}{NEWLINE}{_items_}{CPAREN}{NEWLINE}{NEWLINE}"""
-		_strToRtn1_ += f"""{NTAB(1)}_listToRtn_ = list((x) for x in {tupDictName_}_{_key_}TUP){NEWLINE}"""
-	_strToRtn_ += f"""{tupDictName_}TUP = {OPAREN}
-{tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{CPAREN}:
-{NTAB(1)}_dictToRtn_ = dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}{_strToRtn1_}{NTAB(1)}return _listToRtn_, _dictToRtn_{NEWLINE}{NEWLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# makeAFullTupDict (sidecar is a single item list, or alist of strings that will be concatenated before substitution)
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-def makeAFullTupDict(tupDictName_, tupDictItems_, tupDictSidecars_, tupDictParms_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-
-	subParmsStr_ = f"""{NTAB(1)}def {tupDictName_}_subParms(listIn_, tupDictParms_):
-{NTAB(2)}_listToRtn_ = []
-{NTAB(2)}for _thisStr_ in listIn_:
-{NTAB(3)}for _subParm_, _replaceStr_ in tupDictParms_:
-{NTAB(4)}_thisStr_ = _thisStr_.replace(_subParm_, _replaceStr_)
-{NTAB(3)}_listToRtn_.append(_thisStr_)
-{NTAB(2)}return _listToRtn_{NEWLINE}{NEWLINE}"""
-
-	_strToRtn1_ = ""
-	_strToRtn2_ = ""
-	sideCarToRtn = {}
-	_parmsNames_ = ""
-	_sideCar_ = {}
-
-	for _subParm_, _replaceStr_ in tupDictParms_:
-		_parmsNames_ += f"""{_replaceStr_}, """
-	_parmsNames_ = _parmsNames_[:-2]
-
-	_strToRtn1_ += f"""{makeAComment(f"start of {tupDictName_} structures")}{NEWLINE}"""
-
-	strToRtn3_ = f"""{NTAB(1)}{tupDictName_}_PARMS = {OBRKT}{NEWLINE}"""
-	for _subParm_, _replaceStr_ in tupDictParms_:
-		strToRtn3_ += f"""{NTAB(2)}{OPAREN}{DBLQT}{_subParm_}{DBLQT}, {_replaceStr_}{CPAREN},{NEWLINE}"""
-	strToRtn3_ = strToRtn3_[:-1] + f"""{NEWLINE}{NTAB(1)}{CBRKT}{NEWLINE}"""
-
-	for _key_, _items_ in tupDictSidecars_.items():
-		_strToRtn1_ += f"""{tupDictName_}_{_key_}TUP = {OPAREN}{NEWLINE}{_items_}{CPAREN}{NEWLINE}{NEWLINE}"""
-		_strToRtn2_ += f"""{NTAB(1)}_listToRtn_ = list((x) for x in {tupDictName_}_{_key_}TUP){NEWLINE}"""
-		_strToRtn2_ += f"""{NTAB(1)}_listToRtn_ = CF.subParms(_listToRtn_, {tupDictName_}_PARMS)"""
-	_strToRtn1_ += f"""{tupDictName_}TUP = {OPAREN}
-{tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{_parmsNames_}{CPAREN}:{NEWLINE}{strToRtn3_}
-{NTAB(1)}_dictToRtn_ = dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}"""
-
-	_strToRtn1_ += f"""{_strToRtn2_}{NEWLINE}{NTAB(1)}return _listToRtn_, _dictToRtn_{NEWLINE}{NEWLINE}{NEWLINE}"""
-
-	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
-	return _strToRtn1_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# readFileToStr
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def readFileToStr(FILENAME_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	with open(FILENAME_, "tr") as _FDIn_:
-		_strToRtn_ += _FDIn_.read()
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# doErrorItem
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def doErrorItem(message_, itemToError_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	print(f"""{NEWLINE}{message_}{NEWLINE}is a tuple {isinstance(itemToError_, tuple)}{NEWLINE}item as parsed{NEWLINE}{repr(itemToError_)}{NEWLINE}""")
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# FM
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-def FM():
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-
-		from FM import FM_parseTBGLST
-		FM_parseTBGLST.parseTBGLST()
-
-		from FM import FM_makeCF
-		FM_makeCF.makeCF()
-
-		from FM import FM_makeFM
-		FM_makeFM.makeFM()
-
-		from FM import FM_makePSG
-		FM_makePSG.makePSG()
-
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1ff
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# end of FM.py
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-#
-#
