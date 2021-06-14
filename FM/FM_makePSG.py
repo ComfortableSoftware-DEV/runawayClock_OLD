@@ -6,9 +6,9 @@ from FM import FM
 # makePSG
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
-	def makePSG():
-		# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-		with (open(f"""{FM.NAME_LCL_NEW_PY}""", "tw") as _FDmakePSG_):
+def makePSG():
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	with (open(f"""{FM.NAME_LCL_NEW_PY}""", "tw") as _FDmakePSG_):
 		_FDmakePSG_.write(f"""{FM.readFileToStr(FM.NAME_GLBL_TOP_PY("PSG"))}{FM.makeAComment("SCTN0900 DEF1")}""")
 		_dictToUse_ = FM.sortADict(FM.FMPSG_SCTN0900_DEF1_DICT)
 		for _thisName_, _value_ in _dictToUse_.items():
@@ -152,26 +152,26 @@ from FM import FM
 			_FDmakePSG_.write(f"""{FM.NTAB(2)}APPDS{FM.OBRKT}K_APPMODE{FM.CBRKT} = PREVIOUS_APPMODE{FM.NEWLINE}{FM.NEWLINE}{FM.NEWLINE}""")
 
 		# ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣ ⥥1⥣
-	#		_FDmakePSG_.write(f"""{FM.makeAComment("SCTN0915 popup dialogs")}"""
-	#		_dictToUse_ = FM.sortADict(FM.FMPSG_SCTN0915_PUDLG_DICT_DICT)
-	#	 	for _thisName_, _value_ in _dictToUse_.items():
-	#	 		_FDmakePSG_.write(f"""{FM.NEWLINE}{FM.NEWLINE}{FM.makeAComment(f"{_thisName_} PUDLG")}
-	#	 class CLASS_{_thisName_}{FM.OPAREN}object{FM.CPAREN}:
-	#	 {FM.NTAB(1)}{FM.FOLD1STARTHERELN}
-	#	 {FM.NTAB(1)}def __init__{FM.OPAREN}self, title_, count_, splatArgs_={FM.OBRKT}{FM.CBRKT}{FM.CPAREN}:
-	#	 {FM.NTAB(2)}self.DICT = {FM.OBRCE}
-	#	 {_value_}{FM.NTAB(2)}{FM.CBRCE}{FM.NEWLINE}
-	#	 {FM.NTAB(2)}self.LIST = {FM.OBRKT}
-	#	 {FM.NTAB(3)}f{TRIQT}INTERVAL {FM.OBRCE}title_{FM.CBRCE} has expired {FM.OBRCE}count_{FM.CBRCE} times{TRIQT},
-	#	 {FM.NTAB(3)}f{TRIQT}click OK to dismiss, or wait {FM.OBRCE}self.POPUP_INTERVAL_DICT[auto_close_duration]{FM.CBRCE}seconds from alarm{TRIQT},
-	#	 {FM.NTAB(2)}{FM.CBRKT}.append{FM.OPAREN}*splatArgs_{FM.CPAREN}{FM.NEWLINE}
-	#	 {FM.NTAB(2)}return self{FM.NEWLINE}
-	#	 {FM.NTAB(1)}def __enter__{FM.OPAREN}self{FM.CPAREN}:
-	#	 {FM.NTAB(2)}SG.{FM.FMPSG_SCTN0915_PUDLG_TYPE_DICT[_thisName_]}{FM.OPAREN}
-	#	 {FM.NTAB(3)}*self.{_thisName_}_LIST,
-	#	 {FM.NTAB(3)}**self.{_thisName_}_DICT,
-	#	 {FM.NTAB(2)}{FM.CPAREN}{FM.NEWLINE}{FM.NTAB(1)}{FM.FOLD1ENDHERELN}{FM.NEWLINE}
-	#	 """
+	#	_FDmakePSG_.write(f"""{FM.makeAComment("SCTN0915 popup dialogs")}"""
+	#	_dictToUse_ = FM.sortADict(FM.FMPSG_SCTN0915_PUDLG_DICT_DICT)
+	# 	for _thisName_, _value_ in _dictToUse_.items():
+	# 		_FDmakePSG_.write(f"""{FM.NEWLINE}{FM.NEWLINE}{FM.makeAComment(f"{_thisName_} PUDLG")}
+	# class CLASS_{_thisName_}{FM.OPAREN}object{FM.CPAREN}:
+	# {FM.NTAB(1)}{FM.FOLD1STARTHERELN}
+	# {FM.NTAB(1)}def __init__{FM.OPAREN}self, title_, count_, splatArgs_={FM.OBRKT}{FM.CBRKT}{FM.CPAREN}:
+	# {FM.NTAB(2)}self.DICT = {FM.OBRCE}
+	# {_value_}{FM.NTAB(2)}{FM.CBRCE}{FM.NEWLINE}
+	# {FM.NTAB(2)}self.LIST = {FM.OBRKT}
+	# {FM.NTAB(3)}f{TRIQT}INTERVAL {FM.OBRCE}title_{FM.CBRCE} has expired {FM.OBRCE}count_{FM.CBRCE} times{TRIQT},
+	# {FM.NTAB(3)}f{TRIQT}click OK to dismiss, or wait {FM.OBRCE}self.POPUP_INTERVAL_DICT[auto_close_duration]{FM.CBRCE}seconds from alarm{TRIQT},
+	# {FM.NTAB(2)}{FM.CBRKT}.append{FM.OPAREN}*splatArgs_{FM.CPAREN}{FM.NEWLINE}
+	# {FM.NTAB(2)}return self{FM.NEWLINE}
+	# {FM.NTAB(1)}def __enter__{FM.OPAREN}self{FM.CPAREN}:
+	# {FM.NTAB(2)}SG.{FM.FMPSG_SCTN0915_PUDLG_TYPE_DICT[_thisName_]}{FM.OPAREN}
+	# {FM.NTAB(3)}*self.{_thisName_}_LIST,
+	# {FM.NTAB(3)}**self.{_thisName_}_DICT,
+	# {FM.NTAB(2)}{FM.CPAREN}{FM.NEWLINE}{FM.NTAB(1)}{FM.FOLD1ENDHERELN}{FM.NEWLINE}
+	# """
 
 		from FM import FM_makePSGClasses
 		_FDmakePSG_.write(FM_makePSGClasses.makePSGClasses())
