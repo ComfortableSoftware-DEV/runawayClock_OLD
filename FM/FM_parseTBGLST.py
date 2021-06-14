@@ -13,8 +13,8 @@ def parseTBGLST():
 	__TBGLST__ = FM_TBGLST.TBGLST()
 	TBGLST = iter(__TBGLST__)
 
-	from FM import FM_C_MTBL
-	with FM_C_MTBL.C_MTBL() as _MTBL_:
+	from FM import FM_MTBL_C
+	with FM_MTBL_C.MTBL_C() as _MTBL_:
 
 		# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 		for _thisItem_ in TBGLST:
