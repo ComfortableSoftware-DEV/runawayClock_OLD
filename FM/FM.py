@@ -731,21 +731,21 @@ TABLEVEL = "TABLEVEL"  # key for tab levels
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN103 _DICT_ _DEF_
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-FMCF_SCTN0003_TYPE_CMNT_DICT = {}
-FMCF_SCTN0003_TYPE_DICT = {}
-FMCF_SCTN0201_DEF_CMNT_DICT = {}
-FMCF_SCTN0201_DEF_DICT = {}
-FMCF_SCTN0202_OPTIONS_CMNT_DICT = {}
-FMCF_SCTN0202_OPTIONS_DICT = {}
-FMCF_SCTN0202_OPTIONSDICT_CMNT_DICT = {}
-FMCF_SCTN0202_OPTIONSDICT_DICT = {}
-FMCF_SCTN0202_OPTIONSHELPDICT_DICT = {}
-FMCF_SCTN0203_DICT_CMNT_DICT = {}
-FMCF_SCTN0203_DICT_DICT = {}
-FMCF_SCTN0204_LIST_CMNT_DICT = {}
-FMCF_SCTN0204_LIST_DICTFMFM_SCTN0101_AX_CMNT_DICT = {}  # SCTN101 FMAX defined
-FMFM_SCTN0101_AX_CMNT_DICT = {}
+FILENAMES_DICT = {}  # dict of filename: FD??
+FMCF_SCTN0003_TYPE_CMNT_DICT = {}  # SCTN009 types comments
+FMCF_SCTN0003_TYPE_DICT = {}  # SCTN003 types
+FMCF_SCTN0201_DEF_CMNT_DICT = {}  # SCTN201 defines comments dict
+FMCF_SCTN0201_DEF_DICT = {}  # SCTN201 defines dict
+FMCF_SCTN0202_OPTIONS_CMNT_DICT = {}  # SCTN202 OPTIONS comments dict
+FMCF_SCTN0202_OPTIONS_DICT = {}  # SCTN202 OPTIONS dict
+FMCF_SCTN0202_OPTIONSDICT_CMNT_DICT = {}  # SCTN202 OPTIONSDICT comments dict
+FMCF_SCTN0202_OPTIONSDICT_DICT = {}  # SCTN202 OPTIONSDICT
+FMCF_SCTN0202_OPTIONSHELPDICT_DICT = {}  # SCTN202 OPTIONS HELPDICT
+FMCF_SCTN0203_DICT_CMNT_DICT = {}  # SCTN203 dict comments dict
+FMCF_SCTN0203_DICT_DICT = {}  # SCTN203 dict dict
+FMCF_SCTN0204_LIST_CMNT_DICT = {}  # SCTN204 list comments dict
+FMCF_SCTN0204_LIST_DICT = {}  # SCTN204 list dict
+FMFM_SCTN0101_AX_CMNT_DICT = {}  # SCTN101 FMAX defined
 FMFM_SCTN0101_AX_DICT = {}  # SCTN101 FMAX defined
 FMFM_SCTN0102_VAL_CMNT_DICT = {}  # SCTN102 val
 FMFM_SCTN0102_VAL_DICT = {}  # SCTN102 val
@@ -759,7 +759,6 @@ FMFM_SCTN0106_SCTN_CLASS_DICT = {}  # holds anything under the h5:CLASS
 FMFM_SCTN0106_SCTN_DICT = {}  # everything h3 and bigger, and their immediate subs not h4-h6
 FMFM_SCTN0106_SCTN_FUNC_DICT = {}  # holds anything under the h5:FUNCTIONS
 FMFM_SCTN0106_SCTN_VAR_DICT = {}  # holds anything under the h5:VARIABLES
-FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
 FMPSG_SCTN0900_DEF1_CMNT_DICT = {}  #
 FMPSG_SCTN0900_DEF1_DICT = {}  #
 FMPSG_SCTN0901_DEF2_CMNT_DICT = {}  # define the dict to hold everything in SCTN0901
@@ -812,7 +811,7 @@ FMPSG_SCTN0915_PUDLG_CMNT_DICT = {}  #
 FMPSG_SCTN0915_PUDLG_DICT_DICT = {}  #
 FMPSG_SCTN0915_PUDLG_LIST_DICT = {}  #
 FMPSG_SCTN0915_PUDLG_TYPE_DICT = {}  #
-FMPSG_SCTN0916_CLASS_SPIN_LIST_DICT = {}
+FMPSG_SCTN0916_CLASS_SPIN_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
 FMPSG_SCTN09FF_CLASS_BTNS_ADDON_DICT = {}  #
 FMPSG_SCTN09FF_CLASS_BTNS_CMNT_DICT = {}  #
 FMPSG_SCTN09FF_CLASS_BTNS_DICT = {}  #
@@ -863,7 +862,6 @@ FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT = {}  #
 FMPSG_SCTN09FF_CLASS_TEXT_DICT = {}  #
 FMPSG_SCTN09FF_CLASS_WINDOW_CMNT_DICT = {}  #
 FMPSG_SCTN09FF_CLASS_WINDOW_DICT = {}  #
-FMVAL_FILENAMES_DICT = {}
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
