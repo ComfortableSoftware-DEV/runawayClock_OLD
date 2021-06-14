@@ -8,7 +8,7 @@ from FM import FM
 def makeFM():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	with (open(f"""{FM.NAME_LCL_NEW_PY("FM")}""", "tw"))
+	with (open(f"""{FM.NAME_LCL_NEW_PY("FM")}""", "tw") as _FDmakeFM_)
 		_FDmakeFM_.write(f"""{FM.readFileToStr(FM.NAME_GLBL_TOP_PY("FM"))}{FM.readFileToStr(FM.NAME_GLBL_ROOT_PY("SCTN0102.py"))}""")
 
 		_FDmakeFM_.write(f"""{FM.makeAComment("SCTN003 TYPEs and lambda")}""")
