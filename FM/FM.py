@@ -1,33 +1,3 @@
-#!/usr/bin/python
-
-
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# modules defined in FM.py
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# FM.py is copied, along with the appropriate FMxxxxxx.py file from CONFIGDIR to local by pythonUnitsLink.py
-# make sure if you change the modules, you also update the stored copy FMxxxxxx.py TBGLST file when you update FM.py
-# CF.py is always linked, make sure to update CFTOP.py and SCTN0102 when FM.py or CF.py are changed
-# all other units are loaded dynamically by pythonUnitsLink.py using the SCTN16 structure, FMSCTNENABLED.py file locally, etc.
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# * def doErrorItem(message_, itemToError_):
-# * def explodeItem(itemToExplode_):
-# * def makeAComment(comment_):
-# * def makeADict(dictName_, dictComment_, dictItems_):
-# * def makeAList(listName_, listComment_, listItems_):
-# * def makeATupDict(tupDictName_, tupDictItems_, tupDictSidecar_):
-# * def makeAWideComment(comment_):
-# * def makeCF():
-# * def makeDBSQLT()
-# * def makeDO():
-# * def makeDOHBI():
-# * def makeFM():
-# * def makeFO():
-# * def makeSP():
-# * def parseTBGLST(FDTBGLST):
-# * def readFileToStr(FILENAME_):
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-# * def __main__():
-
 
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0001 _CHR_ _CONST_
@@ -202,16 +172,24 @@ NAME_HOME_SELF_CACHE = lambda __NAME__, __FILENAME__: f"""/home/will/.cache/{__N
 NAME_HOME_SELF_CONFIG = lambda __NAME__, __FILENAME__: f"""/home/will/.config/{__NAME__}/{__FILENAME__}"""
 
 
-NAME_LCL_BTM_PY = lambda __NAME__: f"""{__NAME__}_BTM.py"""
+NAME_LCL_BTM_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_BTM.py"""
 NAME_LCL_IMG_PY = lambda __FILENAME__: f"""res/IMG/{__FILENAME__}"""
 NAME_LCL_MD_PY = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}.md"""
-NAME_LCL_NEW_PY = lambda __NAME__: f"""{__NAME__}_NEW.py"""
+NAME_LCL_NEW_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_NEW.py"""
 NAME_LCL_RES_PY = lambda __FILENAME__: f"""res/{__FILENAME__}"""
 NAME_LCL_ROOT_PY = lambda __FILENAME__: f"""{__FILENAME__}"""
-NAME_LCL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_BTM.py"""
-NAME_LCL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
-NAME_LCL_SUB_PY = lambda __NAME__, __SUB__: f"""{__NAME__}_{__SUB__}.py"""
-NAME_LCL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
+NAME_LCL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_BTM.py"""
+NAME_LCL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
+NAME_LCL_SUB_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}.py"""
+NAME_LCL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
+NAME_LCL_SUB1_BTM_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_BTM.py"""
+NAME_LCL_SUB1_NEW_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_NEW.py"""
+NAME_LCL_SUB1_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}.py"""
+NAME_LCL_SUB1_TOP_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_TOP.py"""
+NAME_LCL_SUB2_BTM_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_BTM.py"""
+NAME_LCL_SUB2_NEW_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_NEW.py"""
+NAME_LCL_SUB2_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}.py"""
+NAME_LCL_SUB2_TOP_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_TOP.py"""
 NAME_LCL_TOP_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_TOP.py"""
 
 
@@ -256,6 +234,7 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 	f"{ESC}[36m",  # entry for ESC-[36m
 ]
 
+#
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN003 TYPEs and lambda
