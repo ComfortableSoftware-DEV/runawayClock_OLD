@@ -291,16 +291,24 @@ NAME_HOME_SELF_CACHE = lambda __NAME__, __FILENAME__: f"""/home/will/.cache/{__N
 NAME_HOME_SELF_CONFIG = lambda __NAME__, __FILENAME__: f"""/home/will/.config/{__NAME__}/{__FILENAME__}"""
 
 
-NAME_LCL_BTM_PY = lambda __NAME__: f"""{__NAME__}_BTM.py"""
+NAME_LCL_BTM_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_BTM.py"""
 NAME_LCL_IMG_PY = lambda __FILENAME__: f"""res/IMG/{__FILENAME__}"""
 NAME_LCL_MD_PY = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}.md"""
-NAME_LCL_NEW_PY = lambda __NAME__: f"""{__NAME__}_NEW.py"""
+NAME_LCL_NEW_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_NEW.py"""
 NAME_LCL_RES_PY = lambda __FILENAME__: f"""res/{__FILENAME__}"""
 NAME_LCL_ROOT_PY = lambda __FILENAME__: f"""{__FILENAME__}"""
-NAME_LCL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_BTM.py"""
-NAME_LCL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
-NAME_LCL_SUB_PY = lambda __NAME__, __SUB__: f"""{__NAME__}_{__SUB__}.py"""
-NAME_LCL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{PY_CONFIG_DIR}{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
+NAME_LCL_SUB_BTM_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_BTM.py"""
+NAME_LCL_SUB_NEW_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_NEW.py"""
+NAME_LCL_SUB_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}.py"""
+NAME_LCL_SUB_TOP_PY = lambda __NAME__, __SUB__: f"""{__NAME__}/{__NAME__}_{__SUB__}_TOP.py"""
+NAME_LCL_SUB1_BTM_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_BTM.py"""
+NAME_LCL_SUB1_NEW_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_NEW.py"""
+NAME_LCL_SUB1_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}.py"""
+NAME_LCL_SUB1_TOP_PY = lambda __NAME__, __SUB__, __SUB1__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_TOP.py"""
+NAME_LCL_SUB2_BTM_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_BTM.py"""
+NAME_LCL_SUB2_NEW_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_NEW.py"""
+NAME_LCL_SUB2_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}.py"""
+NAME_LCL_SUB2_TOP_PY = lambda __NAME__, __SUB__, __SUB1__, __SUB2__: f"""{__NAME__}/{__NAME__}_{__SUB__}_{__SUB1__}_{__SUB2__}_TOP.py"""
 NAME_LCL_TOP_PY = lambda __NAME__: f"""{__NAME__}/{__NAME__}_TOP.py"""
 
 
@@ -375,3 +383,5 @@ OPTIONSDICT = {
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
+
+
