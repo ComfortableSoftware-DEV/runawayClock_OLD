@@ -9,24 +9,27 @@ class MTBL_C():
 	def __init__(self):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 		self.__FILE_DICT__ = {}
+
 		self.__EMPTY_ID__ = (
-			"class_", None,
-			"filename_", None,
-			"moduleName_", None,
-			"sub_", None,
-			"sub1_", None,
-			"sub2_", None,
+			("class", None,),
+			("filename", None,),
+			("moduleName", None,),
+			("sub0", None,),
+			("sub1", None,),
+			("sub2", None,),
 		)
+
 		_newFilename_ = FM.NAME_LCL_SUB_NEW_PY("FM", "TBGLST")
 		_filename_ = FM.NAME_LCL_SUB_PY("FM", "TBGLST")
+
 		_tupleToRtn_ = (
 			(
-				"class_", None,
-				"filename_", _newFilename_,
-				"moduleName_", "FM",
-				"sub_", "TBGLST",
-				"sub1_", None,
-				"sub2_", None,
+				("class", None,),
+				("filename", _newFilename_,),
+				("moduleName", "FM",),
+				("sub0", "TBGLST",),
+				("sub1", None,),
+				("sub2", None,),
 			),
 			"FM_00_ORIGIN",
 			FM.FMAX_NOP,
@@ -37,16 +40,23 @@ class MTBL_C():
 
 	def makeID(self, **KWargs_):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-		_dictToRtn_ = {
-			"class_": None,
-			"filename_": None,
-			"moduleName_": None,
-			"sub_": None,
-			"sub1_": None,
-			"sub2_": None,
-		}
-		_dictToRtn_.update(KWargs_)
-		return _dictToRtn_
+		_class_ = KWargs_.get("class")
+		_filename_ = KWargs_.get("filename")
+		_moduleName_ = KWargs_.get("moduleName")
+		_sub0_ = KWargs_.get("sub0")
+		_sub1_ = KWargs_.get("sub1")
+		_sub2_ = KWargs_.get("sub2")
+
+		_IDToRtn_ = (
+			("class", _class_,),
+			("filename", _filename_,),
+			("moduleName", _moduleName_,),
+			("sub0", _sub0_,),
+			("sub1", _sub1_,),
+			("sub2", _sub2_,),
+		)
+
+		return _IDToRtn_
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
 
@@ -63,14 +73,15 @@ class MTBL_C():
 			_thisFD_.close()
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
-	def startLclNewFile(self, **KWargs_):
+	def startLCLNewFile(self, **KWargs_):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 		_strToRtn_ = ""
-		_class_ = KWargs_.get("class_")
-		_moduleName_ = KWargs_.get("moduleName_")
-		_sub_ = KWargs_.get("sub_")
-		_sub1_ = KWargs_.get("sub1_")
-		_sub2_ = KWargs_.get("sub2_")
+		_class_ = KWargs_.get("class")
+		_filename_ = KWargs_.get("filename")
+		_moduleName_ = KWargs_.get("moduleName")
+		_sub_ = KWargs_.get("sub0")
+		_sub1_ = KWargs_.get("sub1")
+		_sub2_ = KWargs_.get("sub2")
 
 			# __MODULE_NAME__, _NEW
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -88,8 +99,8 @@ class MTBL_C():
 __MODULE_NAME__ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
 __FILENAME__ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_PY(__MODULE_NAME__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
 __ID__ = {FM.OBRCE}
-{FM.NTAB(1)}{FM.DBLQT}moduleName_{FM.DBLQT}: __MODULE_NAME__,  # {_moduleName_}
-{FM.NTAB(1)}{FM.DBLQT}filename_{FM.DBLQT}: __FILENAME__,  # {_filename_}
+{FM.NTAB(1)}{FM.DBLQT}moduleName{FM.DBLQT}: __MODULE_NAME__,  # {_moduleName_}
+{FM.NTAB(1)}{FM.DBLQT}filename{FM.DBLQT}: __FILENAME__,  # {_filename_}
 {FM.CBRCE}
 TBGLST = {FM.OBRKT}
 """
@@ -99,18 +110,18 @@ TBGLST = {FM.OBRKT}
 
 			# __MODULE_NAME__, __CLASS__, _NEW
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (("sub_" not in KWargs_) and ("sub1_" not in KWargs_) and ("sub2_" not in KWargs_) and ("class_" in KWargs_)):
+		if (("sub0" not in KWargs_) and ("sub1" not in KWargs_) and ("sub2" not in KWargs_) and ("class" in KWargs_)):
 			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			_class_ = f"""{KWargs["class_"]}"""
+			_class_ = f"""{KWargs["class"]}"""
 			_filename_ = f"""{FM.NAME_LCL_CLASS_NEW_PY(_moduleName_, _class_)}"""
 			_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}{FM.NEWLINE}
 __MODULE_NAME__ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
-__CLASS__ = {FM.DBLQT}{KWargs_["class_"]}{FM.DBLQT}
+__CLASS__ = {FM.DBLQT}{KWargs_["class"]}{FM.DBLQT}
 __FILENAME__ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_CLASS_NEW_PY(__MODULE_NAME__, __CLASS__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
 __ID__ = {FM.OBRCE}
-{FM.NTAB(1)}{FM.DBLQT}moduleName_{FM.DBLQT}: __MODULE_NAME__,  # {_moduleName_}
-{FM.NTAB(1)}{FM.DBLQT}filename_{FM.DBLQT}: __FILENAME__,  # {_filename_}
-{FM.NTAB(1)}"class_": __CLASS__,  # {_class_}
+{FM.NTAB(1)}{FM.DBLQT}moduleName{FM.DBLQT}: __MODULE_NAME__,  # {_moduleName_}
+{FM.NTAB(1)}{FM.DBLQT}filename{FM.DBLQT}: __FILENAME__,  # {_filename_}
+{FM.NTAB(1)}"class": __CLASS__,  # {_class_}
 {FM.CBRCE}
 TBGLST = {FM.OBRKT}
 {FM.NTAB(1)}{FM.OPAREN}__ID__, {FM.DBLQT}00_{_moduleName_}_BEGINS{FM.DBLQT}, FMAX_NOP, {FM.DBLQT}start of {_filename_}{FM.DBLQT},{FM.CPAREN},{FM.NEWLINE}"""
@@ -120,9 +131,9 @@ TBGLST = {FM.OBRKT}
 
 			# __MODULE_NAME__, __SUB__
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (("sub_" in KWargs_) and ("sub1_" not in KWargs_) and ("sub2_" not in KWargs_) and ("class_" not in KWargs_)):
+		if (("sub0" in KWargs_) and ("sub1" not in KWargs_) and ("sub2" not in KWargs_) and ("class" not in KWargs_)):
 			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			_sub_ = KWargs["sub_"]
+			_sub_ = KWargs["sub0"]
 			_filename_ = FM.NAME_LCL_SUB_NEW_PY(_moduleName_, _sub_)
 			_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}{FM.NEWLINE}
 __MODULE_NAME__ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
@@ -130,7 +141,7 @@ __SUB__ = {FM.DBLQT}{_sub_}{FM.DBLQT}
 __FILENAME__ = {FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SUB_NEW_PY(__MODULE_NAME__, __SUB__){FM.CBRCE}{FM.TRIQT}
 __ID__ = (__MODULE_NAME__, __FILENAME__)
 TBGLST = {FM.OBRKT}
-{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}{_moduleName_}{FM.DBLQT}, {FM.DBLQT}{_filename_}{FM.DBLQT}{FM.CPAREN}, {FM.DBLQT}00_{_moduleName_}_{sub_}_BEGINS{FM.DBLQT}, FMAX_NOP, {FM.DBLQT}start of {_filename_}{FM.DBLQT},{FM.CPAREN},{FM.NEWLINE}"""
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}{_moduleName_}{FM.DBLQT}, {FM.DBLQT}{_filename_}{FM.DBLQT}{FM.CPAREN}, {FM.DBLQT}00_{_moduleName_}_{sub0}_BEGINS{FM.DBLQT}, FMAX_NOP, {FM.DBLQT}start of {_filename_}{FM.DBLQT},{FM.CPAREN},{FM.NEWLINE}"""
 		self.__FILE_DICT__[_filename_].write(_strToRtn_)
 			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
@@ -161,9 +172,9 @@ TBGLST = {FM.OBRKT}
 		itemToExplode_ = itemToExplode_[1:]
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_ID_["filename_"] is not None) and (_ID_["filename_"] not in self.__FILE_DICT__):
-			self.__FILE_DICT__[_ID_["filename_"]] = open(_ID_["filename_"], "tw")
-			self.startSubNewFile(_ID_)
+		if (_ID_["filename"] is not None) and (_ID_["filename"] not in self.__FILE_DICT__):
+			self.__FILE_DICT__[_ID_["filename"]] = open(_ID_["filename"], "tw")
+			self.startLCLNewFile(_ID_)
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		_strToWrt_ = f"""{FM.NTAB(1)}{FM.OPAREN}{_ID_}, {FM.DBLQT}{itemToExplode_[0]}{FM.DBLQT}, FM.{itemToExplode_[1]}, """
@@ -177,7 +188,7 @@ TBGLST = {FM.OBRKT}
 
 		_strToWrt_ = _strToWrt_[:-1] + f"""{FM.CPAREN},{FM.NEWLINE}"""
 		_strToWrt1_ = _strToWrt1_[:-1] + f"""{FM.CPAREN},{FM.NEWLINE}"""
-		self.__FILE_DICT__[_ID_["filename_"]].write(_strToWrt_)
+		self.__FILE_DICT__[_ID_["filename"]].write(_strToWrt_)
 		self.__FILE_DICT__[FM.NAME_LCL_SUB_NEW_PY("FM", "TBGLST")].write(_strToWrt1_)
 
 		return _ID_, itemToExplode_
