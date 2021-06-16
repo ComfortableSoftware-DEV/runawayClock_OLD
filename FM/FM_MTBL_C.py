@@ -37,23 +37,16 @@ class MTBL_C():
 		_class_ = KWargs_.get("class")
 		_filename_ = KWargs_.get("filename")
 		_moduleName_ = KWargs_.get("moduleName")
+		_newFilename_ = KWargs_.get("newFilename")
 		_sub0_ = KWargs_.get("sub0")
 		_sub1_ = KWargs_.get("sub1")
 		_sub2_ = KWargs_.get("sub2")
-
-		print(f"""KWargs_ {KWargs_}
-_class_ {_class_} = KWargs_.get("class")
-_filename_ {_filename_} = KWargs_.get("filename")
-_moduleName_ {_moduleName_} = KWargs_.get("moduleName")
-_sub0_ {_sub0_} = KWargs_.get("sub0")
-_sub1_ {_sub1_} = KWargs_.get("sub1")
-_sub2_ {_sub2_} = KWargs_.get("sub2")
-""")
 
 		_IDToRtn_ = (
 			("class", _class_,),
 			("filename", _filename_,),
 			("moduleName", _moduleName_,),
+			("newFilename", _newFilename_,)
 			("sub0", _sub0_,),
 			("sub1", _sub1_,),
 			("sub2", _sub2_,),
@@ -79,10 +72,10 @@ _sub2_ {_sub2_} = KWargs_.get("sub2")
 	def startLCLNewFile(self, IDIn_):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 		_strToRtn_ = ""
-		print(f"""IDIn_ {IDIn_}""")
 		_class_ = IDIn_.get("class")
 		_filename_ = IDIn_.get("filename")
 		_moduleName_ = IDIn_.get("moduleName")
+		_newFilename_ = IDIn_.get("newFilename")
 		_sub0_ = IDIn_.get("sub0")
 		_sub1_ = IDIn_.get("sub1")
 		_sub2_ = IDIn_.get("sub2")
