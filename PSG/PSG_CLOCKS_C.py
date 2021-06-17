@@ -1,9 +1,10 @@
 
 
+from FM import FM
 from PSG import PSG
 
 
-class CLASS_CLOCKS(object):
+class CLOCKS_C(object):
 	global \
 		DICT_ALL_THE_FORMS, \
 		APPDS_MAIN

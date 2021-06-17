@@ -14,7 +14,7 @@ def makePSGClasses():
 	for _thisClassName_, _theseVars_ in _dictToUse1_.items():
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		with open(f"""{FM.NAME_LCL_SELF_CLASS_NEW_PY(__CLASS__=_thisClassName_, __MODULE_NAME__="PSG",)}""", "tw") as _FDmakePSGClasses_:
-			_FDmakePSGClasses_.write(f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}from PSG import PSG{FM.NEWLINE} class {_thisClassName_}_C{FM.OPAREN}object{FM.CPAREN}:
+			_FDmakePSGClasses_.write(f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}from PSG import PSG{FM.NEWLINE}{FM.NEWLINE}{FM.NEWLINE}class {_thisClassName_}_C{FM.OPAREN}object{FM.CPAREN}:
 {FM.NTAB(1)}global {FM.BKSLSH}
 {FM.NTAB(2)}DICT_ALL_THE_FORMS, {FM.BKSLSH}
 {FM.NTAB(2)}APPDS_MAIN

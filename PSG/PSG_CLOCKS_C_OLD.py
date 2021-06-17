@@ -1,5 +1,8 @@
 
 
+from PSG import PSG
+
+
 class CLASS_CLOCKS(object):
 	global \
 		DICT_ALL_THE_FORMS, \
