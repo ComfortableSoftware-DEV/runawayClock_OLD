@@ -21,7 +21,7 @@ __ID__ = (
 )
 
 TBGLST = [
-	(("PSGVAL__CLOCKS_COLUMN01", FM.FMAX_NOP, "the COLUMN01 for APPMODE_CLOCKS",), __ID__,),
+	(("PSGVAL__CLOCKS", FM.FMAXPSG_SCTN09FF_CLASS_DEF, "CLOCKS", "define clocks class",), __ID__,),
 	(("PSGVAL__CLOCKS_COLUMN0100", FM.FMAXPSG_SCTN09FF_CLASS_COLUMN_DEF, "CLOCKS", "_COLUMN01_", "the column that puts the two smaller clocks below the main one",), __ID__,),
 	(("PSGVAL__CLOCKS_COLUMN0101", FM.FMAXPSG_SCTN09FF_CLASS_COLUMN_ROW_ADD, "CLOCKS", "_COLUMN01_", "COLUMN01_ROW_00", "L03", "add a new row to clocks column",), __ID__,),
 	(("PSGVAL__CLOCKS_COLUMN0102", FM.FMAXPSG_SCTN09FF_CLASS_COLUMN_TEXT_ADD, "CLOCKS", "_COLUMN01_", "COLUMN01_ROW_00", "L04", "COLUMN01_E01", "add a new TEXT element to clocks column",), __ID__,),

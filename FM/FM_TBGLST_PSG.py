@@ -354,7 +354,6 @@ TBGLST = [
 	(("PSGVAL_COLOR_TIME_ELAPSED", FM.FMAXPSG_SCTN0900_STR_DEF, "COLOR_TIME_ELAPSED", "#447733", "color of the clock on any window/frame/etc.",), __ID__),
 	(("PSGVAL_COLOR_TIME_TOGO", FM.FMAXPSG_SCTN0900_STR_DEF, "COLOR_TIME_TOGO", "#AA6600", "color of the clock on any window/frame/etc.",), __ID__),
 	(("PSGVAL_COLOR_WHITE", FM.FMAXPSG_SCTN0900_STR_DEF, "COLOR_WHITE", "#FFFFFF", "white",), __ID__),
-	(("PSGVAL_C_CLOCKS", FM.FMAXPSG_SCTN09FF_CLASS_DEF, "CLOCKS", "define the clocks class",), __ID__,),
 	(("PSGVAL_DPD_ROOT00", FM.FMAXPSG_SCTN0902_DICT_DEF, "DPD_ROOT", "DPD_ROOT defined",), __ID__),
 	(("PSGVAL_DPD_ROOT01", FM.FMAXPSG_SCTN0902_DICT_VV_ADD, "DPD_ROOT", "F_COMPAREBBOX", "False", "DPD_ROOT entry compareBBox",), __ID__),
 	(("PSGVAL_DPD_ROOT01", FM.FMAXPSG_SCTN0902_DICT_VV_ADD, "DPD_ROOT", "F_COMPAREXY", "False", "DPD_ROOT entry compareXY",), __ID__),

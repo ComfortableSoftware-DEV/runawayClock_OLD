@@ -325,7 +325,7 @@ def parseTBGLST():
 				if _thisItemLen_ != 3:
 					FM.doErrorItem("not 3 items", _thisItem_)
 					continue
-				FM.FMFM_SCTN0104_LIST_DICT[_thisName_] = f"{OBRKT}{CBRKT}"
+				FM.FMFM_SCTN0104_LIST_DICT[_thisName_] = f"{FM.OBRKT}{FM.CBRKT}"
 				FM.FMFM_SCTN0104_LIST_CMNT_DICT[_thisName_] = f"{_thisComment_}"
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -1331,7 +1331,7 @@ def parseTBGLST():
 					FM.FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
 				if _thisRowKey_ not in FM.FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_]:
 					FM.FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
-				FM.FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][TABLEVEL] = _thisTabLevel_
+				FM.FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][FM.TABLEVEL] = _thisTabLevel_
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1740,7 +1740,7 @@ def parseTBGLST():
 					FM.FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
 				if _thisRowKey_ not in FM.FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_]:
 					FM.FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
-				FM.FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][TABLEVEL] = _thisTabLevel_
+				FM.FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][FM.TABLEVEL] = _thisTabLevel_
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
@@ -1942,7 +1942,7 @@ def parseTBGLST():
 					FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DEF2_DICT[_thisClassName_] = []
 
 				if _thisClassName_ not in FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DEF1_DICT:
-					FM.FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_] = []
+					FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DEF1_DICT[_thisClassName_] = []
 
 				if _thisClassName_ not in FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DEF2_DICT:
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_] = []
@@ -1999,7 +1999,7 @@ def parseTBGLST():
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
 					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
-					thisValStr_ = f"""f{TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{TRIQT}"""
+					thisValStr_ = f"""f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
 
 				else:
 					thisValStr_ = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
@@ -2025,7 +2025,7 @@ def parseTBGLST():
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
 					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
-					thisValStr_ = f"""f{TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{TRIQT}"""
+					thisValStr_ = f"""f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
 
 				else:
 					thisValStr_ = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
@@ -2060,7 +2060,7 @@ def parseTBGLST():
 
 				FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
-				thisValStr_ = f"""{_thisElementName_}{FM.CPAREN}{FM.CBRCE}{TRIQT}"""
+				thisValStr_ = f"""{_thisElementName_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
 
 				if _thisClassName_ not in FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT:
 					FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_] = {}
@@ -2068,8 +2068,8 @@ def parseTBGLST():
 					FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
 				FM.FMPSG_SCTN0903_LIST_DICT["LIST_DNUPDATE"] += f"""{FM.NTAB(1)}K_{_thisElementName_.upper()},  # {_thisComment_}{FM.NEWLINE}"""
-				FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{OBRKT}K{_thisElementName_[:-1]}{CBRKT} = K{_thisElementName_[:-1]}{FM.NEWLINE}"""
-				FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}K{_thisElementName_[:-1]}{CBRKT} = K{_thisElementName_[:-1]}{FM.NEWLINE}"""
+				FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}K{_thisElementName_[:-1]}{FM.CBRKT} = K{_thisElementName_[:-1]}{FM.NEWLINE}"""
+				FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}K{_thisElementName_[:-1]}{FM.CBRKT} = K{_thisElementName_[:-1]}{FM.NEWLINE}"""
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -2346,7 +2346,7 @@ def parseTBGLST():
 				if _thisRowKey_ not in FM.FMPSG_SCTN09FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_]:
 					FM.FMPSG_SCTN09FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_] = {}
 
-				FM.FMPSG_SCTN09FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][TABLEVEL] = _thisTabLevel_
+				FM.FMPSG_SCTN09FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][FM.TABLEVEL] = _thisTabLevel_
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -2620,7 +2620,7 @@ def parseTBGLST():
 				if _thisElementName_ not in FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_]:
 					FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 
-				FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr("res/functions/" + _thisFilename_)}""")
+				FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.readFileToStr("res/functions/" + _thisFilename_)}""")
 
 				if _thisClassName_ not in FM.FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT:
 					FM.FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
@@ -2678,7 +2678,7 @@ def parseTBGLST():
 				_thisElementName_ = _thisItem_[3]
 				_thisFilename_ = _thisItem_[4]
 
-				FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr("res/functions/" + _thisFilename_)}""")
+				FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.readFileToStr("res/functions/" + _thisFilename_)}""")
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -2771,7 +2771,7 @@ def parseTBGLST():
 					continue
 
 				_thisClassName_ = _thisItem_[2]
-				_thisParmStr_ = subMyPlaceKpr(_thisItem_[3])
+				_thisParmStr_ = FM.subMyPlaceKpr(_thisItem_[3])
 
 				if _thisClassName_ not in FM.FMPSG_SCTN09FF_CLASS_INIT_DICT:
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DICT[_thisClassName_] = []
@@ -2793,7 +2793,7 @@ def parseTBGLST():
 				_thisValName_ = _thisItem_[3]
 				_thisLambda_ = _thisItem_[4]
 
-				_thisLambda_ = subMyPlaceKpr(_thisLambda_)
+				_thisLambda_ = FM.subMyPlaceKpr(_thisLambda_)
 				FM.FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{FM.NEWLINE}""")
 
 				continue
@@ -2809,7 +2809,7 @@ def parseTBGLST():
 
 				_thisClassName_ = _thisItem_[2]
 				_thisLine_ = _thisItem_[3]
-				_thisLine_ = subMyPlaceKpr(_thisLine_)
+				_thisLine_ = FM.subMyPlaceKpr(_thisLine_)
 
 				FM.FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}{_thisLine_}  # {_thisComment_}{FM.NEWLINE}""")
 
@@ -2827,7 +2827,7 @@ def parseTBGLST():
 				_thisClassName_ = _thisItem_[2]
 				_thisFilename_ = _thisItem_[3]
 
-				FM.FMPSG_SCTN09FF_CLASS_INIT_DICT[_thisClassName_].append(f"""{readFileToStr(_thisFilename_)}{FM.NEWLINE}""")
+				FM.FMPSG_SCTN09FF_CLASS_INIT_DICT[_thisClassName_].append(f"""{FM.readFileToStr(_thisFilename_)}{FM.NEWLINE}""")
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -2921,7 +2921,7 @@ def parseTBGLST():
 
 				if (_isARevKeyItem_ == "True"):
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}f{TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}{FM.CBRCE}{TRIQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
+					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
 
 				else:
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
@@ -2948,7 +2948,7 @@ def parseTBGLST():
 
 				if (_isARevKeyItem_ == "True"):
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}f{TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}{FM.CBRCE}{TRIQT}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
+					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
 
 				else:
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
@@ -2973,12 +2973,12 @@ def parseTBGLST():
 				_isARevKeyItem_ = _thisItem_[4]
 
 				if _isARevKeyItem_ == "True":
-					FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisKey_}{CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}{CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
+					FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisKey_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}  # {_thisComment_}{FM.NEWLINE}""")
+					FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}{FM.CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
 
 				else:
-					FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisKey_}{CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}{_thisKey_}{CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
+					FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisKey_}{FM.CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
+					FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}{_thisKey_}{FM.CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -2995,7 +2995,7 @@ def parseTBGLST():
 				_thisValName_ = _thisItem_[3]
 				_thisLambda_ = _thisItem_[4]
 
-				_thisLambda_ = subMyPlaceKpr(_thisLambda_)
+				_thisLambda_ = FM.subMyPlaceKpr(_thisLambda_)
 				FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{FM.NEWLINE}""")
 
 				continue
@@ -3011,7 +3011,7 @@ def parseTBGLST():
 
 				_thisClassName_ = _thisItem_[2]
 				_thisLine_ = _thisItem_[3]
-				_thisLine_ = subMyPlaceKpr(_thisLine_)
+				_thisLine_ = FM.subMyPlaceKpr(_thisLine_)
 
 				FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}{_thisLine_}  # {_thisComment_}{FM.NEWLINE}""")
 
@@ -3066,7 +3066,7 @@ def parseTBGLST():
 
 				_thisClassName_ = _thisItem_[2]
 				_thisLine_ = _thisItem_[3]
-				_thisLine_ = subMyPlaceKpr(_thisLine_)
+				_thisLine_ = FM.subMyPlaceKpr(_thisLine_)
 
 				FM.FMPSG_SCTN09FF_CLASS_INIT_DEF3_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}{_thisLine_}  # {_thisComment_}{FM.NEWLINE}""")
 
@@ -3265,7 +3265,7 @@ def parseTBGLST():
 				if _thisRowKey_ not in FM.FMPSG_SCTN09FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_]:
 					FM.FMPSG_SCTN09FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_] = {}
 
-				FM.FMPSG_SCTN09FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][TABLEVEL] = _thisTabLevel_
+				FM.FMPSG_SCTN09FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][FM.TABLEVEL] = _thisTabLevel_
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -3594,13 +3594,13 @@ def parseTBGLST():
 					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_] = {}
 
 				if (_thisKey_ == "KEY"):
-					thisValStr_ = f"""f{TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{TRIQT}"""
+					thisValStr_ = f"""f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
 
 					if _thisElementName_ not in FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]:
 						FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisVal_}{CBRKT} = f{TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{TRIQT}{FM.NEWLINE}"""
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}f{TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{TRIQT}{CBRKT} = {_thisVal_}{FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisVal_}{FM.CBRKT} = f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}{FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}{FM.CBRKT} = {_thisVal_}{FM.NEWLINE}"""
 
 				else:
 					thisValStr_ = f"""{_thisVal_}"""
@@ -3629,13 +3629,13 @@ def parseTBGLST():
 				_thisVal_ = _thisItem_[5]
 
 				if (_thisKey_ == "KEY"):
-					thisValStr_ = f"""f{TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{TRIQT}"""
+					thisValStr_ = f"""f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
 
 					if _thisElementName_ not in FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]:
 						FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisVal_}{CBRKT} = f{TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{TRIQT}{FM.NEWLINE}"""
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}f{TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{TRIQT}{CBRKT} = {_thisVal_}{FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisVal_}{FM.CBRKT} = f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}{FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}{FM.CBRKT} = {_thisVal_}{FM.NEWLINE}"""
 
 				else:
 					thisValStr_ = f"""{_thisVal_}"""
