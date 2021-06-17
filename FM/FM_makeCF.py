@@ -8,8 +8,8 @@ from FM import FM
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def makeCF():
 	## fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	with open(f"""{FM.NAME_LCL_NEW_PY("CF")}""", "tw") as _FDmakeCF_:
-		_FDmakeCF_.write(f"""{FM.readFileToStr(FM.NAME_GLBL_TOP_PY("CF"))}{FM.readFileToStr(FM.NAME_GLBL_ROOT_PY("SCTN0102.py"))}""")
+	with open(f"""{FM.NAME_LCL_SELF_NEW_PY("CF")}""", "tw") as _FDmakeCF_:
+		_FDmakeCF_.write(f"""{FM.readFileToStr(FM.NAME_GLBL_SELF_TOP_PY("CF"))}{FM.readFileToStr(FM.NAME_GLBL_PY_ROOT_PY("SCTN0102"))}""")
 
 		_FDmakeCF_.write(f"""{FM.makeAComment("SCTN0201 CF defines")}""")
 		_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0201_DEF_DICT)
