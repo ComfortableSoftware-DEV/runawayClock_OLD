@@ -5,7 +5,7 @@ import gc
 import PySimpleGUI as SG
 
 
-import CF
+from CF import CF
 
 
 gc.enable()

@@ -3,33 +3,29 @@
 from FM import FM
 
 
-_class_ = "CLOCKS"
 _moduleName_ = "FM"
 _sub0_ = "TBGLST"
 _sub1_ = "PSG"
 
-_filename_ = f"""{FM.NAME_LCL_SELF_SUB1_CLASS_PY(
-	__CLASS__=_class_,
+_filename_ = f"""{FM.NAME_LCL_SELF_SUB1_PY(
 	__MODULE_NAME__=_moduleName_,
 	__SUB0__=_sub0_,
 	__SUB1__=_sub1_,
 )}"""  # FM/FM_TBGLST_PSG_CLOCKS_C.py
-_newFilename_ = f"""{FM.NAME_LCL_SELF_SUB1_CLASS_NEW_PY(
-	__CLASS__=_class_,
+
+_newFilename_ = f"""{FM.NAME_LCL_SELF_SUB1_NEW_PY(
 	__MODULE_NAME__=_moduleName_,
 	__SUB0__=_sub0_,
 	__SUB1__=_sub1_,
 )}"""  # FM/FM_TBGLST_PSG_CLOCKS_C_NEW.py
 
 __ID__ = (
-	("__CLASS__.", _class_,),  # CLOCKS
 	("__FILENAME__", _filename_,),  # FM/FM_TBGLST_PSG_CLOCKS_C.py
 	("__MODULE_NAME__", _moduleName_,),  # FM
 	("__NEW_FILENAME__", _newFilename_,),  # FM/FM_TBGLST_PSG_CLOCKS_C_NEW.py
 	("__SUB0__", _sub0_,),  # TBGLST
 	("__SUB1__", _sub1_,),  # PSG
 )
-
 
 TBGLST = [
 	(("PSGVAL__CLOCKS", FM.FMAXPSG_SCTN09FF_CLASS_DEF, "CLOCKS", "define clocks class",), __ID__),
@@ -201,7 +197,7 @@ TBGLST = [
 	(("PSGVAL__CLOCKS_WINDOW01", FM.FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "PSG.LAYOUT", "self._LAYOUT_", "add the layout for CLOCKS_WINDOW",), __ID__),
 	(("PSGVAL__CLOCKS_WINDOW01", FM.FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "PSG.MARGINS", "PSG.SZ_MARGINS_ALL", "",), __ID__),
 	(("PSGVAL__CLOCKS_WINDOW01", FM.FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "PSG.NO_TITLEBAR", "True", "no titlebar on APPMODE_CLOCKS window",), __ID__),
-	(("PSGVAL__CLOCKS_WINDOW01", FM.FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "PSG.TITLE", "TITLE_CLOCKS", "",), __ID__),
+	(("PSGVAL__CLOCKS_WINDOW01", FM.FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD, "CLOCKS", "_WINDOW_", "PSG.TITLE", "PSG.TITLE_CLOCKS", "",), __ID__),
 ]
 
 

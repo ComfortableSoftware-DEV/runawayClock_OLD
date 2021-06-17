@@ -1,27 +1,27 @@
 	def runaway(self):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (NOWMS < self._TIME_MS_AT_MOVE_):
-			return  # only move at minimum  SZ_TIME_BETWEEN_MOVES apart
+		if (PSG.NOWMS < self._TIME_MS_AT_MOVE_):
+			return  # only move at minimum  PSG.SZ_TIME_BETWEEN_MOVES apart
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		self._TIME_MS_AT_MOVE_ = NOWMS + SZ_TIME_MS_BETWEEN_MOVES
+		self._TIME_MS_AT_MOVE_ = PSG.NOWMS + PSG.SZ_TIME_MS_BETWEEN_MOVES
 		_screenSZX_, _screenSZY_ = self._SCREEN_DIMS_
 		_sizeX_, _sizeY_ = self._SIZE_
 		_lcnX_, _lcnY_ = self._CURRENT_LOCATION_
-		_moveToX_ = _lcnX_ + (self._MPX_[INDEX_X] * SZ_MOVE_DIST)
-		_moveToY_ = _lcnY_ + (self._MPX_[INDEX_Y] * SZ_MOVE_DIST)
+		_moveToX_ = _lcnX_ + (self._MPX_[INDEX_X] * PSG.SZ_MOVE_DIST)
+		_moveToY_ = _lcnY_ + (self._MPX_[INDEX_Y] * PSG.SZ_MOVE_DIST)
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DPD_[F_RUNAWAY] is True):
+		if (self._DPD_[PSG.F_RUNAWAY] is True):
 			print(f"""{CF.getDebugInfo()}
-{CF.frameItMS("_TIME_MS_AT_MOVE_", self._TIME_MS_AT_MOVE_)} = {CF.frameItMS("NOWMS", NOWMS)} + {CF.frameItMS("SZ_TIME_MS_BETWEEN_MOVES", SZ_TIME_MS_BETWEEN_MOVES)}
+{CF.frameItMS("_TIME_MS_AT_MOVE_", self._TIME_MS_AT_MOVE_)} = {CF.frameItMS("PSG.NOWMS", PSG.NOWMS)} + {CF.frameItMS("PSG.SZ_TIME_MS_BETWEEN_MOVES", PSG.SZ_TIME_MS_BETWEEN_MOVES)}
 {CF.frameIt("_screenSZX_", _screenSZX_)}, {CF.frameIt("_screenSZY_", _screenSZY_)} = {CF.frameIt("self._SCREEN_DIMS_", self._SCREEN_DIMS_)}
 {CF.frameIt("_sizeX_", _sizeX_)}, {CF.frameIt("_sizeY_", _sizeY_)} = {CF.frameIt("self._SIZE_", self._SIZE_)}
 {CF.frameIt("_lcnX_", _lcnX_)}, {CF.frameIt("_lcnY_", _lcnY_)} = {CF.frameIt("_CURRENT_LOCATION_", self._CURRENT_LOCATION_)}
-{CF.frameIt("_moveToX_", _moveToX_)} = {CF.frameIt("_lcnX_", _lcnX_)} + ({CF.frameIt("_MPX_[INDEX_X]", self._MPX_[INDEX_X])} * {CF.frameIt("SZ_MOVE_DIST", SZ_MOVE_DIST)})
-{CF.frameIt("_moveToY_", _moveToY_)} = {CF.frameIt("_lcnY_", _lcnY_)} + ({CF.frameIt("_MPX_[INDEX_Y]", self._MPX_[INDEX_Y])} * {CF.frameIt("SZ_MOVE_DIST", SZ_MOVE_DIST)})
+{CF.frameIt("_moveToX_", _moveToX_)} = {CF.frameIt("_lcnX_", _lcnX_)} + ({CF.frameIt("_MPX_[INDEX_X]", self._MPX_[INDEX_X])} * {CF.frameIt("PSG.SZ_MOVE_DIST", PSG.SZ_MOVE_DIST)})
+{CF.frameIt("_moveToY_", _moveToY_)} = {CF.frameIt("_lcnY_", _lcnY_)} + ({CF.frameIt("_MPX_[INDEX_Y]", self._MPX_[INDEX_Y])} * {CF.frameIt("PSG.SZ_MOVE_DIST", PSG.SZ_MOVE_DIST)})
 """)
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -45,13 +45,13 @@
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DPD_[F_RUNAWAY] is True):
+		if (self._DPD_[PSG.F_RUNAWAY] is True):
 			print(f"""runaway: ready to move to {CF.OPAREN}{_moveToX_}, {_moveToY_}{CF.CPAREN}""")
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 #			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-#		if (abs(_moveToX_ - _lcnX_) > SZ_MAX_DELTA) or (abs(_moveToY_ - _lcnY_) > SZ_MAX_DELTA):
+#		if (abs(_moveToX_ - _lcnX_) > PSG.SZ_MAX_DELTA) or (abs(_moveToY_ - _lcnY_) > PSG.SZ_MAX_DELTA):
 #			return
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
