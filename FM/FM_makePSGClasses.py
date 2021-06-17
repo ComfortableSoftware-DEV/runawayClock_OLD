@@ -16,7 +16,7 @@ def makePSGClasses():
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		with open( \
-				f"""{FM.NAME_LCL_SUB_NEW_PY("PSG", _thisClassName_)}""", \
+				f"""{FM.NAME_LCL_SELF_SUB0_CLASS_NEW_PY("PSG", _thisClassName_)}""", \
 				"tw") as _FDmakePSGClasses_:
 
 			_FDmakePSGClasses_.write(f"""class CLASS_{_thisClassName_}{FM.OPAREN}object{FM.CPAREN}:
@@ -25,6 +25,7 @@ def makePSGClasses():
 {FM.NTAB(2)}APPDS_MAIN
 {FM.NTAB(1)}{FM.FOLD1STARTHERE}{FM.NEWLINE}
 """)
+
 			print(f"""FM_makePSGClasses() FM.FMPSG_SCTN09FF_CLASS_INIT_DICT
 {FM.FMPSG_SCTN09FF_CLASS_INIT_DICT}""")
 			_FDmakePSGClasses_.write(f"""{FM.NTAB(1)}def __init__{FM.OPAREN}self{FM.FMPSG_SCTN09FF_CLASS_INIT_DICT[_thisClassName_].pop(0)}{FM.CPAREN}:{FM.NEWLINE}{FM.NTAB(2)}{FM.FOLD2STARTHERELN}""")

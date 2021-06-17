@@ -18,8 +18,8 @@ def parseTBGLST():
 	with FM_MTBL_C.MTBL_C() as _MTBL_:
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		for _thisItem_ in TBGLST:
-			_thisItem_, _thisItemID_ = _MTBL_.write(_thisItem_)
+		for _fullItemWID_ in TBGLST:
+			_thisItem_, _thisItemID_ = _MTBL_.write(_fullItemWID_)
 			_thisItemLen_ = len(_thisItem_)
 
 			print(f"""parsing {_thisItem_}""")
