@@ -347,7 +347,7 @@ _filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_CLASS_PY(
 {FM.NTAB(1)}__SUB0__=_sub0_,
 {FM.NTAB(1)}__SUB1__=_sub1_,
 ){FM.CBRCE}{FM.TRIQT}  # {_filename_}
-_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_CLASS_NEW_PY(
+{FM.NEWLINE}_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_CLASS_NEW_PY(
 {FM.NTAB(1)}__CLASS__=_class_,
 {FM.NTAB(1)}__MODULE_NAME__=_moduleName_,
 {FM.NTAB(1)}__SUB0__=_sub0_,
