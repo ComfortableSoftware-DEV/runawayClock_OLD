@@ -218,9 +218,10 @@ __dummy__ {__dummy__}
 		return _IDToRtn_
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 
-	def startLCLNewFile(self, IDIn_):
+	def startLCLNewFile(self, IDToWrt_):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 		_strToRtn_ = ""
+		IDIn_ = self.makeDictID(IDToWrt_)
 		_class_ = IDIn_.get("__CLASS__")
 		_filename_ = IDIn_.get("__FILENAME__")
 		_moduleName_ = IDIn_.get("__MODULE_NAME__")
@@ -391,7 +392,7 @@ TBGLST = {FM.OBRKT}
 		_ItemsToWrite_ = itemToExplode_[0]
 		print(f"""_IDBeingExploded_ {_IDBeingExploded_}
 _ItemsToWrite_ {_ItemsToWrite_}""")
-		_ID_ = dict((x, y) for x, y in _IDBeingExploded_)
+		#_ID_ = dict((x, y) for x, y in _IDBeingExploded_)
 		_class_ = _IDBeingExploded_.get("__CLASS__")
 		_filename_ = _IDBeingExploded_.get("__FILENAME__")
 		_moduleName_ = _IDBeingExploded_.get("__MODULE_NAME__")
@@ -403,12 +404,9 @@ _ItemsToWrite_ {_ItemsToWrite_}""")
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (_newFilename_ is not None) and (_newFilename_ not in self.__FILE_DICT__):
 			self.__FILE_DICT__[_newFilename_] = open(_newFilename_, "tw")
-			print(f"""itemToExplode_ {itemToExplode_}
-_ID_ {_ID_}
-_ID_[__FILENAME__] |{_newFilename_}|
-""")
+			print(f"""itemToExplode_ {itemToExplode_}""")
 
-			self.startLCLNewFile(_ID_)
+			self.startLCLNewFile(itemToExplode_[1])
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		_strToWrt_ = f"""{FM.NTAB(1)}{FM.OPAREN}{FM.OPAREN}"""
