@@ -1,7 +1,9 @@
 
 
+from CF import CF
 from FM import FM
 from PSG import PSG
+import PySimpleGUI as SG
 
 
 class CLOCKS_C(object):
@@ -99,23 +101,23 @@ class CLOCKS_C(object):
 		self._DPD_ = {  # define a DPD CLOCKS:/
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			PSG.F___INIT__: True,  # define a DPD at /
-			F___ENTER__: False,  # define __enter__
-			F___EXIT__: False,  # define __exit__ in CLOCKS
-			F_CHECKMOUSE: False,  # define checkMouse
-			F_DEBUGPRINT: False,  # read the frame and set self._RESULT_
-			F_EASYUPDATE: False,  # load the whole thing from the file for easyUpdate
-			F_EASYUPDATEPARMS: False,  # load the whole thing from the file for easyUpdate
-			F_ENINT: False,  # read the frame and set self._RESULT_
-			F_ENSTRING: False,  # read the frame and set self._RESULT_
-			F_INTERVALCOUNTOFF: False,  # turn interval count off
-			F_INTERVALCOUNTON: False,  # turn interval count on
-			F_QUICKREAD: False,  # read the frame and set self._RESULT_
-			F_RUNAWAY: False,  # define runaway
-			F_SETCHECKBOX: False,  # define runaway
-			F_UPDATEFLIPPEDITEMS: True,  # read the frame and set self._RESULT_
-			F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
-			F_ZEROFLIPPED: False,  # update the displayed info from a dict or the default _DICTIN_
-			F_UPDATE: True,  # define the required update function
+			PSG.F___ENTER__: False,  # define __enter__
+			PSG.F___EXIT__: False,  # define __exit__ in CLOCKS
+			PSG.F_CHECKMOUSE: False,  # define checkMouse
+			PSG.F_DEBUGPRINT: False,  # read the frame and set self._RESULT_
+			PSG.F_EASYUPDATE: False,  # load the whole thing from the file for easyUpdate
+			PSG.F_EASYUPDATEPARMS: False,  # load the whole thing from the file for easyUpdate
+			PSG.F_ENINT: False,  # read the frame and set self._RESULT_
+			PSG.F_ENSTRING: False,  # read the frame and set self._RESULT_
+			PSG.F_INTERVALCOUNTOFF: False,  # turn interval count off
+			PSG.F_INTERVALCOUNTON: False,  # turn interval count on
+			PSG.F_QUICKREAD: False,  # read the frame and set self._RESULT_
+			PSG.F_RUNAWAY: False,  # define runaway
+			PSG.F_SETCHECKBOX: False,  # define runaway
+			PSG.F_UPDATEFLIPPEDITEMS: True,  # read the frame and set self._RESULT_
+			PSG.F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
+			PSG.F_ZEROFLIPPED: False,  # update the displayed info from a dict or the default _DICTIN_
+			PSG.F_UPDATE: True,  # define the required update function
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -127,75 +129,61 @@ class CLOCKS_C(object):
 		self._TEXT_CURRENT_INTERVAL_COUNT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**PSG.TEXT_CURRENT_INTERVAL_COUNT,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(PSG.K_CURRENT_INTERVAL_COUNT)}""",  # interval count template
+			PSG.KEY: PSG.K_CURRENT_INTERVAL_COUNT,  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._DICT_KEYS_[PSG.K_CURRENT_INTERVAL_COUNT] = f"""{self._USE_THIS_KEY_(PSG.K_CURRENT_INTERVAL_COUNT)}"""
-		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(PSG.K_CURRENT_INTERVAL_COUNT)}"""] = PSG.K_CURRENT_INTERVAL_COUNT
 
 		self._TEXT_NAME_NEXT_EVENT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**PSG.TEXT_NAME_NEXT_EVENT,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(PSG.K_NAME_NEXT_EVENT)}""",  # interval count template
+			PSG.KEY: PSG.K_NAME_NEXT_EVENT,  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._DICT_KEYS_[PSG.K_NAME_NEXT_EVENT] = f"""{self._USE_THIS_KEY_(PSG.K_NAME_NEXT_EVENT)}"""
-		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(PSG.K_NAME_NEXT_EVENT)}"""] = PSG.K_NAME_NEXT_EVENT
 
 		self._TEXT_TIME_S_AT_ZEROELAPSE_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**PSG.TEXT_TIME_S_AT_ZEROELAPSE,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_AT_ZEROELAPSE)}""",  # interval count template
+			PSG.KEY: PSG.K_TIME_S_AT_ZEROELAPSE,  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._LIST_KEYS_TIME_.append(TEXT_TIME_S_AT_ZEROELAPSE)
-		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(TEXT_TIME_S_AT_ZEROELAPSE))
-		self._DICT_KEYS_[PSG.K_TIME_S_AT_ZEROELAPSE] = f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_AT_ZEROELAPSE)}"""
-		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_AT_ZEROELAPSE)}"""] = PSG.K_TIME_S_AT_ZEROELAPSE
+		self._LIST_KEYS_TIME_.append(PSG.TEXT_TIME_S_AT_ZEROELAPSE)
+		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.TEXT_TIME_S_AT_ZEROELAPSE))
 
 		self._TEXT_TIME_S_AT_NEXT_ALERT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**PSG.TEXT_TIME_S_AT_NEXT_ALERT,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_AT_NEXT_ALERT)}""",  # interval count template
+			PSG.KEY: PSG.K_TIME_S_AT_NEXT_ALERT,  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._LIST_KEYS_TIME_.append(TEXT_TIME_S_AT_NEXT_ALERT)
-		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(TEXT_TIME_S_AT_NEXT_ALERT))
-		self._DICT_KEYS_[PSG.K_TIME_S_AT_NEXT_ALERT] = f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_AT_NEXT_ALERT)}"""
-		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_AT_NEXT_ALERT)}"""] = PSG.K_TIME_S_AT_NEXT_ALERT
+		self._LIST_KEYS_TIME_.append(PSG.TEXT_TIME_S_AT_NEXT_ALERT)
+		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.TEXT_TIME_S_AT_NEXT_ALERT))
 
 		self._TEXT_TIME_S_CLOCK_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**PSG.TEXT_TIME_S_CLOCK,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_CLOCK)}""",  # interval count template
+			PSG.KEY: PSG.K_TIME_S_CLOCK,  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._LIST_KEYS_TIME_.append(TEXT_TIME_S_CLOCK)
-		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(TEXT_TIME_S_CLOCK))
-		self._DICT_KEYS_[PSG.K_TIME_S_CLOCK] = f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_CLOCK)}"""
-		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_CLOCK)}"""] = PSG.K_TIME_S_CLOCK
+		self._LIST_KEYS_TIME_.append(PSG.TEXT_TIME_S_CLOCK)
+		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.TEXT_TIME_S_CLOCK))
 
 		self._TEXT_TIME_S_ELAPSED_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**PSG.TEXT_TIME_S_ELAPSED,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_ELAPSED)}""",  # interval count template
+			PSG.KEY: PSG.K_TIME_S_ELAPSED,  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._LIST_KEYS_TIME_.append(TEXT_TIME_S_ELAPSED)
-		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(TEXT_TIME_S_ELAPSED))
-		self._DICT_KEYS_[PSG.K_TIME_S_ELAPSED] = f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_ELAPSED)}"""
-		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_ELAPSED)}"""] = PSG.K_TIME_S_ELAPSED
+		self._LIST_KEYS_TIME_.append(PSG.TEXT_TIME_S_ELAPSED)
+		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.TEXT_TIME_S_ELAPSED))
 
 		self._TEXT_TIME_S_TOGO_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**PSG.TEXT_TIME_S_TOGO,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_TOGO)}""",  # interval count template
+			PSG.KEY: PSG.K_TIME_S_TOGO,  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._LIST_KEYS_TIME_.append(TEXT_TIME_S_TOGO)
-		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(TEXT_TIME_S_TOGO))
-		self._DICT_KEYS_[PSG.K_TIME_S_TOGO] = f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_TOGO)}"""
-		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(PSG.K_TIME_S_TOGO)}"""] = PSG.K_TIME_S_TOGO
+		self._LIST_KEYS_TIME_.append(PSG.TEXT_TIME_S_TOGO)
+		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.TEXT_TIME_S_TOGO))
 
 		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -278,17 +266,17 @@ class CLOCKS_C(object):
 
 		self._WINDOW_ = {  # define the clocks window
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			ALPHA_CHANNEL: PSG.SZ_ALPHA_HIGH,  # set the high alpha as the default
-			BACKGROUND_COLOR: PSG.COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
-			BORDER_DEPTH: PSG.SZ_BORDER_DEPTH,  # border depth to zero
-			ELEMENT_PADDING: PSG.SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
-			FORCE_TOPLEVEL: None,  # 
-			GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
-			KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
-			LAYOUT: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
-			MARGINS: PSG.SZ_MARGINS_ALL,  # 
-			NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
-			TITLE: TITLE_CLOCKS,  # 
+			PSG.ALPHA_CHANNEL: PSG.SZ_ALPHA_HIGH,  # set the high alpha as the default
+			PSG.BACKGROUND_COLOR: PSG.COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
+			PSG.BORDER_DEPTH: PSG.SZ_BORDER_DEPTH,  # border depth to zero
+			PSG.ELEMENT_PADDING: PSG.SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
+			PSG.FORCE_TOPLEVEL: None,  # 
+			PSG.GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
+			PSG.KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
+			PSG.LAYOUT: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
+			PSG.MARGINS: PSG.SZ_MARGINS_ALL,  # 
+			PSG.NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
+			PSG.TITLE: TITLE_CLOCKS,  # 
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 

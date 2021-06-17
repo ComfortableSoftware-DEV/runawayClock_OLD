@@ -5,7 +5,7 @@ import gc
 import PySimpleGUI as SG
 
 
-from CF import CF
+import CF
 
 
 gc.enable()
@@ -118,7 +118,6 @@ INDEX_SOUTH = 3  # SOUTH
 INDEX_WEST = 0  # WEST
 INDEX_X = 0  # X
 INDEX_Y = 1  # Y
-K_PKLJAR = "K_PKLJAR"  # comment
 K_ALARMPOPUP_TEXT_TEXT = "K_ALARMPOPUP_TEXT_TEXT"  # key for the text on a popup
 K_ALERTING_LIST = "K_ALERTING_LIST"  # list that holds all currently alarming events
 K_ALPHA_CHANNEL = "K_ALPHA_CHANNEL"  #
@@ -138,14 +137,14 @@ K_CHANGED_EVENTS = "K_CHANGED_EVENTS"  # comment
 K_CHANGED_LOCATION = "K_CHANGED_LOCATION"  # comment
 K_CHANGED_MOUSE_LOCATION = "K_CHANGED_MOUSE_LOCATION"  # comment
 K_CHANGED_VALUES = "K_CHANGED_VALUES"  # comment
-K_CHECKBOX_ALPHA_DIM = "K_CHECKBOX_ALPHA_DIM"  # value of the alphas dim checkbox
+K_CHECKBOX_ALPHA_DIM = "K_CHECKBOX_ALPHA_DIM"  # set the key for the checkbox
 K_CHECKBOX_DISMISSED = "K_CHECKBOX_DISMISSED"  # set the key for the checkbox
 K_CHECKBOX_ENABLED = "K_CHECKBOX_ENABLED"  # set the key for the checkbox
 K_CHECKBOX_FIRSTRUN = "K_CHECKBOX_FIRSTRUN"  # set the key for the checkbox
 K_CHECKBOX_HOVER_DATE = "K_CHECKBOX_HOVER_DATE"  # set the key for the checkbox
 K_CHECKBOX_IS_ALERTING_NOW = "K_CHECKBOX_IS_ALERTING_NOW"  # set the key for the checkbox
 K_CHECKBOX_PREDISMISSABLE = "K_CHECKBOX_PREDISMISSABLE"  # set the key for the checkbox
-K_CHECKBOX_RUNAWAY = "K_CHECKBOX_RUNAWAY"  # value of runaway checkbox
+K_CHECKBOX_RUNAWAY = "K_CHECKBOX_RUNAWAY"  # set the key for the checkbox
 K_CHECKBOX_SNOOZABLE = "K_CHECKBOX_SNOOZABLE"  # set the key for the checkbox
 K_CHECKBOX_SNOOZED = "K_CHECKBOX_SNOOZED"  # set the key for the checkbox
 K_CLOSE_BBOX = "K_CLOSE_BBOX"  #
@@ -224,19 +223,18 @@ K_LIST_ALL_TIMES = "K_LIST_ALL_TIMES"  # list of all times
 K_LIST_APPDS_MIDNIGHT_FIX_TIMES = "K_LIST_APPDS_MIDNIGHT_FIX_TIMES"  # list of times to be updated at midnight
 K_LIST_CLOSE = "K_LIST_CLOSE"  # list with close statuses
 K_LIST_DNUPDATE = "K_LIST_DNUPDATE"  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
-K_LIST_FLIP_INFO = "K_LIST_FLIP_INFO"  # the interval count and name list tup(K_CURRENT_INTERVAL_COUNT, K_NAME_NEXT_EVENT)
 K_LIST_KEYS_TIME = "K_LIST_KEYS_TIME"  #
 K_LIST_POPUP = "K_LIST_POPUP"  # popup list
 K_LIST_THIS_ALARM_POPUP_TEXT = "K_LIST_THIS_ALARM_POPUP_TEXT"  # collects the text to popup
 K_MAINFRAME = "K_MAINFRAME"  #
 K_MLCN = "K_MLCN"  # short cut to get mouse position
 K_MPX = "K_MPX"  # comment
-K_NAME_NEXT_EVENT = "K_NAME_NEXT_EVENT"  # interval count template
 K_NAME_NEXT_EVENT_STR = "K_NAME_NEXT_EVENT_STR"  # comment
 K_NOW_NOMS = "K_NOW_NOMS"  # comment
 K_NOWM = "K_NOWM"  # comment
 K_NOWMS = "K_NOWMS"  # comment
 K_NOWS = "K_NOWS"  # comment
+K_PKLJAR = "K_PKLJAR"  # comment
 K_PREDISMISSABLE = "K_PREDISMISSABLE"  # is this event dismissable in advance
 K_SCREEN_DIMS = "K_SCREEN_DIMS"  #
 K_SIZE = "K_SIZE"  #
@@ -285,18 +283,18 @@ K_TIME_MS_AT_UPDATE = "K_TIME_MS_AT_UPDATE"  #
 K_TIME_S_ADJUST_VALUE = "K_TIME_S_ADJUST_VALUE"  # comment
 K_TIME_S_AT_ALARM = "K_TIME_S_AT_ALARM"  # time of this event if it an alarm
 K_TIME_S_AT_LAST_RUN = "K_TIME_S_AT_LAST_RUN"  # time this alarm last ran, now if running
-K_TIME_S_AT_NEXT_ALERT = "K_TIME_S_AT_NEXT_ALERT"  # interval count template
+K_TIME_S_AT_NEXT_ALERT = "K_TIME_S_AT_NEXT_ALERT"  # time next time this alarm goes off
 K_TIME_S_AT_NEXT_EVENT_VAL = "K_TIME_S_AT_NEXT_EVENT_VAL"  # comment
 K_TIME_S_AT_NEXT_PERIODIC_JOB_VAL = "K_TIME_S_AT_NEXT_PERIODIC_JOB_VAL"  # seconds till next housekeeping, check for next times, etc.
-K_TIME_S_AT_ZEROELAPSE = "K_TIME_S_AT_ZEROELAPSE"  # interval count template
-K_TIME_S_CLOCK = "K_TIME_S_CLOCK"  # interval count template
-K_TIME_S_ELAPSED = "K_TIME_S_ELAPSED"  # interval count template
+K_TIME_S_AT_ZEROELAPSE = "K_TIME_S_AT_ZEROELAPSE"  # the time at last zero to keep elapsed time accurate despite other things hogging CPU time
+K_TIME_S_CLOCK = "K_TIME_S_CLOCK"  # the main clock time
+K_TIME_S_ELAPSED = "K_TIME_S_ELAPSED"  # key for all clocks elapsed
 K_TIME_S_INTERVAL = "K_TIME_S_INTERVAL"  # interval of this event
 K_TIME_S_INTERVAL__BEGIN = "K_TIME_S_INTERVAL__BEGIN"  # time of the day this interval is made active
 K_TIME_S_INTERVAL__END = "K_TIME_S_INTERVAL__END"  # time of the day this interval is no longer active
 K_TIME_S_INTERVAL_START = "K_TIME_S_INTERVAL_START"  # time of the day this round of interval started
 K_TIME_S_LEN_OF_ALERT = "K_TIME_S_LEN_OF_ALERT"  # length of time to alert this event before auto closing it
-K_TIME_S_TOGO = "K_TIME_S_TOGO"  # interval count template
+K_TIME_S_TOGO = "K_TIME_S_TOGO"  # down counter to next event on this window/alarm/interval/reminder
 K_TITLE_ALARMPOPUP = "K_TITLE_ALARMPOPUP"  # string with window title for APPMODE_CLOCKS
 K_TITLE_CLOCKS = "K_TITLE_CLOCKS"  # string with window title for APPMODE_CLOCKS
 K_TITLE_EDIT = "K_TITLE_EDIT"  # string with window title for APPMODE_CLOCKS
@@ -323,6 +321,14 @@ MOUSE_STATUS_S = "MOUSE_STATUS_S"  # mouse is south of checked element
 MOUSE_STATUS_SE = "MOUSE_STATUS_SE"  # mouse is southeast of checked element
 MOUSE_STATUS_SW = "MOUSE_STATUS_SW"  # mouse is southwest of checked element
 MOUSE_STATUS_W = "MOUSE_STATUS_W"  # mouse is west of checked element
+PSG.K_CHECKBOX_ALPHA_DIM = "PSG.K_CHECKBOX_ALPHA_DIM"  # value of the alphas dim checkbox
+PSG.K_CHECKBOX_RUNAWAY = "PSG.K_CHECKBOX_RUNAWAY"  # value of runaway checkbox
+PSG.K_LIST_FLIP_INFO = "PSG.K_LIST_FLIP_INFO"  # the interval count and name list tup(K_CURRENT_INTERVAL_COUNT, K_NAME_NEXT_EVENT)
+PSG.K_TIME_S_AT_NEXT_ALERT = "PSG.K_TIME_S_AT_NEXT_ALERT"  # time at next event
+PSG.K_TIME_S_AT_ZEROELAPSE = "PSG.K_TIME_S_AT_ZEROELAPSE"  # time at last zero of elapsed timer
+PSG.K_TIME_S_CLOCK = "PSG.K_TIME_S_CLOCK"  # time clock or wall clock
+PSG.K_TIME_S_ELAPSED = "PSG.K_TIME_S_ELAPSED"  # time elapsed
+PSG.K_TIME_S_TOGO = "PSG.K_TIME_S_TOGO"  # countdown to next event
 SZ_ALERT_TEXT = 20  # font size of alert text
 SZ_ALPHA_DIM = True  # default alpha dim state
 SZ_ALPHA_HIGH = 1.0  # high alpha
@@ -367,7 +373,6 @@ ZERO_CLOCKSTR = "00:00:00"  # all the zeros
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0901 DEF2
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-PKLJAR = None  # comment
 COLORS_BTN_NORMAL = (COLOR_TEXT_NORMAL, COLOR_BACKGROUND)  # comment
 COLORS_TEXT_HIGH = (COLOR_TEXT_HIGH, COLOR_BACKGROUND)  # combined colors for a clock text element
 COLORS_TEXT_LOW = (COLOR_TEXT_LOW, COLOR_BACKGROUND)  # combined colors for a clock text element
@@ -393,6 +398,7 @@ NOW_NOMS = 0  # comment
 NOWM = 0  # comment
 NOWMS = 0  # comment
 NOWS = 0  # comment
+PKLJAR = None  # comment
 TIME_MS_AT_NEXT_MOVE_VAL = 0  # comment
 TIME_MS_AT_NEXT_UPDATE_VAL = 0  # comment
 TIME_S_ADJUST_VALUE = lambda H_=0, M_=0: ((60 * 60 * H_) + (M_ * 60))  # comment
@@ -905,6 +911,54 @@ CHECKBOX_SNOOZED01 = {  # checkbox for dismissed from mouse behavior
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0909 text elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+TEXT_ALARM_POPUP = {  # the alarm popup text bits
+	TEXT: "",  # the text in the middle of the window
+	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
+	ENABLE_EVENTS: False,  # bool is clickable
+	FONT: FONTSZ_ALERTS,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # padding
+	SIZE: (40, 5),  # characters, lines size line
+	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for an alert
+}
+
+
+TEXT_ALARM_TIME = {  # the alarm popup text bits
+	TEXT: "",  # the text in the middle of the window
+	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
+	ENABLE_EVENTS: False,  # bool is clickable
+	FONT: FONTSZ_ALERTS,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # padding
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for an alert
+}
+
+
+TEXT_ALARM_TIME_ELAPSED = {  # the alarm popup text bits
+	TEXT: "",  # the text in the middle of the window
+	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
+	ENABLE_EVENTS: False,  # bool is clickable
+	FONT: FONTSZ_ALERTS,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # padding
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for an alert
+}
+
+
+TEXT_ALARM_TIME_TILL_DISMISS = {  # the alarm popup text bits
+	TEXT: "",  # the text in the middle of the window
+	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
+	ENABLE_EVENTS: False,  # bool is clickable
+	FONT: FONTSZ_ALERTS,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # padding
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for an alert
+}
+
+
 TEXT_CURRENT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
 	TEXT: "0000",  # the text to fill in
 	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
@@ -1008,11 +1062,6 @@ TEXT_TIME_S_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 # * SCTN0914 popupframe
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN09FF classes
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C APPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and this app
@@ -1060,7 +1109,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_TIME_S_AT_ALARM: 0,  # time of this event if it an alarm
 			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_S_INTERVAL: 20,  # interval of this event
+			K_TIME_S_INTERVAL: 15,  # interval of this event
 			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
@@ -1068,7 +1117,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "0000000B",  # version number hex string
+	K_VERSION: "0000000C",  # version number hex string
 }
 
 

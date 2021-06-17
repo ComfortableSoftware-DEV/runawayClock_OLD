@@ -2545,7 +2545,7 @@ def parseTBGLST():
 
 				FM.FMPSG_SCTN0900_DEF1_DICT[_thisKey_] = f"""{FM.DBLQT}{_thisKey_}{FM.DBLQT}"""
 				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisKey_] = f"""{_thisComment_}"""
-				FM.FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
+				FM.FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}PSG.{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -2625,7 +2625,7 @@ def parseTBGLST():
 				if _thisClassName_ not in FM.FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT:
 					FM.FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
 
-				FM.FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{FM.NTAB(3)}F_{_thisElementName_.upper()}: {_thisDPDBool_},  # {_thisComment_}{FM.NEWLINE}"""
+				FM.FMPSG_SCTN09FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{FM.NTAB(3)}PSG.F_{_thisElementName_.upper()}: {_thisDPDBool_},  # {_thisComment_}{FM.NEWLINE}"""
 				FM.FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""F_{_thisElementName_.upper()}"""] = f"""{FM.DBLQT}F_{_thisElementName_.upper()}{FM.DBLQT}"""
 				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""F_{_thisElementName_.upper()}"""] = f"""{_thisComment_}"""
@@ -3547,8 +3547,8 @@ def parseTBGLST():
 
 					# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 				if _isThisATime_ == "True":
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append({_thisElementName_[1:-1]}){FM.NEWLINE}"""
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_({_thisElementName_[1:-1]})){FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append(PSG.{_thisElementName_[1:-1]}){FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.{_thisElementName_[1:-1]})){FM.NEWLINE}"""
 
 				FM.FMPSG_SCTN09FF_CLASS_DEF_DICT[f"""K{_thisElementName_}"""] = f"""{FM.DBLQT}k{_thisElementName_}"""
 				FM.FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
