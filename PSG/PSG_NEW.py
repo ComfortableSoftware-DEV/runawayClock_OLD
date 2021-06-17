@@ -911,7 +911,7 @@ TEXT_ALARM_POPUP = {  # the alarm popup text bits
 	TEXT: "",  # the text in the middle of the window
 	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
 	ENABLE_EVENTS: False,  # bool is clickable
-	FONT: FONTSZ_ALERTS,  # font+size line
+	FONT: FONTSZ_ALERT_TEXT,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # padding
 	SIZE: (40, 5),  # characters, lines size line
@@ -923,7 +923,7 @@ TEXT_ALARM_TIME = {  # the alarm popup text bits
 	TEXT: "",  # the text in the middle of the window
 	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
 	ENABLE_EVENTS: False,  # bool is clickable
-	FONT: FONTSZ_ALERTS,  # font+size line
+	FONT: FONTSZ_ALERT_TEXT,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # padding
 	SIZE: (8, 1),  # characters, lines size line
@@ -935,7 +935,7 @@ TEXT_ALARM_TIME_ELAPSED = {  # the alarm popup text bits
 	TEXT: "",  # the text in the middle of the window
 	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
 	ENABLE_EVENTS: False,  # bool is clickable
-	FONT: FONTSZ_ALERTS,  # font+size line
+	FONT: FONTSZ_ALERT_TEXT,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # padding
 	SIZE: (8, 1),  # characters, lines size line
@@ -947,7 +947,7 @@ TEXT_ALARM_TIME_TILL_DISMISS = {  # the alarm popup text bits
 	TEXT: "",  # the text in the middle of the window
 	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
 	ENABLE_EVENTS: False,  # bool is clickable
-	FONT: FONTSZ_ALERTS,  # font+size line
+	FONT: FONTSZ_ALERT_TEXT,  # font+size line
 	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
 	PAD: SZ_PAD_ALL,  # padding
 	SIZE: (8, 1),  # characters, lines size line
