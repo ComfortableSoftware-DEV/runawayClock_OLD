@@ -13,10 +13,10 @@ class MTBL_C():
 		_moduleName_ = "FM"
 		_sub0_ = "TBGLST"
 
-		_filename_ = FM.NAME_LCL_SUB0_PY(_moduleName_, _sub0_)
-		_newFilename_ = FM.NAME_LCL_SUB0_NEW_PY(_moduleName_, _sub0_)
-
-		_IDToRtn_ = self.makeID(moduleName=_moduleName_, sub0=_sub0_, filename=_filename_, newFilename=_newFilename_)
+		_IDToRtn_ = self.makeID(
+			__MODULE_NAME__=_moduleName_,
+			__SUB0__=_sub0_,
+		)
 
 		_TBGLSTEntry_ = (
 			"FM_TBGLST",
@@ -35,22 +35,151 @@ class MTBL_C():
 	def makeID(self, **KWargs_):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 
-		_class_ = KWargs_.get("class")
-		_filename_ = KWargs_.get("filename")
-		_moduleName_ = KWargs_.get("moduleName")
-		_newFilename_ = KWargs_.get("newFilename")
-		_sub0_ = KWargs_.get("sub0")
-		_sub1_ = KWargs_.get("sub1")
-		_sub2_ = KWargs_.get("sub2")
+		_class_ = KWargs_.get("__CLASS__")
+		_filename_ = KWargs_.get("__FILENAME__")
+		_moduleName_ = KWargs_.get("__MODULE_NAME__")
+		_newFilename_ = KWargs_.get("__NEW_FILENAME__")
+		_sub0_ = KWargs_.get("__SUB0__")
+		_sub1_ = KWargs_.get("__SUB1__")
+		_sub2_ = KWargs_.get("__SUB2__")
+
+			# __MODULE_NAME__
+			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (
+			(_class_ is None) and
+			(_filename_ is None) and
+			(_moduleName_ is not None) and
+			(_newFilename_ is None) and
+			(_sub0_ is None) and
+			(_sub1_ is None) and
+			(_sub2_ is None)
+		):
+			_filename_ = FM.NAME_LCL_SELF_PY(
+				__MODULE_NAME__=_moduleName_,
+			)
+
+			_newFilename_ = FM.NAME_LCL_SELF_NEW_PY(
+				__MODULE_NAME__=_moduleName_,
+			)
+
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+			# __MODULE_NAME__ __CLASS__
+			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		elif (
+			(_class_ is not None) and
+			(_filename_ is None) and
+			(_moduleName_ is not None) and
+			(_newFilename_ is None) and
+			(_sub0_ is None) and
+			(_sub1_ is None) and
+			(_sub2_ is None)
+		):
+			_filename_ = FM.NAME_LCL_SELF_CLASS_PY(
+				__CLASS__=_class_,
+				__MODULE_NAME__=_moduleName_,
+			)
+
+			_newFilename_ = FM.NAME_LCL_SELF_CLASS_NEW_PY(
+				__CLASS__=_class_,
+				__MODULE_NAME__=_moduleName_,
+			)
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+			# __MODULE_NAME__ __SUB0__
+			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		elif (
+			(_class_ is None) and
+			(_filename_ is None) and
+			(_moduleName_ is not None) and
+			(_newFilename_ is None) and
+			(_sub0_ is not None) and
+			(_sub1_ is None) and
+			(_sub2_ is None)
+		):
+			_filename_ = FM.NAME_LCL_SELF_SUB0_PY(
+				__MODULE_NAME__=_moduleName_,
+				__SUB0__=_sub0_,
+			)
+
+			_newFilename_ = FM.NAME_LCL_SELF_SUB0_NEW_PY(
+				__MODULE_NAME__=_moduleName_,
+				__SUB0__=_sub0_,
+			)
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+			# __MODULE_NAME__ __SUB0__ __SUB1__
+			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		elif (
+			(_class_ is None) and
+			(_filename_ is None) and
+			(_moduleName_ is not None) and
+			(_newFilename_ is None) and
+			(_sub0_ is not None) and
+			(_sub1_ is not None) and
+			(_sub2_ is None)
+		):
+			_filename_ = FM.NAME_LCL_SELF_SUB1_PY(
+				__MODULE_NAME__=_moduleName_,
+				__SUB0__=_sub0_,
+				__SUB1__=_sub1_,
+			)
+
+			_newFilename_ = FM.NAME_LCL_SELF_SUB1_NEW_PY(
+				__MODULE_NAME__=_moduleName_,
+				__SUB0__=_sub0_,
+				__SUB1__=_sub1_,
+			)
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+			# __MODULE_NAME__ __SUB0__ __SUB1__ __CLASS__
+			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		elif (
+			(_class_ is not None) and
+			(_filename_ is None) and
+			(_moduleName_ is not None) and
+			(_newFilename_ is None) and
+			(_sub0_ is not None) and
+			(_sub1_ is not None) and
+			(_sub2_ is None)
+		):
+			_filename_ = FM.NAME_LCL_SELF_SUB1_CLASS_PY(
+				__CLASS__=_class_,
+				__MODULE_NAME__=_moduleName_,
+				__SUB0__=_sub0_,
+				__SUB1__=_sub1_,
+			)
+
+			_newFilename_ = FM.NAME_LCL_SELF_SUB1_CLASS_NEW_PY(
+				__CLASS__=_class_,
+				__MODULE_NAME__=_moduleName_,
+				__SUB0__=_sub0_,
+				__SUB1__=_sub1_,
+			)
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 		_IDToRtn_ = (
-			("class", _class_,),
-			("filename", _filename_,),
-			("moduleName", _moduleName_,),
-			("newFilename", _newFilename_,)
-			("sub0", _sub0_,),
-			("sub1", _sub1_,),
-			("sub2", _sub2_,),
+			("__CLASS__", _class_,),
+			("__FILENAME__", _filename_,),
+			("__MODULE_NAME__", _moduleName_,),
+			("__NEW_FILENAME__", _newFilename_,),
+			("__SUB0__", _sub0_,),
+			("__SUB1__", _sub1_,),
+			("__SUB2__", _sub2_,),
 		)
 
 		print(f"""_IDToRtn_ {_IDToRtn_}""")
@@ -73,73 +202,51 @@ class MTBL_C():
 	def startLCLNewFile(self, IDIn_):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 		_strToRtn_ = ""
-		_class_ = IDIn_.get("class")
-		_filename_ = IDIn_.get("filename")
-		_moduleName_ = IDIn_.get("moduleName")
-		_newFilename_ = IDIn_.get("newFilename")
-		_sub0_ = IDIn_.get("sub0")
-		_sub1_ = IDIn_.get("sub1")
-		_sub2_ = IDIn_.get("sub2")
+		_class_ = IDIn_.get("__CLASS__")
+		_filename_ = IDIn_.get("__FILENAME__")
+		_moduleName_ = IDIn_.get("__MODULE_NAME__")
+		_newFilename_ = IDIn_.get("__NEW_FILENAME__")
+		_sub0_ = IDIn_.get("__SUB0__")
+		_sub1_ = IDIn_.get("__SUB1__")
+		_sub2_ = IDIn_.get("__SUB2__")
 
-			# __MODULE_NAME__, _NEW
+		if (
+			(_filename_ is None) or
+			(_newFilename_ is None)
+		):
+			return None
+
+			# __MODULE_NAME__
+			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if ( \
 				(_class_ is None) and \
 				(_moduleName_ is not None) and \
 				(_sub0_ is None) and \
 				(_sub1_ is None) and \
-				(_sub2_ is None) and \
-			):
-			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			if (_filename_ is not None):
-				_filename_ = FM.NAME_LCL_PY(_moduleName_)
-
-			if (_newFilename_ is not None):
-				_newFilename_ = FM.NAME_LCL_NEW_PY(_moduleName_)
-
+				(_sub2_ is None) \
+		):
 			_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}{FM.NEWLINE}
-__MODULE_NAME__ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
-{FM.NEWLINE}__FILENAME__ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_PY(__MODULE_NAME__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
-__NEW_FILENAME__ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_NEW_PY(__MODULE_NAME__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
-{FM.NEWLINE}__ID__ = {FM.OBRCE}
-{FM.NTAB(1)}{FM.DBLQT}moduleName{FM.DBLQT}: __MODULE_NAME__,  # {_moduleName_}
-{FM.NTAB(1)}{FM.DBLQT}filename{FM.DBLQT}: __FILENAME__,  # {_filename_}
-{FM.CBRCE}
+_moduleName_ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
+{FM.NEWLINE}_filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_PY(
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_  # {_moduleName_}
+){FM.NEWLINE}{FM.CBRCE}{FM.TRIQT}  # {_filename_}
+_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_NEW_PY(
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_  # {_moduleName_}
+){FM.NEWLINE}{FM.CBRCE}{FM.TRIQT}  # {_newFilename_}
+{FM.NEWLINE}__ID__ = {FM.OPAREN}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__FILENAME__{FM.DBLQT}: _filename_,{FM.CPAREN},  # {_filename_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__MODULE_NAME__"{FM.DBLQT}, _moduleName_,{FM.CPAREN},  # {_moduleName_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__NEW_FILENAME__{FM.DBLQT}: _newFilename_,{FM.CPAREN},  # {_newFilename_}
+{FM.CPAREN}
 TBGLST = {FM.OBRKT}
 """
-			self.__FILE_DICT__[_newFilename_].write(_strToRtn_)
 			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-			# __MODULE_NAME__, __CLASS__, _NEW
-			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
-		elif ( \
-				(_class_ is not None) and \
-				(_moduleName_ is not None) and \
-				(_sub0_ is None) and \
-				(_sub1_ is None) and \
-				(_sub2_ is None) and \
-			):
+			# __MODULE_NAME__ __SUB0__
 			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			_filename_ = f"""{FM.NAME_LCL_CLASS_PY(_moduleName_, _class_)}"""
-			_newFilename_ = f"""{FM.NAME_LCL_CLASS_NEW_PY(_moduleName_)}"""
-			_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}{FM.NEWLINE}
-__MODULE_NAME__ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
-__CLASS__ = {FM.DBLQT}{KWargs_["class"]}{FM.DBLQT}  # {_class_}
-__FILENAME__ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_CLASS_PY(__MODULE_NAME__, __CLASS__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
-__ID__ = {FM.OPAREN}
-{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}class{FM.DBLQT}: __CLASS__,{FM.DBLQT},  # {_class_}
-{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}filename{FM.DBLQT}: __FILENAME__,{FM.CPAREN},  # {_filename_}
-{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}moduleName{FM.DBLQT}, __MODULE_NAME__,{FM.CPAREN},  # {_moduleName_}
-{FM.CPAREN}{FM.NEWLINE}
-TBGLST = {FM.OBRKT}
-"""
-			self.__FILE_DICT__[_newFilename_].write(_strToRtn_)
-			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-
-			# __MODULE_NAME__, __SUB0__
-			# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if ( \
 				(_class_ is None) and \
 				(_moduleName_ is not None) and \
@@ -147,20 +254,110 @@ TBGLST = {FM.OBRKT}
 				(_sub1_ is None) and \
 				(_sub2_ is None) \
 			):
-			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			_filename_ = f"""{FM.NAME_LCL_SUB0_PY(_moduleName_, _sub0_)}"""
-			_newFilename_ = f"""{FM.NAME_LCL_SUB0_NEW_PY(_moduleName_, _sub0_)}"""
+
 			_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}{FM.NEWLINE}
-__MODULE_NAME__ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
-__SUB0__ = {FM.DBLQT}{_sub0_}{FM.DBLQT}
-__FILENAME__ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_CLASS_PY(__MODULE_NAME__, __CLASS__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
+_moduleName_ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
+_sub0_ = {FM.DBLQT}{_sub0_}{FM.DBLQT}
+{FM.NEWLINE}_filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB0_PY(
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
+{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
+){FM.CBRCE}{FM.TRIQT}  # {_filename_}
+_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB0_NEW_PY(
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
+{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
+){FM.CBRCE}{FM.TRIQT}  # {_newFilename_}
+{FM.NEWLINE}__ID__ = {FM.OPAREN}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__FILENAME__{FM.DBLQT}, _filename_,{FM.CPAREN},  # {_filename_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__MODULE_NAME__{FM.DBLQT}, _moduleName_,{FM.CPAREN},  # {_moduleName_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__NEW_FILENAME__{FM.DBLQT}, _newFilename_,{FM.CPAREN},  # {_newFilename_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__SUB0__{FM.DBLQT}, _sub0_,{FM.CPAREN},  # {_sub0_}
+{FM.CPAREN}
+TBGLST = {FM.OBRKT}
+"""
+
+			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# __MODULE_NAME__ __SUB0__ __SUB1__
+			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if ( \
+				(_class_ is None) and \
+				(_moduleName_ is not None) and \
+				(_sub0_ is not None) and \
+				(_sub1_ is not None) and \
+				(_sub2_ is None) \
+			):
+
+			_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}{FM.NEWLINE}
+_moduleName_ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
+_sub0_ = {FM.DBLQT}{_sub0_}{FM.DBLQT}
+_sub1_ = {FM.DBLQT}{_sub1_}{FM.DBLQT}{FM.NEWLINE}
+_filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_PY(
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
+{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
+{FM.NTAB(1)}__SUB1__=_sub1_,  # {_sub1_}
+){FM.CBRCE}{FM.TRIQT}  # {_filename_}
+_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_NEW_PY(
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
+{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
+{FM.NTAB(1)}__SUB1__=_sub1_,  # {_sub1_}
+){FM.CBRCE}{FM.TRIQT}  # {_newFilename_}{FM.NEWLINE}
 __ID__ = {FM.OPAREN}
-{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}moduleName{FM.DBLQT}, __MODULE_NAME__,{FM.CPAREN},  # {_moduleName_}
-{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}filename{FM.DBLQT}, __FILENAME__,{FM.CPAREN},  # {_filename_}
-{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}sub0{FM.DBLQT}, __SUB0__,{FM.CPAREN},  # {_sub0_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__FILENAME__{FM.DBLQT}, _f,{FM.CPAREN},  # {_filename_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__MODULE_NAME__{FM.DBLQT}, _moduleName_,{FM.CPAREN},  # {_moduleName_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__NEW_FILENAME__{FM.DBLQT}, _newFilename_,{FM.CPAREN},  # {_newFilename_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__SUB0__{FM.DBLQT}, _sub0_,{FM.CPAREN},  # {_sub0_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__SUB0__{FM.DBLQT}, _sub1_,{FM.CPAREN},  # {_sub1_}
 {FM.CPAREN}{FM.NEWLINE}
 TBGLST = {FM.OBRKT}
 """
+
+			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
+			# __MODULE_NAME__ __SUB0__ __SUB1__ __CLASS__
+			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if ( \
+				(_class_ is not None) and \
+				(_moduleName_ is not None) and \
+				(_sub0_ is not None) and \
+				(_sub1_ is not None) and \
+				(_sub2_ is None) \
+			):
+
+			_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}{FM.NEWLINE}
+_class_ = {FM.DBLQT}{_class_}{FM.DBLQT}
+_moduleName_ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
+_sub0_ = {FM.DBLQT}{_sub0_}{FM.DBLQT}
+_sub1_ = {FM.DBLQT}{_sub1_}{FM.DBLQT}{FM.NEWLINE}
+_filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_CLASS_PY(
+{FM.NTAB(1)}__CLASS__=_class_,  # {_class_}
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
+{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
+{FM.NTAB(1)}__SUB1__=_sub1_,  # {_sub1_}
+){FM.CBRCE}{FM.TRIQT}  # {_filename_}
+_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_CLASS_NEW_PY(
+{FM.NTAB(1)}__CLASS__=_class_,  # {_class_}
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
+{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
+{FM.NTAB(1)}__SUB1__=_sub1_,  # {_sub1_}
+){FM.CBRCE}{FM.TRIQT}  # {_newFilename_}{FM.NEWLINE}
+__ID__ = {FM.OPAREN}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__CLASS__.{FM.DBLQT}, _class_,{FM.CPAREN},  # {_class_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__FILENAME__{FM.DBLQT}, _filename_,{FM.CPAREN},  # {_filename_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__MODULE_NAME__{FM.DBLQT}, _moduleName_,{FM.CPAREN},  # {_moduleName_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__NEW_FILENAME__{FM.DBLQT}, _newFilename_,{FM.CPAREN},  # {_newFilename_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__SUB0__{FM.DBLQT}, _sub0_,{FM.CPAREN},  # {_sub0_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__SUB1__{FM.DBLQT}, _sub1_,{FM.CPAREN},  # {_sub1_}
+{FM.CPAREN}{FM.NEWLINE}
+TBGLST = {FM.OBRKT}
+"""
+
+			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+
 			print(f"""__FILE_DICT__ {self.__FILE_DICT__}""")
 			self.__FILE_DICT__[_newFilename_].write(_strToRtn_)
 			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -175,37 +372,68 @@ TBGLST = {FM.OBRKT}
 			return None, None
 
 		_IDBeingExploded_ = itemToExplode_[1]
-		_itemToExplode_ = itemToExplode_[0]
+		_ItemsToWrite_ = itemToExplode_[0]
 		print(f"""_IDBeingExploded_ {_IDBeingExploded_}
-_itemToExplode_ {_itemToExplode_}""")
+_ItemsToWrite_ {_ItemsToWrite_}""")
 		_ID_ = dict((x, y) for x, y in _IDBeingExploded_)
+		_class_ = _IDBeingExploded_.get("__CLASS__")
+		_filename_ = _IDBeingExploded_.get("__FILENAME__")
+		_moduleName_ = _IDBeingExploded_.get("__MODULE_NAME__")
+		_newFilename_ = _IDBeingExploded_.get("__NEW_FILENAME__")
+		_sub0_ = _IDBeingExploded_.get("__SUB0__")
+		_sub1_ = _IDBeingExploded_.get("__SUB1__")
+		_sub2_ = _IDBeingExploded_.get("__SUB2__")
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (_ID_["filename"] is not None) and (_ID_["filename"] not in self.__FILE_DICT__):
-			self.__FILE_DICT__[_ID_["filename"]] = open(_ID_["filename"], "tw")
-			_filename_ = f"""{_ID_["filename"]}"""
+		if (_newFilename_ is not None) and (_newFilename_ not in self.__FILE_DICT__):
+			self.__FILE_DICT__[_newFilename_] = open(_newFilename_, "tw")
 			print(f"""itemToExplode_ {itemToExplode_}
 _ID_ {_ID_}
-_ID_[filename] |{_ID_["filename"]}|
-_filename_ {_filename_}
+_ID_[__FILENAME__] |{_newFilename_}|
 """)
 
 			self.startLCLNewFile(_ID_)
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
-		_strToWrt_ = f"""{FM.NTAB(1)}{FM.OPAREN}{_ID_}, {FM.DBLQT}{itemToExplode_[0]}{FM.DBLQT}, FM.{itemToExplode_[1]}, """
-		_strToWrt1_ = f"""{FM.NTAB(1)}{FM.OPAREN}{_ID_}, {FM.DBLQT}{itemToExplode_[0]}{FM.DBLQT}, FM.{itemToExplode_[1]}, """
+		_strToWrt_ = f"""{FM.NTAB(1)}{FM.OPAREN}{FM.OPAREN}"""
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		for _index_ in range(2, len(itemToExplode_)):
-			_strToWrt_ += f"""{FM.DBLQT}{itemToExplode_[_index_]}{FM.DBLQT}, """
-			_strToWrt1_ += f"""{FM.DBLQT}{itemToExplode_[_index_]}{FM.DBLQT}, """
-		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+		for _index_, _itemToWrite_ in enumerate(_itemToWrite_):
 
-		_strToWrt_ = _strToWrt_[:-1] + f"""{FM.CPAREN},{FM.NEWLINE}"""
-		_strToWrt1_ = _strToWrt1_[:-1] + f"""{FM.CPAREN},{FM.NEWLINE}"""
-		self.__FILE_DICT__[_ID_["filename"]].write(_strToWrt_)
-		self.__FILE_DICT__[FM.NAME_LCL_SUB0_NEW_PY("FM", "TBGLST")].write(_strToWrt1_)
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_index_ != 1):
+				_strToWrt_ += f"""{FM.DBLQT}{_itemToWrite_}{FM.DBLQT}, """
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			else:
+				_strToWrt_ += f"""{_itemToWrite_}, """
+
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+			_strToWrt_ = _strToWrt_[:-1] + f"""{FM.CPAREN}, __ID__{FM.CPAREN},"""
+
+		_strToWrt1_ = f"""{FM.NTAB(1)}{FM.OPAREN}{FM.OPAREN}"""
+
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		for _index_, _itemToWrite_ in enumerate(_itemToWrite_):
+
+				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (_index_ != 1):
+				_strToWrt1_ += f"""{FM.DBLQT}{_itemToWrite_}{FM.DBLQT}, """
+
+				# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
+			else:
+				_strToWrt_1 += f"""{_itemToWrite_}, """
+
+			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
+
+			_strToWrt1_ = _strToWrt1_[:-1] + f"""{FM.CPAREN}, _IDBeingExploded_{FM.CPAREN},"""
+
+		self.__FILE_DICT__[_newFilename_].write(_strToWrt_)
+		self.__FILE_DICT__[FM.NAME_LCL_SUB0_NEW_PY(
+			__MODULE_NAME__="FM",
+			__SUB0__="TBGLST",
+		)].write(_strToWrt1_)
 
 		return _ID_, itemToExplode_
 	# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
