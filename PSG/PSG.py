@@ -5,7 +5,7 @@ import gc
 import PySimpleGUI as SG
 
 
-import CF
+from CF import CF
 
 
 gc.enable()
@@ -1821,8 +1821,9 @@ def doit():
 		_pklName_ = "runawayClock.pkl"
 		DEVMODE = False
 
+	from PSG import PSG_CLOCKS_C
 	with CF.withPickles(f"""{CF.NAME_HOME_SELF_CONFIG("runawayClock", _pklName_)}""", APPDS_MAIN) as PKLJAR, \
-			CLASS_CLOCKS(CF.serializeIt("runawayClock"), FORM_CLOCKS):
+			PSG_CLOCKS_C.CLOCKS_C(CF.serializeIt("runawayClock"), FORM_CLOCKS):
 
 		APPDS_MAIN = PKLJAR._STUFFTOPKL_
 		localTimes()
