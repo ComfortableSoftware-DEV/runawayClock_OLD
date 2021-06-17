@@ -19,36 +19,36 @@ class CLOCKS_C(object):
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 		self._THIS_KEY_BASE_ = keyBase_  # adopt keyBase_
 		self._USE_THIS_KEY_ = lambda __KEY_TEXT__: f"""{__KEY_TEXT__}{self._THIS_KEY_BASE_}"""  # make a local key sourcer
-		self._DICT_KEYS_ = {}  #
-		self._DICT_KEYS_REVERSE_ = {}  #
-		self._LIST_KEYS_TIME_ = []  #
+		self._DICT_KEYS_ = {}  # 
+		self._DICT_KEYS_REVERSE_ = {}  # 
+		self._LIST_KEYS_TIME_ = []  # 
 		self._THIS_FORM_NAME_ = formName_  # adopt formName_
 
-		self._ALPHA_CHANNEL_ = PSG.SZ_ALPHA_HIGH  #
-		self._ALPHA_HIGH_ = PSG.SZ_ALPHA_HIGH  #
-		self._ALPHA_LOW_ = PSG.SZ_ALPHA_LOW  #
-		self._BBOX_ = PSG.EMPTY_BBOX  #
+		self._ALPHA_CHANNEL_ = PSG.SZ_ALPHA_HIGH  # 
+		self._ALPHA_HIGH_ = PSG.SZ_ALPHA_HIGH  # 
+		self._ALPHA_LOW_ = PSG.SZ_ALPHA_LOW  # 
+		self._BBOX_ = PSG.EMPTY_BBOX  # 
 		self._CHANGED_EVENTS_ = False  # comment
 		self._CHANGED_LOCATION_ = False  # comment
 		self._CHANGED_MOUSE_LOCATION_ = False  # comment
 		self._CHANGED_VALUES_ = False  # comment
-		self._CLOSE_BBOX_ = PSG.EMPTY_BBOX  #
-		self._CURRENTLY_DIMMED_ = False  #
-		self._CURRENT_EVENTMODE_ = None  #
-		self._CURRENT_EVENT_ = None  #
-		self._CURRENT_FLIP_INDEX_ = 0  #
-		self._CURRENT_LOCATION_ = PSG.EMPTY_XY  #
-		self._CURRENT_MOUSE_LOCATION_ = PSG.EMPTY_XY  #
-		self._CURRENT_MOUSE_STATUS_ = PSG.MOUSE_STATUS_NONE  #
-		self._CURRENT_VALUES_ = {}  #
-		self._MAINFRAME_ = None  #
+		self._CLOSE_BBOX_ = PSG.EMPTY_BBOX  # 
+		self._CURRENTLY_DIMMED_ = False  # 
+		self._CURRENT_EVENTMODE_ = None  # 
+		self._CURRENT_EVENT_ = None  # 
+		self._CURRENT_FLIP_INDEX_ = 0  # 
+		self._CURRENT_LOCATION_ = PSG.EMPTY_XY  # 
+		self._CURRENT_MOUSE_LOCATION_ = PSG.EMPTY_XY  # 
+		self._CURRENT_MOUSE_STATUS_ = PSG.MOUSE_STATUS_NONE  # 
+		self._CURRENT_VALUES_ = {}  # 
+		self._MAINFRAME_ = None  # 
 		self._MPX_ = PSG.EMPTY_XY  # comment
-		self._SCREEN_DIMS_ = PSG.EMPTY_XY  #
-		self._SIZE_ = PSG.EMPTY_XY  #
-		self._TIME_MS_AT_CHECK_MOUSE_ = PSG.ZERO_CLOCK  #
-		self._TIME_MS_AT_FLIP_ = PSG.ZERO_CLOCK  #
-		self._TIME_MS_AT_MOVE_ = PSG.ZERO_CLOCK  #
-		self._TIME_MS_AT_UPDATE_ = PSG.ZERO_CLOCK  #
+		self._SCREEN_DIMS_ = PSG.EMPTY_XY  # 
+		self._SIZE_ = PSG.EMPTY_XY  # 
+		self._TIME_MS_AT_CHECK_MOUSE_ = PSG.ZERO_CLOCK  # 
+		self._TIME_MS_AT_FLIP_ = PSG.ZERO_CLOCK  # 
+		self._TIME_MS_AT_MOVE_ = PSG.ZERO_CLOCK  # 
+		self._TIME_MS_AT_UPDATE_ = PSG.ZERO_CLOCK  # 
 		self._DICT_KEYS_[PSG.K_CHECKBOX_ALPHA_DIM] = PSG.K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._DICT_KEYS_REVERSE_[PSG.K_CHECKBOX_ALPHA_DIM] = PSG.K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._DICT_KEYS_[PSG.K_CHECKBOX_RUNAWAY] = PSG.K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
@@ -92,9 +92,9 @@ class CLOCKS_C(object):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			K_TIME_S_AT_NEXT_ALERT: CF.DAY_S,  # comment
 			K_TIME_S_AT_ZEROELAPSE: CF.DAY_S,  # comment
-			K_TIME_S_CLOCK: CF.DAY_S,  #
-			K_TIME_S_ELAPSED: CF.TIME_S_995959,  #
-			K_TIME_S_TOGO: CF.DAY_S,  #
+			K_TIME_S_CLOCK: CF.DAY_S,  # 
+			K_TIME_S_ELAPSED: CF.TIME_S_995959,  # 
+			K_TIME_S_TOGO: CF.DAY_S,  # 
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -270,13 +270,13 @@ class CLOCKS_C(object):
 			PSG.BACKGROUND_COLOR: PSG.COLOR_BACKGROUND,  # eliminate all not useful on the floating clocks
 			PSG.BORDER_DEPTH: PSG.SZ_BORDER_DEPTH,  # border depth to zero
 			PSG.ELEMENT_PADDING: PSG.SZ_PAD_ALL,  # all padding for elements ((1, 1), (1, 1)) by default
-			PSG.FORCE_TOPLEVEL: None,  #
+			PSG.FORCE_TOPLEVEL: None,  # 
 			PSG.GRAB_ANYWHERE: True,  # eliminate all not useful on the floating clocks
 			PSG.KEEP_ON_TOP: True,  # eliminate all not useful on the floating clocks
 			PSG.LAYOUT: self._LAYOUT_,  # add the layout for CLOCKS_WINDOW
-			PSG.MARGINS: PSG.SZ_MARGINS_ALL,  #
+			PSG.MARGINS: PSG.SZ_MARGINS_ALL,  # 
 			PSG.NO_TITLEBAR: True,  # no titlebar on APPMODE_CLOCKS window
-			PSG.TITLE: PSG.TITLE_CLOCKS,  #
+			PSG.TITLE: PSG.TITLE_CLOCKS,  # 
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
@@ -777,7 +777,7 @@ alphaChannel_ {alphaChannel_}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	def enstring(self, dictToUse_=None):
-		 # fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+ 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (dictToUse_ is None):
@@ -1178,7 +1178,7 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 			self._DICTIN_[_thisKey_] = []
 
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-
+		
 		self._CURRENT_FLIP_INDEX_ = -1
 
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -1231,3 +1231,5 @@ self._CURRENT_MOUSE_LOCATION_ {self._CURRENT_MOUSE_LOCATION_}, self._CURRENT_MOU
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
