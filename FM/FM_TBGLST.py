@@ -1,4 +1,11 @@
-import FM
+
+
+import os
+
+
+from FM import FM
+
+
 
 class TBGLST():
 	## fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
@@ -16,7 +23,12 @@ class TBGLST():
 		print(f"""swallowing PSG""")
 		from FM import FM_TBGLST_PSG
 		self.__TBGLST__.extend(FM_TBGLST_PSG.TBGLST)
+		print(f"""swallowing PSG_CLOCKS""")
+		from FM import FM_TBGLST_PSG_CLOCKS_C
+		self.__TBGLST__.extend(FM_TBGLST_PSG_CLOCKS_C.TBGLST)
+
 		print("all swallowed")
+
 
 #		for _thisElement_ in self.__TBGLST__:
 #			print(f"""{_thisElement_}""")
