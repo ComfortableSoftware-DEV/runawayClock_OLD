@@ -26,8 +26,6 @@ def makePSGClasses():
 {FM.NTAB(1)}{FM.FOLD1STARTHERE}{FM.NEWLINE}
 """)
 
-			print(f"""FM_makePSGClasses() FM.FMPSG_SCTN09FF_CLASS_INIT_DICT
-{FM.FMPSG_SCTN09FF_CLASS_INIT_DICT}""")
 			_FDmakePSGClasses_.write(f"""{FM.NTAB(1)}def __init__{FM.OPAREN}self{FM.FMPSG_SCTN09FF_CLASS_INIT_DICT[_thisClassName_].pop(0)}{FM.CPAREN}:{FM.NEWLINE}{FM.NTAB(2)}{FM.FOLD2STARTHERELN}""")
 
 			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥

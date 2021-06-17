@@ -22,8 +22,6 @@ def parseTBGLST():
 			_thisItem_, _thisItemID_ = _MTBL_.write(_fullItemWID_)
 			_thisItemLen_ = len(_thisItem_)
 
-			print(f"""parsing {_thisItem_}""")
-
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if _thisItemLen_ < 3:
 				FM.doErrorItem("fewer than 3 elements", _thisItem_)
