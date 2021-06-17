@@ -8,9 +8,9 @@ _sub0_ = "TBGLST"
 _sub1_ = "PSG"
 
 _filename_ = f"""{FM.NAME_LCL_SELF_SUB1_PY(
-	__MODULE_NAME__=_moduleName_,  # FM
-	__SUB0__=_sub0_,  # TBGLST
-	__SUB1__=_sub1_,  # PSG
+	__MODULE_NAME__=_moduleName_,
+	__SUB0__=_sub0_,
+	__SUB1__=_sub1_,
 )}"""  # FM/FM_TBGLST_PSG.py
 
 _newFilename_ = f"""{FM.NAME_LCL_SELF_SUB1_NEW_PY(

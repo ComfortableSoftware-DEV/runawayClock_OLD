@@ -246,10 +246,10 @@ IDToWrt_ {IDToWrt_}
 			_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}{FM.NEWLINE}
 _moduleName_ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
 {FM.NEWLINE}_filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_PY(
-{FM.NTAB(1)}__MODULE_NAME__=_moduleName_  # {_moduleName_}
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_
 ){FM.NEWLINE}{FM.CBRCE}{FM.TRIQT}  # {_filename_}
 {FM.NEWLINE}_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_NEW_PY(
-{FM.NTAB(1)}__MODULE_NAME__=_moduleName_  # {_moduleName_}
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_
 ){FM.NEWLINE}{FM.CBRCE}{FM.TRIQT}  # {_newFilename_}
 {FM.NEWLINE}__ID__ = {FM.OPAREN}
 {FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__FILENAME__{FM.DBLQT}: _filename_,{FM.CPAREN},  # {_filename_}
@@ -276,12 +276,12 @@ TBGLST = {FM.OBRKT}
 _moduleName_ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
 _sub0_ = {FM.DBLQT}{_sub0_}{FM.DBLQT}
 {FM.NEWLINE}_filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB0_PY(
-{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
-{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,
+{FM.NTAB(1)}__SUB0__=_sub0_,
 ){FM.CBRCE}{FM.TRIQT}  # {_filename_}
 {FM.NEWLINE}_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB0_NEW_PY(
-{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
-{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,
+{FM.NTAB(1)}__SUB0__=_sub0_,
 ){FM.CBRCE}{FM.TRIQT}  # {_newFilename_}
 {FM.NEWLINE}__ID__ = {FM.OPAREN}
 {FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__FILENAME__{FM.DBLQT}, _filename_,{FM.CPAREN},  # {_filename_}
@@ -312,14 +312,14 @@ _moduleName_ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
 _sub0_ = {FM.DBLQT}{_sub0_}{FM.DBLQT}
 _sub1_ = {FM.DBLQT}{_sub1_}{FM.DBLQT}{FM.NEWLINE}
 _filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_PY(
-{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
-{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
-{FM.NTAB(1)}__SUB1__=_sub1_,  # {_sub1_}
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,
+{FM.NTAB(1)}__SUB0__=_sub0_,
+{FM.NTAB(1)}__SUB1__=_sub1_,
 ){FM.CBRCE}{FM.TRIQT}  # {_filename_}
 {FM.NEWLINE}_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_NEW_PY(
-{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
-{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
-{FM.NTAB(1)}__SUB1__=_sub1_,  # {_sub1_}
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,
+{FM.NTAB(1)}__SUB0__=_sub0_,
+{FM.NTAB(1)}__SUB1__=_sub1_,
 ){FM.CBRCE}{FM.TRIQT}  # {_newFilename_}{FM.NEWLINE}
 __ID__ = {FM.OPAREN}
 {FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__FILENAME__{FM.DBLQT}, _filename_,{FM.CPAREN},  # {_filename_}
@@ -354,16 +354,16 @@ _moduleName_ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
 _sub0_ = {FM.DBLQT}{_sub0_}{FM.DBLQT}
 _sub1_ = {FM.DBLQT}{_sub1_}{FM.DBLQT}{FM.NEWLINE}
 _filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_CLASS_PY(
-{FM.NTAB(1)}__CLASS__=_class_,  # {_class_}
-{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
-{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
-{FM.NTAB(1)}__SUB1__=_sub1_,  # {_sub1_}
+{FM.NTAB(1)}__CLASS__=_class_,
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,
+{FM.NTAB(1)}__SUB0__=_sub0_,
+{FM.NTAB(1)}__SUB1__=_sub1_,
 ){FM.CBRCE}{FM.TRIQT}  # {_filename_}
 _newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_CLASS_NEW_PY(
-{FM.NTAB(1)}__CLASS__=_class_,  # {_class_}
-{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,  # {_moduleName_}
-{FM.NTAB(1)}__SUB0__=_sub0_,  # {_sub0_}
-{FM.NTAB(1)}__SUB1__=_sub1_,  # {_sub1_}
+{FM.NTAB(1)}__CLASS__=_class_,
+{FM.NTAB(1)}__MODULE_NAME__=_moduleName_,
+{FM.NTAB(1)}__SUB0__=_sub0_,
+{FM.NTAB(1)}__SUB1__=_sub1_,
 ){FM.CBRCE}{FM.TRIQT}  # {_newFilename_}{FM.NEWLINE}
 __ID__ = {FM.OPAREN}
 {FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__CLASS__.{FM.DBLQT}, _class_,{FM.CPAREN},  # {_class_}
