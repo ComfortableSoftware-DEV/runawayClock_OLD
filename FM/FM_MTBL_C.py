@@ -389,9 +389,9 @@ TBGLST = {FM.OBRKT}
 			return None, None
 
 		_IDBeingExploded_ = self.makeDictID(itemToExplode_[1])
-		_ItemsToWrite_ = itemToExplode_[0]
+		_lineToWrt_ = itemToExplode_[0]
 		print(f"""_IDBeingExploded_ {_IDBeingExploded_}
-_ItemsToWrite_ {_ItemsToWrite_}""")
+_lineToWrt_ {_lineToWrt_}""")
 		#_ID_ = dict((x, y) for x, y in _IDBeingExploded_)
 		_class_ = _IDBeingExploded_.get("__CLASS__")
 		_filename_ = _IDBeingExploded_.get("__FILENAME__")
@@ -412,7 +412,7 @@ _ItemsToWrite_ {_ItemsToWrite_}""")
 		_strToWrt_ = f"""{FM.NTAB(1)}{FM.OPAREN}{FM.OPAREN}"""
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		for _index_, _itemToWrite_ in enumerate(_itemToWrite_):
+		for _index_, _itemToWrite_ in enumerate(_lineToWrt_):
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if (_index_ != 1):
@@ -429,7 +429,7 @@ _ItemsToWrite_ {_ItemsToWrite_}""")
 		_strToWrt1_ = f"""{FM.NTAB(1)}{FM.OPAREN}{FM.OPAREN}"""
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		for _index_, _itemToWrite_ in enumerate(_itemToWrite_):
+		for _index_, _itemToWrite_ in enumerate(_lineToWrt_):
 
 				# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if (_index_ != 1):
