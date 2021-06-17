@@ -23,8 +23,8 @@ __ID__ = (
 	("__FILENAME__", _filename_,),  # FM/FM_TBGLST_CF.py
 	("__MODULE_NAME__", _moduleName_,),  # FM
 	("__NEW_FILENAME__", _newFilename_,),  # FM/FM_TBGLST_CF_NEW.py
-	("__SUB0__", _sub0_,),  # TBGLST
-	("__SUB1__", _sub1_,),  # CF
+	("__SUB0__", _sub0_,),  # CF
+	("__SUB1__", _sub1_,),
 )
 
 TBGLST = [
