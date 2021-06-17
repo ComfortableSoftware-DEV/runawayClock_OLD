@@ -3,19 +3,19 @@
 from FM import FM
 
 
-__MODULE_NAME__ = "FM"
-__SUB0__ = "TBGLST"
-__SUB1__ = "FM"
+_moduleName_ = "FM"
+_sub0_ = "TBGLST"
+_sub1_ = "FM"
 
-__FILENAME__ = f"""{FM.NAME_LCL_SUB1_PY(__MODULE_NAME__, __SUB0__, __SUB1__)}"""  #
-__NEW_FILENAME__ = f"""{FM.NAME_LCL_SUB1_NEW_PY(__MODULE_NAME__, __SUB0__, __SUB1__)}"""  #
+_filename_ = f"""{FM.NAME_LCL_SELF_SUB1_PY(_moduleName_, _sub0_, _sub1_)}"""  #
+_newFilename_ = f"""{FM.NAME_LCL_SELF_SUB1_NEW_PY(_moduleName_, _sub0_, _sub1_)}"""  #
 
 __ID__ = (
-	("filename", __FILENAME__,),  #
-	("moduleName", __MODULE_NAME__,),  # FM
-	("newFilename", __NEW_FILENAME__,),
-	("sub0", __SUB0__,),  # TBGLST
-	("sub1", __SUB1__,), # CF
+	("__FILENAME__", _filename_,),  #
+	("__MODULE_NAME__", _moduleName_,),  # FM
+	("__NEW_FILENAME__", _newFilename_,),
+	("__SUB0__", _sub0_,),  # TBGLST
+	("__SUB1__", _sub1_,), # CF
 )
 
 TBGLST = [
