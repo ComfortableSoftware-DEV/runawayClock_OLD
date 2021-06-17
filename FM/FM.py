@@ -1184,6 +1184,9 @@ def FM():
 		from FM import FM_makePSG
 		FM_makePSG.makePSG()
 
+		from FM import FM_makePSGClasses
+		FM_makePSGClasses.makePSGClasses()
+
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1ff
 
 
