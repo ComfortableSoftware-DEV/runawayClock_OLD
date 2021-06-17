@@ -6,13 +6,18 @@ from FM import FM
 __MODULE_NAME__ = "FM"
 __SUB0__ = "TBGLST"
 __SUB1__ = "PSG"
+
 __FILENAME__ = f"""{FM.NAME_LCL_SUB1_PY(__MODULE_NAME__, __SUB0__, __SUB1__)}"""  #
+__NEW_FILENAME__ = f"""{FM.NAME_LCL_SUB1_NEW_PY(__MODULE_NAME__, __SUB0__, __SUB1__)}"""  #
+
 __ID__ = (
+	"filename", __FILENAME__,  #
 	"moduleName", __MODULE_NAME__,  # FM
+	"newFilename", __NEW_FILENAME__,  #
 	"sub0", __SUB0__,  # TBGLST
 	"sub1", __SUB1__,  # CF
-	"filename", __FILENAME__,  #
 )
+
 TBGLST = [
 	(("FMAXPSG_SCTN0900_KEY_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py",), __ID__,),
 	(("FMAXPSG_SCTN0900_STR_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>",), __ID__,),

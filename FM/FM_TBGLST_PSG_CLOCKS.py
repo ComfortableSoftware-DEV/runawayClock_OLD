@@ -7,8 +7,10 @@ __CLASS__ = "CLOCKS"
 __MODULE_NAME__ = "FM"
 __SUB0__ = "TBGLST"
 __SUB1__ = "PSG"
+
 __FILENAME__ = f"""{FM.NAME_LCL_SUB1_CLASS_PY(__MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__)}"""  #
 __NEW_FILENAME__ = f"""{FM.NAME_LCL_SUB1_CLASS_PY(__MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__)}"""  #
+
 __ID__ = (
 	("class", __CLASS__,),
 	("moduleName", __MODULE_NAME__,),  # FM

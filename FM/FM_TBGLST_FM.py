@@ -3,11 +3,12 @@
 from FM import FM
 
 
-__FILENAME__ = f"""{FM.NAME_LCL_SUB1_PY(__MODULE_NAME__, __SUB0__, __SUB1__)}"""  #
 __MODULE_NAME__ = "FM"
-__NEW_FILENAME__ = f"""{FM.NAME_LCL_SUB1_NEW_PY(__MODULE_NAME__, __SUB0__, __SUB1__)}"""  #
 __SUB0__ = "TBGLST"
 __SUB1__ = "FM"
+
+__FILENAME__ = f"""{FM.NAME_LCL_SUB1_PY(__MODULE_NAME__, __SUB0__, __SUB1__)}"""  #
+__NEW_FILENAME__ = f"""{FM.NAME_LCL_SUB1_NEW_PY(__MODULE_NAME__, __SUB0__, __SUB1__)}"""  #
 
 __ID__ = (
 	("filename", __FILENAME__,),  #

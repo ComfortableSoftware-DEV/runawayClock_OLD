@@ -12,10 +12,11 @@ class MTBL_C():
 
 		_moduleName_ = "FM"
 		_sub0_ = "TBGLST"
-		_newFilename_ = FM.NAME_LCL_SUB0_NEW_PY(_moduleName_, _sub0_)
-		_filename_ = FM.NAME_LCL_SUB0_PY(_moduleName_, _sub0_)
 
-		_IDToRtn_ = self.makeID(moduleName=_moduleName_, sub0=_sub0_, filename=_newFilename_)
+		_filename_ = FM.NAME_LCL_SUB0_PY(_moduleName_, _sub0_)
+		_newFilename_ = FM.NAME_LCL_SUB0_NEW_PY(_moduleName_, _sub0_)
+
+		_IDToRtn_ = self.makeID(moduleName=_moduleName_, sub0=_sub0_, filename=_filename_, newFilename=_newFilename_)
 
 		_TBGLSTEntry_ = (
 			"FM_TBGLST",
@@ -87,15 +88,20 @@ class MTBL_C():
 				(_moduleName_ is not None) and \
 				(_sub0_ is None) and \
 				(_sub1_ is None) and \
-				(_sub2_ is None) \
+				(_sub2_ is None) and \
 			):
 			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			_newFilename_ = FM.NAME_LCL_NEW_PY(_moduleName_)
-			_filename_ = FM.NAME_LCL_PY(_moduleName_)
+			if (_filename_ is not None):
+				_filename_ = FM.NAME_LCL_PY(_moduleName_)
+
+			if (_newFilename_ is not None):
+				_newFilename_ = FM.NAME_LCL_NEW_PY(_moduleName_)
+
 			_strToRtn_ += f"""{FM.NEWLINE}{FM.NEWLINE}from FM import FM{FM.NEWLINE}{FM.NEWLINE}
 __MODULE_NAME__ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
-__FILENAME__ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_PY(__MODULE_NAME__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
-__ID__ = {FM.OBRCE}
+{FM.NEWLINE}__FILENAME__ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_PY(__MODULE_NAME__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
+__NEW_FILENAME__ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_NEW_PY(__MODULE_NAME__){FM.CBRCE}{FM.TRIQT}  # {_filename_}
+{FM.NEWLINE}__ID__ = {FM.OBRCE}
 {FM.NTAB(1)}{FM.DBLQT}moduleName{FM.DBLQT}: __MODULE_NAME__,  # {_moduleName_}
 {FM.NTAB(1)}{FM.DBLQT}filename{FM.DBLQT}: __FILENAME__,  # {_filename_}
 {FM.CBRCE}
@@ -112,7 +118,7 @@ TBGLST = {FM.OBRKT}
 				(_moduleName_ is not None) and \
 				(_sub0_ is None) and \
 				(_sub1_ is None) and \
-				(_sub2_ is None) \
+				(_sub2_ is None) and \
 			):
 			# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			_filename_ = f"""{FM.NAME_LCL_CLASS_PY(_moduleName_, _class_)}"""
