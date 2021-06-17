@@ -51,8 +51,8 @@ class CLOCKS_C(object):
 		self._DICT_KEYS_REVERSE_[PSG.K_CHECKBOX_ALPHA_DIM] = PSG.K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._DICT_KEYS_[PSG.K_CHECKBOX_RUNAWAY] = PSG.K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
 		self._DICT_KEYS_REVERSE_[PSG.K_CHECKBOX_RUNAWAY] = PSG.K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
-		self._DICT_KEYS_[PSG.PSG.K_CURRENT_INTERVAL_COUNT] = self._USE_THIS_KEY_(PSG.PSG.K_CURRENT_INTERVAL_COUNT)  # add foreign key for CURRENT_INTERVAL_COUNT
-		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.PSG.K_CURRENT_INTERVAL_COUNT)] = PSG.PSG.K_CURRENT_INTERVAL_COUNT  # add foreign key for CURRENT_INTERVAL_COUNT
+		self._DICT_KEYS_[PSG.K_CURRENT_INTERVAL_COUNT] = self._USE_THIS_KEY_(PSG.K_CURRENT_INTERVAL_COUNT)  # add foreign key for CURRENT_INTERVAL_COUNT
+		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_CURRENT_INTERVAL_COUNT)] = PSG.K_CURRENT_INTERVAL_COUNT  # add foreign key for CURRENT_INTERVAL_COUNT
 
 		self._DICTIN_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -127,11 +127,11 @@ class CLOCKS_C(object):
 		self._TEXT_CURRENT_INTERVAL_COUNT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			**PSG.TEXT_CURRENT_INTERVAL_COUNT,  # interval count template
-			KEY: f"""{self._USE_THIS_KEY_(PSG.PSG.K_CURRENT_INTERVAL_COUNT)}""",  # interval count template
+			KEY: f"""{self._USE_THIS_KEY_(PSG.K_CURRENT_INTERVAL_COUNT)}""",  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._DICT_KEYS_[PSG.PSG.K_CURRENT_INTERVAL_COUNT] = f"""{self._USE_THIS_KEY_(PSG.PSG.K_CURRENT_INTERVAL_COUNT)}"""
-		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(PSG.PSG.K_CURRENT_INTERVAL_COUNT)}"""] = PSG.PSG.K_CURRENT_INTERVAL_COUNT
+		self._DICT_KEYS_[PSG.K_CURRENT_INTERVAL_COUNT] = f"""{self._USE_THIS_KEY_(PSG.K_CURRENT_INTERVAL_COUNT)}"""
+		self._DICT_KEYS_REVERSE_[f"""{self._USE_THIS_KEY_(PSG.K_CURRENT_INTERVAL_COUNT)}"""] = PSG.K_CURRENT_INTERVAL_COUNT
 
 		self._TEXT_NAME_NEXT_EVENT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
