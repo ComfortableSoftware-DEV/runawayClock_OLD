@@ -18,7 +18,7 @@
 		_mpxToRtn_ = (0, 0)
 		_TLcn_ = self._CURRENT_LOCATION_
 		_TSizeX_, _TSizeY_ = _TSize_ = self._SIZE_
-		_TMouseLcnX_, _TMouseLcnY_ = _TMouseLcn_ = getMousePos()
+		_TMouseLcnX_, _TMouseLcnY_ = _TMouseLcn_ = PSG.getMousePos()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (_TMouseLcn_ != self._CURRENT_MOUSE_LOCATION_):
