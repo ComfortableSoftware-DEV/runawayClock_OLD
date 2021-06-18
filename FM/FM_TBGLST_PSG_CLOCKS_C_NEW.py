@@ -136,7 +136,7 @@ TBGLST = [
 	(("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0105", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE, "CLOCKS", "self._DICT_KEYS_REVERSE_ {self._DICT_KEYS_REVERSE_}%TQ%)", "print _DICT_KEYS_REVERSE_",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_01_ENTER", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__enter__", "__enter__.py", "False", "define __enter__",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_02_EXIT", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__exit__", "__exit__.py", "False", "define __exit__ in CLOCKS",), __ID__),
-	(("PSGVAL__CLOCKS_FUNC_03_CHECK_MOUSE", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "False", "define checkMouse",), __ID__),
+	(("PSGVAL__CLOCKS_FUNC_03_CHECK_MOUSE", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "True", "define checkMouse",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_DEBUG_PRINT", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "debugPrint", "debugPrint.py", "False", "read the frame and set self._RESULT_",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATE", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "CLOCKS/easyUpdate.py", "False", "load the whole thing from the file for easyUpdate",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATEPARMS", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdateParms", "easyUpdateParms.py", "False", "load the whole thing from the file for easyUpdate",), __ID__),

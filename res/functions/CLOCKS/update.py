@@ -23,10 +23,6 @@
 		self.updateFromDict()
 		self.updateFlippedItems()
 
-		if (self._DICTIN_[PSG.K_CHECKBOX_RUNAWAY] is True) and (self._CURRENT_MOUSE_STATUS_ in PSG.LIST_CLOSE):
-			print("running away")
-			self.runaway()
-
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (self._DPD_[PSG.F_UPDATE] is True):
 			self.debugPrint(
