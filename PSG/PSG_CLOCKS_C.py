@@ -132,8 +132,8 @@ class CLOCKS_C(object):
 			PSG.KEY: self._USE_THIS_KEY_(PSG.K_CURRENT_INTERVAL_COUNT),  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._DICT_KEYS_[PSG.K_TEXT_CURRENT_INTERVAL_COUNT] = self._USE_THIS_KEY_(PSG.K_TEXT_CURRENT_INTERVAL_COUNT)
-		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_TEXT_CURRENT_INTERVAL_COUNT)] = PSG.K__TEXT_CURRENT_INTERVAL_COUNT
+		self._DICT_KEYS_[self._TEXT_CURRENT_INTERVAL_COUNT_[PSG.KEY]] = self._USE_THIS_KEY_(self._TEXT_CURRENT_INTERVAL_COUNT_[PSG.KEY])
+		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(self._TEXT_CURRENT_INTERVAL_COUNT_[PSG.KEY])] = self._TEXT_CURRENT_INTERVAL_COUNT_[PSG.KEY]
 
 		self._TEXT_NAME_NEXT_EVENT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -141,8 +141,8 @@ class CLOCKS_C(object):
 			PSG.KEY: self._USE_THIS_KEY_(PSG.K_NAME_NEXT_EVENT),  # interval count template
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-		self._DICT_KEYS_[PSG.K_TEXT_NAME_NEXT_EVENT] = self._USE_THIS_KEY_(PSG.K_TEXT_NAME_NEXT_EVENT)
-		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_TEXT_NAME_NEXT_EVENT)] = PSG.K__TEXT_NAME_NEXT_EVENT
+		self._DICT_KEYS_[self._TEXT_NAME_NEXT_EVENT_[PSG.KEY]] = self._USE_THIS_KEY_(self._TEXT_NAME_NEXT_EVENT_[PSG.KEY])
+		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(self._TEXT_NAME_NEXT_EVENT_[PSG.KEY])] = self._TEXT_NAME_NEXT_EVENT_[PSG.KEY]
 
 		self._TEXT_TIME_S_AT_ZEROELAPSE_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -152,8 +152,8 @@ class CLOCKS_C(object):
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 		self._LIST_KEYS_TIME_.append(PSG.TEXT_TIME_S_AT_ZEROELAPSE)
 		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.TEXT_TIME_S_AT_ZEROELAPSE))
-		self._DICT_KEYS_[PSG.K_TEXT_TIME_S_AT_ZEROELAPSE] = self._USE_THIS_KEY_(PSG.K_TEXT_TIME_S_AT_ZEROELAPSE)
-		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_TEXT_TIME_S_AT_ZEROELAPSE)] = PSG.K__TEXT_TIME_S_AT_ZEROELAPSE
+		self._DICT_KEYS_[self._TEXT_TIME_S_AT_ZEROELAPSE_[PSG.KEY]] = self._USE_THIS_KEY_(self._TEXT_TIME_S_AT_ZEROELAPSE_[PSG.KEY])
+		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(self._TEXT_TIME_S_AT_ZEROELAPSE_[PSG.KEY])] = self._TEXT_TIME_S_AT_ZEROELAPSE_[PSG.KEY]
 
 		self._TEXT_TIME_S_AT_NEXT_ALERT_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -163,8 +163,8 @@ class CLOCKS_C(object):
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 		self._LIST_KEYS_TIME_.append(PSG.TEXT_TIME_S_AT_NEXT_ALERT)
 		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.TEXT_TIME_S_AT_NEXT_ALERT))
-		self._DICT_KEYS_[PSG.K_TEXT_TIME_S_AT_NEXT_ALERT] = self._USE_THIS_KEY_(PSG.K_TEXT_TIME_S_AT_NEXT_ALERT)
-		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_TEXT_TIME_S_AT_NEXT_ALERT)] = PSG.K__TEXT_TIME_S_AT_NEXT_ALERT
+		self._DICT_KEYS_[self._TEXT_TIME_S_AT_NEXT_ALERT_[PSG.KEY]] = self._USE_THIS_KEY_(self._TEXT_TIME_S_AT_NEXT_ALERT_[PSG.KEY])
+		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(self._TEXT_TIME_S_AT_NEXT_ALERT_[PSG.KEY])] = self._TEXT_TIME_S_AT_NEXT_ALERT_[PSG.KEY]
 
 		self._TEXT_TIME_S_CLOCK_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -174,8 +174,8 @@ class CLOCKS_C(object):
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 		self._LIST_KEYS_TIME_.append(PSG.TEXT_TIME_S_CLOCK)
 		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.TEXT_TIME_S_CLOCK))
-		self._DICT_KEYS_[PSG.K_TEXT_TIME_S_CLOCK] = self._USE_THIS_KEY_(PSG.K_TEXT_TIME_S_CLOCK)
-		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_TEXT_TIME_S_CLOCK)] = PSG.K__TEXT_TIME_S_CLOCK
+		self._DICT_KEYS_[self._TEXT_TIME_S_CLOCK_[PSG.KEY]] = self._USE_THIS_KEY_(self._TEXT_TIME_S_CLOCK_[PSG.KEY])
+		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(self._TEXT_TIME_S_CLOCK_[PSG.KEY])] = self._TEXT_TIME_S_CLOCK_[PSG.KEY]
 
 		self._TEXT_TIME_S_ELAPSED_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -185,8 +185,8 @@ class CLOCKS_C(object):
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 		self._LIST_KEYS_TIME_.append(PSG.TEXT_TIME_S_ELAPSED)
 		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.TEXT_TIME_S_ELAPSED))
-		self._DICT_KEYS_[PSG.K_TEXT_TIME_S_ELAPSED] = self._USE_THIS_KEY_(PSG.K_TEXT_TIME_S_ELAPSED)
-		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_TEXT_TIME_S_ELAPSED)] = PSG.K__TEXT_TIME_S_ELAPSED
+		self._DICT_KEYS_[self._TEXT_TIME_S_ELAPSED_[PSG.KEY]] = self._USE_THIS_KEY_(self._TEXT_TIME_S_ELAPSED_[PSG.KEY])
+		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(self._TEXT_TIME_S_ELAPSED_[PSG.KEY])] = self._TEXT_TIME_S_ELAPSED_[PSG.KEY]
 
 		self._TEXT_TIME_S_TOGO_ = {  # class text for interval count
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
@@ -196,8 +196,8 @@ class CLOCKS_C(object):
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 		self._LIST_KEYS_TIME_.append(PSG.TEXT_TIME_S_TOGO)
 		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.TEXT_TIME_S_TOGO))
-		self._DICT_KEYS_[PSG.K_TEXT_TIME_S_TOGO] = self._USE_THIS_KEY_(PSG.K_TEXT_TIME_S_TOGO)
-		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_TEXT_TIME_S_TOGO)] = PSG.K__TEXT_TIME_S_TOGO
+		self._DICT_KEYS_[self._TEXT_TIME_S_TOGO_[PSG.KEY]] = self._USE_THIS_KEY_(self._TEXT_TIME_S_TOGO_[PSG.KEY])
+		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(self._TEXT_TIME_S_TOGO_[PSG.KEY])] = self._TEXT_TIME_S_TOGO_[PSG.KEY]
 
 		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
