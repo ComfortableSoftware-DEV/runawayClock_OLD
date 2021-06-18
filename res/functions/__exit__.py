@@ -1,7 +1,8 @@
+
 	def __exit__(self, *args_):
-		global \
-			DICT_ALL_THE_FORMS, \
-			APPDS_MAIN
+#		global \
+#			DICT_ALL_THE_FORMS, \
+#			APPDS_MAIN
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		DICT_ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 

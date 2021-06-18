@@ -1,6 +1,7 @@
+
 	def __enter__(self):
-		global \
-			DICT_ALL_THE_FORMS
+#		global \
+#			DICT_ALL_THE_FORMS
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_ = SG.Window(**self._WINDOW_).finalize()
 		PSG.DICT_ALL_THE_FORMS[self._THIS_FORM_NAME_] = self
