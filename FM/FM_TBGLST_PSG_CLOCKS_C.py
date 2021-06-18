@@ -146,7 +146,7 @@ TBGLST = [
 	(("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTON", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOn", "intervalCountOn.py", "False", "turn interval count on",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_QUICK_READ", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "quickRead", "quickRead.py", "False", "read the frame and set self._RESULT_",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_RUNAWAY", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "True", "define runaway",), __ID__),
-	(("PSGVAL__CLOCKS_FUNC_03_SETCHECKBOX", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "setCheckbox", "setCheckbox.py", "False", "define runaway",), __ID__),
+	(("PSGVAL__CLOCKS_FUNC_03_SETCHECKBOX", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "setCheckbox", "setCheckbox.py", "True", "define setCheckbox",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_UPDATE_FLIPPED_ITEMS", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFlippedItems", "updateFlippedItems.py", "False", "read the frame and set self._RESULT_",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_UPDATE_FROM_DICT", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFromDict", "updateFromDict.py", "False", "update the displayed info from a dict or the default _DICTIN_",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_ZERO_FLIPPED", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "zeroFlipped", "zeroFlipped.py", "False", "update the displayed info from a dict or the default _DICTIN_",), __ID__),
