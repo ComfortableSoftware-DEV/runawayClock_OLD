@@ -3550,6 +3550,9 @@ def parseTBGLST():
 					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append(PSG.{_thisElementName_[1:-1]}){FM.NEWLINE}"""
 					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.{_thisElementName_[1:-1]})){FM.NEWLINE}"""
 
+				FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_[PSG.K{_thisElementName_[:-1]}] = self._USE_THIS_KEY_(PSG.K{_thisElementName_[:-1]}){FM.NEWLINE}"""
+				FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K{_thisElementName_[:-1]})] = PSG.K_{_thisElementName_[:-1]}{FM.NEWLINE}"""
+
 				FM.FMPSG_SCTN09FF_CLASS_DEF_DICT[f"""K{_thisElementName_}"""] = f"""{FM.DBLQT}k{_thisElementName_}"""
 				FM.FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
