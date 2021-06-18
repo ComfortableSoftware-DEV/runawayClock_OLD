@@ -3550,9 +3550,6 @@ def parseTBGLST():
 					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append(PSG.{_thisElementName_[1:-1]}){FM.NEWLINE}"""
 					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.{_thisElementName_[1:-1]})){FM.NEWLINE}"""
 
-				FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_[self.{_thisElementName_}[PSG.KEY]] = self._USE_THIS_KEY_(self.{_thisElementName_}[PSG.KEY]){FM.NEWLINE}"""
-				FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(self.{_thisElementName_}[PSG.KEY])] = self.{_thisElementName_}[PSG.KEY]{FM.NEWLINE}"""
-
 				FM.FMPSG_SCTN09FF_CLASS_DEF_DICT[f"""K{_thisElementName_}"""] = f"""{FM.DBLQT}k{_thisElementName_}"""
 				FM.FMPSG_SCTN09FF_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
@@ -3631,22 +3628,20 @@ def parseTBGLST():
 				_thisKey_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
 
-				if (_thisKey_ == "KEY"):
+				if (_thisKey_[-3:] == "KEY"):
 					thisValStr_ = f"""f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
+					print(f"""key found {_thisKey_}""")
+					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
+					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
 					if _thisElementName_ not in FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]:
 						FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisVal_}{FM.CBRKT} = f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}{FM.NEWLINE}"""
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}{FM.CBRKT} = {_thisVal_}{FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisVal_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRKT} = {_thisVal_}{FM.NEWLINE}"""
 
 				else:
 					thisValStr_ = f"""{_thisVal_}"""
-
-					# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-				if (_thisKey_ == "KEY"):
-					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
-					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
 				FM.FMPSG_SCTN09FF_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
 
