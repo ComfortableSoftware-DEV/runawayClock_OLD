@@ -2920,7 +2920,7 @@ def parseTBGLST():
 				_isARevKeyItem_ = _thisItem_[5]
 
 				if (_isARevKeyItem_ == "True"):
-					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
+					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
 
 				else:
