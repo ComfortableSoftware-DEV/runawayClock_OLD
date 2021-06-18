@@ -23,7 +23,7 @@ _newFilename_ = f"""{FM.NAME_LCL_SELF_SUB1_CLASS_NEW_PY(
 )}"""  # FM/FM_TBGLST_PSG_CLOCKS_C_NEW.py
 
 __ID__ = (
-	("__CLASS__.", _class_,),  # CLOCKS
+	("__CLASS__", _class_,),  # CLOCKS
 	("__FILENAME__", _filename_,),  # FM/FM_TBGLST_PSG_CLOCKS_C.py
 	("__MODULE_NAME__", _moduleName_,),  # FM
 	("__NEW_FILENAME__", _newFilename_,),  # FM/FM_TBGLST_PSG_CLOCKS_C_NEW.py

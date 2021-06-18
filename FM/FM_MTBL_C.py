@@ -354,7 +354,7 @@ _filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_SUB1_CLASS_PY(
 {FM.NTAB(1)}__SUB1__=_sub1_,
 ){FM.CBRCE}{FM.TRIQT}  # {_newFilename_}{FM.NEWLINE}
 __ID__ = {FM.OPAREN}
-{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__CLASS__.{FM.DBLQT}, _class_,{FM.CPAREN},  # {_class_}
+{FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__CLASS__{FM.DBLQT}, _class_,{FM.CPAREN},  # {_class_}
 {FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__FILENAME__{FM.DBLQT}, _filename_,{FM.CPAREN},  # {_filename_}
 {FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__MODULE_NAME__{FM.DBLQT}, _moduleName_,{FM.CPAREN},  # {_moduleName_}
 {FM.NTAB(1)}{FM.OPAREN}{FM.DBLQT}__NEW_FILENAME__{FM.DBLQT}, _newFilename_,{FM.CPAREN},  # {_newFilename_}
