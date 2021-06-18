@@ -112,7 +112,7 @@ class CLOCKS_C(object):
 			PSG.F_INTERVALCOUNTOFF: False,  # turn interval count off
 			PSG.F_INTERVALCOUNTON: False,  # turn interval count on
 			PSG.F_QUICKREAD: False,  # read the frame and set self._RESULT_
-			PSG.F_RUNAWAY: False,  # define runaway
+			PSG.F_RUNAWAY: True,  # define runaway
 			PSG.F_SETCHECKBOX: False,  # define runaway
 			PSG.F_UPDATEFLIPPEDITEMS: False,  # read the frame and set self._RESULT_
 			PSG.F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
@@ -1093,8 +1093,9 @@ checkboxValue_ {checkboxValue_}
 
 	def updateFlippedItems(self):
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		print(f"""updateFlippedItems
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (self._DPD_[PSG.F_UPDATEFLIPPEDITEMS] is True):
+			print(f"""updateFlippedItems
 {CF.frameIt("self._CURRENT_FLIP_INDEX_", self._CURRENT_FLIP_INDEX_)}
 {CF.frameItMS("PSG.NOWMS", PSG.NOWMS)}
 {CF.frameIt("_TIME_MS_AT_FLIP_", self._TIME_MS_AT_FLIP_)}
