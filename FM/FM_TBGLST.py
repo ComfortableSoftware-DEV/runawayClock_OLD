@@ -27,7 +27,11 @@ class TBGLST():
 		from FM import FM_TBGLST_PSG_CLOCKS_C
 		self.__TBGLST__.extend(FM_TBGLST_PSG_CLOCKS_C.TBGLST)
 
-		print("all swallowed")
+		for _thisItem_, _thisID_ in self.__TBGLST__:
+			print(f"""all swallowed
+_thisItem_ {_thisItem_}
+_thisID_ {_thisID_}
+""")
 
 
 #		for _thisElement_ in self.__TBGLST__:
