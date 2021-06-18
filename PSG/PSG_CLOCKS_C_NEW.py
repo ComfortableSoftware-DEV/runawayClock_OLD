@@ -129,15 +129,15 @@ class CLOCKS_C(object):
 		self._DICT_KEYS_TIME_ = {  # dict of time keys and their max value int seconds
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			K_TIME_S_AT_NEXT_ALERT: CF.DAY_S,  # comment
-			K_TIME_S_AT_NEXT_ALERT: CF.DAY_S,  # comment
-			K_TIME_S_AT_ZEROELAPSE: CF.DAY_S,  # comment
 			K_TIME_S_AT_ZEROELAPSE: CF.DAY_S,  # comment
 			K_TIME_S_CLOCK: CF.DAY_S,  # 
-			K_TIME_S_CLOCK: CF.DAY_S,  # 
-			K_TIME_S_ELAPSED: CF.TIME_S_995959,  # 
 			K_TIME_S_ELAPSED: CF.TIME_S_995959,  # 
 			K_TIME_S_TOGO: CF.DAY_S,  # 
-			K_TIME_S_TOGO: CF.DAY_S,  # 
+			PSG.K_TIME_S_AT_NEXT_ALERT: CF.DAY_S,  # comment
+			PSG.K_TIME_S_AT_ZEROELAPSE: CF.DAY_S,  # comment
+			PSG.K_TIME_S_CLOCK: CF.DAY_S,  # 
+			PSG.K_TIME_S_ELAPSED: CF.TIME_S_995959,  # 
+			PSG.K_TIME_S_TOGO: CF.DAY_S,  # 
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 

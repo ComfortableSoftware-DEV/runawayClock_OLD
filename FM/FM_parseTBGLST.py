@@ -38,6 +38,12 @@ def parseTBGLST():
 			_thisAX_ = _thisItem_[1]
 			_thisComment_ = _thisItem_[-1]
 
+			if (_thisAX_.find("SCTN09FF") > -1):
+				print(f"""parseTBGLST
+_thisItem_ {_thisItem_}
+_thisItemID_ {_thisItemID_}
+""")
+
 				# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 			if _thisAX_ not in FM.FMAXFM_AXLST:
 				FM.doErrorItem("not a supported action in FM", _thisItem_)
