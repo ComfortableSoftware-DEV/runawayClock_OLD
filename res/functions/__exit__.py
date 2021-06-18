@@ -6,11 +6,11 @@
 		DICT_ALL_THE_FORMS[self._THIS_FORM_NAME_] = None
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DPD_[F___EXIT__] is True):
+		if (self._DPD_[PSG.F___EXIT__] is True):
 			self.debugPrint(
 				printDictinS_=True,
 				message_=f"""exiting CLOCKS {self._THIS_FORM_NAME_}
-APPDS_MAIN {APPDS_MAIN}
+APPDS_MAIN {PSG.APPDS_MAIN}
 """
 			)
 

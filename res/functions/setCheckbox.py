@@ -1,3 +1,4 @@
+
 	def setCheckbox(self, checkboxKey_, checkboxValue_=None):
 		global \
 			APPDS_MAIN
@@ -14,7 +15,7 @@
 		self._DICTIN_[checkboxKey_] = checkboxValue_
 
 			# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-		if (self._DPD_[F_SETCHECKBOX] is True):
+		if (self._DPD_[PSG.F_SETCHECKBOX] is True):
 			self.debugPrint(
 				printDictinS_=True,
 				message_=f"""setCheckbox

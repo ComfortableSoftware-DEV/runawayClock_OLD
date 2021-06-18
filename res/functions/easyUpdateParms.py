@@ -1,3 +1,4 @@
+
 	def easyUpdateParms(self,
 			tooltip_=None,  # (key_, val_)
 			alphaChannel_=None,  # float
@@ -19,7 +20,7 @@
 		self.updateFromDict()
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (self._DPD_[F_EASYUPDATEPARMS]):
+		if (self._DPD_[PSG.F_EASYUPDATEPARMS]):
 			self.debugPrint(
 				printDictinS_=True,
 				title_="easyUpdateParms",
