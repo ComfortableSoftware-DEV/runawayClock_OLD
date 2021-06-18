@@ -2921,7 +2921,7 @@ def parseTBGLST():
 
 				if (_isARevKeyItem_ == "True"):
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}PSG.{_thisKey_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
+					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}self._USE_THIS_KEY_{FM.OPAREN}PSG.{_thisKey_}{FM.CPAREN}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
 
 				else:
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
@@ -2948,7 +2948,7 @@ def parseTBGLST():
 
 				if (_isARevKeyItem_ == "True"):
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}PSG.{_thisKey_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
+					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}self._USE_THIS_KEY_{FM.OPAREN}PSG.{_thisKey_}{FM.CPAREN}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
 
 				else:
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
