@@ -114,10 +114,10 @@ class CLOCKS_C(object):
 			PSG.F_QUICKREAD: False,  # read the frame and set self._RESULT_
 			PSG.F_RUNAWAY: False,  # define runaway
 			PSG.F_SETCHECKBOX: False,  # define runaway
-			PSG.F_UPDATEFLIPPEDITEMS: True,  # read the frame and set self._RESULT_
+			PSG.F_UPDATEFLIPPEDITEMS: False,  # read the frame and set self._RESULT_
 			PSG.F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
 			PSG.F_ZEROFLIPPED: False,  # update the displayed info from a dict or the default _DICTIN_
-			PSG.F_UPDATE: True,  # define the required update function
+			PSG.F_UPDATE: False,  # define the required update function
 		}
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
