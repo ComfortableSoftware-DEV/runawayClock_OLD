@@ -11,8 +11,8 @@
 		_screenSZX_, _screenSZY_ = self._SCREEN_DIMS_
 		_sizeX_, _sizeY_ = self._SIZE_
 		_lcnX_, _lcnY_ = self._CURRENT_LOCATION_
-		_moveToX_ = _lcnX_ + (self._MPX_[INDEX_X] * PSG.SZ_MOVE_DIST)
-		_moveToY_ = _lcnY_ + (self._MPX_[INDEX_Y] * PSG.SZ_MOVE_DIST)
+		_moveToX_ = _lcnX_ + (self._MPX_[PSG.INDEX_X] * PSG.SZ_MOVE_DIST)
+		_moveToY_ = _lcnY_ + (self._MPX_[PSG.INDEX_Y] * PSG.SZ_MOVE_DIST)
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (self._DPD_[PSG.F_RUNAWAY] is True):
@@ -21,8 +21,8 @@
 {CF.frameIt("_screenSZX_", _screenSZX_)}, {CF.frameIt("_screenSZY_", _screenSZY_)} = {CF.frameIt("self._SCREEN_DIMS_", self._SCREEN_DIMS_)}
 {CF.frameIt("_sizeX_", _sizeX_)}, {CF.frameIt("_sizeY_", _sizeY_)} = {CF.frameIt("self._SIZE_", self._SIZE_)}
 {CF.frameIt("_lcnX_", _lcnX_)}, {CF.frameIt("_lcnY_", _lcnY_)} = {CF.frameIt("_CURRENT_LOCATION_", self._CURRENT_LOCATION_)}
-{CF.frameIt("_moveToX_", _moveToX_)} = {CF.frameIt("_lcnX_", _lcnX_)} + ({CF.frameIt("_MPX_[INDEX_X]", self._MPX_[INDEX_X])} * {CF.frameIt("PSG.SZ_MOVE_DIST", PSG.SZ_MOVE_DIST)})
-{CF.frameIt("_moveToY_", _moveToY_)} = {CF.frameIt("_lcnY_", _lcnY_)} + ({CF.frameIt("_MPX_[INDEX_Y]", self._MPX_[INDEX_Y])} * {CF.frameIt("PSG.SZ_MOVE_DIST", PSG.SZ_MOVE_DIST)})
+{CF.frameIt("_moveToX_", _moveToX_)} = {CF.frameIt("_lcnX_", _lcnX_)} + ({CF.frameIt("_MPX_[PSG.INDEX_X]", self._MPX_[PSG.INDEX_X])} * {CF.frameIt("PSG.SZ_MOVE_DIST", PSG.SZ_MOVE_DIST)})
+{CF.frameIt("_moveToY_", _moveToY_)} = {CF.frameIt("_lcnY_", _lcnY_)} + ({CF.frameIt("_MPX_[PSG.INDEX_Y]", self._MPX_[PSG.INDEX_Y])} * {CF.frameIt("PSG.SZ_MOVE_DIST", PSG.SZ_MOVE_DIST)})
 """)
 
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
