@@ -45,17 +45,21 @@ _thisVal_ {_thisVal_}
 					# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
 					if (_thisKey_ in self._DICT_KEYS_TIME_):
 						_dictToRtn_[self._DICT_KEYS_[_thisKey_]].append(CF.nrmlIntToHMS(_thisItem_))
+						if (self._DPD_[PSG.F_ENSTRING] is True):
+							print("time")
 
 					# 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥ 5⥥
 					elif (_thisKey_ in self._DICT_KEYS_INT_):
+						if (self._DPD_[PSG.F_ENSTRING] is True):
+							print("int")
 
 						# 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥
 						if (self._DICT_KEYS_INT_[_thisKey_] == "04d"):
-							_dictToRtn_[_thisKey_].append(f"""{_thisItem_:04d}""")
+							_dictToRtn_[self._DICT_KEYS_[_thisKey_]].append(f"""{_thisItem_:04d}""")
 
 						# ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥
 						else:
-							_dictToRtn_[_thisKey_].append(f"""{_thisItem_}""")
+							_dictToRtn_[self._DICT_KEYS_[_thisKey_]].append(f"""{_thisItem_}""")
 
 						# ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6
 
