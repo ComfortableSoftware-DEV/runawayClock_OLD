@@ -38,6 +38,18 @@ def parseTBGLST():
 			_thisAX_ = _thisItem_[1]
 			_thisComment_ = _thisItem_[-1]
 
+			_strToPrint_ = f"""thisItem {_thisItem_}"""
+			if (
+				# ("CURRENT_INTERVAL_COUNT" in _strToPrint_) or
+				("NAME_NEXT_EVENT" in _strToPrint_)
+				# ("TIME_S_AT_NEXT_ALERT" in _strToPrint_) or
+				# ("TIME_S_AT_ZEROELAPSE" in _strToPrint_) or
+				# ("TIME_S_CLOCK" in _strToPrint_) or
+				# ("TIME_S_ELAPSED" in _strToPrint_) or
+				# ("TIME_S_TOGO" in _strToPrint_)
+			):
+				print(_strToPrint_)
+
 				# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 			if _thisAX_ not in FM.FMAXFM_AXLST:
 				FM.doErrorItem("not a supported action in FM", _thisItem_)
@@ -3630,7 +3642,12 @@ def parseTBGLST():
 
 				if (_thisKey_[-3:] == "KEY"):
 					thisValStr_ = f"""f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
-					print(f"""key found {_thisKey_}""")
+					print(f"""key found {_thisKey_}
+_thisClassName_ {_thisClassName_}
+_thisElementName_ {_thisElementName_}
+_thisKey_ {_thisKey_}
+_thisVal_ {_thisVal_}
+""")
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
 					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
