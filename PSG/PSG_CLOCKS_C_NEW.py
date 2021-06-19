@@ -115,7 +115,7 @@ class CLOCKS_C(object):
 			PSG.F_EASYUPDATE: False,  # load the whole thing from the file for easyUpdate
 			PSG.F_EASYUPDATEPARMS: False,  # load the whole thing from the file for easyUpdate
 			PSG.F_ENINT: False,  # read the frame and set self._RESULT_
-			PSG.F_ENSTRING: False,  # read the frame and set self._RESULT_
+			PSG.F_ENSTRING: True,  # read the frame and set self._RESULT_
 			PSG.F_INTERVALCOUNTOFF: False,  # turn interval count off
 			PSG.F_INTERVALCOUNTON: False,  # turn interval count on
 			PSG.F_QUICKREAD: False,  # read the frame and set self._RESULT_
