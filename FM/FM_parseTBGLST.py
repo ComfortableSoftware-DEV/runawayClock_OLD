@@ -38,18 +38,6 @@ def parseTBGLST():
 			_thisAX_ = _thisItem_[1]
 			_thisComment_ = _thisItem_[-1]
 
-			_strToPrint_ = f"""thisItem {_thisItem_}"""
-			if (
-				# ("CURRENT_INTERVAL_COUNT" in _strToPrint_) or
-				("NAME_NEXT_EVENT" in _strToPrint_)
-				# ("TIME_S_AT_NEXT_ALERT" in _strToPrint_) or
-				# ("TIME_S_AT_ZEROELAPSE" in _strToPrint_) or
-				# ("TIME_S_CLOCK" in _strToPrint_) or
-				# ("TIME_S_ELAPSED" in _strToPrint_) or
-				# ("TIME_S_TOGO" in _strToPrint_)
-			):
-				print(_strToPrint_)
-
 				# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 			if _thisAX_ not in FM.FMAXFM_AXLST:
 				FM.doErrorItem("not a supported action in FM", _thisItem_)
@@ -3659,7 +3647,7 @@ def parseTBGLST():
 						FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
 					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisModule_}.{_thisVal_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}.{_thisVal_}{FM.CPAREN}{FM.NEWLINE}"""
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}.{_thisVal_}{FM.CPAREN}{FM.CBRKT} = {_thisVal_}{FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}.{_thisVal_}{FM.CPAREN}{FM.CBRKT} = {_thisModule_}.{_thisVal_}{FM.NEWLINE}"""
 
 				else:
 					thisValStr_ = f"""{_thisVal_}"""
