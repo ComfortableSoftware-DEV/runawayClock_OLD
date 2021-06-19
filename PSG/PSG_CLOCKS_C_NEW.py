@@ -103,7 +103,7 @@ class CLOCKS_C(object):
 			PSG.F___INIT__: True,  # define a DPD at /
 			PSG.F___ENTER__: False,  # define __enter__
 			PSG.F___EXIT__: False,  # define __exit__ in CLOCKS
-			PSG.F_CHECKMOUSE: True,  # define checkMouse
+			PSG.F_CHECKMOUSE: False,  # define checkMouse
 			PSG.F_DEBUGPRINT: False,  # read the frame and set self._RESULT_
 			PSG.F_EASYUPDATE: False,  # load the whole thing from the file for easyUpdate
 			PSG.F_EASYUPDATEPARMS: False,  # load the whole thing from the file for easyUpdate
@@ -112,8 +112,8 @@ class CLOCKS_C(object):
 			PSG.F_INTERVALCOUNTOFF: False,  # turn interval count off
 			PSG.F_INTERVALCOUNTON: False,  # turn interval count on
 			PSG.F_QUICKREAD: False,  # read the frame and set self._RESULT_
-			PSG.F_RUNAWAY: True,  # define runaway
-			PSG.F_SETCHECKBOX: True,  # define setCheckbox
+			PSG.F_RUNAWAY: False,  # define runaway
+			PSG.F_SETCHECKBOX: False,  # define setCheckbox
 			PSG.F_UPDATEFLIPPEDITEMS: False,  # read the frame and set self._RESULT_
 			PSG.F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
 			PSG.F_ZEROFLIPPED: False,  # update the displayed info from a dict or the default _DICTIN_
