@@ -58,27 +58,11 @@ class CLOCKS_C(object):
 
 		self._DICTIN_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			PSG.K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
-			PSG.K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
-			PSG.K_LIST_FLIP_INFO: [],  # the interval count and name list tup(K_CURRENT_INTERVAL_COUNT, K_NAME_NEXT_EVENT)
-			PSG.K_TIME_S_AT_NEXT_ALERT: PSG.ZERO_CLOCK,  # time at next event
-			PSG.K_TIME_S_AT_ZEROELAPSE: PSG.ZERO_CLOCK,  # time at last zero of elapsed timer
-			PSG.K_TIME_S_CLOCK: PSG.ZERO_CLOCK,  # time clock or wall clock
-			PSG.K_TIME_S_ELAPSED: PSG.ZERO_CLOCK,  # time elapsed
-			PSG.K_TIME_S_TOGO: PSG.ZERO_CLOCK,  # countdown to next event
 		}
 # fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
 		self._DICTINSTR_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			PSG.K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
-			PSG.K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
-			PSG.K_LIST_FLIP_INFO: [],  # the interval count and name list tup(K_CURRENT_INTERVAL_COUNT, K_NAME_NEXT_EVENT)
-			self._USE_THIS_KEY_(PSG.K_TIME_S_AT_NEXT_ALERT): PSG.ZERO_CLOCK,  # time at next event
-			self._USE_THIS_KEY_(PSG.K_TIME_S_AT_ZEROELAPSE): PSG.ZERO_CLOCK,  # time at last zero of elapsed timer
-			self._USE_THIS_KEY_(PSG.K_TIME_S_CLOCK): PSG.ZERO_CLOCK,  # time clock or wall clock
-			self._USE_THIS_KEY_(PSG.K_TIME_S_ELAPSED): PSG.ZERO_CLOCK,  # time elapsed
-			self._USE_THIS_KEY_(PSG.K_TIME_S_TOGO): PSG.ZERO_CLOCK,  # countdown to next event
 		}
 # fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
