@@ -1140,7 +1140,7 @@ def parseTBGLST():
 					FM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] = ""
 
 					# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-				if (_thisKey_ == "KEY"):
+				if (_thisKey_[-3:] == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
 					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
@@ -3594,35 +3594,38 @@ def parseTBGLST():
 			# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 			elif _thisAX_ == FM.FMAXPSG_SCTN09FF_CLASS_TEXT_STR_ADD:
 				# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-				if _thisItemLen_ != 7:
-					FM.doErrorItem("not 7 items", _thisItem_)
+				# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
+				if _thisItemLen_ != 8:
+					FM.doErrorItem("not 8 items", _thisItem_)
 					continue
+
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				_thisKey_ = _thisItem_[4]
-				_thisVal_ = _thisItem_[5]
+				_thisModule_ = _thisItem_[5]
+				_thisVal_ = _thisItem_[6]
 
-				if _thisClassName_ not in FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT:
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_] = {}
-
-				if (_thisKey_ == "KEY"):
-					thisValStr_ = f"""f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
+				if (_thisKey_[-3:] == "KEY"):
+					thisValStr_ = f"""self._USE_THIS_KEY_{FM.OPAREN}{FM.DBLQT}{_thisVal_}{FM.DBLQT}{FM.CPAREN}"""
+# 					print(f"""key found {_thisKey_}
+# _thisClassName_ {_thisClassName_}
+# _thisElementName_ {_thisElementName_}
+# _thisKey_ {_thisKey_}
+# _thisVal_ {_thisVal_}
+# """)
+					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
+					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
 					if _thisElementName_ not in FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]:
 						FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisVal_}{FM.CBRKT} = f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}{FM.NEWLINE}"""
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}{FM.CBRKT} = {_thisVal_}{FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisModule_}{_thisVal_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}{_thisVal_}{FM.CPAREN}{FM.CBRKT} = {_thisVal_}{FM.NEWLINE}"""
 
 				else:
 					thisValStr_ = f"""{_thisVal_}"""
 
-					# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
-				if (_thisKey_ == "KEY"):
-					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
-					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
-
-				FM.FMPSG_SCTN09FF_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {FM.DBLQT}{thisValStr_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
+				FM.FMPSG_SCTN09FF_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {_thisModule_}{thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
 
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -3631,31 +3634,32 @@ def parseTBGLST():
 			# ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ ⥥2⥣ if _thisAX_ …
 			elif _thisAX_ == FM.FMAXPSG_SCTN09FF_CLASS_TEXT_VAL_ADD:
 				# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
-				if _thisItemLen_ != 7:
-					FM.doErrorItem("not 7 items", _thisItem_)
+				if _thisItemLen_ != 8:
+					FM.doErrorItem("not 8 items", _thisItem_)
 					continue
 
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				_thisKey_ = _thisItem_[4]
-				_thisVal_ = _thisItem_[5]
+				_thisModule_ = _thisItem_[5]
+				_thisVal_ = _thisItem_[6]
 
 				if (_thisKey_[-3:] == "KEY"):
-					thisValStr_ = f"""f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
-					print(f"""key found {_thisKey_}
-_thisClassName_ {_thisClassName_}
-_thisElementName_ {_thisElementName_}
-_thisKey_ {_thisKey_}
-_thisVal_ {_thisVal_}
-""")
+					thisValStr_ = f"""self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}.{_thisVal_}{FM.CPAREN}"""
+# 					print(f"""key found {_thisKey_}
+# _thisClassName_ {_thisClassName_}
+# _thisElementName_ {_thisElementName_}
+# _thisKey_ {_thisKey_}
+# _thisVal_ {_thisVal_}
+# """)
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
 					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
 					if _thisElementName_ not in FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]:
 						FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisVal_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.NEWLINE}"""
-					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRKT} = {_thisVal_}{FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisModule_}.{_thisVal_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}.{_thisVal_}{FM.CPAREN}{FM.NEWLINE}"""
+					FM.FMPSG_SCTN09FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}.{_thisVal_}{FM.CPAREN}{FM.CBRKT} = {_thisVal_}{FM.NEWLINE}"""
 
 				else:
 					thisValStr_ = f"""{_thisVal_}"""
