@@ -73,14 +73,14 @@ F_APPDSDECODE = "F_APPDSDECODE"  # fkey ENTRY appdsDecode
 F_CHECKMOUSE = "F_CHECKMOUSE"  # define checkMouse
 F_COMPAREBBOX = "F_COMPAREBBOX"  # FKEY entry compareBBox
 F_COMPAREXY = "F_COMPAREXY"  # FKEY entry compareXY
-F_DEBUGPRINT = "F_DEBUGPRINT"  # read the frame and set self._RESULT_
+F_DEBUGPRINT = "F_DEBUGPRINT"  # print debug info
 F_DOIT = "F_DOIT"  # FKEY entry doit
 F_DOMIDNIGHTWORK = "F_DOMIDNIGHTWORK"  # FKEY entry doMidnightWork
 F_DOSTARTUP = "F_DOSTARTUP"  # FKEY entry doStartup
 F_EASYUPDATE = "F_EASYUPDATE"  # load the whole thing from the file for easyUpdate
 F_EASYUPDATEPARMS = "F_EASYUPDATEPARMS"  # load the whole thing from the file for easyUpdate
-F_ENINT = "F_ENINT"  # read the frame and set self._RESULT_
-F_ENSTRING = "F_ENSTRING"  # read the frame and set self._RESULT_
+F_ENINT = "F_ENINT"  # convert any str in _DICTIN_ to int
+F_ENSTRING = "F_ENSTRING"  # update _DICTINSTR_ or return strings converted from integers in _DICTIN_
 F_FINDNEXTALARMEVENT = "F_FINDNEXTALARMEVENT"  # FKEY entry findNextAlarmEvent
 F_FIXTIMEATNEXT = "F_FIXTIMEATNEXT"  # FKEY entry fixTimeAtNext
 F_GETBBOX = "F_GETBBOX"  # FKEY entry getBBox
@@ -91,14 +91,16 @@ F_INTERVALCOUNTOFF = "F_INTERVALCOUNTOFF"  # turn interval count off
 F_INTERVALCOUNTON = "F_INTERVALCOUNTON"  # turn interval count on
 F_ISINBBOX = "F_ISINBBOX"  # FKEY entry isInBBox
 F_LOCALTIMES = "F_LOCALTIMES"  # FKEY entry localTimes
+F_MAKEINKEY = "F_MAKEINKEY"  # make a human key from a PSG key
+F_MAKEOUTKEY = "F_MAKEOUTKEY"  # make a key used in PSG from a human key
 F_OUTERLOOP = "F_OUTERLOOP"  # FKEY entry outerLoop
-F_QUICKREAD = "F_QUICKREAD"  # read the frame and set self._RESULT_
+F_QUICKREAD = "F_QUICKREAD"  # read the frame and set self._RESULT_ etc
 F_RUNAWAY = "F_RUNAWAY"  # define runaway
 F_SETCHECKBOX = "F_SETCHECKBOX"  # define setCheckbox
 F_SPLITBBOXTORAW = "F_SPLITBBOXTORAW"  # FKEY entry splitBBoxToRaw
 F_SPLITXYTORAW = "F_SPLITXYTORAW"  # FKEY entry splitXYToRaw
 F_UPDATE = "F_UPDATE"  # define the required update function
-F_UPDATEFLIPPEDITEMS = "F_UPDATEFLIPPEDITEMS"  # read the frame and set self._RESULT_
+F_UPDATEFLIPPEDITEMS = "F_UPDATEFLIPPEDITEMS"  # update items which may have multiple values
 F_UPDATEFROMDICT = "F_UPDATEFROMDICT"  # update the displayed info from a dict or the default _DICTIN_
 F_UPDATEINTERVAL = "F_UPDATEINTERVAL"  # FKEY entry updateInterval
 F_ZEROFLIPPED = "F_ZEROFLIPPED"  # update the displayed info from a dict or the default _DICTIN_
@@ -175,12 +177,13 @@ K_COLORS_TEXT_NORMAL = "K_COLORS_TEXT_NORMAL"  # combined colors for a clock tex
 K_COLORS_TIME_CLOCK = "K_COLORS_TIME_CLOCK"  # combined colors for a clock text element
 K_COLORS_TIME_ELAPSED = "K_COLORS_TIME_ELAPSED"  # combined colors for a clock text element
 K_COLORS_TIME_TOGO = "K_COLORS_TIME_TOGO"  # combined colors for a clock text element
-K_COLUMN01 = "K_COLUMN01"  # the column that puts the two smaller clocks below the main one
+K_COLUMN01A = "K_COLUMN01A"  # the column that puts the two smaller clocks below the main one
+K_COLUMN01B = "K_COLUMN01B"  # the column that puts the two smaller clocks above the main one
 K_COLUMN02 = "K_COLUMN02"  # the column that puts the two smaller clocks below the main one
 K_CURRENT_EVENT = "K_CURRENT_EVENT"  #
 K_CURRENT_EVENTMODE = "K_CURRENT_EVENTMODE"  #
 K_CURRENT_EVENTMODE_VAL = "K_CURRENT_EVENTMODE_VAL"  # comment
-K_CURRENT_FLIP_INDEX = "K_CURRENT_FLIP_INDEX"  #
+K_CURRENT_FLIP_INFO = "K_CURRENT_FLIP_INFO"  #
 K_CURRENT_INTERVAL_COUNT = "K_CURRENT_INTERVAL_COUNT"  # comment
 K_CURRENT_LOCATION = "K_CURRENT_LOCATION"  #
 K_CURRENT_MOUSE_LOCATION = "K_CURRENT_MOUSE_LOCATION"  #
@@ -223,7 +226,6 @@ K_LIST_ALL_TIMES = "K_LIST_ALL_TIMES"  # list of all times
 K_LIST_APPDS_MIDNIGHT_FIX_TIMES = "K_LIST_APPDS_MIDNIGHT_FIX_TIMES"  # list of times to be updated at midnight
 K_LIST_CLOSE = "K_LIST_CLOSE"  # list with close statuses
 K_LIST_DNUPDATE = "K_LIST_DNUPDATE"  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
-K_LIST_FLIP_INFO = "K_LIST_FLIP_INFO"  # the interval count and name list tup(K_CURRENT_INTERVAL_COUNT, K_NAME_NEXT_EVENT)
 K_LIST_KEYS_TIME = "K_LIST_KEYS_TIME"  #
 K_LIST_POPUP = "K_LIST_POPUP"  # popup list
 K_LIST_THIS_ALARM_POPUP_TEXT = "K_LIST_THIS_ALARM_POPUP_TEXT"  # collects the text to popup
@@ -268,7 +270,7 @@ K_SZ_PAD_ALL = "K_SZ_PAD_ALL"  # add padding to all the things
 K_SZ_PKLNAME_DEV = "K_SZ_PKLNAME_DEV"  # name of the pkl file for the app in dev
 K_SZ_PKLNAME_PROD = "K_SZ_PKLNAME_PROD"  # name of the pkl file for the app in use
 K_SZ_RUNAWAY = "K_SZ_RUNAWAY"  # default runaway state
-K_SZ_TIME_MS_BETWEEN_FLIPS = "K_SZ_TIME_MS_BETWEEN_FLIPS"  # throttle mouse checking
+K_SZ_TIME_MS_BETWEEN_FLIPS = "K_SZ_TIME_MS_BETWEEN_FLIPS"  # throttle flips
 K_SZ_TIME_MS_BETWEEN_MOUSE_CHECKS = "K_SZ_TIME_MS_BETWEEN_MOUSE_CHECKS"  # throttle mouse checking
 K_SZ_TIME_MS_BETWEEN_MOVES = "K_SZ_TIME_MS_BETWEEN_MOVES"  # time_ms between moves
 K_SZ_TIME_MS_BETWEEN_UPDATES = "K_SZ_TIME_MS_BETWEEN_UPDATES"  # time_ms between updating windows/frames/etc
@@ -349,11 +351,11 @@ SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_PKLNAME_DEV = "runawayClock_DEV.pkl"  # name of the pkl file for the app in dev
 SZ_PKLNAME_PROD = "runawayClock.pkl"  # name of the pkl file for the app in use
 SZ_RUNAWAY = False  # default runaway state
-SZ_TIME_MS_BETWEEN_FLIPS = 300  # throttle mouse checking
+SZ_TIME_MS_BETWEEN_FLIPS = 400  # throttle flips
 SZ_TIME_MS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
-SZ_TIME_MS_BETWEEN_MOVES = 500  # time_ms between moves
-SZ_TIME_MS_BETWEEN_UPDATES = 500  # time_ms between updating windows/frames/etc
-SZ_TIME_S_BETWEEN_PERIODIC_JOB = 900  # time between periodic job runnings
+SZ_TIME_MS_BETWEEN_MOVES = 200  # time_ms between moves
+SZ_TIME_MS_BETWEEN_UPDATES = 100  # time_ms between updating windows/frames/etc
+SZ_TIME_S_BETWEEN_PERIODIC_JOB = 5000  # time between periodic job runnings
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 TIME_H_ADJUST_HRS = 0  # comment
 TIME_M_ADJUST_MINS = 0  # comment
@@ -1613,12 +1615,12 @@ def doEvent():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_eventIndexList_ = APPDS_MAIN[K_INDEX_OF_NEXT_EVENT]
 	_event_ = CF.quickCopyDict(APPDS_MAIN[K_EVENT_ENTRIES][_eventIndexList_])
+	DICT_ALL_THE_FORMS[FORM_CLOCKS].zeroFlipped()
 
-		# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	if (_event_[K_EVENTMODE] == EVENTMODE_INTERVAL):
-		APPDS_MAIN[K_EVENT_ENTRIES][_eventIndexList_][K_CURRENT_INTERVAL_COUNT] += 1
-	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
-
+#		# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+#	if (_event_[K_EVENTMODE] == EVENTMODE_INTERVAL):
+#		APPDS_MAIN[K_EVENT_ENTRIES][_eventIndexList_][K_CURRENT_INTERVAL_COUNT] += 1
+#	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	for _index_, _values_ in APPDS_MAIN[K_EVENT_ENTRIES].items():
 			# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
