@@ -542,7 +542,7 @@ TBGLST = [
 	(("PSGVAL_LIST_CLOSE01", FM.FMAXPSG_SCTN0903_LIST_VAL_ADD, "LIST_CLOSE", "MOUSE_STATUS_CLOSE_SW", "easet close entry",), __ID__),
 	(("PSGVAL_LIST_CLOSE01", FM.FMAXPSG_SCTN0903_LIST_VAL_ADD, "LIST_CLOSE", "MOUSE_STATUS_CLOSE_W", "easet close entry",), __ID__),
 	(("PSGVAL_LIST_DNUPDATE00", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_DNUPDATE", "list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)",), __ID__),
-	(("PSGVAL_LIST_DNUPDATE01", FM.FMAXPSG_SCTN0903_LIST_VAL_ADD, "LIST_DNUPDATE", "K_LIST_FLIP_INFO", "deal with the list of names for the event(s) to come",), __ID__),
+	(("PSGVAL_LIST_DNUPDATE01", FM.FMAX_NOP, "FMAXPSG_SCTN0903_LIST_VAL_ADD", "LIST_DNUPDATE", "K_LIST_FLIP_INFO", "deal with the list of names for the event(s) to come",), __ID__),
 	(("PSGVAL_LIST_THIS_ALARM_POPUP_TEXT00", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_THIS_ALARM_POPUP_TEXT", "collects the text to popup",), __ID__),
 	(("PSGVAL_LIST_THIS_ALARM_POPUP_TEXT01", FM.FMAXPSG_SCTN0903_LIST_STR_ADD, "LIST_THIS_ALARM_POPUP_TEXT", "One or more events has alerted at %NOWS%", "collects the text to popup",), __ID__),
 	(("PSGVAL_SZ_ALERT_TEXT", FM.FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALERT_TEXT", "20", "font size of alert text",), __ID__),

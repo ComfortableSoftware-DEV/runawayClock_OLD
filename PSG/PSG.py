@@ -599,7 +599,6 @@ LIST_CLOSE = [  # list with close statuses
 
 
 LIST_DNUPDATE = [  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
-	K_LIST_FLIP_INFO,  # deal with the list of names for the event(s) to come
 	K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
 	K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
 	K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
