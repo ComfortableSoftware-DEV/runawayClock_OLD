@@ -164,7 +164,7 @@ TBGLST = [
 	(("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATE", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "CLOCKS/easyUpdate.py", "False", "load the whole thing from the file for easyUpdate",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATEPARMS", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdateParms", "easyUpdateParms.py", "False", "load the whole thing from the file for easyUpdate",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_ENINT", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enint", "enint.py", "False", "convert any str in _DICTIN_ to int",), __ID__),
-	(("PSGVAL__CLOCKS_FUNC_03_ENSTRING", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enstring", "enstring.py", "True", "update _DICTINSTR_ or return strings converted from integers in _DICTIN_",), __ID__),
+	(("PSGVAL__CLOCKS_FUNC_03_ENSTRING", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enstring", "enstring.py", "False", "update _DICTINSTR_ or return strings converted from integers in _DICTIN_",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTOFF", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOff", "intervalCountOff.py", "False", "turn interval count off",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTON", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOn", "intervalCountOn.py", "False", "turn interval count on",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_MAKEINKEY", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "makeInKey", "makeInKey.py", "False", "make a human key from a PSG key",), __ID__),

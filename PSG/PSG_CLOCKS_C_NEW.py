@@ -115,7 +115,7 @@ class CLOCKS_C(object):
 			PSG.F_EASYUPDATE: False,  # load the whole thing from the file for easyUpdate
 			PSG.F_EASYUPDATEPARMS: False,  # load the whole thing from the file for easyUpdate
 			PSG.F_ENINT: False,  # convert any str in _DICTIN_ to int
-			PSG.F_ENSTRING: True,  # update _DICTINSTR_ or return strings converted from integers in _DICTIN_
+			PSG.F_ENSTRING: False,  # update _DICTINSTR_ or return strings converted from integers in _DICTIN_
 			PSG.F_INTERVALCOUNTOFF: False,  # turn interval count off
 			PSG.F_INTERVALCOUNTON: False,  # turn interval count on
 			PSG.F_MAKEINKEY: False,  # make a human key from a PSG key
