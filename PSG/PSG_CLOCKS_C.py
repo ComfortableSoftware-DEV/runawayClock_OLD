@@ -48,7 +48,6 @@ class CLOCKS_C(object):
 		self._CURRENT_MOUSE_LOCATION_ = PSG.EMPTY_XY  # 
 		self._CURRENT_MOUSE_STATUS_ = PSG.MOUSE_STATUS_NONE  # 
 		self._CURRENT_VALUES_ = {}  # 
-		self._LAYOUT_ = self._LAYOUTB_  # set the default layout option
 		self._MAINFRAME_ = None  # 
 		self._MPX_ = PSG.EMPTY_XY  # comment
 		self._SCREEN_DIMS_ = PSG.EMPTY_XY  # 
@@ -312,7 +311,7 @@ class CLOCKS_C(object):
 		]
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-		_COLUMN01_ = self._COLUMN01B_  # define the selector for COLUMNM01A/B
+		self._COLUMN01_ = self._COLUMN01B_  # define the selector for COLUMNM01A/B
 
 		self._LAYOUT_ = [  # layout for APPMODE_CLOCKS
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3

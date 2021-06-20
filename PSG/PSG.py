@@ -222,7 +222,6 @@ K_INDEX_Y = "K_INDEX_Y"  # Y
 K_IS_ALERTING_NOW = "K_IS_ALERTING_NOW"  # count of number of times this has alerted since last reset
 K_K_ALARMPOPUP_TEXT_TEXT = "K_K_ALARMPOPUP_TEXT_TEXT"  # alarm text for this event
 K_K_EVENT_NAME = "K_K_EVENT_NAME"  # this entry's name
-K_LAYOUT = "K_LAYOUT"  # set the default layout option
 K_LIST_ALL_TIMES = "K_LIST_ALL_TIMES"  # list of all times
 K_LIST_APPDS_MIDNIGHT_FIX_TIMES = "K_LIST_APPDS_MIDNIGHT_FIX_TIMES"  # list of times to be updated at midnight
 K_LIST_CLOSE = "K_LIST_CLOSE"  # list with close statuses
