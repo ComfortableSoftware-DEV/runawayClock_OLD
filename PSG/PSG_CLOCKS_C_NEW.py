@@ -48,6 +48,7 @@ class CLOCKS_C(object):
 		self._CURRENT_MOUSE_LOCATION_ = PSG.EMPTY_XY  # 
 		self._CURRENT_MOUSE_STATUS_ = PSG.MOUSE_STATUS_NONE  # 
 		self._CURRENT_VALUES_ = {}  # 
+		self._LAYOUT_ = self._LAYOUTB_  # set the default layout option
 		self._MAINFRAME_ = None  # 
 		self._MPX_ = PSG.EMPTY_XY  # comment
 		self._SCREEN_DIMS_ = PSG.EMPTY_XY  # 
@@ -115,11 +116,11 @@ class CLOCKS_C(object):
 			PSG.F_EASYUPDATE: False,  # load the whole thing from the file for easyUpdate
 			PSG.F_EASYUPDATEPARMS: False,  # load the whole thing from the file for easyUpdate
 			PSG.F_ENINT: False,  # convert any str in _DICTIN_ to int
-			PSG.F_ENSTRING: False,  # update _DICTINSTR_ or return strings converted from integers in _DICTIN_
+			PSG.F_ENSTRING: True,  # update _DICTINSTR_ or return strings converted from integers in _DICTIN_
 			PSG.F_INTERVALCOUNTOFF: False,  # turn interval count off
 			PSG.F_INTERVALCOUNTON: False,  # turn interval count on
-			PSG.F_MAKEINKEY: True,  # make a human key from a PSG key
-			PSG.F_MAKEOUTKEY: True,  # make a key used in PSG from a human key
+			PSG.F_MAKEINKEY: False,  # make a human key from a PSG key
+			PSG.F_MAKEOUTKEY: False,  # make a key used in PSG from a human key
 			PSG.F_QUICKREAD: False,  # read the frame and set self._RESULT_ etc
 			PSG.F_RUNAWAY: False,  # define runaway
 			PSG.F_SETCHECKBOX: False,  # define setCheckbox
@@ -208,7 +209,7 @@ class CLOCKS_C(object):
 		self._DICT_KEYS_[PSG.K_TIME_S_TOGO] = self._USE_THIS_KEY_(PSG.K_TIME_S_TOGO)
 		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_TIME_S_TOGO)] = PSG.K_TIME_S_TOGO
 
-		self._COLUMN01_ = [  # the column that puts the two smaller clocks below the main one
+		self._COLUMN01A_ = [  # the column that puts the two smaller clocks below the main one
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
 				SG.Text(  # add a new TEXT element to clocks column
@@ -247,6 +248,45 @@ class CLOCKS_C(object):
 		]
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
+		self._COLUMN01B_ = [  # the column that puts the two smaller clocks below the main one
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			[
+				SG.Text(  # add a new row to clocks column
+					**self._TEXT_TIME_S_AT_ZEROELAPSE_  # add time to go
+				),
+				SG.Text(  # add a new text element to row01 clocks column
+					**self._TEXT_TIME_S_ELAPSED_  # add elapsed time
+				),
+			],
+			[
+				SG.Text(  # add a new text element to row01 clocks column
+					**self._TEXT_TIME_S_TOGO_  # add elapsed time
+				),
+				SG.Text(  # add a new row to clocks column
+					**self._TEXT_TIME_S_AT_NEXT_ALERT_  # add time to go
+				),
+			],
+			[
+				SG.Text(  # add a new text element to row01 clocks column
+					**self._TEXT_NAME_NEXT_EVENT_  # add the main clock
+				),
+			],
+			[
+				SG.Checkbox(  # add a new text element to row01 clocks column
+					**PSG.CHECKBOX_RUNAWAY01  # add elapsed time
+				),
+				SG.Checkbox(  # add a new text element to row01 clocks column
+					**PSG.CHECKBOX_ALPHA_DIM01  # add elapsed time
+				),
+			],
+			[
+				SG.Text(  # add a new TEXT element to clocks column
+					**self._TEXT_TIME_S_CLOCK_  # add the main clock
+				),
+			],
+		]
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
 		self._COLUMN02_ = [  # the column that puts the two smaller clocks below the main one
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
@@ -272,11 +312,26 @@ class CLOCKS_C(object):
 		]
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 
-		self._LAYOUT_ = [  # layout for APPMODE_CLOCKS
+		self._LAYOUTA_ = [  # layout for APPMODE_CLOCKS
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
 				SG.Column(  # add a column
-					layout=self._COLUMN01_,  # comment
+					layout=self._COLUMN01A_,  # comment
+					pad=PSG.SZ_PAD_ALL,  # comment
+				),
+				SG.Column(  # add a column
+					layout=self._COLUMN02_,  # comment
+					pad=PSG.SZ_PAD_ALL,  # comment
+				),
+			],
+		]
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
+
+		self._LAYOUTB_ = [  # layout for APPMODE_CLOCKS
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
+			[
+				SG.Column(  # add a column
+					layout=self._COLUMN01B_,  # comment
 					pad=PSG.SZ_PAD_ALL,  # comment
 				),
 				SG.Column(  # add a column
