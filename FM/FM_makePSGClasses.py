@@ -16,7 +16,6 @@ def makePSGClasses():
 		with open(f"""{FM.NAME_LCL_SELF_CLASS_NEW_PY(__CLASS__=_thisClassName_, __MODULE_NAME__="PSG",)}""", "tw") as _FDmakePSGClasses_:
 			_FDmakePSGClasses_.write(f"""{FM.NEWLINE}{FM.makeAWideComment(f"start of {_thisClassName_}")}
 from CF import CF
-from FM import FM
 from PSG import PSG
 import PySimpleGUI as SG
 {FM.NEWLINE}{FM.NEWLINE}class {_thisClassName_}_C{FM.OPAREN}object{FM.CPAREN}:
