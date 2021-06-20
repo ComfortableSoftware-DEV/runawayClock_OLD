@@ -38,13 +38,13 @@
 					for _thisKey1_, _thisVal1_ in _thisItem0_.items():
 							# 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥ 6⥥
 						if (_thisKey1_ in self._DICT_KEYS_TIME_):
-							_dictToAdd_[self._DICT_KEYS_[_thisKey1_]] = CF.nrmlIntToHMS(_thisVal1_)
+							_dictToAdd_[self.makeOutKey(_thisKey1_)] = CF.nrmlIntToHMS(_thisVal1_)
 							# ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥
 						elif (_thisKey1_ in self._DICT_KEYS_INT_):
-							_dictToAdd_[self._DICT_KEYS_[_thisKey1_]] = f"""{_thisVal1_:{self._DICT_KEYS_INT_[_thisKey1_]}}"""
+							_dictToAdd_[self.makeOutKey(_thisKey1_)] = f"""{_thisVal1_:{self._DICT_KEYS_INT_[_thisKey1_]}}"""
 							# ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥
 						else:
-							_dictToAdd_[self._DICT_KEYS_[_thisKey1_]] = _thisVal1_
+							_dictToAdd_[self.makeOutKey(_thisKey1_)] = _thisVal1_
 						# ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6 ⥣6
 					# ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5 ⥣5
 					_dictToRtn_[_thisKey0_].append(_dictToAdd_)
@@ -55,13 +55,13 @@
 				# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 					# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
 				if (_thisKey0_ in self._DICT_KEYS_TIME_):
-					_dictToRtn_[self._DICT_KEYS_[_thisKey0_]] = CF.nrmlIntToHMS(_thisVal0_)
+					_dictToRtn_[self.makeOutKey(_thisKey0_)] = CF.nrmlIntToHMS(_thisVal0_)
 					# ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥
 				elif (_thisKey0_ in self._DICT_KEYS_INT_):
-					_dictToRtn_[self._DICT_KEYS_[_thisKey0_]] = f"""{_thisVal0_:{self._DICT_KEYS_INT_[_thisKey0_]}}"""
+					_dictToRtn_[self.makeOutKey(_thisKey0_)] = f"""{_thisVal0_:{self._DICT_KEYS_INT_[_thisKey0_]}}"""
 					# ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥ ⥣6⥥
 				else:
-					_dictToRtn_[self._DICT_KEYS_[_thisKey0_]] = _thisVal0_
+					_dictToRtn_[self.makeOutKey(_thisKey0_)] = _thisVal0_
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
