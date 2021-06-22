@@ -93,6 +93,7 @@ F_ISINBBOX = "F_ISINBBOX"  # FKEY entry isInBBox
 F_LOCALTIMES = "F_LOCALTIMES"  # FKEY entry localTimes
 F_MAKEINKEY = "F_MAKEINKEY"  # make a human key from a PSG key
 F_MAKEOUTKEY = "F_MAKEOUTKEY"  # make a key used in PSG from a human key
+F_MIDNIGHT = "F_MIDNIGHT"  # make a key used in PSG from a human key
 F_OUTERLOOP = "F_OUTERLOOP"  # FKEY entry outerLoop
 F_QUICKREAD = "F_QUICKREAD"  # read the frame and set self._RESULT_ etc
 F_RUNAWAY = "F_RUNAWAY"  # define runaway

@@ -171,6 +171,7 @@ TBGLST = [
 	(("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTON", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOn", "intervalCountOn.py", "False", "turn interval count on",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_MAKEINKEY", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "makeInKey", "makeInKey.py", "False", "make a human key from a PSG key",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_MAKEOUTKEY", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "makeOutKey", "makeOutKey.py", "False", "make a key used in PSG from a human key",), __ID__),
+	(("PSGVAL__CLOCKS_FUNC_03_MIDNIGHT", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "midnight", "midnight.py", "False", "make a key used in PSG from a human key",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_QUICK_READ", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "quickRead", "quickRead.py", "False", "read the frame and set self._RESULT_ etc",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_RUNAWAY", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "False", "define runaway",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_SETCHECKBOX", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "setCheckbox", "setCheckbox.py", "False", "define setCheckbox",), __ID__),
