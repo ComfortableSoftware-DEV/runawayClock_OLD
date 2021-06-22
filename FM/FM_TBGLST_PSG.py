@@ -3,22 +3,26 @@
 from FM import FM
 
 
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of FM TBGLST PSG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
 _moduleName_ = "FM"
 _sub0_ = "TBGLST"
 _sub1_ = "PSG"
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
 _filename_ = f"""{FM.NAME_LCL_SELF_SUB1_PY(
 	__MODULE_NAME__=_moduleName_,
 	__SUB0__=_sub0_,
 	__SUB1__=_sub1_,
 )}"""  # FM/FM_TBGLST_PSG.py
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
 _newFilename_ = f"""{FM.NAME_LCL_SELF_SUB1_NEW_PY(
 	__MODULE_NAME__=_moduleName_,
 	__SUB0__=_sub0_,
 	__SUB1__=_sub1_,
 )}"""  # FM/FM_TBGLST_PSG_NEW.py
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
 __ID__ = (
 	("__FILENAME__", _filename_,),  # FM/FM_TBGLST_PSG.py
 	("__MODULE_NAME__", _moduleName_,),  # FM
@@ -26,7 +30,7 @@ __ID__ = (
 	("__SUB0__", _sub0_,),  # TBGLST
 	("__SUB1__", _sub1_,),  # PSG
 )
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
 TBGLST = [
 	(("FMAXPSG_SCTN0900_KEY_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py",), __ID__),
 	(("FMAXPSG_SCTN0900_STR_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>",), __ID__),
@@ -542,7 +546,7 @@ TBGLST = [
 	(("PSGVAL_LIST_CLOSE01", FM.FMAXPSG_SCTN0903_LIST_VAL_ADD, "LIST_CLOSE", "MOUSE_STATUS_CLOSE_SW", "easet close entry",), __ID__),
 	(("PSGVAL_LIST_CLOSE01", FM.FMAXPSG_SCTN0903_LIST_VAL_ADD, "LIST_CLOSE", "MOUSE_STATUS_CLOSE_W", "easet close entry",), __ID__),
 	(("PSGVAL_LIST_DNUPDATE00", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_DNUPDATE", "list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)",), __ID__),
-	(("PSGVAL_LIST_DNUPDATE01", FM.FMAX_NOP, FM.FMAXPSG_SCTN0903_LIST_VAL_ADD, "LIST_DNUPDATE", "K_LIST_FLIP_INFO", "deal with the list of names for the event(s) to come",), __ID__),
+	(("PSGVAL_LIST_DNUPDATE01", FM.FMAX_NOP, "FMAXPSG_SCTN0903_LIST_VAL_ADD", "LIST_DNUPDATE", "K_LIST_FLIP_INFO", "deal with the list of names for the event(s) to come",), __ID__),
 	(("PSGVAL_LIST_THIS_ALARM_POPUP_TEXT00", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_THIS_ALARM_POPUP_TEXT", "collects the text to popup",), __ID__),
 	(("PSGVAL_LIST_THIS_ALARM_POPUP_TEXT01", FM.FMAXPSG_SCTN0903_LIST_STR_ADD, "LIST_THIS_ALARM_POPUP_TEXT", "One or more events has alerted at %NOWS%", "collects the text to popup",), __ID__),
 	(("PSGVAL_SZ_ALERT_TEXT", FM.FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALERT_TEXT", "20", "font size of alert text",), __ID__),
