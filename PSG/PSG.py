@@ -359,7 +359,7 @@ SZ_TIME_MS_BETWEEN_UPDATES = 100  # time_ms between updating windows/frames/etc
 SZ_TIME_S_BETWEEN_PERIODIC_JOB = 5000  # time between periodic job runnings
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 TIME_H_ADJUST_HRS = 4  # comment
-TIME_M_ADJUST_MINS = 2  # comment
+TIME_M_ADJUST_MINS = 7  # comment
 TITLE_ALARMPOPUP = "ALERT"  # string with window title for APPMODE_CLOCKS
 TITLE_CLOCKS = "CLOCKS"  # string with window title for APPMODE_CLOCKS
 TITLE_EDIT = "edit an event"  # string with window title for APPMODE_CLOCKS
@@ -1884,18 +1884,9 @@ def doit():
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# end of PSG_TIME.py
+# end of PSG.py
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
-"""
-edit:
-	radio: EVENTMODE
-	add new events
-	delete this event
-	TIME_s
-CLOCKS_FORMMAIN.__dict__["TKroot"].__str__
-CLOCKS_FORMMAIN[K_TIME_S_CLOCK].DisplayText
-CLOCKS_FORMMAIN.Move(10, 10)
 
-"""
+#
