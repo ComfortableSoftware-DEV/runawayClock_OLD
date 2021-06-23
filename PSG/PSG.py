@@ -207,6 +207,7 @@ K_ENABLED = "K_ENABLED"  # is this event enabled
 K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  #
 K_EVENT_NAME = "K_EVENT_NAME"  # name of the event
 K_EVENTMODE = "K_EVENTMODE"  # this entry's event_mode
+K_EXITING = "K_EXITING"  # this class is currently being exited bool
 K_FIRSTRUN = "K_FIRSTRUN"  # are we initializing or not
 K_FONT_DEFAULT = "K_FONT_DEFAULT"  # default font my favorite readable font
 K_FONTSZ_ALERT_TEXT = "K_FONTSZ_ALERT_TEXT"  # the font for the clocks only clock
