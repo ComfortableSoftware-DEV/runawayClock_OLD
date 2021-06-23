@@ -50,7 +50,7 @@ self._CURRENT_MOUSE_LOCATION_ {self._CURRENT_MOUSE_LOCATION_}, self._CURRENT_MOU
 		if (
 				(self._CHANGED_VALUES_ is True) or
 					((self._CHANGED_EVENT_ is True) and
-					(self._CURRENT_EVENT_ != __TIMEOUT__))
+					(self._CURRENT_EVENT_ != PSG.__TIMEOUT__))
 		):
 			return (self._CURRENT_EVENT_, self.makeINKey(self._CURRENT_VALUES_))
 		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
