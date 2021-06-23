@@ -3,25 +3,29 @@
 from FM import FM
 
 
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of FM TBGLST PSG CLOCKS
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
 _class_ = "CLOCKS"
 _moduleName_ = "FM"
 _sub0_ = "TBGLST"
 _sub1_ = "PSG"
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥  
 _filename_ = f"""{FM.NAME_LCL_SELF_SUB1_CLASS_PY(
 	__CLASS__=_class_,
 	__MODULE_NAME__=_moduleName_,
 	__SUB0__=_sub0_,
 	__SUB1__=_sub1_,
 )}"""  # FM/FM_TBGLST_PSG_CLOCKS_C.py
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥  
 _newFilename_ = f"""{FM.NAME_LCL_SELF_SUB1_CLASS_NEW_PY(
 	__CLASS__=_class_,
 	__MODULE_NAME__=_moduleName_,
 	__SUB0__=_sub0_,
 	__SUB1__=_sub1_,
 )}"""  # FM/FM_TBGLST_PSG_CLOCKS_C_NEW.py
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥  
 __ID__ = (
 	("__CLASS__", _class_,),  # CLOCKS
 	("__FILENAME__", _filename_,),  # FM/FM_TBGLST_PSG_CLOCKS_C.py
@@ -30,8 +34,7 @@ __ID__ = (
 	("__SUB0__", _sub0_,),  # TBGLST
 	("__SUB1__", _sub1_,),  # PSG
 )
-
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥  
 TBGLST = [
 	(("PSGVAL__CLOCKS", FM.FMAXPSG_SCTN09FF_CLASS_DEF, "CLOCKS", "define clocks class",), __ID__),
 	(("PSGVAL__CLOCKS_COLUMN01", FM.FMAXPSG_SCTN09FF_CLASS_GROUP_SELECT, "CLOCKS", "_COLUMN01_", "self._COLUMN01B_", "define the selector for COLUMNM01A/B",), __ID__),
@@ -132,6 +135,7 @@ TBGLST = [
 	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_CURRENT_MOUSE_LOCATION_", "PSG.EMPTY_XY", "",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_CURRENT_MOUSE_STATUS_", "PSG.MOUSE_STATUS_NONE", "",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_CURRENT_VALUES_", "{}", "",), __ID__),
+	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_EXITING_", "False", "this class is currently being exited bool",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_MAINFRAME_", "None", "",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_MPX_", "PSG.EMPTY_XY", "comment",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_SCREEN_DIMS_", "PSG.EMPTY_XY", "",), __ID__),
@@ -140,7 +144,7 @@ TBGLST = [
 	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_TIME_MS_AT_FLIP_", "PSG.ZERO_CLOCK", "",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_TIME_MS_AT_MOVE_", "PSG.ZERO_CLOCK", "",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_TIME_MS_AT_UPDATE_", "PSG.ZERO_CLOCK", "",), __ID__),
-	(("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV, "CLOCKS", "K_CHECKBOX_ALPHA_DIM", "False", "False", "value of the alphas dim checkbox",), __ID__),
+	(("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV, "CLOCKS", "K_CHECKBOX_ALPHA_DIM", "True", "False", "value of the alphas dim checkbox",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV, "CLOCKS", "K_CHECKBOX_RUNAWAY", "False", "False", "value of runaway checkbox",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV, "CLOCKS", "K_TIME_S_AT_NEXT_ALERT", "PSG.ZERO_CLOCK", "True", "time at next event",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT02_DICTIN01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV, "CLOCKS", "K_TIME_S_AT_ZEROELAPSE", "PSG.ZERO_CLOCK", "True", "time at last zero of elapsed timer",), __ID__),
@@ -164,14 +168,17 @@ TBGLST = [
 	(("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATEPARMS", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdateParms", "easyUpdateParms.py", "False", "load the whole thing from the file for easyUpdate",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_ENINT", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enint", "enint.py", "False", "convert any str in _DICTIN_ to int",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_ENSTRING", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enstring", "enstring.py", "False", "update _DICTINSTR_ or return strings converted from integers in _DICTIN_",), __ID__),
+	(("PSGVAL__CLOCKS_FUNC_03_HANDLEEVENTS", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "handleEvents", "handleEvents.py", "False", "turn interval count off",), __ID__),
+	(("PSGVAL__CLOCKS_FUNC_03_HANDLEVALUES", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "handleValues", "handleValues.py", "False", "turn interval count off",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTOFF", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOff", "intervalCountOff.py", "False", "turn interval count off",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTON", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOn", "intervalCountOn.py", "False", "turn interval count on",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_MAKEINKEY", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "makeInKey", "makeInKey.py", "False", "make a human key from a PSG key",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_MAKEOUTKEY", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "makeOutKey", "makeOutKey.py", "False", "make a key used in PSG from a human key",), __ID__),
+	(("PSGVAL__CLOCKS_FUNC_03_MIDNIGHT", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "midnight", "midnight.py", "False", "make a key used in PSG from a human key",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_QUICK_READ", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "quickRead", "quickRead.py", "False", "read the frame and set self._RESULT_ etc",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_RUNAWAY", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "False", "define runaway",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_SETCHECKBOX", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "setCheckbox", "setCheckbox.py", "False", "define setCheckbox",), __ID__),
-	(("PSGVAL__CLOCKS_FUNC_03_UPDATE_FLIPPED_ITEMS", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFlippedItems", "updateFlippedItems.py", "True", "update items which may have multiple values",), __ID__),
+	(("PSGVAL__CLOCKS_FUNC_03_UPDATE_FLIPPED_ITEMS", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFlippedItems", "updateFlippedItems.py", "False", "update items which may have multiple values",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_UPDATE_FROM_DICT", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFromDict", "updateFromDict.py", "False", "update the displayed info from a dict or the default _DICTIN_",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_03_ZERO_FLIPPED", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "zeroFlipped", "zeroFlipped.py", "False", "update the displayed info from a dict or the default _DICTIN_",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_FF_UPDATE", FM.FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE, "CLOCKS", "update", "CLOCKS/update.py", "False", "define the required update function",), __ID__),
@@ -187,6 +194,9 @@ TBGLST = [
 	(("PSGVAL__CLOCKS_LIST_FLIPPABLE_KEYS00", FM.FMAXPSG_SCTN09FF_CLASS_LIST_DEF, "CLOCKS", "_LIST_FLIPPABLE_KEYS_", "list of the items that can be str|list[str, str, ..]",), __ID__),
 	(("PSGVAL__CLOCKS_LIST_FLIPPABLE_KEYS01", FM.FMAXPSG_SCTN09FF_CLASS_LIST_VAL_ADD, "CLOCKS", "_LIST_FLIPPABLE_KEYS_", "PSG.K_TEXT_CURRENT_INTERVAL_COUNT", "list of the items that can be str|list[str, str, ..]",), __ID__),
 	(("PSGVAL__CLOCKS_LIST_FLIPPABLE_KEYS01", FM.FMAXPSG_SCTN09FF_CLASS_LIST_VAL_ADD, "CLOCKS", "_LIST_FLIPPABLE_KEYS_", "PSG.K_TEXT_NAME_NEXT_EVENT", "list of the items that can be str|list[str, str, ..]",), __ID__),
+	(("PSGVAL__CLOCKS_LIST_MUST_UPDATE00", FM.FMAXPSG_SCTN09FF_CLASS_LIST_DEF, "CLOCKS", "_LIST_MUST_UPDATE_", "list of values that need to be sent through easyUpdate",), __ID__),
+	(("PSGVAL__CLOCKS_LIST_MUST_UPDATE01", FM.FMAXPSG_SCTN09FF_CLASS_LIST_VAL_ADD, "CLOCKS", "_LIST_MUST_UPDATE_", "PSG.K_CHECKBOX_ALPHA_DIM", "use easyUpdate to change K_CHECKBOX_ALPHA_DIM",), __ID__),
+	(("PSGVAL__CLOCKS_LIST_MUST_UPDATE01", FM.FMAXPSG_SCTN09FF_CLASS_LIST_VAL_ADD, "CLOCKS", "_LIST_MUST_UPDATE_", "PSG.K_CHECKBOX_RUNAWAY", "use easyUpdate to change K_CHECKBOX_RUNAWAY",), __ID__),
 	(("PSGVAL__CLOCKS_RCMENU01", FM.FMAXPSG_SCTN09FF_CLASS_RCMENU_DEF, "CLOCKS", "_RCMENU01_", "right click to do the things",), __ID__),
 	(("PSGVAL__CLOCKS_RCMENU0101", FM.FMAXPSG_SCTN09FF_CLASS_RCMENU_VAL_ADD, "CLOCKS", "_RCMENU01_", "PSG.K_BTN_QUIT_ALL", "quit by right click",), __ID__),
 	(("PSGVAL__CLOCKS_RCMENU0101", FM.FMAXPSG_SCTN09FF_CLASS_RCMENU_VAL_ADD, "CLOCKS", "_RCMENU01_", "PSG.K_BTN_XPAND", "quit by right click",), __ID__),

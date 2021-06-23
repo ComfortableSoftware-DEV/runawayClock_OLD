@@ -36,6 +36,7 @@ gc.enable()
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0900 DEF1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+__TIMEOUT__ = "__TIMEOUT__"  # default timeout key
 APPMODE_CLOCKS = "APPMODE_CLOCKS"  # mode clocks only
 APPMODE_EDIT = "APPMODE_EDIT"  # edit mode on top of main window
 APPMODE_MAIN = "APPMODE_MAIN"  # main mode (xpand from clocks to this)
@@ -86,6 +87,8 @@ F_FIXTIMEATNEXT = "F_FIXTIMEATNEXT"  # FKEY entry fixTimeAtNext
 F_GETBBOX = "F_GETBBOX"  # FKEY entry getBBox
 F_GETCLOSEBBOX = "F_GETCLOSEBBOX"  # FKEY entry getCloseBBox
 F_GETMOUSEPOS = "F_GETMOUSEPOS"  # FKEY entry getMousePos
+F_HANDLEEVENTS = "F_HANDLEEVENTS"  # turn interval count off
+F_HANDLEVALUES = "F_HANDLEVALUES"  # turn interval count off
 F_INNERLOOP = "F_INNERLOOP"  # FKEY entry doit
 F_INTERVALCOUNTOFF = "F_INTERVALCOUNTOFF"  # turn interval count off
 F_INTERVALCOUNTON = "F_INTERVALCOUNTON"  # turn interval count on
@@ -93,6 +96,7 @@ F_ISINBBOX = "F_ISINBBOX"  # FKEY entry isInBBox
 F_LOCALTIMES = "F_LOCALTIMES"  # FKEY entry localTimes
 F_MAKEINKEY = "F_MAKEINKEY"  # make a human key from a PSG key
 F_MAKEOUTKEY = "F_MAKEOUTKEY"  # make a key used in PSG from a human key
+F_MIDNIGHT = "F_MIDNIGHT"  # make a key used in PSG from a human key
 F_OUTERLOOP = "F_OUTERLOOP"  # FKEY entry outerLoop
 F_QUICKREAD = "F_QUICKREAD"  # read the frame and set self._RESULT_ etc
 F_RUNAWAY = "F_RUNAWAY"  # define runaway
@@ -203,6 +207,7 @@ K_ENABLED = "K_ENABLED"  # is this event enabled
 K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  # 
 K_EVENT_NAME = "K_EVENT_NAME"  # name of the event
 K_EVENTMODE = "K_EVENTMODE"  # this entry's event_mode
+K_EXITING = "K_EXITING"  # this class is currently being exited bool
 K_FIRSTRUN = "K_FIRSTRUN"  # are we initializing or not
 K_FONT_DEFAULT = "K_FONT_DEFAULT"  # default font my favorite readable font
 K_FONTSZ_ALERT_TEXT = "K_FONTSZ_ALERT_TEXT"  # the font for the clocks only clock
@@ -599,7 +604,6 @@ LIST_CLOSE = [  # list with close statuses
 
 
 LIST_DNUPDATE = [  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
-	K_LIST_FLIP_INFO,  # deal with the list of names for the event(s) to come
 	K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
 	K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
 	K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
@@ -1115,7 +1119,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "0000000C",  # version number hex string
+	K_VERSION: "0000000D",  # version number hex string
 }
 
 

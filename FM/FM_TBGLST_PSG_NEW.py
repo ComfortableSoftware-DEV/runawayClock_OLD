@@ -3,22 +3,26 @@
 from FM import FM
 
 
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of FM TBGLST PSG
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
 _moduleName_ = "FM"
 _sub0_ = "TBGLST"
 _sub1_ = "PSG"
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥  
 _filename_ = f"""{FM.NAME_LCL_SELF_SUB1_PY(
 	__MODULE_NAME__=_moduleName_,
 	__SUB0__=_sub0_,
 	__SUB1__=_sub1_,
 )}"""  # FM/FM_TBGLST_PSG.py
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥  
 _newFilename_ = f"""{FM.NAME_LCL_SELF_SUB1_NEW_PY(
 	__MODULE_NAME__=_moduleName_,
 	__SUB0__=_sub0_,
 	__SUB1__=_sub1_,
 )}"""  # FM/FM_TBGLST_PSG_NEW.py
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥  
 __ID__ = (
 	("__FILENAME__", _filename_,),  # FM/FM_TBGLST_PSG.py
 	("__MODULE_NAME__", _moduleName_,),  # FM
@@ -26,7 +30,7 @@ __ID__ = (
 	("__SUB0__", _sub0_,),  # TBGLST
 	("__SUB1__", _sub1_,),  # PSG
 )
-
+# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥  
 TBGLST = [
 	(("FMAXPSG_SCTN0900_KEY_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py",), __ID__),
 	(("FMAXPSG_SCTN0900_STR_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>",), __ID__),
@@ -515,6 +519,7 @@ TBGLST = [
 	(("PSGVAL_KEY_TEXT_TIME_S_CLOCK_KEY", FM.FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_TEXT_TIME_S_CLOCK", "",), __ID__),
 	(("PSGVAL_KEY_TEXT_TIME_S_ELAPSED_KEY", FM.FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_TEXT_TIME_S_ELAPSED", "",), __ID__),
 	(("PSGVAL_KEY_TEXT_TIME_S_TOGO_KEY", FM.FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_TEXT_TIME_S_TOGO", "",), __ID__),
+	(("PSGVAL_KEY_TIMEOUT", FM.FMAXPSG_SCTN0900_KEY_DEF, "__TIMEOUT__", "default timeout key",), __ID__),
 	(("PSGVAL_KEY_TIME_MS_AT_CHECK_MOUSE", FM.FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_TIME_MS_AT_CHECK_MOUSE", "",), __ID__),
 	(("PSGVAL_KEY_TIME_MS_AT_MOVE", FM.FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_TIME_MS_AT_MOVE", "",), __ID__),
 	(("PSGVAL_KEY_TIME_MS_AT_UPDATE", FM.FMAX_NOP, "FMAXPSG_SCTN0900_KEY_DEF", "K_TIME_MS_AT_UPDATE", "",), __ID__),
@@ -542,7 +547,7 @@ TBGLST = [
 	(("PSGVAL_LIST_CLOSE01", FM.FMAXPSG_SCTN0903_LIST_VAL_ADD, "LIST_CLOSE", "MOUSE_STATUS_CLOSE_SW", "easet close entry",), __ID__),
 	(("PSGVAL_LIST_CLOSE01", FM.FMAXPSG_SCTN0903_LIST_VAL_ADD, "LIST_CLOSE", "MOUSE_STATUS_CLOSE_W", "easet close entry",), __ID__),
 	(("PSGVAL_LIST_DNUPDATE00", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_DNUPDATE", "list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)",), __ID__),
-	(("PSGVAL_LIST_DNUPDATE01", FM.FMAXPSG_SCTN0903_LIST_VAL_ADD, "LIST_DNUPDATE", "K_LIST_FLIP_INFO", "deal with the list of names for the event(s) to come",), __ID__),
+	(("PSGVAL_LIST_DNUPDATE01", FM.FMAX_NOP, "FMAXPSG_SCTN0903_LIST_VAL_ADD", "LIST_DNUPDATE", "K_LIST_FLIP_INFO", "deal with the list of names for the event(s) to come",), __ID__),
 	(("PSGVAL_LIST_THIS_ALARM_POPUP_TEXT00", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_THIS_ALARM_POPUP_TEXT", "collects the text to popup",), __ID__),
 	(("PSGVAL_LIST_THIS_ALARM_POPUP_TEXT01", FM.FMAXPSG_SCTN0903_LIST_STR_ADD, "LIST_THIS_ALARM_POPUP_TEXT", "One or more events has alerted at %NOWS%", "collects the text to popup",), __ID__),
 	(("PSGVAL_SZ_ALERT_TEXT", FM.FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALERT_TEXT", "20", "font size of alert text",), __ID__),
@@ -594,7 +599,7 @@ TBGLST = [
 	(("PSGVAL__ALL_THE_FORMS", FM.FMAXPSG_SCTN0902_DICT_VV_ADD, "DICT_ALL_THE_FORMS", "FORM_POPUP05", "None", "ENTRY IN FORMS",), __ID__),
 	(("PSGVAL__APPDS", FM.FMAX_NOP, "APP Data Storage",), __ID__),
 	(("PSGVAL__APPDS_MAIN_00", FM.FMAXPSG_SCTN090C_APPDS_DEF, "APPDS_MAIN", "the struct holding everything passed betwixt PySimpleGUI and this app",), __ID__),
-	(("PSGVAL__APPDS_MAIN_01", FM.FMAXPSG_SCTN090C_APPDS_VS_ADD, "APPDS_MAIN", "K_VERSION", "0000000C", "version number hex string",), __ID__),
+	(("PSGVAL__APPDS_MAIN_01", FM.FMAXPSG_SCTN090C_APPDS_VS_ADD, "APPDS_MAIN", "K_VERSION", "0000000D", "version number hex string",), __ID__),
 	(("PSGVAL__APPDS_MAIN_01", FM.FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_APPMODE", "APPMODE_NONE", "no appmode set",), __ID__),
 	(("PSGVAL__APPDS_MAIN_01", FM.FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_CHECKBOX_ALPHA_DIM", "True", "dim when mouse over bool",), __ID__),
 	(("PSGVAL__APPDS_MAIN_01", FM.FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_CHECKBOX_RUNAWAY", "False", "runaway from the mouse bool",), __ID__),

@@ -191,6 +191,12 @@ INDENTIN = " -=> "  # display arrow RIGHT
 INDENTOUT = " <=- "  # display arrow LEFT
 INFOSTR = f"""# * {"%_" * (CMNTLEN // 2)}"""  # INFO _STR_ line
 LINESUP = lambda __NUM__: f"""{ESC}[{__NUM__}A"""
+MARK0END = lambda __TAG__: f"""# {"⥣0 " * (CMNTLEN // 3)} {__TAG__}"""
+MARK0ENDLN = lambda __TAG__: f"""# {"⥣0 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
+MARK0MID = lambda __TAG__: f"""# {"⥣0⥥ " * (CMNTLEN // 4)} {__TAG__}"""
+MARK0MIDLN = lambda __TAG__: f"""# {"⥣0⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
+MARK0START = lambda __TAG__: f"""# {"0⥥ " * (CMNTLEN // 3)} {__TAG__}"""
+MARK0STARTLN = lambda __TAG__: f"""# {"0⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
 MARK1END = lambda __TAG__: f"""# {"⥣1 " * (CMNTLEN // 3)} {__TAG__}"""
 MARK1ENDLN = lambda __TAG__: f"""# {"⥣1 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
 MARK1MID = lambda __TAG__: f"""# {"⥣1⥥ " * (CMNTLEN // 4)} {__TAG__}"""
