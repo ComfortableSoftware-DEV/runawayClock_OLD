@@ -250,16 +250,17 @@ class CLOCKS_C(object):
 			[
 				SG.Checkbox(  # add a new text element to row01 clocks column
 					**PSG.CHECKBOX_RUNAWAY01  # add elapsed time
+				),
 				SG.Checkbox(  # add a new text element to row01 clocks column
 					**PSG.CHECKBOX_ALPHA_DIM01  # add elapsed time
 				),
 			],
 			[
 				SG.Checkbox(  # add a new text element to row01 clocks column
-					**PSG.CHECKBOX_RUNAWAY01  # add elapsed time
+					**PSG.CHECKBOX_HIDE01  # add elapsed time
 				),
 				SG.Checkbox(  # add a new text element to row01 clocks column
-					**PSG.CHECKBOX_ALPHA_DIM01  # add elapsed time
+					**PSG.CHECKBOX_HOVER_DATE01  # add elapsed time
 				),
 			],
 		]
@@ -298,10 +299,10 @@ class CLOCKS_C(object):
 			],
 			[
 				SG.Checkbox(  # add a new text element to row01 clocks column
-					**PSG.CHECKBOX_RUNAWAY01  # add elapsed time
+					**PSG.CHECKBOX_HIDE01  # add elapsed time
 				),
 				SG.Checkbox(  # add a new text element to row01 clocks column
-					**PSG.CHECKBOX_ALPHA_DIM01  # add elapsed time
+					**PSG.CHECKBOX_HOVER_DATE01  # add elapsed time
 				),
 			],
 			[
