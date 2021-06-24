@@ -52,9 +52,14 @@ class CLOCKS_C(object):
 		self._TIME_MS_AT_CHECK_MOUSE_ = PSG.ZERO_CLOCK  # 
 		self._TIME_MS_AT_FLIP_ = PSG.ZERO_CLOCK  # 
 		self._TIME_MS_AT_MOVE_ = PSG.ZERO_CLOCK  # 
+		self._TIME_MS_AT_UNHIDE = PSG.ZERO_CLOCK  # the time length will stay hidden under the mouse
 		self._TIME_MS_AT_UPDATE_ = PSG.ZERO_CLOCK  # 
 		self._DICT_KEYS_[PSG.K_CHECKBOX_ALPHA_DIM] = PSG.K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._DICT_KEYS_REVERSE_[PSG.K_CHECKBOX_ALPHA_DIM] = PSG.K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
+		self._DICT_KEYS_[PSG.K_CHECKBOX_HIDE] = PSG.K_CHECKBOX_HIDE  # add foreign key for hiding
+		self._DICT_KEYS_REVERSE_[PSG.K_CHECKBOX_HIDE] = PSG.K_CHECKBOX_HIDE  # add foreign key for hiding
+		self._DICT_KEYS_[PSG.K_CHECKBOX_HOVER_DATE] = PSG.K_CHECKBOX_HOVER_DATE  # add foreign key for hiding
+		self._DICT_KEYS_REVERSE_[PSG.K_CHECKBOX_HOVER_DATE] = PSG.K_CHECKBOX_HOVER_DATE  # add foreign key for hiding
 		self._DICT_KEYS_[PSG.K_CHECKBOX_RUNAWAY] = PSG.K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
 		self._DICT_KEYS_REVERSE_[PSG.K_CHECKBOX_RUNAWAY] = PSG.K_CHECKBOX_RUNAWAY  # add foreign key for runningaway
 		self._DICT_KEYS_[PSG.K_CURRENT_INTERVAL_COUNT] = self._USE_THIS_KEY_(PSG.K_CURRENT_INTERVAL_COUNT)  # add foreign key for CURRENT_INTERVAL_COUNT
@@ -63,6 +68,8 @@ class CLOCKS_C(object):
 		self._DICTIN_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			PSG.K_CHECKBOX_ALPHA_DIM: True,  # value of the alphas dim checkbox
+			PSG.K_CHECKBOX_HIDE: True,  # checkbox hid for a moment when the mouse hovers
+			PSG.K_CHECKBOX_HOVER_DATE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			PSG.K_TIME_S_AT_NEXT_ALERT: PSG.ZERO_CLOCK,  # time at next event
 			PSG.K_TIME_S_AT_ZEROELAPSE: PSG.ZERO_CLOCK,  # time at last zero of elapsed timer
@@ -75,6 +82,8 @@ class CLOCKS_C(object):
 		self._DICTINSTR_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			PSG.K_CHECKBOX_ALPHA_DIM: True,  # value of the alphas dim checkbox
+			PSG.K_CHECKBOX_HIDE: True,  # checkbox hid for a moment when the mouse hovers
+			PSG.K_CHECKBOX_HOVER_DATE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			self._USE_THIS_KEY_(PSG.K_TIME_S_AT_NEXT_ALERT): PSG.ZERO_CLOCK,  # time at next event
 			self._USE_THIS_KEY_(PSG.K_TIME_S_AT_ZEROELAPSE): PSG.ZERO_CLOCK,  # time at last zero of elapsed timer
@@ -241,6 +250,13 @@ class CLOCKS_C(object):
 			[
 				SG.Checkbox(  # add a new text element to row01 clocks column
 					**PSG.CHECKBOX_RUNAWAY01  # add elapsed time
+				SG.Checkbox(  # add a new text element to row01 clocks column
+					**PSG.CHECKBOX_ALPHA_DIM01  # add elapsed time
+				),
+			],
+			[
+				SG.Checkbox(  # add a new text element to row01 clocks column
+					**PSG.CHECKBOX_RUNAWAY01  # add elapsed time
 				),
 				SG.Checkbox(  # add a new text element to row01 clocks column
 					**PSG.CHECKBOX_ALPHA_DIM01  # add elapsed time
@@ -270,6 +286,14 @@ class CLOCKS_C(object):
 			[
 				SG.Text(  # add a new text element to row01 clocks column
 					**self._TEXT_NAME_NEXT_EVENT_  # add the main clock
+				),
+			],
+			[
+				SG.Checkbox(  # add a new text element to row01 clocks column
+					**PSG.CHECKBOX_RUNAWAY01  # add elapsed time
+				),
+				SG.Checkbox(  # add a new text element to row01 clocks column
+					**PSG.CHECKBOX_ALPHA_DIM01  # add elapsed time
 				),
 			],
 			[

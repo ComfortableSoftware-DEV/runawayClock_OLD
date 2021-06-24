@@ -147,7 +147,8 @@ K_CHECKBOX_ALPHA_DIM = "K_CHECKBOX_ALPHA_DIM"  # value of the alphas dim checkbo
 K_CHECKBOX_DISMISSED = "K_CHECKBOX_DISMISSED"  # set the key for the checkbox
 K_CHECKBOX_ENABLED = "K_CHECKBOX_ENABLED"  # set the key for the checkbox
 K_CHECKBOX_FIRSTRUN = "K_CHECKBOX_FIRSTRUN"  # set the key for the checkbox
-K_CHECKBOX_HOVER_DATE = "K_CHECKBOX_HOVER_DATE"  # set the key for the checkbox
+K_CHECKBOX_HIDE = "K_CHECKBOX_HIDE"  # checkbox hid for a moment when the mouse hovers
+K_CHECKBOX_HOVER_DATE = "K_CHECKBOX_HOVER_DATE"  # checkbox hid for a moment when the mouse hovers
 K_CHECKBOX_IS_ALERTING_NOW = "K_CHECKBOX_IS_ALERTING_NOW"  # set the key for the checkbox
 K_CHECKBOX_PREDISMISSABLE = "K_CHECKBOX_PREDISMISSABLE"  # set the key for the checkbox
 K_CHECKBOX_RUNAWAY = "K_CHECKBOX_RUNAWAY"  # value of runaway checkbox
@@ -275,7 +276,7 @@ K_SZ_PAD_ALL = "K_SZ_PAD_ALL"  # add padding to all the things
 K_SZ_PKLNAME_DEV = "K_SZ_PKLNAME_DEV"  # name of the pkl file for the app in dev
 K_SZ_PKLNAME_PROD = "K_SZ_PKLNAME_PROD"  # name of the pkl file for the app in use
 K_SZ_RUNAWAY = "K_SZ_RUNAWAY"  # default runaway state
-K_SZ_TIME_MS_BETWEEN_FLIPS = "K_SZ_TIME_MS_BETWEEN_FLIPS"  # throttle flips
+K_SZ_TIME_MS_BETWEEN_FLIPS = "K_SZ_TIME_MS_BETWEEN_FLIPS"  # unhide after this time
 K_SZ_TIME_MS_BETWEEN_MOUSE_CHECKS = "K_SZ_TIME_MS_BETWEEN_MOUSE_CHECKS"  # throttle mouse checking
 K_SZ_TIME_MS_BETWEEN_MOVES = "K_SZ_TIME_MS_BETWEEN_MOVES"  # time_ms between moves
 K_SZ_TIME_MS_BETWEEN_UPDATES = "K_SZ_TIME_MS_BETWEEN_UPDATES"  # time_ms between updating windows/frames/etc
@@ -290,6 +291,7 @@ K_TIME_MS_AT_FLIP = "K_TIME_MS_AT_FLIP"  #
 K_TIME_MS_AT_MOVE = "K_TIME_MS_AT_MOVE"  #
 K_TIME_MS_AT_NEXT_MOVE_VAL = "K_TIME_MS_AT_NEXT_MOVE_VAL"  # comment
 K_TIME_MS_AT_NEXT_UPDATE_VAL = "K_TIME_MS_AT_NEXT_UPDATE_VAL"  # comment
+K_TIME_MS_AT_UNHID = "K_TIME_MS_AT_UNHID"  # the time length will stay hidden under the mouse
 K_TIME_MS_AT_UPDATE = "K_TIME_MS_AT_UPDATE"  #
 K_TIME_S_ADJUST_VALUE = "K_TIME_S_ADJUST_VALUE"  # comment
 K_TIME_S_AT_ALARM = "K_TIME_S_AT_ALARM"  # time of this event if it an alarm
@@ -356,9 +358,9 @@ SZ_PAD_ALL = ((1, 1), (1, 1))  # add padding to all the things
 SZ_PKLNAME_DEV = "runawayClock_DEV.pkl"  # name of the pkl file for the app in dev
 SZ_PKLNAME_PROD = "runawayClock.pkl"  # name of the pkl file for the app in use
 SZ_RUNAWAY = False  # default runaway state
-SZ_TIME_MS_BETWEEN_FLIPS = 400  # throttle flips
+SZ_TIME_MS_BETWEEN_FLIPS = 500  # unhide after this time
 SZ_TIME_MS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
-SZ_TIME_MS_BETWEEN_MOVES = 200  # time_ms between moves
+SZ_TIME_MS_BETWEEN_MOVES = 80  # time_ms between moves
 SZ_TIME_MS_BETWEEN_UPDATES = 100  # time_ms between updating windows/frames/etc
 SZ_TIME_S_BETWEEN_PERIODIC_JOB = 5000  # time between periodic job runnings
 SZ_TIMEOUT_MS = 100  # timeout for PSG
@@ -606,14 +608,15 @@ LIST_CLOSE = [  # list with close statuses
 LIST_DNUPDATE = [  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
 	K_CHECKBOX_ALPHA_DIM,  # checkbox for alpha under mouse
 	K_CHECKBOX_DISMISSED,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_ENABLED,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_FIRSTRUN,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_HOVER_DATE,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_IS_ALERTING_NOW,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_PREDISMISSABLE,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_ENABLED,  # checkbox for enabled
+	K_CHECKBOX_FIRSTRUN,  # checkbox for first run
+	K_CHECKBOX_HIDE,  # checkbox for hiding for a moment on hover
+	K_CHECKBOX_HOVER_DATE,  # checkbox for date on hover
+	K_CHECKBOX_IS_ALERTING_NOW,  # checkbox for is alerting now
+	K_CHECKBOX_PREDISMISSABLE,  # checkbox for can be dismissed prior to alert
 	K_CHECKBOX_RUNAWAY,  # checkbox for runaway from mouse behavior
-	K_CHECKBOX_SNOOZABLE,  # checkbox for dismissed from mouse behavior
-	K_CHECKBOX_SNOOZED,  # checkbox for dismissed from mouse behavior
+	K_CHECKBOX_SNOOZABLE,  # checkbox for can be snoozed
+	K_CHECKBOX_SNOOZED,  # checkbox for is snoozed
 ]
 
 
@@ -821,8 +824,8 @@ BTN_ZERO32 = {  #
 # * SCTN0908 checkbox elements
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 CHECKBOX_ALPHA_DIM01 = {  # checkbox for alpha under mouse
-	TEXT: "K_ALPHA_LOW",  # simple text reminder
-	TOOLTIP: "low alpha under mouse",  # comment
+	TEXT: "DIM",  # simple text reminder
+	TOOLTIP: "low alpha under mouse hover",  # comment
 	DEFAULT: True,  # leave it on by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
 	KEY: K_CHECKBOX_ALPHA_DIM,  # set the key for the checkbox
@@ -838,16 +841,16 @@ CHECKBOX_DISMISSED01 = {  # checkbox for dismissed from mouse behavior
 }
 
 
-CHECKBOX_ENABLED01 = {  # checkbox for dismissed from mouse behavior
+CHECKBOX_ENABLED01 = {  # checkbox for enabled
 	TEXT: "ENABLED",  # text label
 	TOOLTIP: "event enabled bool",  # tooltip
-	DEFAULT: False,  # leave it off by default
+	DEFAULT: True,  # leave it off by default
 	ENABLE_EVENTS: True,  # set the key for the checkbox
 	KEY: K_CHECKBOX_ENABLED,  # set the key for the checkbox
 }
 
 
-CHECKBOX_FIRSTRUN01 = {  # checkbox for dismissed from mouse behavior
+CHECKBOX_FIRSTRUN01 = {  # checkbox for first run
 	TEXT: "K_FIRSTRUN",  # text label
 	TOOLTIP: "first run bool",  # tooltip
 	DEFAULT: False,  # leave it off by default
@@ -856,8 +859,8 @@ CHECKBOX_FIRSTRUN01 = {  # checkbox for dismissed from mouse behavior
 }
 
 
-CHECKBOX_HOVER_DATE01 = {  # checkbox for dismissed from mouse behavior
-	TEXT: "DT on hover",  # text label
+CHECKBOX_HIDE01 = {  # checkbox for hiding for a moment on hover
+	TEXT: "HIDE",  # text label
 	TOOLTIP: "show date when hovering over clock",  # tooltip
 	DEFAULT: True,  # leave it on by default
 	ENABLE_EVENTS: True,  # set the events on for the checkbox
@@ -865,7 +868,16 @@ CHECKBOX_HOVER_DATE01 = {  # checkbox for dismissed from mouse behavior
 }
 
 
-CHECKBOX_IS_ALERTING_NOW01 = {  # checkbox for dismissed from mouse behavior
+CHECKBOX_HOVER_DATE01 = {  # checkbox for date on hover
+	TEXT: "DT_TIP",  # text label
+	TOOLTIP: "show date when hovering over clock",  # tooltip
+	DEFAULT: True,  # leave it on by default
+	ENABLE_EVENTS: True,  # set the events on for the checkbox
+	KEY: K_CHECKBOX_HOVER_DATE,  # set the key for the checkbox
+}
+
+
+CHECKBOX_IS_ALERTING_NOW01 = {  # checkbox for is alerting now
 	TEXT: "IS_ALERTING_NOW",  # text label
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
@@ -874,7 +886,7 @@ CHECKBOX_IS_ALERTING_NOW01 = {  # checkbox for dismissed from mouse behavior
 }
 
 
-CHECKBOX_PREDISMISSABLE01 = {  # checkbox for dismissed from mouse behavior
+CHECKBOX_PREDISMISSABLE01 = {  # checkbox for can be dismissed prior to alert
 	TEXT: "K_PREDISMISSABLE",  # text label
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
@@ -892,7 +904,7 @@ CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
 }
 
 
-CHECKBOX_SNOOZABLE01 = {  # checkbox for dismissed from mouse behavior
+CHECKBOX_SNOOZABLE01 = {  # checkbox for can be snoozed
 	TEXT: "K_SNOOZABLE",  # text label
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
@@ -901,7 +913,7 @@ CHECKBOX_SNOOZABLE01 = {  # checkbox for dismissed from mouse behavior
 }
 
 
-CHECKBOX_SNOOZED01 = {  # checkbox for dismissed from mouse behavior
+CHECKBOX_SNOOZED01 = {  # checkbox for is snoozed
 	TEXT: "K_SNOOZED",  # text label
 	TOOLTIP: "run away from mouse when checked",  # tooltip
 	DEFAULT: False,  # leave it off by default
@@ -1069,6 +1081,8 @@ TEXT_TIME_S_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and this app
 	K_APPMODE: APPMODE_NONE,  # no appmode set
 	K_CHECKBOX_ALPHA_DIM: True,  # dim when mouse over bool
+	K_CHECKBOX_HIDE: True,  # runaway from the mouse bool
+	K_CHECKBOX_HOVER_DATE: True,  # show date when the mouse hovers
 	K_CHECKBOX_RUNAWAY: False,  # runaway from the mouse bool
 	K_EVENT_ENTRIES: {  # holds events
 		0: {
@@ -1119,7 +1133,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "0000000D",  # version number hex string
+	K_VERSION: "0000000F",  # version number hex string
 }
 
 
