@@ -53,7 +53,7 @@ class CLOCKS_C(object):
 		self._TIME_MS_AT_CHECK_MOUSE_ = PSG.ZERO_CLOCK  #
 		self._TIME_MS_AT_FLIP_ = PSG.ZERO_CLOCK  #
 		self._TIME_MS_AT_MOVE_ = PSG.ZERO_CLOCK  #
-		self._TIME_MS_AT_UNHIDE = PSG.ZERO_CLOCK  # the time length will stay hidden under the mouse
+		self._TIME_MS_AT_UNHIDE_ = PSG.ZERO_CLOCK  # the time when the window will unhide
 		self._TIME_MS_AT_UPDATE_ = PSG.ZERO_CLOCK  #
 		self._DICT_KEYS_[PSG.K_CHECKBOX_ALPHA_DIM] = PSG.K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
 		self._DICT_KEYS_REVERSE_[PSG.K_CHECKBOX_ALPHA_DIM] = PSG.K_CHECKBOX_ALPHA_DIM  # add foreign key for alpha dimming
@@ -68,7 +68,7 @@ class CLOCKS_C(object):
 
 		self._DICTIN_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			PSG.K_CHECKBOX_ALPHA_DIM: True,  # value of the alphas dim checkbox
+			PSG.K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
 			PSG.K_CHECKBOX_HIDE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_HOVER_DATE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
@@ -82,7 +82,7 @@ class CLOCKS_C(object):
 
 		self._DICTINSTR_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			PSG.K_CHECKBOX_ALPHA_DIM: True,  # value of the alphas dim checkbox
+			PSG.K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
 			PSG.K_CHECKBOX_HIDE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_HOVER_DATE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
@@ -123,7 +123,7 @@ class CLOCKS_C(object):
 			PSG.F_ENSTRING: False,  # update _DICTINSTR_ or return strings converted from integers in _DICTIN_
 			PSG.F_HANDLEEVENTS: False,  # turn interval count off
 			PSG.F_HANDLEVALUES: False,  # turn interval count off
-			PSG.F_HIDE: False,  # convert any str in _DICTIN_ to int
+			PSG.F_HIDE: True,  # convert any str in _DICTIN_ to int
 			PSG.F_INTERVALCOUNTOFF: False,  # turn interval count off
 			PSG.F_INTERVALCOUNTON: False,  # turn interval count on
 			PSG.F_MAKEINKEY: False,  # make a human key from a PSG key
@@ -132,7 +132,7 @@ class CLOCKS_C(object):
 			PSG.F_QUICKREAD: False,  # read the frame and set self._RESULT_ etc
 			PSG.F_RUNAWAY: False,  # define runaway
 			PSG.F_SETCHECKBOX: False,  # define setCheckbox
-			PSG.F_UNHIDE: False,  # convert any str in _DICTIN_ to int
+			PSG.F_UNHIDE: True,  # convert any str in _DICTIN_ to int
 			PSG.F_UPDATEFLIPPEDITEMS: False,  # update items which may have multiple values
 			PSG.F_UPDATEFROMDICT: False,  # update the displayed info from a dict or the default _DICTIN_
 			PSG.F_ZEROFLIPPED: False,  # update the displayed info from a dict or the default _DICTIN_
@@ -547,7 +547,7 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 				(self._DICTIN_[PSG.K_CHECKBOX_HIDE] is True)
 		):
 			self.hide()
-			self._TIME_MS_AT_UNHIDE = PSG.NOWMS + PSG.SZ_TIME_MS_TO_HIDE
+			self._TIME_MS_AT_UNHIDE_ = PSG.NOWMS + PSG.SZ_TIME_MS_TO_HIDE
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 		# unhide
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
@@ -1013,9 +1013,20 @@ _dictToRtn_ {_dictToRtn_}
 # start of hide.py
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 	def hide(self):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_.Hide()
-		self._TIME_MS_AT_UNHIDE = PSG.NOWMS + PSG.SZ_TIME_MS_TO_HIDE
+		self._TIME_MS_AT_UNHIDE_ = PSG.NOWMS + PSG.SZ_TIME_MS_TO_HIDE
 		self._HIDDEN_ = True
+		if (
+				(self._DPD_[PSG.F_HIDE] is True)
+		):
+			print(f"""{self.debugPrint(
+			title_="HIDE",
+			printDictinS_=True,
+			message_=f"""_HIDDEN_ {self._HIDDEN_}
+_TIME_MS_AT_UNHIDE_"""
+			)}""")
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # start of hide.py
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1286,8 +1297,10 @@ checkboxValue_ {checkboxValue_}
 # start of unhide.py
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 	def unhide(self):
+		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 		self._MAINFRAME_.UnHide()
 		self._HIDDEN_ = False
+		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # start of unhide.py
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

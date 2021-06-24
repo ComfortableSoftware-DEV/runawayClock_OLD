@@ -294,7 +294,7 @@ K_TIME_MS_AT_FLIP = "K_TIME_MS_AT_FLIP"  #
 K_TIME_MS_AT_MOVE = "K_TIME_MS_AT_MOVE"  # 
 K_TIME_MS_AT_NEXT_MOVE_VAL = "K_TIME_MS_AT_NEXT_MOVE_VAL"  # comment
 K_TIME_MS_AT_NEXT_UPDATE_VAL = "K_TIME_MS_AT_NEXT_UPDATE_VAL"  # comment
-K_TIME_MS_AT_UNHID = "K_TIME_MS_AT_UNHID"  # the time length will stay hidden under the mouse
+K_TIME_MS_AT_UNHIDE = "K_TIME_MS_AT_UNHIDE"  # the time when the window will unhide
 K_TIME_MS_AT_UPDATE = "K_TIME_MS_AT_UPDATE"  # 
 K_TIME_S_ADJUST_VALUE = "K_TIME_S_ADJUST_VALUE"  # comment
 K_TIME_S_AT_ALARM = "K_TIME_S_AT_ALARM"  # time of this event if it an alarm
@@ -1084,7 +1084,7 @@ TEXT_TIME_S_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and this app
 	K_APPMODE: APPMODE_NONE,  # no appmode set
-	K_CHECKBOX_ALPHA_DIM: True,  # dim when mouse over bool
+	K_CHECKBOX_ALPHA_DIM: False,  # dim when mouse over bool
 	K_CHECKBOX_HIDE: True,  # runaway from the mouse bool
 	K_CHECKBOX_HOVER_DATE: True,  # show date when the mouse hovers
 	K_CHECKBOX_RUNAWAY: False,  # runaway from the mouse bool
@@ -1137,7 +1137,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "0000000F",  # version number hex string
+	K_VERSION: "00000010",  # version number hex string
 }
 
 
