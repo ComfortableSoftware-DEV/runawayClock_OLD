@@ -68,7 +68,7 @@ class CLOCKS_C(object):
 
 		self._DICTIN_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			PSG.K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
+			PSG.K_CHECKBOX_ALPHA_DIM: True,  # value of the alphas dim checkbox
 			PSG.K_CHECKBOX_HIDE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_HOVER_DATE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
@@ -82,7 +82,7 @@ class CLOCKS_C(object):
 
 		self._DICTINSTR_ = {
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			PSG.K_CHECKBOX_ALPHA_DIM: False,  # value of the alphas dim checkbox
+			PSG.K_CHECKBOX_ALPHA_DIM: True,  # value of the alphas dim checkbox
 			PSG.K_CHECKBOX_HIDE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_HOVER_DATE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
@@ -1020,12 +1020,12 @@ _dictToRtn_ {_dictToRtn_}
 		if (
 				(self._DPD_[PSG.F_HIDE] is True)
 		):
-			print(f"""{self.debugPrint(
-			title_="HIDE",
-			printDictinS_=True,
-			message_=f"""_HIDDEN_ {self._HIDDEN_}
-_TIME_MS_AT_UNHIDE_"""
-			)}""")
+			self.debugPrint(
+					title_="HIDE",
+					printDictinS_=True,
+					message_=f"""_HIDDEN_ {self._HIDDEN_}
+{CF.frameItMS("_TIME_MS_AT_UNHIDE_", self._TIME_MS_AT_UNHIDE_)}""",
+			)
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # start of hide.py
@@ -1212,7 +1212,7 @@ _CURRENT_VALUES_ {self._CURRENT_VALUES_}"""
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (
 				(PSG.NOWMS < self._TIME_MS_AT_MOVE_) or
-				(self._DICTIN_[PSG.K_CHECKBOX_HIDE] is False) or
+				(self._DICTIN_[PSG.K_CHECKBOX_RUNAWAY] is False) or
 				(self._CURRENT_MOUSE_STATUS_ not in PSG.LIST_CLOSE)
 		):
 			return
@@ -1440,7 +1440,10 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		if (PSG.NOWMS == self._TIME_MS_AT_UNHIDE):
+		if (
+				(PSG.NOWMS >= self._TIME_MS_AT_UNHIDE_) and
+				(self._HIDDEN_ is True)
+		):
 			self.unhide()
 
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥

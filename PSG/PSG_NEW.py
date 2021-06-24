@@ -365,7 +365,7 @@ SZ_TIME_MS_BETWEEN_FLIPS = 400  # throttle flips
 SZ_TIME_MS_BETWEEN_MOUSE_CHECKS = 300  # throttle mouse checking
 SZ_TIME_MS_BETWEEN_MOVES = 80  # time_ms between moves
 SZ_TIME_MS_BETWEEN_UPDATES = 100  # time_ms between updating windows/frames/etc
-SZ_TIME_MS_TO_HIDE = 500  # unhide after this time
+SZ_TIME_MS_TO_HIDE = 1500  # unhide after this time
 SZ_TIME_S_BETWEEN_PERIODIC_JOB = 5000  # time between periodic job runnings
 SZ_TIMEOUT_MS = 100  # timeout for PSG
 TIME_H_ADJUST_HRS = 0  # comment
@@ -1084,8 +1084,8 @@ TEXT_TIME_S_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and this app
 	K_APPMODE: APPMODE_NONE,  # no appmode set
-	K_CHECKBOX_ALPHA_DIM: False,  # dim when mouse over bool
-	K_CHECKBOX_HIDE: True,  # runaway from the mouse bool
+	K_CHECKBOX_ALPHA_DIM: True,  # dim when mouse over bool
+	K_CHECKBOX_HIDE: True,  # hide under the mouse bool
 	K_CHECKBOX_HOVER_DATE: True,  # show date when the mouse hovers
 	K_CHECKBOX_RUNAWAY: False,  # runaway from the mouse bool
 	K_EVENT_ENTRIES: {  # holds events
@@ -1137,7 +1137,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "00000010",  # version number hex string
+	K_VERSION: "00000011",  # version number hex string
 }
 
 

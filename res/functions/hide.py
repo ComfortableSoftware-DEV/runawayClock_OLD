@@ -9,12 +9,12 @@
 		if (
 				(self._DPD_[PSG.F_HIDE] is True)
 		):
-			print(f"""{self.debugPrint(
-			title_="HIDE",
-			printDictinS_=True,
-			message_=f"""_HIDDEN_ {self._HIDDEN_}
-_TIME_MS_AT_UNHIDE_"""
-			)}""")
+			self.debugPrint(
+					title_="HIDE",
+					printDictinS_=True,
+					message_=f"""_HIDDEN_ {self._HIDDEN_}
+{CF.frameItMS("_TIME_MS_AT_UNHIDE_", self._TIME_MS_AT_UNHIDE_)}""",
+			)
 		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # start of hide.py

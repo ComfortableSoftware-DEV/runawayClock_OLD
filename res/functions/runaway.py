@@ -6,7 +6,7 @@
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (
 				(PSG.NOWMS < self._TIME_MS_AT_MOVE_) or
-				(self._DICTIN_[PSG.K_CHECKBOX_HIDE] is False) or
+				(self._DICTIN_[PSG.K_CHECKBOX_RUNAWAY] is False) or
 				(self._CURRENT_MOUSE_STATUS_ not in PSG.LIST_CLOSE)
 		):
 			return
