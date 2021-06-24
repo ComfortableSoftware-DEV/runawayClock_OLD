@@ -182,7 +182,6 @@ K_COLORS_TEXT_NORMAL = "K_COLORS_TEXT_NORMAL"  # combined colors for a clock tex
 K_COLORS_TIME_CLOCK = "K_COLORS_TIME_CLOCK"  # combined colors for a clock text element
 K_COLORS_TIME_ELAPSED = "K_COLORS_TIME_ELAPSED"  # combined colors for a clock text element
 K_COLORS_TIME_TOGO = "K_COLORS_TIME_TOGO"  # combined colors for a clock text element
-K_COLUMN01A = "K_COLUMN01A"  # the column that puts the two smaller clocks below the main one
 K_COLUMN01B = "K_COLUMN01B"  # the column that puts the two smaller clocks above the main one
 K_COLUMN02 = "K_COLUMN02"  # the column that puts the two smaller clocks below the main one
 K_CURRENT_EVENT = "K_CURRENT_EVENT"  # 
@@ -864,7 +863,7 @@ CHECKBOX_HIDE01 = {  # checkbox for hiding for a moment on hover
 	TOOLTIP: "show date when hovering over clock",  # tooltip
 	DEFAULT: True,  # leave it on by default
 	ENABLE_EVENTS: True,  # set the events on for the checkbox
-	KEY: K_CHECKBOX_HOVER_DATE,  # set the key for the checkbox
+	KEY: K_CHECKBOX_HIDE,  # set the key for the checkbox
 }
 
 

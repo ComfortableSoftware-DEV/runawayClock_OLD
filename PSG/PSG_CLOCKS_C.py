@@ -219,53 +219,6 @@ class CLOCKS_C(object):
 		self._DICT_KEYS_[PSG.K_TIME_S_TOGO] = self._USE_THIS_KEY_(PSG.K_TIME_S_TOGO)
 		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_TIME_S_TOGO)] = PSG.K_TIME_S_TOGO
 
-		self._COLUMN01A_ = [  # the column that puts the two smaller clocks below the main one
-		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
-			[
-				SG.Text(  # add a new TEXT element to clocks column
-					**self._TEXT_TIME_S_CLOCK_  # add the main clock
-				),
-			],
-			[
-				SG.Text(  # add a new row to clocks column
-					**self._TEXT_TIME_S_AT_ZEROELAPSE_  # add time to go
-				),
-				SG.Text(  # add a new text element to row01 clocks column
-					**self._TEXT_TIME_S_ELAPSED_  # add elapsed time
-				),
-			],
-			[
-				SG.Text(  # add a new text element to row01 clocks column
-					**self._TEXT_TIME_S_TOGO_  # add elapsed time
-				),
-				SG.Text(  # add a new row to clocks column
-					**self._TEXT_TIME_S_AT_NEXT_ALERT_  # add time to go
-				),
-			],
-			[
-				SG.Text(  # add a new text element to row01 clocks column
-					**self._TEXT_NAME_NEXT_EVENT_  # add the main clock
-				),
-			],
-			[
-				SG.Checkbox(  # add a new text element to row01 clocks column
-					**PSG.CHECKBOX_RUNAWAY01  # add elapsed time
-				),
-				SG.Checkbox(  # add a new text element to row01 clocks column
-					**PSG.CHECKBOX_ALPHA_DIM01  # add elapsed time
-				),
-			],
-			[
-				SG.Checkbox(  # add a new text element to row01 clocks column
-					**PSG.CHECKBOX_HIDE01  # add elapsed time
-				),
-				SG.Checkbox(  # add a new text element to row01 clocks column
-					**PSG.CHECKBOX_HOVER_DATE01  # add elapsed time
-				),
-			],
-		]
-		# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
-
 		self._COLUMN01B_ = [  # the column that puts the two smaller clocks above the main one
 		# fold here ⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3⥥3
 			[
