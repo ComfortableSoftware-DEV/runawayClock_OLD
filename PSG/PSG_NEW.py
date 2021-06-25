@@ -134,7 +134,7 @@ K_ALPHA_CHANNEL = "K_ALPHA_CHANNEL"  #
 K_ALPHA_HIGH = "K_ALPHA_HIGH"  # 
 K_ALPHA_LOW = "K_ALPHA_LOW"  # 
 K_APPMODE = "K_APPMODE"  # no appmode set
-K_AUTO_CLOSE_DURATION = "K_AUTO_CLOSE_DURATION"  # time of this event
+K_AUTO_CLOSE_DURATION = "K_AUTO_CLOSE_DURATION"  # auto close alert time of this event
 K_BBOX = "K_BBOX"  # 
 K_BTN_DISMISS = "K_BTN_DISMISS"  # button xpand font
 K_BTN_DOWN = "K_BTN_DOWN"  # focus on click
@@ -232,6 +232,7 @@ K_INDEX_Y = "K_INDEX_Y"  # Y
 K_IS_ALERTING_NOW = "K_IS_ALERTING_NOW"  # count of number of times this has alerted since last reset
 K_K_ALARMPOPUP_TEXT_TEXT = "K_K_ALARMPOPUP_TEXT_TEXT"  # alarm text for this event
 K_K_EVENT_NAME = "K_K_EVENT_NAME"  # this entry's name
+K_K_TIME_S_AT_ALARM = "K_K_TIME_S_AT_ALARM"  # time of this event if it an alarm
 K_LIST_ALL_TIMES = "K_LIST_ALL_TIMES"  # list of all times
 K_LIST_APPDS_MIDNIGHT_FIX_TIMES = "K_LIST_APPDS_MIDNIGHT_FIX_TIMES"  # list of times to be updated at midnight
 K_LIST_CLOSE = "K_LIST_CLOSE"  # list with close statuses
@@ -1092,12 +1093,12 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 	K_CHECKBOX_RUNAWAY: False,  # runaway from the mouse bool
 	K_EVENT_ENTRIES: {  # holds events
 		0: {
-			K_ALARMPOPUP_TEXT_TEXT: "first event",  # alarm text for this event
+			K_ALARMPOPUP_TEXT_TEXT: "time to move a bit",  # alarm text for this event
 			K_AUTO_CLOSE_DURATION: 10,  # time of this event
 			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			K_DISMISSED: False,  # is this event dismissed
 			K_ENABLED: True,  # is this event enabled
-			K_EVENT_NAME: "event 1",  # this entry's name
+			K_EVENT_NAME: "MOVE",  # this entry's name
 			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			K_FIRSTRUN: True,  # are we initializing or not
 			K_FORMNAME: None,  # time of this event
@@ -1108,19 +1109,19 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_TIME_S_AT_ALARM: 0,  # time of this event if it an alarm
 			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_S_INTERVAL: 30,  # interval of this event
+			K_TIME_S_INTERVAL: CF.HALFHOUR_S,  # interval of this event
 			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
 			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
 		},
 		1: {
-			K_ALARMPOPUP_TEXT_TEXT: "get up, move around",  # alarm text for this event
+			K_ALARMPOPUP_TEXT_TEXT: "pee, hydrate",  # alarm text for this event
 			K_AUTO_CLOSE_DURATION: 10,  # time of this event
 			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
 			K_DISMISSED: False,  # is this event dismissed
 			K_ENABLED: True,  # is this event enabled
-			K_EVENT_NAME: "2nd event",  # this entry's name
+			K_EVENT_NAME: "WATER",  # this entry's name
 			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
 			K_FIRSTRUN: True,  # are we initializing or not
 			K_FORMNAME: None,  # time of this event
@@ -1131,7 +1132,53 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 			K_TIME_S_AT_ALARM: 0,  # time of this event if it an alarm
 			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
 			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_S_INTERVAL: 15,  # interval of this event
+			K_TIME_S_INTERVAL: 4 * CF.HOUR_S,  # interval of this event
+			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
+		},
+		2: {
+			K_ALARMPOPUP_TEXT_TEXT: "clean up for bed",  # alarm text for this event
+			K_AUTO_CLOSE_DURATION: 0,  # auto close alert time of this event
+			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
+			K_DISMISSED: False,  # is this event dismissed
+			K_ENABLED: True,  # is this event enabled
+			K_EVENT_NAME: "PREBED",  # this entry's name
+			K_EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
+			K_FIRSTRUN: True,  # are we initializing or not
+			K_FORMNAME: None,  # time of this event
+			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
+			K_PREDISMISSABLE: True,  # is this event dismissable in advance
+			K_SNOOZABLE: False,  # can this event be snoozed
+			K_SNOOZED: False,  # is this event snoozed
+			K_TIME_S_AT_ALARM: "03:30:00",  # time of this event if it an alarm
+			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
+			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
+			K_TIME_S_INTERVAL: None,  # interval of this event
+			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
+		},
+		3: {
+			K_ALARMPOPUP_TEXT_TEXT: "off to bed",  # alarm text for this event
+			K_AUTO_CLOSE_DURATION: 0,  # auto close alert time of this event
+			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
+			K_DISMISSED: False,  # is this event dismissed
+			K_ENABLED: True,  # is this event enabled
+			K_EVENT_NAME: "TOBED",  # this entry's name
+			K_EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
+			K_FIRSTRUN: True,  # are we initializing or not
+			K_FORMNAME: None,  # time of this event
+			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
+			K_PREDISMISSABLE: True,  # is this event dismissable in advance
+			K_SNOOZABLE: False,  # can this event be snoozed
+			K_SNOOZED: False,  # is this event snoozed
+			K_TIME_S_AT_ALARM: "04:00:00",  # time of this event if it an alarm
+			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
+			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
+			K_TIME_S_INTERVAL: None,  # interval of this event
 			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
 			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
 			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
@@ -1139,7 +1186,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "00000011",  # version number hex string
+	K_VERSION: "00000013",  # version number hex string
 }
 
 
