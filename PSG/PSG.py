@@ -1698,7 +1698,7 @@ def doEvent():
 		if (_values_[K_TIME_S_AT_NEXT_ALERT] == NOWS):
 			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
 			if (_values_[K_EVENTMODE] == EVENTMODE_INTERVAL):
-				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_CURRENT_INTERVAL_COUNT] += 1
+				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_CURRENT_INTERVAL_COUNT] = (APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_CURRENT_INTERVAL_COUNT] + 1) % 10000
 				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_AT_NEXT_ALERT] = fixTimeAtNext(NOWS + APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_INTERVAL])
 				APPDS_MAIN[K_EVENT_ENTRIES][_index_][K_TIME_S_INTERVAL_START] = NOWS
 			# ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥ ⥣3⥥
