@@ -601,7 +601,7 @@ TBGLST = [
 	(("PSGVAL__ALL_THE_FORMS", FM.FMAXPSG_SCTN0902_DICT_VV_ADD, "DICT_ALL_THE_FORMS", "FORM_POPUP05", "None", "ENTRY IN FORMS",), __ID__),
 	(("PSGVAL__APPDS", FM.FMAX_NOP, "APP Data Storage",), __ID__),
 	(("PSGVAL__APPDS_MAIN_00", FM.FMAXPSG_SCTN090C_APPDS_DEF, "APPDS_MAIN", "the struct holding everything passed betwixt PySimpleGUI and this app",), __ID__),
-	(("PSGVAL__APPDS_MAIN_01", FM.FMAXPSG_SCTN090C_APPDS_VS_ADD, "APPDS_MAIN", "K_VERSION", "00000011", "version number hex string",), __ID__),
+	(("PSGVAL__APPDS_MAIN_01", FM.FMAXPSG_SCTN090C_APPDS_VS_ADD, "APPDS_MAIN", "K_VERSION", "00000012", "version number hex string",), __ID__),
 	(("PSGVAL__APPDS_MAIN_01", FM.FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_APPMODE", "APPMODE_NONE", "no appmode set",), __ID__),
 	(("PSGVAL__APPDS_MAIN_01", FM.FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_CHECKBOX_ALPHA_DIM", "True", "dim when mouse over bool",), __ID__),
 	(("PSGVAL__APPDS_MAIN_01", FM.FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_CHECKBOX_HIDE", "True", "hide under the mouse bool",), __ID__),

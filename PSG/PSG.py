@@ -104,6 +104,8 @@ F_RUNAWAY = "F_RUNAWAY"  # define runaway
 F_SETCHECKBOX = "F_SETCHECKBOX"  # define setCheckbox
 F_SPLITBBOXTORAW = "F_SPLITBBOXTORAW"  # FKEY entry splitBBoxToRaw
 F_SPLITXYTORAW = "F_SPLITXYTORAW"  # FKEY entry splitXYToRaw
+F_TOOLTIPOFF = "F_TOOLTIPOFF"  # define tooltipOff
+F_TOOLTIPON = "F_TOOLTIPON"  # define tooltipOn
 F_UNHIDE = "F_UNHIDE"  # convert any str in _DICTIN_ to int
 F_UPDATE = "F_UPDATE"  # define the required update function
 F_UPDATEFLIPPEDITEMS = "F_UPDATEFLIPPEDITEMS"  # update items which may have multiple values
@@ -1084,8 +1086,8 @@ TEXT_TIME_S_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and this app
 	K_APPMODE: APPMODE_NONE,  # no appmode set
-	K_CHECKBOX_ALPHA_DIM: False,  # dim when mouse over bool
-	K_CHECKBOX_HIDE: True,  # runaway from the mouse bool
+	K_CHECKBOX_ALPHA_DIM: True,  # dim when mouse over bool
+	K_CHECKBOX_HIDE: True,  # hide under the mouse bool
 	K_CHECKBOX_HOVER_DATE: True,  # show date when the mouse hovers
 	K_CHECKBOX_RUNAWAY: False,  # runaway from the mouse bool
 	K_EVENT_ENTRIES: {  # holds events
@@ -1137,7 +1139,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "00000010",  # version number hex string
+	K_VERSION: "00000011",  # version number hex string
 }
 
 
