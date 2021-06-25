@@ -1186,7 +1186,7 @@ APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and t
 		},
 	},
 	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "00000013",  # version number hex string
+	K_VERSION: "00000014",  # version number hex string
 }
 
 

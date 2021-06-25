@@ -551,6 +551,9 @@ TBGLST = [
 	(("PSGVAL_LIST_DNUPDATE01", FM.FMAX_NOP, "FMAXPSG_SCTN0903_LIST_VAL_ADD", "LIST_DNUPDATE", "K_LIST_FLIP_INFO", "deal with the list of names for the event(s) to come",), __ID__),
 	(("PSGVAL_LIST_THIS_ALARM_POPUP_TEXT00", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_THIS_ALARM_POPUP_TEXT", "collects the text to popup",), __ID__),
 	(("PSGVAL_LIST_THIS_ALARM_POPUP_TEXT01", FM.FMAXPSG_SCTN0903_LIST_STR_ADD, "LIST_THIS_ALARM_POPUP_TEXT", "One or more events has alerted at %NOWS%", "collects the text to popup",), __ID__),
+
+	(("PSGVAL_LIST_APPDS_TIMES_TO_INT", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_APPDS_TIMES_TO_INT", "list of all times that need to be checked and inted, will NOT affect version, ",), __ID__,),
+
 	(("PSGVAL_SZ_ALERT_TEXT", FM.FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALERT_TEXT", "20", "font size of alert text",), __ID__),
 	(("PSGVAL_SZ_ALPHA_DIM", FM.FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_DIM", "True", "default alpha dim state",), __ID__),
 	(("PSGVAL_SZ_ALPHA_HIGH", FM.FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_HIGH", "1.0", "high alpha",), __ID__),
