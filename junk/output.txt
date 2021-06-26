@@ -187,7 +187,7 @@ _DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHEC
 
 
 start of setCheckbox
-	checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ True
+  checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ True
 K_CHECKBOX_ALPHA_DIM was set True
  -=> 
 
@@ -239,7 +239,7 @@ _DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECK
 
 
 start of setCheckbox
-	checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ False
+  checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ False
 K_CHECKBOX_ALPHA_DIM was set False
  -=> 
 
@@ -416,7 +416,7 @@ _DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'False', 'K_CHEC
 
 
 start of setCheckbox
-	checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ True
+  checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ True
 K_CHECKBOX_ALPHA_DIM was set True
  -=> 
 
@@ -468,7 +468,7 @@ _DICTIN_: {'K_NAME_NEXT_EVENT': 'MOVE', 'K_CHECKBOX_ALPHA_DIM': 'True', 'K_CHECK
 
 
 start of setCheckbox
-	checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ False
+  checkboxKey_ K_CHECKBOX_ALPHA_DIM  checkboxValue_ False
 K_CHECKBOX_ALPHA_DIM was set False
  -=> 
 
