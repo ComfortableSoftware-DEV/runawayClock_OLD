@@ -1,6 +1,6 @@
 __all__ = [
 		"FM",
-		"FM_TBGLST",
+		"FM_TBGLST_C",
 		"MAKE",
-		"TBGLST",
+		"TBGLST_D",
 ]
