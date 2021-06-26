@@ -31,6 +31,7 @@
 
 #
 
+
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0001 _CHR_ _CONST_
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -297,6 +298,15 @@ NAME_LCL_TOP_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NA
 NAME_LCL_TOP_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_TOP.py"""
 
 
+NAME_LCL_KEYS_PY = lambda __MODULE_NAME__: f"""__KEYS__/{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUB0_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUBD0_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}/{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUBD1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUB2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUBD2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}.py"""
+
+
 STR_SUBST_DICT = {
 	"%CBRCE%": f"""{CBRCE}""",
 	"%CBRKT%": f"""{CBRKT}""",
@@ -337,6 +347,8 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 	f"{ESC}[35m",  # entry for ESC-[35m
 	f"{ESC}[36m",  # entry for ESC-[36m
 ]
+
+#
 
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

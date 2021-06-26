@@ -32,7 +32,14 @@ __ID__ = (
 )
 # ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
 TBGLST = [
-	(("FMAXPSG_SCTN0900_KEY_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py",), __ID__),
+	(("FMAXPSG_SCTN0916_KEY_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><KEY>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEY0_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><KEY>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEY1_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><KEY>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEY2_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><SUB2><KEY>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEYSTR_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><KEY><VAL>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEYSTR0_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><KEY><VAL>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEYSTR1_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><KEY><VAL>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEYSTR2_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><SUB2><KEY><VAL>",), __ID__),
 	(("FMAXPSG_SCTN0900_STR_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>",), __ID__),
 	(("FMAXPSG_SCTN0900_VAL_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "define a value in the first define section in PSG.py <NAC><VALNAME><VAL>",), __ID__),
 	(("FMAXPSG_SCTN0901_DUBLT_SS_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",), __ID__),
