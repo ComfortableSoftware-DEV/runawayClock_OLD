@@ -1,10 +1,7 @@
 
 
-import os
-
-
 from FM import FM
-
+from FM import TBGLST
 
 
 class TBGLST():
@@ -14,22 +11,15 @@ class TBGLST():
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 		self.__TBGLST__ = []
 		self.__RESULT__ = None
+
 		print(f"""swallowing CF""")
-		from FM import FM_TBGLST_CF
-		self.__TBGLST__.extend(FM_TBGLST_CF.TBGLST)
+		self.__TBGLST__.extend(TBGLST._01_CF.TBGLST)
 		print(f"""swallowing FM""")
-		from FM import FM_TBGLST_FM
-		self.__TBGLST__.extend(FM_TBGLST_FM.TBGLST)
+		self.__TBGLST__.extend(TBGLST._02_FM.TBGLST)
 		print(f"""swallowing PSG""")
-		from FM import FM_TBGLST_PSG
-		self.__TBGLST__.extend(FM_TBGLST_PSG.TBGLST)
+		self.__TBGLST__.extend(TBGLST._03_00_PSG.TBGLST)
 		print(f"""swallowing PSG_CLOCKS""")
-		from FM import FM_TBGLST_PSG_CLOCKS_C
-		self.__TBGLST__.extend(FM_TBGLST_PSG_CLOCKS_C.TBGLST)
-
-
-#		for _thisElement_ in self.__TBGLST__:
-#			print(f"""{_thisElement_}""")
+		self.__TBGLST__.extend(TBGLST._03_01_PSG_CLOCKS_C.TBGLST)
 
 		self.__TBGLST__.sort()
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2

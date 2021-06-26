@@ -247,7 +247,22 @@ NAME_LCL_BTM_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NA
 NAME_LCL_BTM_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_BTM.py"""
 NAME_LCL_CLASS_NEW_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C_NEW.py"""
 NAME_LCL_CLASS_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C.py"""
+NAME_LCL_FM_SUB0 = lambda __MODULE_NAME__, __GROUP__, __SUB0__, __NAME__: f"""FM/{__MODULE_NAME__}/_{__GROUP__}_{__SUB0__}_{__NAME__}.py"""
 NAME_LCL_IMG = lambda __FILENAME__: f"""res/IMG/{__FILENAME__}"""
+NAME_LCL_KEYS_NEW_PY = lambda __MODULE_NAME__: f"""__KEYS__/{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_PY = lambda __MODULE_NAME__: f"""__KEYS__/{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUB0_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}_{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUB0_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUB1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUB2_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUB2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUBD0_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}/{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUBD0_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}/{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUBD1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUBD1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUBD2_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUBD2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}.py"""
 NAME_LCL_MD = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}.md"""
 NAME_LCL_NEW_MD = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}_NEW.md"""
 NAME_LCL_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}_NEW.py"""
@@ -255,13 +270,13 @@ NAME_LCL_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}.py"""
 NAME_LCL_PY_RES_NEW_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/{__FILENAME__}_NEW.py"""
 NAME_LCL_PY_RES_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/{__FILENAME__}.py"""
 NAME_LCL_PY_ROOT = lambda __FILENAME__, __EXTENSION__: f"""__ROOT__/{__FILENAME__}.{__EXTENSION__}"""
-NAME_LCL_ROOT_NEW = lambda __FILENAME__, __EXTENSION__: f"""__ROOT__/{__FILENAME__}_NEW.{__EXTENSION__}"""
-NAME_LCL_ROOT_NEW_PY = lambda __FILENAME__: f"""__ROOT__/{__FILENAME__}_NEW.py"""
 NAME_LCL_PY_ROOT_PY = lambda __FILENAME__: f"""__ROOT__/{__FILENAME__}.py"""
 NAME_LCL_RES = lambda __FILENAME__, __EXTENSION__: f"""res/{__FILENAME__}.{__EXTENSION__}"""
 NAME_LCL_RES_NEW = lambda __FILENAME__, __EXTENSION__: f"""res/{__FILENAME__}_NEW.{__EXTENSION__}"""
 NAME_LCL_RES_NEW_PY = lambda __FILENAME__: f"""res/{__FILENAME__}_NEW.py"""
 NAME_LCL_RES_PY = lambda __FILENAME__: f"""res/{__FILENAME__}.py"""
+NAME_LCL_ROOT_NEW = lambda __FILENAME__, __EXTENSION__: f"""__ROOT__/{__FILENAME__}_NEW.{__EXTENSION__}"""
+NAME_LCL_ROOT_NEW_PY = lambda __FILENAME__: f"""__ROOT__/{__FILENAME__}_NEW.py"""
 NAME_LCL_SELF_BTM_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_BTM_NEW.py"""
 NAME_LCL_SELF_BTM_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_BTM.py"""
 NAME_LCL_SELF_CLASS_NEW_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C_NEW.py"""
@@ -296,15 +311,6 @@ NAME_LCL_SELF_TOP_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODU
 NAME_LCL_SELF_TOP_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_TOP.py"""
 NAME_LCL_TOP_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_TOP_NEW.py"""
 NAME_LCL_TOP_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_TOP.py"""
-
-
-NAME_LCL_KEYS_PY = lambda __MODULE_NAME__: f"""__KEYS__/{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUB0_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}_{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUBD0_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}/{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUBD1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUB2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUBD2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}.py"""
 
 
 STR_SUBST_DICT = {
@@ -1199,17 +1205,19 @@ def FM():
 		from FM import FM_parseTBGLST
 		FM_parseTBGLST.parseTBGLST()
 
-		from FM import FM_makeCF
-		FM_makeCF.makeCF()
+		from FM import MAKE
 
-		from FM import FM_makeFM
-		FM_makeFM.makeFM()
+		from MAKE import _01_makeCF
+		_01_makeCF.makeCF()
 
-		from FM import FM_makePSG
-		FM_makePSG.makePSG()
+		from MAKE import _02_makeFM
+		_02_makeFM.makeFM()
 
-		from FM import FM_makePSGClasses
-		FM_makePSGClasses.makePSGClasses()
+		from MAKE import _03_00_makePSG
+		_03_00_makePSG.makePSG()
+
+		from MAKE import _03_01_makePSGClasses
+		_03_01_makePSGClasses.makePSGClasses()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1ff
 
