@@ -281,19 +281,6 @@ self._SERIALZ_ = {self._SERIALZ_}
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
-with SRI(
-		key_="test03",
-) as SRI:
-	_serialNum_ = SRI._THIS_NUM_
-	print(f"""SRI 1
-_serialNum_ {_serialNum_} SRI.serialnumStr {SRI.serialnumStr()}
-""")
-	_serialNum_ = SRI.incSerial()
-	print(f"""SRI 2
-_serialNum_ {_serialNum_} SRI.serialnumStr {SRI.serialnumStr()}
-""")
-
-
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
