@@ -3,7 +3,7 @@
 from FM import FM
 
 
-class TBGLST_C():
+class C_TBGLST():
 	## fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
 	def __init__(self):
@@ -12,13 +12,24 @@ class TBGLST_C():
 		self.__RESULT__ = None
 
 		print(f"""swallowing CF""")
-		self.__TBGLST__.extend(M_01_CF.TBGLST)
+		from FM.TBGLST_D import _01_CF
+		self.__TBGLST__.extend(_01_CF.TBGLST)
+		del _01_CF
+
 		print(f"""swallowing FM""")
-		self.__TBGLST__.extend(TBGLST._02_FM.TBGLST)
+		from FM.TBGLST_D import _02_FM
+		self.__TBGLST__.extend(_02_FM.TBGLST)
+		del _02_FM
+
 		print(f"""swallowing PSG""")
-		self.__TBGLST__.extend(TBGLST._03_00_PSG.TBGLST)
-		print(f"""swallowing PSG_CLOCKS""")
-		self.__TBGLST__.extend(TBGLST._03_01_PSG_CLOCKS_C.TBGLST)
+		from FM.TBGLST_D import _03_00_PSG
+		self.__TBGLST__.extend(_03_00_PSG.TBGLST)
+		del _03_00_PSG
+
+		print(f"""swallowing PSG""")
+		from FM.TBGLST_D import _03_01_PSG_CLOCKS_C
+		self.__TBGLST__.extend(_03_01_PSG_CLOCKS_C.TBGLST)
+		del _03_01_PSG_CLOCKS_C
 
 		self.__TBGLST__.sort()
 		# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2

@@ -12,8 +12,7 @@ class TBGLST_C():
 		self.__RESULT__ = None
 
 		print(f"""swallowing CF""")
-		from FM.TBGLST_D import _01_makeCF
-		self.__TBGLST__.extend(_01_CF.TBGLST)
+		self.__TBGLST__.extend(M_01_CF.TBGLST)
 		print(f"""swallowing FM""")
 		self.__TBGLST__.extend(TBGLST._02_FM.TBGLST)
 		print(f"""swallowing PSG""")
