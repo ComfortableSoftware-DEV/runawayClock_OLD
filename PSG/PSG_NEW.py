@@ -235,6 +235,7 @@ K_K_EVENT_NAME = "K_K_EVENT_NAME"  # this entry's name
 K_K_TIME_S_AT_ALARM = "K_K_TIME_S_AT_ALARM"  # time of this event if it an alarm
 K_LIST_ALL_TIMES = "K_LIST_ALL_TIMES"  # list of all times
 K_LIST_APPDS_MIDNIGHT_FIX_TIMES = "K_LIST_APPDS_MIDNIGHT_FIX_TIMES"  # list of times to be updated at midnight
+K_LIST_APPDS_TIMES_TO_INT = "K_LIST_APPDS_TIMES_TO_INT"  # list of all times that need to be checked and inted, will NOT affect version, 
 K_LIST_CLOSE = "K_LIST_CLOSE"  # list with close statuses
 K_LIST_DNUPDATE = "K_LIST_DNUPDATE"  # list of all element key not to update through the normal methods (checkboxes, etc. that need to be updated differently)
 K_LIST_KEYS_TIME = "K_LIST_KEYS_TIME"  # 
@@ -288,6 +289,7 @@ K_SZ_TIME_MS_BETWEEN_UPDATES = "K_SZ_TIME_MS_BETWEEN_UPDATES"  # time_ms between
 K_SZ_TIME_MS_TO_HIDE = "K_SZ_TIME_MS_TO_HIDE"  # unhide after this time
 K_SZ_TIME_S_BETWEEN_PERIODIC_JOB = "K_SZ_TIME_S_BETWEEN_PERIODIC_JOB"  # time between periodic job runnings
 K_SZ_TIMEOUT_MS = "K_SZ_TIMEOUT_MS"  # timeout for PSG
+K_THIS_CLASS = "K_THIS_CLASS"  # set the class name
 K_THIS_FORM_NAME = "K_THIS_FORM_NAME"  # adopt formName_
 K_THIS_KEY_BASE = "K_THIS_KEY_BASE"  # adopt keyBase_
 K_TIME_H_ADJUST_HRS = "K_TIME_H_ADJUST_HRS"  # comment
@@ -597,6 +599,10 @@ LIST_APPDS_MIDNIGHT_FIX_TIMES = [  # list of times to be updated at midnight
 	K_TIME_MS_AT_MOVE,  # list of times to be updated at midnight
 	K_TIME_MS_AT_UPDATE,  # list of times to be updated at midnight
 	K_TIME_S_AT_NEXT_ALERT,  # list of times to be updated at midnight
+]
+
+
+LIST_APPDS_TIMES_TO_INT = [  # list of all times that need to be checked and inted, will NOT affect version, 
 ]
 
 

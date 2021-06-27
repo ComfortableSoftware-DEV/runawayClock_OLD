@@ -4,7 +4,7 @@ import os
 
 
 __all__ = [
-		"_00_00_MTBL_C"
+		"MTBL_C"
 		"_01_CF",
 		"_02_FM",
 		"_03_00_PSG",

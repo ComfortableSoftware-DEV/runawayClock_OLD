@@ -1205,19 +1205,17 @@ def FM():
 		from FM import FM_parseTBGLST
 		FM_parseTBGLST.parseTBGLST()
 
-		from FM import MAKE
+		from FM.MAKE import _01_CF
+		_01_CF.makeCF()
 
-		from MAKE import _01_makeCF
-		_01_makeCF.makeCF()
+		from FM.MAKE import _02_FM
+		_02_FM.makeFM()
 
-		from MAKE import _02_makeFM
-		_02_makeFM.makeFM()
+		from FM.MAKE import _03_00_PSG
+		_03_00_PSG.makePSG()
 
-		from MAKE import _03_00_makePSG
-		_03_00_makePSG.makePSG()
-
-		from MAKE import _03_01_makePSGClasses
-		_03_01_makePSGClasses.makePSGClasses()
+		from FM.MAKE import _03_01_PSGClasses
+		_03_01_PSGClasses.makePSGClasses()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1ff
 

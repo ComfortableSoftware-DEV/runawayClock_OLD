@@ -25,6 +25,7 @@ class CLOCKS_C(object):
 		self._DICT_KEYS_ = {}  # 
 		self._DICT_KEYS_REVERSE_ = {}  # 
 		self._LIST_KEYS_TIME_ = []  # 
+		self._THIS_CLASS_ = CLOCKS  # set the class name
 		self._THIS_FORM_NAME_ = formName_  # adopt formName_
 
 		self._ALPHA_CHANNEL_ = PSG.SZ_ALPHA_HIGH  # 

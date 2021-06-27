@@ -246,7 +246,22 @@ NAME_LCL_BTM_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NA
 NAME_LCL_BTM_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_BTM.py"""
 NAME_LCL_CLASS_NEW_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C_NEW.py"""
 NAME_LCL_CLASS_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C.py"""
+NAME_LCL_FM_SUB0 = lambda __MODULE_NAME__, __GROUP__, __SUB0__, __NAME__: f"""FM/{__MODULE_NAME__}/_{__GROUP__}_{__SUB0__}_{__NAME__}.py"""
 NAME_LCL_IMG = lambda __FILENAME__: f"""res/IMG/{__FILENAME__}"""
+NAME_LCL_KEYS_NEW_PY = lambda __MODULE_NAME__: f"""__KEYS__/{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_PY = lambda __MODULE_NAME__: f"""__KEYS__/{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUB0_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}_{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUB0_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUB1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUB2_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUB2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUBD0_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}/{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUBD0_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}/{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUBD1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUBD1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__MODULE_NAME__}.py"""
+NAME_LCL_KEYS_SUBD2_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_KEYS_SUBD2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}.py"""
 NAME_LCL_MD = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}.md"""
 NAME_LCL_NEW_MD = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}_NEW.md"""
 NAME_LCL_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}_NEW.py"""
@@ -254,13 +269,13 @@ NAME_LCL_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}.py"""
 NAME_LCL_PY_RES_NEW_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/{__FILENAME__}_NEW.py"""
 NAME_LCL_PY_RES_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/{__FILENAME__}.py"""
 NAME_LCL_PY_ROOT = lambda __FILENAME__, __EXTENSION__: f"""__ROOT__/{__FILENAME__}.{__EXTENSION__}"""
-NAME_LCL_ROOT_NEW = lambda __FILENAME__, __EXTENSION__: f"""__ROOT__/{__FILENAME__}_NEW.{__EXTENSION__}"""
-NAME_LCL_ROOT_NEW_PY = lambda __FILENAME__: f"""__ROOT__/{__FILENAME__}_NEW.py"""
 NAME_LCL_PY_ROOT_PY = lambda __FILENAME__: f"""__ROOT__/{__FILENAME__}.py"""
 NAME_LCL_RES = lambda __FILENAME__, __EXTENSION__: f"""res/{__FILENAME__}.{__EXTENSION__}"""
 NAME_LCL_RES_NEW = lambda __FILENAME__, __EXTENSION__: f"""res/{__FILENAME__}_NEW.{__EXTENSION__}"""
 NAME_LCL_RES_NEW_PY = lambda __FILENAME__: f"""res/{__FILENAME__}_NEW.py"""
 NAME_LCL_RES_PY = lambda __FILENAME__: f"""res/{__FILENAME__}.py"""
+NAME_LCL_ROOT_NEW = lambda __FILENAME__, __EXTENSION__: f"""__ROOT__/{__FILENAME__}_NEW.{__EXTENSION__}"""
+NAME_LCL_ROOT_NEW_PY = lambda __FILENAME__: f"""__ROOT__/{__FILENAME__}_NEW.py"""
 NAME_LCL_SELF_BTM_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_BTM_NEW.py"""
 NAME_LCL_SELF_BTM_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_BTM.py"""
 NAME_LCL_SELF_CLASS_NEW_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C_NEW.py"""
@@ -348,6 +363,7 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 # * SCTN101 FMAX _DEF_
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 FMAX_NOP = "FMAX_NOP"  # ignore the remainder of the line
+FMAX_SCTNS_DEF = "FMAX_SCTNS_DEF"  # define the sections <NAC><SCTN><MODULE><SUB0><SUB1><SUB2><DESCRIPTION>
 FMAXCF_SCTN0003_LAMBDA_DEF = "FMAXCF_SCTN0003_LAMBDA_DEF"  # define a lambda function <NAC><K_EVENT_NAME><lambda str>
 FMAXCF_SCTN0003_TYPE_DEF = "FMAXCF_SCTN0003_TYPE_DEF"  # define a fake type used in the translation dict <NAC><K_EVENT_NAME><TYPE>
 FMAXCF_SCTN0201_STR_DEF = "FMAXCF_SCTN0201_STR_DEF"  # define a STR in SCTN0201 <NAC><K_EVENT_NAME><str>
@@ -374,7 +390,6 @@ FMAXFM_SCTN0105_LDICT_DEF = "FMAXFM_SCTN0105_LDICT_DEF"  # define a dict for FM 
 FMAXFM_SCTN0105_LDICT_VS_ADD = "FMAXFM_SCTN0105_LDICT_VS_ADD"  # define a dict for FM <NAC>
 FMAXFM_SCTN0105_LDICT_VV_ADD = "FMAXFM_SCTN0105_LDICT_VV_ADD"  # define a dict for FM <NAC>
 FMAXFM_SCTN0106_SCTN_DEF = "FMAXFM_SCTN0106_SCTN_DEF"  # define the SCTN all over the place <NAC><SCTNNAME><DESCRIPTION0>
-FMAXPSG_SCTN0900_KEY_DEF = "FMAXPSG_SCTN0900_KEY_DEF"  # put a key in def1 of PSG.py
 FMAXPSG_SCTN0900_STR_DEF = "FMAXPSG_SCTN0900_STR_DEF"  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
 FMAXPSG_SCTN0900_VAL_DEF = "FMAXPSG_SCTN0900_VAL_DEF"  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
 FMAXPSG_SCTN0901_DUBLT_SS_DEF = "FMAXPSG_SCTN0901_DUBLT_SS_DEF"  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
@@ -475,6 +490,14 @@ FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD = "FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD"  # a
 FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD = "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
 FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD = "FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
 FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD = "FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+FMAXPSG_SCTN0916_KEY0_DEF = "FMAXPSG_SCTN0916_KEY0_DEF"  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><KEY>
+FMAXPSG_SCTN0916_KEY1_DEF = "FMAXPSG_SCTN0916_KEY1_DEF"  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><KEY>
+FMAXPSG_SCTN0916_KEY2_DEF = "FMAXPSG_SCTN0916_KEY2_DEF"  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><SUB2><KEY>
+FMAXPSG_SCTN0916_KEY_DEF = "FMAXPSG_SCTN0916_KEY_DEF"  # put a key in def1 of PSG.py <NAC><KEYGROUP><KEY>
+FMAXPSG_SCTN0916_KEYSTR0_DEF = "FMAXPSG_SCTN0916_KEYSTR0_DEF"  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><KEY><VAL>
+FMAXPSG_SCTN0916_KEYSTR1_DEF = "FMAXPSG_SCTN0916_KEYSTR1_DEF"  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><KEY><VAL>
+FMAXPSG_SCTN0916_KEYSTR2_DEF = "FMAXPSG_SCTN0916_KEYSTR2_DEF"  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><SUB2><KEY><VAL>
+FMAXPSG_SCTN0916_KEYSTR_DEF = "FMAXPSG_SCTN0916_KEYSTR_DEF"  # put a key in def1 of PSG.py <NAC><KEYGROUP><KEY><VAL>
 FMAXPSG_SCTN09FF_CLASS_BTN_DEF = "FMAXPSG_SCTN09FF_CLASS_BTN_DEF"  # define a button <NAC><CLASSNAME><BTNNAME>
 FMAXPSG_SCTN09FF_CLASS_BTN_STR_ADD = "FMAXPSG_SCTN09FF_CLASS_BTN_STR_ADD"  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
 FMAXPSG_SCTN09FF_CLASS_BTN_VAL_ADD = "FMAXPSG_SCTN09FF_CLASS_BTN_VAL_ADD"  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
@@ -572,6 +595,7 @@ FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD = "FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD" 
 
 FMAXFM_AXLST = [
 	FMAX_NOP,  # ignore the remainder of the line
+	FMAX_SCTNS_DEF,  # define the sections <NAC><SCTN><MODULE><SUB0><SUB1><SUB2><DESCRIPTION>
 	FMAXCF_SCTN0003_LAMBDA_DEF,  # define a lambda function <NAC><K_EVENT_NAME><lambda str>
 	FMAXCF_SCTN0003_TYPE_DEF,  # define a fake type used in the translation dict <NAC><K_EVENT_NAME><TYPE>
 	FMAXCF_SCTN0201_STR_DEF,  # define a STR in SCTN0201 <NAC><K_EVENT_NAME><str>
@@ -598,7 +622,6 @@ FMAXFM_AXLST = [
 	FMAXFM_SCTN0105_LDICT_VS_ADD,  # define a dict for FM <NAC>
 	FMAXFM_SCTN0105_LDICT_VV_ADD,  # define a dict for FM <NAC>
 	FMAXFM_SCTN0106_SCTN_DEF,  # define the SCTN all over the place <NAC><SCTNNAME><DESCRIPTION0>
-	FMAXPSG_SCTN0900_KEY_DEF,  # put a key in def1 of PSG.py
 	FMAXPSG_SCTN0900_STR_DEF,  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
 	FMAXPSG_SCTN0900_VAL_DEF,  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
 	FMAXPSG_SCTN0901_DUBLT_SS_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
@@ -699,6 +722,14 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
 	FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
 	FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+	FMAXPSG_SCTN0916_KEY0_DEF,  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><KEY>
+	FMAXPSG_SCTN0916_KEY1_DEF,  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><KEY>
+	FMAXPSG_SCTN0916_KEY2_DEF,  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><SUB2><KEY>
+	FMAXPSG_SCTN0916_KEY_DEF,  # put a key in def1 of PSG.py <NAC><KEYGROUP><KEY>
+	FMAXPSG_SCTN0916_KEYSTR0_DEF,  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><KEY><VAL>
+	FMAXPSG_SCTN0916_KEYSTR1_DEF,  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><KEY><VAL>
+	FMAXPSG_SCTN0916_KEYSTR2_DEF,  # put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><SUB2><KEY><VAL>
+	FMAXPSG_SCTN0916_KEYSTR_DEF,  # put a key in def1 of PSG.py <NAC><KEYGROUP><KEY><VAL>
 	FMAXPSG_SCTN09FF_CLASS_BTN_DEF,  # define a button <NAC><CLASSNAME><BTNNAME>
 	FMAXPSG_SCTN09FF_CLASS_BTN_STR_ADD,  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
 	FMAXPSG_SCTN09FF_CLASS_BTN_VAL_ADD,  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
