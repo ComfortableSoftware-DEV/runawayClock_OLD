@@ -280,6 +280,9 @@ NAME_LCL_SUBD0_SUB2_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__, __SUB2__: 
 NAME_LCL_SUBD0_SUB3_NEW_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__, __SUB2__, __SUB3__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_NEW.py"""
 NAME_LCL_SUBD0_SUB3_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__, __SUB2__, __SUB3__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}.py"""
 
+NAME_LCL_SUBD0_SUB3_C_NEW_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__, __SUB2__, __SUB3__, __CLASS__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_C_NEW.py"""
+NAME_LCL_SUBD0_SUB3_C_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__, __SUB2__, __SUB3__, __CLASS__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_C.py"""
+
 
 STR_SUBST_DICT = {
 	"%CBRCE%": f"""{CBRCE}""",

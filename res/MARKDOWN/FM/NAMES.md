@@ -40,13 +40,14 @@ NAME_LCL_SUB1_C_NEW_PY                       | \_\_MODULE_NAME__/\_\_SUB0__&nbsp
 NAME_LCL_SUB1_C_PY                           | \_\_MODULE_NAME__/\_\_SUB0__&nbsp;\_\_SUB1__&nbsp;\_\_CLASS__\_C.py                          | CF/_03_01_PSGClasses.py                             | two deep ordered sub class
 NAME_LCL_SUBD0_C_NEW_PY                      | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_CLASS__&nbsp;_NEW.py                                       | FM/MAKE/MTBL_C_NEW.py                               | straight classes in a subdirectory
 NAME_LCL_SUBD0_C_PY                          | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_CLASS__.py                                                 | FM/MAKE/MTBL_C.py                                   | straight classes in a subdirectory
-NAME_LCL_SUBD0_SUB2_NEW_PY                   | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_SUB1__&nbsp;\_\_SUB2__&nbsp;_NEW.py                        | FM/MAKE/\_01_CF_NEW.py                              | subordered submodules 2 deep _NEW
-NAME_LCL_SUBD0_SUB2_PY                       | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_SUB1__&nbsp;\_\_SUB2__                                     | FM/MAKE/\_01_CF.py                                  | subordered submodules 2 deep
-NAME_LCL_SUBD0_SUB3_NEW_PY                   | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_SUB1__&nbsp;\_\_SUB2__&nbsp;\_\_SUB3__&nbsp;\_NEW.py       | FM/MAKE/_03_00_PSG_NEW.py                           | ordered submodules 3 deep _NEW
-NAME_LCL_SUBD0_SUB3_PY                       | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_SUB1__&nbsp;\_\_SUB2__&nbsp;\_\_SUB3__.py                  | FM/MAKE/_03_00_PSG.py                               | ordered submodules 3 deep
 NAME_LCL_SUBD0_SUB1_NEW_PY                   | \_\_MODULE_NAME__&nbsp;\_\_SUBD0__&nbsp;\_\_SUB1__&nbsp;_NEW.py                              |                                                     |
 NAME_LCL_SUBD0_SUB1_PY                       | \_\_MODULE_NAME__&nbsp;\_\_SUBD0__&nbsp;\_\_SUB1__.py                                        |                                                     |
-
+NAME_LCL_SUBD0_SUB2_NEW_PY                   | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_SUB1__&nbsp;\_\_SUB2__&nbsp;_NEW.py                        | FM/MAKE/\_01_CF_NEW.py                              | subordered submodules 2 deep _NEW
+NAME_LCL_SUBD0_SUB2_PY                       | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_SUB1__&nbsp;\_\_SUB2__                                     | FM/MAKE/\_01_CF.py                                  | subordered submodules 2 deep
+NAME_LCL_SUBD0_SUB3_C_NEW_PY                 | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_SUB1__&nbsp;\_\_SUB2__&nbsp;\_\_SUB3__&nbsp;\_C_NEW.py     |                                                     |
+NAME_LCL_SUBD0_SUB3_C_PY                     | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_SUB1__&nbsp;\_\_SUB2__&nbsp;\_\_SUB3__&nbsp;\_C.py         |                                                     |
+NAME_LCL_SUBD0_SUB3_NEW_PY                   | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_SUB1__&nbsp;\_\_SUB2__&nbsp;\_\_SUB3__&nbsp;\_NEW.py       | FM/MAKE/_03_00_PSG_NEW.py                           | ordered submodules 3 deep _NEW
+NAME_LCL_SUBD0_SUB3_PY                       | \_\_MODULE_NAME__/\_\_SUBD0__/\_\_SUB1__&nbsp;\_\_SUB2__&nbsp;\_\_SUB3__.py                  | FM/MAKE/_03_00_PSG.py                               | ordered submodules 3 deep
 
 
 
