@@ -12,7 +12,7 @@ def makePSGClasses():
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	for _thisClassName_, _theseVars_ in _dictToUse1_.items():
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
-		with open(f"""{FM.NAME_LCL_SELF_CLASS_NEW_PY(__CLASS__=_thisClassName_, __MODULE_NAME__="PSG",)}""", "tw") as _FDmakePSGClasses_:
+		with open(f"""{FM.NAME_LCL_SELF_C_NEW_PY(__CLASS__=_thisClassName_, __MODULE_NAME__="PSG",)}""", "tw") as _FDmakePSGClasses_:
 			_FDmakePSGClasses_.write(f"""{FM.NEWLINE}
 from CF import CF
 from PSG import PSG
