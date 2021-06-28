@@ -263,9 +263,16 @@ NAME_LCL_SELF_C_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{_
 NAME_LCL_SUB0_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__CLASS__}_C_NEW.py"""
 NAME_LCL_SUB0_C_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__CLASS__}_C.py"""
 
+# __MODULE_NAME__/__SUB1__.py
+NAME_LCL_SUB1_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__SUB1__}_{__CLASS__}_C_NEW.py"""
+NAME_LCL_SUB1_C_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__SUB1__}_{__CLASS__}_C.py"""
+
 # __MODULE_NAME__/__SUB0__.py
 NAME_LCL_SUBD0_C_NEW_PY = lambda __MODULE_NAME__, __SUBD0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUBD0__}/{__CLASS__}_C_NEW.py"""
 NAME_LCL_SUBD0_C_PY = lambda __MODULE_NAME__, __SUBD0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUBD0__}/{__CLASS__}_C.py"""
+
+NAME_LCL_SUBD0_SUB1_NEW_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}_NEW.py"""
+NAME_LCL_SUBD0_SUB1_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}.py"""
 
 NAME_LCL_SUBD0_SUB2_NEW_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__, __SUB2__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}_{__SUB2__}_NEW.py"""
 NAME_LCL_SUBD0_SUB2_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__, __SUB2__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}_{__SUB2__}.py"""

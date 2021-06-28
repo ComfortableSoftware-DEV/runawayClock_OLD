@@ -297,7 +297,7 @@ _filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_MOD_PY(
 {FM.NTAB(1)}__MODULE_NAME__=_moduleName_
 ){FM.NEWLINE}{FM.CBRCE}{FM.TRIQT}  # {_filename_}
 {FM.MARK0MID("")}
-_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_NEW_PY(
+_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_MOD_NEW_PY(
 {FM.NTAB(1)}__MODULE_NAME__=_moduleName_
 ){FM.NEWLINE}{FM.CBRCE}{FM.TRIQT}  # {_newFilename_}
 {FM.MARK0MID("")}
@@ -335,7 +335,7 @@ _filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_MOD_SUB0_PY(
 {FM.NTAB(1)}__SUB0__=_sub0_,
 ){FM.CBRCE}{FM.TRIQT}  # {_filename_}
 {FM.MARK0MID("")}
-_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SUB0_NEW_PY(
+_newFilename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_MOD_SUB0_NEW_PY(
 {FM.NTAB(1)}__MODULE_NAME__=_moduleName_,
 {FM.NTAB(1)}__SUB0__=_sub0_,
 ){FM.CBRCE}{FM.TRIQT}  # {_newFilename_}
