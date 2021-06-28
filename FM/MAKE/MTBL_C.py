@@ -269,6 +269,16 @@ class C_MTBL():
 		_sub0_ = IDIn_.get("__SUB0__")
 		_sub1_ = IDIn_.get("__SUB1__")
 		_sub2_ = IDIn_.get("__SUB2__")
+		print(f"""startLCLNewFile
+IDIn_ {IDIn_} = self.makeDictID(IDToWrt_)
+_class_ {_class_} = IDIn_.get("__CLASS__")
+_filename_ {_filename_} = IDIn_.get("__FILENAME__")
+_moduleName_ {_moduleName_} = IDIn_.get("__MODULE_NAME__")
+_newFilename_ {_newFilename_} = IDIn_.get("__NEW_FILENAME__")
+_sub0_ {_sub0_} = IDIn_.get("__SUB0__")
+_sub1_ {_sub1_} = IDIn_.get("__SUB1__")
+_sub2_ {_sub2_} = IDIn_.get("__SUB2__")
+""")
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (
 				(_filename_ is None) or

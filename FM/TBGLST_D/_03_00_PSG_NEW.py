@@ -1,54 +1,3 @@
-
-
-from FM import FM
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of FM TBGLST CF
-#  No such file or directory: '_01/_01_CF_NEW.py'
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-_moduleName_ = "FM"
-_sub0_ = "TBGLST_D"
-_sub1_ = "_03"
-_sub2_ = "00"
-_sub3_ = "PSG"
-# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-_filename_ = f"""{FM.NAME_LCL_SUBD0_SUB3_PY(
-	__MODULE_NAME__=_moduleName_,
-	__SUB0__=_sub0_,
-	__SUB1__=_sub1_,
-	__SUB2__=_sub2_,
-	__SUB3__=_sub3_,
-)}"""  # FM/FM_TBGLST_CF.py
-# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-_newFilename_ = f"""{FM.NAME_LCL_SUBD0_SUB3_NEW_PY(
-	__MODULE_NAME__=_moduleName_,
-	__SUB0__=_sub0_,
-	__SUB1__=_sub1_,
-	__SUB2__=_sub2_,
-	__SUB3__=_sub3_,
-)}"""  # FM/FM_TBGLST_CF_NEW.py
-# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-__ID__ = (
-	("__FILENAME__", _filename_,),  # FM/FM_TBGLST_CF.py
-	("__MODULE_NAME__", _moduleName_,),  # FM
-	("__NEW_FILENAME__", _newFilename_,),  # FM/FM_TBGLST_CF_NEW.py
-	("__SUB0__", _sub0_,),  # TBGLST
-	("__SUB1__", _sub1_,),
-	("__SUB2__", _sub2_,),
-	("__SUB3__", _sub3_,),
-)
-# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-TBGLST = [
-	(("FMAXPSG_SCTN0916_KEY_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><KEY>",), __ID__),
-	(("FMAXPSG_SCTN0916_KEY0_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><KEY>",), __ID__),
-	(("FMAXPSG_SCTN0916_KEY1_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><KEY>",), __ID__),
-	(("FMAXPSG_SCTN0916_KEY2_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><SUB2><KEY>",), __ID__),
-	(("FMAXPSG_SCTN0916_KEYSTR_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><KEY><VAL>",), __ID__),
-	(("FMAXPSG_SCTN0916_KEYSTR0_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><KEY><VAL>",), __ID__),
-	(("FMAXPSG_SCTN0916_KEYSTR1_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><KEY><VAL>",), __ID__),
-	(("FMAXPSG_SCTN0916_KEYSTR2_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><SUB2><KEY><VAL>",), __ID__),
 	(("FMAXPSG_SCTN0900_STR_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>",), __ID__),
 	(("FMAXPSG_SCTN0900_VAL_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "define a value in the first define section in PSG.py <NAC><VALNAME><VAL>",), __ID__),
 	(("FMAXPSG_SCTN0901_DUBLT_SS_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>",), __ID__),
@@ -149,6 +98,14 @@ TBGLST = [
 	(("FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", FM.FMAXFM_SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",), __ID__),
 	(("FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD", FM.FMAXFM_SCTN0101_AX_DEF, "add a str to a text element <NAC><POPUPNAME><KEY><VAL>",), __ID__),
 	(("FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD", FM.FMAXFM_SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEY0_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><KEY>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEY1_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><KEY>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEY2_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><SUB2><KEY>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEYSTR0_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><KEY><VAL>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEYSTR1_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><KEY><VAL>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEYSTR2_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><SUB0><SUB1><SUB2><KEY><VAL>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEYSTR_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><KEY><VAL>",), __ID__),
+	(("FMAXPSG_SCTN0916_KEY_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "put a key in def1 of PSG.py <NAC><KEYGROUP><KEY>",), __ID__),
 	(("FMAXPSG_SCTN09FF_CLASS_BTN_DEF", FM.FMAXFM_SCTN0101_AX_DEF, "define a button <NAC><CLASSNAME><BTNNAME>",), __ID__),
 	(("FMAXPSG_SCTN09FF_CLASS_BTN_STR_ADD", FM.FMAXFM_SCTN0101_AX_DEF, "add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>",), __ID__),
 	(("FMAXPSG_SCTN09FF_CLASS_BTN_VAL_ADD", FM.FMAXFM_SCTN0101_AX_DEF, "add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>",), __ID__),
@@ -488,6 +445,7 @@ TBGLST = [
 	(("PSGVAL_KEY_TIME_S_LEN_OF_ALERT", FM.FMAXPSG_SCTN0916_KEY_DEF, "TIMES", "K_TIME_S_LEN_OF_ALERT", "length of alerting",), __ID__),
 	(("PSGVAL_KEY_TIME_S_TOGO", FM.FMAXPSG_SCTN0916_KEY_DEF, "TIMES", "K_TIME_S_TOGO", "down counter to next event on this window/alarm/interval/reminder",), __ID__),
 	(("PSGVAL_KEY_VERSION", FM.FMAXPSG_SCTN0916_KEY_DEF, "APPDS", "K_VERSION", "True if pkl is to be updated from APPDS_MAIN",), __ID__),
+	(("PSGVAL_LIST_APPDS_TIMES_TO_INT", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_APPDS_TIMES_TO_INT", "list of all times that need to be checked and inted, will NOT affect version, ",), __ID__),
 	(("PSGVAL_LIST_CLOSE", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_CLOSE", "list with close statuses",), __ID__),
 	(("PSGVAL_LIST_CLOSE01", FM.FMAXPSG_SCTN0903_LIST_VAL_ADD, "LIST_CLOSE", "MOUSE_STATUS_CLOSE_E", "easet close entry",), __ID__),
 	(("PSGVAL_LIST_CLOSE01", FM.FMAXPSG_SCTN0903_LIST_VAL_ADD, "LIST_CLOSE", "MOUSE_STATUS_CLOSE_N", "easet close entry",), __ID__),
@@ -501,9 +459,6 @@ TBGLST = [
 	(("PSGVAL_LIST_DNUPDATE01", FM.FMAX_NOP, "FMAXPSG_SCTN0903_LIST_VAL_ADD", "LIST_DNUPDATE", "K_LIST_FLIP_INFO", "deal with the list of names for the event(s) to come",), __ID__),
 	(("PSGVAL_LIST_THIS_ALARM_POPUP_TEXT00", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_THIS_ALARM_POPUP_TEXT", "collects the text to popup",), __ID__),
 	(("PSGVAL_LIST_THIS_ALARM_POPUP_TEXT01", FM.FMAXPSG_SCTN0903_LIST_STR_ADD, "LIST_THIS_ALARM_POPUP_TEXT", "One or more events has alerted at %NOWS%", "collects the text to popup",), __ID__),
-
-	(("PSGVAL_LIST_APPDS_TIMES_TO_INT", FM.FMAXPSG_SCTN0903_LIST_DEF, "LIST_APPDS_TIMES_TO_INT", "list of all times that need to be checked and inted, will NOT affect version, ",), __ID__,),
-
 	(("PSGVAL_SZ_ALERT_TEXT", FM.FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALERT_TEXT", "20", "font size of alert text",), __ID__),
 	(("PSGVAL_SZ_ALPHA_DIM", FM.FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_DIM", "True", "default alpha dim state",), __ID__),
 	(("PSGVAL_SZ_ALPHA_HIGH", FM.FMAXPSG_SCTN0900_VAL_DEF, "SZ_ALPHA_HIGH", "1.0", "high alpha",), __ID__),
@@ -608,6 +563,7 @@ TBGLST = [
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "holds events",), __ID__),
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_ALARMPOPUP_TEXT_TEXT", "clean up for bed", "alarm text for this event",), __ID__),
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_EVENT_NAME", "PREBED", "this entry's name",), __ID__),
+	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_TIME_S_AT_ALARM", "03:30:00", "time of this event if it an alarm",), __ID__),
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_AUTO_CLOSE_DURATION", "0", "auto close alert time of this event",), __ID__),
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_CURRENT_INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",), __ID__),
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_DISMISSED", "False", "is this event dismissed",), __ID__),
@@ -619,7 +575,6 @@ TBGLST = [
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_PREDISMISSABLE", "True", "is this event dismissable in advance",), __ID__),
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_SNOOZABLE", "False", "can this event be snoozed",), __ID__),
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_SNOOZED", "False", "is this event snoozed",), __ID__),
-	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_TIME_S_AT_ALARM", "03:30:00", "time of this event if it an alarm",), __ID__),
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_TIME_S_AT_LAST_RUN", "0", "time this alarm last ran, now if running",), __ID__),
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_TIME_S_AT_NEXT_ALERT", "ZERO_CLOCK", "time next time this alarm goes off",), __ID__),
 	(("PSGVAL__APPDS_MAIN_04", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "2", "K_TIME_S_INTERVAL", "None", "interval of this event",), __ID__),
@@ -630,6 +585,7 @@ TBGLST = [
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "holds events",), __ID__),
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_ALARMPOPUP_TEXT_TEXT", "off to bed", "alarm text for this event",), __ID__),
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_EVENT_NAME", "TOBED", "this entry's name",), __ID__),
+	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_TIME_S_AT_ALARM", "04:00:00", "time of this event if it an alarm",), __ID__),
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_AUTO_CLOSE_DURATION", "0", "auto close alert time of this event",), __ID__),
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_CURRENT_INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",), __ID__),
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_DISMISSED", "False", "is this event dismissed",), __ID__),
@@ -641,7 +597,6 @@ TBGLST = [
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_PREDISMISSABLE", "True", "is this event dismissable in advance",), __ID__),
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_SNOOZABLE", "False", "can this event be snoozed",), __ID__),
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_SNOOZED", "False", "is this event snoozed",), __ID__),
-	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_TIME_S_AT_ALARM", "04:00:00", "time of this event if it an alarm",), __ID__),
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_TIME_S_AT_LAST_RUN", "0", "time this alarm last ran, now if running",), __ID__),
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_TIME_S_AT_NEXT_ALERT", "ZERO_CLOCK", "time next time this alarm goes off",), __ID__),
 	(("PSGVAL__APPDS_MAIN_05", FM.FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "3", "K_TIME_S_INTERVAL", "None", "interval of this event",), __ID__),
@@ -1132,7 +1087,7 @@ TBGLST = [
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * end of FM/FM_TBGLST_PSG_NEW.py
+# * end of FM/TBGLST_D/_03_00_PSG_NEW.py
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #

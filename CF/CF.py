@@ -22,6 +22,7 @@ import gc
 import hashlib as HL
 import inspect
 import os.path as OSPATH
+import pickle as PD
 import pprint
 
 
@@ -116,7 +117,6 @@ HASH_sha3_384 = HL.sha3_384()  # 48 byte hash
 HASH_sha3_512 = HL.sha3_512()  # 64 byte hash
 HASH_sha384 = HL.sha384()  # 48 byte hash",),
 HASH_sha512 = HL.sha512()  # 64 byte hash",),
-
 
 #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0001 _CHR_ _CONST_
@@ -329,68 +329,28 @@ NAME_HOME_SELF_CACHE = lambda __MODULE_NAME__, __FILENAME__: f"""/home/will/.cac
 NAME_HOME_SELF_CONFIG = lambda __MODULE_NAME__, __FILENAME__: f"""/home/will/.config/{__MODULE_NAME__}/{__FILENAME__}"""
 
 
-NAME_LCL_BTM_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_BTM_NEW.py"""
-NAME_LCL_BTM_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_BTM.py"""
-NAME_LCL_CLASS_NEW_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C_NEW.py"""
-NAME_LCL_CLASS_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C.py"""
-NAME_LCL_IMG = lambda __FILENAME__: f"""res/IMG/{__FILENAME__}"""
-NAME_LCL_MD = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}.md"""
-NAME_LCL_NEW_MD = lambda __FILENAME__: f"""res/MARKDOWN/{__FILENAME__}_NEW.md"""
-NAME_LCL_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}_NEW.py"""
-NAME_LCL_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}.py"""
-NAME_LCL_PY_RES_NEW_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/{__FILENAME__}_NEW.py"""
-NAME_LCL_PY_RES_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/{__FILENAME__}.py"""
-NAME_LCL_PY_ROOT = lambda __FILENAME__, __EXTENSION__: f"""__ROOT__/{__FILENAME__}.{__EXTENSION__}"""
-NAME_LCL_ROOT_NEW = lambda __FILENAME__, __EXTENSION__: f"""__ROOT__/{__FILENAME__}_NEW.{__EXTENSION__}"""
-NAME_LCL_ROOT_NEW_PY = lambda __FILENAME__: f"""__ROOT__/{__FILENAME__}_NEW.py"""
-NAME_LCL_PY_ROOT_PY = lambda __FILENAME__: f"""__ROOT__/{__FILENAME__}.py"""
-NAME_LCL_RES = lambda __FILENAME__, __EXTENSION__: f"""res/{__FILENAME__}.{__EXTENSION__}"""
-NAME_LCL_RES_NEW = lambda __FILENAME__, __EXTENSION__: f"""res/{__FILENAME__}_NEW.{__EXTENSION__}"""
-NAME_LCL_RES_NEW_PY = lambda __FILENAME__: f"""res/{__FILENAME__}_NEW.py"""
-NAME_LCL_RES_PY = lambda __FILENAME__: f"""res/{__FILENAME__}.py"""
-NAME_LCL_SELF_BTM_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_BTM_NEW.py"""
-NAME_LCL_SELF_BTM_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_BTM.py"""
-NAME_LCL_SELF_CLASS_NEW_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C_NEW.py"""
-NAME_LCL_SELF_CLASS_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C.py"""
-NAME_LCL_SELF_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_NEW.py"""
-NAME_LCL_SELF_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}.py"""
-NAME_LCL_SELF_SUB0_BTM_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_BTM_NEW.py"""
-NAME_LCL_SELF_SUB0_BTM_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_BTM.py"""
-NAME_LCL_SELF_SUB0_CLASS_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__CLASS__}_C_NEW.py"""
-NAME_LCL_SELF_SUB0_CLASS_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__CLASS__}_C.py"""
-NAME_LCL_SELF_SUB0_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_NEW.py"""
-NAME_LCL_SELF_SUB0_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}.py"""
-NAME_LCL_SELF_SUB0_TOP_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_TOP_NEW.py"""
-NAME_LCL_SELF_SUB0_TOP_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_TOP.py"""
-NAME_LCL_SELF_SUB1_BTM_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_BTM_NEW.py"""
-NAME_LCL_SELF_SUB1_BTM_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_BTM.py"""
-NAME_LCL_SELF_SUB1_CLASS_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__CLASS__}_C_NEW.py"""
-NAME_LCL_SELF_SUB1_CLASS_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__CLASS__}_C.py"""
-NAME_LCL_SELF_SUB1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_NEW.py"""
-NAME_LCL_SELF_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}.py"""
-NAME_LCL_SELF_SUB1_TOP_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_TOP_NEW.py"""
-NAME_LCL_SELF_SUB1_TOP_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_TOP.py"""
-NAME_LCL_SELF_SUB2_BTM_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_BTM_NEW.py"""
-NAME_LCL_SELF_SUB2_BTM_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_BTM.py"""
-NAME_LCL_SELF_SUB2_CLASS_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_{__CLASS__}_C_NEW.py"""
-NAME_LCL_SELF_SUB2_CLASS_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_{__CLASS__}_C.py"""
-NAME_LCL_SELF_SUB2_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_NEW.py"""
-NAME_LCL_SELF_SUB2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}.py"""
-NAME_LCL_SELF_SUB2_TOP_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_TOP_NEW.py"""
-NAME_LCL_SELF_SUB2_TOP_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_TOP.py"""
-NAME_LCL_SELF_TOP_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_TOP_NEW.py"""
-NAME_LCL_SELF_TOP_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_TOP.py"""
-NAME_LCL_TOP_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_TOP_NEW.py"""
-NAME_LCL_TOP_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_TOP.py"""
-
-
-NAME_LCL_KEYS_PY = lambda __MODULE_NAME__: f"""__KEYS__/{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUB0_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}_{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUBD0_PY = lambda __MODULE_NAME__, __SUB0__: f"""__KEYS__/{__SUB0__}/{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUBD1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUB2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}_{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}.py"""
-NAME_LCL_KEYS_SUBD2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""__KEYS__/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__MODULE_NAME__}.py"""
+NAME_LCL_MOD_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_MOD_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}.py"""
+NAME_LCL_MOD_SUB0_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_NEW.py"""
+NAME_LCL_MOD_SUB0_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}.py"""
+NAME_LCL_MOD_SUB1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_NEW.py"""
+NAME_LCL_MOD_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}.py"""
+NAME_LCL_SELF_C_NEW_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__CLASS__}_C_NEW.py"""
+NAME_LCL_SELF_C_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__CLASS__}_C.py"""
+NAME_LCL_SUB0_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__CLASS__}_C_NEW.py"""
+NAME_LCL_SUB0_C_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__CLASS__}_C.py"""
+NAME_LCL_SUB1_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__SUB1__}_{__CLASS__}_C_NEW.py"""
+NAME_LCL_SUB1_C_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__SUB1__}_{__CLASS__}_C.py"""
+NAME_LCL_SUBD0_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}/{__CLASS__}_C_NEW.py"""
+NAME_LCL_SUBD0_C_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}/{__CLASS__}_C.py"""
+NAME_LCL_SUBD0_SUB1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_NEW.py"""
+NAME_LCL_SUBD0_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}.py"""
+NAME_LCL_SUBD0_SUB2_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_NEW.py"""
+NAME_LCL_SUBD0_SUB2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}.py"""
+NAME_LCL_SUBD0_SUB3_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__, __CLASS__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_C_NEW.py"""
+NAME_LCL_SUBD0_SUB3_C_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__, __CLASS__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_C.py"""
+NAME_LCL_SUBD0_SUB3_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_NEW.py"""
+NAME_LCL_SUBD0_SUB3_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}.py"""
 
 
 STR_SUBST_DICT = {
@@ -435,7 +395,6 @@ CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from
 ]
 
 #
-
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0201 CF defines
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
