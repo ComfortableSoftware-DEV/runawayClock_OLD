@@ -13,7 +13,7 @@ _sub1_ = "_03"
 _sub2_ = "00"
 _sub3_ = "PSG"
 # ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-_filename_ = f"""{FM.NAME_LCL_SUBD0_SUB3_C_PY(
+_filename_ = f"""{FM.NAME_LCL_SUBD0_SUB3_PY(
 	__MODULE_NAME__=_moduleName_,
 	__SUB0__=_sub0_,
 	__SUB1__=_sub1_,
@@ -21,7 +21,7 @@ _filename_ = f"""{FM.NAME_LCL_SUBD0_SUB3_C_PY(
 	__SUB3__=_sub3_,
 )}"""  # FM/TBGLST_D/_03_00_PSG.py
 # ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-_newFilename_ = f"""{FM.NAME_LCL_SUBD0_SUB3_C_NEW_PY(
+_newFilename_ = f"""{FM.NAME_LCL_SUBD0_SUB3_NEW_PY(
 	__MODULE_NAME__=_moduleName_,
 	__SUB0__=_sub0_,
 	__SUB1__=_sub1_,
@@ -418,7 +418,7 @@ TBGLST = [
 	(("PSGVAL_F_SPLITBBOXTORAW", FM.FMAXPSG_SCTN0916_KEY_DEF, "FUNCS", "F_SPLITBBOXTORAW", "FKEY entry splitBBoxToRaw",), __ID__),
 	(("PSGVAL_F_SPLITXYTORAW", FM.FMAXPSG_SCTN0916_KEY_DEF, "FUNCS", "F_SPLITXYTORAW", "FKEY entry splitXYToRaw",), __ID__),
 	(("PSGVAL_F_UPDATEINTERVAL", FM.FMAXPSG_SCTN0916_KEY_DEF, "FUNCS", "F_UPDATEINTERVAL", "FKEY entry updateInterval",), __ID__),
-	(("PSGVAL_F___INIT__", FM.FMAXPSG_SCTN0916_KEY_DEF, "F___INIT__", "FKEY entry doit",), __ID__),
+	(("PSGVAL_F___INIT__", FM.FMAXPSG_SCTN0916_KEY_DEF, "CLASSES", "F___INIT__", "FKEY entry doit",), __ID__),
 	(("PSGVAL_INDEX_EAST", FM.FMAXPSG_SCTN0900_VAL_DEF, "INDEX_EAST", "2", "EAST",), __ID__),
 	(("PSGVAL_INDEX_NORTH", FM.FMAXPSG_SCTN0900_VAL_DEF, "INDEX_NORTH", "1", "NORTH",), __ID__),
 	(("PSGVAL_INDEX_SOUTH", FM.FMAXPSG_SCTN0900_VAL_DEF, "INDEX_SOUTH", "3", "SOUTH",), __ID__),
