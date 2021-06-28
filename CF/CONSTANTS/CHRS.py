@@ -1,0 +1,24 @@
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0001 _CHR_ _CONST_
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+BKQT = "`"  # BACK TICK
+BKSLSH = "\\"  # BACKSLASH
+CBRCE = "}"  # CLOSEBRACE
+CBRKT = "]"  # CLOSEBRACKET
+CPAREN = ")"  # CLOSE PARENTHESIS
+CRSTR = "\r"  # carriage return
+DBLQT = "\""  # DOUBLE QUOTE
+ESC = "\x1b"
+NEWLINE = "\n"  # NEWLINE
+OBRCE = "{"  # OPENBRACE
+OBRKT = "["  # OPENBRACKET
+OPAREN = "("  # OPENPAREN
+SGLQT = "'"  # simple ' character
+SPCSTR = " "  # SPACE character"
+TABSTR = "\t"  # TAB
+
+TRIQT = f"""{DBLQT}{DBLQT}{DBLQT}"""
+NCR = lambda __NUM__: f"""{CRSTR * __NUM__}"""
+NNL = lambda __NUM__: f"""{NEWLINE * __NUM__}"""
+NSPC = lambda __NUM__: f"""{SPCSTR * __NUM__}"""  # returns a string with __NUM__ SPC
+NTAB = lambda __NUM__: f"""{TABSTR * __NUM__}"""  # returns a string with __NUM__ TAB
