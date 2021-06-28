@@ -8,7 +8,7 @@ from FM import FM
 def makeFM():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	with (open(f"""{FM.NAME_LCL_SELF_NEW_PY("FM")}""", "tw") as _FDmakeFM_):
+	with (open(f"""{FM.NAME_LCL_MOD_NEW_PY("FM")}""", "tw") as _FDmakeFM_):
 		_FDmakeFM_.write(f"""{FM.readFileToStr(FM.NAME_GLBL_SELF_TOP_PY("FM"))}{FM.readFileToStr(FM.NAME_GLBL_PY_ROOT_PY("SCTN0102"))}""")
 		_FDmakeFM_.write(f"""{FM.makeAComment("SCTN003 TYPEs and lambda")}""")
 		_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0003_TYPE_DICT)

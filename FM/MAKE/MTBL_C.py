@@ -504,7 +504,7 @@ TBGLST = {FM.OBRKT}
 		_strToWrt1_ = _strToWrt1_[:-1]
 		_strToWrt1_ += f"""{FM.CPAREN}, {itemToExplode_[1]}{FM.CPAREN},{FM.NEWLINE}"""
 		self.__FILE_DICT__[_newFilename_].write(_strToWrt_)
-		self.__FILE_DICT__[FM.NAME_LCL_SELF_SUB0_NEW_PY(
+		self.__FILE_DICT__[FM.NAME_LCL_MOD_SUB0_NEW_PY(
 				__MODULE_NAME__="FM",
 				__SUB0__="TBGLST",
 		)].write(_strToWrt1_)

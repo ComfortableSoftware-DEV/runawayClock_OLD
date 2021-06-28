@@ -1,50 +1,3 @@
-
-
-from FM import FM
-
-
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of FM TBGLST CF
-#  No such file or directory: '_01/_01_CF_NEW.py'
-# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-
-_moduleName_ = "FM"
-_sub0_ = "TBGLST_D"
-_sub1_ = "_03"
-_sub2_ = "01"
-_sub3_ = "PSG"
-_class_ = "CLOCKS"
-# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-_filename_ = f"""{FM.NAME_LCL_SUBD0_SUB3_C_PY(
-	__MODULE_NAME__=_moduleName_,
-	__SUB0__=_sub0_,
-	__SUB1__=_sub1_,
-	__SUB2__=_sub2_,
-	__SUB3__=_sub3_,
-	__CLASS__=_class_,
-)}"""  # FM/FM_TBGLST_CF.py
-# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-_newFilename_ = f"""{FM.NAME_LCL_SUBD0_SUB3_C_NEW_PY(
-	__MODULE_NAME__=_moduleName_,
-	__SUB0__=_sub0_,
-	__SUB1__=_sub1_,
-	__SUB2__=_sub2_,
-	__SUB3__=_sub3_,
-	__CLASS__=_class_,
-)}"""  # FM/FM_TBGLST_CF_NEW.py
-# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-__ID__ = (
-	("__FILENAME__", _filename_,),  # FM/FM_TBGLST_CF.py
-	("__MODULE_NAME__", _moduleName_,),  # FM
-	("__NEW_FILENAME__", _newFilename_,),  # FM/FM_TBGLST_CF_NEW.py
-	("__SUB0__", _sub0_,),  # TBGLST
-	("__SUB1__", _sub1_,),
-	("__SUB2__", _sub2_,),
-	("__SUB3__", _sub3_,),
-	("__CLASS__", _class_,),
-)
-# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-TBGLST = [
 	(("PSGVAL__CLOCKS", FM.FMAXPSG_SCTN09FF_CLASS_DEF, "CLOCKS", "define clocks class",), __ID__),
 	(("PSGVAL__CLOCKS_COLUMN01", FM.FMAXPSG_SCTN09FF_CLASS_GROUP_SELECT, "CLOCKS", "_COLUMN01_", "self._COLUMN01B_", "define the selector for COLUMNM01A/B",), __ID__),
 	(("PSGVAL__CLOCKS_COLUMN01A00", FM.FMAX_NOP, "FMAXPSG_SCTN09FF_CLASS_COLUMN_DEF", "CLOCKS", "_COLUMN01A_", "the column that puts the two smaller clocks below the main one",), __ID__),
@@ -138,7 +91,7 @@ TBGLST = [
 	(("PSGVAL__CLOCKS_FUNC_00_INIT002", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_", "{}", "",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT002", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_REVERSE_", "{}", "",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT002", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_LIST_KEYS_TIME_", "[]", "",), __ID__),
-	(("PSGVAL__CLOCKS_FUNC_00_INIT002", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_THIS_CLASS_", _class_, "set the class name",), __ID__),
+	(("PSGVAL__CLOCKS_FUNC_00_INIT002", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_THIS_CLASS_", "CLOCKS", "set the class name",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT002", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL, "CLOCKS", "_THIS_FORM_NAME_", "formName_", "adopt formName_",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_CHANNEL_", "PSG.SZ_ALPHA_HIGH", "",), __ID__),
 	(("PSGVAL__CLOCKS_FUNC_00_INIT01", FM.FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_HIGH_", "PSG.SZ_ALPHA_HIGH", "",), __ID__),
@@ -278,7 +231,7 @@ TBGLST = [
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * end of FM/FM_TBGLST_PSG_CLOCKS_C_NEW.py
+# * end of FM/TBGLST_D/_03_01_PSG_C_NEW.py
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
