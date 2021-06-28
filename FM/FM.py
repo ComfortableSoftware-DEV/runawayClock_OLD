@@ -244,81 +244,71 @@ NAME_HOME_SELF_CONFIG = lambda __MODULE_NAME__, __FILENAME__: f"""/home/will/.co
 
 
 # __MODULE_NAME__/__MODULE_NAME__ .py
-NAME_LCL_SELF_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_NEW.py"""
-NAME_LCL_SELF_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}.py"""
-
-# __MODULE_NAME__/__MODULE_NAME__ __CLASS__ _C .py
-NAME_LCL_SELF_C_NEW_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C_NEW.py"""
-NAME_LCL_SELF_C_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C.py"""
+NAME_LCL_MOD_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_NEW.py"""
+NAME_LCL_MOD_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}.py"""
 
 # __MODULE_NAME__/__SUB0__.py
-NAME_LCL_SUB0_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__SUB0__}_NEW.py"""
-NAME_LCL_SUB0_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__SUB0__}.py"""
+NAME_LCL_MOD_SUB0_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_NEW.py"""
+NAME_LCL_MOD_SUB0_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}.py"""
 
-# __MODULE_NAME__/__SUB0__ __SUB1__ [__CLASS__] .py
-NAME_LCL_SUB1_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__SUB1__}{__CLASS__}_C_NEW.py"""
-NAME_LCL_SUB1_C_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__SUB1__}{__CLASS__}_C.py"""
-NAME_LCL_SUB1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__SUB0__}_{__SUB1__}_NEW.py"""
-NAME_LCL_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__SUB0__}_{__SUB1__}.py"""
+# __MODULE_NAME__/__CLASS__ .py
+NAME_LCL_SELF_C_NEW_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__CLASS__}_C_NEW.py"""
+NAME_LCL_SELF_C_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__CLASS__}_C.py"""
 
-# __MODULE_NAME__/__SUB0__/__SUB1__.py
-NAME_LCL_SUBD1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__SUB0__}/{__SUB0__}_{__SUB1__}_NEW.py"""
-NAME_LCL_SUBD1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__SUB0__}/{__SUB0__}_{__SUB1__}.py"""
+# __MODULE_NAME__/__SUB0__.py
+NAME_LCL_SUB0_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__CLASS__}_C_NEW.py"""
+NAME_LCL_SUB0_C_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__CLASS__}_C.py"""
 
-# __MODULE_NAME__/__SUB0__/__SUB1__ __SUB2__.py
-NAME_LCL_SUBD2_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_NEW.py"""
-NAME_LCL_SUBD2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}.py"""
+# __MODULE_NAME__/__SUB0__.py
+NAME_LCL_SUBD0_C_NEW_PY = lambda __MODULE_NAME__, __SUBD0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUBD0__}/{__CLASS__}_C_NEW.py"""
+NAME_LCL_SUBD0_C_PY = lambda __MODULE_NAME__, __SUBD0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUBD0__}/{__CLASS__}_C.py"""
 
-# __MODULE_NAME__/__SUB0__/__SUB1__ __SUB2__ __SUB3__ __CLASS__ .py
-NAME_LCL_SUBD3_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_{__CLASS__}_C_NEW.py"""
-NAME_LCL_SUBD3_C_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_{__CLASS__}_C.py"""
-NAME_LCL_SUBD3_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__: f"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}NEW.py"""
-NAME_LCL_SUBD3_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__: f"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}.py"""
+NAME_LCL_SUBD0_SUB2_NEW_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__, __SUB2__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}_{__SUB2__}_NEW.py"""
+NAME_LCL_SUBD0_SUB2_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__, __SUB2__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}_{__SUB2__}.py"""
 
-# __MODULE_NAME__/__SUB0__/__SUB1__ __SUB2__ __SUB3__ __SUB4__ .py
-NAME_LCL_SUBD4_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__, __SUB4__: f"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_{__SUB4__}_NEW.py"""
-NAME_LCL_SUBD4_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__, __SUB4__: f"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_{__SUB4__}.py"""
+NAME_LCL_SUBD0_SUB3_NEW_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__, __SUB2__, __SUB3__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_NEW.py"""
+NAME_LCL_SUBD0_SUB3_PY = lambda __MODULE_NAME__, __SUBD0__, __SUB1__, __SUB2__, __SUB3__: F"""{__MODULE_NAME__}/{__SUBD0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}.py"""
 
 
 STR_SUBST_DICT = {
-	"%CBRCE%": f"""{CBRCE}""",
-	"%CBRKT%": f"""{CBRKT}""",
-	"%CPAREN%": f"""{CPAREN}""",
-	"%DQ%": f"""{DBLQT}""",
-	"%ESCLN%": f""" {BKSLSH}{NEWLINE}""",
-	"%FOLDLN1E%": f"""{FOLD1ENDHERELN}""",
-	"%FOLDLN2E%": f"""{FOLD2ENDHERELN}""",
-	"%FOLDLN3E%": f"""{FOLD3ENDHERELN}""",
-	"%FOLDLN1S%": f"""{FOLD1STARTHERELN}""",
-	"%FOLDLN2S%": f"""{FOLD2STARTHERELN}""",
-	"%FOLDLN3S%": f"""{FOLD3STARTHERELN}""",
-	"%FTQ%": f"""f{TRIQT}""",
-	"%FTQTQ%": f"""f{TRIQT}{TRIQT}""",
-	"%NEWLINE%": f"""{NEWLINE}""",
-	"%OBRCE%": f"""{OBRCE}""",
-	"%OBRKT%": f"""{OBRKT}""",
-	"%OPAREN%": f"""{OPAREN}""",
-	"%SQ%": f"""{SGLQT}""",
-	"%TAB1%": f"""{NTAB(1)}""",
-	"%TAB2%": f"""{NTAB(2)}""",
-	"%TAB3%": f"""{NTAB(3)}""",
-	"%TAB4%": f"""{NTAB(4)}""",
-	"%TAB5%": f"""{NTAB(5)}""",
-	"%TAB6%": f"""{NTAB(6)}""",
-	"%TAB7%": f"""{NTAB(7)}""",
-	"%TAB8%": f"""{NTAB(8)}""",
-	"%TAB9%": f"""{NTAB(9)}""",
-	"%TABA%": f"""{NTAB(10)}""",
-	"%TQ%": f"""{TRIQT}""",
+  "%CBRCE%": f"""{CBRCE}""",
+  "%CBRKT%": f"""{CBRKT}""",
+  "%CPAREN%": f"""{CPAREN}""",
+  "%DQ%": f"""{DBLQT}""",
+  "%ESCLN%": f""" {BKSLSH}{NEWLINE}""",
+  "%FOLDLN1E%": f"""{FOLD1ENDHERELN}""",
+  "%FOLDLN2E%": f"""{FOLD2ENDHERELN}""",
+  "%FOLDLN3E%": f"""{FOLD3ENDHERELN}""",
+  "%FOLDLN1S%": f"""{FOLD1STARTHERELN}""",
+  "%FOLDLN2S%": f"""{FOLD2STARTHERELN}""",
+  "%FOLDLN3S%": f"""{FOLD3STARTHERELN}""",
+  "%FTQ%": f"""f{TRIQT}""",
+  "%FTQTQ%": f"""f{TRIQT}{TRIQT}""",
+  "%NEWLINE%": f"""{NEWLINE}""",
+  "%OBRCE%": f"""{OBRCE}""",
+  "%OBRKT%": f"""{OBRKT}""",
+  "%OPAREN%": f"""{OPAREN}""",
+  "%SQ%": f"""{SGLQT}""",
+  "%TAB1%": f"""{NTAB(1)}""",
+  "%TAB2%": f"""{NTAB(2)}""",
+  "%TAB3%": f"""{NTAB(3)}""",
+  "%TAB4%": f"""{NTAB(4)}""",
+  "%TAB5%": f"""{NTAB(5)}""",
+  "%TAB6%": f"""{NTAB(6)}""",
+  "%TAB7%": f"""{NTAB(7)}""",
+  "%TAB8%": f"""{NTAB(8)}""",
+  "%TAB9%": f"""{NTAB(9)}""",
+  "%TABA%": f"""{NTAB(10)}""",
+  "%TQ%": f"""{TRIQT}""",
 }
 
 
 CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from 'text' strings like color codes"}
-	f"{ESC}[0m",  # entry for ESC-[0m
-	f"{ESC}[1m",  # entry for ESC-[1m
-	f"{ESC}[32m",  # entry for ESC-[32m
-	f"{ESC}[35m",  # entry for ESC-[35m
-	f"{ESC}[36m",  # entry for ESC-[36m
+  f"{ESC}[0m",  # entry for ESC-[0m
+  f"{ESC}[1m",  # entry for ESC-[1m
+  f"{ESC}[32m",  # entry for ESC-[32m
+  f"{ESC}[35m",  # entry for ESC-[35m
+  f"{ESC}[36m",  # entry for ESC-[36m
 ]
 
 
@@ -557,227 +547,227 @@ FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD = "FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD" 
 
 
 FMAXFM_AXLST = [
-	FMAX_NOP,  # ignore the remainder of the line
-	FMAXCF_SCTN0003_LAMBDA_DEF,  # define a lambda function <NAC><K_EVENT_NAME><lambda str>
-	FMAXCF_SCTN0003_TYPE_DEF,  # define a fake type used in the translation dict <NAC><K_EVENT_NAME><TYPE>
-	FMAXCF_SCTN0201_STR_DEF,  # define a STR in SCTN0201 <NAC><K_EVENT_NAME><str>
-	FMAXCF_SCTN0201_VAL_DEF,  # define a VAL in SCTN0201 <NAC><K_EVENT_NAME><VAL>
-	FMAXCF_SCTN0202_OPTIONS_ADD_HELP_LINE,  # add a line to the help for a PARM, after the comment is automatically added<NAC><PARM><ADDONHELPLINE>
-	FMAXCF_SCTN0202_OPTIONS_STR_ADD,  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
-	FMAXCF_SCTN0202_OPTIONS_VAL_ADD,  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
-	FMAXCF_SCTN0202_OPTIONSDICT_STR_ADD,  # define a OPTNAME: 'str' in SCTN0202 <NAC><KEY><PARM><STRDEFAULT>
-	FMAXCF_SCTN0202_OPTIONSDICT_VAL_ADD,  # define a OPTNAME: VAL in SCTN0202 <NAC><KEY><PARM><VALDEFAULT>
-	FMAXCF_SCTN0203_DICT_DEF,  # define a dict in SCTN203 <NAC><DICTNAME><DICTMODE>
-	FMAXCF_SCTN0203_DICT_VS_ADD,  # define a dict STR in SCTN203 <NAC><DICTNAME><STR>
-	FMAXCF_SCTN0203_DICT_VV_ADD,  # define a dict VAL in SCTN203 <NAC><DICTNAME><VAL>
-	FMAXCF_SCTN0204_LIST_DEF,  # define a list in SCTN204 <NAC><LISTNAME>
-	FMAXCF_SCTN0204_LIST_STR_ADD,  # define a list STR in SCTN204 <NAC><LISTNAME><STR>
-	FMAXCF_SCTN0204_LIST_VAL_ADD,  # define a VAL in a list in SCTN204 <NAC><LISTNAME><VAL>
-	FMAXFM_SCTN0101_AX_DEF,  # define a new FM action <NAC>
-	FMAXFM_SCTN0102_STR_DEF,  # define a FM string <NAC><VALNAME><STR>
-	FMAXFM_SCTN0102_VAL_DEF,  # define a FM _value_ <NAC><VALNAME><VAL>
-	FMAXFM_SCTN0103_DICT_DEF,  # define a dict for FM <NAC><DICTNAME>
-	FMAXFM_SCTN0104_LIST_DEF,  # define a list in FM <NAC><LISTNAME>
-	FMAXFM_SCTN0104_LIST_STR_ADD,  # define a list in FM <NAC>
-	FMAXFM_SCTN0104_LIST_VAL_ADD,  # define a list in FM <NAC>
-	FMAXFM_SCTN0105_LDICT_DEF,  # define a dict for FM <NAC>
-	FMAXFM_SCTN0105_LDICT_VS_ADD,  # define a dict for FM <NAC>
-	FMAXFM_SCTN0105_LDICT_VV_ADD,  # define a dict for FM <NAC>
-	FMAXFM_SCTN0106_SCTN_DEF,  # define the SCTN all over the place <NAC><SCTNNAME><DESCRIPTION0>
-	FMAXPSG_SCTN0900_KEY_DEF,  # put a key in def1 of PSG.py
-	FMAXPSG_SCTN0900_STR_DEF,  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
-	FMAXPSG_SCTN0900_VAL_DEF,  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
-	FMAXPSG_SCTN0901_DUBLT_SS_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0901_DUBLT_SV_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0901_DUBLT_VS_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0901_DUBLT_VV_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0901_KEY_DEF,  # define a key in the second section of defines in PSG.py <NAC><VALNAME>
-	FMAXPSG_SCTN0901_STR_DEF,  # define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>
-	FMAXPSG_SCTN0901_VAL_DEF,  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
-	FMAXPSG_SCTN0902_DICT_DEF,  # define a dict in PSG <NAC><DICTNAME>
-	FMAXPSG_SCTN0902_DICT_SS_ADD,  # add a str-str to a dict <NAC><DICTNAME><STR><STR>
-	FMAXPSG_SCTN0902_DICT_SV_ADD,  # add a str-val to a dict <NAC><DICTNAME><STR><VAL>
-	FMAXPSG_SCTN0902_DICT_VS_ADD,  # add a str to a dict <NAC><DICTNAME><KEY><VAL>
-	FMAXPSG_SCTN0902_DICT_VV_ADD,  # add a val to a dict in PSG <NAC><DICTNAME><KEY><VAL>
-	FMAXPSG_SCTN0903_LIST_DEF,  # define a list in PSG <NAC><LISTNAME>
-	FMAXPSG_SCTN0903_LIST_STR_ADD,  # add a str to a list in PSG <NAC><LISTNAME><STR>
-	FMAXPSG_SCTN0903_LIST_VAL_ADD,  # add a val to a list in PSG <NAC><LISTNAME><VAL>
-	FMAXPSG_SCTN0904_PLATEQ_ELIF_ADD,  # platform equalizer define an elif <NAC><STRUCTNAME><CONDITION><VAL>
-	FMAXPSG_SCTN0904_PLATEQ_ELSE_ADD,  # platform equalizer define an else <NAC><STRUCTNAME><CONDITION>
-	FMAXPSG_SCTN0904_PLATEQ_FUNC_STR_ADD,  # add a function string line <NAC><STRUCTNAME><CONDITION>
-	FMAXPSG_SCTN0904_PLATEQ_IF_ADD,  # add the 1st if to a platform equalizer <NAC><STRUCTNAME><CONDITION>
-	FMAXPSG_SCTN0904_PLATEQ_PLAT_DEF,  # define a platform equalizer struct <NAC><STRUCTNAME>
-	FMAXPSG_SCTN0904_PLATEQ_STR_ADD,  # add a string to a PLATEQ <NAC><STRUCTNAME><VALNAME><VAL>
-	FMAXPSG_SCTN0904_PLATEQ_VAL_ADD,  # add a value to a PLATEQ <NAC><STRUCTNAME><VALNAME><VAL>
-	FMAXPSG_SCTN0905_TDD_VS_ADD,  # define a ddict <NAC><TUPDICTNAME><KEY><VAL><DDICTKEY>
-	FMAXPSG_SCTN0905_TDD_VV_ADD,  # define a ddict <NAC><TUPDICTNAME><KEY><VAL><DDICTKEY>
-	FMAXPSG_SCTN0905_TUPDICT_DDICT_DEF,  # define a ddict <NAC><TUPDICTNAME><KEY><DDICTKEY>
-	FMAXPSG_SCTN0905_TUPDICT_DEF,  # define a TUPDICT in the second define section in PSG.py <NAC><TUPDICTNAME>
-	FMAXPSG_SCTN0905_TUPDICT_DICT_ADD,  # add a value to a tupdict <NAC><TUPDICTNAME><KEY><VAL>
-	FMAXPSG_SCTN0905_TUPDICT_SS_ADD,  # add a str to a tupdict <NAC><TUPDICTNAME><STR><STR>
-	FMAXPSG_SCTN0905_TUPDICT_SV_ADD,  # add a value to a tupdict <NAC><TUPDICTNAME><STR><VAL>
-	FMAXPSG_SCTN0905_TUPDICT_VS_ADD,  # add a str to a tupdict <NAC><TUPDICTNAME><KEY><STR>
-	FMAXPSG_SCTN0905_TUPDICT_VV_ADD,  # add a value to a tupdict <NAC><TUPDICTNAME><KEY><VAL>
-	FMAXPSG_SCTN0906_BTN_DEF,  # define a button <NAC><BTNNAME>
-	FMAXPSG_SCTN0906_BTN_STR_ADD,  # add a (VAL,VAL) to a tupdict <NAC><BTNNAME><KEY><VAL>
-	FMAXPSG_SCTN0906_BTN_VAL_ADD,  # add a (VAL,VAL) to a tupdict <NAC><BTNNAME><KEY><VAL>
-	FMAXPSG_SCTN0907_SPIN_DEF,  # define a spin box entry <NAC><SPINNAME>
-	FMAXPSG_SCTN0907_SPIN_DICT_STR_ADD,  # add a STR to the SPINDICT <NAC><SPINNAME><KEY><STR>
-	FMAXPSG_SCTN0907_SPIN_DICT_VAL_ADD,  # add a VAL to the SPINDICT <NAC><SPINNAME><KEY><VAL>
-	FMAXPSG_SCTN0907_SPIN_VALUES_STR_ADD,  # add a STR to the values list <NAC><SPINNAME><STR>
-	FMAXPSG_SCTN0907_SPIN_VALUES_VAL_ADD,  # add a VAL to the values list <NAC><SPINNAME><VAL>
-	FMAXPSG_SCTN0908_CHECKBOX_DEF,  # define a checkbox <NAC><CHECKBOXNAME>
-	FMAXPSG_SCTN0908_CHECKBOX_STR_ADD,  # add a str to a checkbox <NAC><CHECKBOXNAME><KEY><VAL>
-	FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD,  # add a val to a checkbox <NAC><CHECKBOXNAME><KEY><VAL>
-	FMAXPSG_SCTN0909_TEXT_DEF,  # define a text <NAC><TEXTNAME>
-	FMAXPSG_SCTN0909_TEXT_STR_ADD,  # add a str to a text element <NAC><TEXTNAME><KEY><VAL>
-	FMAXPSG_SCTN0909_TEXT_VAL_ADD,  # add a val to a text element <NAC><TEXTNAME>
-	FMAXPSG_SCTN090A_RADIO_DEF,  # define a radio button element
-	FMAXPSG_SCTN090B_COLUMN_BUTTON_ADD,  # add a button to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090B_COLUMN_CHECKBOX_ADD,  # add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090B_COLUMN_COLUMN_ADD,  # add a column to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_STR_ADD,  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
-	FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_VAL_ADD,  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
-	FMAXPSG_SCTN090B_COLUMN_COMBO_ADD,  # add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090B_COLUMN_DEF,  # define a column <NAC><COLUMNNAME>
-	FMAXPSG_SCTN090B_COLUMN_KEY_ADD,  # add a key to a column element 'key=' will be added automatically <NAC><COLUMNNAME><ROWKEY><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN090B_COLUMN_PACKEDPARM_ADD,  # add packedparms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN090B_COLUMN_PARM_ADD,  # add parms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN090B_COLUMN_RADIO_ADD,  # add a radio to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090B_COLUMN_ROW_ADD,  # add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>
-	FMAXPSG_SCTN090B_COLUMN_SPIN_ADD,  # add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090B_COLUMN_TEXT_ADD,  # add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090C_APPDS_DEF,  # add a nested dict holding all of the variables passed between PySimpleGUI and this app
-	FMAXPSG_SCTN090C_APPDS_DICT_DEF,  # add a dict to the mainapp dict <NAC><DICTNAME
-	FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD,  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
-	FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD,  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
-	FMAXPSG_SCTN090C_APPDS_VS_ADD,  # add a string to the mainapp dict <NAC><KEY><STR>
-	FMAXPSG_SCTN090C_APPDS_VV_ADD,  # add a value to the mainapp dict <NAC><KEY><VAL>
-	FMAXPSG_SCTN090D_FORMMAIN_DEF,  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
-	FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD,  # add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD,  # add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD,  # add a column to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090E_LAYOUT_COMBO_ADD,  # add a combo to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090E_LAYOUT_DEF,  # define a layout <NAC><LAYOUTNAME>
-	FMAXPSG_SCTN090E_LAYOUT_KEY_ADD,  # add a key to a layout element 'key=' will be added automatically <NAC><LAYOUTNAME><ROWKEY><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN090E_LAYOUT_PACKEDPARM_ADD,  # add packedparms to a layout entry <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN090E_LAYOUT_PARM_VAL_ADD,  # add parms to a layout entry <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN090E_LAYOUT_RADIO_ADD,  # add a radio to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090E_LAYOUT_ROW_ADD,  # add a row [] to a layout <NAC><LAYOUTNAME><ROWKEY><LEVEL>
-	FMAXPSG_SCTN090E_LAYOUT_SPIN_ADD,  # add a spinbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090E_LAYOUT_TEXT_ADD,  # add a text element to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090F_WINDOW_DEF,  # define a window element <NAC><WINDOWNAME>
-	FMAXPSG_SCTN090F_WINDOW_STR_ADD,  # add a str to the window element <NAC><WINDOWNAME><VALNAME><VAL>
-	FMAXPSG_SCTN090F_WINDOW_VAL_ADD,  # add a str to the window element <NAC><WINDOWNAME><VALNAME><VAL>
-	FMAXPSG_SCTN0910_DUBLT_SS_DEF,  # define a (x,y) tuple <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0910_DUBLT_SV_DEF,  # define a (x,y) tuple <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0910_DUBLT_VS_DEF,  # define a (x,y) tuple <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0910_DUBLT_VV_DEF,  # define a (x,y) tuple <NAC><DUBTUPNAME><VAL1><VAL2>
-	FMAXPSG_SCTN0910_STR_DEF,  # define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>
-	FMAXPSG_SCTN0910_VAL_DEF,  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
-	FMAXPSG_SCTN0911_COMBO_DEF,  # define a combo box <NAC><COMBOBOXNAME>
-	FMAXPSG_SCTN0912_FRAMEELEMENT_DEF,  # define a frame element <NAC><FENAME>
-	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu <NAC><RCMENUNAME>
-	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu <NAC><RCMENUNAME><VAL>
-	FMAXPSG_SCTN0914_FORMPOPUP_DEF,  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
-	FMAXPSG_SCTN0915_PUDLG_DEF,  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
-	FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
-	FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
-	FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
-	FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_BTN_DEF,  # define a button <NAC><CLASSNAME><BTNNAME>
-	FMAXPSG_SCTN09FF_CLASS_BTN_STR_ADD,  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_BTN_VAL_ADD,  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_CHECKBOX_DEF,  # define a checkbox <NAC><CLASSNAME><CHECKBOXNAME>
-	FMAXPSG_SCTN09FF_CLASS_CHECKBOX_PARM_ADD,  # add a parameter to a checkbox <NAC><CLASSNAME><CHECKBOXNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_CHECKBOX_STR_ADD,  # add a str to a checkbox <NAC><CLASSNAME><CHECKBOXNAME><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_CHECKBOX_VAL_ADD,  # add a val to a checkbox <NAC><CLASSNAME><CHECKBOXNAME><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_BUTTON_ADD,  # add a button to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_CHECKBOX_ADD,  # add a combo to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_COLUMN_ADD,  # add a column to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_COLUMN_PARM_STR_ADD,  # add a column parm to the column to a row <NAC><CLASSNAME><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_COLUMN_PARM_VAL_ADD,  # add a column parm to the column to a row <NAC><CLASSNAME><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_COMBO_ADD,  # add a combo to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_DEF,  # define a column <NAC><CLASSNAME><COLUMNNAME>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_GROUP_DEF,  # define a column group <NAC><CLASSNAME><COLUMNGROUP>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_KEY_ADD,  # add a key to a column element 'key=' will be added automatically <NAC><CLASSNAME><COLUMNNAME><ROWKEY><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_PACKEDPARM_ADD,  # add packedparms to a column entry <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_PARM_ADD,  # add parms to a column entry <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_RADIO_ADD,  # add a radio to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_ROW_ADD,  # add a row [] to a column <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_SPIN_ADD,  # add a spinbox to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_COLUMN_TEXT_ADD,  # add a text element to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_COMBO_DEF,  # define a combo box <NAC><COMBOBOXNAME>
-	FMAXPSG_SCTN09FF_CLASS_DEF,  # define a class <NAC><CLASSNAME>
-	FMAXPSG_SCTN09FF_CLASS_DICT_DEF,  # define a dict in PSG <NAC><CLASSNAME><DICTNAME>
-	FMAXPSG_SCTN09FF_CLASS_DICT_SS_ADD,  # add a str-str to a dict <NAC><CLASSNAME><DICTNAME><STR><STR>
-	FMAXPSG_SCTN09FF_CLASS_DICT_SV_ADD,  # add a str-val to a dict <NAC><CLASSNAME><DICTNAME><STR><VAL>
-	FMAXPSG_SCTN09FF_CLASS_DICT_VS_ADD,  # add a str to a dict <NAC><CLASSNAME><DICTNAME><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_DICT_VV_ADD,  # add a val to a dict in PSG <NAC><CLASSNAME><DICTNAME><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_DPD_DEF,  # define a DPD debugPrintDict in PSG <NAC><CLASSNAME><DPDNAME>
-	FMAXPSG_SCTN09FF_CLASS_DPD_VV_ADD,  # add a val to a DPD debugPrintDict in PSG <NAC><CLASSNAME><DPDNAME><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_FORMMAIN_DEF,  # define a class mainframe
-	FMAXPSG_SCTN09FF_CLASS_FORMPOPUP_DEF,  # define a class mainframe
-	FMAXPSG_SCTN09FF_CLASS_FRAMEELEMENT_DEF,  # define a frame element
-	FMAXPSG_SCTN09FF_CLASS_FUNCTION_BLANKLINE,  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
-	FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF,  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
-	FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE,  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
-	FMAXPSG_SCTN09FF_CLASS_FUNCTION_LAMBDA1_DEF,  # add a lambda to the top of a function, usually for absorbing things
-	FMAXPSG_SCTN09FF_CLASS_FUNCTION_LAMBDA2_DEF,  # add a lambda to the top of a function, usually for absorbing things
-	FMAXPSG_SCTN09FF_CLASS_FUNCTION_LINE_ADD,  # define a class <NAC><CLASSNAME><FUNCNAME><LINE>
-	FMAXPSG_SCTN09FF_CLASS_FUNCTION_READ_FROM_FILE,  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
-	FMAXPSG_SCTN09FF_CLASS_FUNCTION_STR1_DEF,  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_FUNCTION_STR2_DEF,  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_FUNCTION_VAL1_DEF,  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_FUNCTION_VAL2_DEF,  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_GROUP_SELECT,  # define a column group default <NAC><CLASSNAME><GROUPNAME><GROUPVALUE>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_LAMBDA,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_LINE,  # define a class <NAC><CLASSNAME><LINE>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_READ_FROM_FILE,  # read a section of __init__ from a file in res/functions <NAC><CLASSNAME><FILENAME>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_STR,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL,  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_SS,  # add a str-str to a dict <NAC><CLASSNAME><STR><STR>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_SV,  # add a str-val to a dict <NAC><CLASSNAME><STR><VAL>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VS,  # add a str to a dict <NAC><CLASSNAME><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV,  # add a val to a dict in PSG <NAC><CLASSNAME><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY,  # add values to _DICT_KEYS, _DICT_KEYS_REVERSE_ for external elements like buttons and checkboxes <NAC><CLASSNAME><KEY>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_LAMBDA,  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_LINE,  # define a class <NAC><CLASSNAME><LINE>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_READ_FROM_FILE,  # read a section of __init__ from a file in res/functions <NAC><CLASSNAME><FILENAME>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_STR,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL,  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE,  # define a class <NAC><CLASSNAME><LINE>
-	FMAXPSG_SCTN09FF_CLASS_INIT_DEF,  # define a class <NAC><CLASSNAME><PARMS>
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_BUTTON_ADD,  # add a button to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_CHECKBOX_ADD,  # add a checkbox to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_COLUMN_ADD,  # add a column to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_COMBO_ADD,  # add a combo to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_DEF,  # define layouts
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_KEY_ADD,  # add a key to a layout element 'key=' will be added automatically <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_PACKEDPARM_ADD,  # add packedparms to a layout entry <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_PARM_VAL_ADD,  # add parms to a layout entry <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_RADIO_ADD,  # add a radio to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_ROW_ADD,  # add a row [] to a layout <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL>
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_SPIN_ADD,  # add a spinbox to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_LAYOUT_TEXT_ADD,  # add a text element to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN09FF_CLASS_LIST_DEF,  # define a list in PSG <NAC><CLASSNAME><LISTNAME>
-	FMAXPSG_SCTN09FF_CLASS_LIST_STR_ADD,  # add a str to a list in PSG <NAC><CLASSNAME><LISTNAME><STR>
-	FMAXPSG_SCTN09FF_CLASS_LIST_VAL_ADD,  # add a val to a list in PSG <NAC><CLASSNAME><LISTNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_RADIO_DEF,  # define a radio button element
-	FMAXPSG_SCTN09FF_CLASS_RCMENU_DEF,  # define a right click menu
-	FMAXPSG_SCTN09FF_CLASS_RCMENU_VAL_ADD,  # define a right click menu
-	FMAXPSG_SCTN09FF_CLASS_SPIN_DEF,  # define a spin box entry <NAC><CLASSNAME><SPINNAME>
-	FMAXPSG_SCTN09FF_CLASS_SPIN_DICT_VS_ADD,  # add a STR to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><STR>
-	FMAXPSG_SCTN09FF_CLASS_SPIN_DICT_VV_ADD,  # add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>
-	FMAXPSG_SCTN09FF_CLASS_SPIN_LIST_STR_ADD,  # add a STR to the values list <NAC><CLASSNAME><SPINNAME><STR>
-	FMAXPSG_SCTN09FF_CLASS_SPIN_LIST_VAL_ADD,  # add a VAL to the values list <NAC><CLASSNAME><SPINNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_TEXT_DEF,  # define a text <NAC><CLASSNAME><TEXTNAME><ISATIME>
-	FMAXPSG_SCTN09FF_CLASS_TEXT_PARM_ADD,  # add a PARM to a text element <NAC><CLASSNAME><TEXTNAME><VAL>
-	FMAXPSG_SCTN09FF_CLASS_TEXT_STR_ADD,  # add a str to a text element <NAC><CLASSNAME><TEXTNAME><KEY><MODULE><VAL>
-	FMAXPSG_SCTN09FF_CLASS_TEXT_VAL_ADD,  # add a val to a text element <NAC><CLASSNAME><TEXTNAME><KEY><MODULE><VAL>
-	FMAXPSG_SCTN09FF_CLASS_WINDOW_DEF,  # define a main dictdict <NAC><CLASSNAME><MAINNAME>
-	FMAXPSG_SCTN09FF_CLASS_WINDOW_STR_ADD,  # add a str to the main dictdict
-	FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD,  # add a str to the main dictdict
+  FMAX_NOP,  # ignore the remainder of the line
+  FMAXCF_SCTN0003_LAMBDA_DEF,  # define a lambda function <NAC><K_EVENT_NAME><lambda str>
+  FMAXCF_SCTN0003_TYPE_DEF,  # define a fake type used in the translation dict <NAC><K_EVENT_NAME><TYPE>
+  FMAXCF_SCTN0201_STR_DEF,  # define a STR in SCTN0201 <NAC><K_EVENT_NAME><str>
+  FMAXCF_SCTN0201_VAL_DEF,  # define a VAL in SCTN0201 <NAC><K_EVENT_NAME><VAL>
+  FMAXCF_SCTN0202_OPTIONS_ADD_HELP_LINE,  # add a line to the help for a PARM, after the comment is automatically added<NAC><PARM><ADDONHELPLINE>
+  FMAXCF_SCTN0202_OPTIONS_STR_ADD,  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
+  FMAXCF_SCTN0202_OPTIONS_VAL_ADD,  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
+  FMAXCF_SCTN0202_OPTIONSDICT_STR_ADD,  # define a OPTNAME: 'str' in SCTN0202 <NAC><KEY><PARM><STRDEFAULT>
+  FMAXCF_SCTN0202_OPTIONSDICT_VAL_ADD,  # define a OPTNAME: VAL in SCTN0202 <NAC><KEY><PARM><VALDEFAULT>
+  FMAXCF_SCTN0203_DICT_DEF,  # define a dict in SCTN203 <NAC><DICTNAME><DICTMODE>
+  FMAXCF_SCTN0203_DICT_VS_ADD,  # define a dict STR in SCTN203 <NAC><DICTNAME><STR>
+  FMAXCF_SCTN0203_DICT_VV_ADD,  # define a dict VAL in SCTN203 <NAC><DICTNAME><VAL>
+  FMAXCF_SCTN0204_LIST_DEF,  # define a list in SCTN204 <NAC><LISTNAME>
+  FMAXCF_SCTN0204_LIST_STR_ADD,  # define a list STR in SCTN204 <NAC><LISTNAME><STR>
+  FMAXCF_SCTN0204_LIST_VAL_ADD,  # define a VAL in a list in SCTN204 <NAC><LISTNAME><VAL>
+  FMAXFM_SCTN0101_AX_DEF,  # define a new FM action <NAC>
+  FMAXFM_SCTN0102_STR_DEF,  # define a FM string <NAC><VALNAME><STR>
+  FMAXFM_SCTN0102_VAL_DEF,  # define a FM _value_ <NAC><VALNAME><VAL>
+  FMAXFM_SCTN0103_DICT_DEF,  # define a dict for FM <NAC><DICTNAME>
+  FMAXFM_SCTN0104_LIST_DEF,  # define a list in FM <NAC><LISTNAME>
+  FMAXFM_SCTN0104_LIST_STR_ADD,  # define a list in FM <NAC>
+  FMAXFM_SCTN0104_LIST_VAL_ADD,  # define a list in FM <NAC>
+  FMAXFM_SCTN0105_LDICT_DEF,  # define a dict for FM <NAC>
+  FMAXFM_SCTN0105_LDICT_VS_ADD,  # define a dict for FM <NAC>
+  FMAXFM_SCTN0105_LDICT_VV_ADD,  # define a dict for FM <NAC>
+  FMAXFM_SCTN0106_SCTN_DEF,  # define the SCTN all over the place <NAC><SCTNNAME><DESCRIPTION0>
+  FMAXPSG_SCTN0900_KEY_DEF,  # put a key in def1 of PSG.py
+  FMAXPSG_SCTN0900_STR_DEF,  # define a string in the first section (colors, etc.) of defines in PSG.py <NAC><VALNAME><VAL>
+  FMAXPSG_SCTN0900_VAL_DEF,  # define a value in the first define section in PSG.py <NAC><VALNAME><VAL>
+  FMAXPSG_SCTN0901_DUBLT_SS_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+  FMAXPSG_SCTN0901_DUBLT_SV_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+  FMAXPSG_SCTN0901_DUBLT_VS_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+  FMAXPSG_SCTN0901_DUBLT_VV_DEF,  # define a (x,y) tuple used to hold URL pairs <NAC><DUBTUPNAME><VAL1><VAL2>
+  FMAXPSG_SCTN0901_KEY_DEF,  # define a key in the second section of defines in PSG.py <NAC><VALNAME>
+  FMAXPSG_SCTN0901_STR_DEF,  # define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>
+  FMAXPSG_SCTN0901_VAL_DEF,  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
+  FMAXPSG_SCTN0902_DICT_DEF,  # define a dict in PSG <NAC><DICTNAME>
+  FMAXPSG_SCTN0902_DICT_SS_ADD,  # add a str-str to a dict <NAC><DICTNAME><STR><STR>
+  FMAXPSG_SCTN0902_DICT_SV_ADD,  # add a str-val to a dict <NAC><DICTNAME><STR><VAL>
+  FMAXPSG_SCTN0902_DICT_VS_ADD,  # add a str to a dict <NAC><DICTNAME><KEY><VAL>
+  FMAXPSG_SCTN0902_DICT_VV_ADD,  # add a val to a dict in PSG <NAC><DICTNAME><KEY><VAL>
+  FMAXPSG_SCTN0903_LIST_DEF,  # define a list in PSG <NAC><LISTNAME>
+  FMAXPSG_SCTN0903_LIST_STR_ADD,  # add a str to a list in PSG <NAC><LISTNAME><STR>
+  FMAXPSG_SCTN0903_LIST_VAL_ADD,  # add a val to a list in PSG <NAC><LISTNAME><VAL>
+  FMAXPSG_SCTN0904_PLATEQ_ELIF_ADD,  # platform equalizer define an elif <NAC><STRUCTNAME><CONDITION><VAL>
+  FMAXPSG_SCTN0904_PLATEQ_ELSE_ADD,  # platform equalizer define an else <NAC><STRUCTNAME><CONDITION>
+  FMAXPSG_SCTN0904_PLATEQ_FUNC_STR_ADD,  # add a function string line <NAC><STRUCTNAME><CONDITION>
+  FMAXPSG_SCTN0904_PLATEQ_IF_ADD,  # add the 1st if to a platform equalizer <NAC><STRUCTNAME><CONDITION>
+  FMAXPSG_SCTN0904_PLATEQ_PLAT_DEF,  # define a platform equalizer struct <NAC><STRUCTNAME>
+  FMAXPSG_SCTN0904_PLATEQ_STR_ADD,  # add a string to a PLATEQ <NAC><STRUCTNAME><VALNAME><VAL>
+  FMAXPSG_SCTN0904_PLATEQ_VAL_ADD,  # add a value to a PLATEQ <NAC><STRUCTNAME><VALNAME><VAL>
+  FMAXPSG_SCTN0905_TDD_VS_ADD,  # define a ddict <NAC><TUPDICTNAME><KEY><VAL><DDICTKEY>
+  FMAXPSG_SCTN0905_TDD_VV_ADD,  # define a ddict <NAC><TUPDICTNAME><KEY><VAL><DDICTKEY>
+  FMAXPSG_SCTN0905_TUPDICT_DDICT_DEF,  # define a ddict <NAC><TUPDICTNAME><KEY><DDICTKEY>
+  FMAXPSG_SCTN0905_TUPDICT_DEF,  # define a TUPDICT in the second define section in PSG.py <NAC><TUPDICTNAME>
+  FMAXPSG_SCTN0905_TUPDICT_DICT_ADD,  # add a value to a tupdict <NAC><TUPDICTNAME><KEY><VAL>
+  FMAXPSG_SCTN0905_TUPDICT_SS_ADD,  # add a str to a tupdict <NAC><TUPDICTNAME><STR><STR>
+  FMAXPSG_SCTN0905_TUPDICT_SV_ADD,  # add a value to a tupdict <NAC><TUPDICTNAME><STR><VAL>
+  FMAXPSG_SCTN0905_TUPDICT_VS_ADD,  # add a str to a tupdict <NAC><TUPDICTNAME><KEY><STR>
+  FMAXPSG_SCTN0905_TUPDICT_VV_ADD,  # add a value to a tupdict <NAC><TUPDICTNAME><KEY><VAL>
+  FMAXPSG_SCTN0906_BTN_DEF,  # define a button <NAC><BTNNAME>
+  FMAXPSG_SCTN0906_BTN_STR_ADD,  # add a (VAL,VAL) to a tupdict <NAC><BTNNAME><KEY><VAL>
+  FMAXPSG_SCTN0906_BTN_VAL_ADD,  # add a (VAL,VAL) to a tupdict <NAC><BTNNAME><KEY><VAL>
+  FMAXPSG_SCTN0907_SPIN_DEF,  # define a spin box entry <NAC><SPINNAME>
+  FMAXPSG_SCTN0907_SPIN_DICT_STR_ADD,  # add a STR to the SPINDICT <NAC><SPINNAME><KEY><STR>
+  FMAXPSG_SCTN0907_SPIN_DICT_VAL_ADD,  # add a VAL to the SPINDICT <NAC><SPINNAME><KEY><VAL>
+  FMAXPSG_SCTN0907_SPIN_VALUES_STR_ADD,  # add a STR to the values list <NAC><SPINNAME><STR>
+  FMAXPSG_SCTN0907_SPIN_VALUES_VAL_ADD,  # add a VAL to the values list <NAC><SPINNAME><VAL>
+  FMAXPSG_SCTN0908_CHECKBOX_DEF,  # define a checkbox <NAC><CHECKBOXNAME>
+  FMAXPSG_SCTN0908_CHECKBOX_STR_ADD,  # add a str to a checkbox <NAC><CHECKBOXNAME><KEY><VAL>
+  FMAXPSG_SCTN0908_CHECKBOX_VAL_ADD,  # add a val to a checkbox <NAC><CHECKBOXNAME><KEY><VAL>
+  FMAXPSG_SCTN0909_TEXT_DEF,  # define a text <NAC><TEXTNAME>
+  FMAXPSG_SCTN0909_TEXT_STR_ADD,  # add a str to a text element <NAC><TEXTNAME><KEY><VAL>
+  FMAXPSG_SCTN0909_TEXT_VAL_ADD,  # add a val to a text element <NAC><TEXTNAME>
+  FMAXPSG_SCTN090A_RADIO_DEF,  # define a radio button element
+  FMAXPSG_SCTN090B_COLUMN_BUTTON_ADD,  # add a button to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090B_COLUMN_CHECKBOX_ADD,  # add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090B_COLUMN_COLUMN_ADD,  # add a column to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_STR_ADD,  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
+  FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_VAL_ADD,  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
+  FMAXPSG_SCTN090B_COLUMN_COMBO_ADD,  # add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090B_COLUMN_DEF,  # define a column <NAC><COLUMNNAME>
+  FMAXPSG_SCTN090B_COLUMN_KEY_ADD,  # add a key to a column element 'key=' will be added automatically <NAC><COLUMNNAME><ROWKEY><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN090B_COLUMN_PACKEDPARM_ADD,  # add packedparms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN090B_COLUMN_PARM_ADD,  # add parms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN090B_COLUMN_RADIO_ADD,  # add a radio to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090B_COLUMN_ROW_ADD,  # add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>
+  FMAXPSG_SCTN090B_COLUMN_SPIN_ADD,  # add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090B_COLUMN_TEXT_ADD,  # add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090C_APPDS_DEF,  # add a nested dict holding all of the variables passed between PySimpleGUI and this app
+  FMAXPSG_SCTN090C_APPDS_DICT_DEF,  # add a dict to the mainapp dict <NAC><DICTNAME
+  FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD,  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
+  FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD,  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
+  FMAXPSG_SCTN090C_APPDS_VS_ADD,  # add a string to the mainapp dict <NAC><KEY><STR>
+  FMAXPSG_SCTN090C_APPDS_VV_ADD,  # add a value to the mainapp dict <NAC><KEY><VAL>
+  FMAXPSG_SCTN090D_FORMMAIN_DEF,  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+  FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD,  # add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD,  # add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090E_LAYOUT_COLUMN_ADD,  # add a column to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090E_LAYOUT_COMBO_ADD,  # add a combo to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090E_LAYOUT_DEF,  # define a layout <NAC><LAYOUTNAME>
+  FMAXPSG_SCTN090E_LAYOUT_KEY_ADD,  # add a key to a layout element 'key=' will be added automatically <NAC><LAYOUTNAME><ROWKEY><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN090E_LAYOUT_PACKEDPARM_ADD,  # add packedparms to a layout entry <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN090E_LAYOUT_PARM_VAL_ADD,  # add parms to a layout entry <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN090E_LAYOUT_RADIO_ADD,  # add a radio to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090E_LAYOUT_ROW_ADD,  # add a row [] to a layout <NAC><LAYOUTNAME><ROWKEY><LEVEL>
+  FMAXPSG_SCTN090E_LAYOUT_SPIN_ADD,  # add a spinbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090E_LAYOUT_TEXT_ADD,  # add a text element to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN090F_WINDOW_DEF,  # define a window element <NAC><WINDOWNAME>
+  FMAXPSG_SCTN090F_WINDOW_STR_ADD,  # add a str to the window element <NAC><WINDOWNAME><VALNAME><VAL>
+  FMAXPSG_SCTN090F_WINDOW_VAL_ADD,  # add a str to the window element <NAC><WINDOWNAME><VALNAME><VAL>
+  FMAXPSG_SCTN0910_DUBLT_SS_DEF,  # define a (x,y) tuple <NAC><DUBTUPNAME><VAL1><VAL2>
+  FMAXPSG_SCTN0910_DUBLT_SV_DEF,  # define a (x,y) tuple <NAC><DUBTUPNAME><VAL1><VAL2>
+  FMAXPSG_SCTN0910_DUBLT_VS_DEF,  # define a (x,y) tuple <NAC><DUBTUPNAME><VAL1><VAL2>
+  FMAXPSG_SCTN0910_DUBLT_VV_DEF,  # define a (x,y) tuple <NAC><DUBTUPNAME><VAL1><VAL2>
+  FMAXPSG_SCTN0910_STR_DEF,  # define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>
+  FMAXPSG_SCTN0910_VAL_DEF,  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
+  FMAXPSG_SCTN0911_COMBO_DEF,  # define a combo box <NAC><COMBOBOXNAME>
+  FMAXPSG_SCTN0912_FRAMEELEMENT_DEF,  # define a frame element <NAC><FENAME>
+  FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu <NAC><RCMENUNAME>
+  FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu <NAC><RCMENUNAME><VAL>
+  FMAXPSG_SCTN0914_FORMPOPUP_DEF,  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+  FMAXPSG_SCTN0915_PUDLG_DEF,  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
+  FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+  FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+  FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+  FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_BTN_DEF,  # define a button <NAC><CLASSNAME><BTNNAME>
+  FMAXPSG_SCTN09FF_CLASS_BTN_STR_ADD,  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_BTN_VAL_ADD,  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_CHECKBOX_DEF,  # define a checkbox <NAC><CLASSNAME><CHECKBOXNAME>
+  FMAXPSG_SCTN09FF_CLASS_CHECKBOX_PARM_ADD,  # add a parameter to a checkbox <NAC><CLASSNAME><CHECKBOXNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_CHECKBOX_STR_ADD,  # add a str to a checkbox <NAC><CLASSNAME><CHECKBOXNAME><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_CHECKBOX_VAL_ADD,  # add a val to a checkbox <NAC><CLASSNAME><CHECKBOXNAME><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_BUTTON_ADD,  # add a button to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_CHECKBOX_ADD,  # add a combo to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_COLUMN_ADD,  # add a column to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_COLUMN_PARM_STR_ADD,  # add a column parm to the column to a row <NAC><CLASSNAME><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_COLUMN_PARM_VAL_ADD,  # add a column parm to the column to a row <NAC><CLASSNAME><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_COMBO_ADD,  # add a combo to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_DEF,  # define a column <NAC><CLASSNAME><COLUMNNAME>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_GROUP_DEF,  # define a column group <NAC><CLASSNAME><COLUMNGROUP>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_KEY_ADD,  # add a key to a column element 'key=' will be added automatically <NAC><CLASSNAME><COLUMNNAME><ROWKEY><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_PACKEDPARM_ADD,  # add packedparms to a column entry <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_PARM_ADD,  # add parms to a column entry <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_RADIO_ADD,  # add a radio to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_ROW_ADD,  # add a row [] to a column <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_SPIN_ADD,  # add a spinbox to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_COLUMN_TEXT_ADD,  # add a text element to a row <NAC><CLASSNAME><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_COMBO_DEF,  # define a combo box <NAC><COMBOBOXNAME>
+  FMAXPSG_SCTN09FF_CLASS_DEF,  # define a class <NAC><CLASSNAME>
+  FMAXPSG_SCTN09FF_CLASS_DICT_DEF,  # define a dict in PSG <NAC><CLASSNAME><DICTNAME>
+  FMAXPSG_SCTN09FF_CLASS_DICT_SS_ADD,  # add a str-str to a dict <NAC><CLASSNAME><DICTNAME><STR><STR>
+  FMAXPSG_SCTN09FF_CLASS_DICT_SV_ADD,  # add a str-val to a dict <NAC><CLASSNAME><DICTNAME><STR><VAL>
+  FMAXPSG_SCTN09FF_CLASS_DICT_VS_ADD,  # add a str to a dict <NAC><CLASSNAME><DICTNAME><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_DICT_VV_ADD,  # add a val to a dict in PSG <NAC><CLASSNAME><DICTNAME><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_DPD_DEF,  # define a DPD debugPrintDict in PSG <NAC><CLASSNAME><DPDNAME>
+  FMAXPSG_SCTN09FF_CLASS_DPD_VV_ADD,  # add a val to a DPD debugPrintDict in PSG <NAC><CLASSNAME><DPDNAME><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_FORMMAIN_DEF,  # define a class mainframe
+  FMAXPSG_SCTN09FF_CLASS_FORMPOPUP_DEF,  # define a class mainframe
+  FMAXPSG_SCTN09FF_CLASS_FRAMEELEMENT_DEF,  # define a frame element
+  FMAXPSG_SCTN09FF_CLASS_FUNCTION_BLANKLINE,  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
+  FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF,  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
+  FMAXPSG_SCTN09FF_CLASS_FUNCTION_DEF_FROM_FILE,  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
+  FMAXPSG_SCTN09FF_CLASS_FUNCTION_LAMBDA1_DEF,  # add a lambda to the top of a function, usually for absorbing things
+  FMAXPSG_SCTN09FF_CLASS_FUNCTION_LAMBDA2_DEF,  # add a lambda to the top of a function, usually for absorbing things
+  FMAXPSG_SCTN09FF_CLASS_FUNCTION_LINE_ADD,  # define a class <NAC><CLASSNAME><FUNCNAME><LINE>
+  FMAXPSG_SCTN09FF_CLASS_FUNCTION_READ_FROM_FILE,  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
+  FMAXPSG_SCTN09FF_CLASS_FUNCTION_STR1_DEF,  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_FUNCTION_STR2_DEF,  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_FUNCTION_VAL1_DEF,  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_FUNCTION_VAL2_DEF,  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_GROUP_SELECT,  # define a column group default <NAC><CLASSNAME><GROUPNAME><GROUPVALUE>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_LAMBDA,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_LINE,  # define a class <NAC><CLASSNAME><LINE>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_READ_FROM_FILE,  # read a section of __init__ from a file in res/functions <NAC><CLASSNAME><FILENAME>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_STR,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD1_VAL,  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_SS,  # add a str-str to a dict <NAC><CLASSNAME><STR><STR>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_SV,  # add a str-val to a dict <NAC><CLASSNAME><STR><VAL>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VS,  # add a str to a dict <NAC><CLASSNAME><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_DICTIN_VV,  # add a val to a dict in PSG <NAC><CLASSNAME><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_FOREIGN_KEY,  # add values to _DICT_KEYS, _DICT_KEYS_REVERSE_ for external elements like buttons and checkboxes <NAC><CLASSNAME><KEY>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_LAMBDA,  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_LINE,  # define a class <NAC><CLASSNAME><LINE>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_READ_FROM_FILE,  # read a section of __init__ from a file in res/functions <NAC><CLASSNAME><FILENAME>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_STR,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD2_VAL,  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_INIT_ADD3_LINE,  # define a class <NAC><CLASSNAME><LINE>
+  FMAXPSG_SCTN09FF_CLASS_INIT_DEF,  # define a class <NAC><CLASSNAME><PARMS>
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_BUTTON_ADD,  # add a button to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_CHECKBOX_ADD,  # add a checkbox to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_COLUMN_ADD,  # add a column to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_COMBO_ADD,  # add a combo to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_DEF,  # define layouts
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_KEY_ADD,  # add a key to a layout element 'key=' will be added automatically <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_PACKEDPARM_ADD,  # add packedparms to a layout entry <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_PARM_VAL_ADD,  # add parms to a layout entry <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_RADIO_ADD,  # add a radio to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_ROW_ADD,  # add a row [] to a layout <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL>
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_SPIN_ADD,  # add a spinbox to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_LAYOUT_TEXT_ADD,  # add a text element to a row <NAC><CLASSNAME><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
+  FMAXPSG_SCTN09FF_CLASS_LIST_DEF,  # define a list in PSG <NAC><CLASSNAME><LISTNAME>
+  FMAXPSG_SCTN09FF_CLASS_LIST_STR_ADD,  # add a str to a list in PSG <NAC><CLASSNAME><LISTNAME><STR>
+  FMAXPSG_SCTN09FF_CLASS_LIST_VAL_ADD,  # add a val to a list in PSG <NAC><CLASSNAME><LISTNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_RADIO_DEF,  # define a radio button element
+  FMAXPSG_SCTN09FF_CLASS_RCMENU_DEF,  # define a right click menu
+  FMAXPSG_SCTN09FF_CLASS_RCMENU_VAL_ADD,  # define a right click menu
+  FMAXPSG_SCTN09FF_CLASS_SPIN_DEF,  # define a spin box entry <NAC><CLASSNAME><SPINNAME>
+  FMAXPSG_SCTN09FF_CLASS_SPIN_DICT_VS_ADD,  # add a STR to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><STR>
+  FMAXPSG_SCTN09FF_CLASS_SPIN_DICT_VV_ADD,  # add a VAL to the SPINDICT <NAC><CLASSNAME><SPINNAME><KEY><VAL>
+  FMAXPSG_SCTN09FF_CLASS_SPIN_LIST_STR_ADD,  # add a STR to the values list <NAC><CLASSNAME><SPINNAME><STR>
+  FMAXPSG_SCTN09FF_CLASS_SPIN_LIST_VAL_ADD,  # add a VAL to the values list <NAC><CLASSNAME><SPINNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_TEXT_DEF,  # define a text <NAC><CLASSNAME><TEXTNAME><ISATIME>
+  FMAXPSG_SCTN09FF_CLASS_TEXT_PARM_ADD,  # add a PARM to a text element <NAC><CLASSNAME><TEXTNAME><VAL>
+  FMAXPSG_SCTN09FF_CLASS_TEXT_STR_ADD,  # add a str to a text element <NAC><CLASSNAME><TEXTNAME><KEY><MODULE><VAL>
+  FMAXPSG_SCTN09FF_CLASS_TEXT_VAL_ADD,  # add a val to a text element <NAC><CLASSNAME><TEXTNAME><KEY><MODULE><VAL>
+  FMAXPSG_SCTN09FF_CLASS_WINDOW_DEF,  # define a main dictdict <NAC><CLASSNAME><MAINNAME>
+  FMAXPSG_SCTN09FF_CLASS_WINDOW_STR_ADD,  # add a str to the main dictdict
+  FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD,  # add a str to the main dictdict
 ]
 
 
@@ -951,159 +941,159 @@ FMPSG_SCTN09FF_CLASS_WINDOW_DICT = {}  #
 # makeAComment
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def makeAComment(comment_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn_ += f"""{CMNTLINE}{NEWLINE}# * {comment_}{NEWLINE}{CMNTLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  _strToRtn_ = ""
+  _strToRtn_ += f"""{CMNTLINE}{NEWLINE}# * {comment_}{NEWLINE}{CMNTLINE}{NEWLINE}"""
+  return _strToRtn_
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # makeAComment
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def makeAWideComment(comment_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	"""Short summary.
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  """Short summary.
 
-	Parameters
-	----------
-	comment_ : string
-			a string to be inserted in the middle of 7 lines, outer two are attention getters
+  Parameters
+  ----------
+  comment_ : string
+      a string to be inserted in the middle of 7 lines, outer two are attention getters
 
-	Returns
-	-------
-	string
-		contains the comment_ and surrounding lines, plus two # lines above and below
+  Returns
+  -------
+  string
+    contains the comment_ and surrounding lines, plus two # lines above and below
 
 """
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn_ += f"""#{NEWLINE}#{NEWLINE}{CMNTLINE}{NEWLINE}# * {comment_}{NEWLINE}{CMNTLINE}{NEWLINE}#{NEWLINE}#{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  _strToRtn_ = ""
+  _strToRtn_ += f"""#{NEWLINE}#{NEWLINE}{CMNTLINE}{NEWLINE}# * {comment_}{NEWLINE}{CMNTLINE}{NEWLINE}#{NEWLINE}#{NEWLINE}"""
+  return _strToRtn_
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # subMyPlaceKpr
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def subMyPlaceKpr(sourceStr_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = sourceStr_
-	for _thisSrcStr_, _thisDestStr_ in STR_SUBST_DICT.items():
-		_strToRtn_ = _strToRtn_.replace(_thisSrcStr_, _thisDestStr_)
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  _strToRtn_ = sourceStr_
+  for _thisSrcStr_, _thisDestStr_ in STR_SUBST_DICT.items():
+    _strToRtn_ = _strToRtn_.replace(_thisSrcStr_, _thisDestStr_)
 
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  return _strToRtn_
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # makeADict
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def makeADict(dictName_, dictComment_, dictItems_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn_ += f"""{dictName_} = {OBRCE}  # {dictComment_}
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  _strToRtn_ = ""
+  _strToRtn_ += f"""{dictName_} = {OBRCE}  # {dictComment_}
 {dictItems_}{CBRCE}{NEWLINE}{NEWLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  return _strToRtn_
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # sortADict
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def sortADict(dictToSort_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_dictToRtn_ = {}
-	for _thisKey_ in sorted(dictToSort_.keys(), key=lambda __KEY__: __KEY__.lower()):
-		_dictToRtn_[_thisKey_] = dictToSort_[_thisKey_]
-	return _dictToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  _dictToRtn_ = {}
+  for _thisKey_ in sorted(dictToSort_.keys(), key=lambda __KEY__: __KEY__.lower()):
+    _dictToRtn_[_thisKey_] = dictToSort_[_thisKey_]
+  return _dictToRtn_
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # makeAList
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def makeAList(listName_, listComment_, listItems_, listItemCmntDict_=None, addQuotes_=False):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn_ += f"""{listName_} = {OBRKT}  # {listComment_}{NEWLINE}"""
-	for _thisItem_ in listItems_:
-		if listItemCmntDict_ is None:
-			if addQuotes_ is True:
-				_strToRtn_ += f"""{NTAB(1)}{DBLQT}{_thisItem_}{DBLQT}"""
-			else:
-				_strToRtn_ += f"""{NTAB(1)}{_thisItem_}"""
-		else:
-			if addQuotes_ is True:
-				_strToRtn_ += f"""{NTAB(1)}{DBLQT}{_thisItem_}{DBLQT},  # {listItemCmntDict_[_thisItem_]}{NEWLINE}"""
-			else:
-				_strToRtn_ += f"""{NTAB(1)}{_thisItem_},  # {listItemCmntDict_[_thisItem_]}{NEWLINE}"""
-	_strToRtn_ += f"""{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  _strToRtn_ = ""
+  _strToRtn_ += f"""{listName_} = {OBRKT}  # {listComment_}{NEWLINE}"""
+  for _thisItem_ in listItems_:
+    if listItemCmntDict_ is None:
+      if addQuotes_ is True:
+        _strToRtn_ += f"""{NTAB(1)}{DBLQT}{_thisItem_}{DBLQT}"""
+      else:
+        _strToRtn_ += f"""{NTAB(1)}{_thisItem_}"""
+    else:
+      if addQuotes_ is True:
+        _strToRtn_ += f"""{NTAB(1)}{DBLQT}{_thisItem_}{DBLQT},  # {listItemCmntDict_[_thisItem_]}{NEWLINE}"""
+      else:
+        _strToRtn_ += f"""{NTAB(1)}{_thisItem_},  # {listItemCmntDict_[_thisItem_]}{NEWLINE}"""
+  _strToRtn_ += f"""{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
+  return _strToRtn_
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # makeANormalTDD
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def makeANormalTDD(tupDictName_, tupDictItems_, TDDItems_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn1_ = ""
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  _strToRtn_ = ""
+  _strToRtn1_ = ""
 
-	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	_strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}
+  # 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+  _strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}
 {tupDictName_}TUP = {OPAREN}
 {tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{CPAREN}:
 {NTAB(1)}return dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}{NEWLINE}
 {tupDictName_}_TDD = {OBRCE}{NEWLINE}{TDDItems_}{CBRCE}{NEWLINE}{NEWLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  return _strToRtn_
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # makeANormalTupDict
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def makeANormalTupDict(tupDictName_, tupDictItems_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn1_ = ""
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  _strToRtn_ = ""
+  _strToRtn1_ = ""
 
-	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	_strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}
+  # 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+  _strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}
 {tupDictName_}TUP = {OPAREN}
 {tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{CPAREN}:
 {NTAB(1)}return dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}{NEWLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  return _strToRtn_
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # makeASidecarTupDic
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def makeASidecarTupDic(tupDictName_, tupDictItems_, tupDictSidecars_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	_strToRtn1_ = ""
-	_strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}{NEWLINE}"""
-	for _key_, _items_ in tupDictSidecars_.items():
-		_strToRtn_ += f"""{tupDictName_}_{_key_}TUP = {OPAREN}{NEWLINE}{_items_}{CPAREN}{NEWLINE}{NEWLINE}"""
-		_strToRtn1_ += f"""{NTAB(1)}_listToRtn_ = list((x) for x in {tupDictName_}_{_key_}TUP){NEWLINE}"""
-	_strToRtn_ += f"""{tupDictName_}TUP = {OPAREN}
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  _strToRtn_ = ""
+  _strToRtn1_ = ""
+  _strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}{NEWLINE}"""
+  for _key_, _items_ in tupDictSidecars_.items():
+    _strToRtn_ += f"""{tupDictName_}_{_key_}TUP = {OPAREN}{NEWLINE}{_items_}{CPAREN}{NEWLINE}{NEWLINE}"""
+    _strToRtn1_ += f"""{NTAB(1)}_listToRtn_ = list((x) for x in {tupDictName_}_{_key_}TUP){NEWLINE}"""
+  _strToRtn_ += f"""{tupDictName_}TUP = {OPAREN}
 {tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{CPAREN}:
 {NTAB(1)}_dictToRtn_ = dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}{_strToRtn1_}{NTAB(1)}return _listToRtn_, _dictToRtn_{NEWLINE}{NEWLINE}{NEWLINE}"""
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  return _strToRtn_
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # makeAFullTupDict (sidecar is a single item list, or alist of strings that will be concatenated before substitution)
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def makeAFullTupDict(tupDictName_, tupDictItems_, tupDictSidecars_, tupDictParms_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	subParmsStr_ = f"""{NTAB(1)}def {tupDictName_}_subParms(listIn_, tupDictParms_):
+  subParmsStr_ = f"""{NTAB(1)}def {tupDictName_}_subParms(listIn_, tupDictParms_):
 {NTAB(2)}_listToRtn_ = []
 {NTAB(2)}for _thisStr_ in listIn_:
 {NTAB(3)}for _subParm_, _replaceStr_ in tupDictParms_:
@@ -1111,81 +1101,81 @@ def makeAFullTupDict(tupDictName_, tupDictItems_, tupDictSidecars_, tupDictParms
 {NTAB(3)}_listToRtn_.append(_thisStr_)
 {NTAB(2)}return _listToRtn_{NEWLINE}{NEWLINE}"""
 
-	_strToRtn1_ = ""
-	_strToRtn2_ = ""
-	sideCarToRtn = {}
-	_parmsNames_ = ""
-	_sideCar_ = {}
+  _strToRtn1_ = ""
+  _strToRtn2_ = ""
+  sideCarToRtn = {}
+  _parmsNames_ = ""
+  _sideCar_ = {}
 
-	for _subParm_, _replaceStr_ in tupDictParms_:
-		_parmsNames_ += f"""{_replaceStr_}, """
-	_parmsNames_ = _parmsNames_[:-2]
+  for _subParm_, _replaceStr_ in tupDictParms_:
+    _parmsNames_ += f"""{_replaceStr_}, """
+  _parmsNames_ = _parmsNames_[:-2]
 
-	_strToRtn1_ += f"""{makeAComment(f"start of {tupDictName_} structures")}{NEWLINE}"""
+  _strToRtn1_ += f"""{makeAComment(f"start of {tupDictName_} structures")}{NEWLINE}"""
 
-	strToRtn3_ = f"""{NTAB(1)}{tupDictName_}_PARMS = {OBRKT}{NEWLINE}"""
-	for _subParm_, _replaceStr_ in tupDictParms_:
-		strToRtn3_ += f"""{NTAB(2)}{OPAREN}{DBLQT}{_subParm_}{DBLQT}, {_replaceStr_}{CPAREN},{NEWLINE}"""
-	strToRtn3_ = strToRtn3_[:-1] + f"""{NEWLINE}{NTAB(1)}{CBRKT}{NEWLINE}"""
+  strToRtn3_ = f"""{NTAB(1)}{tupDictName_}_PARMS = {OBRKT}{NEWLINE}"""
+  for _subParm_, _replaceStr_ in tupDictParms_:
+    strToRtn3_ += f"""{NTAB(2)}{OPAREN}{DBLQT}{_subParm_}{DBLQT}, {_replaceStr_}{CPAREN},{NEWLINE}"""
+  strToRtn3_ = strToRtn3_[:-1] + f"""{NEWLINE}{NTAB(1)}{CBRKT}{NEWLINE}"""
 
-	for _key_, _items_ in tupDictSidecars_.items():
-		_strToRtn1_ += f"""{tupDictName_}_{_key_}TUP = {OPAREN}{NEWLINE}{_items_}{CPAREN}{NEWLINE}{NEWLINE}"""
-		_strToRtn2_ += f"""{NTAB(1)}_listToRtn_ = list((x) for x in {tupDictName_}_{_key_}TUP){NEWLINE}"""
-		_strToRtn2_ += f"""{NTAB(1)}_listToRtn_ = CF.subParms(_listToRtn_, {tupDictName_}_PARMS)"""
-	_strToRtn1_ += f"""{tupDictName_}TUP = {OPAREN}
+  for _key_, _items_ in tupDictSidecars_.items():
+    _strToRtn1_ += f"""{tupDictName_}_{_key_}TUP = {OPAREN}{NEWLINE}{_items_}{CPAREN}{NEWLINE}{NEWLINE}"""
+    _strToRtn2_ += f"""{NTAB(1)}_listToRtn_ = list((x) for x in {tupDictName_}_{_key_}TUP){NEWLINE}"""
+    _strToRtn2_ += f"""{NTAB(1)}_listToRtn_ = CF.subParms(_listToRtn_, {tupDictName_}_PARMS)"""
+  _strToRtn1_ += f"""{tupDictName_}TUP = {OPAREN}
 {tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{_parmsNames_}{CPAREN}:{NEWLINE}{strToRtn3_}
 {NTAB(1)}_dictToRtn_ = dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}"""
 
-	_strToRtn1_ += f"""{_strToRtn2_}{NEWLINE}{NTAB(1)}return _listToRtn_, _dictToRtn_{NEWLINE}{NEWLINE}{NEWLINE}"""
+  _strToRtn1_ += f"""{_strToRtn2_}{NEWLINE}{NTAB(1)}return _listToRtn_, _dictToRtn_{NEWLINE}{NEWLINE}{NEWLINE}"""
 
-	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
-	return _strToRtn1_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  # ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+  return _strToRtn1_
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # readFileToStr
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def readFileToStr(FILENAME_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = ""
-	with open(FILENAME_, "tr") as _FDIn_:
-		_strToRtn_ += _FDIn_.read()
-	return _strToRtn_
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  _strToRtn_ = ""
+  with open(FILENAME_, "tr") as _FDIn_:
+    _strToRtn_ += _FDIn_.read()
+  return _strToRtn_
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # doErrorItem
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def doErrorItem(message_, itemToError_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	print(f"""{NEWLINE}{message_}{NEWLINE}is a tuple {isinstance(itemToError_, tuple)}{NEWLINE}item as parsed{NEWLINE}{repr(itemToError_)}{NEWLINE}""")
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  print(f"""{NEWLINE}{message_}{NEWLINE}is a tuple {isinstance(itemToError_, tuple)}{NEWLINE}item as parsed{NEWLINE}{repr(itemToError_)}{NEWLINE}""")
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # FM
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def FM():
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+  # fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-		from FM import FM_parseTBGLST
-		FM_parseTBGLST.parseTBGLST()
+    from FM import FM_parseTBGLST
+    FM_parseTBGLST.parseTBGLST()
 
-		from FM.MAKE import _01_CF
-		_01_CF.makeCF()
+    from FM.MAKE import _01_CF
+    _01_CF.makeCF()
 
-		from FM.MAKE import _02_FM
-		_02_FM.makeFM()
+    from FM.MAKE import _02_FM
+    _02_FM.makeFM()
 
-		from FM.MAKE import _03_00_PSG
-		_03_00_PSG.makePSG()
+    from FM.MAKE import _03_00_PSG
+    _03_00_PSG.makePSG()
 
-		from FM.MAKE import _03_01_PSGClasses
-		_03_01_PSGClasses.makePSGClasses()
+    from FM.MAKE import _03_01_PSGClasses
+    _03_01_PSGClasses.makePSGClasses()
 
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1ff
+  # fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1ff
 
 
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#

@@ -1,21 +1,5 @@
 
 
-"""
-__MODULE_NAME__/__MODULE_NAME__.py
-FM/FM.py
-
-__MODULE_NAME__/__SUB0__/__SUB1__ __SUB2__ .py
-FM/MAKE/_01_CF.py
-
-__MODULE_NAME__/__SUB0__/__CLASS__.py
-FM/MAKE/MTBL_C.py
-
-FM/MAKE/_03_00_PSG.py
-
-
-
-"""
-
 from FM import FM
 
 
@@ -118,7 +102,7 @@ class C_MTBL():
 				(_sub2_ is None)
 		):
 		# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-			_filename_ = FM.NAME_LCL_SELF_PY(__MODULE_NAME__=_moduleName_,)
+			_filename_ = FM.NAME_LCL_MOD_PY(__MODULE_NAME__=_moduleName_,)
 			_newFilename_ = FM.NAME_LCL_SELF_NEW_PY(__MODULE_NAME__=_moduleName_,)
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 			# fold here ⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3⥣3
@@ -171,7 +155,7 @@ class C_MTBL():
 				(_sub2_ is None)
 		):
 		# ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥ ⥣0⥥
-			_filename_ = FM.NAME_LCL_SUB0_PY(
+			_filename_ = FM.NAME_LCL_MOD_SUB0_PY(
 					__MODULE_NAME__=_moduleName_,
 					__SUB0__=_sub0_,
 			)
@@ -309,7 +293,7 @@ class C_MTBL():
 {FM.makeAComment(f"start of {_moduleName_}.py")}
 _moduleName_ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
 {FM.MARK0MID("")}
-_filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SELF_PY(
+_filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_MOD_PY(
 {FM.NTAB(1)}__MODULE_NAME__=_moduleName_
 ){FM.NEWLINE}{FM.CBRCE}{FM.TRIQT}  # {_filename_}
 {FM.MARK0MID("")}
@@ -346,7 +330,7 @@ TBGLST = {FM.OBRKT}
 _moduleName_ = {FM.DBLQT}{_moduleName_}{FM.DBLQT}
 _sub0_ = {FM.DBLQT}{_sub0_}{FM.DBLQT}
 {FM.MARK0MID("")}
-_filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_SUB0_PY(
+_filename_ = f{FM.TRIQT}{FM.OBRCE}FM.NAME_LCL_MOD_SUB0_PY(
 {FM.NTAB(1)}__MODULE_NAME__=_moduleName_,
 {FM.NTAB(1)}__SUB0__=_sub0_,
 ){FM.CBRCE}{FM.TRIQT}  # {_filename_}

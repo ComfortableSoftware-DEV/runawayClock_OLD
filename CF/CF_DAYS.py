@@ -1,256 +1,208 @@
-DAYS_mtwtfss = 0b00000000
-DAYS_mtwtfsS = 0b00000001
-DAYS_mtwtfSs = 0b00000010
-DAYS_mtwtfSS = 0b00000011
-DAYS_mtwtFss = 0b00000100
-DAYS_mtwtFsS = 0b00000101
-DAYS_mtwtFSs = 0b00000110
-DAYS_mtwtFSS = 0b00000111
-DAYS_mtwTfss = 0b00001000
-DAYS_mtwTfsS = 0b00001001
-DAYS_mtwTfSs = 0b00001010
-DAYS_mtwTfSS = 0b00001011
-DAYS_mtwTFss = 0b00001100
-DAYS_mtwTFsS = 0b00001101
-DAYS_mtwTFSs = 0b00001110
-DAYS_mtwTFSS = 0b00001111
-DAYS_mtWtfss = 0b00010000
-DAYS_mtwtfsS = 0b00010001
-DAYS_mtwtfSs = 0b00010010
-DAYS_mtwtfSS = 0b00010011
-DAYS_mtwtFss = 0b00010100
-DAYS_mtwtFsS = 0b00010101
-DAYS_mtwtFSs = 0b00010110
-DAYS_mtwtFSS = 0b00010111
-DAYS_mtwTfss = 0b00011000
-DAYS_mtwTfsS = 0b00011001
-DAYS_mtwTfSs = 0b00011010
-DAYS_mtwTfSS = 0b00011011
-DAYS_mtwTFss = 0b00011100
-DAYS_mtwTFsS = 0b00011101
-DAYS_mtwTFSs = 0b00011110
-DAYS_mtwTFSS = 0b00011111
-DAYS_mtWtfss = 0b00100000
-DAYS_mtWtfsS = 0b00100001
-DAYS_mtWtfSs = 0b00100010
-DAYS_mtWtfSS = 0b00100011
-DAYS_mtWtFss = 0b00100100
-DAYS_mtWtFsS = 0b00100101
-DAYS_mtWtFSs = 0b00100110
-DAYS_mtWtFSS = 0b00100111
-DAYS_mtWTfss = 0b00101000
-DAYS_mtWTfsS = 0b00101001
-DAYS_mtWTfSs = 0b00101010
-DAYS_mtWTfSS = 0b00101011
-DAYS_mtWTFss = 0b00101100
-DAYS_mtWTFsS = 0b00101101
-DAYS_mtWTFSs = 0b00101110
-DAYS_mtWTFSS = 0b00101111
-DAYS_mtWtfss = 0b00110000
-DAYS_mtWtfsS = 0b00110001
-DAYS_mtWtfSs = 0b00110010
-DAYS_mtWtfSS = 0b00110011
-DAYS_mtWtFss = 0b00110100
-DAYS_mtWtFsS = 0b00110101
-DAYS_mtWtFSs = 0b00110110
-DAYS_mtWtFSS = 0b00110111
-DAYS_mtWTfss = 0b00111000
-DAYS_mtWTfsS = 0b00111001
-DAYS_mtWTfSs = 0b00111010
-DAYS_mtWTfSS = 0b00111011
-DAYS_mtWTFss = 0b00111100
-DAYS_mtWTFsS = 0b00111101
-DAYS_mtWTFSs = 0b00111110
-DAYS_mtWTFSS = 0b00111111
-DAYS_mTwtfss = 0b00000000
-DAYS_mTwtfsS = 0b00000001
-DAYS_mTwtfSs = 0b00000010
-DAYS_mTwtfSS = 0b00000011
-DAYS_mTwtFss = 0b00000100
-DAYS_mTwtFsS = 0b00000101
-DAYS_mTwtFSs = 0b00000110
-DAYS_mTwtFSS = 0b00000111
-DAYS_mTwTfss = 0b00001000
-DAYS_mTwTfsS = 0b00001001
-DAYS_mTwTfSs = 0b00001010
-DAYS_mTwTfSS = 0b00001011
-DAYS_mTwTFss = 0b00001100
-DAYS_mTwTFsS = 0b00001101
-DAYS_mTwTFSs = 0b00001110
-DAYS_mTwTFSS = 0b00001111
-DAYS_mTWtfss = 0b00010000
-DAYS_mTwtfsS = 0b00010001
-DAYS_mTwtfSs = 0b00010010
-DAYS_mTwtfSS = 0b00010011
-DAYS_mTwtFss = 0b00010100
-DAYS_mTwtFsS = 0b00010101
-DAYS_mTwtFSs = 0b00010110
-DAYS_mTwtFSS = 0b00010111
-DAYS_mTwTfss = 0b00011000
-DAYS_mTwTfsS = 0b00011001
-DAYS_mTwTfSs = 0b00011010
-DAYS_mTwTfSS = 0b00011011
-DAYS_mTwTFss = 0b00011100
-DAYS_mTwTFsS = 0b00011101
-DAYS_mTwTFSs = 0b00011110
-DAYS_mTwTFSS = 0b00011111
-DAYS_mTWtfss = 0b00100000
-DAYS_mTWtfsS = 0b00100001
-DAYS_mTWtfSs = 0b00100010
-DAYS_mTWtfSS = 0b00100011
-DAYS_mTWtFss = 0b00100100
-DAYS_mTWtFsS = 0b00100101
-DAYS_mTWtFSs = 0b00100110
-DAYS_mTWtFSS = 0b00100111
-DAYS_mTWTfss = 0b00101000
-DAYS_mTWTfsS = 0b00101001
-DAYS_mTWTfSs = 0b00101010
-DAYS_mTWTfSS = 0b00101011
-DAYS_mTWTFss = 0b00101100
-DAYS_mTWTFsS = 0b00101101
-DAYS_mTWTFSs = 0b00101110
-DAYS_mTWTFSS = 0b00101111
-DAYS_mTWtfss = 0b00110000
-DAYS_mTWtfsS = 0b00110001
-DAYS_mTWtfSs = 0b00110010
-DAYS_mTWtfSS = 0b00110011
-DAYS_mTWtFss = 0b00110100
-DAYS_mTWtFsS = 0b00110101
-DAYS_mTWtFSs = 0b00110110
-DAYS_mTWtFSS = 0b00110111
-DAYS_mTWTfss = 0b00111000
-DAYS_mTWTfsS = 0b00111001
-DAYS_mTWTfSs = 0b00111010
-DAYS_mTWTfSS = 0b00111011
-DAYS_mTWTFss = 0b00111100
-DAYS_mTWTFsS = 0b00111101
-DAYS_mTWTFSs = 0b00111110
-DAYS_mTWTFSS = 0b00111111
-DAYS_Mtwtfss = 0b01000000
-DAYS_MtwtfsS = 0b01000001
-DAYS_MtwtfSs = 0b01000010
-DAYS_MtwtfSS = 0b01000011
-DAYS_MtwtFss = 0b01000100
-DAYS_MtwtFsS = 0b01000101
-DAYS_MtwtFSs = 0b01000110
-DAYS_MtwtFSS = 0b01000111
-DAYS_MtwTfss = 0b01001000
-DAYS_MtwTfsS = 0b01001001
-DAYS_MtwTfSs = 0b01001010
-DAYS_MtwTfSS = 0b01001011
-DAYS_MtwTFss = 0b01001100
-DAYS_MtwTFsS = 0b01001101
-DAYS_MtwTFSs = 0b01001110
-DAYS_MtwTFSS = 0b01001111
-DAYS_MtWtfss = 0b01010000
-DAYS_MtwtfsS = 0b01010001
-DAYS_MtwtfSs = 0b01010010
-DAYS_MtwtfSS = 0b01010011
-DAYS_MtwtFss = 0b01010100
-DAYS_MtwtFsS = 0b01010101
-DAYS_MtwtFSs = 0b01010110
-DAYS_MtwtFSS = 0b01010111
-DAYS_MtwTfss = 0b01011000
-DAYS_MtwTfsS = 0b01011001
-DAYS_MtwTfSs = 0b01011010
-DAYS_MtwTfSS = 0b01011011
-DAYS_MtwTFss = 0b01011100
-DAYS_MtwTFsS = 0b01011101
-DAYS_MtwTFSs = 0b01011110
-DAYS_MtwTFSS = 0b01011111
-DAYS_MtWtfss = 0b01100000
-DAYS_MtWtfsS = 0b01100001
-DAYS_MtWtfSs = 0b01100010
-DAYS_MtWtfSS = 0b01100011
-DAYS_MtWtFss = 0b01100100
-DAYS_MtWtFsS = 0b01100101
-DAYS_MtWtFSs = 0b01100110
-DAYS_MtWtFSS = 0b01100111
-DAYS_MtWTfss = 0b01101000
-DAYS_MtWTfsS = 0b01101001
-DAYS_MtWTfSs = 0b01101010
-DAYS_MtWTfSS = 0b01101011
-DAYS_MtWTFss = 0b01101100
-DAYS_MtWTFsS = 0b01101101
-DAYS_MtWTFSs = 0b01101110
-DAYS_MtWTFSS = 0b01101111
-DAYS_MtWtfss = 0b01110000
-DAYS_MtWtfsS = 0b01110001
-DAYS_MtWtfSs = 0b01110010
-DAYS_MtWtfSS = 0b01110011
-DAYS_MtWtFss = 0b01110100
-DAYS_MtWtFsS = 0b01110101
-DAYS_MtWtFSs = 0b01110110
-DAYS_MtWtFSS = 0b01110111
-DAYS_MtWTfss = 0b01111000
-DAYS_MtWTfsS = 0b01111001
-DAYS_MtWTfSs = 0b01111010
-DAYS_MtWTfSS = 0b01111011
-DAYS_MtWTFss = 0b01111100
-DAYS_MtWTFsS = 0b01111101
-DAYS_MtWTFSs = 0b01111110
-DAYS_MtWTFSS = 0b01111111
-DAYS_MTwtfss = 0b01000000
-DAYS_MTwtfsS = 0b01000001
-DAYS_MTwtfSs = 0b01000010
-DAYS_MTwtfSS = 0b01000011
-DAYS_MTwtFss = 0b01000100
-DAYS_MTwtFsS = 0b01000101
-DAYS_MTwtFSs = 0b01000110
-DAYS_MTwtFSS = 0b01000111
-DAYS_MTwTfss = 0b01001000
-DAYS_MTwTfsS = 0b01001001
-DAYS_MTwTfSs = 0b01001010
-DAYS_MTwTfSS = 0b01001011
-DAYS_MTwTFss = 0b01001100
-DAYS_MTwTFsS = 0b01001101
-DAYS_MTwTFSs = 0b01001110
-DAYS_MTwTFSS = 0b01001111
-DAYS_MTWtfss = 0b01010000
-DAYS_MTwtfsS = 0b01010001
-DAYS_MTwtfSs = 0b01010010
-DAYS_MTwtfSS = 0b01010011
-DAYS_MTwtFss = 0b01010100
-DAYS_MTwtFsS = 0b01010101
-DAYS_MTwtFSs = 0b01010110
-DAYS_MTwtFSS = 0b01010111
-DAYS_MTwTfss = 0b01011000
-DAYS_MTwTfsS = 0b01011001
-DAYS_MTwTfSs = 0b01011010
-DAYS_MTwTfSS = 0b01011011
-DAYS_MTwTFss = 0b01011100
-DAYS_MTwTFsS = 0b01011101
-DAYS_MTwTFSs = 0b01011110
-DAYS_MTwTFSS = 0b01011111
-DAYS_MTWtfss = 0b01100000
-DAYS_MTWtfsS = 0b01100001
-DAYS_MTWtfSs = 0b01100010
-DAYS_MTWtfSS = 0b01100011
-DAYS_MTWtFss = 0b01100100
-DAYS_MTWtFsS = 0b01100101
-DAYS_MTWtFSs = 0b01100110
-DAYS_MTWtFSS = 0b01100111
-DAYS_MTWTfss = 0b01101000
-DAYS_MTWTfsS = 0b01101001
-DAYS_MTWTfSs = 0b01101010
-DAYS_MTWTfSS = 0b01101011
-DAYS_MTWTFss = 0b01101100
-DAYS_MTWTFsS = 0b01101101
-DAYS_MTWTFSs = 0b01101110
-DAYS_MTWTFSS = 0b01101111
-DAYS_MTWtfss = 0b01110000
-DAYS_MTWtfsS = 0b01110001
-DAYS_MTWtfSs = 0b01110010
-DAYS_MTWtfSS = 0b01110011
-DAYS_MTWtFss = 0b01110100
-DAYS_MTWtFsS = 0b01110101
-DAYS_MTWtFSs = 0b01110110
-DAYS_MTWtFSS = 0b01110111
-DAYS_MTWTfss = 0b01111000
-DAYS_MTWTfsS = 0b01111001
-DAYS_MTWTfSs = 0b01111010
-DAYS_MTWTfSS = 0b01111011
-DAYS_MTWTFss = 0b01111100
-DAYS_MTWTFsS = 0b01111101
-DAYS_MTWTFSs = 0b01111110
-DAYS_MTWTFSS = 0b01111111
+DAYS_xmtwtfss = 0b00000000
+DAYS_xmtwtfsS = 0b00000001
+DAYS_xmtwtfSs = 0b00000010
+DAYS_xmtwtfSS = 0b00000011
+DAYS_xmtwtFss = 0b00000100
+DAYS_xmtwtFsS = 0b00000101
+DAYS_xmtwtFSs = 0b00000110
+DAYS_xmtwtFSS = 0b00000111
+DAYS_xmtwTfss = 0b00001000
+DAYS_xmtwTfsS = 0b00001001
+DAYS_xmtwTfSs = 0b00001010
+DAYS_xmtwTfSS = 0b00001011
+DAYS_xmtwTFss = 0b00001100
+DAYS_xmtwTFsS = 0b00001101
+DAYS_xmtwTFSs = 0b00001110
+DAYS_xmtwTFSS = 0b00001111
+DAYS_xmtWtfss = 0b00010000
+DAYS_xmtWtfsS = 0b00010001
+DAYS_xmtWtfSs = 0b00010010
+DAYS_xmtWtfSS = 0b00010011
+DAYS_xmtWtFss = 0b00010100
+DAYS_xmtWtFsS = 0b00010101
+DAYS_xmtWtFSs = 0b00010110
+DAYS_xmtWtFSS = 0b00010111
+DAYS_xmtWTfss = 0b00011000
+DAYS_xmtWTfsS = 0b00011001
+DAYS_xmtWTfSs = 0b00011010
+DAYS_xmtWTfSS = 0b00011011
+DAYS_xmtWTFss = 0b00011100
+DAYS_xmtWTFsS = 0b00011101
+DAYS_xmtWTFSs = 0b00011110
+DAYS_xmtWTFSS = 0b00011111
+DAYS_xmTwtfss = 0b00100000
+DAYS_xmTwtfsS = 0b00100001
+DAYS_xmTwtfSs = 0b00100010
+DAYS_xmTwtfSS = 0b00100011
+DAYS_xmTwtFss = 0b00100100
+DAYS_xmTwtFsS = 0b00100101
+DAYS_xmTwtFSs = 0b00100110
+DAYS_xmTwtFSS = 0b00100111
+DAYS_xmTwTfss = 0b00101000
+DAYS_xmTwTfsS = 0b00101001
+DAYS_xmTwTfSs = 0b00101010
+DAYS_xmTwTfSS = 0b00101011
+DAYS_xmTwTFss = 0b00101100
+DAYS_xmTwTFsS = 0b00101101
+DAYS_xmTwTFSs = 0b00101110
+DAYS_xmTwTFSS = 0b00101111
+DAYS_xmTWtfss = 0b00110000
+DAYS_xmTWtfsS = 0b00110001
+DAYS_xmTWtfSs = 0b00110010
+DAYS_xmTWtfSS = 0b00110011
+DAYS_xmTWtFss = 0b00110100
+DAYS_xmTWtFsS = 0b00110101
+DAYS_xmTWtFSs = 0b00110110
+DAYS_xmTWtFSS = 0b00110111
+DAYS_xmTWTfss = 0b00111000
+DAYS_xmTWTfsS = 0b00111001
+DAYS_xmTWTfSs = 0b00111010
+DAYS_xmTWTfSS = 0b00111011
+DAYS_xmTWTFss = 0b00111100
+DAYS_xmTWTFsS = 0b00111101
+DAYS_xmTWTFSs = 0b00111110
+DAYS_xmTWTFSS = 0b00111111
+DAYS_xmtwtfss = 0b00000000
+DAYS_xmtwtfsS = 0b00000001
+DAYS_xmtwtfSs = 0b00000010
+DAYS_xmtwtfSS = 0b00000011
+DAYS_xmtwtFss = 0b00000100
+DAYS_xmtwtFsS = 0b00000101
+DAYS_xmtwtFSs = 0b00000110
+DAYS_xmtwtFSS = 0b00000111
+DAYS_xmtwTfss = 0b00001000
+DAYS_xmtwTfsS = 0b00001001
+DAYS_xmtwTfSs = 0b00001010
+DAYS_xmtwTfSS = 0b00001011
+DAYS_xmtwTFss = 0b00001100
+DAYS_xmtwTFsS = 0b00001101
+DAYS_xmtwTFSs = 0b00001110
+DAYS_xmtwTFSS = 0b00001111
+DAYS_xmtWtfss = 0b00010000
+DAYS_xmtWtfsS = 0b00010001
+DAYS_xmtWtfSs = 0b00010010
+DAYS_xmtWtfSS = 0b00010011
+DAYS_xmtWtFss = 0b00010100
+DAYS_xmtWtFsS = 0b00010101
+DAYS_xmtWtFSs = 0b00010110
+DAYS_xmtWtFSS = 0b00010111
+DAYS_xmtWTfss = 0b00011000
+DAYS_xmtWTfsS = 0b00011001
+DAYS_xmtWTfSs = 0b00011010
+DAYS_xmtWTfSS = 0b00011011
+DAYS_xmtWTFss = 0b00011100
+DAYS_xmtWTFsS = 0b00011101
+DAYS_xmtWTFSs = 0b00011110
+DAYS_xmtWTFSS = 0b00011111
+DAYS_xMTwtfss = 0b01100000
+DAYS_xMTwtfsS = 0b01100001
+DAYS_xMTwtfSs = 0b01100010
+DAYS_xMTwtfSS = 0b01100011
+DAYS_xMTwtFss = 0b01100100
+DAYS_xMTwtFsS = 0b01100101
+DAYS_xMTwtFSs = 0b01100110
+DAYS_xMTwtFSS = 0b01100111
+DAYS_xMTwTfss = 0b01101000
+DAYS_xMTwTfsS = 0b01101001
+DAYS_xMTwTfSs = 0b01101010
+DAYS_xMTwTfSS = 0b01101011
+DAYS_xMTwTFss = 0b01101100
+DAYS_xMTwTFsS = 0b01101101
+DAYS_xMTwTFSs = 0b01101110
+DAYS_xMTwTFSS = 0b01101111
+DAYS_xMTWtfss = 0b01110000
+DAYS_xMTWtfsS = 0b01110001
+DAYS_xMTWtfSs = 0b01110010
+DAYS_xMTWtfSS = 0b01110011
+DAYS_xMTWtFss = 0b01110100
+DAYS_xMTWtFsS = 0b01110101
+DAYS_xMTWtFSs = 0b01110110
+DAYS_xMTWtFSS = 0b01110111
+DAYS_xMTWTfss = 0b01111000
+DAYS_xMTWTfsS = 0b01111001
+DAYS_xMTWTfSs = 0b01111010
+DAYS_xMTWTfSS = 0b01111011
+DAYS_xMTWTFss = 0b01111100
+DAYS_xMTWTFsS = 0b01111101
+DAYS_xMTWTFSs = 0b01111110
+DAYS_xMTWTFSS = 0b01111111
+
+DAYS_STR = "xmtwtfss"
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# fixDays
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def fixDays(intIn_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	_strIn_ = f"""{intIn_:08b}"""
+	_strToRtn_ = ""
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	for _index_ in range(0, 8):
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (
+				(_strIn_[_index_] == "0")
+		):
+			_strToRtn_ += DAYS_STR[_index_].lower()
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		elif (
+				(_strIn_[_index_] == "1")
+		):
+			_strToRtn_ += DAYS_STR[_index_].upper()
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		else:
+			_strToRtn_ += "_"
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+	return _strToRtn_
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# fixBin
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def fixBin(daysIn_):
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	if (
+			(len(daysIn_) != 8)
+	):
+		return None
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+	_strToRtn_ = ""
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	for _index_ in range(0, 8):
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		if (
+				(daysIn_[_index_].isupper() is True)
+		):
+			_strToRtn_ += "1"
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		elif (
+				(daysIn_[_index_].isupper() is False)
+		):
+			_strToRtn_ += "0"
+		# ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥ ⥣2⥥
+		else:
+			_strToRtn_ += "_"
+		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+	return _strToRtn_
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# makeDaysFlags
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+def makeDaysFlags():
+	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
+	_strToRtn_ = ""
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	for _index_ in range(0, 128):
+		_strToRtn_ += f"""DAYS_{fixDays} = 0b{_index_:08b}\n"""
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+	_strToRtn_ += ""
+	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
+
+
+#
