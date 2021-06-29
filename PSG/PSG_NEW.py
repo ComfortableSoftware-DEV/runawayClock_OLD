@@ -133,8 +133,8 @@ K_ALERTING_LIST = "K_ALERTING_LIST"  # list that holds all currently alarming ev
 K_ALPHA_CHANNEL = "K_ALPHA_CHANNEL"  # 
 K_ALPHA_HIGH = "K_ALPHA_HIGH"  # 
 K_ALPHA_LOW = "K_ALPHA_LOW"  # 
-K_APPMODE = "K_APPMODE"  # no appmode set
-K_AUTO_CLOSE_DURATION = "K_AUTO_CLOSE_DURATION"  # auto close alert time of this event
+K_APPMODE = "K_APPMODE"  # app mode key
+K_AUTO_CLOSE_DURATION = "K_AUTO_CLOSE_DURATION"  # 
 K_BBOX = "K_BBOX"  # 
 K_BTN_DISMISS = "K_BTN_DISMISS"  # button xpand font
 K_BTN_DOWN = "K_BTN_DOWN"  # focus on click
@@ -202,17 +202,13 @@ K_DEVMODE = "K_DEVMODE"  # comment
 K_DICT_ALL_THE_FORMS = "K_DICT_ALL_THE_FORMS"  # comment
 K_DICT_KEYS = "K_DICT_KEYS"  # 
 K_DICT_KEYS_REVERSE = "K_DICT_KEYS_REVERSE"  # 
-K_DISMISSED = "K_DISMISSED"  # is this event dismissed
 K_DPD_ROOT = "K_DPD_ROOT"  # DPD_ROOT defined
 K_EMPTY_BBOX = "K_EMPTY_BBOX"  # empty XY dict
 K_EMPTY_TUPDICT_FLIP_INFO = "K_EMPTY_TUPDICT_FLIP_INFO"  # easy dict for flip info in class passed as a list of these dicts
 K_EMPTY_XY = "K_EMPTY_XY"  # empty XY dict
-K_ENABLED = "K_ENABLED"  # is this event enabled
 K_EVENT_ENTRIES = "K_EVENT_ENTRIES"  # 
 K_EVENT_NAME = "K_EVENT_NAME"  # name of the event
-K_EVENTMODE = "K_EVENTMODE"  # this entry's event_mode
 K_EXITING = "K_EXITING"  # this class is currently being exited bool
-K_FIRSTRUN = "K_FIRSTRUN"  # are we initializing or not
 K_FONT_DEFAULT = "K_FONT_DEFAULT"  # default font my favorite readable font
 K_FONTSZ_ALERT_TEXT = "K_FONTSZ_ALERT_TEXT"  # the font for the clocks only clock
 K_FONTSZ_BTNS = "K_FONTSZ_BTNS"  # comment
@@ -220,19 +216,13 @@ K_FONTSZ_CLOCKS_CURRENT_INTERVAL_COUNT = "K_FONTSZ_CLOCKS_CURRENT_INTERVAL_COUNT
 K_FONTSZ_CLOCKS_TIME_S_CLOCK = "K_FONTSZ_CLOCKS_TIME_S_CLOCK"  # the font for the clocks only clock
 K_FONTSZ_CLOCKS_TIME_S_ELAPSED = "K_FONTSZ_CLOCKS_TIME_S_ELAPSED"  # the font for the clocks only clock
 K_FONTSZ_CLOCKS_TIME_S_TOGO = "K_FONTSZ_CLOCKS_TIME_S_TOGO"  # the font for the clocks only clock
-K_FORMNAME = "K_FORMNAME"  # time of this event
 K_HIDDEN = "K_HIDDEN"  # bool are we hidden or not
 K_INDEX_EAST = "K_INDEX_EAST"  # EAST
 K_INDEX_NORTH = "K_INDEX_NORTH"  # NORTH
-K_INDEX_OF_NEXT_EVENT = "K_INDEX_OF_NEXT_EVENT"  # holds events
 K_INDEX_SOUTH = "K_INDEX_SOUTH"  # SOUTH
 K_INDEX_WEST = "K_INDEX_WEST"  # WEST
 K_INDEX_X = "K_INDEX_X"  # X
 K_INDEX_Y = "K_INDEX_Y"  # Y
-K_IS_ALERTING_NOW = "K_IS_ALERTING_NOW"  # count of number of times this has alerted since last reset
-K_K_ALARMPOPUP_TEXT_TEXT = "K_K_ALARMPOPUP_TEXT_TEXT"  # alarm text for this event
-K_K_EVENT_NAME = "K_K_EVENT_NAME"  # this entry's name
-K_K_TIME_S_AT_ALARM = "K_K_TIME_S_AT_ALARM"  # time of this event if it an alarm
 K_LIST_ALL_TIMES = "K_LIST_ALL_TIMES"  # list of all times
 K_LIST_APPDS_MIDNIGHT_FIX_TIMES = "K_LIST_APPDS_MIDNIGHT_FIX_TIMES"  # list of times to be updated at midnight
 K_LIST_APPDS_TIMES_TO_INT = "K_LIST_APPDS_TIMES_TO_INT"  # list of all times that need to be checked and inted, will NOT affect version, 
@@ -253,11 +243,11 @@ K_NOWMS = "K_NOWMS"  # comment
 K_NOWS = "K_NOWS"  # comment
 K_PERIODIC = "K_PERIODIC"  # 
 K_PKLJAR = "K_PKLJAR"  # comment
-K_PREDISMISSABLE = "K_PREDISMISSABLE"  # is this event dismissable in advance
+K_PREDISMISSABLE = "K_PREDISMISSABLE"  # event can be dismissed in advance
 K_SCREEN_DIMS = "K_SCREEN_DIMS"  # 
 K_SIZE = "K_SIZE"  # 
 K_SNOOZABLE = "K_SNOOZABLE"  # can this event be snoozed
-K_SNOOZED = "K_SNOOZED"  # is this event snoozed
+K_SNOOZED = "K_SNOOZED"  # is this event snoozed bool
 K_SZ_ALERT_TEXT = "K_SZ_ALERT_TEXT"  # font size of alert text
 K_SZ_ALPHA_DIM = "K_SZ_ALPHA_DIM"  # default alpha dim state
 K_SZ_ALPHA_HIGH = "K_SZ_ALPHA_HIGH"  # high alpha
@@ -302,26 +292,26 @@ K_TIME_MS_AT_NEXT_UPDATE_VAL = "K_TIME_MS_AT_NEXT_UPDATE_VAL"  # comment
 K_TIME_MS_AT_UNHIDE = "K_TIME_MS_AT_UNHIDE"  # the time when the window will unhide
 K_TIME_MS_AT_UPDATE = "K_TIME_MS_AT_UPDATE"  # 
 K_TIME_S_ADJUST_VALUE = "K_TIME_S_ADJUST_VALUE"  # comment
-K_TIME_S_AT_ALARM = "K_TIME_S_AT_ALARM"  # time of this event if it an alarm
-K_TIME_S_AT_LAST_RUN = "K_TIME_S_AT_LAST_RUN"  # time this alarm last ran, now if running
+K_TIME_S_AT_ALARM = "K_TIME_S_AT_ALARM"  # the alarm time
+K_TIME_S_AT_LAST_RUN = "K_TIME_S_AT_LAST_RUN"  # timeS of last alarm 
 K_TIME_S_AT_NEXT_ALERT = "K_TIME_S_AT_NEXT_ALERT"  # interval count template
 K_TIME_S_AT_NEXT_EVENT_VAL = "K_TIME_S_AT_NEXT_EVENT_VAL"  # comment
 K_TIME_S_AT_NEXT_PERIODIC_JOB_VAL = "K_TIME_S_AT_NEXT_PERIODIC_JOB_VAL"  # seconds till next housekeeping, check for next times, etc.
 K_TIME_S_AT_ZEROELAPSE = "K_TIME_S_AT_ZEROELAPSE"  # interval count template
 K_TIME_S_CLOCK = "K_TIME_S_CLOCK"  # interval count template
 K_TIME_S_ELAPSED = "K_TIME_S_ELAPSED"  # interval count template
-K_TIME_S_INTERVAL = "K_TIME_S_INTERVAL"  # interval of this event
-K_TIME_S_INTERVAL__BEGIN = "K_TIME_S_INTERVAL__BEGIN"  # time of the day this interval is made active
-K_TIME_S_INTERVAL__END = "K_TIME_S_INTERVAL__END"  # time of the day this interval is no longer active
-K_TIME_S_INTERVAL_START = "K_TIME_S_INTERVAL_START"  # time of the day this round of interval started
-K_TIME_S_LEN_OF_ALERT = "K_TIME_S_LEN_OF_ALERT"  # length of time to alert this event before auto closing it
+K_TIME_S_INTERVAL = "K_TIME_S_INTERVAL"  # interval timer starting time, reset each time the interval goes off
+K_TIME_S_INTERVAL__BEGIN = "K_TIME_S_INTERVAL__BEGIN"  # key for time interval starts alerting
+K_TIME_S_INTERVAL__END = "K_TIME_S_INTERVAL__END"  # key for time an interval goes to leep and stops alerting
+K_TIME_S_INTERVAL_START = "K_TIME_S_INTERVAL_START"  # interval timer starting time, reset each time the interval goes off
+K_TIME_S_LEN_OF_ALERT = "K_TIME_S_LEN_OF_ALERT"  # length of alerting
 K_TIME_S_TOGO = "K_TIME_S_TOGO"  # interval count template
 K_TITLE_ALARMPOPUP = "K_TITLE_ALARMPOPUP"  # string with window title for APPMODE_CLOCKS
 K_TITLE_CLOCKS = "K_TITLE_CLOCKS"  # string with window title for APPMODE_CLOCKS
 K_TITLE_EDIT = "K_TITLE_EDIT"  # string with window title for APPMODE_CLOCKS
 K_TITLE_MAIN = "K_TITLE_MAIN"  # string with window title for APPMODE_CLOCKS
 K_TITLE_THECLOCK = "K_TITLE_THECLOCK"  # string with window title for APPMODE_CLOCKS
-K_VERSION = "K_VERSION"  # version number hex string
+K_VERSION = "K_VERSION"  # True if pkl is to be updated from APPDS_MAIN
 K_ZERO_CLOCK = "K_ZERO_CLOCK"  # all the zeros
 K_ZERO_CLOCKSTR = "K_ZERO_CLOCKSTR"  # all the zeros
 MOUSE_STATUS_CLOSE_E = "MOUSE_STATUS_CLOSE_E"  # mouse is east of checked element
@@ -1091,111 +1081,6 @@ TEXT_TIME_S_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN090C APPDS
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-APPDS_MAIN = {  # the struct holding everything passed betwixt PySimpleGUI and this app
-	K_APPMODE: APPMODE_NONE,  # no appmode set
-	K_CHECKBOX_ALPHA_DIM: True,  # dim when mouse over bool
-	K_CHECKBOX_HIDE: True,  # hide under the mouse bool
-	K_CHECKBOX_HOVER_DATE: True,  # show date when the mouse hovers
-	K_CHECKBOX_RUNAWAY: False,  # runaway from the mouse bool
-	K_EVENT_ENTRIES: {  # holds events
-		0: {
-			K_ALARMPOPUP_TEXT_TEXT: "time to move a bit",  # alarm text for this event
-			K_AUTO_CLOSE_DURATION: 10,  # time of this event
-			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
-			K_DISMISSED: False,  # is this event dismissed
-			K_ENABLED: True,  # is this event enabled
-			K_EVENT_NAME: "MOVE",  # this entry's name
-			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
-			K_FIRSTRUN: True,  # are we initializing or not
-			K_FORMNAME: None,  # time of this event
-			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
-			K_PREDISMISSABLE: True,  # is this event dismissable in advance
-			K_SNOOZABLE: False,  # can this event be snoozed
-			K_SNOOZED: False,  # is this event snoozed
-			K_TIME_S_AT_ALARM: 0,  # time of this event if it an alarm
-			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
-			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_S_INTERVAL: CF.HALFHOUR_S,  # interval of this event
-			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
-			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
-			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
-			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
-		},
-		1: {
-			K_ALARMPOPUP_TEXT_TEXT: "pee, hydrate",  # alarm text for this event
-			K_AUTO_CLOSE_DURATION: 10,  # time of this event
-			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
-			K_DISMISSED: False,  # is this event dismissed
-			K_ENABLED: True,  # is this event enabled
-			K_EVENT_NAME: "WATER",  # this entry's name
-			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
-			K_FIRSTRUN: True,  # are we initializing or not
-			K_FORMNAME: None,  # time of this event
-			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
-			K_PREDISMISSABLE: True,  # is this event dismissable in advance
-			K_SNOOZABLE: False,  # can this event be snoozed
-			K_SNOOZED: False,  # is this event snoozed
-			K_TIME_S_AT_ALARM: 0,  # time of this event if it an alarm
-			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
-			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_S_INTERVAL: 4 * CF.HOUR_S,  # interval of this event
-			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
-			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
-			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
-			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
-		},
-		2: {
-			K_ALARMPOPUP_TEXT_TEXT: "clean up for bed",  # alarm text for this event
-			K_AUTO_CLOSE_DURATION: 0,  # auto close alert time of this event
-			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
-			K_DISMISSED: False,  # is this event dismissed
-			K_ENABLED: True,  # is this event enabled
-			K_EVENT_NAME: "PREBED",  # this entry's name
-			K_EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
-			K_FIRSTRUN: True,  # are we initializing or not
-			K_FORMNAME: None,  # time of this event
-			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
-			K_PREDISMISSABLE: True,  # is this event dismissable in advance
-			K_SNOOZABLE: False,  # can this event be snoozed
-			K_SNOOZED: False,  # is this event snoozed
-			K_TIME_S_AT_ALARM: "03:30:00",  # time of this event if it an alarm
-			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
-			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_S_INTERVAL: None,  # interval of this event
-			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
-			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
-			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
-			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
-		},
-		3: {
-			K_ALARMPOPUP_TEXT_TEXT: "off to bed",  # alarm text for this event
-			K_AUTO_CLOSE_DURATION: 0,  # auto close alert time of this event
-			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
-			K_DISMISSED: False,  # is this event dismissed
-			K_ENABLED: True,  # is this event enabled
-			K_EVENT_NAME: "TOBED",  # this entry's name
-			K_EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
-			K_FIRSTRUN: True,  # are we initializing or not
-			K_FORMNAME: None,  # time of this event
-			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
-			K_PREDISMISSABLE: True,  # is this event dismissable in advance
-			K_SNOOZABLE: False,  # can this event be snoozed
-			K_SNOOZED: False,  # is this event snoozed
-			K_TIME_S_AT_ALARM: "04:00:00",  # time of this event if it an alarm
-			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
-			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
-			K_TIME_S_INTERVAL: None,  # interval of this event
-			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
-			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
-			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
-			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
-		},
-	},
-	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
-	K_VERSION: "00000013",  # version number hex string
-}
-
-
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
