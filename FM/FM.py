@@ -5,6 +5,12 @@ import imp
 import os
 
 
+from CF.CONSTANTS import MARKERS as M
+from CF.CONSTANTS import NAMES as N
+from CF.CONSTANTS import VALS as V
+
+
+
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 # modules defined in FM.py
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
@@ -35,282 +41,6 @@ import os
 
 #
 
-
-#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0001 _CHR_ _CONST_
-#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-BKQT = "`"  # BACK TICK
-BKSLSH = "\\"  # BACKSLASH
-CBRCE = "}"  # CLOSEBRACE
-CBRKT = "]"  # CLOSEBRACKET
-CPAREN = ")"  # CLOSE PARENTHESIS
-CRSTR = "\r"  # carriage return
-DBLQT = "\""  # DOUBLE QUOTE
-ESC = "\x1b"
-NEWLINE = "\n"  # NEWLINE
-OBRCE = "{"  # OPENBRACE
-OBRKT = "["  # OPENBRACKET
-OPAREN = "("  # OPENPAREN
-SGLQT = "'"  # simple ' character
-SPCSTR = " "  # SPACE character"
-TABSTR = "\t"  # TAB
-
-CMNTLEN = 200
-FOLDLEN = 200
-GLOBAL_CACHE_DIR = "/home/will/.cache/"
-GLOBAL_CONFIG_DIR = "/home/will/.config/"
-PY_CONFIG_DIR = "/rcr/0-units/python/"
-TRIQT = f"""{DBLQT}{DBLQT}{DBLQT}"""
-
-
-#
-# #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * SCTN0002 value_ constants
-#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-#
-#
-
-
-BIN04 = lambda __X__: f"""{__X__:04b}"""
-BIN08 = lambda __X__: f"""{__X__:08b}"""
-BIN16 = lambda __X__: f"""{__X__:016b}"""
-BIN32 = lambda __X__: f"""{__X__:032b}"""
-BIN64 = lambda __X__: f"""{__X__:064b}"""
-CLRALL = f"""{ESC}[2J"""
-CLRDOWN = f"""{ESC}[J"""
-CLREOL = f"""{ESC}[K"""
-CMNTLINE = f"""# * {"#*" * (CMNTLEN // 2)}"""
-DICTMODE_KEYSTR = "DICTMODE_KEYSTR"  # define dictmode 'key':val
-DICTMODE_KEYVAL = "DICTMODE_KEYVAL"  # define dictmode key:val
-EEOL = f"""{ESC}[K"""
-EMPTY_DICT = {}
-EMPTY_LIST = []
-EMPTY_STR = ""
-EMPTY_TUPLE = ()
-EMPTYSTRLST = [None, "", DBLQT, f"""{DBLQT}{DBLQT}""", SGLQT, f"""{SGLQT}{SGLQT}""", BKQT, "None", "\r", NEWLINE, "\r\n", "\n\r", ]
-FOLD1ENDHERE = f"""# fold here {"⥣1" * (FOLDLEN // 2)}"""
-FOLD1ENDHERELN = f"""# fold here {"⥣1" * (FOLDLEN // 2)}{NEWLINE}"""
-FOLD1STARTHERE = f"""# fold here {"⥥1" * (FOLDLEN // 2)}"""
-FOLD1STARTHERELN = f"""# fold here {"⥥1" * (FOLDLEN // 2)}{NEWLINE}"""
-FOLD2ENDHERE = f"""# fold here {"⥣2" * (FOLDLEN // 2)}"""
-FOLD2ENDHERELN = f"""# fold here {"⥣2" * (FOLDLEN // 2)}{NEWLINE}"""
-FOLD2STARTHERE = f"""# fold here {"⥥2" * (FOLDLEN // 2)}"""
-FOLD2STARTHERELN = f"""# fold here {"⥥2" * (FOLDLEN // 2)}{NEWLINE}"""
-FOLD3ENDHERE = f"""# fold here {"⥣3" * (FOLDLEN // 2)}"""
-FOLD3ENDHERELN = f"""# fold here {"⥣3" * (FOLDLEN // 2)}{NEWLINE}"""
-FOLD3STARTHERE = f"""# fold here {"⥥3" * (FOLDLEN // 2)}"""
-FOLD3STARTHERELN = f"""# fold here {"⥥3" * (FOLDLEN // 2)}{NEWLINE}"""
-HEX08 = lambda __X__: f"""{__X__:02H}"""  # {thisComment_}
-HEX16 = lambda __X__: f"""{__X__:04H}"""  # {thisComment_}
-HEX32 = lambda __X__: f"""{__X__:08H}"""  # {thisComment_}
-HEX64 = lambda __X__: f"""{__X__:016H}"""  # {thisComment_}
-IMPORTANTSTR = f"""# * {"!-" * (CMNTLEN // 2)}"""  # important line marker
-INDENTIN = " -=> "  # display arrow RIGHT
-INDENTOUT = " <=- "  # display arrow LEFT
-INFOSTR = f"""# * {"%_" * (CMNTLEN // 2)}"""  # INFO _STR_ line
-LINESUP = lambda __NUM__: f"""{ESC}[{__NUM__}A"""
-MARK0END = lambda __TAG__: f"""# {"⥣0 " * (CMNTLEN // 3)} {__TAG__}"""
-MARK0ENDLN = lambda __TAG__: f"""# {"⥣0 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK0MID = lambda __TAG__: f"""# {"⥣0⥥ " * (CMNTLEN // 4)} {__TAG__}"""
-MARK0MIDLN = lambda __TAG__: f"""# {"⥣0⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
-MARK0START = lambda __TAG__: f"""# {"0⥥ " * (CMNTLEN // 3)} {__TAG__}"""
-MARK0STARTLN = lambda __TAG__: f"""# {"0⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK1END = lambda __TAG__: f"""# {"⥣1 " * (CMNTLEN // 3)} {__TAG__}"""
-MARK1ENDLN = lambda __TAG__: f"""# {"⥣1 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK1MID = lambda __TAG__: f"""# {"⥣1⥥ " * (CMNTLEN // 4)} {__TAG__}"""
-MARK1MIDLN = lambda __TAG__: f"""# {"⥣1⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
-MARK1START = lambda __TAG__: f"""# {"1⥥ " * (CMNTLEN // 3)} {__TAG__}"""
-MARK1STARTLN = lambda __TAG__: f"""# {"1⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK2END = lambda __TAG__: f"""# {"⥣2 " * (CMNTLEN // 3)} {__TAG__}"""
-MARK2ENDLN = lambda __TAG__: f"""# {"⥣2 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK2MID = lambda __TAG__: f"""# {"⥣2⥥ " * (CMNTLEN // 4)} {__TAG__}"""
-MARK2MIDLN = lambda __TAG__: f"""# {"⥣2⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
-MARK2START = lambda __TAG__: f"""# {"2⥥ " * (CMNTLEN // 3)} {__TAG__}"""
-MARK2STARTLN = lambda __TAG__: f"""# {"2⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK3END = lambda __TAG__: f"""# {"⥣3 " * (CMNTLEN // 3)} {__TAG__}"""
-MARK3ENDLN = lambda __TAG__: f"""# {"⥣3 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK3MID = lambda __TAG__: f"""# {"⥣3⥥ " * (CMNTLEN // 4)} {__TAG__}"""
-MARK3MIDLN = lambda __TAG__: f"""# {"⥣3⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
-MARK3START = lambda __TAG__: f"""# {"3⥥ " * (CMNTLEN // 3)} {__TAG__}"""
-MARK3STARTLN = lambda __TAG__: f"""# {"3⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK4END = lambda __TAG__: f"""# {"⥣4 " * (CMNTLEN // 3)} {__TAG__}"""
-MARK4ENDLN = lambda __TAG__: f"""# {"⥣4 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK4MID = lambda __TAG__: f"""# {"⥣4⥥ " * (CMNTLEN // 4)} {__TAG__}"""
-MARK4MIDLN = lambda __TAG__: f"""# {"⥣4⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
-MARK4START = lambda __TAG__: f"""# {"4⥥ " * (CMNTLEN // 3)} {__TAG__}"""
-MARK4STARTLN = lambda __TAG__: f"""# {"4⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK5END = lambda __TAG__: f"""# {"⥣5 " * (CMNTLEN // 3)} {__TAG__}"""
-MARK5ENDLN = lambda __TAG__: f"""# {"⥣5 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK5MID = lambda __TAG__: f"""# {"⥣5⥥ " * (CMNTLEN // 4)} {__TAG__}"""
-MARK5MIDLN = lambda __TAG__: f"""# {"⥣5⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
-MARK5START = lambda __TAG__: f"""# {"5⥥ " * (CMNTLEN // 3)} {__TAG__}"""
-MARK5STARTLN = lambda __TAG__: f"""# {"5⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK6END = lambda __TAG__: f"""# {"⥣6 " * (CMNTLEN // 3)} {__TAG__}"""
-MARK6ENDLN = lambda __TAG__: f"""# {"⥣6 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK6MID = lambda __TAG__: f"""# {"⥣6⥥ " * (CMNTLEN // 4)} {__TAG__}"""
-MARK6MIDLN = lambda __TAG__: f"""# {"⥣6⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
-MARK6START = lambda __TAG__: f"""# {"6⥥ " * (CMNTLEN // 3)} {__TAG__}"""
-MARK6STARTLN = lambda __TAG__: f"""# {"6⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK7END = lambda __TAG__: f"""# {"⥣7 " * (CMNTLEN // 3)} {__TAG__}"""
-MARK7ENDLN = lambda __TAG__: f"""# {"⥣7 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK7MID = lambda __TAG__: f"""# {"⥣7⥥ " * (CMNTLEN // 4)} {__TAG__}"""
-MARK7MIDLN = lambda __TAG__: f"""# {"⥣7⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
-MARK7START = lambda __TAG__: f"""# {"7⥥ " * (CMNTLEN // 3)} {__TAG__}"""
-MARK7STARTLN = lambda __TAG__: f"""# {"7⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK8END = lambda __TAG__: f"""# {"⥣8 " * (CMNTLEN // 3)} {__TAG__}"""
-MARK8ENDLN = lambda __TAG__: f"""# {"⥣8 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK8MID = lambda __TAG__: f"""# {"⥣8⥥ " * (CMNTLEN // 4)} {__TAG__}"""
-MARK8MIDLN = lambda __TAG__: f"""# {"⥣8⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
-MARK8START = lambda __TAG__: f"""# {"8⥥ " * (CMNTLEN // 3)} {__TAG__}"""
-MARK8STARTLN = lambda __TAG__: f"""# {"8⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK9END = lambda __TAG__: f"""# {"⥣9 " * (CMNTLEN // 3)} {__TAG__}"""
-MARK9ENDLN = lambda __TAG__: f"""# {"⥣9 " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MARK9MID = lambda __TAG__: f"""# {"⥣9⥥ " * (CMNTLEN // 4)} {__TAG__}"""
-MARK9MIDLN = lambda __TAG__: f"""# {"⥣9⥥ " * (CMNTLEN // 4)} {__TAG__}{NEWLINE}"""
-MARK9START = lambda __TAG__: f"""# {"9⥥ " * (CMNTLEN // 3)} {__TAG__}"""
-MARK9STARTLN = lambda __TAG__: f"""# {"9⥥ " * (CMNTLEN // 3)} {__TAG__}{NEWLINE}"""
-MOVELEFT = lambda __NUM__: f"""{ESC}[{__NUM__}D"""
-MOVETO = lambda __LN__, __COL__: f"""{ESC}[{__LN__};{__COL__}H"""
-NCR = lambda __NUM__: f"""{CRSTR * __NUM__}"""
-NNL = lambda __NUM__: f"""{NEWLINE * __NUM__}"""
-NSPC = lambda __NUM__: f"""{SPCSTR * __NUM__}"""  # returns a string with __NUM__ SPC
-NTAB = lambda __NUM__: f"""{TABSTR * __NUM__}"""  # returns a string with __NUM__ TAB
-QTSET = [DBLQT, SGLQT, BKQT]  # set of all quote characters
-SERIALNUMBER = lambda __NUM__: f"""{(__NUM__ % 0XFFFFFFFF):08X}"""
-USER_CACHE_URL = lambda __FILENAME__: f"""{USER_CACHE_DIR}{__FILENAME__}"""
-USER_CONFIG_URL = lambda __FILENAME__: f"""{USER_CONFIG_DIR}{__FILENAME__}"""
-WHIRLCOUNT = 0
-WHIRLSTR = f"""-{BKSLSH}|/*"""
-
-
-DAY_MS = (60 * 60 * 24 * 1000)  # 86400000
-DAY_S = (60 * 60 * 24)  # 86400
-HALFDAY_S = (60 * 60 * 12)  # 43200
-HALFHOUR_S = (60 * 30)  # 1800
-HOUR_S = (60 * 60)  # 3600
-MINUTE_S = 60 # 60
-QUARTERDAY_S = (60 * 60 * 6)
-QUARTERHOUR_S = (60 * 15)  # 900
-TIME_S_995959 = (60 * 60 * 100)  # 360000
-TIME_S_DDD235959 = (60 * 60 * 24 * 1000)
-
-
-NAME_GLBL_NEW_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}{__FILENAME__}_NEW.py"""
-NAME_GLBL_NEW_PY_MD = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/MARKDOWN/{__FILENAME__}_NEW.md"""
-NAME_GLBL_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}{__FILENAME__}.py"""
-NAME_GLBL_PY_IMG = lambda __MODULE_NAME__, __FILENAME__: f"""{PY_CONFIG_DIR}res/IMG/{__MODULE_NAME__}/{__FILENAME__}"""
-NAME_GLBL_PY_IMG_ROOT = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/IMG/{__FILENAME__}"""
-NAME_GLBL_PY_MD = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/MARKDOWN/{__FILENAME__}.md"""
-NAME_GLBL_PY_RES_NEW_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/{__FILENAME__}_NEW.py"""
-NAME_GLBL_PY_RES_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}res/{__FILENAME__}.py"""
-NAME_GLBL_PY_ROOT = lambda __FILENAME__, __EXTENSION__: f"""{PY_CONFIG_DIR}__ROOT__/{__FILENAME__}.{__EXTENSION__}"""
-NAME_GLBL_PY_ROOT_NEW = lambda __FILENAME__, __EXTENSION__: f"""{PY_CONFIG_DIR}__ROOT__/{__FILENAME__}_NEW.{__EXTENSION__}"""
-NAME_GLBL_PY_ROOT_NEW_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}__ROOT__/{__FILENAME__}_NEW.py"""
-NAME_GLBL_PY_ROOT_PY = lambda __FILENAME__: f"""{PY_CONFIG_DIR}__ROOT__/{__FILENAME__}.py"""
-NAME_GLBL_SELF_BTM_NEW_PY = lambda __MODULE_NAME__: f"""{PY_CONFIG_DIR}/{__MODULE_NAME__}/{__MODULE_NAME__}_BTM_NEW.py"""
-NAME_GLBL_SELF_BTM_PY = lambda __MODULE_NAME__: f"""{PY_CONFIG_DIR}/{__MODULE_NAME__}/{__MODULE_NAME__}_BTM.py"""
-NAME_GLBL_SELF_CLASS_NEW_PY = lambda __MODULE_NAME__, __CLASS__: f"""{PY_CONFIG_DIR}/{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C_NEW.py"""
-NAME_GLBL_SELF_CLASS_PY = lambda __MODULE_NAME__, __CLASS__: f"""{PY_CONFIG_DIR}/{__MODULE_NAME__}/{__MODULE_NAME__}_{__CLASS__}_C.py"""
-NAME_GLBL_SELF_NEW_PY = lambda __MODULE_NAME__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_NEW.py"""
-NAME_GLBL_SELF_PY = lambda __MODULE_NAME__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}.py"""
-NAME_GLBL_SELF_SUB0_BTM_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_BTM_NEW.py"""
-NAME_GLBL_SELF_SUB0_BTM_PY = lambda __MODULE_NAME__, __SUB0__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_BTM.py"""
-NAME_GLBL_SELF_SUB0_CLASS_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__CLASS__}_C_NEW.py"""
-NAME_GLBL_SELF_SUB0_CLASS_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__CLASS__}_C.py"""
-NAME_GLBL_SELF_SUB0_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_NEW.py"""
-NAME_GLBL_SELF_SUB0_PY = lambda __MODULE_NAME__, __SUB0__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}.py"""
-NAME_GLBL_SELF_SUB0_TOP_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_TOP_NEW.py"""
-NAME_GLBL_SELF_SUB0_TOP_PY = lambda __MODULE_NAME__, __SUB0__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_TOP.py"""
-NAME_GLBL_SELF_SUB1_BTM_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_BTM_NEW.py"""
-NAME_GLBL_SELF_SUB1_BTM_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_BTM.py"""
-NAME_GLBL_SELF_SUB1_CLASS_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__CLASS__}_C_NEW.py"""
-NAME_GLBL_SELF_SUB1_CLASS_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__CLASS__}_C.py"""
-NAME_GLBL_SELF_SUB1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_NEW.py"""
-NAME_GLBL_SELF_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}.py"""
-NAME_GLBL_SELF_SUB1_TOP_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_TOP_NEW.py"""
-NAME_GLBL_SELF_SUB1_TOP_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_TOP.py"""
-NAME_GLBL_SELF_SUB2_BTM_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_BTM.py"""
-NAME_GLBL_SELF_SUB2_BTM_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_BTM_NEW.py"""
-NAME_GLBL_SELF_SUB2_CLASS_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __CLASS__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_{__CLASS__}_C_NEW.py"""
-NAME_GLBL_SELF_SUB2_CLASS_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __CLASS__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_{__CLASS__}_C.py"""
-NAME_GLBL_SELF_SUB2_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_NEW.py"""
-NAME_GLBL_SELF_SUB2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}.py"""
-NAME_GLBL_SELF_SUB2_TOP_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_TOP_NEW.py"""
-NAME_GLBL_SELF_SUB2_TOP_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_{__SUB2__}_TOP.py"""
-NAME_GLBL_SELF_TOP_NEW_PY = lambda __MODULE_NAME__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_TOP_NEW.py"""
-NAME_GLBL_SELF_TOP_PY = lambda __MODULE_NAME__: f"""{PY_CONFIG_DIR}{__MODULE_NAME__}/{__MODULE_NAME__}_TOP.py"""
-
-
-NAME_HOME_CACHE = lambda __FILENAME__: f"""/home/will/.cache/{__FILENAME__}"""
-NAME_HOME_CONFIG = lambda __FILENAME__: f"""/home/will/.config/{__FILENAME__}"""
-NAME_HOME_SELF_CACHE = lambda __MODULE_NAME__, __FILENAME__: f"""/home/will/.cache/{__MODULE_NAME__}/{__FILENAME__}"""
-NAME_HOME_SELF_CONFIG = lambda __MODULE_NAME__, __FILENAME__: f"""/home/will/.config/{__MODULE_NAME__}/{__FILENAME__}"""
-
-
-# NAME_LCL_MOD_NEW_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_NEW.py"""
-# NAME_LCL_MOD_PY = lambda __MODULE_NAME__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}.py"""
-# NAME_LCL_MOD_SUB0_NEW_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_NEW.py"""
-# NAME_LCL_MOD_SUB0_PY = lambda __MODULE_NAME__, __SUB0__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}.py"""
-# NAME_LCL_MOD_SUB1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}_NEW.py"""
-# NAME_LCL_MOD_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: f"""{__MODULE_NAME__}/{__MODULE_NAME__}_{__SUB0__}_{__SUB1__}.py"""
-# NAME_LCL_SELF_C_NEW_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__CLASS__}_C_NEW.py"""
-# NAME_LCL_SELF_C_PY = lambda __MODULE_NAME__, __CLASS__: f"""{__MODULE_NAME__}/{__CLASS__}_C.py"""
-# NAME_LCL_SUB0_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__CLASS__}_C_NEW.py"""
-# NAME_LCL_SUB0_C_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__CLASS__}_C.py"""
-# NAME_LCL_SUB1_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__SUB1__}_{__CLASS__}_C_NEW.py"""
-# NAME_LCL_SUB1_C_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}_{__SUB1__}_{__CLASS__}_C.py"""
-# NAME_LCL_SUBD0_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}/{__CLASS__}_C_NEW.py"""
-# NAME_LCL_SUBD0_C_PY = lambda __MODULE_NAME__, __SUB0__, __CLASS__: f"""{__MODULE_NAME__}/{__SUB0__}/{__CLASS__}_C.py"""
-# NAME_LCL_SUBD0_SUB1_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_NEW.py"""
-# NAME_LCL_SUBD0_SUB1_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}.py"""
-# NAME_LCL_SUBD0_SUB2_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_NEW.py"""
-# NAME_LCL_SUBD0_SUB2_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}.py"""
-# NAME_LCL_SUBD0_SUB3_C_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__, __CLASS__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_{__CLASS__}_C_NEW.py"""
-# NAME_LCL_SUBD0_SUB3_C_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__, __CLASS__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_{__CLASS__}_C.py"""
-# NAME_LCL_SUBD0_SUB3_NEW_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}_NEW.py"""
-# NAME_LCL_SUBD0_SUB3_PY = lambda __MODULE_NAME__, __SUB0__, __SUB1__, __SUB2__, __SUB3__: F"""{__MODULE_NAME__}/{__SUB0__}/{__SUB1__}_{__SUB2__}_{__SUB3__}.py"""
-
-
-STR_SUBST_DICT = {
-	"%CBRCE%": f"""{CBRCE}""",
-	"%CBRKT%": f"""{CBRKT}""",
-	"%CPAREN%": f"""{CPAREN}""",
-	"%DQ%": f"""{DBLQT}""",
-	"%ESCLN%": f""" {BKSLSH}{NEWLINE}""",
-	"%FOLDLN1E%": f"""{FOLD1ENDHERELN}""",
-	"%FOLDLN2E%": f"""{FOLD2ENDHERELN}""",
-	"%FOLDLN3E%": f"""{FOLD3ENDHERELN}""",
-	"%FOLDLN1S%": f"""{FOLD1STARTHERELN}""",
-	"%FOLDLN2S%": f"""{FOLD2STARTHERELN}""",
-	"%FOLDLN3S%": f"""{FOLD3STARTHERELN}""",
-	"%FTQ%": f"""f{TRIQT}""",
-	"%FTQTQ%": f"""f{TRIQT}{TRIQT}""",
-	"%NEWLINE%": f"""{NEWLINE}""",
-	"%OBRCE%": f"""{OBRCE}""",
-	"%OBRKT%": f"""{OBRKT}""",
-	"%OPAREN%": f"""{OPAREN}""",
-	"%SQ%": f"""{SGLQT}""",
-	"%TAB1%": f"""{NTAB(1)}""",
-	"%TAB2%": f"""{NTAB(2)}""",
-	"%TAB3%": f"""{NTAB(3)}""",
-	"%TAB4%": f"""{NTAB(4)}""",
-	"%TAB5%": f"""{NTAB(5)}""",
-	"%TAB6%": f"""{NTAB(6)}""",
-	"%TAB7%": f"""{NTAB(7)}""",
-	"%TAB8%": f"""{NTAB(8)}""",
-	"%TAB9%": f"""{NTAB(9)}""",
-	"%TABA%": f"""{NTAB(10)}""",
-	"%TQ%": f"""{TRIQT}""",
-}
-
-
-CODES2STRIP = [  # {'CODES2STRIP': "dict holding all of the things to strip from 'text' strings like color codes"}
-	f"{ESC}[0m",  # entry for ESC-[0m
-	f"{ESC}[1m",  # entry for ESC-[1m
-	f"{ESC}[32m",  # entry for ESC-[32m
-	f"{ESC}[35m",  # entry for ESC-[35m
-	f"{ESC}[36m",  # entry for ESC-[36m
-]
 
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -957,7 +687,7 @@ FMPSG_SCTN09FF_CLASS_WINDOW_DICT = {}  #
 def makeAComment(comment_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_strToRtn_ = ""
-	_strToRtn_ += f"""{CMNTLINE}{NEWLINE}# * {comment_}{NEWLINE}{CMNTLINE}{NEWLINE}"""
+	_strToRtn_ += f"""{M.CMNTLINE}{V.NEWLINE}# * {comment_}{V.NEWLINE}{M.CMNTLINE}{V.NEWLINE}"""
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -966,24 +696,9 @@ def makeAComment(comment_):
 # makeAComment
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def makeAWideComment(comment_):
-	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	"""Short summary.
-
-	Parameters
-	----------
-	comment_ : string
-			a string to be inserted in the middle of 7 lines, outer two are attention getters
-
-	Returns
-	-------
-	string
-		contains the comment_ and surrounding lines, plus two # lines above and below
-
-"""
-	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_strToRtn_ = ""
-	_strToRtn_ += f"""#{NEWLINE}#{NEWLINE}{CMNTLINE}{NEWLINE}# * {comment_}{NEWLINE}{CMNTLINE}{NEWLINE}#{NEWLINE}#{NEWLINE}"""
+	_strToRtn_ += f"""#{V.NEWLINE}#{V.NEWLINE}{M.CMNTLINE}{V.NEWLINE}# * {comment_}{V.NEWLINE}{M.CMNTLINE}{V.NEWLINE}#{V.NEWLINE}#{V.NEWLINE}"""
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -993,10 +708,7 @@ def makeAWideComment(comment_):
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 def subMyPlaceKpr(sourceStr_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	_strToRtn_ = sourceStr_
-	for _thisSrcStr_, _thisDestStr_ in STR_SUBST_DICT.items():
-		_strToRtn_ = _strToRtn_.replace(_thisSrcStr_, _thisDestStr_)
-
+	_strToRtn_ = V.subMyPlaceKpr(sourceStr_)
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1007,8 +719,8 @@ def subMyPlaceKpr(sourceStr_):
 def makeADict(dictName_, dictComment_, dictItems_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_strToRtn_ = ""
-	_strToRtn_ += f"""{dictName_} = {OBRCE}  # {dictComment_}
-{dictItems_}{CBRCE}{NEWLINE}{NEWLINE}{NEWLINE}"""
+	_strToRtn_ += f"""{dictName_} = {V.OBRCE}  # {dictComment_}
+{dictItems_}{V.CBRCE}{V.NEWLINE}{V.NEWLINE}{V.NEWLINE}"""
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1031,19 +743,19 @@ def sortADict(dictToSort_):
 def makeAList(listName_, listComment_, listItems_, listItemCmntDict_=None, addQuotes_=False):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_strToRtn_ = ""
-	_strToRtn_ += f"""{listName_} = {OBRKT}  # {listComment_}{NEWLINE}"""
+	_strToRtn_ += f"""{listName_} = {V.OBRKT}  # {listComment_}{V.NEWLINE}"""
 	for _thisItem_ in listItems_:
 		if listItemCmntDict_ is None:
 			if addQuotes_ is True:
-				_strToRtn_ += f"""{NTAB(1)}{DBLQT}{_thisItem_}{DBLQT}"""
+				_strToRtn_ += f"""{V.NTAB(1)}{V.DBLQT}{_thisItem_}{V.DBLQT}"""
 			else:
-				_strToRtn_ += f"""{NTAB(1)}{_thisItem_}"""
+				_strToRtn_ += f"""{V.NTAB(1)}{_thisItem_}"""
 		else:
 			if addQuotes_ is True:
-				_strToRtn_ += f"""{NTAB(1)}{DBLQT}{_thisItem_}{DBLQT},  # {listItemCmntDict_[_thisItem_]}{NEWLINE}"""
+				_strToRtn_ += f"""{V.NTAB(1)}{V.DBLQT}{_thisItem_}{V.DBLQT},  # {listItemCmntDict_[_thisItem_]}{V.NEWLINE}"""
 			else:
-				_strToRtn_ += f"""{NTAB(1)}{_thisItem_},  # {listItemCmntDict_[_thisItem_]}{NEWLINE}"""
-	_strToRtn_ += f"""{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
+				_strToRtn_ += f"""{V.NTAB(1)}{_thisItem_},  # {listItemCmntDict_[_thisItem_]}{V.NEWLINE}"""
+	_strToRtn_ += f"""{V.CBRKT}{V.NEWLINE}{V.NEWLINE}{V.NEWLINE}"""
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1058,10 +770,10 @@ def makeANormalTDD(tupDictName_, tupDictItems_, TDDItems_):
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	_strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}
-{tupDictName_}TUP = {OPAREN}
-{tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{CPAREN}:
-{NTAB(1)}return dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}{NEWLINE}
-{tupDictName_}_TDD = {OBRCE}{NEWLINE}{TDDItems_}{CBRCE}{NEWLINE}{NEWLINE}{NEWLINE}"""
+{tupDictName_}TUP = {V.OPAREN}
+{tupDictItems_}{V.CPAREN}{V.NEWLINE}{V.NEWLINE}def {tupDictName_}DICT{V.OPAREN}{V.CPAREN}:
+{V.NTAB(1)}return dict{V.OPAREN}{V.OPAREN}x, y{V.CPAREN} for x, y in {tupDictName_}TUP{V.CPAREN}{V.NEWLINE}{V.NEWLINE}
+{tupDictName_}_TDD = {V.OBRCE}{V.NEWLINE}{TDDItems_}{V.CBRCE}{V.NEWLINE}{V.NEWLINE}{V.NEWLINE}"""
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1076,9 +788,9 @@ def makeANormalTupDict(tupDictName_, tupDictItems_):
 
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
 	_strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}
-{tupDictName_}TUP = {OPAREN}
-{tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{CPAREN}:
-{NTAB(1)}return dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}{NEWLINE}{NEWLINE}"""
+{tupDictName_}TUP = {V.OPAREN}
+{tupDictItems_}{V.CPAREN}{V.NEWLINE}{V.NEWLINE}def {tupDictName_}DICT{V.OPAREN}{V.CPAREN}:
+{V.NTAB(1)}return dict{V.OPAREN}{V.OPAREN}x, y{V.CPAREN} for x, y in {tupDictName_}TUP{V.CPAREN}{V.NEWLINE}{V.NEWLINE}{V.NEWLINE}"""
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1090,13 +802,13 @@ def makeASidecarTupDic(tupDictName_, tupDictItems_, tupDictSidecars_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	_strToRtn_ = ""
 	_strToRtn1_ = ""
-	_strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}{NEWLINE}"""
+	_strToRtn_ += f"""{makeAComment(f"start of {tupDictName_} structures")}{V.NEWLINE}"""
 	for _key_, _items_ in tupDictSidecars_.items():
-		_strToRtn_ += f"""{tupDictName_}_{_key_}TUP = {OPAREN}{NEWLINE}{_items_}{CPAREN}{NEWLINE}{NEWLINE}"""
-		_strToRtn1_ += f"""{NTAB(1)}_listToRtn_ = list((x) for x in {tupDictName_}_{_key_}TUP){NEWLINE}"""
-	_strToRtn_ += f"""{tupDictName_}TUP = {OPAREN}
-{tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{CPAREN}:
-{NTAB(1)}_dictToRtn_ = dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}{_strToRtn1_}{NTAB(1)}return _listToRtn_, _dictToRtn_{NEWLINE}{NEWLINE}{NEWLINE}"""
+		_strToRtn_ += f"""{tupDictName_}_{_key_}TUP = {V.OPAREN}{V.NEWLINE}{_items_}{V.CPAREN}{V.NEWLINE}{V.NEWLINE}"""
+		_strToRtn1_ += f"""{V.NTAB(1)}_listToRtn_ = list((x) for x in {tupDictName_}_{_key_}TUP){V.NEWLINE}"""
+	_strToRtn_ += f"""{tupDictName_}TUP = {V.OPAREN}
+{tupDictItems_}{V.CPAREN}{V.NEWLINE}{V.NEWLINE}def {tupDictName_}DICT{V.OPAREN}{V.CPAREN}:
+{V.NTAB(1)}_dictToRtn_ = dict{V.OPAREN}{V.OPAREN}x, y{V.CPAREN} for x, y in {tupDictName_}TUP{V.CPAREN}{V.NEWLINE}{_strToRtn1_}{V.NTAB(1)}return _listToRtn_, _dictToRtn_{V.NEWLINE}{V.NEWLINE}{V.NEWLINE}"""
 	return _strToRtn_
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
@@ -1107,13 +819,13 @@ def makeASidecarTupDic(tupDictName_, tupDictItems_, tupDictSidecars_):
 def makeAFullTupDict(tupDictName_, tupDictItems_, tupDictSidecars_, tupDictParms_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 
-	subParmsStr_ = f"""{NTAB(1)}def {tupDictName_}_subParms(listIn_, tupDictParms_):
-{NTAB(2)}_listToRtn_ = []
-{NTAB(2)}for _thisStr_ in listIn_:
-{NTAB(3)}for _subParm_, _replaceStr_ in tupDictParms_:
-{NTAB(4)}_thisStr_ = _thisStr_.replace(_subParm_, _replaceStr_)
-{NTAB(3)}_listToRtn_.append(_thisStr_)
-{NTAB(2)}return _listToRtn_{NEWLINE}{NEWLINE}"""
+	subParmsStr_ = f"""{V.NTAB(1)}def {tupDictName_}_subParms(listIn_, tupDictParms_):
+{V.NTAB(2)}_listToRtn_ = []
+{V.NTAB(2)}for _thisStr_ in listIn_:
+{V.NTAB(3)}for _subParm_, _replaceStr_ in tupDictParms_:
+{V.NTAB(4)}_thisStr_ = _thisStr_.replace(_subParm_, _replaceStr_)
+{V.NTAB(3)}_listToRtn_.append(_thisStr_)
+{V.NTAB(2)}return _listToRtn_{V.NEWLINE}{V.NEWLINE}"""
 
 	_strToRtn1_ = ""
 	_strToRtn2_ = ""
@@ -1125,22 +837,22 @@ def makeAFullTupDict(tupDictName_, tupDictItems_, tupDictSidecars_, tupDictParms
 		_parmsNames_ += f"""{_replaceStr_}, """
 	_parmsNames_ = _parmsNames_[:-2]
 
-	_strToRtn1_ += f"""{makeAComment(f"start of {tupDictName_} structures")}{NEWLINE}"""
+	_strToRtn1_ += f"""{makeAComment(f"start of {tupDictName_} structures")}{V.NEWLINE}"""
 
-	strToRtn3_ = f"""{NTAB(1)}{tupDictName_}_PARMS = {OBRKT}{NEWLINE}"""
+	strToRtn3_ = f"""{V.NTAB(1)}{tupDictName_}_PARMS = {V.OBRKT}{V.NEWLINE}"""
 	for _subParm_, _replaceStr_ in tupDictParms_:
-		strToRtn3_ += f"""{NTAB(2)}{OPAREN}{DBLQT}{_subParm_}{DBLQT}, {_replaceStr_}{CPAREN},{NEWLINE}"""
-	strToRtn3_ = strToRtn3_[:-1] + f"""{NEWLINE}{NTAB(1)}{CBRKT}{NEWLINE}"""
+		strToRtn3_ += f"""{V.NTAB(2)}{V.OPAREN}{V.DBLQT}{_subParm_}{V.DBLQT}, {_replaceStr_}{V.CPAREN},{V.NEWLINE}"""
+	strToRtn3_ = strToRtn3_[:-1] + f"""{V.NEWLINE}{V.NTAB(1)}{V.CBRKT}{V.NEWLINE}"""
 
 	for _key_, _items_ in tupDictSidecars_.items():
-		_strToRtn1_ += f"""{tupDictName_}_{_key_}TUP = {OPAREN}{NEWLINE}{_items_}{CPAREN}{NEWLINE}{NEWLINE}"""
-		_strToRtn2_ += f"""{NTAB(1)}_listToRtn_ = list((x) for x in {tupDictName_}_{_key_}TUP){NEWLINE}"""
-		_strToRtn2_ += f"""{NTAB(1)}_listToRtn_ = CF.subParms(_listToRtn_, {tupDictName_}_PARMS)"""
-	_strToRtn1_ += f"""{tupDictName_}TUP = {OPAREN}
-{tupDictItems_}{CPAREN}{NEWLINE}{NEWLINE}def {tupDictName_}DICT{OPAREN}{_parmsNames_}{CPAREN}:{NEWLINE}{strToRtn3_}
-{NTAB(1)}_dictToRtn_ = dict{OPAREN}{OPAREN}x, y{CPAREN} for x, y in {tupDictName_}TUP{CPAREN}{NEWLINE}"""
+		_strToRtn1_ += f"""{tupDictName_}_{_key_}TUP = {V.OPAREN}{V.NEWLINE}{_items_}{V.CPAREN}{V.NEWLINE}{V.NEWLINE}"""
+		_strToRtn2_ += f"""{V.NTAB(1)}_listToRtn_ = list((x) for x in {tupDictName_}_{_key_}TUP){V.NEWLINE}"""
+		_strToRtn2_ += f"""{V.NTAB(1)}_listToRtn_ = CF.subParms(_listToRtn_, {tupDictName_}_PARMS)"""
+	_strToRtn1_ += f"""{tupDictName_}TUP = {V.OPAREN}
+{tupDictItems_}{V.CPAREN}{V.NEWLINE}{V.NEWLINE}def {tupDictName_}DICT{V.OPAREN}{_parmsNames_}{V.CPAREN}:{V.NEWLINE}{strToRtn3_}
+{V.NTAB(1)}_dictToRtn_ = dict{V.OPAREN}{V.OPAREN}x, y{V.CPAREN} for x, y in {tupDictName_}TUP{V.CPAREN}{V.NEWLINE}"""
 
-	_strToRtn1_ += f"""{_strToRtn2_}{NEWLINE}{NTAB(1)}return _listToRtn_, _dictToRtn_{NEWLINE}{NEWLINE}{NEWLINE}"""
+	_strToRtn1_ += f"""{_strToRtn2_}{V.NEWLINE}{V.NTAB(1)}return _listToRtn_, _dictToRtn_{V.NEWLINE}{V.NEWLINE}{V.NEWLINE}"""
 
 	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
 	return _strToRtn1_
@@ -1164,7 +876,7 @@ def readFileToStr(FILENAME_):
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def doErrorItem(message_, itemToError_, itemID_):
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-	print(f"""{NEWLINE}{message_}{NEWLINE}is a tuple {isinstance(itemToError_, tuple)}{NEWLINE}item as parsed{NEWLINE}{repr(itemToError_)}{NEWLINE}{itemID_}{NEWLINE}""")
+	print(f"""{V.NEWLINE}{message_}{V.NEWLINE}is a tuple {isinstance(itemToError_, tuple)}{V.NEWLINE}item as parsed{V.NEWLINE}{repr(itemToError_)}{V.NEWLINE}{itemID_}{V.NEWLINE}""")
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 
 
