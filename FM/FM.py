@@ -1168,21 +1168,36 @@ def doErrorItem(message_, itemToError_, itemID_):
 # #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
 def FM():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
-
 		from FM import FM_parseTBGLST
 		FM_parseTBGLST.parseTBGLST()
 
-		from FM.MAKE import _01_CF
-		_01_CF.makeCF()
+		import FM.MAKE
+		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
+		for _module_ in sorted(os.listdir(os.path.dirname(__file__))):
+			# 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥ 3⥥
+			if (
+					(_module_[0:2] != "__") and
+					(_module_[-7:] != "_NEW.py") and
+					(_module_[0] == "_")
+			):
+				_moduleToImport_ = f"""FM/MAKE/{_module_}"""
+				print(f"""making {_module_}""")
+				_thisModule_ = imp.load_source("module", _moduleToImport_)
+				_thisModule_.__make__()
+			# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+		# ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0
 
-		from FM.MAKE import _02_FM
-		_02_FM.makeFM()
-
-		from FM.MAKE import _03_00_PSG
-		_03_00_PSG.makePSG()
-
-		from FM.MAKE import _03_01_PSGClasses
-		_03_01_PSGClasses.makePSGClasses()
+#		from FM.MAKE import _01_CF
+#		_01_CF.makeCF()
+#
+#		from FM.MAKE import _02_FM
+#		_02_FM.makeFM()
+#
+#		from FM.MAKE import _03_00_PSG
+#		_03_00_PSG.makePSG()
+#
+#		from FM.MAKE import _03_01_PSGClasses
+#		_03_01_PSGClasses.makePSGClasses()
 
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1ff
 

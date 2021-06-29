@@ -14,9 +14,9 @@ for _module_ in sorted(os.listdir(os.path.dirname(__file__))):
 			(_module_[-7:] != "_NEW.py") and
 			(_module_[0] == "_")
 	):
-		_moduleToImport_ = f"""FM/TBGLST_D/{_module_}"""
+		_moduleToImport_ = f"""FM/MAKE_D/{_module_}"""
 		__all__.append(_module_)
-		print(f"""swallowing {_module_}""")
+		print(f"""making {_module_}""")
 		_thisModule_ = imp.load_source("module", _moduleToImport_)
 		_TBGLST_.extend(_thisModule_.TBGLST)
 	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
