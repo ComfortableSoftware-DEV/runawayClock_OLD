@@ -1,22 +1,28 @@
 
 
+import imp
 import os
 
 
-# from FM.TBGLST_D import M_01_CF
-
-__all__ = [
-		"_01_CF",
-		"_02_FM",
-		"_03_00_PSG",
-		"_03_01_PSG_CLOCKS_C",
-]
-
+__all__ = []
+_TBGLST_ = []
 # 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥ 0⥥
-#for _module_ in os.listdir(os.path.dirname(__file__)):
-#	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-#	if (
-#			(_module_ != "__init__.py") and
-#			(_module_[0] == "_")
-#	):
-#		__import__(_module_[:-3], globals(), locals())
+for _module_ in sorted(os.listdir(os.path.dirname(__file__))):
+	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
+	if (
+			(_module_[0:2] != "__") and
+			(_module_[-7:] != "_NEW.py") and
+			(_module_[0] == "_")
+	):
+		_moduleToImport_ = f"""FM/TBGLST_D/{_module_}"""
+		__all__.append(_module_)
+		print(f"""swallowing {_module_}  _module_[-7] {_module_[-7:]}""")
+		_thisModule_ = imp.load_source("module", _moduleToImport_)
+		_TBGLST_.extend(_thisModule_.TBGLST)
+	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
+# ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0 ⥣0
+_TBGLST_.sort()
+print(f"""swallowed {len(_TBGLST_)} lines of potentially useful data""")
+
+
+#
