@@ -1,5 +1,8 @@
 
 
+from CF.CONSTANTS import MARKERS as M
+from CF.CONSTANTS import NAMES as N
+from CF.CONSTANTS import VALS as V
 from FM import FM
 
 
@@ -9,37 +12,37 @@ from FM import FM
 def __make__():
 	# fold here ⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1⥥1
 	# 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥ 1⥥
-	with open(f"""{FM.NAME_LCL_MOD_NEW_PY("CF")}""", "tw") as _FDmakeCF_:
-		_FDmakeCF_.write(f"""{FM.readFileToStr(FM.NAME_GLBL_SELF_TOP_PY("CF"))}{FM.readFileToStr(FM.NAME_GLBL_PY_ROOT_PY("SCTN0102"))}""")
-		_FDmakeCF_.write(f"""{FM.makeAComment("SCTN0201 CF defines")}""")
+	with open(f"""{NAMES.MAKE_NAME(__MODULE_NAME__="CF")}""", "tw") as _FDmakeCF_:
+		_FDmakeCF_.write(f"""{V.readFileToStr(FM.NAME_GLBL_SELF_TOP_PY("CF"))}""")
+		_FDmakeCF_.write(f"""{M.makeAComment("SCTN0201 CF defines")}""")
 		_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0201_DEF_DICT)
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		for _thisName_, _value_ in _dictToUse_.items():
-			_FDmakeCF_.write(f"""{_thisName_} = {_value_}  # {FM.FMCF_SCTN0201_DEF_CMNT_DICT[_thisName_]}{FM.NEWLINE}""")
-		_FDmakeCF_.write(f"""{FM.NEWLINE}{FM.NEWLINE}""")
+			_FDmakeCF_.write(f"""{_thisName_} = {_value_}  # {FM.FMCF_SCTN0201_DEF_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
+		_FDmakeCF_.write(f"""{V.NEWLINE}{V.NEWLINE}""")
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-		_FDmakeCF_.write(f"""{FM.makeAComment("SCTN0202 options structures")}""")
+		_FDmakeCF_.write(f"""{M.makeAComment("SCTN0202 options structures")}""")
 		_strToRtn1_ = ""
 		_strToRtn2_ = ""
-		_strToRtn1_ += f"""OPTIONS = {FM.OBRCE}{FM.NEWLINE}{FM.FOLD1STARTHERELN}"""
-		_strToRtn2_ += f"""OPTIONSHELPDICT = {FM.OBRCE}{FM.NEWLINE}{FM.FOLD1STARTHERELN}"""
+		_strToRtn1_ += f"""OPTIONS = {V.OBRCE}{V.NEWLINE}{M.FOLD1STARTHERELN}"""
+		_strToRtn2_ += f"""OPTIONSHELPDICT = {V.OBRCE}{V.NEWLINE}{M.FOLD1STARTHERELN}"""
 		_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0202_OPTIONS_DICT)
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		for _thisName_, _values_ in _dictToUse_.items():
-			_strToRtn1_ += f"""{FM.NTAB(1)}{FM.DBLQT}{_thisName_}{FM.DBLQT}: {FM.OBRCE}{FM.NEWLINE}{FM.NTAB(1)}{FM.FOLD2STARTHERELN}{_values_}{FM.NTAB(1)}{FM.CBRCE},{FM.NEWLINE}{FM.NTAB(1)}{FM.FOLD2ENDHERELN}"""
-			_strToRtn2_ += f"""{FM.NTAB(1)}{FM.DBLQT}{_thisName_}{FM.DBLQT}: {FM.NEWLINE}{FM.NTAB(1)}{FM.FOLD2STARTHERELN}{FM.TRIQT}{FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisName_]}{FM.NTAB(1)}{FM.TRIQT},{FM.NEWLINE}{FM.NTAB(1)}{FM.FOLD2ENDHERELN}"""
+			_strToRtn1_ += f"""{V.NTAB(1)}{V.DBLQT}{_thisName_}{V.DBLQT}: {V.OBRCE}{V.NEWLINE}{V.NTAB(1)}{M.FOLD2STARTHERELN}{_values_}{V.NTAB(1)}{V.CBRCE},{V.NEWLINE}{V.NTAB(1)}{M.FOLD2ENDHERELN}"""
+			_strToRtn2_ += f"""{V.NTAB(1)}{V.DBLQT}{_thisName_}{V.DBLQT}: {V.NEWLINE}{V.NTAB(1)}{M.FOLD2STARTHERELN}{V.TRIQT}{FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisName_]}{V.NTAB(1)}{V.TRIQT},{V.NEWLINE}{V.NTAB(1)}{M.FOLD2ENDHERELN}"""
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-		_strToRtn1_ += f"""{FM.CBRCE}{FM.NEWLINE}{FM.FOLD1ENDHERELN}{FM.NEWLINE}"""
-		_strToRtn2_ += f"""{FM.CBRCE}{FM.NEWLINE}{FM.FOLD1ENDHERELN}{FM.NEWLINE}"""
+		_strToRtn1_ += f"""{V.CBRCE}{V.NEWLINE}{M.FOLD1ENDHERELN}{V.NEWLINE}"""
+		_strToRtn2_ += f"""{V.CBRCE}{V.NEWLINE}{M.FOLD1ENDHERELN}{V.NEWLINE}"""
 		_FDmakeCF_.write(f"""{_strToRtn1_}{_strToRtn2_}""")
-		_FDmakeCF_.write(f"""OPTIONSDICT = {FM.OBRCE}{FM.NEWLINE}""")
+		_FDmakeCF_.write(f"""OPTIONSDICT = {V.OBRCE}{V.NEWLINE}""")
 		_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0202_OPTIONSDICT_DICT)
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		for _thisName_, _value_ in _dictToUse_.items():
 			_FDmakeCF_.write(f"""{_value_}""")
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
-		_FDmakeCF_.write(f"""{FM.CBRCE}{FM.NEWLINE}{FM.NEWLINE}{FM.NEWLINE}""")
-		_FDmakeCF_.write(f"""{FM.makeAWideComment("end of managed sections of CF.py")}{FM.NEWLINE}{FM.NEWLINE}""")
+		_FDmakeCF_.write(f"""{V.CBRCE}{V.NEWLINE}{V.NEWLINE}{V.NEWLINE}""")
+		_FDmakeCF_.write(f"""{M.makeAWideComment("end of managed sections of CF.py")}{V.NEWLINE}{V.NEWLINE}""")
 	# ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1 ⥣1
 	# fold here ⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1⥣1
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
