@@ -31,7 +31,7 @@ def __make__():
 					__SUB2__="AX"
 			)}""", "tw") as _FDmakeFMAX_)
 	):
-		_FDmakeFM_.write(f"""{V.readFileToStr(V.NAME_GLBL_SELF_TOP_PY("FM"))}""")
+		_FDmakeFM_.write(f"""{V.readFileToStr(N.MAKE_GLBL_NAME(__MODULE_NAME__="FM", __SUB0__="FM", __SUB1__="TOP"))}""")
 		_FDmakeFM_.write(f"""{M.makeAComment("SCTN003 TYPEs and lambda")}""")
 		_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0003_TYPE_DICT)
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
