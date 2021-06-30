@@ -185,13 +185,13 @@ TBGLST = {V.OBRKT}
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
 		_IDBeingExploded_ = self.makeDictID(itemToExplode_[1])
 		_lineToWrt_ = itemToExplode_[0]
-		_class_ = _IDBeingExploded_.get("__CLASS__")
-		_filename_ = _IDBeingExploded_.get("__FILENAME__")
-		_moduleName_ = _IDBeingExploded_.get("__MODULE_NAME__")
+		# _class_ = _IDBeingExploded_.get("__CLASS__")
+		# _filename_ = _IDBeingExploded_.get("__FILENAME__")
+		# _moduleName_ = _IDBeingExploded_.get("__MODULE_NAME__")
 		_newFilename_ = _IDBeingExploded_.get("__NEW_FILENAME__")
-		_sub0_ = _IDBeingExploded_.get("__SUB0__")
-		_sub1_ = _IDBeingExploded_.get("__SUB1__")
-		_sub2_ = _IDBeingExploded_.get("__SUB2__")
+		# _sub0_ = _IDBeingExploded_.get("__SUB0__")
+		# _sub1_ = _IDBeingExploded_.get("__SUB1__")
+		# _sub2_ = _IDBeingExploded_.get("__SUB2__")
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		if (
 				(_newFilename_ is not None) and
@@ -253,7 +253,7 @@ TBGLST = {V.OBRKT}
 		# fold here ⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2⥥2
 		# 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥ 2⥥
 		for _thisFilename_, _thisFD_ in self.__FILE_DICT__.items():
-			_thisFD_.write(f"""{FM.CBRKT}{FM.NNL(3)}{FM.makeAWideComment(f"end of {_thisFilename_}")}{V.NEWLINE}{V.NEWLINE}#{V.NEWLINE}""")
+			_thisFD_.write(f"""{V.CBRKT}{V.NNL(3)}{M.makeAWideComment(f"end of {_thisFilename_}")}{V.NEWLINE}{V.NEWLINE}#{V.NEWLINE}""")
 			_thisFD_.flush()
 			_thisFD_.close()
 		# ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2 ⥣2
