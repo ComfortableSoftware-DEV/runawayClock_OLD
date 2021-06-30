@@ -26,10 +26,10 @@ def __make__():
 			)}""", "tw") as _FDmakeFM_)
 			(open(f"""{N.MAKE_NAME(
 					__MODULE_NAME__="__KEYS__",
-					__SUB0__="_02_",
+					__SUB0__="_02",
 					__SUB1__="FM",
 					__SUB2__="AX"
-			)}""", "tw") as _FDmakeFMAX_)
+			)}""", "tw")) as _FDmakeFMAX_
 	):
 		_FDmakeFM_.write(f"""{V.readFileToStr(N.MAKE_GLBL_NAME(__MODULE_NAME__="FM", __SUB0__="FM", __SUB1__="TOP"))}""")
 		_FDmakeFM_.write(f"""{M.makeAComment("SCTN003 TYPEs and lambda")}""")

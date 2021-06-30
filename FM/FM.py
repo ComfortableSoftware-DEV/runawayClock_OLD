@@ -864,7 +864,8 @@ def FM():
 					(_module_[0] == "_")
 			):
 				_moduleToImport_ = f"""FM/MAKE_D/{_module_}"""
-				print(f"""making {_module_}""")
+				print(f"""making {_module_}
+_moduleToImport_ {_moduleToImport_}""")
 				_thisModule_ = imp.load_source("module", _moduleToImport_)
 				_thisModule_.__make__()
 			# ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1
