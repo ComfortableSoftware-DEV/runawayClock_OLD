@@ -653,3 +653,546 @@ LIST_THIS_ALARM_POPUP_TEXT = [  # collects the text to popup
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN0905 tupdict
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * start of EMPTY_TUPDICT_FLIP_INFO structures
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+
+EMPTY_TUPDICT_FLIP_INFOTUP = (
+	(K_NAME_NEXT_EVENT, ""),  # name of next event in TUPDICT FLIP_INFO
+	(K_CURRENT_INTERVAL_COUNT, 0),  # name of next event in TUPDICT FLIP_INFO
+)
+
+def EMPTY_TUPDICT_FLIP_INFODICT():
+	return dict((x, y) for x, y in EMPTY_TUPDICT_FLIP_INFOTUP)
+
+
+EMPTY_TUPDICT_FLIP_INFO_TDD = {
+	K_NAME_NEXT_EVENT: "",  # name of next event in TUPDICT FLIP_INFO
+	K_CURRENT_INTERVAL_COUNT: 0,  # name of next event in TUPDICT FLIP_INFO
+}
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0913 right click menu options
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0906 button elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+BTN_DISMISS20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the DOWN button
+	IMAGE_FILENAME: "res/dismiss20.png",  # filename for the button icon
+	BORDER_WIDTH: 0,  # button xpand key
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_DISMISS,  # button xpand font
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_DOWN20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the DOWN button
+	IMAGE_FILENAME: "res/down20.png",  # filename for the button icon
+	BORDER_WIDTH: 0,  # button xpand key
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FOCUS: True,  # focus on click
+	KEY: K_BTN_DOWN,  # button xpand font
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_DOWN32 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the DOWN button
+	IMAGE_FILENAME: "res/down32.png",  # filename for the button icon
+	BORDER_WIDTH: 0,  # button xpand key
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_DOWN,  # focus on click
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_EDIT20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the EDIT button
+	IMAGE_FILENAME: "res/edit20.png",  # filename for the button icon
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_EDIT,  # button xpand font
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_EDIT32 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the EDIT button
+	IMAGE_FILENAME: "res/edit32.png",  # filename for the button icon
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_EDIT,  # button xpand key
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_QUIT20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the QUIT button
+	IMAGE_FILENAME: "res/quit20.png",  # filename for the button icon
+	TOOLTIP: "quit the app",  # button_text empty for the QUIT button
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_QUIT_ALL,  # button xpand font
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_QUIT32 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the QUIT button
+	IMAGE_FILENAME: "res/quit32.png",  # filename for the button icon
+	TOOLTIP: "quit the app",  # button_text empty for the QUIT button
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_QUIT_ALL,  # button xpand font
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_UP20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the UP button
+	IMAGE_FILENAME: "res/up20.png",  # filename for the button icon
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_UP,  # button xpand font
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_UP32 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the UP button
+	IMAGE_FILENAME: "res/up32.png",  # filename for the button icon
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_UP,  # button up key
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_XPAND20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the XPAND button
+	IMAGE_FILENAME: "res/xpand20.png",  # filename for the button icon
+	TOOLTIP: "expand to the big window from where you can edit events",  # tooltip
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_XPAND,  # focus on click
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_XPAND32 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the XPAND button
+	IMAGE_FILENAME: "res/xpand32.png",  # filename for the button icon
+	TOOLTIP: "expand to the big window from where you can edit events",  # tooltip
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_XPAND,  # button xpand font
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_ZERO20 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the ZERO button
+	IMAGE_FILENAME: "res/zero20.png",  # filename for the button icon
+	TOOLTIP: "zero the elapsed timer",  # tooltip
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_ZERO,  # button zero key
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+BTN_ZERO32 = {  # 
+	BUTTON_TEXT: "",  # button_text empty for the ZERO button
+	IMAGE_FILENAME: "res/zero32.png",  # filename for the button icon
+	TOOLTIP: "zero the elapsed timer",  # tooltip
+	BUTTON_COLOR: COLORS_BTN_NORMAL,  # default button color
+	FOCUS: True,  # focus on click
+	FONT: FONTSZ_BTNS,  # button xpand font
+	KEY: K_BTN_ZERO,  # button zero key
+	PAD: SZ_PAD_ALL,  # button xpand key
+}
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0907 spin box elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0908 checkbox elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+CHECKBOX_ALPHA_DIM01 = {  # checkbox for alpha under mouse
+	TEXT: "DIM",  # simple text reminder
+	TOOLTIP: "low alpha under mouse hover",  # comment
+	DEFAULT: True,  # leave it on by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: K_CHECKBOX_ALPHA_DIM,  # set the key for the checkbox
+}
+
+
+CHECKBOX_DISMISSED01 = {  # checkbox for dismissed from mouse behavior
+	TEXT: "K_DISMISSED",  # text label
+	TOOLTIP: "bool dismiss this event early",  # event has been dismissed bool
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: K_CHECKBOX_DISMISSED,  # set the key for the checkbox
+}
+
+
+CHECKBOX_ENABLED01 = {  # checkbox for enabled
+	TEXT: "ENABLED",  # text label
+	TOOLTIP: "event enabled bool",  # tooltip
+	DEFAULT: True,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: K_CHECKBOX_ENABLED,  # set the key for the checkbox
+}
+
+
+CHECKBOX_FIRSTRUN01 = {  # checkbox for first run
+	TEXT: "K_FIRSTRUN",  # text label
+	TOOLTIP: "first run bool",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: K_CHECKBOX_FIRSTRUN,  # set the key for the checkbox
+}
+
+
+CHECKBOX_HIDE01 = {  # checkbox for hiding for a moment on hover
+	TEXT: "HIDE",  # text label
+	TOOLTIP: "show date when hovering over clock",  # tooltip
+	DEFAULT: True,  # leave it on by default
+	ENABLE_EVENTS: True,  # set the events on for the checkbox
+	KEY: K_CHECKBOX_HIDE,  # set the key for the checkbox
+}
+
+
+CHECKBOX_HOVER_DATE01 = {  # checkbox for date on hover
+	TEXT: "DT_TIP",  # text label
+	TOOLTIP: "show date when hovering over clock",  # tooltip
+	DEFAULT: True,  # leave it on by default
+	ENABLE_EVENTS: True,  # set the events on for the checkbox
+	KEY: K_CHECKBOX_HOVER_DATE,  # set the key for the checkbox
+}
+
+
+CHECKBOX_IS_ALERTING_NOW01 = {  # checkbox for is alerting now
+	TEXT: "IS_ALERTING_NOW",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: K_CHECKBOX_IS_ALERTING_NOW,  # set the key for the checkbox
+}
+
+
+CHECKBOX_PREDISMISSABLE01 = {  # checkbox for can be dismissed prior to alert
+	TEXT: "K_PREDISMISSABLE",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: K_CHECKBOX_PREDISMISSABLE,  # set the key for the checkbox
+}
+
+
+CHECKBOX_RUNAWAY01 = {  # checkbox for runaway from mouse behavior
+	TEXT: "RUNAWAY",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: K_CHECKBOX_RUNAWAY,  # set the key for the checkbox
+}
+
+
+CHECKBOX_SNOOZABLE01 = {  # checkbox for can be snoozed
+	TEXT: "K_SNOOZABLE",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: K_CHECKBOX_SNOOZABLE,  # set the key for the checkbox
+}
+
+
+CHECKBOX_SNOOZED01 = {  # checkbox for is snoozed
+	TEXT: "K_SNOOZED",  # text label
+	TOOLTIP: "run away from mouse when checked",  # tooltip
+	DEFAULT: False,  # leave it off by default
+	ENABLE_EVENTS: True,  # set the key for the checkbox
+	KEY: K_CHECKBOX_SNOOZED,  # set the key for the checkbox
+}
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0909 text elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+TEXT_ALARM_POPUP = {  # the alarm popup text bits
+	TEXT: "",  # the text in the middle of the window
+	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
+	ENABLE_EVENTS: False,  # bool is clickable
+	FONT: FONTSZ_ALERT_TEXT,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # padding
+	SIZE: (40, 5),  # characters, lines size line
+	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for an alert
+}
+
+
+TEXT_ALARM_TIME = {  # the alarm popup text bits
+	TEXT: "",  # the text in the middle of the window
+	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
+	ENABLE_EVENTS: False,  # bool is clickable
+	FONT: FONTSZ_ALERT_TEXT,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # padding
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for an alert
+}
+
+
+TEXT_ALARM_TIME_ELAPSED = {  # the alarm popup text bits
+	TEXT: "",  # the text in the middle of the window
+	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
+	ENABLE_EVENTS: False,  # bool is clickable
+	FONT: FONTSZ_ALERT_TEXT,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # padding
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for an alert
+}
+
+
+TEXT_ALARM_TIME_TILL_DISMISS = {  # the alarm popup text bits
+	TEXT: "",  # the text in the middle of the window
+	BACKGROUND_COLOR: COLOR_ALERT_BACKGROUND,  # background color for the alerts
+	ENABLE_EVENTS: False,  # bool is clickable
+	FONT: FONTSZ_ALERT_TEXT,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # padding
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_ALERT_TEXT,  # the text color for an alert
+}
+
+
+TEXT_CURRENT_INTERVAL_COUNT = {  # define the text element for CLOCKS_CLOCK_TIME
+	TEXT: "0000",  # the text to fill in
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_CURRENT_INTERVAL_COUNT,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (4, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+}
+
+
+TEXT_NAME_NEXT_EVENT = {  # define the text element for CLOCK_TIME
+	TEXT: "",  # the text to fill in
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_S_TOGO,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (16, 1),  # characters, lines size line
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+}
+
+
+TEXT_TIME_S_AT_NEXT_ALERT = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_S_TOGO,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+}
+
+
+TEXT_TIME_S_AT_ZEROELAPSE = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: False,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_S_ELAPSED,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
+}
+
+
+TEXT_TIME_S_CLOCK = {  # define the text element for CLOCKS_CLOCK_TIME
+	TOOLTIP: "Tue_March(03)_10_1964",  # date in the tooltip for the clock
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	ENABLE_EVENTS: True,  # this is clickable
+	FONT: FONTSZ_CLOCKS_TIME_S_CLOCK,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_CLOCK,  # the text color for a clock_time element
+}
+
+
+TEXT_TIME_S_ELAPSED = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	FONT: FONTSZ_CLOCKS_TIME_S_ELAPSED,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_ELAPSED,  # the text color for a clock_time element
+}
+
+
+TEXT_TIME_S_TOGO = {  # define the text element for CLOCKS_CLOCK_TIME
+	BACKGROUND_COLOR: COLOR_CLOCK_BACKGROUND,  # background color for the clock elements
+	FONT: FONTSZ_CLOCKS_TIME_S_TOGO,  # font+size line
+	JUSTIFICATION: JUSTIFICATION_CENTER,  # center everything
+	PAD: SZ_PAD_ALL,  # the text color for a clock_time element
+	SIZE: (8, 1),  # characters, lines size line
+	TEXT: ZERO_CLOCK,  # the text color for a clock_time element
+	TEXT_COLOR: COLOR_TIME_TOGO,  # the text color for a clock_time element
+}
+
+
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN090A radio elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN090B column elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN090E layout elements
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN090F window
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN090D mainframe
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN0914 popupframe
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# * SCTN090C APPDS
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+APPDS_runawayClock = {  # the struct holding everything passed betwixt PySimpleGUI and this app
+	K_APPMODE: APPMODE_NONE,  # no appmode set
+	K_CHECKBOX_ALPHA_DIM: True,  # dim when mouse over bool
+	K_CHECKBOX_HIDE: True,  # hide under the mouse bool
+	K_CHECKBOX_HOVER_DATE: True,  # show date when the mouse hovers
+	K_CHECKBOX_RUNAWAY: False,  # runaway from the mouse bool
+	K_EVENT_ENTRIES: {  # holds events
+		0: {
+			K_ALARMPOPUP_TEXT_TEXT: "time to move a bit",  # alarm text for this event
+			K_AUTO_CLOSE_DURATION: 10,  # time of this event
+			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
+			K_DISMISSED: False,  # is this event dismissed
+			K_ENABLED: True,  # is this event enabled
+			K_EVENT_NAME: "MOVE",  # this entry's name
+			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
+			K_FIRSTRUN: True,  # are we initializing or not
+			K_FORMNAME: None,  # time of this event
+			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
+			K_PREDISMISSABLE: True,  # is this event dismissable in advance
+			K_SNOOZABLE: False,  # can this event be snoozed
+			K_SNOOZED: False,  # is this event snoozed
+			K_TIME_S_AT_ALARM: 0,  # time of this event if it an alarm
+			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
+			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
+			K_TIME_S_INTERVAL: CF.HALFHOUR_S,  # interval of this event
+			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
+		},
+		1: {
+			K_ALARMPOPUP_TEXT_TEXT: "pee, hydrate",  # alarm text for this event
+			K_AUTO_CLOSE_DURATION: 10,  # time of this event
+			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
+			K_DISMISSED: False,  # is this event dismissed
+			K_ENABLED: True,  # is this event enabled
+			K_EVENT_NAME: "WATER",  # this entry's name
+			K_EVENTMODE: EVENTMODE_INTERVAL,  # this entry's event_mode
+			K_FIRSTRUN: True,  # are we initializing or not
+			K_FORMNAME: None,  # time of this event
+			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
+			K_PREDISMISSABLE: True,  # is this event dismissable in advance
+			K_SNOOZABLE: False,  # can this event be snoozed
+			K_SNOOZED: False,  # is this event snoozed
+			K_TIME_S_AT_ALARM: 0,  # time of this event if it an alarm
+			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
+			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
+			K_TIME_S_INTERVAL: 4 * CF.HOUR_S,  # interval of this event
+			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
+		},
+		2: {
+			K_ALARMPOPUP_TEXT_TEXT: "clean up for bed",  # alarm text for this event
+			K_AUTO_CLOSE_DURATION: 0,  # auto close alert time of this event
+			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
+			K_DISMISSED: False,  # is this event dismissed
+			K_ENABLED: True,  # is this event enabled
+			K_EVENT_NAME: "PREBED",  # this entry's name
+			K_EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
+			K_FIRSTRUN: True,  # are we initializing or not
+			K_FORMNAME: None,  # time of this event
+			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
+			K_PREDISMISSABLE: True,  # is this event dismissable in advance
+			K_SNOOZABLE: False,  # can this event be snoozed
+			K_SNOOZED: False,  # is this event snoozed
+			K_TIME_S_AT_ALARM: "03:30:00",  # time of this event if it an alarm
+			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
+			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
+			K_TIME_S_INTERVAL: None,  # interval of this event
+			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
+		},
+		3: {
+			K_ALARMPOPUP_TEXT_TEXT: "off to bed",  # alarm text for this event
+			K_AUTO_CLOSE_DURATION: 0,  # auto close alert time of this event
+			K_CURRENT_INTERVAL_COUNT: 0,  # count of number of times this has alerted since last reset
+			K_DISMISSED: False,  # is this event dismissed
+			K_ENABLED: True,  # is this event enabled
+			K_EVENT_NAME: "TOBED",  # this entry's name
+			K_EVENTMODE: EVENTMODE_ALARM,  # this entry's event_mode
+			K_FIRSTRUN: True,  # are we initializing or not
+			K_FORMNAME: None,  # time of this event
+			K_IS_ALERTING_NOW: False,  # count of number of times this has alerted since last reset
+			K_PREDISMISSABLE: True,  # is this event dismissable in advance
+			K_SNOOZABLE: False,  # can this event be snoozed
+			K_SNOOZED: False,  # is this event snoozed
+			K_TIME_S_AT_ALARM: "04:00:00",  # time of this event if it an alarm
+			K_TIME_S_AT_LAST_RUN: 0,  # time this alarm last ran, now if running
+			K_TIME_S_AT_NEXT_ALERT: ZERO_CLOCK,  # time next time this alarm goes off
+			K_TIME_S_INTERVAL: None,  # interval of this event
+			K_TIME_S_INTERVAL__BEGIN: ZERO_CLOCK,  # time of the day this interval is made active
+			K_TIME_S_INTERVAL__END: ZERO_CLOCK,  # time of the day this interval is no longer active
+			K_TIME_S_INTERVAL_START: ZERO_CLOCK,  # time of the day this round of interval started
+			K_TIME_S_LEN_OF_ALERT: ZERO_CLOCK,  # length of time to alert this event before auto closing it
+		},
+	},
+	K_INDEX_OF_NEXT_EVENT: 0,  # index of the next event to alert
+	K_VERSION: "00000013",  # version number hex string
+}
+
+
