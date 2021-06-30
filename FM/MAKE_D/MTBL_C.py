@@ -220,12 +220,17 @@ TBGLST = {V.OBRKT}
 				_strToWrt_ += f"""FM.{_itemToWrite_}, """
 				_strToWrt1_ += f"""FM.{_itemToWrite_}, """
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
-		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
+		# ##$# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		_strToWrt_ = _strToWrt_[:-1]
 		_strToWrt_ += f"""{V.CPAREN}, __ID__{V.CPAREN},{V.NEWLINE}"""
 		_strToWrt1_ = _strToWrt1_[:-1]
 		_strToWrt1_ += f"""{V.CPAREN}, {itemToExplode_[1]}{V.CPAREN},{V.NEWLINE}"""
 		self.__FILE_DICT__[_newFilename_].write(_strToWrt_)
+		_TID_ = N.MAKE_ID(
+				__MODULE_NAME__="FM",
+				__SUB0__="TBGLST",
+		)
+		_newFilename_ = _TID_["__NEW_FILENAME__"]
 		self.__FILE_DICT__[N.MAKE_NAME(
 				isNew_=True,
 				__MODULE_NAME__="FM",
