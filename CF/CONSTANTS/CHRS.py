@@ -25,6 +25,8 @@ SGLQT = "'"  # simple ' character
 SPCSTR = " "  # SPACE character"
 TABSTR = "\t"  # TAB
 
+
+FTQ = f"""f{DBLQT}{DBLQT}{DBLQT}"""
 TRIQT = f"""{DBLQT}{DBLQT}{DBLQT}"""
 NCR = lambda __NUM__: f"""{CRSTR * __NUM__}"""
 NNL = lambda __NUM__: f"""{NEWLINE * __NUM__}"""
