@@ -2398,7 +2398,7 @@ def parseTBGLST():
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
 					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
-					thisValStr_ = f"""f{FM.TRIQT}{V.OBRCE}self._USE_THIS_KEY_{V.OPAREN}{_thisVal_}{V.CPAREN}{V.CBRCE}{FM.TRIQT}"""
+					thisValStr_ = f"""f{V.TRIQT}{V.OBRCE}self._USE_THIS_KEY_{V.OPAREN}{_thisVal_}{V.CPAREN}{V.CBRCE}{V.TRIQT}"""
 				# ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥
 				else:
 					thisValStr_ = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
@@ -2424,7 +2424,7 @@ def parseTBGLST():
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
 					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
-					thisValStr_ = f"""f{FM.TRIQT}{V.OBRCE}self._USE_THIS_KEY_{V.OPAREN}{_thisVal_}{V.CPAREN}{V.CBRCE}{FM.TRIQT}"""
+					thisValStr_ = f"""f{V.TRIQT}{V.OBRCE}self._USE_THIS_KEY_{V.OPAREN}{_thisVal_}{V.CPAREN}{V.CBRCE}{V.TRIQT}"""
 				# ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥ ⥣4⥥
 				else:
 					thisValStr_ = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
@@ -2463,7 +2463,7 @@ def parseTBGLST():
 					FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_] = {}
 				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
 				FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
-				thisValStr_ = f"""{_thisElementName_}{V.CPAREN}{V.CBRCE}{FM.TRIQT}"""
+				thisValStr_ = f"""{_thisElementName_}{V.CPAREN}{V.CBRCE}{V.TRIQT}"""
 				# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
 				if (_thisClassName_ not in FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT):
 					FM.FMPSG_SCTN09FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_] = {}
@@ -3044,7 +3044,7 @@ def parseTBGLST():
 				if (_thisElementName_ not in FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_]):
 					FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
-				FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.readFileToStr("res/functions/" + _thisFilename_)}""")
+				FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{V.readFileToStr("res/functions/" + _thisFilename_)}""")
 				# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
 				if (_thisClassName_ not in FM.FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT):
 					FM.FMPSG_SCTN09FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
@@ -3099,7 +3099,7 @@ def parseTBGLST():
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				_thisFilename_ = _thisItem_[4]
-				FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.readFileToStr("res/functions/" + _thisFilename_)}""")
+				FM.FMPSG_SCTN09FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{V.readFileToStr("res/functions/" + _thisFilename_)}""")
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
@@ -3185,7 +3185,7 @@ def parseTBGLST():
 					continue
 				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
 				_thisClassName_ = _thisItem_[2]
-				_thisParmStr_ = FM.subMyPlaceKpr(_thisItem_[3])
+				_thisParmStr_ = V.subMyPlaceKpr(_thisItem_[3])
 				# 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥ 4⥥
 				if (_thisClassName_ not in FM.FMPSG_SCTN09FF_CLASS_INIT_DICT):
 					FM.FMPSG_SCTN09FF_CLASS_INIT_DICT[_thisClassName_] = []
@@ -3206,7 +3206,7 @@ def parseTBGLST():
 				_thisClassName_ = _thisItem_[2]
 				_thisValName_ = _thisItem_[3]
 				_thisLambda_ = _thisItem_[4]
-				_thisLambda_ = FM.subMyPlaceKpr(_thisLambda_)
+				_thisLambda_ = V.subMyPlaceKpr(_thisLambda_)
 				FM.FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{V.NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{V.NEWLINE}""")
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -3222,7 +3222,7 @@ def parseTBGLST():
 				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
 				_thisClassName_ = _thisItem_[2]
 				_thisLine_ = _thisItem_[3]
-				_thisLine_ = FM.subMyPlaceKpr(_thisLine_)
+				_thisLine_ = V.subMyPlaceKpr(_thisLine_)
 				FM.FMPSG_SCTN09FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{V.NTAB(2)}{_thisLine_}  # {_thisComment_}{V.NEWLINE}""")
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -3238,7 +3238,7 @@ def parseTBGLST():
 				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
 				_thisClassName_ = _thisItem_[2]
 				_thisFilename_ = _thisItem_[3]
-				FM.FMPSG_SCTN09FF_CLASS_INIT_DICT[_thisClassName_].append(f"""{FM.readFileToStr(_thisFilename_)}{V.NEWLINE}""")
+				FM.FMPSG_SCTN09FF_CLASS_INIT_DICT[_thisClassName_].append(f"""{V.readFileToStr(_thisFilename_)}{V.NEWLINE}""")
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
 			# ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3 ⥣3
@@ -3402,7 +3402,7 @@ def parseTBGLST():
 				_thisClassName_ = _thisItem_[2]
 				_thisValName_ = _thisItem_[3]
 				_thisLambda_ = _thisItem_[4]
-				_thisLambda_ = FM.subMyPlaceKpr(_thisLambda_)
+				_thisLambda_ = V.subMyPlaceKpr(_thisLambda_)
 				FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{V.NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{V.NEWLINE}""")
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -3418,7 +3418,7 @@ def parseTBGLST():
 				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
 				_thisClassName_ = _thisItem_[2]
 				_thisLine_ = _thisItem_[3]
-				_thisLine_ = FM.subMyPlaceKpr(_thisLine_)
+				_thisLine_ = V.subMyPlaceKpr(_thisLine_)
 				FM.FMPSG_SCTN09FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{V.NTAB(2)}{_thisLine_}  # {_thisComment_}{V.NEWLINE}""")
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
@@ -3470,7 +3470,7 @@ def parseTBGLST():
 				# ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4 ⥣4
 				_thisClassName_ = _thisItem_[2]
 				_thisLine_ = _thisItem_[3]
-				_thisLine_ = FM.subMyPlaceKpr(_thisLine_)
+				_thisLine_ = V.subMyPlaceKpr(_thisLine_)
 				FM.FMPSG_SCTN09FF_CLASS_INIT_DEF3_DICT[_thisClassName_].append(f"""{V.NTAB(2)}{_thisLine_}  # {_thisComment_}{V.NEWLINE}""")
 				continue
 				# fold here ⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2⥣2
