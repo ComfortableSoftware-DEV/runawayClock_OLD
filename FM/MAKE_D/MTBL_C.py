@@ -39,7 +39,7 @@ class C_MTBL():
 		_moduleName_ = "FM"
 		_sub0_ = "TBGLST"
 		# ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱
-		_IDToRtn_ = NAMES.MAKE_ID(
+		_IDToRtn_ = N.MAKE_ID(
 				__MODULE_NAME__=_moduleName_,
 				__SUB0__=_sub0_,
 		)
@@ -68,6 +68,11 @@ class C_MTBL():
 			ID_
 	):
 		# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
+		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
+		if (
+				(isinstance(ID_, dict) is True)
+		):
+			return ID_
 		_dictToRtn_ = dict((x, y) for x, y in ID_)
 		return _dictToRtn_
 		# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -87,14 +92,14 @@ class C_MTBL():
 		if (
 				(isinstance(IDToWrt_, dict))
 		):
-			_IDIn_ = NAMES.DEFAULT_KWArgs.copy()
+			_IDIn_ = N.DEFAULT_KWArgs.copy()
 			_IDIn_.update(IDToWrt_)
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
 		elif (
 				(isinstance(IDToWrt_, tuple))
 		):
 			_TIDIn_ = self.makeDictID(IDToWrt_)
-			_IDIn_ = NAMES.DEFAULT_KWArgs.copy()
+			_IDIn_ = N.DEFAULT_KWArgs.copy()
 			_IDIn_.update(_TIDIn_)
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
 		else:
@@ -114,8 +119,8 @@ class C_MTBL():
 		_filename_ = _IDIn_.get("__FILENAME__")
 		_moduleName_ = _IDIn_.get("__MODULE_NAME__")
 		_newFilename_ = _IDIn_.get("__NEW_FILENAME__")
-		_subD0_ = _IDIn_.get("__SUBD0__")
-		_subD1_ = _IDIn_.get("__SUBD1__")
+		_subd0_ = _IDIn_.get("__SUBD0__")
+		_subd1_ = _IDIn_.get("__SUBD1__")
 		_sub0_ = _IDIn_.get("__SUB0__")
 		_sub1_ = _IDIn_.get("__SUB1__")
 		_sub2_ = _IDIn_.get("__SUB2__")
@@ -132,7 +137,7 @@ class C_MTBL():
 		if (
 				(_newFilename_ is None)
 		):
-			_newFilename_ = N.MAKE_NAME(isNew_=True, IDIn_)
+			_newFilename_ = N.MAKE_NAME(isNew_=True, **IDIn_)
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		_strToRtn_ = f"""{V.NEWLINE}
 {M.makeAComment(f"start of {_filename_}")}
@@ -142,8 +147,8 @@ _class_ = "{_class_}"
 _filename_ = "{_filename_}"
 _moduleName_ = "{_moduleName_}"
 _newFilename_ = "{_newFilename_}"
-_subD0_ = "{_subD0_}"
-_subD1_ = "{_subD1_}"
+_subd0_ = "{_subd0_}"
+_subd1_ = "{_subd1_}"
 _sub0_ = "{_sub0_}"
 _sub1_ = "{_sub1_}"
 _sub2_ = "{_sub2_}"
@@ -155,8 +160,8 @@ _ID_ = (
 {V.NTAB(1)}{V.OPAREN}__FILENAME__, _filename_,{V.CPAREN},  # {_filename_}
 {V.NTAB(1)}{V.OPAREN}__MODULENAME__, _moduleName_,{V.CPAREN},  # {_moduleName_}
 {V.NTAB(1)}{V.OPAREN}__NEWFILENAME__, _newFilename_,{V.CPAREN},  # {_newFilename_}
-{V.NTAB(1)}{V.OPAREN}__SUBD0__, _subD0_,{V.CPAREN},  # {_subD0_}
-{V.NTAB(1)}{V.OPAREN}__SUBD1__, _subD1_,{V.CPAREN},  # {_subD1_}
+{V.NTAB(1)}{V.OPAREN}__SUBD0__, _subd0_,{V.CPAREN},  # {_subd0_}
+{V.NTAB(1)}{V.OPAREN}__SUBD1__, _subd1_,{V.CPAREN},  # {_subd1_}
 {V.NTAB(1)}{V.OPAREN}__SUB0__, _sub0_,{V.CPAREN},  # {_sub0_}
 {V.NTAB(1)}{V.OPAREN}__SUB1__, _sub1_,{V.CPAREN},  # {_sub1_}
 {V.NTAB(1)}{V.OPAREN}__SUB2__, _sub2_,{V.CPAREN},  # {_sub2_}
@@ -183,6 +188,7 @@ TBGLST = {V.OBRKT}
 		if (itemToExplode_ is None):
 			return None, None
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
+		print(f"""write {itemToExplode_[1]}""")
 		_IDBeingExploded_ = self.makeDictID(itemToExplode_[1])
 		_lineToWrt_ = itemToExplode_[0]
 		# _class_ = _IDBeingExploded_.get("__CLASS__")

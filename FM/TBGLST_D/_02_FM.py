@@ -36,7 +36,7 @@ __ID__ = N.MAKE_ID(
 	("__FILENAME__", _filename_,),  # FM/TBGLST_D/_02_FM.py
 	("__MODULE_NAME__", _moduleName_,),  # FM
 	("__NEW_FILENAME__", _newFilename_,),  # FM/TBGLST_D/_02_FM_NEW.py
-	("__SUBD0__", _subD0_,),  # TBGLST_D
+	("__SUBD0__", _subd0_,),  # TBGLST_D
 	("__SUB0__", _sub0_,),  # _02
 	("__SUB1__", _sub1_,),  # FM
 )

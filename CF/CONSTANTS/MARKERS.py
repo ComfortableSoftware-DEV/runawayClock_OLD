@@ -9,7 +9,7 @@
 #
 
 
-from CF.CONSTANTS import MARKERS as M
+# from CF.CONSTANTS import MARKERS as M
 from CF.CONSTANTS import NAMES as N
 from CF.CONSTANTS import VALS as V
 
@@ -113,7 +113,7 @@ MARK_STARTLN = lambda __TAG__: f"""# {__TAG__} {" ⟱" * (CMNTLEN // 2)}{V.NEWLI
 def makeAComment(comment_):
 	# fold here ⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1
 	_strToRtn_ = ""
-	_strToRtn_ += f"""{M.CMNTLINE}{V.NEWLINE}# * {comment_}{V.NEWLINE}{M.CMNTLINE}{V.NEWLINE}"""
+	_strToRtn_ += f"""{CMNTLINE}{V.NEWLINE}# * {comment_}{V.NEWLINE}{CMNTLINE}{V.NEWLINE}"""
 	return _strToRtn_
 	# fold here ⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1
 
@@ -124,7 +124,7 @@ def makeAComment(comment_):
 def makeAWideComment(comment_):
 	# fold here ⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1
 	_strToRtn_ = ""
-	_strToRtn_ += f"""#{V.NEWLINE}#{V.NEWLINE}{M.CMNTLINE}{V.NEWLINE}# * {comment_}{V.NEWLINE}{M.CMNTLINE}{V.NEWLINE}#{V.NEWLINE}#{V.NEWLINE}"""
+	_strToRtn_ += f"""#{V.NEWLINE}#{V.NEWLINE}{CMNTLINE}{V.NEWLINE}# * {comment_}{V.NEWLINE}{CMNTLINE}{V.NEWLINE}#{V.NEWLINE}#{V.NEWLINE}"""
 	return _strToRtn_
 	# fold here ⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1
 
@@ -138,7 +138,7 @@ def makeFolds():
 					__SUBD0__="CONSTANTS",
 					__SUB0__="MARKERS",
 					__SUB1__="FOLDS",
-			)) as FD_out)
+			))) as FD_out
 	):
 		FD_out.write(f"""{V.NEWLINE}{V.NEWLINE}{makeAWideComment("start of folds ")}{V.NEWLINE}{V.NEWLINE}
 FOLD1ENDHERE = {V.DBLQT}{FOLD1ENDHERE}{V.DBLQT}
@@ -182,20 +182,19 @@ def MAKE_ONELNS():
 					__SUBD0__="CONSTANTS",
 					__SUB0__="MARKERS",
 					__SUB1__="FOLDS",
-			)) as FD_out)
+			))) as FD_out
 	):
 		FD_out.write(f"""{V.NEWLINE}{V.NEWLINE}{makeAWideComment("start of folds ")}{V.NEWLINE}{V.NEWLINE}
-	CMNTLINE = {V.FTQ}{CMNTLINE}{V.TRIQT}
-	IMPORTANTSTR = {V.FTQ}{IMPORTANTSTR}{V.TRIQT}
-	INDENTIN = {V.FTQ}{INDENTIN}{V.TRIQT}
-	INDENTOUT = {V.FTQ}{INDENTOUT}{V.TRIQT}
-	INFOSTR = {V.FTQ}{INFOSTR}{V.TRIQT}{V.NEWLINE}
-	CMNTLINE = {V.FTQ}# * {"#*" * (CMNTLEN // 2)}{V.TRIQT}  # my standard # * #*#*… comment line
-	IMPORTANTSTR = {V.FTQ}# * {"!-" * (CMNTLEN // 2)}{V.TRIQT}  # important line marker
-	INDENTIN = " -=> "  # display arrow RIGHT
-	INDENTOUT = " <=- "  # display arrow LEFT
-	INFOSTR = {V.FTQ}# * {"%_" * (CMNTLEN // 2)}{V.TRIQT}  # INFO _STR_ line
-"""
+CMNTLINE = {V.FTQ}{CMNTLINE}{V.TRIQT}
+IMPORTANTSTR = {V.FTQ}{IMPORTANTSTR}{V.TRIQT}
+INDENTIN = {V.FTQ}{INDENTIN}{V.TRIQT}
+INDENTOUT = {V.FTQ}{INDENTOUT}{V.TRIQT}
+INFOSTR = {V.FTQ}{INFOSTR}{V.TRIQT}{V.NEWLINE}
+CMNTLINE = {V.FTQ}# * {"#*" * (CMNTLEN // 2)}{V.TRIQT}  # my standard # * #*#*… comment line
+IMPORTANTSTR = {V.FTQ}# * {"!-" * (CMNTLEN // 2)}{V.TRIQT}  # important line marker
+INDENTIN = " -=> "  # display arrow RIGHT
+INDENTOUT = " <=- "  # display arrow LEFT
+INFOSTR = {V.FTQ}# * {"%_" * (CMNTLEN // 2)}{V.TRIQT}  # INFO _STR_ line""")
 	# fold here ⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1
 
 
@@ -211,10 +210,10 @@ def MAKE_MARKS():
 					__SUBD0__="CONSTANTS",
 					__SUB0__="MARKERS",
 					__SUB1__="FOLDS",
-			)) as FD_out)
+			))) as FD_out
 	):
 		FD_out.write(f"""{V.NEWLINE}{V.NEWLINE}{makeAWideComment("start of folds ")}{V.NEWLINE}{V.NEWLINE}
-"""
+""")
 	# fold here ⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1⟰1
 
 

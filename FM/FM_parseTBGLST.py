@@ -1,7 +1,7 @@
 
 from CF.CONSTANTS import (
-		MARKERS,
-		VALS,
+		MARKERS as M,
+		VALS as V,
 )
 from FM import FM
 
