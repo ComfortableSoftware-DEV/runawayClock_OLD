@@ -9,6 +9,8 @@
 #
 
 
+__SECTION__ = "__SECTION__"
+__SUBSECTION__ = "__SUBSECTION__"
 __MODULE_NAME__ = "__MODULE_NAME__"
 __SUBD0__ = "__SUBD0__"
 __SUBD1__ = "__SUBD1__"
