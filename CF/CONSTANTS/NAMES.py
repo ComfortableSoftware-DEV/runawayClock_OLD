@@ -16,7 +16,7 @@ from __KEYS__.CF import _01_00_NAMES as NK
 GLBL_ROOT = "/rcr/0-units/python/"
 
 
-NK.NK.DEFAULT_KWARGS = {
+DEFAULT_KWARGS = {
 		NK.__MODULE_NAME__: None,
 		NK.__SUBD0__: None,
 		NK.__SUBD1__: None,
@@ -30,7 +30,7 @@ NK.NK.DEFAULT_KWARGS = {
 }
 
 
-NK.DEFAULT_KWARGS_WEXT = {
+DEFAULT_KWARGS_WEXT = {
 		NK.__MODULE_NAME__: None,
 		NK.__SUBD0__: None,
 		NK.__SUBD1__: None,
@@ -472,7 +472,7 @@ def MAKE_NAME(
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
 		elif (
-				(_thisKey_ == "__CLASS__") and
+				(_thisKey_ == NK.__CLASS__) and
 				(_thisVal_ is not None)
 		):
 			_strToRtn_ += f"""_{_thisVal_}_C"""
@@ -537,16 +537,16 @@ def MAKE_NAME_WEXT(
 			_dictToRtn_[_thisKey_] = None
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 	# ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1
-	_class_ = _dictToRtn_.get("__CLASS__")
-	_moduleName_ = _dictToRtn_.get("__MODULE_NAME__")
-	_subd0_ = _dictToRtn_.get("__SUBD0__")
-	_subd1_ = _dictToRtn_.get("__SUBD1__")
-	_sub0_ = _dictToRtn_.get("__SUB0__")
-	_sub1_ = _dictToRtn_.get("__SUB1__")
-	_sub2_ = _dictToRtn_.get("__SUB2__")
-	_sub3_ = _dictToRtn_.get("__SUB3__")
-	_sub4_ = _dictToRtn_.get("__SUB4__")
-	_sub5_ = _dictToRtn_.get("__SUB5__")
+	_class_ = _dictToRtn_.get(NK.__CLASS__)
+	_moduleName_ = _dictToRtn_.get(NK.__MODULE_NAME__)
+	_subd0_ = _dictToRtn_.get(NK.__SUBD0__)
+	_subd1_ = _dictToRtn_.get(NK.__SUBD1__)
+	_sub0_ = _dictToRtn_.get(NK.__SUB0__)
+	_sub1_ = _dictToRtn_.get(NK.__SUB1__)
+	_sub2_ = _dictToRtn_.get(NK.__SUB2__)
+	_sub3_ = _dictToRtn_.get(NK.__SUB3__)
+	_sub4_ = _dictToRtn_.get(NK.__SUB4__)
+	_sub5_ = _dictToRtn_.get(NK.__SUB5__)
 	_strToRtn_ = ""
 	# 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱
 	_firstName_ = True
@@ -561,7 +561,7 @@ def MAKE_NAME_WEXT(
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
 		elif (
 			(_thisKey_ not in SUBD_LIST) and
-			(_thisKey_ != "__CLASS__") and
+			(_thisKey_ != NK.__CLASS__) and
 			(_thisVal_ is not None)
 		):
 			# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
@@ -576,7 +576,7 @@ def MAKE_NAME_WEXT(
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
 		elif (
-				(_thisKey_ == "__CLASS__") and
+				(_thisKey_ == NK.__CLASS__) and
 				(_thisVal_ is not None)
 		):
 			_strToRtn_ += f"""_{_thisVal_}_C"""
