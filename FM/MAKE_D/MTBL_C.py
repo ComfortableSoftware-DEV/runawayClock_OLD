@@ -188,16 +188,9 @@ TBGLST = {V.OBRKT}
 		if (itemToExplode_ is None):
 			return None, None
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
-		print(f"""write {itemToExplode_[1]}""")
 		_IDBeingExploded_ = self.makeDictID(itemToExplode_[1])
 		_lineToWrt_ = itemToExplode_[0]
-		# _class_ = _IDBeingExploded_.get("__CLASS__")
-		# _filename_ = _IDBeingExploded_.get("__FILENAME__")
-		# _moduleName_ = _IDBeingExploded_.get("__MODULE_NAME__")
 		_newFilename_ = _IDBeingExploded_.get("__NEW_FILENAME__")
-		# _sub0_ = _IDBeingExploded_.get("__SUB0__")
-		# _sub1_ = _IDBeingExploded_.get("__SUB1__")
-		# _sub2_ = _IDBeingExploded_.get("__SUB2__")
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		if (
 				(_newFilename_ is not None) and
