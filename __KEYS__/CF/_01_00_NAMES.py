@@ -9,19 +9,19 @@
 #
 
 
-__SECTION__ = "__SECTION__"
-__SUBSECTION__ = "__SUBSECTION__"
+__CLASS__ = "__CLASS__"
+__EXTENSION__ = "__EXTENSION__"
 __MODULE_NAME__ = "__MODULE_NAME__"
-__SUBD0__ = "__SUBD0__"
-__SUBD1__ = "__SUBD1__"
+__SECTION__ = "__SECTION__"
 __SUB0__ = "__SUB0__"
 __SUB1__ = "__SUB1__"
 __SUB2__ = "__SUB2__"
 __SUB3__ = "__SUB3__"
 __SUB4__ = "__SUB4__"
 __SUB5__ = "__SUB5__"
-__CLASS__ = "__CLASS__"
-__EXTENSION__ = "__EXTENSION__"
+__SUBD0__ = "__SUBD0__"
+__SUBD1__ = "__SUBD1__"
+__SUBSECTION__ = "__SUBSECTION__"
 
 
 #
