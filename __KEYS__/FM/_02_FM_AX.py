@@ -1,3 +1,50 @@
+
+
+#
+#
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+# start of FM.TBGLST_D._01_00_CF
+# * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
+#
+#
+
+from CF.CONSTANTS import NAMES as N
+from FM import FM
+
+
+_sectionName_ = "__KEYS__"
+_subd0_ = "TBGLST_D"
+_sub0_ = "01"
+_sub1_ = "00"
+_sub2_ = "CF"
+# ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱
+_filename_ = f"""{N.MAKE_NAME(
+		__MODULE_NAME__=_moduleName_,
+		__SUBD0__=_subd0_,
+		__SUB0__=_sub0_,
+		__SUB1__=_sub1_,
+		__SUB2__=_sub2_,
+)}"""  # FM/TBGLST_D/_01_00_CF.py
+# ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱
+_newFilename_ = f"""{N.MAKE_NAME(
+		isNew_=True,
+		__MODULE_NAME__=_moduleName_,
+		__SUBD0__=_subd0_,
+		__SUB0__=_sub0_,
+		__SUB1__=_sub1_,
+		__SUB2__=_sub2_,
+)}"""  # FM/TBGLST_D/_01_00_CF_NEW.py
+# ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱ ⟰0⟱
+__ID__ = N.MAKE_ID(
+		("__FILENAME__", _filename_,),  # FM/TBGLST_D/_01_00_CF.py
+		("__MODULE_NAME__", _moduleName_,),  # FM
+		("__NEW_FILENAME__", _newFilename_,),  # FM/TBGLST_D/_01_00_CF_NEW.py
+		("__SUBD0__", _subd0_,),  # TBGLST_D
+		("__SUB0__", _sub0_,),  # _01
+		("__SUB1__", _sub1_,),  # 00
+		("__SUB2__", _sub2_,),  # CF
+)
+
 FMAX_NOP = "FMAX_NOP"  # ignore the remainder of the line
 FMAX_SCTNS_DEF = "FMAX_SCTNS_DEF"  # define the sections <NAC><SCTN><MODULE><SUB0><SUB1><SUB2><DESCRIPTION>
 FMAXCF_SCTN0003_LAMBDA_DEF = "FMAXCF_SCTN0003_LAMBDA_DEF"  # define a lambda function <NAC><K_EVENT_NAME><lambda str>
@@ -538,5 +585,3 @@ FMAXFM_AXLST = [
 	FMAXPSG_SCTN09FF_CLASS_WINDOW_STR_ADD,  # add a str to the main dictdict
 	FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD,  # add a str to the main dictdict
 ]
-
-
