@@ -158,7 +158,7 @@ _sub5_ = "{_sub5_}"{V.NEWLINE}{V.NEWLINE}
 _ID_ = (
 {V.NTAB(1)}{V.OPAREN}__CLASS__, _class_,{V.CPAREN},  # {_class_}
 {V.NTAB(1)}{V.OPAREN}__FILENAME__, _filename_,{V.CPAREN},  # {_filename_}
-{V.NTAB(1)}{V.OPAREN}__MODULENAME__, _moduleName_,{V.CPAREN},  # {_moduleName_}
+{V.NTAB(1)}{V.OPAREN}__MODULE_NAME_, _moduleName_,{V.CPAREN},  # {_moduleName_}
 {V.NTAB(1)}{V.OPAREN}__NEWFILENAME__, _newFilename_,{V.CPAREN},  # {_newFilename_}
 {V.NTAB(1)}{V.OPAREN}__SUBD0__, _subd0_,{V.CPAREN},  # {_subd0_}
 {V.NTAB(1)}{V.OPAREN}__SUBD1__, _subd1_,{V.CPAREN},  # {_subd1_}
