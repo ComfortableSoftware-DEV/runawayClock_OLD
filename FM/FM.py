@@ -51,17 +51,17 @@ from CF.CONSTANTS import VALS as V
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN101 FMAX _DEF_
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-FMAX_NOP = "FMAX_NOP"  # ignore the remainder of the line
-FMAX_SCTNS_DEF = "FMAX_SCTNS_DEF"  # define the sections <NAC><SCTN><MODULE><SUB0><SUB1><SUB2><DESCRIPTION>
-FMAXCF_SCTN0003_LAMBDA_DEF = "FMAXCF_SCTN0003_LAMBDA_DEF"  # define a lambda function <NAC><K_EVENT_NAME><lambda str>
-FMAXCF_SCTN0003_TYPE_DEF = "FMAXCF_SCTN0003_TYPE_DEF"  # define a fake type used in the translation dict <NAC><K_EVENT_NAME><TYPE>
-FMAXCF_SCTN0201_STR_DEF = "FMAXCF_SCTN0201_STR_DEF"  # define a STR in SCTN0201 <NAC><K_EVENT_NAME><str>
-FMAXCF_SCTN0201_VAL_DEF = "FMAXCF_SCTN0201_VAL_DEF"  # define a VAL in SCTN0201 <NAC><K_EVENT_NAME><VAL>
-FMAXCF_SCTN0202_OPTIONS_ADD_HELP_LINE = "FMAXCF_SCTN0202_OPTIONS_ADD_HELP_LINE"  # add a line to the help for a PARM, after the comment is automatically added<NAC><PARM><ADDONHELPLINE>
-FMAXCF_SCTN0202_OPTIONS_STR_ADD = "FMAXCF_SCTN0202_OPTIONS_STR_ADD"  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
-FMAXCF_SCTN0202_OPTIONS_VAL_ADD = "FMAXCF_SCTN0202_OPTIONS_VAL_ADD"  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
-FMAXCF_SCTN0202_OPTIONSDICT_STR_ADD = "FMAXCF_SCTN0202_OPTIONSDICT_STR_ADD"  # define a OPTNAME: 'str' in SCTN0202 <NAC><KEY><PARM><STRDEFAULT>
-FMAXCF_SCTN0202_OPTIONSDICT_VAL_ADD = "FMAXCF_SCTN0202_OPTIONSDICT_VAL_ADD"  # define a OPTNAME: VAL in SCTN0202 <NAC><KEY><PARM><VALDEFAULT>
+FMAX.NOP = "FMAX.NOP"  # ignore the remainder of the line
+FMAX.SCTNS_DEF = "FMAX.SCTNS_DEF"  # define the sections <NAC><SCTN><MODULE><SUB0><SUB1><SUB2><DESCRIPTION>
+FMAX.SCTN0003_LAMBDA_DEF = "FMAX.SCTN0003_LAMBDA_DEF"  # define a lambda function <NAC><K_EVENT_NAME><lambda str>
+FMAX.SCTN0003_TYPE_DEF = "FMAX.SCTN0003_TYPE_DEF"  # define a fake type used in the translation dict <NAC><K_EVENT_NAME><TYPE>
+FMAX.SCTN0201_STR_DEF = "FMAX.SCTN0201_STR_DEF"  # define a STR in SCTN0201 <NAC><K_EVENT_NAME><str>
+FMAX.SCTN0201_VAL_DEF = "FMAX.SCTN0201_VAL_DEF"  # define a VAL in SCTN0201 <NAC><K_EVENT_NAME><VAL>
+FMAX.SCTN0202_OPT_ADD_HLPLN = "FMAX.SCTN0202_OPT_ADD_HLPLN"  # add a line to the help for a PARM, after the comment is automatically added<NAC><PARM><ADDONHELPLINE>
+FMAX.SCTN0202_OPT_STR_ADD = "FMAX.SCTN0202_OPT_STR_ADD"  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
+FMAX.SCTN0202_OPT_VAL_ADD = "FMAX.SCTN0202_OPT_VAL_ADD"  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
+FMAX.SCTN0202_OPTDICT_STR_ADD = "FMAX.SCTN0202_OPTDICT_STR_ADD"  # define a OPTNAME: 'str' in SCTN0202 <NAC><KEY><PARM><STRDEFAULT>
+FMAX.SCTN0202_OPTDICT_VAL_ADD = "FMAX.SCTN0202_OPTDICT_VAL_ADD"  # define a OPTNAME: VAL in SCTN0202 <NAC><KEY><PARM><VALDEFAULT>
 FMAXCF_SCTN0203_DICT_DEF = "FMAXCF_SCTN0203_DICT_DEF"  # define a dict in SCTN203 <NAC><DICTNAME><DICTMODE>
 FMAXCF_SCTN0203_DICT_VS_ADD = "FMAXCF_SCTN0203_DICT_VS_ADD"  # define a dict STR in SCTN203 <NAC><DICTNAME><STR>
 FMAXCF_SCTN0203_DICT_VV_ADD = "FMAXCF_SCTN0203_DICT_VV_ADD"  # define a dict VAL in SCTN203 <NAC><DICTNAME><VAL>
@@ -283,17 +283,17 @@ FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD = "FMAXPSG_SCTN09FF_CLASS_WINDOW_VAL_ADD" 
 
 
 FMAXFM_AXLST = [
-	FMAX_NOP,  # ignore the remainder of the line
-	FMAX_SCTNS_DEF,  # define the sections <NAC><SCTN><MODULE><SUB0><SUB1><SUB2><DESCRIPTION>
-	FMAXCF_SCTN0003_LAMBDA_DEF,  # define a lambda function <NAC><K_EVENT_NAME><lambda str>
-	FMAXCF_SCTN0003_TYPE_DEF,  # define a fake type used in the translation dict <NAC><K_EVENT_NAME><TYPE>
-	FMAXCF_SCTN0201_STR_DEF,  # define a STR in SCTN0201 <NAC><K_EVENT_NAME><str>
-	FMAXCF_SCTN0201_VAL_DEF,  # define a VAL in SCTN0201 <NAC><K_EVENT_NAME><VAL>
-	FMAXCF_SCTN0202_OPTIONS_ADD_HELP_LINE,  # add a line to the help for a PARM, after the comment is automatically added<NAC><PARM><ADDONHELPLINE>
-	FMAXCF_SCTN0202_OPTIONS_STR_ADD,  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
-	FMAXCF_SCTN0202_OPTIONS_VAL_ADD,  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
-	FMAXCF_SCTN0202_OPTIONSDICT_STR_ADD,  # define a OPTNAME: 'str' in SCTN0202 <NAC><KEY><PARM><STRDEFAULT>
-	FMAXCF_SCTN0202_OPTIONSDICT_VAL_ADD,  # define a OPTNAME: VAL in SCTN0202 <NAC><KEY><PARM><VALDEFAULT>
+	FMAX.NOP,  # ignore the remainder of the line
+	FMAX.SCTNS_DEF,  # define the sections <NAC><SCTN><MODULE><SUB0><SUB1><SUB2><DESCRIPTION>
+	FMAX.SCTN0003_LAMBDA_DEF,  # define a lambda function <NAC><K_EVENT_NAME><lambda str>
+	FMAX.SCTN0003_TYPE_DEF,  # define a fake type used in the translation dict <NAC><K_EVENT_NAME><TYPE>
+	FMAX.SCTN0201_STR_DEF,  # define a STR in SCTN0201 <NAC><K_EVENT_NAME><str>
+	FMAX.SCTN0201_VAL_DEF,  # define a VAL in SCTN0201 <NAC><K_EVENT_NAME><VAL>
+	FMAX.SCTN0202_OPT_ADD_HLPLN,  # add a line to the help for a PARM, after the comment is automatically added<NAC><PARM><ADDONHELPLINE>
+	FMAX.SCTN0202_OPT_STR_ADD,  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
+	FMAX.SCTN0202_OPT_VAL_ADD,  # define a '-a[=]' in SCTN22 <NAC><PARM><KEY><VAL>
+	FMAX.SCTN0202_OPTDICT_STR_ADD,  # define a OPTNAME: 'str' in SCTN0202 <NAC><KEY><PARM><STRDEFAULT>
+	FMAX.SCTN0202_OPTDICT_VAL_ADD,  # define a OPTNAME: VAL in SCTN0202 <NAC><KEY><PARM><VALDEFAULT>
 	FMAXCF_SCTN0203_DICT_DEF,  # define a dict in SCTN203 <NAC><DICTNAME><DICTMODE>
 	FMAXCF_SCTN0203_DICT_VS_ADD,  # define a dict STR in SCTN203 <NAC><DICTNAME><STR>
 	FMAXCF_SCTN0203_DICT_VV_ADD,  # define a dict VAL in SCTN203 <NAC><DICTNAME><VAL>
