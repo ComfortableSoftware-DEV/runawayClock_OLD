@@ -46,7 +46,7 @@ TBGLST = [
 	(("FMAX.SCTN0105_LDICT_DEF", FM.FMAX.SCTN0101_AX_DEF, "define a dict for FM <NAC>",), __ID__),
 	(("FMAX.SCTN0105_LDICT_VS_ADD", FM.FMAX.SCTN0101_AX_DEF, "define a dict for FM <NAC>",), __ID__),
 	(("FMAX.SCTN0105_LDICT_VV_ADD", FM.FMAX.SCTN0101_AX_DEF, "define a dict for FM <NAC>",), __ID__),
-	(("FMAXFM_SCTN0106_SCTN_DEF", FM.FMAX.SCTN0101_AX_DEF, "define the SCTN all over the place <NAC><SCTNNAME><DESCRIPTION0>",), __ID__),
+	(("FMAX.SCTN0106_SCTN_DEF", FM.FMAX.SCTN0101_AX_DEF, "define the SCTN all over the place <NAC><SCTNNAME><DESCRIPTION0>",), __ID__),
 	(("FMAX.NOP", FM.FMAX.SCTN0101_AX_DEF, "ignore the remainder of the line",), __ID__),
 	(("FMAX.SCTNS_DEF", FM.FMAX.SCTN0101_AX_DEF, "define the sections <NAC><SCTN><MODULE><SUB0><SUB1><SUB2><DESCRIPTION>",), __ID__),
 	(("FMFM_SCTN0101_AX_CMNT_DICT", FM.FMAX.SCTN0103_DICT_DEF, "FMFM_SCTN0101_AX_CMNT_DICT", "SCTN101 FMAX defined",), __ID__),
