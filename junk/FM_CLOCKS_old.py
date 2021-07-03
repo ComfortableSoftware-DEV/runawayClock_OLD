@@ -381,15 +381,15 @@ FMAX.SCTN0910_DUBLT_VV_DEF = "FMAX.SCTN0910_DUBLT_VV_DEF"  # define a (x,y) tupl
 FMAX.SCTN0910_STR_DEF = "FMAX.SCTN0910_STR_DEF"  # define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>
 FMAX.SCTN0910_VAL_DEF = "FMAX.SCTN0910_VAL_DEF"  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
 FMAX.SCTN0911_COMBO_DEF = "FMAX.SCTN0911_COMBO_DEF"  # define a combo box <NAC><COMBOBOXNAME>
-FMAXPSG_SCTN0912_FRAMEELEMENT_DEF = "FMAXPSG_SCTN0912_FRAMEELEMENT_DEF"  # define a frame element <NAC><FENAME>
-FMAXPSG_SCTN0913_RCMENU_DEF = "FMAXPSG_SCTN0913_RCMENU_DEF"  # define a right click menu <NAC><RCMENUNAME>
-FMAXPSG_SCTN0913_RCMENU_VAL_ADD = "FMAXPSG_SCTN0913_RCMENU_VAL_ADD"  # define a right click menu <NAC><RCMENUNAME><VAL>
-FMAXPSG_SCTN0914_FORMPOPUP_DEF = "FMAXPSG_SCTN0914_FORMPOPUP_DEF"  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
-FMAXPSG_SCTN0915_PUDLG_DEF = "FMAXPSG_SCTN0915_PUDLG_DEF"  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
-FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD = "FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
-FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD = "FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
-FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD = "FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
-FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD = "FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+FMAX.SCTN0912_FRAMEELEMENT_DEF = "FMAX.SCTN0912_FRAMEELEMENT_DEF"  # define a frame element <NAC><FENAME>
+FMAX.SCTN0913_RCMENU_DEF = "FMAX.SCTN0913_RCMENU_DEF"  # define a right click menu <NAC><RCMENUNAME>
+FMAX.SCTN0913_RCMENU_VAL_ADD = "FMAX.SCTN0913_RCMENU_VAL_ADD"  # define a right click menu <NAC><RCMENUNAME><VAL>
+FMAX.SCTN0914_FORMPOPUP_DEF = "FMAX.SCTN0914_FORMPOPUP_DEF"  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+FMAX.SCTN0915_PUDLG_DEF = "FMAX.SCTN0915_PUDLG_DEF"  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
+FMAX.SCTN0915_PUDLG_DICT_STR_ADD = "FMAX.SCTN0915_PUDLG_DICT_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+FMAX.SCTN0915_PUDLG_DICT_VAL_ADD = "FMAX.SCTN0915_PUDLG_DICT_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+FMAX.SCTN0915_PUDLG_LIST_STR_ADD = "FMAX.SCTN0915_PUDLG_LIST_STR_ADD"  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+FMAX.SCTN0915_PUDLG_LIST_VAL_ADD = "FMAX.SCTN0915_PUDLG_LIST_VAL_ADD"  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
 FMAXPSG_SCTN09FF_CLASS_BTN_DEF = "FMAXPSG_SCTN09FF_CLASS_BTN_DEF"  # define a button <NAC><CLASSNAME><BTNNAME>
 FMAXPSG_SCTN09FF_CLASS_BTN_STR_ADD = "FMAXPSG_SCTN09FF_CLASS_BTN_STR_ADD"  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
 FMAXPSG_SCTN09FF_CLASS_BTN_VAL_ADD = "FMAXPSG_SCTN09FF_CLASS_BTN_VAL_ADD"  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
@@ -600,15 +600,15 @@ FMAXFM_AXLST = [
 	FMAX.SCTN0910_STR_DEF,  # define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>
 	FMAX.SCTN0910_VAL_DEF,  # define a value in the second define section in PSG.py <NAC><VALNAME><VAL>
 	FMAX.SCTN0911_COMBO_DEF,  # define a combo box <NAC><COMBOBOXNAME>
-	FMAXPSG_SCTN0912_FRAMEELEMENT_DEF,  # define a frame element <NAC><FENAME>
-	FMAXPSG_SCTN0913_RCMENU_DEF,  # define a right click menu <NAC><RCMENUNAME>
-	FMAXPSG_SCTN0913_RCMENU_VAL_ADD,  # define a right click menu <NAC><RCMENUNAME><VAL>
-	FMAXPSG_SCTN0914_FORMPOPUP_DEF,  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
-	FMAXPSG_SCTN0915_PUDLG_DEF,  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
-	FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
-	FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
-	FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
-	FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+	FMAX.SCTN0912_FRAMEELEMENT_DEF,  # define a frame element <NAC><FENAME>
+	FMAX.SCTN0913_RCMENU_DEF,  # define a right click menu <NAC><RCMENUNAME>
+	FMAX.SCTN0913_RCMENU_VAL_ADD,  # define a right click menu <NAC><RCMENUNAME><VAL>
+	FMAX.SCTN0914_FORMPOPUP_DEF,  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
+	FMAX.SCTN0915_PUDLG_DEF,  # define a popup dialog <NAC><POPUPNAME><POPUPTYPE>
+	FMAX.SCTN0915_PUDLG_DICT_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+	FMAX.SCTN0915_PUDLG_DICT_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
+	FMAX.SCTN0915_PUDLG_LIST_STR_ADD,  # add a str to a text element <NAC><POPUPNAME><KEY><VAL>
+	FMAX.SCTN0915_PUDLG_LIST_VAL_ADD,  # add a val to a text element <NAC><POPUPNAME><KEY><VAL>
 	FMAXPSG_SCTN09FF_CLASS_BTN_DEF,  # define a button <NAC><CLASSNAME><BTNNAME>
 	FMAXPSG_SCTN09FF_CLASS_BTN_STR_ADD,  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
 	FMAXPSG_SCTN09FF_CLASS_BTN_VAL_ADD,  # add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>
@@ -998,15 +998,15 @@ TBGLST = [
 	("FMAX.SCTN0910_STR_DEF", FMAX.SCTN0101_AX_DEF, "define a string in the second section of defines in PSG.py <NAC><VALNAME><VAL>",),
 	("FMAX.SCTN0910_VAL_DEF", FMAX.SCTN0101_AX_DEF, "define a value in the second define section in PSG.py <NAC><VALNAME><VAL>",),
 	("FMAX.SCTN0911_COMBO_DEF", FMAX.SCTN0101_AX_DEF, "define a combo box <NAC><COMBOBOXNAME>",),
-	("FMAXPSG_SCTN0912_FRAMEELEMENT_DEF", FMAX.SCTN0101_AX_DEF, "define a frame element <NAC><FENAME>",),
-	("FMAXPSG_SCTN0913_RCMENU_DEF", FMAX.SCTN0101_AX_DEF, "define a right click menu <NAC><RCMENUNAME>",),
-	("FMAXPSG_SCTN0913_RCMENU_VAL_ADD", FMAX.SCTN0101_AX_DEF, "define a right click menu <NAC><RCMENUNAME><VAL>",),
-	("FMAXPSG_SCTN0914_FORMPOPUP_DEF", FMAX.SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
-	("FMAXPSG_SCTN0915_PUDLG_DEF", FMAX.SCTN0101_AX_DEF, "define a popup dialog <NAC><POPUPNAME><POPUPTYPE>",),
-	("FMAXPSG_SCTN0915_PUDLG_DICT_STR_ADD", FMAX.SCTN0101_AX_DEF, "add a str to a text element <NAC><POPUPNAME><KEY><VAL>",),
-	("FMAXPSG_SCTN0915_PUDLG_DICT_VAL_ADD", FMAX.SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",),
-	("FMAXPSG_SCTN0915_PUDLG_LIST_STR_ADD", FMAX.SCTN0101_AX_DEF, "add a str to a text element <NAC><POPUPNAME><KEY><VAL>",),
-	("FMAXPSG_SCTN0915_PUDLG_LIST_VAL_ADD", FMAX.SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",),
+	("FMAX.SCTN0912_FRAMEELEMENT_DEF", FMAX.SCTN0101_AX_DEF, "define a frame element <NAC><FENAME>",),
+	("FMAX.SCTN0913_RCMENU_DEF", FMAX.SCTN0101_AX_DEF, "define a right click menu <NAC><RCMENUNAME>",),
+	("FMAX.SCTN0913_RCMENU_VAL_ADD", FMAX.SCTN0101_AX_DEF, "define a right click menu <NAC><RCMENUNAME><VAL>",),
+	("FMAX.SCTN0914_FORMPOPUP_DEF", FMAX.SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
+	("FMAX.SCTN0915_PUDLG_DEF", FMAX.SCTN0101_AX_DEF, "define a popup dialog <NAC><POPUPNAME><POPUPTYPE>",),
+	("FMAX.SCTN0915_PUDLG_DICT_STR_ADD", FMAX.SCTN0101_AX_DEF, "add a str to a text element <NAC><POPUPNAME><KEY><VAL>",),
+	("FMAX.SCTN0915_PUDLG_DICT_VAL_ADD", FMAX.SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",),
+	("FMAX.SCTN0915_PUDLG_LIST_STR_ADD", FMAX.SCTN0101_AX_DEF, "add a str to a text element <NAC><POPUPNAME><KEY><VAL>",),
+	("FMAX.SCTN0915_PUDLG_LIST_VAL_ADD", FMAX.SCTN0101_AX_DEF, "add a val to a text element <NAC><POPUPNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN09FF_CLASS_BTN_DEF", FMAX.SCTN0101_AX_DEF, "define a button <NAC><CLASSNAME><BTNNAME>",),
 	("FMAXPSG_SCTN09FF_CLASS_BTN_STR_ADD", FMAX.SCTN0101_AX_DEF, "add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN09FF_CLASS_BTN_VAL_ADD", FMAX.SCTN0101_AX_DEF, "add a (VAL,VAL) to a tupdict <NAC><CLASSNAME><BTNNAME><KEY><VAL>",),
@@ -4973,7 +4973,7 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN0913_RCMENU_DEF:
+		elif _thisAX_ == FMAX.SCTN0913_RCMENU_DEF:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 4:
 				doErrorItem("not 4 items", _thisItem_)
@@ -4987,7 +4987,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN0913_RCMENU_VAL_ADD:
+		elif _thisAX_ == FMAX.SCTN0913_RCMENU_VAL_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
