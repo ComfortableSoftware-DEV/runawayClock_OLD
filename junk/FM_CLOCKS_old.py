@@ -340,24 +340,24 @@ FMAX.SCTN0909_TEXT_VAL_ADD = "FMAX.SCTN0909_TEXT_VAL_ADD"  # add a val to a text
 FMAX.SCTN090A_RADIO_DEF = "FMAX.SCTN090A_RADIO_DEF"  # define a radio button element
 FMAX.SCTN090B_COLUMN_BUTTON_ADD = "FMAX.SCTN090B_COLUMN_BUTTON_ADD"  # add a button to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
 FMAX.SCTN090B_COLUMN_CHECKBOX_ADD = "FMAX.SCTN090B_COLUMN_CHECKBOX_ADD"  # add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-FMAXPSG_SCTN090B_COLUMN_COLUMN_ADD = "FMAXPSG_SCTN090B_COLUMN_COLUMN_ADD"  # add a column to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_STR_ADD = "FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_STR_ADD"  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
-FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_VAL_ADD = "FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_VAL_ADD"  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
-FMAXPSG_SCTN090B_COLUMN_COMBO_ADD = "FMAXPSG_SCTN090B_COLUMN_COMBO_ADD"  # add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-FMAXPSG_SCTN090B_COLUMN_DEF = "FMAXPSG_SCTN090B_COLUMN_DEF"  # define a column <NAC><COLUMNNAME>
-FMAXPSG_SCTN090B_COLUMN_KEY_ADD = "FMAXPSG_SCTN090B_COLUMN_KEY_ADD"  # add a key to a column element 'key=' will be added automatically <NAC><COLUMNNAME><ROWKEY><ELEMENTKEY><VAL>
-FMAXPSG_SCTN090B_COLUMN_PACKEDPARM_ADD = "FMAXPSG_SCTN090B_COLUMN_PACKEDPARM_ADD"  # add packedparms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-FMAXPSG_SCTN090B_COLUMN_PARM_ADD = "FMAXPSG_SCTN090B_COLUMN_PARM_ADD"  # add parms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-FMAXPSG_SCTN090B_COLUMN_RADIO_ADD = "FMAXPSG_SCTN090B_COLUMN_RADIO_ADD"  # add a radio to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-FMAXPSG_SCTN090B_COLUMN_ROW_ADD = "FMAXPSG_SCTN090B_COLUMN_ROW_ADD"  # add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>
-FMAXPSG_SCTN090B_COLUMN_SPIN_ADD = "FMAXPSG_SCTN090B_COLUMN_SPIN_ADD"  # add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-FMAXPSG_SCTN090B_COLUMN_TEXT_ADD = "FMAXPSG_SCTN090B_COLUMN_TEXT_ADD"  # add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-FMAXPSG_SCTN090C_APPDS_DEF = "FMAXPSG_SCTN090C_APPDS_DEF"  # add a nested dict holding all of the variables passed between PySimpleGUI and this app
-FMAXPSG_SCTN090C_APPDS_DICT_DEF = "FMAXPSG_SCTN090C_APPDS_DICT_DEF"  # add a dict to the mainapp dict <NAC><DICTNAME
-FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD = "FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD"  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
-FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD = "FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD"  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
-FMAXPSG_SCTN090C_APPDS_VS_ADD = "FMAXPSG_SCTN090C_APPDS_VS_ADD"  # add a string to the mainapp dict <NAC><KEY><STR>
-FMAXPSG_SCTN090C_APPDS_VV_ADD = "FMAXPSG_SCTN090C_APPDS_VV_ADD"  # add a value to the mainapp dict <NAC><KEY><VAL>
+FMAX.SCTN090B_COLUMN_COLUMN_ADD = "FMAX.SCTN090B_COLUMN_COLUMN_ADD"  # add a column to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+FMAX.SCTN090B_COLUMN_COLUMN_PARM_STR_ADD = "FMAX.SCTN090B_COLUMN_COLUMN_PARM_STR_ADD"  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
+FMAX.SCTN090B_COLUMN_COLUMN_PARM_VAL_ADD = "FMAX.SCTN090B_COLUMN_COLUMN_PARM_VAL_ADD"  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
+FMAX.SCTN090B_COLUMN_COMBO_ADD = "FMAX.SCTN090B_COLUMN_COMBO_ADD"  # add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+FMAX.SCTN090B_COLUMN_DEF = "FMAX.SCTN090B_COLUMN_DEF"  # define a column <NAC><COLUMNNAME>
+FMAX.SCTN090B_COLUMN_KEY_ADD = "FMAX.SCTN090B_COLUMN_KEY_ADD"  # add a key to a column element 'key=' will be added automatically <NAC><COLUMNNAME><ROWKEY><ELEMENTKEY><VAL>
+FMAX.SCTN090B_COLUMN_PACKEDPARM_ADD = "FMAX.SCTN090B_COLUMN_PACKEDPARM_ADD"  # add packedparms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+FMAX.SCTN090B_COLUMN_PARM_ADD = "FMAX.SCTN090B_COLUMN_PARM_ADD"  # add parms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+FMAX.SCTN090B_COLUMN_RADIO_ADD = "FMAX.SCTN090B_COLUMN_RADIO_ADD"  # add a radio to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+FMAX.SCTN090B_COLUMN_ROW_ADD = "FMAX.SCTN090B_COLUMN_ROW_ADD"  # add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>
+FMAX.SCTN090B_COLUMN_SPIN_ADD = "FMAX.SCTN090B_COLUMN_SPIN_ADD"  # add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+FMAX.SCTN090B_COLUMN_TEXT_ADD = "FMAX.SCTN090B_COLUMN_TEXT_ADD"  # add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+FMAX.SCTN090C_APPDS_DEF = "FMAX.SCTN090C_APPDS_DEF"  # add a nested dict holding all of the variables passed between PySimpleGUI and this app
+FMAX.SCTN090C_APPDS_DICT_DEF = "FMAX.SCTN090C_APPDS_DICT_DEF"  # add a dict to the mainapp dict <NAC><DICTNAME
+FMAX.SCTN090C_APPDS_DICT_VS_ADD = "FMAX.SCTN090C_APPDS_DICT_VS_ADD"  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
+FMAX.SCTN090C_APPDS_DICT_VV_ADD = "FMAX.SCTN090C_APPDS_DICT_VV_ADD"  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
+FMAX.SCTN090C_APPDS_VS_ADD = "FMAX.SCTN090C_APPDS_VS_ADD"  # add a string to the mainapp dict <NAC><KEY><STR>
+FMAX.SCTN090C_APPDS_VV_ADD = "FMAX.SCTN090C_APPDS_VV_ADD"  # add a value to the mainapp dict <NAC><KEY><VAL>
 FMAXPSG_SCTN090D_FORMMAIN_DEF = "FMAXPSG_SCTN090D_FORMMAIN_DEF"  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD = "FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD"  # add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD = "FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD"  # add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
@@ -559,24 +559,24 @@ FMAXFM_AXLST = [
 	FMAX.SCTN090A_RADIO_DEF,  # define a radio button element
 	FMAX.SCTN090B_COLUMN_BUTTON_ADD,  # add a button to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
 	FMAX.SCTN090B_COLUMN_CHECKBOX_ADD,  # add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090B_COLUMN_COLUMN_ADD,  # add a column to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_STR_ADD,  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
-	FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_VAL_ADD,  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
-	FMAXPSG_SCTN090B_COLUMN_COMBO_ADD,  # add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090B_COLUMN_DEF,  # define a column <NAC><COLUMNNAME>
-	FMAXPSG_SCTN090B_COLUMN_KEY_ADD,  # add a key to a column element 'key=' will be added automatically <NAC><COLUMNNAME><ROWKEY><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN090B_COLUMN_PACKEDPARM_ADD,  # add packedparms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN090B_COLUMN_PARM_ADD,  # add parms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
-	FMAXPSG_SCTN090B_COLUMN_RADIO_ADD,  # add a radio to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090B_COLUMN_ROW_ADD,  # add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>
-	FMAXPSG_SCTN090B_COLUMN_SPIN_ADD,  # add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090B_COLUMN_TEXT_ADD,  # add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
-	FMAXPSG_SCTN090C_APPDS_DEF,  # add a nested dict holding all of the variables passed between PySimpleGUI and this app
-	FMAXPSG_SCTN090C_APPDS_DICT_DEF,  # add a dict to the mainapp dict <NAC><DICTNAME
-	FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD,  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
-	FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD,  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
-	FMAXPSG_SCTN090C_APPDS_VS_ADD,  # add a string to the mainapp dict <NAC><KEY><STR>
-	FMAXPSG_SCTN090C_APPDS_VV_ADD,  # add a value to the mainapp dict <NAC><KEY><VAL>
+	FMAX.SCTN090B_COLUMN_COLUMN_ADD,  # add a column to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+	FMAX.SCTN090B_COLUMN_COLUMN_PARM_STR_ADD,  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
+	FMAX.SCTN090B_COLUMN_COLUMN_PARM_VAL_ADD,  # add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>
+	FMAX.SCTN090B_COLUMN_COMBO_ADD,  # add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+	FMAX.SCTN090B_COLUMN_DEF,  # define a column <NAC><COLUMNNAME>
+	FMAX.SCTN090B_COLUMN_KEY_ADD,  # add a key to a column element 'key=' will be added automatically <NAC><COLUMNNAME><ROWKEY><ELEMENTKEY><VAL>
+	FMAX.SCTN090B_COLUMN_PACKEDPARM_ADD,  # add packedparms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+	FMAX.SCTN090B_COLUMN_PARM_ADD,  # add parms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>
+	FMAX.SCTN090B_COLUMN_RADIO_ADD,  # add a radio to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+	FMAX.SCTN090B_COLUMN_ROW_ADD,  # add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>
+	FMAX.SCTN090B_COLUMN_SPIN_ADD,  # add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+	FMAX.SCTN090B_COLUMN_TEXT_ADD,  # add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>
+	FMAX.SCTN090C_APPDS_DEF,  # add a nested dict holding all of the variables passed between PySimpleGUI and this app
+	FMAX.SCTN090C_APPDS_DICT_DEF,  # add a dict to the mainapp dict <NAC><DICTNAME
+	FMAX.SCTN090C_APPDS_DICT_VS_ADD,  # add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>
+	FMAX.SCTN090C_APPDS_DICT_VV_ADD,  # add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>
+	FMAX.SCTN090C_APPDS_VS_ADD,  # add a string to the mainapp dict <NAC><KEY><STR>
+	FMAX.SCTN090C_APPDS_VV_ADD,  # add a value to the mainapp dict <NAC><KEY><VAL>
 	FMAXPSG_SCTN090D_FORMMAIN_DEF,  # define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)
 	FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD,  # add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
 	FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD,  # add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>
@@ -957,24 +957,24 @@ TBGLST = [
 	("FMAX.SCTN090A_RADIO_DEF", FMAX.SCTN0101_AX_DEF, "define a radio button element",),
 	("FMAX.SCTN090B_COLUMN_BUTTON_ADD", FMAX.SCTN0101_AX_DEF, "add a button to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
 	("FMAX.SCTN090B_COLUMN_CHECKBOX_ADD", FMAX.SCTN0101_AX_DEF, "add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
-	("FMAXPSG_SCTN090B_COLUMN_COLUMN_ADD", FMAX.SCTN0101_AX_DEF, "add a column to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
-	("FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_STR_ADD", FMAX.SCTN0101_AX_DEF, "add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>",),
-	("FMAXPSG_SCTN090B_COLUMN_COLUMN_PARM_VAL_ADD", FMAX.SCTN0101_AX_DEF, "add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>",),
-	("FMAXPSG_SCTN090B_COLUMN_COMBO_ADD", FMAX.SCTN0101_AX_DEF, "add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
-	("FMAXPSG_SCTN090B_COLUMN_DEF", FMAX.SCTN0101_AX_DEF, "define a column <NAC><COLUMNNAME>",),
-	("FMAXPSG_SCTN090B_COLUMN_KEY_ADD", FMAX.SCTN0101_AX_DEF, "add a key to a column element 'key=' will be added automatically <NAC><COLUMNNAME><ROWKEY><ELEMENTKEY><VAL>",),
-	("FMAXPSG_SCTN090B_COLUMN_PACKEDPARM_ADD", FMAX.SCTN0101_AX_DEF, "add packedparms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>",),
-	("FMAXPSG_SCTN090B_COLUMN_PARM_ADD", FMAX.SCTN0101_AX_DEF, "add parms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>",),
-	("FMAXPSG_SCTN090B_COLUMN_RADIO_ADD", FMAX.SCTN0101_AX_DEF, "add a radio to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
-	("FMAXPSG_SCTN090B_COLUMN_ROW_ADD", FMAX.SCTN0101_AX_DEF, "add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>",),
-	("FMAXPSG_SCTN090B_COLUMN_SPIN_ADD", FMAX.SCTN0101_AX_DEF, "add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
-	("FMAXPSG_SCTN090B_COLUMN_TEXT_ADD", FMAX.SCTN0101_AX_DEF, "add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
-	("FMAXPSG_SCTN090C_APPDS_DEF", FMAX.SCTN0101_AX_DEF, "add a nested dict holding all of the variables passed between PySimpleGUI and this app",),
-	("FMAXPSG_SCTN090C_APPDS_DICT_DEF", FMAX.SCTN0101_AX_DEF, "add a dict to the mainapp dict <NAC><DICTNAME",),
-	("FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD", FMAX.SCTN0101_AX_DEF, "add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>",),
-	("FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD", FMAX.SCTN0101_AX_DEF, "add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>",),
-	("FMAXPSG_SCTN090C_APPDS_VS_ADD", FMAX.SCTN0101_AX_DEF, "add a string to the mainapp dict <NAC><KEY><STR>",),
-	("FMAXPSG_SCTN090C_APPDS_VV_ADD", FMAX.SCTN0101_AX_DEF, "add a value to the mainapp dict <NAC><KEY><VAL>",),
+	("FMAX.SCTN090B_COLUMN_COLUMN_ADD", FMAX.SCTN0101_AX_DEF, "add a column to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
+	("FMAX.SCTN090B_COLUMN_COLUMN_PARM_STR_ADD", FMAX.SCTN0101_AX_DEF, "add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>",),
+	("FMAX.SCTN090B_COLUMN_COLUMN_PARM_VAL_ADD", FMAX.SCTN0101_AX_DEF, "add a column parm to the column to a row <NAC><COLUMNNAME>[ROWKEY]<LEVEL><KEY><VAL>",),
+	("FMAX.SCTN090B_COLUMN_COMBO_ADD", FMAX.SCTN0101_AX_DEF, "add a combo to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
+	("FMAX.SCTN090B_COLUMN_DEF", FMAX.SCTN0101_AX_DEF, "define a column <NAC><COLUMNNAME>",),
+	("FMAX.SCTN090B_COLUMN_KEY_ADD", FMAX.SCTN0101_AX_DEF, "add a key to a column element 'key=' will be added automatically <NAC><COLUMNNAME><ROWKEY><ELEMENTKEY><VAL>",),
+	("FMAX.SCTN090B_COLUMN_PACKEDPARM_ADD", FMAX.SCTN0101_AX_DEF, "add packedparms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>",),
+	("FMAX.SCTN090B_COLUMN_PARM_ADD", FMAX.SCTN0101_AX_DEF, "add parms to a column entry <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY><VAL>",),
+	("FMAX.SCTN090B_COLUMN_RADIO_ADD", FMAX.SCTN0101_AX_DEF, "add a radio to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
+	("FMAX.SCTN090B_COLUMN_ROW_ADD", FMAX.SCTN0101_AX_DEF, "add a row [] to a column <NAC><COLUMNNAME><ROWKEY><LEVEL>",),
+	("FMAX.SCTN090B_COLUMN_SPIN_ADD", FMAX.SCTN0101_AX_DEF, "add a spinbox to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
+	("FMAX.SCTN090B_COLUMN_TEXT_ADD", FMAX.SCTN0101_AX_DEF, "add a text element to a row <NAC><COLUMNNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
+	("FMAX.SCTN090C_APPDS_DEF", FMAX.SCTN0101_AX_DEF, "add a nested dict holding all of the variables passed between PySimpleGUI and this app",),
+	("FMAX.SCTN090C_APPDS_DICT_DEF", FMAX.SCTN0101_AX_DEF, "add a dict to the mainapp dict <NAC><DICTNAME",),
+	("FMAX.SCTN090C_APPDS_DICT_VS_ADD", FMAX.SCTN0101_AX_DEF, "add a string to a dict mainapp dict <NAC><DICTNAME><KEY><STR>",),
+	("FMAX.SCTN090C_APPDS_DICT_VV_ADD", FMAX.SCTN0101_AX_DEF, "add a value to a dict mainapp dict <NAC><DICTNAME><KEY><VAL>",),
+	("FMAX.SCTN090C_APPDS_VS_ADD", FMAX.SCTN0101_AX_DEF, "add a string to the mainapp dict <NAC><KEY><STR>",),
+	("FMAX.SCTN090C_APPDS_VV_ADD", FMAX.SCTN0101_AX_DEF, "add a value to the mainapp dict <NAC><KEY><VAL>",),
 	("FMAXPSG_SCTN090D_FORMMAIN_DEF", FMAX.SCTN0101_AX_DEF, "define a frame <NAC><FRAMENAME><_WINDOW_><FINALIZEBOOL> (** added automatically bool adds or not chained finalize() call)",),
 	("FMAXPSG_SCTN090E_LAYOUT_BUTTON_ADD", FMAX.SCTN0101_AX_DEF, "add a button to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
 	("FMAXPSG_SCTN090E_LAYOUT_CHECKBOX_ADD", FMAX.SCTN0101_AX_DEF, "add a checkbox to a row <NAC><LAYOUTNAME><ROWKEY><LEVEL><ELEMENTKEY>",),
@@ -1501,56 +1501,56 @@ TBGLST = [
 	("PSGVAL__ALL_THE_FORMS", FMAX.SCTN0902_DICT_VV_ADD, "DICT_ALL_THE_FORMS", "FORM_POPUP04", "None", "ENTRY IN FORMS",),
 	("PSGVAL__ALL_THE_FORMS", FMAX.SCTN0902_DICT_VV_ADD, "DICT_ALL_THE_FORMS", "FORM_POPUP05", "None", "ENTRY IN FORMS",),
 	("PSGVAL__APPDS", FMAX.NOP, "APP Data Storage",),
-	("PSGVAL__APPDS_MAIN_00", FMAXPSG_SCTN090C_APPDS_DEF, "APPDS_MAIN", "the struct holding everything passed betwixt PySimpleGUI and this app",),
-	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VS_ADD, "APPDS_MAIN", "K_VERSION", "0000000B", "version number hex string",),
-	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_APPMODE", "APPMODE_NONE", "no appmode set",),
-	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_CHECKBOX_ALPHA_DIM", "True", "dim when mouse over bool",),
-	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_CHECKBOX_RUNAWAY", "False", "runaway from the mouse bool",),
-	("PSGVAL__APPDS_MAIN_01", FMAXPSG_SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_INDEX_OF_NEXT_EVENT", "0", "index of the next event to alert",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "holds events",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_ALARMPOPUP_TEXT_TEXT", "first event", "alarm text for this event",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_EVENT_NAME", "event 1", "this entry's name",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_AUTO_CLOSE_DURATION", "10", "time of this event",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_CURRENT_INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_DISMISSED", "False", "is this event dismissed",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_ENABLED", "True", "is this event enabled",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_FIRSTRUN", "True", "are we initializing or not",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_FORMNAME", "None", "time of this event",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_IS_ALERTING_NOW", "False", "count of number of times this has alerted since last reset",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_PREDISMISSABLE", "True", "is this event dismissable in advance",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_SNOOZABLE", "False", "can this event be snoozed",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_SNOOZED", "False", "is this event snoozed",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_AT_ALARM", "0", "time of this event if it an alarm",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_AT_LAST_RUN", "0", "time this alarm last ran, now if running",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_AT_NEXT_ALERT", "ZERO_CLOCK", "time next time this alarm goes off",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_INTERVAL", "30", "interval of this event",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_INTERVAL_START", "ZERO_CLOCK", "time of the day this round of interval started",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_INTERVAL__BEGIN", "ZERO_CLOCK", "time of the day this interval is made active",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_INTERVAL__END", "ZERO_CLOCK", "time of the day this interval is no longer active",),
-	("PSGVAL__APPDS_MAIN_02", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_LEN_OF_ALERT", "ZERO_CLOCK", "length of time to alert this event before auto closing it",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "holds events",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_ALARMPOPUP_TEXT_TEXT", "get up, move around", "alarm text for this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_EVENT_NAME", "2nd event", "this entry's name",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_AUTO_CLOSE_DURATION", "10", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_CURRENT_INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_DISMISSED", "False", "is this event dismissed",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_ENABLED", "True", "is this event enabled",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_FIRSTRUN", "True", "are we initializing or not",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_FORMNAME", "None", "time of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_IS_ALERTING_NOW", "False", "count of number of times this has alerted since last reset",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_PREDISMISSABLE", "True", "is this event dismissable in advance",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_SNOOZABLE", "False", "can this event be snoozed",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_SNOOZED", "False", "is this event snoozed",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_AT_ALARM", "0", "time of this event if it an alarm",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_AT_LAST_RUN", "0", "time this alarm last ran, now if running",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_AT_NEXT_ALERT", "ZERO_CLOCK", "time next time this alarm goes off",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_INTERVAL", "20", "interval of this event",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_INTERVAL_START", "ZERO_CLOCK", "time of the day this round of interval started",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_INTERVAL__BEGIN", "ZERO_CLOCK", "time of the day this interval is made active",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_INTERVAL__END", "ZERO_CLOCK", "time of the day this interval is no longer active",),
-	("PSGVAL__APPDS_MAIN_03", FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_LEN_OF_ALERT", "ZERO_CLOCK", "length of time to alert this event before auto closing it",),
+	("PSGVAL__APPDS_MAIN_00", FMAX.SCTN090C_APPDS_DEF, "APPDS_MAIN", "the struct holding everything passed betwixt PySimpleGUI and this app",),
+	("PSGVAL__APPDS_MAIN_01", FMAX.SCTN090C_APPDS_VS_ADD, "APPDS_MAIN", "K_VERSION", "0000000B", "version number hex string",),
+	("PSGVAL__APPDS_MAIN_01", FMAX.SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_APPMODE", "APPMODE_NONE", "no appmode set",),
+	("PSGVAL__APPDS_MAIN_01", FMAX.SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_CHECKBOX_ALPHA_DIM", "True", "dim when mouse over bool",),
+	("PSGVAL__APPDS_MAIN_01", FMAX.SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_CHECKBOX_RUNAWAY", "False", "runaway from the mouse bool",),
+	("PSGVAL__APPDS_MAIN_01", FMAX.SCTN090C_APPDS_VV_ADD, "APPDS_MAIN", "K_INDEX_OF_NEXT_EVENT", "0", "index of the next event to alert",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "holds events",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_ALARMPOPUP_TEXT_TEXT", "first event", "alarm text for this event",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_EVENT_NAME", "event 1", "this entry's name",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_AUTO_CLOSE_DURATION", "10", "time of this event",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_CURRENT_INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_DISMISSED", "False", "is this event dismissed",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_ENABLED", "True", "is this event enabled",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_FIRSTRUN", "True", "are we initializing or not",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_FORMNAME", "None", "time of this event",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_IS_ALERTING_NOW", "False", "count of number of times this has alerted since last reset",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_PREDISMISSABLE", "True", "is this event dismissable in advance",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_SNOOZABLE", "False", "can this event be snoozed",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_SNOOZED", "False", "is this event snoozed",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_AT_ALARM", "0", "time of this event if it an alarm",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_AT_LAST_RUN", "0", "time this alarm last ran, now if running",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_AT_NEXT_ALERT", "ZERO_CLOCK", "time next time this alarm goes off",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_INTERVAL", "30", "interval of this event",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_INTERVAL_START", "ZERO_CLOCK", "time of the day this round of interval started",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_INTERVAL__BEGIN", "ZERO_CLOCK", "time of the day this interval is made active",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_INTERVAL__END", "ZERO_CLOCK", "time of the day this interval is no longer active",),
+	("PSGVAL__APPDS_MAIN_02", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "0", "K_TIME_S_LEN_OF_ALERT", "ZERO_CLOCK", "length of time to alert this event before auto closing it",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_DEF, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "holds events",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_ALARMPOPUP_TEXT_TEXT", "get up, move around", "alarm text for this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VS_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_EVENT_NAME", "2nd event", "this entry's name",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_AUTO_CLOSE_DURATION", "10", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_CURRENT_INTERVAL_COUNT", "0", "count of number of times this has alerted since last reset",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_DISMISSED", "False", "is this event dismissed",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_ENABLED", "True", "is this event enabled",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_EVENTMODE", "EVENTMODE_INTERVAL", "this entry's event_mode",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_FIRSTRUN", "True", "are we initializing or not",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_FORMNAME", "None", "time of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_IS_ALERTING_NOW", "False", "count of number of times this has alerted since last reset",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_PREDISMISSABLE", "True", "is this event dismissable in advance",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_SNOOZABLE", "False", "can this event be snoozed",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_SNOOZED", "False", "is this event snoozed",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_AT_ALARM", "0", "time of this event if it an alarm",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_AT_LAST_RUN", "0", "time this alarm last ran, now if running",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_AT_NEXT_ALERT", "ZERO_CLOCK", "time next time this alarm goes off",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_INTERVAL", "20", "interval of this event",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_INTERVAL_START", "ZERO_CLOCK", "time of the day this round of interval started",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_INTERVAL__BEGIN", "ZERO_CLOCK", "time of the day this interval is made active",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_INTERVAL__END", "ZERO_CLOCK", "time of the day this interval is no longer active",),
+	("PSGVAL__APPDS_MAIN_03", FMAX.SCTN090C_APPDS_DICT_VV_ADD, "APPDS_MAIN", "K_EVENT_ENTRIES", "1", "K_TIME_S_LEN_OF_ALERT", "ZERO_CLOCK", "length of time to alert this event before auto closing it",),
 	("PSGVAL__BTN_DISMISS20", FMAX.NOP, "start of the dismiss button for alarms",),
 	("PSGVAL__BTN_DISMISS2000", FMAX.SCTN0906_BTN_DEF, "BTN_DISMISS20", "",),
 	("PSGVAL__BTN_DISMISS2001", FMAX.SCTN0906_BTN_STR_ADD, "BTN_DISMISS20", "BUTTON_TEXT", "", "button_text empty for the DOWN button",),
@@ -4245,7 +4245,7 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090B_COLUMN_DEF:
+		elif _thisAX_ == FMAX.SCTN090B_COLUMN_DEF:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 4:
 				doErrorItem("not 4 items", _thisItem_)
@@ -4303,7 +4303,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090B_COLUMN_COLUMN_ADD:
+		elif _thisAX_ == FMAX.SCTN090B_COLUMN_COLUMN_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -4325,7 +4325,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090B_COLUMN_COMBO_ADD:
+		elif _thisAX_ == FMAX.SCTN090B_COLUMN_COMBO_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -4347,7 +4347,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090B_COLUMN_PACKEDPARM_ADD:
+		elif _thisAX_ == FMAX.SCTN090B_COLUMN_PACKEDPARM_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 8:
 				doErrorItem("not 8 items", _thisItem_)
@@ -4370,7 +4370,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090B_COLUMN_PARM_ADD:
+		elif _thisAX_ == FMAX.SCTN090B_COLUMN_PARM_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 8:
 				doErrorItem("not 8 items", _thisItem_)
@@ -4393,7 +4393,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090B_COLUMN_RADIO_ADD:
+		elif _thisAX_ == FMAX.SCTN090B_COLUMN_RADIO_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -4415,7 +4415,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090B_COLUMN_ROW_ADD:
+		elif _thisAX_ == FMAX.SCTN090B_COLUMN_ROW_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -4434,7 +4434,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090B_COLUMN_SPIN_ADD:
+		elif _thisAX_ == FMAX.SCTN090B_COLUMN_SPIN_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -4456,7 +4456,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090B_COLUMN_TEXT_ADD:
+		elif _thisAX_ == FMAX.SCTN090B_COLUMN_TEXT_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -4482,7 +4482,7 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090C_APPDS_DEF:
+		elif _thisAX_ == FMAX.SCTN090C_APPDS_DEF:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 4:
 				doErrorItem("not 4 items", _thisItem_)
@@ -4500,7 +4500,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090C_APPDS_DICT_DEF:
+		elif _thisAX_ == FMAX.SCTN090C_APPDS_DICT_DEF:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -4528,7 +4528,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090C_APPDS_DICT_VS_ADD:
+		elif _thisAX_ == FMAX.SCTN090C_APPDS_DICT_VS_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 8:
 				doErrorItem("not 8 items", _thisItem_)
@@ -4556,7 +4556,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090C_APPDS_DICT_VV_ADD:
+		elif _thisAX_ == FMAX.SCTN090C_APPDS_DICT_VV_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 8:
 				doErrorItem("not 8 items", _thisItem_)
@@ -4584,7 +4584,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090C_APPDS_VS_ADD:
+		elif _thisAX_ == FMAX.SCTN090C_APPDS_VS_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -4606,7 +4606,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN090C_APPDS_VV_ADD:
+		elif _thisAX_ == FMAX.SCTN090C_APPDS_VV_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
