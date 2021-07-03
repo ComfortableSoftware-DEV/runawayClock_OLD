@@ -422,17 +422,17 @@ FMAX.SCTN09FF_DPD_DEF = "FMAX.SCTN09FF_DPD_DEF"  # define a DPD debugPrintDict i
 FMAX.SCTN09FF_DPD_VV_ADD = "FMAX.SCTN09FF_DPD_VV_ADD"  # add a val to a DPD debugPrintDict in PSG <NAC><CLASSNAME><DPDNAME><KEY><VAL>
 FMAX.SCTN09FF_FORMMAIN_DEF = "FMAX.SCTN09FF_FORMMAIN_DEF"  # define a class mainframe
 FMAX.SCTN09FF_FORMPOPUP_DEF = "FMAX.SCTN09FF_FORMPOPUP_DEF"  # define a class mainframe
-FMAXPSG_SCTN09FF_FRAMEELEMENT_DEF = "FMAXPSG_SCTN09FF_FRAMEELEMENT_DEF"  # define a frame element
-FMAXPSG_SCTN09FF_FUNCTION_BLANKLINE = "FMAXPSG_SCTN09FF_FUNCTION_BLANKLINE"  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
-FMAXPSG_SCTN09FF_FUNCTION_DEF = "FMAXPSG_SCTN09FF_FUNCTION_DEF"  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
-FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE = "FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE"  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
-FMAXPSG_SCTN09FF_FUNCTION_LAMBDA1_DEF = "FMAXPSG_SCTN09FF_FUNCTION_LAMBDA1_DEF"  # add a lambda to the top of a function, usually for absorbing things
-FMAXPSG_SCTN09FF_FUNCTION_LAMBDA2_DEF = "FMAXPSG_SCTN09FF_FUNCTION_LAMBDA2_DEF"  # add a lambda to the top of a function, usually for absorbing things
-FMAXPSG_SCTN09FF_FUNCTION_LINE_ADD = "FMAXPSG_SCTN09FF_FUNCTION_LINE_ADD"  # define a class <NAC><CLASSNAME><FUNCNAME><LINE>
-FMAXPSG_SCTN09FF_FUNCTION_READ_FROM_FILE = "FMAXPSG_SCTN09FF_FUNCTION_READ_FROM_FILE"  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
-FMAXPSG_SCTN09FF_FUNCTION_STR1_DEF = "FMAXPSG_SCTN09FF_FUNCTION_STR1_DEF"  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-FMAXPSG_SCTN09FF_FUNCTION_STR2_DEF = "FMAXPSG_SCTN09FF_FUNCTION_STR2_DEF"  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-FMAXPSG_SCTN09FF_FUNCTION_VAL1_DEF = "FMAXPSG_SCTN09FF_FUNCTION_VAL1_DEF"  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+FMAX.SCTN09FF_FRAMEELEMENT_DEF = "FMAX.SCTN09FF_FRAMEELEMENT_DEF"  # define a frame element
+FMAX.SCTN09FF_FUNCTION_BLANKLINE = "FMAX.SCTN09FF_FUNCTION_BLANKLINE"  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
+FMAX.SCTN09FF_FUNCTION_DEF = "FMAX.SCTN09FF_FUNCTION_DEF"  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
+FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE = "FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE"  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
+FMAX.SCTN09FF_FUNCTION_LAMBDA1_DEF = "FMAX.SCTN09FF_FUNCTION_LAMBDA1_DEF"  # add a lambda to the top of a function, usually for absorbing things
+FMAX.SCTN09FF_FUNCTION_LAMBDA2_DEF = "FMAX.SCTN09FF_FUNCTION_LAMBDA2_DEF"  # add a lambda to the top of a function, usually for absorbing things
+FMAX.SCTN09FF_FUNCTION_LINE_ADD = "FMAX.SCTN09FF_FUNCTION_LINE_ADD"  # define a class <NAC><CLASSNAME><FUNCNAME><LINE>
+FMAX.SCTN09FF_FUNCTION_READ_FROM_FILE = "FMAX.SCTN09FF_FUNCTION_READ_FROM_FILE"  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
+FMAX.SCTN09FF_FUNCTION_STR1_DEF = "FMAX.SCTN09FF_FUNCTION_STR1_DEF"  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+FMAX.SCTN09FF_FUNCTION_STR2_DEF = "FMAX.SCTN09FF_FUNCTION_STR2_DEF"  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+FMAX.SCTN09FF_FUNCTION_VAL1_DEF = "FMAX.SCTN09FF_FUNCTION_VAL1_DEF"  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
 FMAXPSG_SCTN09FF_FUNCTION_VAL2_DEF = "FMAXPSG_SCTN09FF_FUNCTION_VAL2_DEF"  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
 FMAXPSG_SCTN09FF_INIT_ADD1_LAMBDA = "FMAXPSG_SCTN09FF_INIT_ADD1_LAMBDA"  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
 FMAXPSG_SCTN09FF_INIT_ADD1_LINE = "FMAXPSG_SCTN09FF_INIT_ADD1_LINE"  # define a class <NAC><CLASSNAME><LINE>
@@ -641,17 +641,17 @@ FMAXFM_AXLST = [
 	FMAX.SCTN09FF_DPD_VV_ADD,  # add a val to a DPD debugPrintDict in PSG <NAC><CLASSNAME><DPDNAME><KEY><VAL>
 	FMAX.SCTN09FF_FORMMAIN_DEF,  # define a class mainframe
 	FMAX.SCTN09FF_FORMPOPUP_DEF,  # define a class mainframe
-	FMAXPSG_SCTN09FF_FRAMEELEMENT_DEF,  # define a frame element
-	FMAXPSG_SCTN09FF_FUNCTION_BLANKLINE,  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
-	FMAXPSG_SCTN09FF_FUNCTION_DEF,  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
-	FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE,  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
-	FMAXPSG_SCTN09FF_FUNCTION_LAMBDA1_DEF,  # add a lambda to the top of a function, usually for absorbing things
-	FMAXPSG_SCTN09FF_FUNCTION_LAMBDA2_DEF,  # add a lambda to the top of a function, usually for absorbing things
-	FMAXPSG_SCTN09FF_FUNCTION_LINE_ADD,  # define a class <NAC><CLASSNAME><FUNCNAME><LINE>
-	FMAXPSG_SCTN09FF_FUNCTION_READ_FROM_FILE,  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
-	FMAXPSG_SCTN09FF_FUNCTION_STR1_DEF,  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_FUNCTION_STR2_DEF,  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_FUNCTION_VAL1_DEF,  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+	FMAX.SCTN09FF_FRAMEELEMENT_DEF,  # define a frame element
+	FMAX.SCTN09FF_FUNCTION_BLANKLINE,  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
+	FMAX.SCTN09FF_FUNCTION_DEF,  # define a class <NAC><CLASSNAME><FUNCNAME><PARMS>
+	FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE,  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
+	FMAX.SCTN09FF_FUNCTION_LAMBDA1_DEF,  # add a lambda to the top of a function, usually for absorbing things
+	FMAX.SCTN09FF_FUNCTION_LAMBDA2_DEF,  # add a lambda to the top of a function, usually for absorbing things
+	FMAX.SCTN09FF_FUNCTION_LINE_ADD,  # define a class <NAC><CLASSNAME><FUNCNAME><LINE>
+	FMAX.SCTN09FF_FUNCTION_READ_FROM_FILE,  # define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>
+	FMAX.SCTN09FF_FUNCTION_STR1_DEF,  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+	FMAX.SCTN09FF_FUNCTION_STR2_DEF,  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+	FMAX.SCTN09FF_FUNCTION_VAL1_DEF,  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
 	FMAXPSG_SCTN09FF_FUNCTION_VAL2_DEF,  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
 	FMAXPSG_SCTN09FF_INIT_ADD1_LAMBDA,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
 	FMAXPSG_SCTN09FF_INIT_ADD1_LINE,  # define a class <NAC><CLASSNAME><LINE>
@@ -1039,17 +1039,17 @@ TBGLST = [
 	("FMAX.SCTN09FF_DPD_VV_ADD", FMAX.SCTN0101_AX_DEF, "add a val to a DPD debugPrintDict in PSG <NAC><CLASSNAME><DPDNAME><KEY><VAL>",),
 	("FMAX.SCTN09FF_FORMMAIN_DEF", FMAX.SCTN0101_AX_DEF, "define a class mainframe",),
 	("FMAX.SCTN09FF_FORMPOPUP_DEF", FMAX.SCTN0101_AX_DEF, "define a class mainframe",),
-	("FMAXPSG_SCTN09FF_FRAMEELEMENT_DEF", FMAX.SCTN0101_AX_DEF, "define a frame element",),
-	("FMAXPSG_SCTN09FF_FUNCTION_BLANKLINE", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><PARMS>",),
-	("FMAXPSG_SCTN09FF_FUNCTION_DEF", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><PARMS>",),
-	("FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>",),
-	("FMAXPSG_SCTN09FF_FUNCTION_LAMBDA1_DEF", FMAX.SCTN0101_AX_DEF, "add a lambda to the top of a function, usually for absorbing things",),
-	("FMAXPSG_SCTN09FF_FUNCTION_LAMBDA2_DEF", FMAX.SCTN0101_AX_DEF, "add a lambda to the top of a function, usually for absorbing things",),
-	("FMAXPSG_SCTN09FF_FUNCTION_LINE_ADD", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><LINE>",),
-	("FMAXPSG_SCTN09FF_FUNCTION_READ_FROM_FILE", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>",),
-	("FMAXPSG_SCTN09FF_FUNCTION_STR1_DEF", FMAX.SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
-	("FMAXPSG_SCTN09FF_FUNCTION_STR2_DEF", FMAX.SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
-	("FMAXPSG_SCTN09FF_FUNCTION_VAL1_DEF", FMAX.SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
+	("FMAX.SCTN09FF_FRAMEELEMENT_DEF", FMAX.SCTN0101_AX_DEF, "define a frame element",),
+	("FMAX.SCTN09FF_FUNCTION_BLANKLINE", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><PARMS>",),
+	("FMAX.SCTN09FF_FUNCTION_DEF", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><PARMS>",),
+	("FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>",),
+	("FMAX.SCTN09FF_FUNCTION_LAMBDA1_DEF", FMAX.SCTN0101_AX_DEF, "add a lambda to the top of a function, usually for absorbing things",),
+	("FMAX.SCTN09FF_FUNCTION_LAMBDA2_DEF", FMAX.SCTN0101_AX_DEF, "add a lambda to the top of a function, usually for absorbing things",),
+	("FMAX.SCTN09FF_FUNCTION_LINE_ADD", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><LINE>",),
+	("FMAX.SCTN09FF_FUNCTION_READ_FROM_FILE", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><FUNCNAME><FILENAME>",),
+	("FMAX.SCTN09FF_FUNCTION_STR1_DEF", FMAX.SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
+	("FMAX.SCTN09FF_FUNCTION_STR2_DEF", FMAX.SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
+	("FMAX.SCTN09FF_FUNCTION_VAL1_DEF", FMAX.SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
 	("FMAXPSG_SCTN09FF_FUNCTION_VAL2_DEF", FMAX.SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
 	("FMAXPSG_SCTN09FF_INIT_ADD1_LAMBDA", FMAX.SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><VALNAME><VAL>",),
 	("FMAXPSG_SCTN09FF_INIT_ADD1_LINE", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><LINE>",),
@@ -1849,23 +1849,23 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0103", FMAXPSG_SCTN09FF_INIT_ADD3_LINE, "CLOCKS", "%TAB2%printDictinS_=True,", "print _DICT_KEYS_",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0104", FMAXPSG_SCTN09FF_INIT_ADD3_LINE, "CLOCKS", "%TAB2%message_=%FTQ%self._DICT_KEYS {self._DICT_KEYS_}", "print _DICT_KEYS_",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT03_LINE0105", FMAXPSG_SCTN09FF_INIT_ADD3_LINE, "CLOCKS", "self._DICT_KEYS_REVERSE_ {self._DICT_KEYS_REVERSE_}%TQ%)", "print _DICT_KEYS_REVERSE_",),
-	("PSGVAL__CLOCKS_FUNC_01_ENTER", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__enter__", "__enter__.py", "False", "define __enter__",),
-	("PSGVAL__CLOCKS_FUNC_02_EXIT", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__exit__", "__exit__.py", "False", "define __exit__ in CLOCKS",),
-	("PSGVAL__CLOCKS_FUNC_03_CHECK_MOUSE", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "False", "define checkMouse",),
-	("PSGVAL__CLOCKS_FUNC_03_DEBUG_PRINT", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "debugPrint", "debugPrint.py", "False", "read the frame and set self._RESULT_",),
-	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATE", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "CLOCKS/easyUpdate.py", "False", "load the whole thing from the file for easyUpdate",),
-	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATEPARMS", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdateParms", "easyUpdateParms.py", "False", "load the whole thing from the file for easyUpdate",),
-	("PSGVAL__CLOCKS_FUNC_03_ENINT", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enint", "enint.py", "False", "read the frame and set self._RESULT_",),
-	("PSGVAL__CLOCKS_FUNC_03_ENSTRING", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enstring", "enstring.py", "False", "read the frame and set self._RESULT_",),
-	("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTOFF", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOff", "intervalCountOff.py", "False", "turn interval count off",),
-	("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTON", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOn", "intervalCountOn.py", "False", "turn interval count on",),
-	("PSGVAL__CLOCKS_FUNC_03_QUICK_READ", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "quickRead", "quickRead.py", "False", "read the frame and set self._RESULT_",),
-	("PSGVAL__CLOCKS_FUNC_03_RUNAWAY", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "False", "define runaway",),
-	("PSGVAL__CLOCKS_FUNC_03_SETCHECKBOX", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "setCheckbox", "setCheckbox.py", "False", "define runaway",),
-	("PSGVAL__CLOCKS_FUNC_03_UPDATE_FLIPPED_ITEMS", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFlippedItems", "updateFlippedItems.py", "True", "read the frame and set self._RESULT_",),
-	("PSGVAL__CLOCKS_FUNC_03_UPDATE_FROM_DICT", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFromDict", "updateFromDict.py", "False", "update the displayed info from a dict or the default _DICTIN_",),
-	("PSGVAL__CLOCKS_FUNC_03_ZERO_FLIPPED", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "zeroFlipped", "zeroFlipped.py", "False", "update the displayed info from a dict or the default _DICTIN_",),
-	("PSGVAL__CLOCKS_FUNC_FF_UPDATE", FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "update", "CLOCKS/update.py", "True", "define the required update function",),
+	("PSGVAL__CLOCKS_FUNC_01_ENTER", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__enter__", "__enter__.py", "False", "define __enter__",),
+	("PSGVAL__CLOCKS_FUNC_02_EXIT", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "__exit__", "__exit__.py", "False", "define __exit__ in CLOCKS",),
+	("PSGVAL__CLOCKS_FUNC_03_CHECK_MOUSE", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "checkMouse", "checkMouse.py", "False", "define checkMouse",),
+	("PSGVAL__CLOCKS_FUNC_03_DEBUG_PRINT", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "debugPrint", "debugPrint.py", "False", "read the frame and set self._RESULT_",),
+	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATE", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdate", "CLOCKS/easyUpdate.py", "False", "load the whole thing from the file for easyUpdate",),
+	("PSGVAL__CLOCKS_FUNC_03_EASY_UPDATEPARMS", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "easyUpdateParms", "easyUpdateParms.py", "False", "load the whole thing from the file for easyUpdate",),
+	("PSGVAL__CLOCKS_FUNC_03_ENINT", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enint", "enint.py", "False", "read the frame and set self._RESULT_",),
+	("PSGVAL__CLOCKS_FUNC_03_ENSTRING", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "enstring", "enstring.py", "False", "read the frame and set self._RESULT_",),
+	("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTOFF", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOff", "intervalCountOff.py", "False", "turn interval count off",),
+	("PSGVAL__CLOCKS_FUNC_03_INTERVALCOUNTON", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "intervalCountOn", "intervalCountOn.py", "False", "turn interval count on",),
+	("PSGVAL__CLOCKS_FUNC_03_QUICK_READ", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "quickRead", "quickRead.py", "False", "read the frame and set self._RESULT_",),
+	("PSGVAL__CLOCKS_FUNC_03_RUNAWAY", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "runaway", "runaway.py", "False", "define runaway",),
+	("PSGVAL__CLOCKS_FUNC_03_SETCHECKBOX", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "setCheckbox", "setCheckbox.py", "False", "define runaway",),
+	("PSGVAL__CLOCKS_FUNC_03_UPDATE_FLIPPED_ITEMS", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFlippedItems", "updateFlippedItems.py", "True", "read the frame and set self._RESULT_",),
+	("PSGVAL__CLOCKS_FUNC_03_UPDATE_FROM_DICT", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "updateFromDict", "updateFromDict.py", "False", "update the displayed info from a dict or the default _DICTIN_",),
+	("PSGVAL__CLOCKS_FUNC_03_ZERO_FLIPPED", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "zeroFlipped", "zeroFlipped.py", "False", "update the displayed info from a dict or the default _DICTIN_",),
+	("PSGVAL__CLOCKS_FUNC_FF_UPDATE", FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE, "CLOCKS", "update", "CLOCKS/update.py", "True", "define the required update function",),
 	("PSGVAL__CLOCKS_LAYOUT", FMAX.NOP, "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT00", FMAXPSG_SCTN09FF_LAYOUT_DEF, "CLOCKS", "_LAYOUT_", "layout for APPMODE_CLOCKS",),
 	("PSGVAL__CLOCKS_LAYOUT01", FMAXPSG_SCTN09FF_LAYOUT_ROW_ADD, "CLOCKS", "_LAYOUT_", "LAYOUT_ROW_00", "L03", "add a row to the layout",),
@@ -5658,7 +5658,7 @@ def parseTBGLST(FDTBGLST):
 	# fold here ⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_FUNCTION_DEF:
+		elif _thisAX_ == FMAX.SCTN09FF_FUNCTION_DEF:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -5701,7 +5701,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_FUNCTION_DEF_FROM_FILE:
+		elif _thisAX_ == FMAX.SCTN09FF_FUNCTION_DEF_FROM_FILE:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -5732,7 +5732,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_FUNCTION_BLANKLINE:
+		elif _thisAX_ == FMAX.SCTN09FF_FUNCTION_BLANKLINE:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
@@ -5748,7 +5748,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_FUNCTION_LINE_ADD:
+		elif _thisAX_ == FMAX.SCTN09FF_FUNCTION_LINE_ADD:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -5765,7 +5765,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_FUNCTION_READ_FROM_FILE:
+		elif _thisAX_ == FMAX.SCTN09FF_FUNCTION_READ_FROM_FILE:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -5782,7 +5782,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_FUNCTION_STR1_DEF:
+		elif _thisAX_ == FMAX.SCTN09FF_FUNCTION_STR1_DEF:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -5800,7 +5800,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_FUNCTION_STR2_DEF:
+		elif _thisAX_ == FMAX.SCTN09FF_FUNCTION_STR2_DEF:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -5818,7 +5818,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif (_thisAX_ == FMAXPSG_SCTN09FF_FUNCTION_VAL1_DEF):
+		elif (_thisAX_ == FMAX.SCTN09FF_FUNCTION_VAL1_DEF):
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
