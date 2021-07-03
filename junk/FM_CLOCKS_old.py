@@ -433,15 +433,15 @@ FMAX.SCTN09FF_FUNCTION_READ_FROM_FILE = "FMAX.SCTN09FF_FUNCTION_READ_FROM_FILE" 
 FMAX.SCTN09FF_FUNCTION_STR1_DEF = "FMAX.SCTN09FF_FUNCTION_STR1_DEF"  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
 FMAX.SCTN09FF_FUNCTION_STR2_DEF = "FMAX.SCTN09FF_FUNCTION_STR2_DEF"  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
 FMAX.SCTN09FF_FUNCTION_VAL1_DEF = "FMAX.SCTN09FF_FUNCTION_VAL1_DEF"  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-FMAXPSG_SCTN09FF_FUNCTION_VAL2_DEF = "FMAXPSG_SCTN09FF_FUNCTION_VAL2_DEF"  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-FMAXPSG_SCTN09FF_INIT_ADD1_LAMBDA = "FMAXPSG_SCTN09FF_INIT_ADD1_LAMBDA"  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
-FMAXPSG_SCTN09FF_INIT_ADD1_LINE = "FMAXPSG_SCTN09FF_INIT_ADD1_LINE"  # define a class <NAC><CLASSNAME><LINE>
-FMAXPSG_SCTN09FF_INIT_ADD1_READ_FROM_FILE = "FMAXPSG_SCTN09FF_INIT_ADD1_READ_FROM_FILE"  # read a section of __init__ from a file in res/functions <NAC><CLASSNAME><FILENAME>
-FMAXPSG_SCTN09FF_INIT_ADD1_STR = "FMAXPSG_SCTN09FF_INIT_ADD1_STR"  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
-FMAXPSG_SCTN09FF_INIT_ADD1_VAL = "FMAXPSG_SCTN09FF_INIT_ADD1_VAL"  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
-FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_SS = "FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_SS"  # add a str-str to a dict <NAC><CLASSNAME><STR><STR>
-FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_SV = "FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_SV"  # add a str-val to a dict <NAC><CLASSNAME><STR><VAL>
-FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_VS = "FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_VS"  # add a str to a dict <NAC><CLASSNAME><KEY><VAL>
+FMAX.SCTN09FF_FUNCTION_VAL2_DEF = "FMAX.SCTN09FF_FUNCTION_VAL2_DEF"  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+FMAX.SCTN09FF_INIT_ADD1_LAMBDA = "FMAX.SCTN09FF_INIT_ADD1_LAMBDA"  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
+FMAX.SCTN09FF_INIT_ADD1_LINE = "FMAX.SCTN09FF_INIT_ADD1_LINE"  # define a class <NAC><CLASSNAME><LINE>
+FMAX.SCTN09FF_INIT_ADD1_READ_FROM_FILE = "FMAX.SCTN09FF_INIT_ADD1_READ_FROM_FILE"  # read a section of __init__ from a file in res/functions <NAC><CLASSNAME><FILENAME>
+FMAX.SCTN09FF_INIT_ADD1_STR = "FMAX.SCTN09FF_INIT_ADD1_STR"  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
+FMAX.SCTN09FF_INIT_ADD1_VAL = "FMAX.SCTN09FF_INIT_ADD1_VAL"  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
+FMAX.SCTN09FF_INIT_ADD2_DICTIN_SS = "FMAX.SCTN09FF_INIT_ADD2_DICTIN_SS"  # add a str-str to a dict <NAC><CLASSNAME><STR><STR>
+FMAX.SCTN09FF_INIT_ADD2_DICTIN_SV = "FMAX.SCTN09FF_INIT_ADD2_DICTIN_SV"  # add a str-val to a dict <NAC><CLASSNAME><STR><VAL>
+FMAX.SCTN09FF_INIT_ADD2_DICTIN_VS = "FMAX.SCTN09FF_INIT_ADD2_DICTIN_VS"  # add a str to a dict <NAC><CLASSNAME><KEY><VAL>
 FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_VV = "FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_VV"  # add a val to a dict in PSG <NAC><CLASSNAME><KEY><VAL>
 FMAXPSG_SCTN09FF_INIT_ADD2_FOREIGN_KEY = "FMAXPSG_SCTN09FF_INIT_ADD2_FOREIGN_KEY"  # add values to _DICT_KEYS, _DICT_KEYS_REVERSE_ for external elements like buttons and checkboxes <NAC><CLASSNAME><KEY>
 FMAXPSG_SCTN09FF_INIT_ADD2_LAMBDA = "FMAXPSG_SCTN09FF_INIT_ADD2_LAMBDA"  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
@@ -652,15 +652,15 @@ FMAXFM_AXLST = [
 	FMAX.SCTN09FF_FUNCTION_STR1_DEF,  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
 	FMAX.SCTN09FF_FUNCTION_STR2_DEF,  # define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
 	FMAX.SCTN09FF_FUNCTION_VAL1_DEF,  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_FUNCTION_VAL2_DEF,  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_INIT_ADD1_LAMBDA,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_INIT_ADD1_LINE,  # define a class <NAC><CLASSNAME><LINE>
-	FMAXPSG_SCTN09FF_INIT_ADD1_READ_FROM_FILE,  # read a section of __init__ from a file in res/functions <NAC><CLASSNAME><FILENAME>
-	FMAXPSG_SCTN09FF_INIT_ADD1_STR,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_INIT_ADD1_VAL,  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
-	FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_SS,  # add a str-str to a dict <NAC><CLASSNAME><STR><STR>
-	FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_SV,  # add a str-val to a dict <NAC><CLASSNAME><STR><VAL>
-	FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_VS,  # add a str to a dict <NAC><CLASSNAME><KEY><VAL>
+	FMAX.SCTN09FF_FUNCTION_VAL2_DEF,  # define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>
+	FMAX.SCTN09FF_INIT_ADD1_LAMBDA,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
+	FMAX.SCTN09FF_INIT_ADD1_LINE,  # define a class <NAC><CLASSNAME><LINE>
+	FMAX.SCTN09FF_INIT_ADD1_READ_FROM_FILE,  # read a section of __init__ from a file in res/functions <NAC><CLASSNAME><FILENAME>
+	FMAX.SCTN09FF_INIT_ADD1_STR,  # define a string in the class <NAC><CLASSNAME><VALNAME><VAL>
+	FMAX.SCTN09FF_INIT_ADD1_VAL,  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
+	FMAX.SCTN09FF_INIT_ADD2_DICTIN_SS,  # add a str-str to a dict <NAC><CLASSNAME><STR><STR>
+	FMAX.SCTN09FF_INIT_ADD2_DICTIN_SV,  # add a str-val to a dict <NAC><CLASSNAME><STR><VAL>
+	FMAX.SCTN09FF_INIT_ADD2_DICTIN_VS,  # add a str to a dict <NAC><CLASSNAME><KEY><VAL>
 	FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_VV,  # add a val to a dict in PSG <NAC><CLASSNAME><KEY><VAL>
 	FMAXPSG_SCTN09FF_INIT_ADD2_FOREIGN_KEY,  # add values to _DICT_KEYS, _DICT_KEYS_REVERSE_ for external elements like buttons and checkboxes <NAC><CLASSNAME><KEY>
 	FMAXPSG_SCTN09FF_INIT_ADD2_LAMBDA,  # define a value in the class <NAC><CLASSNAME><VALNAME><VAL>
@@ -1050,15 +1050,15 @@ TBGLST = [
 	("FMAX.SCTN09FF_FUNCTION_STR1_DEF", FMAX.SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
 	("FMAX.SCTN09FF_FUNCTION_STR2_DEF", FMAX.SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
 	("FMAX.SCTN09FF_FUNCTION_VAL1_DEF", FMAX.SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
-	("FMAXPSG_SCTN09FF_FUNCTION_VAL2_DEF", FMAX.SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
-	("FMAXPSG_SCTN09FF_INIT_ADD1_LAMBDA", FMAX.SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><VALNAME><VAL>",),
-	("FMAXPSG_SCTN09FF_INIT_ADD1_LINE", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><LINE>",),
-	("FMAXPSG_SCTN09FF_INIT_ADD1_READ_FROM_FILE", FMAX.SCTN0101_AX_DEF, "read a section of __init__ from a file in res/functions <NAC><CLASSNAME><FILENAME>",),
-	("FMAXPSG_SCTN09FF_INIT_ADD1_STR", FMAX.SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><VALNAME><VAL>",),
-	("FMAXPSG_SCTN09FF_INIT_ADD1_VAL", FMAX.SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><VALNAME><VAL>",),
-	("FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_SS", FMAX.SCTN0101_AX_DEF, "add a str-str to a dict <NAC><CLASSNAME><STR><STR>",),
-	("FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_SV", FMAX.SCTN0101_AX_DEF, "add a str-val to a dict <NAC><CLASSNAME><STR><VAL>",),
-	("FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_VS", FMAX.SCTN0101_AX_DEF, "add a str to a dict <NAC><CLASSNAME><KEY><VAL>",),
+	("FMAX.SCTN09FF_FUNCTION_VAL2_DEF", FMAX.SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><FUNCNAME><VALNAME><VAL>",),
+	("FMAX.SCTN09FF_INIT_ADD1_LAMBDA", FMAX.SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><VALNAME><VAL>",),
+	("FMAX.SCTN09FF_INIT_ADD1_LINE", FMAX.SCTN0101_AX_DEF, "define a class <NAC><CLASSNAME><LINE>",),
+	("FMAX.SCTN09FF_INIT_ADD1_READ_FROM_FILE", FMAX.SCTN0101_AX_DEF, "read a section of __init__ from a file in res/functions <NAC><CLASSNAME><FILENAME>",),
+	("FMAX.SCTN09FF_INIT_ADD1_STR", FMAX.SCTN0101_AX_DEF, "define a string in the class <NAC><CLASSNAME><VALNAME><VAL>",),
+	("FMAX.SCTN09FF_INIT_ADD1_VAL", FMAX.SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><VALNAME><VAL>",),
+	("FMAX.SCTN09FF_INIT_ADD2_DICTIN_SS", FMAX.SCTN0101_AX_DEF, "add a str-str to a dict <NAC><CLASSNAME><STR><STR>",),
+	("FMAX.SCTN09FF_INIT_ADD2_DICTIN_SV", FMAX.SCTN0101_AX_DEF, "add a str-val to a dict <NAC><CLASSNAME><STR><VAL>",),
+	("FMAX.SCTN09FF_INIT_ADD2_DICTIN_VS", FMAX.SCTN0101_AX_DEF, "add a str to a dict <NAC><CLASSNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_VV", FMAX.SCTN0101_AX_DEF, "add a val to a dict in PSG <NAC><CLASSNAME><KEY><VAL>",),
 	("FMAXPSG_SCTN09FF_INIT_ADD2_FOREIGN_KEY", FMAX.SCTN0101_AX_DEF, "add values to _DICT_KEYS, _DICT_KEYS_REVERSE_ for external elements like buttons and checkboxes <NAC><CLASSNAME><KEY>",),
 	("FMAXPSG_SCTN09FF_INIT_ADD2_LAMBDA", FMAX.SCTN0101_AX_DEF, "define a value in the class <NAC><CLASSNAME><VALNAME><VAL>",),
@@ -1801,12 +1801,12 @@ TBGLST = [
 	("PSGVAL__CLOCKS_FORMMAIN", FMAX.NOP, "the form for clocks",),
 	("PSGVAL__CLOCKS_FORMMAIN00", FMAX.SCTN09FF_FORMMAIN_DEF, "CLOCKS", "_WINDOW_", "True", "the clocks form defined and done",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT", FMAXPSG_SCTN09FF_INIT_DEF, "CLOCKS", ",%ESCLN%%TAB3%keyBase_,%ESCLN%%TAB3%formName_%NEWLINE%%TAB2%", "init parms defined",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT000", FMAXPSG_SCTN09FF_INIT_ADD1_VAL, "CLOCKS", "_THIS_KEY_BASE_", "keyBase_", "adopt keyBase_",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT001", FMAXPSG_SCTN09FF_INIT_ADD1_LAMBDA, "CLOCKS", "_USE_THIS_KEY_", "__KEY_TEXT__: %FTQ%%OBRCE%__KEY_TEXT__%CBRCE%%OBRCE%self._THIS_KEY_BASE_%CBRCE%%TQ%", "make a local key sourcer",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_", "{}", "",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_REVERSE_", "{}", "",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_INIT_ADD1_VAL, "CLOCKS", "_LIST_KEYS_TIME_", "[]", "",),
-	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAXPSG_SCTN09FF_INIT_ADD1_VAL, "CLOCKS", "_THIS_FORM_NAME_", "formName_", "adopt formName_",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT000", FMAX.SCTN09FF_INIT_ADD1_VAL, "CLOCKS", "_THIS_KEY_BASE_", "keyBase_", "adopt keyBase_",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT001", FMAX.SCTN09FF_INIT_ADD1_LAMBDA, "CLOCKS", "_USE_THIS_KEY_", "__KEY_TEXT__: %FTQ%%OBRCE%__KEY_TEXT__%CBRCE%%OBRCE%self._THIS_KEY_BASE_%CBRCE%%TQ%", "make a local key sourcer",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAX.SCTN09FF_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_", "{}", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAX.SCTN09FF_INIT_ADD1_VAL, "CLOCKS", "_DICT_KEYS_REVERSE_", "{}", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAX.SCTN09FF_INIT_ADD1_VAL, "CLOCKS", "_LIST_KEYS_TIME_", "[]", "",),
+	("PSGVAL__CLOCKS_FUNC_00_INIT002", FMAX.SCTN09FF_INIT_ADD1_VAL, "CLOCKS", "_THIS_FORM_NAME_", "formName_", "adopt formName_",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_CHANNEL_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_HIGH_", "SZ_ALPHA_HIGH", "",),
 	("PSGVAL__CLOCKS_FUNC_00_INIT01", FMAXPSG_SCTN09FF_INIT_ADD2_VAL, "CLOCKS", "_ALPHA_LOW_", "SZ_ALPHA_LOW", "",),
@@ -5836,7 +5836,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif (_thisAX_ == FMAXPSG_SCTN09FF_FUNCTION_VAL2_DEF):
+		elif (_thisAX_ == FMAX.SCTN09FF_FUNCTION_VAL2_DEF):
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
@@ -5880,7 +5880,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_INIT_ADD1_LAMBDA:
+		elif _thisAX_ == FMAX.SCTN09FF_INIT_ADD1_LAMBDA:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -5898,7 +5898,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_INIT_ADD1_LINE:
+		elif _thisAX_ == FMAX.SCTN09FF_INIT_ADD1_LINE:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
@@ -5915,7 +5915,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_INIT_ADD1_READ_FROM_FILE:
+		elif _thisAX_ == FMAX.SCTN09FF_INIT_ADD1_READ_FROM_FILE:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 5:
 				doErrorItem("not 5 items", _thisItem_)
@@ -5931,7 +5931,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_INIT_ADD1_STR:
+		elif _thisAX_ == FMAX.SCTN09FF_INIT_ADD1_STR:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -5950,7 +5950,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_INIT_ADD1_VAL:
+		elif _thisAX_ == FMAX.SCTN09FF_INIT_ADD1_VAL:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -5969,7 +5969,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_SS:
+		elif _thisAX_ == FMAX.SCTN09FF_INIT_ADD2_DICTIN_SS:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -5987,7 +5987,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_SV:
+		elif _thisAX_ == FMAX.SCTN09FF_INIT_ADD2_DICTIN_SV:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 6:
 				doErrorItem("not 6 items", _thisItem_)
@@ -6005,7 +6005,7 @@ def parseTBGLST(FDTBGLST):
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ for _thisItem_ in TBGLST:
 		# ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ ⟱2⟰ if _thisAX_ …
-		elif _thisAX_ == FMAXPSG_SCTN09FF_INIT_ADD2_DICTIN_VS:
+		elif _thisAX_ == FMAX.SCTN09FF_INIT_ADD2_DICTIN_VS:
 			# fold here ⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2⟱2
 			if _thisItemLen_ != 7:
 				doErrorItem("not 7 items", _thisItem_)
