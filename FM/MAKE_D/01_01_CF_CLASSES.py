@@ -163,12 +163,12 @@ import PySimpleGUI as SG
 					_FDmakePSGClasses_.write(f"""{FM.NTAB(2)}self.{_thisElementName_} = {FM.OBRKT}  # {FM.FMPSG_SCTN09FF_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_]}{FM.NEWLINE}{FM.NTAB(2)}{FM.FOLD3STARTHERELN}""")
 					# 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱
 					for _thisRow_, _vals2_ in _vals1_.items():
-						_thisTabLevel1_ = FM.FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRow_][FM.TABLEVEL]
+						_thisTabLevel1_ = FM.FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRow_][FM.FMDEF.TABLEVEL]
 						_FDmakePSGClasses_.write(f"""{FM.NTAB(_thisTabLevel1_)}{FM.OBRKT}{FM.NEWLINE}""")
 						# 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱
 						for _thisElementKey_, _vals3_ in _vals2_.items():
 							# 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱
-							if (_thisElementKey_ == FM.TABLEVEL):
+							if (_thisElementKey_ == FM.FMDEF.TABLEVEL):
 								continue
 							# ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7
 
@@ -201,12 +201,12 @@ import PySimpleGUI as SG
 					_FDmakePSGClasses_.write(f"""{FM.NTAB(2)}self.{_thisElementName_} = {FM.OBRKT}  # {FM.FMPSG_SCTN09FF_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_]}{FM.NEWLINE}{FM.NTAB(2)}{FM.FOLD3STARTHERELN}""")
 					# 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱
 					for _thisRow_, _vals2_ in _vals1_.items():
-						_thisTabLevel1_ = FM.FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRow_][FM.TABLEVEL]
+						_thisTabLevel1_ = FM.FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRow_][FM.FMDEF.TABLEVEL]
 						_FDmakePSGClasses_.write(f"""{FM.NTAB(_thisTabLevel1_)}{FM.OBRKT}{FM.NEWLINE}""")
 						# 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱ 6⟱
 						for _thisElementKey_, _vals3_ in _vals2_.items():
 							# 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱ 7⟱
-							if (_thisElementKey_ == FM.TABLEVEL):
+							if (_thisElementKey_ == FM.FMDEF.TABLEVEL):
 								continue
 							# ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7 ⟰7
 

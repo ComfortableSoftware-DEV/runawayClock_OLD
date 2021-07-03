@@ -50,20 +50,20 @@ from CF.CONSTANTS import VALS as V
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN102 VAL _DEF_
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-TABLEVEL = "TABLEVEL"  # key for tab levels
+FMDEF.TABLEVEL = "FMDEF.TABLEVEL"  # key for tab levels
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN103 _DICT_ _DEF_
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-FILENAMES_DICT = {}  # dict of filename: FD??
-FMCF_SCTN0003_TYPE_CMNT_DICT = {}  # SCTN009 types comments
-FMCF_SCTN0003_TYPE_DICT = {}  # SCTN003 types
-FMCF_SCTN0201_DEF_CMNT_DICT = {}  # SCTN201 defines comments dict
-FMCF_SCTN0201_DEF_DICT = {}  # SCTN201 defines dict
-FMCF_SCTN0202_OPTIONS_CMNT_DICT = {}  # SCTN202 OPTIONS comments dict
-FMCF_SCTN0202_OPTIONS_DICT = {}  # SCTN202 OPTIONS dict
-FMCF_SCTN0202_OPTIONSDICT_CMNT_DICT = {}  # SCTN202 OPTIONSDICT comments dict
+FMDEF.FILENAMES_DICT = {}  # dict of filename: FD??
+FMDEF.SCTN0003_TYPE_CMNT_DICT = {}  # SCTN009 types comments
+FMDEF.SCTN0003_TYPE_DICT = {}  # SCTN003 types
+FMDEF.SCTN0201_DEF_CMNT_DICT = {}  # SCTN201 defines comments dict
+FMDEF.SCTN0201_DEF_DICT = {}  # SCTN201 defines dict
+FMDEF.SCTN0202_OPTIONS_CMNT_DICT = {}  # SCTN202 OPTIONS comments dict
+FMDEF.SCTN0202_OPTIONS_DICT = {}  # SCTN202 OPTIONS dict
+FMDEF.SCTN0202_OPTIONSDICT_CMNT_DICT = {}  # SCTN202 OPTIONSDICT comments dict
 FMCF_SCTN0202_OPTIONSDICT_DICT = {}  # SCTN202 OPTIONSDICT
 FMCF_SCTN0202_OPTIONSHELPDICT_DICT = {}  # SCTN202 OPTIONS HELPDICT
 FMCF_SCTN0203_DICT_CMNT_DICT = {}  # SCTN203 dict comments dict

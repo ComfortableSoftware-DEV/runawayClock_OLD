@@ -34,11 +34,11 @@ def __make__():
 	):
 		_FDmakeFM_.write(f"""{V.readFileToStr(N.MAKE_GLBL_NAME(__MODULE_NAME__="FM", __SUB0__="FM", __SUB1__="TOP"))}""")
 		_FDmakeFM_.write(f"""{M.makeAComment("SCTN003 TYPEs and lambda")}""")
-		_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0003_TYPE_DICT)
+		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0003_TYPE_DICT)
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		for _thisName_, _value_ in _dictToUse_.items():
-			_value_ = FM.FMCF_SCTN0003_TYPE_DICT[_thisName_]
-			_FDmakeFM_.write(f"""{_thisName_} = {_value_}  # {FM.FMCF_SCTN0003_TYPE_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
+			_value_ = FM.FMDEF.SCTN0003_TYPE_DICT[_thisName_]
+			_FDmakeFM_.write(f"""{_thisName_} = {_value_}  # {FM.FMDEF.SCTN0003_TYPE_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		_FDmakeFM_.write(F"""{V.NEWLINE}{V.NEWLINE}""")
 		_FDmakeFM_.write(f"""{M.makeAComment("SCTN101 FMAX _DEF_")}""")

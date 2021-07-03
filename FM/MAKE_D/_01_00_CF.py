@@ -23,10 +23,10 @@ def __make__():
 	with open(f"""{N.MAKE_NAME(__MODULE_NAME__="CF")}""", "tw") as _FDmakeCF_:
 		_FDmakeCF_.write(f"""{V.readFileToStr(N.MAKE_GLBL_NAME(__MODULE_NAME__="CF", __SUB0__="CF", __SUB1__="TOP"))}""")
 		# _FDmakeCF_.write(f"""{M.makeAComment("SCTN0201 CF defines")}""")
-		_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0201_DEF_DICT)
+		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0201_DEF_DICT)
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		for _thisName_, _value_ in _dictToUse_.items():
-			_FDmakeCF_.write(f"""{_thisName_} = {_value_}  # {FM.FMCF_SCTN0201_DEF_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
+			_FDmakeCF_.write(f"""{_thisName_} = {_value_}  # {FM.FMDEF.SCTN0201_DEF_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
 		_FDmakeCF_.write(f"""{V.NEWLINE}{V.NEWLINE}""")
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		_FDmakeCF_.write(f"""{M.makeAComment("SCTN0202 options structures")}""")
@@ -34,7 +34,7 @@ def __make__():
 		_strToRtn2_ = ""
 		_strToRtn1_ += f"""OPTIONS = {V.OBRCE}{V.NEWLINE}{M.FOLD1STARTHERELN}"""
 		_strToRtn2_ += f"""OPTIONSHELPDICT = {V.OBRCE}{V.NEWLINE}{M.FOLD1STARTHERELN}"""
-		_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0202_OPTIONS_DICT)
+		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0202_OPTIONS_DICT)
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		for _thisName_, _values_ in _dictToUse_.items():
 			_strToRtn1_ += f"""{V.NTAB(1)}{V.DBLQT}{_thisName_}{V.DBLQT}: {V.OBRCE}{V.NEWLINE}{V.NTAB(1)}{M.FOLD2STARTHERELN}{_values_}{V.NTAB(1)}{V.CBRCE},{V.NEWLINE}{V.NTAB(1)}{M.FOLD2ENDHERELN}"""
