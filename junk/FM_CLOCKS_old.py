@@ -719,12 +719,12 @@ FMDEF.SCTN0201_DEF_DICT = {}  # SCTN201 defines dict
 FMDEF.SCTN0202_OPTIONS_CMNT_DICT = {}  # SCTN202 OPTIONS comments dict
 FMDEF.SCTN0202_OPTIONS_DICT = {}  # SCTN202 OPTIONS dict
 FMDEF.SCTN0202_OPTIONSDICT_CMNT_DICT = {}  # SCTN202 OPTIONSDICT comments dict
-FMCF_SCTN0202_OPTIONSDICT_DICT = {}  # SCTN202 OPTIONSDICT
-FMCF_SCTN0202_OPTIONSHELPDICT_DICT = {}  # SCTN202 OPTIONS HELPDICT
-FMCF_SCTN0203_DICT_CMNT_DICT = {}  # SCTN203 dict comments dict
-FMCF_SCTN0203_DICT_DICT = {}  # SCTN203 dict dict
-FMCF_SCTN0204_LIST_CMNT_DICT = {}  # SCTN204 list comments dict
-FMCF_SCTN0204_LIST_DICT = {}  # SCTN204 list dict
+FMDEF.SCTN0202_OPTIONSDICT_DICT = {}  # SCTN202 OPTIONSDICT
+FMDEF.SCTN0202_OPTIONSHELPDICT_DICT = {}  # SCTN202 OPTIONS HELPDICT
+FMDEF.SCTN0203_DICT_CMNT_DICT = {}  # SCTN203 dict comments dict
+FMDEF.SCTN0203_DICT_DICT = {}  # SCTN203 dict dict
+FMDEF.SCTN0204_LIST_CMNT_DICT = {}  # SCTN204 list comments dict
+FMDEF.SCTN0204_LIST_DICT = {}  # SCTN204 list dict
 FMFM_SCTN0101_AX_CMNT_DICT = {}  # SCTN101 FMAX defined
 FMFM_SCTN0101_AX_DICT = {}  # SCTN101 FMAX defined
 FMFM_SCTN0102_VAL_CMNT_DICT = {}  # SCTN102 val
@@ -1107,14 +1107,14 @@ TBGLST = [
 	("FMDEF.SCTN0201_DEF_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN201 defines comments dict",),
 	("FMDEF.SCTN0201_DEF_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN201 defines dict",),
 	("FMDEF.SCTN0202_OPTIONSDICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN202 OPTIONSDICT comments dict",),
-	("FMCF_SCTN0202_OPTIONSDICT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN202 OPTIONSDICT",),
-	("FMCF_SCTN0202_OPTIONSHELPDICT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN202 OPTIONS HELPDICT",),
+	("FMDEF.SCTN0202_OPTIONSDICT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN202 OPTIONSDICT",),
+	("FMDEF.SCTN0202_OPTIONSHELPDICT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN202 OPTIONS HELPDICT",),
 	("FMDEF.SCTN0202_OPTIONS_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN202 OPTIONS comments dict",),
 	("FMDEF.SCTN0202_OPTIONS_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN202 OPTIONS dict",),
-	("FMCF_SCTN0203_DICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN203 dict comments dict",),
-	("FMCF_SCTN0203_DICT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN203 dict dict",),
-	("FMCF_SCTN0204_LIST_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN204 list comments dict",),
-	("FMCF_SCTN0204_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN204 list dict",),
+	("FMDEF.SCTN0203_DICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN203 dict comments dict",),
+	("FMDEF.SCTN0203_DICT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN203 dict dict",),
+	("FMDEF.SCTN0204_LIST_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN204 list comments dict",),
+	("FMDEF.SCTN0204_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN204 list dict",),
 	("FMCF_____", FMAX.NOP, "FMCF_ENDS",),
 	("FMFM", FMAX.NOP, "FMFM_BEGINS",),
 	("FMFM_SCTN0101_AX_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN101 FMAX defined",),
@@ -2430,14 +2430,14 @@ def makeCF():
 	_dictToUse_ = sortADict(FMDEF.SCTN0202_OPTIONS_DICT)
 	for _thisName_, _values_ in _dictToUse_.items():
 		_strToRtn1_ += f"""{NTAB(1)}{DBLQT}{_thisName_}{DBLQT}: {OBRCE}{NEWLINE}{NTAB(1)}{FOLD2STARTHERELN}{_values_}{NTAB(1)}{CBRCE},{NEWLINE}{NTAB(1)}{FOLD2ENDHERELN}"""
-		_strToRtn2_ += f"""{NTAB(1)}{DBLQT}{_thisName_}{DBLQT}: {NEWLINE}{NTAB(1)}{FOLD2STARTHERELN}{TRIQT}{FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisName_]}{NTAB(1)}{TRIQT},{NEWLINE}{NTAB(1)}{FOLD2ENDHERELN}"""
+		_strToRtn2_ += f"""{NTAB(1)}{DBLQT}{_thisName_}{DBLQT}: {NEWLINE}{NTAB(1)}{FOLD2STARTHERELN}{TRIQT}{FMDEF.SCTN0202_OPTIONSHELPDICT_DICT[_thisName_]}{NTAB(1)}{TRIQT},{NEWLINE}{NTAB(1)}{FOLD2ENDHERELN}"""
 	_strToRtn1_ += f"""{CBRCE}{NEWLINE}{FOLD1ENDHERELN}{NEWLINE}"""
 	_strToRtn2_ += f"""{CBRCE}{NEWLINE}{FOLD1ENDHERELN}{NEWLINE}"""
 	_strToRtn_ += f"""{_strToRtn1_}{_strToRtn2_}"""
 
 	# ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱
 	_strToRtn_ += f"""OPTIONSDICT = {OBRCE}{NEWLINE}"""
-	_dictToUse_ = sortADict(FMCF_SCTN0202_OPTIONSDICT_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0202_OPTIONSDICT_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
 		_strToRtn_ += f"""{_value_}"""
 	_strToRtn_ += f"""{CBRCE}{NEWLINE}{NEWLINE}{NEWLINE}"""
@@ -3024,12 +3024,12 @@ def parseTBGLST(FDTBGLST):
 		FMDEF.SCTN0202_OPTIONS_CMNT_DICT, \
 		FMDEF.SCTN0202_OPTIONS_DICT, \
 		FMDEF.SCTN0202_OPTIONSDICT_CMNT_DICT, \
-		FMCF_SCTN0202_OPTIONSDICT_DICT, \
-		FMCF_SCTN0202_OPTIONSHELPDICT_DICT, \
-		FMCF_SCTN0203_DICT_CMNT_DICT, \
-		FMCF_SCTN0203_DICT_DICT, \
-		FMCF_SCTN0204_LIST_CMNT_DICT, \
-		FMCF_SCTN0204_LIST_DICT, \
+		FMDEF.SCTN0202_OPTIONSDICT_DICT, \
+		FMDEF.SCTN0202_OPTIONSHELPDICT_DICT, \
+		FMDEF.SCTN0203_DICT_CMNT_DICT, \
+		FMDEF.SCTN0203_DICT_DICT, \
+		FMDEF.SCTN0204_LIST_CMNT_DICT, \
+		FMDEF.SCTN0204_LIST_DICT, \
 		FMFM_SCTN0101_AX_CMNT_DICT, \
 		FMFM_SCTN0101_AX_DICT, \
 		FMFM_SCTN0102_VAL_CMNT_DICT, \
@@ -3237,9 +3237,9 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 4 items", _thisItem_)
 				continue
 			_thisParm_ = _thisItem_[2]
-			if _thisParm_ not in FMCF_SCTN0202_OPTIONSHELPDICT_DICT:
-				FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
-			FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
+			if _thisParm_ not in FMDEF.SCTN0202_OPTIONSHELPDICT_DICT:
+				FMDEF.SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
+			FMDEF.SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3255,10 +3255,10 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 			if _thisParm_ not in FMDEF.SCTN0202_OPTIONS_DICT:
 				FMDEF.SCTN0202_OPTIONS_DICT[_thisParm_] = ""
-			if _thisParm_ not in FMCF_SCTN0202_OPTIONSHELPDICT_DICT:
-				FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
+			if _thisParm_ not in FMDEF.SCTN0202_OPTIONSHELPDICT_DICT:
+				FMDEF.SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
 			FMDEF.SCTN0202_OPTIONS_DICT[_thisParm_] += f"""{NTAB(2)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
-			FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3274,10 +3274,10 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 			if _thisParm_ not in FMDEF.SCTN0202_OPTIONS_DICT:
 				FMDEF.SCTN0202_OPTIONS_DICT[_thisParm_] = ""
-			if _thisParm_ not in FMCF_SCTN0202_OPTIONSHELPDICT_DICT:
-				FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
+			if _thisParm_ not in FMDEF.SCTN0202_OPTIONSHELPDICT_DICT:
+				FMDEF.SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] = ""
 			FMDEF.SCTN0202_OPTIONS_DICT[_thisParm_] += f"""{NTAB(2)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
-			FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0202_OPTIONSHELPDICT_DICT[_thisParm_] += f"""{_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3290,7 +3290,7 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisKey_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			FMCF_SCTN0202_OPTIONSDICT_DICT[_thisName_] = f"{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"
+			FMDEF.SCTN0202_OPTIONSDICT_DICT[_thisName_] = f"{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3303,7 +3303,7 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisKey_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			FMCF_SCTN0202_OPTIONSDICT_DICT[_thisName_] = f"{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"
+			FMDEF.SCTN0202_OPTIONSDICT_DICT[_thisName_] = f"{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3315,8 +3315,8 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 4 items", _thisItem_)
 				continue
 			_thisListName_ = _thisItem_[2]
-			FMCF_SCTN0204_LIST_DICT[_thisListName_] = ""
-			FMCF_SCTN0204_LIST_CMNT_DICT[_thisListName_] = f"{_thisComment_}"
+			FMDEF.SCTN0204_LIST_DICT[_thisListName_] = ""
+			FMDEF.SCTN0204_LIST_CMNT_DICT[_thisListName_] = f"{_thisComment_}"
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3329,7 +3329,7 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisListName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			FMCF_SCTN0204_LIST_DICT[_thisListName_] += f"{NTAB(1)}f{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"
+			FMDEF.SCTN0204_LIST_DICT[_thisListName_] += f"{NTAB(1)}f{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3342,7 +3342,7 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisListName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			FMCF_SCTN0204_LIST_DICT[_thisListName_] += f"{NTAB(1)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"
+			FMDEF.SCTN0204_LIST_DICT[_thisListName_] += f"{NTAB(1)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3355,7 +3355,7 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisListName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			FMCF_SCTN0204_LIST_DICT[_thisListName_] += f"{NTAB(1)}{_thisVal_},  # {_thisComment_}{NEWLINE}"
+			FMDEF.SCTN0204_LIST_DICT[_thisListName_] += f"{NTAB(1)}{_thisVal_},  # {_thisComment_}{NEWLINE}"
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3

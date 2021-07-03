@@ -38,13 +38,13 @@ def __make__():
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		for _thisName_, _values_ in _dictToUse_.items():
 			_strToRtn1_ += f"""{V.NTAB(1)}{V.DBLQT}{_thisName_}{V.DBLQT}: {V.OBRCE}{V.NEWLINE}{V.NTAB(1)}{M.FOLD2STARTHERELN}{_values_}{V.NTAB(1)}{V.CBRCE},{V.NEWLINE}{V.NTAB(1)}{M.FOLD2ENDHERELN}"""
-			_strToRtn2_ += f"""{V.NTAB(1)}{V.DBLQT}{_thisName_}{V.DBLQT}: {V.NEWLINE}{V.NTAB(1)}{M.FOLD2STARTHERELN}{V.TRIQT}{FM.FMCF_SCTN0202_OPTIONSHELPDICT_DICT[_thisName_]}{V.NTAB(1)}{V.TRIQT},{V.NEWLINE}{V.NTAB(1)}{M.FOLD2ENDHERELN}"""
+			_strToRtn2_ += f"""{V.NTAB(1)}{V.DBLQT}{_thisName_}{V.DBLQT}: {V.NEWLINE}{V.NTAB(1)}{M.FOLD2STARTHERELN}{V.TRIQT}{FM.FMDEF.SCTN0202_OPTIONSHELPDICT_DICT[_thisName_]}{V.NTAB(1)}{V.TRIQT},{V.NEWLINE}{V.NTAB(1)}{M.FOLD2ENDHERELN}"""
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		_strToRtn1_ += f"""{V.CBRCE}{V.NEWLINE}{M.FOLD1ENDHERELN}{V.NEWLINE}"""
 		_strToRtn2_ += f"""{V.CBRCE}{V.NEWLINE}{M.FOLD1ENDHERELN}{V.NEWLINE}"""
 		_FDmakeCF_.write(f"""{_strToRtn1_}{_strToRtn2_}""")
 		_FDmakeCF_.write(f"""OPTIONSDICT = {V.OBRCE}{V.NEWLINE}""")
-		_dictToUse_ = FM.sortADict(FM.FMCF_SCTN0202_OPTIONSDICT_DICT)
+		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0202_OPTIONSDICT_DICT)
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		for _thisName_, _value_ in _dictToUse_.items():
 			_FDmakeCF_.write(f"""{_value_}""")
