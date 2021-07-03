@@ -17,9 +17,9 @@
 				_thisValName_ = _thisItem_[2]
 				_thisVal_ = _thisItem_[3]
 				FM.FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{V.DBLQT}K_{_thisValName_}{V.DBLQT}"""
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -35,9 +35,9 @@
 				_thisValName_ = _thisItem_[2]
 				_thisVal_ = _thisItem_[3]
 				FM.FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{_thisVal_}"""
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{V.DBLQT}K_{_thisValName_}{V.DBLQT}"""
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -61,7 +61,7 @@
 				_thisValName_ = _thisItem_[2]
 				_thisVal1_ = _thisItem_[3]
 				_thisVal2_ = _thisItem_[4]
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{V.DBLQT}K_{_thisValName_}{V.DBLQT}"""
 				FM.FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{V.OPAREN}{V.DBLQT}{_thisVal1_}{V.DBLQT}, {V.DBLQT}{_thisVal2_}{V.DBLQT}{V.CPAREN},"""
@@ -80,7 +80,7 @@
 				_thisValName_ = _thisItem_[2]
 				_thisVal1_ = _thisItem_[3]
 				_thisVal2_ = _thisItem_[4]
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{V.DBLQT}K_{_thisValName_}{V.DBLQT}"""
 				FM.FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{V.OPAREN}{V.DBLQT}{_thisVal1_}{V.DBLQT}, {_thisVal2_}{V.CPAREN},"""
@@ -99,7 +99,7 @@
 				_thisValName_ = _thisItem_[2]
 				_thisVal1_ = _thisItem_[3]
 				_thisVal2_ = _thisItem_[4]
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{V.DBLQT}K_{_thisValName_}{V.DBLQT}"""
 				FM.FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{V.OPAREN}{_thisVal1_}, {V.DBLQT}{_thisVal2_}{V.DBLQT}{V.CPAREN},"""
@@ -118,7 +118,7 @@
 				_thisValName_ = _thisItem_[2]
 				_thisVal1_ = _thisItem_[3]
 				_thisVal2_ = _thisItem_[4]
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{V.DBLQT}K_{_thisValName_}{V.DBLQT}"""
 				FM.FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{V.OPAREN}{_thisVal1_}, {_thisVal2_}{V.CPAREN}"""
@@ -152,7 +152,7 @@
 				_thisValName_ = _thisItem_[2]
 				_thisVal_ = _thisItem_[3]
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{V.DBLQT}K_{_thisValName_}{V.DBLQT}"""
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
 				FM.FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 				continue
@@ -170,7 +170,7 @@
 				_thisValName_ = _thisItem_[2]
 				_thisVal_ = _thisItem_[3]
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{V.DBLQT}K_{_thisValName_}{V.DBLQT}"""
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{_thisVal_}"""
 				FM.FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 				continue
@@ -200,7 +200,7 @@
 					FM.FMPSG_SCTN0902_DICT_DICT[_thisDictName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisDictName_}"""] = f"""{V.DBLQT}K_{_thisDictName_}{V.DBLQT}"""
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisDictName_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisDictName_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0902_DICT_CMNT_DICT[_thisDictName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -309,7 +309,7 @@
 					FM.FMPSG_SCTN0903_LIST_DICT[_thisListName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisListName_}"""] = f"""{V.DBLQT}K_{_thisListName_}{V.DBLQT}"""
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisListName_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisListName_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0903_LIST_CMNT_DICT[_thisListName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -404,7 +404,7 @@
 					FM.FMPSG_SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisTupdictName_}"""] = f"""{V.DBLQT}K_{_thisTupdictName_}{V.DBLQT}"""
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisTupdictName_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisTupdictName_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0905_TUPDICT_CMNT_DICT[_thisTupdictName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -542,7 +542,7 @@
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
-					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				FM.FMPSG_SCTN0906_BTNS_DICT[_thisElementName_] += f"""{V.NTAB(1)}{_thisKey_}: {V.DBLQT}{_thisVal_}{V.DBLQT},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -568,7 +568,7 @@
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
-					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				FM.FMPSG_SCTN0906_BTNS_DICT[_thisElementName_] += f"""{V.NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -631,7 +631,7 @@
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
-					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				FM.FMPSG_SCTN0907_SPIN_DICT[_thisElementName_] += f"""{V.NTAB(1)}{_thisKey_}: {V.DBLQT}{_thisVal_}{V.DBLQT},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -662,7 +662,7 @@
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
-					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				FM.FMPSG_SCTN0907_SPIN_DICT[_thisElementName_] += f"""{V.NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -764,7 +764,7 @@
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
-					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				FM.FMPSG_SCTN0908_CHECKBOX_DICT[_thisElementName_] += f"""{V.NTAB(1)}{_thisKey_}: {V.DBLQT}{_thisVal_}{V.DBLQT},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -790,7 +790,7 @@
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
-					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				FM.FMPSG_SCTN0908_CHECKBOX_DICT[_thisElementName_] += f"""{V.NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -838,7 +838,7 @@
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
-					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				FM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] += f"""{V.NTAB(1)}{_thisKey_}: {V.DBLQT}{_thisVal_}{V.DBLQT},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -864,7 +864,7 @@
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_[-3:] == "KEY"):
 					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT}"""
-					FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				FM.FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] += f"""{V.NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -1267,7 +1267,7 @@
 				if (_thisIndexNum_ not in FM.FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]):
 					FM.FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{V.DBLQT}{_thisKey_}{V.DBLQT}"""
 				FM.FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisDictName_] = f"""{V.NTAB(1)}{_thisDictName_}: {V.OBRCE}  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -1301,7 +1301,7 @@
 				if (_thisIndexNum_ not in FM.FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]):
 					FM.FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisKey_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisKey_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisKey_}"""] = f"""{V.DBLQT}K_{_thisKey_}{V.DBLQT}"""
 				FM.FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_][_thisKey_] = f"""{V.DBLQT}{_thisVal_}{V.DBLQT},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -1335,7 +1335,7 @@
 				if (_thisIndexNum_ not in FM.FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]):
 					FM.FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{V.DBLQT}{_thisKey_}{V.DBLQT}"""
 				FM.FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_][_thisKey_] = f"""{_thisVal_},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -1357,7 +1357,7 @@
 				if (_thisAPPDSName_ not in FM.FMPSG_SCTN090C_APPDS_DICT):
 					FM.FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{V.DBLQT}{_thisKey_}{V.DBLQT}"""
 				FM.FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisKey_] = f"""{V.NTAB(1)}{_thisKey_}: {V.DBLQT}{_thisVal_}{V.DBLQT},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -1379,7 +1379,7 @@
 				if (_thisAPPDSName_ not in FM.FMPSG_SCTN090C_APPDS_DICT):
 					FM.FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
 				FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{V.DBLQT}{_thisKey_}{V.DBLQT}"""
 				FM.FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisKey_] = f"""{V.NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{V.NEWLINE}"""
 				continue
@@ -1909,7 +1909,7 @@
 				_thisKeyGroup_ = _thisItem_[2]
 				_thisValName_ = _thisItem_[3]
 				FM.FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{V.DBLQT}{_thisValName_}{V.DBLQT}"""
-				FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3

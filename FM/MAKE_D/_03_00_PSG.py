@@ -17,7 +17,7 @@ def __make__():
 		_dictToUse_ = FM.sortADict(FM.FMPSG_SCTN0900_DEF1_DICT)
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		for _thisName_, _value_ in _dictToUse_.items():
-			_FDmakePSG_.write(f"""{_thisName_} = {_value_}  # {FM.FMPSG_SCTN0900_DEF1_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
+			_FDmakePSG_.write(f"""{_thisName_} = {_value_}  # {FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		_FDmakePSG_.write(f"""{V.NEWLINE}{V.NEWLINE}""")
 		_FDmakePSG_.write(f"""{M.makeAComment("SCTN0901 DEF2")}""")
