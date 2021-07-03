@@ -725,16 +725,16 @@ FMDEF.SCTN0203_DICT_CMNT_DICT = {}  # SCTN203 dict comments dict
 FMDEF.SCTN0203_DICT_DICT = {}  # SCTN203 dict dict
 FMDEF.SCTN0204_LIST_CMNT_DICT = {}  # SCTN204 list comments dict
 FMDEF.SCTN0204_LIST_DICT = {}  # SCTN204 list dict
-FMFM_SCTN0101_AX_CMNT_DICT = {}  # SCTN101 FMAX defined
-FMFM_SCTN0101_AX_DICT = {}  # SCTN101 FMAX defined
-FMFM_SCTN0102_VAL_CMNT_DICT = {}  # SCTN102 val
-FMFM_SCTN0102_VAL_DICT = {}  # SCTN102 val
-FMFM_SCTN0103_DICT_CMNT_DICT = {}  # SCTN103 dict defined
-FMFM_SCTN0103_DICT_DICT = {}  # SCTN103 dict defined
-FMFM_SCTN0104_LIST_CMNT_DICT = {}  # SCTN201 device defines
-FMFM_SCTN0104_LIST_DICT = {}  # SCTN201 device defines
-FMFM_SCTN0105_LDICT_CMNT_DICT = {}  # SCTN105 ldict defined
-FMFM_SCTN0105_LDICT_DICT = {}  # SCTN105 ldict defined
+FMDEF.SCTN0101_AX_CMNT_DICT = {}  # SCTN101 FMAX defined
+FMDEF.SCTN0101_AX_DICT = {}  # SCTN101 FMAX defined
+FMDEF.SCTN0102_VAL_CMNT_DICT = {}  # SCTN102 val
+FMDEF.SCTN0102_VAL_DICT = {}  # SCTN102 val
+FMDEF.SCTN0103_DICT_CMNT_DICT = {}  # SCTN103 dict defined
+FMDEF.SCTN0103_DICT_DICT = {}  # SCTN103 dict defined
+FMDEF.SCTN0104_LIST_CMNT_DICT = {}  # SCTN201 device defines
+FMDEF.SCTN0104_LIST_DICT = {}  # SCTN201 device defines
+FMDEF.SCTN0105_LDICT_CMNT_DICT = {}  # SCTN105 ldict defined
+FMDEF.SCTN0105_LDICT_DICT = {}  # SCTN105 ldict defined
 FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
 FMPSG_SCTN0900_DEF1_CMNT_DICT = {}  #
 FMPSG_SCTN0900_DEF1_DICT = {}  #
@@ -1117,16 +1117,16 @@ TBGLST = [
 	("FMDEF.SCTN0204_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN204 list dict",),
 	("FMCF_____", FMAX.NOP, "FMCF_ENDS",),
 	("FMFM", FMAX.NOP, "FMFM_BEGINS",),
-	("FMFM_SCTN0101_AX_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN101 FMAX defined",),
-	("FMFM_SCTN0101_AX_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN101 FMAX defined",),
-	("FMFM_SCTN0102_VAL_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN102 val",),
-	("FMFM_SCTN0102_VAL_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN102 val",),
-	("FMFM_SCTN0103_DICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN103 dict defined",),
-	("FMFM_SCTN0103_DICT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN103 dict defined",),
-	("FMFM_SCTN0104_LIST_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN201 device defines",),
-	("FMFM_SCTN0104_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN201 device defines",),
-	("FMFM_SCTN0105_LDICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN105 ldict defined",),
-	("FMFM_SCTN0105_LDICT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN105 ldict defined",),
+	("FMDEF.SCTN0101_AX_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN101 FMAX defined",),
+	("FMDEF.SCTN0101_AX_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN101 FMAX defined",),
+	("FMDEF.SCTN0102_VAL_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN102 val",),
+	("FMDEF.SCTN0102_VAL_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN102 val",),
+	("FMDEF.SCTN0103_DICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN103 dict defined",),
+	("FMDEF.SCTN0103_DICT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN103 dict defined",),
+	("FMDEF.SCTN0104_LIST_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN201 device defines",),
+	("FMDEF.SCTN0104_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN201 device defines",),
+	("FMDEF.SCTN0105_LDICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN105 ldict defined",),
+	("FMDEF.SCTN0105_LDICT_DICT", FMAX.SCTN0103_DICT_DEF, "SCTN105 ldict defined",),
 	("FMFM_____", FMAX.NOP, "FMFM_ENDS",),
 	("FMPSG", FMAX.NOP, "FMPSG_BEGINS",),
 	("FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
@@ -2471,47 +2471,47 @@ def makeFM():
 	## ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN101 FMAX _DEF_")}"""
 	strToRtn01_ = ""
-	_dictToUse_ = sortADict(FMFM_SCTN0101_AX_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0101_AX_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMFM_SCTN0101_AX_CMNT_DICT[_thisName_]}{NEWLINE}"""
-		strToRtn01_ += f"""{NTAB(1)}{_thisName_},  # {FMFM_SCTN0101_AX_CMNT_DICT[_thisName_]}{NEWLINE}"""
+		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMDEF.SCTN0101_AX_CMNT_DICT[_thisName_]}{NEWLINE}"""
+		strToRtn01_ += f"""{NTAB(1)}{_thisName_},  # {FMDEF.SCTN0101_AX_CMNT_DICT[_thisName_]}{NEWLINE}"""
 	_strToRtn_ += f"""{NEWLINE}{NEWLINE}FMAXFM_AXLST = {OBRKT}{NEWLINE}{strToRtn01_}{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN102 VAL _DEF_")}"""
 	strToRtn01_ = ""
-	_dictToUse_ = sortADict(FMFM_SCTN0102_VAL_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0102_VAL_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMFM_SCTN0102_VAL_CMNT_DICT[_thisName_]}{NEWLINE}"""
+		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMDEF.SCTN0102_VAL_CMNT_DICT[_thisName_]}{NEWLINE}"""
 	_strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN103 _DICT_ _DEF_")}"""
 	strToRtn01_ = ""
-	_dictToUse_ = sortADict(FMFM_SCTN0103_DICT_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0103_DICT_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{_thisName_} = {OBRCE}{CBRCE}  # {FMFM_SCTN0103_DICT_CMNT_DICT[_thisName_]}{NEWLINE}"""
+		_strToRtn_ += f"""{_thisName_} = {OBRCE}{CBRCE}  # {FMDEF.SCTN0103_DICT_CMNT_DICT[_thisName_]}{NEWLINE}"""
 	_strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN104 _LIST_ _DEF_")}"""
-	_dictToUse_ = sortADict(FMFM_SCTN0104_LIST_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0104_LIST_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMFM_SCTN0104_LIST_CMNT_DICT[_thisName_]}{NEWLINE}"""
+		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMDEF.SCTN0104_LIST_CMNT_DICT[_thisName_]}{NEWLINE}"""
 	_strToRtn_ += f"""{NEWLINE}{NEWLINE}{makeAWideComment("end of managed portions of FM.py")}{NEWLINE}{NEWLINE}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{NTAB(1)}global {BKSLSH}{NEWLINE}"""
 
-	_dictToUse_ = sortADict(FMFM_SCTN0102_VAL_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0102_VAL_DICT)
 	for _name_, _value_ in _dictToUse_.items():
 		_strToRtn_ += f"""{NTAB(2)}{_name_}, {BKSLSH}{NEWLINE}"""
 
-	_dictToUse_ = sortADict(FMFM_SCTN0103_DICT_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0103_DICT_DICT)
 	for _name_, _value_ in _dictToUse_.items():
 		_strToRtn_ += f"""{NTAB(2)}{_name_}, {BKSLSH}{NEWLINE}"""
 
-	_dictToUse_ = sortADict(FMFM_SCTN0104_LIST_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0104_LIST_DICT)
 	for _name_, _value_ in _dictToUse_.items():
 		_strToRtn_ += f"""{NTAB(2)}{_name_}, {BKSLSH}{NEWLINE}"""
 
@@ -3030,16 +3030,16 @@ def parseTBGLST(FDTBGLST):
 		FMDEF.SCTN0203_DICT_DICT, \
 		FMDEF.SCTN0204_LIST_CMNT_DICT, \
 		FMDEF.SCTN0204_LIST_DICT, \
-		FMFM_SCTN0101_AX_CMNT_DICT, \
-		FMFM_SCTN0101_AX_DICT, \
-		FMFM_SCTN0102_VAL_CMNT_DICT, \
-		FMFM_SCTN0102_VAL_DICT, \
-		FMFM_SCTN0103_DICT_CMNT_DICT, \
-		FMFM_SCTN0103_DICT_DICT, \
-		FMFM_SCTN0104_LIST_CMNT_DICT, \
-		FMFM_SCTN0104_LIST_DICT, \
-		FMFM_SCTN0105_LDICT_CMNT_DICT, \
-		FMFM_SCTN0105_LDICT_DICT, \
+		FMDEF.SCTN0101_AX_CMNT_DICT, \
+		FMDEF.SCTN0101_AX_DICT, \
+		FMDEF.SCTN0102_VAL_CMNT_DICT, \
+		FMDEF.SCTN0102_VAL_DICT, \
+		FMDEF.SCTN0103_DICT_CMNT_DICT, \
+		FMDEF.SCTN0103_DICT_DICT, \
+		FMDEF.SCTN0104_LIST_CMNT_DICT, \
+		FMDEF.SCTN0104_LIST_DICT, \
+		FMDEF.SCTN0105_LDICT_CMNT_DICT, \
+		FMDEF.SCTN0105_LDICT_DICT, \
 		FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT, \
 		FMPSG_SCTN0900_DEF1_CMNT_DICT, \
 		FMPSG_SCTN0900_DEF1_DICT, \
@@ -3370,8 +3370,8 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 3:
 				doErrorItem("not 3 items", _thisItem_)
 				continue
-			FMFM_SCTN0101_AX_DICT[_thisName_] = f"{DBLQT}{_thisName_}{DBLQT}"
-			FMFM_SCTN0101_AX_CMNT_DICT[_thisName_] = f"{_thisComment_}"
+			FMDEF.SCTN0101_AX_DICT[_thisName_] = f"{DBLQT}{_thisName_}{DBLQT}"
+			FMDEF.SCTN0101_AX_CMNT_DICT[_thisName_] = f"{_thisComment_}"
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3384,8 +3384,8 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			FMFM_SCTN0102_VAL_DICT[_thisValName_] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
-			FMFM_SCTN0102_VAL_CMNT_DICT[_thisValName_] = f"{_thisComment_}"
+			FMDEF.SCTN0102_VAL_DICT[_thisValName_] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+			FMDEF.SCTN0102_VAL_CMNT_DICT[_thisValName_] = f"{_thisComment_}"
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3398,8 +3398,8 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			FMFM_SCTN0102_VAL_DICT[_thisValName_] = _thisVal_
-			FMFM_SCTN0102_VAL_CMNT_DICT[_thisValName_] = f"{_thisComment_}"
+			FMDEF.SCTN0102_VAL_DICT[_thisValName_] = _thisVal_
+			FMDEF.SCTN0102_VAL_CMNT_DICT[_thisValName_] = f"{_thisComment_}"
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3410,8 +3410,8 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 3:
 				doErrorItem("not 3 items", _thisItem_)
 				continue
-			FMFM_SCTN0103_DICT_DICT[_thisName_] = f"{OBRCE}{CBRCE}"
-			FMFM_SCTN0103_DICT_CMNT_DICT[_thisName_] = f"{_thisComment_}"
+			FMDEF.SCTN0103_DICT_DICT[_thisName_] = f"{OBRCE}{CBRCE}"
+			FMDEF.SCTN0103_DICT_CMNT_DICT[_thisName_] = f"{_thisComment_}"
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3422,8 +3422,8 @@ def parseTBGLST(FDTBGLST):
 			if _thisItemLen_ != 3:
 				doErrorItem("not 3 items", _thisItem_)
 				continue
-			FMFM_SCTN0104_LIST_DICT[_thisName_] = f"{OBRKT}{CBRKT}"
-			FMFM_SCTN0104_LIST_CMNT_DICT[_thisName_] = f"{_thisComment_}"
+			FMDEF.SCTN0104_LIST_DICT[_thisName_] = f"{OBRKT}{CBRKT}"
+			FMDEF.SCTN0104_LIST_CMNT_DICT[_thisName_] = f"{_thisComment_}"
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
