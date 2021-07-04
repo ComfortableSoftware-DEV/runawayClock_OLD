@@ -1,8 +1,8 @@
 
 
-from CF.CONSTANTS import MARKERS as M
-from CF.CONSTANTS import NAMES as N
-from CF.CONSTANTS import VALS as V
+from CF.CONST_D import _01_00_MARKERS as M
+from CF.CONST_D import _01_00_NAMES as N
+from CF.CONST_D import _01_00_VALS as V
 from FM import FM
 
 
@@ -141,7 +141,7 @@ class C_MTBL():
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		_strToRtn_ = f"""{V.NEWLINE}
 {M.makeAComment(f"start of {_filename_}")}
-from CF.CONSTANTS import NAMES as NAMES
+from CF.CONST_D import _01_00_NAMES as NAMES
 from FM import FM{V.NEWLINE}
 _class_ = "{_class_}"
 _filename_ = "{_filename_}"

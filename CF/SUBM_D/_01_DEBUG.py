@@ -4,8 +4,8 @@ import inspect
 import pprint
 
 
-from CF.CONSTANTS import VALS
-from CF.SUBMODULES import _01_TIME_HMS as HMS
+from CF.CONST_D import _01_00_VALS
+from CF.SUBM_D import _01_TIME_HMS as HMS
 
 PP = pprint.PrettyPrinter(indent=2)
 

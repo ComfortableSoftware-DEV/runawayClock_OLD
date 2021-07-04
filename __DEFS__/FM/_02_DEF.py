@@ -9,7 +9,7 @@
 #
 
 
-from CF.CONST_D import NAMES as N
+from CF.CONST_D import _01_00_NAMES as N
 
 
 _section_ = "__DEFS__"

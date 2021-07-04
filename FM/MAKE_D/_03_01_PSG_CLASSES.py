@@ -9,9 +9,9 @@
 #
 
 
-from CF.CONSTANTS import MARKERS as M
-from CF.CONSTANTS import NAMES as N
-from CF.CONSTANTS import VALS as V
+from CF.CONST_D import _01_00_MARKERS as M
+from CF.CONST_D import _01_00_NAMES as N
+from CF.CONST_D import _01_00_VALS as V
 from FM import FM
 
 
@@ -27,9 +27,9 @@ def __make__():
 		with open(f"""{N.MAKE_NAME(__CLASS__=_thisClassName_, __MODULE_NAME__="PSG",)}""", "tw") as _FDmakePSGClasses_:
 			_FDmakePSGClasses_.write(f"""{V.NEWLINE}
 from CF import CF
-from CF.CONSTANTS import MARKERS as M
-from CF.CONSTANTS import NAMES as N
-from CF.CONSTANTS import VALS as V
+from CF.CONST_D import _01_00_MARKERS as M
+from CF.CONST_D import _01_00_NAMES as N
+from CF.CONST_D import _01_00_VALS as V
 from PSG import PSG
 import PySimpleGUI as SG
 {M.makeAComment("start of {_thisClassName_}_C.py")}

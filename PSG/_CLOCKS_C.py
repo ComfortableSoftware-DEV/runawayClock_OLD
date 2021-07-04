@@ -1,9 +1,9 @@
 
 
 from CF import CF
-from CF.CONSTANTS import MARKERS as M
-from CF.CONSTANTS import NAMES as N
-from CF.CONSTANTS import VALS as V
+from CF.CONST_D import _01_00_MARKERS as M
+from CF.CONST_D import _01_00_NAMES as N
+from CF.CONST_D import _01_00_VALS as V
 from PSG import PSG
 import PySimpleGUI as SG
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

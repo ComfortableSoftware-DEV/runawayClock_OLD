@@ -1,6 +1,6 @@
 
 
-from CF.CONSTANTS import NAMES as N
+from CF.CONST_D import _01_00_NAMES as N
 from FM import FM
 
 

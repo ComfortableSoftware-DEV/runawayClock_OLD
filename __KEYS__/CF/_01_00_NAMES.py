@@ -43,7 +43,7 @@ SUBD_LIST = [
 		__DOCS__,
 		__FUNCTIONS__,
 		__IMAGES__,
-		__KEYS__
+		__KEYS__,
 		__SECTION__,
 		__SUBSECTION__,
 		__SUBD0__,

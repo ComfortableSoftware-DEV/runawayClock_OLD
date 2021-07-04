@@ -15,7 +15,7 @@ from __KEYS__.CF import (
 from __KEYS__.FM import(
 		_02_00_FMAX as AX,
 )
-from CF.CONSTANTS import (
+from CF.CONST_D import (
 		MARKERS as M,
 		VALS as V,
 )
