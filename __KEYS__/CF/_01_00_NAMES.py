@@ -9,7 +9,7 @@
 #
 
 
-from CF.SUBM_D import _00_iterables as I
+from CF.SUBM_D import _00_ITERABLES as I
 
 
 __CLASS__ = "__CLASS__"

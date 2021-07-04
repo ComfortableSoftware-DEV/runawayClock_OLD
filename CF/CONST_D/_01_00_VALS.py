@@ -9,9 +9,6 @@
 #
 
 
-from CF.CONST_D import _01_00_MARKERS as M
-
-
 BKQT = "`"  # BACK TICK
 BKSLSH = "\\"  # BACKSLASH
 CBRCE = "}"  # CLOSEBRACE
