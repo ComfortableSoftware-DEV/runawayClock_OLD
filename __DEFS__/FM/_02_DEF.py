@@ -9,11 +9,10 @@
 #
 
 
-from CF.CONSTANTS import NAMES as N
-from FM import FM
+from CF.CONST_D import NAMES as N
 
 
-_section_ = "__KEYS__"
+_section_ = "__DEFS__"
 _moduleName_ = "FM"
 _sub0_ = "_02"
 _sub1_ = "DEF"
@@ -40,6 +39,7 @@ __ID__ = N.MAKE_ID(
 		("__SUB0__", _sub0_,),  # _01
 		("__SUB1__", _sub1_,),  # 00
 )
+
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # * SCTN102 VAL _DEF_
