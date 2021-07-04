@@ -22,14 +22,16 @@ __variable__ is either immediate use or "above" the current scope, single letter
 
 
 # import gc  # garbage collection library
+from bs4 import BeautifulSoup as BS  # most people have strong opinions about parsers, BS is one of my favorites, not always top of the list, not sure about it here
+from time import sleep  # cut as much cruft as possible in your imports, leaves more free memory and starts no simple timers, which you wont be using
 import json  # may be a faster better library for this, not sure if the faster library will swallow the anti-standard space padded fields unless they are all the same length (which they are not currently)
 import requests as REQ
-from time import sleep  # cut as much cruft as possible in your imports, leaves more free memory and starts no simple timers, which you wont be using
-from bs4 import BeautifulSoup as BS  # most people have strong opinions about parsers, BS is one of my favorites, not always top of the list, not sure about it here
 # depending on if any of the stripped json libraries work, BS may be the best bet, or the worst, and the pauses I saw while crunching the 2nd list make me thing BS may need an upgrade if this is something you need to do often
+import sys.path as SP
+SP.insert(0, "..")
 
 
-# from CF.SUBM_D import _00_01_DEBUG as DBG # my debug tools
+from . CF.SUBM_D import _00_01_DEBUG as DBG # my debug tools
 
 
 # gc.enable()  # maske garbage collection start working automatically, usually makes a big dent in resource hunger
@@ -129,6 +131,8 @@ for _counter_, _ID_ in enumerate(_IDList_):
 	_tbodyList_ = _soupResult_.find_all("tbody")
 	_tableHeaderRaw_ = _tbodyList_[0].find_all('th')
 	_tableDataRaw_ = _tbodyList_[0].find_all('td')
+	del _soupResult_
+	del _tbodyList_
 # ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱ ⟱
 	# 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱
 	if (
@@ -153,6 +157,7 @@ _tableDataRaw_ {_tableDataRaw_}
 	# cant recall is zip is the best choice on windows or not, sometimes making your own is far faster and less memory hungry each loop (transient memory), and windows has the worst time of all OS in that regard
 	# if I get up early enough to get my stuff done first I will get out my laptop and see what I can do to make sure I have windows proofed this
 	_datalist2_.append(dict(zip(_tableHeader_, _tableData_)))
+	del _tableHeader_, _tableHeaderRaw_, _tableData_, _tableDataRaw_
 # ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0
 
 
