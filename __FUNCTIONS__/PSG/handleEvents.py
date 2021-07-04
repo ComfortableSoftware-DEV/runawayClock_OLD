@@ -29,7 +29,7 @@
 		elif (
 				(self._CURRENT_EVENT_ == PSG.K_BTN_ZERO)
 		):
-			self._DICTIN_[PSG.K_TIME_S_AT_ZEROELAPSE] = PSG.NOWS
+			self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE] = PSG.NOWS
 			self.updateFromDict()
 			return
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*

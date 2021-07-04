@@ -307,7 +307,7 @@ K_TIME_S_AT_LAST_RUN = "K_TIME_S_AT_LAST_RUN"  # timeS of last alarm
 K_TIME_S_AT_NEXT_ALERT = "K_TIME_S_AT_NEXT_ALERT"  # interval count template
 K_TIME_S_AT_NEXT_EVENT_VAL = "K_TIME_S_AT_NEXT_EVENT_VAL"  # comment
 K_TIME_S_AT_NEXT_PERIODIC_JOB_VAL = "K_TIME_S_AT_NEXT_PERIODIC_JOB_VAL"  # seconds till next housekeeping, check for next times, etc.
-K_TIME_S_AT_ZEROELAPSE = "K_TIME_S_AT_ZEROELAPSE"  # interval count template
+K_TIME_F_AT_ZEROELAPSE = "K_TIME_F_AT_ZEROELAPSE"  # interval count template
 K_TIME_S_CLOCK = "K_TIME_S_CLOCK"  # interval count template
 K_TIME_S_ELAPSED = "K_TIME_S_ELAPSED"  # interval count template
 K_TIME_S_INTERVAL = "K_TIME_S_INTERVAL"  # interval timer starting time, reset each time the interval goes off
@@ -582,7 +582,7 @@ LIST_ALL_TIMES = [  # list of all times
 	K_TIME_S_AT_ALARM,  # list of all times K_TIME_S_AT_ALARM
 	K_TIME_S_AT_LAST_RUN,  # list of all times TIME_S_AT_LAST_RUN
 	K_TIME_S_AT_NEXT_ALERT,  # list of all times K_TIME_S_AT_NEXT_ALERT
-	K_TIME_S_AT_ZEROELAPSE,  # list of all times K_TIME_S_AT_ZEROELAPSE
+	K_TIME_F_AT_ZEROELAPSE,  # list of all times K_TIME_F_AT_ZEROELAPSE
 	K_TIME_S_CLOCK,  # list of all times K_TIME_S_CLOCK
 	K_TIME_S_ELAPSED,  # list of all times K_TIME_S_ELAPSED
 	K_TIME_S_INTERVAL,  # list of all times K_TIME_S_INTERVAL

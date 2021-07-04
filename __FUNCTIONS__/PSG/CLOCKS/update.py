@@ -44,7 +44,7 @@
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		self._DICTIN_[PSG.K_TIME_S_CLOCK] = PSG.NOWS
 		self._DICTIN_[PSG.K_TIME_S_TOGO] = (self._DICTIN_[PSG.K_TIME_S_AT_NEXT_ALERT] - PSG.NOWS)
-		self._DICTIN_[PSG.K_TIME_S_ELAPSED] = (PSG.NOWS - self._DICTIN_[PSG.K_TIME_S_AT_ZEROELAPSE])
+		self._DICTIN_[PSG.K_TIME_S_ELAPSED] = (PSG.NOWS - self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE])
 		self.updateFromDict()
 		self.quickRead()
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
@@ -60,7 +60,7 @@ self._BBOX_ {self._BBOX_} = getBBox(self._CURRENT_LOCATION_, self._SIZE_ {self._
 self._CLOSE_BBOX_ {self._CLOSE_BBOX_} = getCloseBBox(self._CURRENT_LOCATION_, self._SIZE_)
 self._DICTIN_[PSG.K_TIME_S_CLOCK] {CF.frameItHMS("K_TIME_S_CLOCK", self._DICTIN_[PSG.K_TIME_S_CLOCK])} = {CF.frameItHMS("PSG.NOWS", PSG.NOWS)}
 self._DICTIN_[PSG.K_TIME_S_TOGO] {CF.frameItHMS("K_TIME_S_TOGO", self._DICTIN_[PSG.K_TIME_S_TOGO])} = (self._DICTIN_[PSG.K_TIME_S_AT_NEXT_ALERT] {CF.frameItHMS("K_TIME_S_AT_NEXT_ALERT", self._DICTIN_[PSG.K_TIME_S_AT_NEXT_ALERT])} - PSG.NOWS  {CF.frameItHMS("PSG.NOWS", PSG.NOWS)})
-self._DICTIN_[PSG.K_TIME_S_ELAPSED] {CF.frameItHMS("K_TIME_S_ELAPSED", self._DICTIN_[PSG.K_TIME_S_ELAPSED])} = (PSG.NOWS - self._DICTIN_[PSG.K_TIME_S_AT_ZEROELAPSE] {CF.frameItHMS("K_TIME_S_AT_ZEROELAPSE", self._DICTIN_[PSG.K_TIME_S_AT_ZEROELAPSE])})
+self._DICTIN_[PSG.K_TIME_S_ELAPSED] {CF.frameItHMS("K_TIME_S_ELAPSED", self._DICTIN_[PSG.K_TIME_S_ELAPSED])} = (PSG.NOWS - self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE] {CF.frameItHMS("K_TIME_F_AT_ZEROELAPSE", self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE])})
 self._CURRENT_MOUSE_LOCATION_ {self._CURRENT_MOUSE_LOCATION_}, self._CURRENT_MOUSE_STATUS_ {self._CURRENT_MOUSE_STATUS_} = self.checkMouse()
 """,
 			)

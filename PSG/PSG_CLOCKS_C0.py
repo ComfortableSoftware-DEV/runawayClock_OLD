@@ -74,7 +74,7 @@ class CLOCKS_C(object):
 			PSG.K_CHECKBOX_HOVER_DATE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			PSG.K_TIME_S_AT_NEXT_ALERT: PSG.ZERO_CLOCK,  # time at next event
-			PSG.K_TIME_S_AT_ZEROELAPSE: PSG.ZERO_CLOCK,  # time at last zero of elapsed timer
+			PSG.K_TIME_F_AT_ZEROELAPSE: PSG.ZERO_CLOCK,  # time at last zero of elapsed timer
 			PSG.K_TIME_S_CLOCK: PSG.ZERO_CLOCK,  # time clock or wall clock
 			PSG.K_TIME_S_ELAPSED: PSG.ZERO_CLOCK,  # time elapsed
 			PSG.K_TIME_S_TOGO: PSG.ZERO_CLOCK,  # countdown to next event
@@ -88,7 +88,7 @@ class CLOCKS_C(object):
 			PSG.K_CHECKBOX_HOVER_DATE: True,  # checkbox hid for a moment when the mouse hovers
 			PSG.K_CHECKBOX_RUNAWAY: False,  # value of runaway checkbox
 			self._USE_THIS_KEY_(PSG.K_TIME_S_AT_NEXT_ALERT): PSG.ZERO_CLOCK,  # time at next event
-			self._USE_THIS_KEY_(PSG.K_TIME_S_AT_ZEROELAPSE): PSG.ZERO_CLOCK,  # time at last zero of elapsed timer
+			self._USE_THIS_KEY_(PSG.K_TIME_F_AT_ZEROELAPSE): PSG.ZERO_CLOCK,  # time at last zero of elapsed timer
 			self._USE_THIS_KEY_(PSG.K_TIME_S_CLOCK): PSG.ZERO_CLOCK,  # time clock or wall clock
 			self._USE_THIS_KEY_(PSG.K_TIME_S_ELAPSED): PSG.ZERO_CLOCK,  # time elapsed
 			self._USE_THIS_KEY_(PSG.K_TIME_S_TOGO): PSG.ZERO_CLOCK,  # countdown to next event
@@ -104,7 +104,7 @@ class CLOCKS_C(object):
 		self._DICT_KEYS_TIME_ = {  # dict of time keys and their max value int seconds
 		# fold here ⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3
 			PSG.K_TIME_S_AT_NEXT_ALERT: CF.DAY_S,  # comment
-			PSG.K_TIME_S_AT_ZEROELAPSE: CF.DAY_S,  # comment
+			PSG.K_TIME_F_AT_ZEROELAPSE: CF.DAY_S,  # comment
 			PSG.K_TIME_S_CLOCK: CF.DAY_S,  #
 			PSG.K_TIME_S_ELAPSED: CF.TIME_S_995959,  #
 			PSG.K_TIME_S_TOGO: CF.DAY_S,  #
@@ -173,13 +173,13 @@ class CLOCKS_C(object):
 		self._TEXT_TIME_S_AT_ZEROELAPSE_ = {  # class text for interval count
 		# fold here ⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3
 			**PSG.TEXT_TIME_S_AT_ZEROELAPSE,  # interval count template
-			PSG.KEY: self._USE_THIS_KEY_(PSG.K_TIME_S_AT_ZEROELAPSE),  # interval count template
+			PSG.KEY: self._USE_THIS_KEY_(PSG.K_TIME_F_AT_ZEROELAPSE),  # interval count template
 		}
 		# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
 		self._LIST_KEYS_TIME_.append(PSG.TEXT_TIME_S_AT_ZEROELAPSE)
 		self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.TEXT_TIME_S_AT_ZEROELAPSE))
-		self._DICT_KEYS_[PSG.K_TIME_S_AT_ZEROELAPSE] = self._USE_THIS_KEY_(PSG.K_TIME_S_AT_ZEROELAPSE)
-		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_TIME_S_AT_ZEROELAPSE)] = PSG.K_TIME_S_AT_ZEROELAPSE
+		self._DICT_KEYS_[PSG.K_TIME_F_AT_ZEROELAPSE] = self._USE_THIS_KEY_(PSG.K_TIME_F_AT_ZEROELAPSE)
+		self._DICT_KEYS_REVERSE_[self._USE_THIS_KEY_(PSG.K_TIME_F_AT_ZEROELAPSE)] = PSG.K_TIME_F_AT_ZEROELAPSE
 
 		self._TEXT_TIME_S_AT_NEXT_ALERT_ = {  # class text for interval count
 		# fold here ⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3⟱3
@@ -772,7 +772,7 @@ _MPX_ {self._MPX_} = {_mpxToRtn_}{CF.NEWLINE}"""
 		if (
 				(timeAtZeroelapse_ is not None)
 		):
-			self._DICTIN_[PSG.K_TIME_S_AT_ZEROELAPSE] = timeAtZeroelapse_
+			self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE] = timeAtZeroelapse_
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
@@ -1118,7 +1118,7 @@ _dictToRtn_ {_dictToRtn_}
 		elif (
 				(self._CURRENT_EVENT_ == PSG.K_BTN_ZERO)
 		):
-			self._DICTIN_[PSG.K_TIME_S_AT_ZEROELAPSE] = PSG.NOWS
+			self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE] = PSG.NOWS
 			self.updateFromDict()
 			return
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1365,7 +1365,7 @@ _dictToRtn_ {_dictToRtn_}
 		self._TIME_MS_AT_MOVE_ = 0
 		self._TIME_MS_AT_UPDATE_ = 0
 		self._TIME_MS_AT_CHECK_MOUSE_ = 0
-		self._DICTIN_[PSG.K_TIME_S_AT_ZEROELAPSE] = 0
+		self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE] = 0
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		if (
 				(self._DICTIN_[PSG.K_CHECKBOX_HOVER_DATE] is True)
@@ -1772,7 +1772,7 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		self._DICTIN_[PSG.K_TIME_S_CLOCK] = PSG.NOWS
 		self._DICTIN_[PSG.K_TIME_S_TOGO] = (self._DICTIN_[PSG.K_TIME_S_AT_NEXT_ALERT] - PSG.NOWS)
-		self._DICTIN_[PSG.K_TIME_S_ELAPSED] = (PSG.NOWS - self._DICTIN_[PSG.K_TIME_S_AT_ZEROELAPSE])
+		self._DICTIN_[PSG.K_TIME_S_ELAPSED] = (PSG.NOWS - self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE])
 		self.updateFromDict()
 		self.quickRead()
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
@@ -1788,7 +1788,7 @@ self._BBOX_ {self._BBOX_} = getBBox(self._CURRENT_LOCATION_, self._SIZE_ {self._
 self._CLOSE_BBOX_ {self._CLOSE_BBOX_} = getCloseBBox(self._CURRENT_LOCATION_, self._SIZE_)
 self._DICTIN_[PSG.K_TIME_S_CLOCK] {CF.frameItHMS("K_TIME_S_CLOCK", self._DICTIN_[PSG.K_TIME_S_CLOCK])} = {CF.frameItHMS("PSG.NOWS", PSG.NOWS)}
 self._DICTIN_[PSG.K_TIME_S_TOGO] {CF.frameItHMS("K_TIME_S_TOGO", self._DICTIN_[PSG.K_TIME_S_TOGO])} = (self._DICTIN_[PSG.K_TIME_S_AT_NEXT_ALERT] {CF.frameItHMS("K_TIME_S_AT_NEXT_ALERT", self._DICTIN_[PSG.K_TIME_S_AT_NEXT_ALERT])} - PSG.NOWS  {CF.frameItHMS("PSG.NOWS", PSG.NOWS)})
-self._DICTIN_[PSG.K_TIME_S_ELAPSED] {CF.frameItHMS("K_TIME_S_ELAPSED", self._DICTIN_[PSG.K_TIME_S_ELAPSED])} = (PSG.NOWS - self._DICTIN_[PSG.K_TIME_S_AT_ZEROELAPSE] {CF.frameItHMS("K_TIME_S_AT_ZEROELAPSE", self._DICTIN_[PSG.K_TIME_S_AT_ZEROELAPSE])})
+self._DICTIN_[PSG.K_TIME_S_ELAPSED] {CF.frameItHMS("K_TIME_S_ELAPSED", self._DICTIN_[PSG.K_TIME_S_ELAPSED])} = (PSG.NOWS - self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE] {CF.frameItHMS("K_TIME_F_AT_ZEROELAPSE", self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE])})
 self._CURRENT_MOUSE_LOCATION_ {self._CURRENT_MOUSE_LOCATION_}, self._CURRENT_MOUSE_STATUS_ {self._CURRENT_MOUSE_STATUS_} = self.checkMouse()
 """,
 			)

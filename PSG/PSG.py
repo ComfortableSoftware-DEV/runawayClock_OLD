@@ -307,7 +307,7 @@ K_TIME_S_AT_LAST_RUN = "K_TIME_S_AT_LAST_RUN"  # time this alarm last ran, now i
 K_TIME_S_AT_NEXT_ALERT = "K_TIME_S_AT_NEXT_ALERT"  # interval count template
 K_TIME_S_AT_NEXT_EVENT_VAL = "K_TIME_S_AT_NEXT_EVENT_VAL"  # comment
 K_TIME_S_AT_NEXT_PERIODIC_JOB_VAL = "K_TIME_S_AT_NEXT_PERIODIC_JOB_VAL"  # seconds till next housekeeping, check for next times, etc.
-K_TIME_S_AT_ZEROELAPSE = "K_TIME_S_AT_ZEROELAPSE"  # interval count template
+K_TIME_F_AT_ZEROELAPSE = "K_TIME_F_AT_ZEROELAPSE"  # interval count template
 K_TIME_S_CLOCK = "K_TIME_S_CLOCK"  # interval count template
 K_TIME_S_ELAPSED = "K_TIME_S_ELAPSED"  # interval count template
 K_TIME_S_INTERVAL = "K_TIME_S_INTERVAL"  # interval of this event
@@ -582,7 +582,7 @@ LIST_ALL_TIMES = [  # list of all times
 	K_TIME_S_AT_ALARM,  # list of all times K_TIME_S_AT_ALARM
 	K_TIME_S_AT_LAST_RUN,  # list of all times TIME_S_AT_LAST_RUN
 	K_TIME_S_AT_NEXT_ALERT,  # list of all times K_TIME_S_AT_NEXT_ALERT
-	K_TIME_S_AT_ZEROELAPSE,  # list of all times K_TIME_S_AT_ZEROELAPSE
+	K_TIME_F_AT_ZEROELAPSE,  # list of all times K_TIME_F_AT_ZEROELAPSE
 	K_TIME_S_CLOCK,  # list of all times K_TIME_S_CLOCK
 	K_TIME_S_ELAPSED,  # list of all times K_TIME_S_ELAPSED
 	K_TIME_S_INTERVAL,  # list of all times K_TIME_S_INTERVAL
@@ -1303,6 +1303,7 @@ def localTimes(
 		mins_=None,
 ):
 	global \
+		NOW_FULL, \
 		NOW_NOMS, \
 		NOWM, \
 		NOWMS, \
@@ -1322,6 +1323,7 @@ def localTimes(
 	if (_adjSecs_ < 0):
 		_adjSecs_ += CF.DAY_S
 	# ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1
+	NOW_FULL = int(_adjSecs_)
 	_adjSecs_ = _adjSecs_ % CF.DAY_S
 	NOWS = _adjSecs_
 	NOW_NOMS = int(NOWS)
@@ -1815,7 +1817,7 @@ def doStartup():
 		_tempDS_[K_SNOOZED] = None
 		_tempDS_[K_TIME_S_AT_LAST_RUN] = 0
 		_tempDS_[K_TIME_S_INTERVAL_START] = 0
-		_tempDS_[K_TIME_S_AT_ZEROELAPSE] = NOWS
+		_tempDS_[K_TIME_F_AT_ZEROELAPSE] = NOW_FULL
 		APPDS_MAIN[K_EVENT_ENTRIES][_index_] = CF.quickCopyDict(_tempDS_)
 	# ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1
 	DICT_ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
