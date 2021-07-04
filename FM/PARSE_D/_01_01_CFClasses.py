@@ -23,51 +23,51 @@ _SCTNS_ = {
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				_thisClassName_ = _thisItem_[2]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_DICT):
+					FMDEF.SCTN02FF_CLASS_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_INIT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICT[_thisClassName_] = []
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_INIT_DICT):
+					FMDEF.SCTN02FF_CLASS_INIT_DICT[_thisClassName_] = []
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_INIT_DEF1_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DEF1_DICT[_thisClassName_] = []
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_INIT_DEF1_DICT):
+					FMDEF.SCTN02FF_CLASS_INIT_DEF1_DICT[_thisClassName_] = []
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_INIT_DEF2_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_] = []
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_INIT_DEF2_DICT):
+					FMDEF.SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_] = []
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_INIT_DEF3_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DEF3_DICT[_thisClassName_] = []
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_INIT_DEF3_DICT):
+					FMDEF.SCTN02FF_CLASS_INIT_DEF3_DICT[_thisClassName_] = []
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DEF2_DICT[_thisClassName_] = []
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_FUNCTION_DICT):
+					FMDEF.SCTN02FF_CLASS_FUNCTION_DEF2_DICT[_thisClassName_] = []
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DEF1_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DEF1_DICT[_thisClassName_] = []
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_FUNCTION_DEF1_DICT):
+					FMDEF.SCTN02FF_CLASS_FUNCTION_DEF1_DICT[_thisClassName_] = []
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DEF2_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_] = []
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_FUNCTION_DEF2_DICT):
+					FMDEF.SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_] = []
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_INIT_DICTIN_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_] = []
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_] = []
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_INIT_DICTIN_DICT):
+					FMDEF.SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_] = []
+					FMDEF.SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_] = []
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_CMNT_DICT[_thisClassName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_CMNT_DICT[_thisClassName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 				# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -84,10 +84,10 @@ _SCTNS_ = {
 				_thisGroupName_ = _thisItem_[3]
 				_thisGroupVal_ = _thisItem_[4]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_GROUP_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_GROUP_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_GROUP_DICT):
+					FMDEF.SCTN02FF_CLASS_GROUP_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_GROUP_DICT[_thisClassName_][_thisGroupName_] = f"""{_thisGroupVal_}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_GROUP_DICT[_thisClassName_][_thisGroupName_] = f"""{_thisGroupVal_}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -108,20 +108,20 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_BTNS_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_BTNS_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_BTNS_DICT):
+					FMDEF.SCTN02FF_CLASS_BTNS_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_BTNS_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_BTNS_DICT[_thisClassName_][_thisElementName_] = ""
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_BTNS_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_BTNS_DICT[_thisClassName_][_thisElementName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_BTNS_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_BTNS_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_BTNS_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_BTNS_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_BTNS_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_BTNS_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -140,14 +140,14 @@ _SCTNS_ = {
 				_thisVal_ = _thisItem_[5]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
-					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
-					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
+					FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 					thisValStr_ = f"""f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
 				# ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱
 				else:
 					thisValStr_ = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_BTNS_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_BTNS_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -166,14 +166,14 @@ _SCTNS_ = {
 				_thisVal_ = _thisItem_[5]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
-					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
-					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
+					FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 					thisValStr_ = f"""f{FM.TRIQT}{FM.OBRCE}self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
 				# ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱
 				else:
 					thisValStr_ = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_BTNS_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_BTNS_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -193,33 +193,33 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_CHECKBOX_DICT):
+					FMDEF.SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_][_thisElementName_] = ""
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_][_thisElementName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_CHECKBOX_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 				thisValStr_ = f"""{_thisElementName_}{FM.CPAREN}{FM.CBRCE}{FM.TRIQT}"""
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_ADDON_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_CHECKBOX_ADDON_DICT):
+					FMDEF.SCTN02FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN0903_LIST_DICT["LIST_DNUPDATE"] += f"""{FM.NTAB(1)}K_{_thisElementName_.upper()},  # {_thisComment_}{FM.NEWLINE}"""
-				FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}K{_thisElementName_[:-1]}{FM.CBRKT} = K{_thisElementName_[:-1]}{FM.NEWLINE}"""
-				FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}K{_thisElementName_[:-1]}{FM.CBRKT} = K{_thisElementName_[:-1]}{FM.NEWLINE}"""
+				FMDEF.SCTN0903_LIST_DICT["LIST_DNUPDATE"] += f"""{FM.NTAB(1)}K_{_thisElementName_.upper()},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}K{_thisElementName_[:-1]}{FM.CBRKT} = K{_thisElementName_[:-1]}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}K{_thisElementName_[:-1]}{FM.CBRKT} = K{_thisElementName_[:-1]}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -235,7 +235,7 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
-				FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -254,10 +254,10 @@ _SCTNS_ = {
 				_thisVal_ = _thisItem_[5]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
-					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
-					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
+					FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {FM.DBLQT}_thisVal_{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {FM.DBLQT}_thisVal_{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -276,10 +276,10 @@ _SCTNS_ = {
 				_thisVal_ = _thisItem_[5]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
-					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
-					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
+					FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: _thisVal_,  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: _thisVal_,  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -299,22 +299,22 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_] = {}
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_COLUMN_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_COLUMN_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisElementName_[:-1]}"""] = f"""{FM.DBLQT}K{_thisElementName_[:-1]}{FM.DBLQT}"""
-				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisElementName_[:-1]}"""] = _thisComment_
-				FM.FMPSG_SCTN02FF_CLASS_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""K{_thisElementName_[:-1]}"""] = f"""{FM.DBLQT}K{_thisElementName_[:-1]}{FM.DBLQT}"""
+				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisElementName_[:-1]}"""] = _thisComment_
+				FMDEF.SCTN02FF_CLASS_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -334,10 +334,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementKey_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+				if (_thisElementKey_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Button{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Button{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -357,10 +357,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementKey_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+				if (_thisElementKey_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Checkbox{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Checkbox{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -380,10 +380,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementKey_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+				if (_thisElementKey_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Column{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Column{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -403,10 +403,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementKey_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+				if (_thisElementKey_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Combo{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Combo{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -426,10 +426,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementKey_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+				if (_thisElementKey_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}**{_thisElementKey_}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}**{_thisElementKey_}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -450,10 +450,10 @@ _SCTNS_ = {
 				_thisElementKey_ = _thisItem_[6]
 				_thisVal_ = _thisItem_[7]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementKey_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+				if (_thisElementKey_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}{_thisVal_}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}{_thisVal_}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -473,10 +473,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementKey_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+				if (_thisElementKey_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Radio{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Radio{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -495,10 +495,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = _thisItem_[5]
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisRowKey_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_]):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_] = {}
+				if (_thisRowKey_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_]):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][FM.FMDEF.TABLEVEL] = _thisTabLevel_
+				FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][FMDEF.TABLEVEL] = _thisTabLevel_
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -518,10 +518,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementKey_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+				if (_thisElementKey_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Spin{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Spin{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -541,10 +541,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementKey_ not in FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
-					FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+				if (_thisElementKey_ not in FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]):
+					FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Text{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Text{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -570,20 +570,20 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisDictName_ = _thisItem_[3]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_DICT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_DICT_DICT):
+					FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisDictName_ not in FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] = ""
+				if (_thisDictName_ not in FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_DICT_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_DICT_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -600,7 +600,7 @@ _SCTNS_ = {
 				_thisDictName_ = _thisItem_[3]
 				_thisKey_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
-				FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -617,7 +617,7 @@ _SCTNS_ = {
 				_thisDictName_ = _thisItem_[3]
 				_thisKey_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
-				FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -634,7 +634,7 @@ _SCTNS_ = {
 				_thisDictName_ = _thisItem_[3]
 				_thisKey_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
-				FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -651,7 +651,7 @@ _SCTNS_ = {
 				_thisDictName_ = _thisItem_[3]
 				_thisKey_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
-				FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -671,20 +671,20 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisDictName_ = _thisItem_[3]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_DICT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_DICT_DICT):
+					FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisDictName_ not in FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] = ""
+				if (_thisDictName_ not in FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_DICT_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_DICT_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -701,9 +701,9 @@ _SCTNS_ = {
 				_thisDictName_ = _thisItem_[3]
 				_thisKey_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
-				FM.FMPSG_SCTN0900_DEF1_DICT[_thisKey_] = f"""{FM.DBLQT}{_thisKey_}{FM.DBLQT}"""
-				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisKey_] = f"""{_thisComment_}"""
-				FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}PSG.{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN0900_DEF1_DICT[_thisKey_] = f"""{FM.DBLQT}{_thisKey_}{FM.DBLQT}"""
+				FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisKey_] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{FM.NTAB(3)}PSG.{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -730,39 +730,39 @@ _SCTNS_ = {
 				_theseParms_ = _thisItem_[4]
 				_thisDPDBool_ = _thisItem_[5]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_FUNCTION_DICT):
+					FMDEF.SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(1)}def {_thisElementName_}{FM.OPAREN}self{_theseParms_}{FM.CPAREN}:""")
+				FMDEF.SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(1)}def {_thisElementName_}{FM.OPAREN}self{_theseParms_}{FM.CPAREN}:""")
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_FUNCTION_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_FUNCTION_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
-				FM.FMPSG_SCTN0900_DEF1_DICT[_thisElementName_.upper()] = f"""{FM.DBLQT}F_{_thisElementName_.upper()}{FM.DBLQT}"""
-				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisElementName_.upper()] = f"""{_thisComment_}"""
-				FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{FM.NTAB(3)}{_thisKey_}: {_thisDPDBool_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN0900_DEF1_DICT[_thisElementName_.upper()] = f"""{FM.DBLQT}F_{_thisElementName_.upper()}{FM.DBLQT}"""
+				FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisElementName_.upper()] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{FM.NTAB(3)}{_thisKey_}: {_thisDPDBool_},  # {_thisComment_}{FM.NEWLINE}"""
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_DICT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_DICT_DICT):
+					FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if ("_DPD_" not in FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] = ""
+				if ("_DPD_" not in FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_DICT_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_DICT_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{FM.NTAB(3)}F_{_thisElementName_.upper()}: {_thisDPDBool_},  # {_thisComment_}{FM.NEWLINE}"""
-				FM.FMPSG_SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_]["_DPD_"] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{FM.NTAB(3)}F_{_thisElementName_.upper()}: {_thisDPDBool_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_DICT_CMNT_DICT[_thisClassName_]["_DPD_"] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -780,23 +780,23 @@ _SCTNS_ = {
 				_thisFilename_ = _thisItem_[4]
 				_thisDPDBool_ = _thisItem_[5]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_FUNCTION_DICT):
+					FMDEF.SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.readFileToStr("res/functions/" + _thisFilename_)}""")
+				FMDEF.SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.readFileToStr("res/functions/" + _thisFilename_)}""")
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_FUNCTION_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_FUNCTION_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{FM.NTAB(3)}PSG.F_{_thisElementName_.upper()}: {_thisDPDBool_},  # {_thisComment_}{FM.NEWLINE}"""
-				FM.FMPSG_SCTN02FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
-				FM.FMPSG_SCTN0900_DEF1_DICT[f"""F_{_thisElementName_.upper()}"""] = f"""{FM.DBLQT}F_{_thisElementName_.upper()}{FM.DBLQT}"""
-				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""F_{_thisElementName_.upper()}"""] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{FM.NTAB(3)}PSG.F_{_thisElementName_.upper()}: {_thisDPDBool_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""F_{_thisElementName_.upper()}"""] = f"""{FM.DBLQT}F_{_thisElementName_.upper()}{FM.DBLQT}"""
+				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""F_{_thisElementName_.upper()}"""] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -811,7 +811,7 @@ _SCTNS_ = {
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
-				FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NEWLINE}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -827,7 +827,7 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				_thisLine_ = _thisItem_[4]
-				FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(2)}{_thisLine_}{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(2)}{_thisLine_}{FM.NEWLINE}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -843,7 +843,7 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				_thisFilename_ = _thisItem_[4]
-				FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.readFileToStr("res/functions/" + _thisFilename_)}""")
+				FMDEF.SCTN02FF_CLASS_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.readFileToStr("res/functions/" + _thisFilename_)}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -860,7 +860,7 @@ _SCTNS_ = {
 				_thisElementName_ = _thisItem_[3]
 				_thisValName_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
-				FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DEF1_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(2)}{_thisValName_} = {FM.DBLQT}{_thisVal_}{FM.DBLQT}  # {_thisComment_}""")
+				FMDEF.SCTN02FF_CLASS_FUNCTION_DEF1_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(2)}{_thisValName_} = {FM.DBLQT}{_thisVal_}{FM.DBLQT}  # {_thisComment_}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -877,7 +877,7 @@ _SCTNS_ = {
 				_thisElementName_ = _thisItem_[3]
 				_thisValName_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
-				FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DEF2_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(2)}{_thisValName_} = {FM.DBLQT}{_thisVal_}{FM.DBLQT}  # {_thisComment_}""")
+				FMDEF.SCTN02FF_CLASS_FUNCTION_DEF2_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(2)}{_thisValName_} = {FM.DBLQT}{_thisVal_}{FM.DBLQT}  # {_thisComment_}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -894,7 +894,7 @@ _SCTNS_ = {
 				_thisElementName_ = _thisItem_[3]
 				_thisValName_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
-				FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DEF1_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(2)}{_thisValName_} = {_thisVal_}  # {_thisComment_}""")
+				FMDEF.SCTN02FF_CLASS_FUNCTION_DEF1_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(2)}{_thisValName_} = {_thisVal_}  # {_thisComment_}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -911,7 +911,7 @@ _SCTNS_ = {
 				_thisElementName_ = _thisItem_[3]
 				_thisValName_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
-				FM.FMPSG_SCTN02FF_CLASS_FUNCTION_DEF2_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(2)}{_thisValName_} = {_thisVal_}  # {_thisComment_}""")
+				FMDEF.SCTN02FF_CLASS_FUNCTION_DEF2_DICT[_thisClassName_][_thisElementName_].append(f"""{FM.NTAB(2)}{_thisValName_} = {_thisVal_}  # {_thisComment_}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -931,10 +931,10 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisParmStr_ = FM.subMyPlaceKpr(_thisItem_[3])
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_INIT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICT[_thisClassName_] = []
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_INIT_DICT):
+					FMDEF.SCTN02FF_CLASS_INIT_DICT[_thisClassName_] = []
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DICT[_thisClassName_].append(f"""{_thisParmStr_}""")
+				FMDEF.SCTN02FF_CLASS_INIT_DICT[_thisClassName_].append(f"""{_thisParmStr_}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -951,7 +951,7 @@ _SCTNS_ = {
 				_thisValName_ = _thisItem_[3]
 				_thisLambda_ = _thisItem_[4]
 				_thisLambda_ = FM.subMyPlaceKpr(_thisLambda_)
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{FM.NEWLINE}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -967,7 +967,7 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisLine_ = _thisItem_[3]
 				_thisLine_ = FM.subMyPlaceKpr(_thisLine_)
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}{_thisLine_}  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}{_thisLine_}  # {_thisComment_}{FM.NEWLINE}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -982,7 +982,7 @@ _SCTNS_ = {
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				_thisClassName_ = _thisItem_[2]
 				_thisFilename_ = _thisItem_[3]
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DICT[_thisClassName_].append(f"""{FM.readFileToStr(_thisFilename_)}{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_INIT_DICT[_thisClassName_].append(f"""{FM.readFileToStr(_thisFilename_)}{FM.NEWLINE}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -998,9 +998,9 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisValName_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
-				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
-				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{FM.DBLQT}K{_thisValName_[:-1]}{FM.DBLQT}"""
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = {FM.DBLQT}{_thisVal_}{FM.DBLQT}  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{FM.DBLQT}K{_thisValName_[:-1]}{FM.DBLQT}"""
+				FMDEF.SCTN02FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = {FM.DBLQT}{_thisVal_}{FM.DBLQT}  # {_thisComment_}{FM.NEWLINE}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1016,9 +1016,9 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisValName_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{FM.NEWLINE}""")
-				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{FM.DBLQT}K{_thisValName_[:-1]}{FM.DBLQT}"""
-				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_INIT_DEF1_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{FM.DBLQT}K{_thisValName_[:-1]}{FM.DBLQT}"""
+				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1034,8 +1034,8 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisKey_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1051,8 +1051,8 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisKey_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}{FM.DBLQT}{_thisKey_}{FM.DBLQT}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1071,15 +1071,15 @@ _SCTNS_ = {
 				_isARevKeyItem_ = _thisItem_[5]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_isARevKeyItem_ == "True"):
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}self._USE_THIS_KEY_{FM.OPAREN}PSG.{_thisKey_}{FM.CPAREN}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}self._USE_THIS_KEY_{FM.OPAREN}PSG.{_thisKey_}{FM.CPAREN}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
 				# ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱
 				else:
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}""")
 					# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
-				FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{FM.DBLQT}{_thisKey_}{FM.DBLQT}"""
+				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{FM.DBLQT}{_thisKey_}{FM.DBLQT}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1098,15 +1098,15 @@ _SCTNS_ = {
 				_isARevKeyItem_ = _thisItem_[5]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_isARevKeyItem_ == "True"):
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}self._USE_THIS_KEY_{FM.OPAREN}PSG.{_thisKey_}{FM.CPAREN}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}self._USE_THIS_KEY_{FM.OPAREN}PSG.{_thisKey_}{FM.CPAREN}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
 				# ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱
 				else:
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DICTIN_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{FM.NTAB(3)}PSG.{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}""")
 					# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
-				FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{FM.DBLQT}{_thisKey_}{FM.DBLQT}"""
+				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{FM.DBLQT}{_thisKey_}{FM.DBLQT}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1124,12 +1124,12 @@ _SCTNS_ = {
 				_isARevKeyItem_ = _thisItem_[4]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_isARevKeyItem_ == "True"):
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisKey_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}{FM.CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisKey_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisKey_}{FM.CPAREN}{FM.CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
 				# ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱
 				else:
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisKey_}{FM.CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
-					FM.FMPSG_SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}{_thisKey_}{FM.CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisKey_}{FM.CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
+					FMDEF.SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}{_thisKey_}{FM.CBRKT} = {_thisKey_}  # {_thisComment_}{FM.NEWLINE}""")
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -1147,7 +1147,7 @@ _SCTNS_ = {
 				_thisValName_ = _thisItem_[3]
 				_thisLambda_ = _thisItem_[4]
 				_thisLambda_ = FM.subMyPlaceKpr(_thisLambda_)
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{FM.NEWLINE}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1163,7 +1163,7 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisLine_ = _thisItem_[3]
 				_thisLine_ = FM.subMyPlaceKpr(_thisLine_)
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}{_thisLine_}  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}{_thisLine_}  # {_thisComment_}{FM.NEWLINE}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1179,9 +1179,9 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisValName_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = {FM.DBLQT}{_thisVal_}{FM.DBLQT}  # {_thisComment_}{FM.NEWLINE}""")
-				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{FM.DBLQT}K{_thisValName_[:-1]}{FM.DBLQT}"""
-				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = {FM.DBLQT}{_thisVal_}{FM.DBLQT}  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{FM.DBLQT}K{_thisValName_[:-1]}{FM.DBLQT}"""
+				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1197,9 +1197,9 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisValName_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{FM.NEWLINE}""")
-				FM.FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{FM.DBLQT}K{_thisValName_[:-1]}{FM.DBLQT}"""
-				FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_INIT_DEF2_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{FM.DBLQT}K{_thisValName_[:-1]}{FM.DBLQT}"""
+				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1215,7 +1215,7 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisLine_ = _thisItem_[3]
 				_thisLine_ = FM.subMyPlaceKpr(_thisLine_)
-				FM.FMPSG_SCTN02FF_CLASS_INIT_DEF3_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}{_thisLine_}  # {_thisComment_}{FM.NEWLINE}""")
+				FMDEF.SCTN02FF_CLASS_INIT_DEF3_DICT[_thisClassName_].append(f"""{FM.NTAB(2)}{_thisLine_}  # {_thisComment_}{FM.NEWLINE}""")
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1235,20 +1235,20 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_LAYOUT_DICT):
+					FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_] = {}
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_LAYOUT_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_LAYOUT_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_LAYOUT_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_LAYOUT_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1267,7 +1267,7 @@ _SCTNS_ = {
 				_thisTabLevel_ = _thisItem_[5]
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
-				FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Button{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Button{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1286,7 +1286,7 @@ _SCTNS_ = {
 				_thisTabLevel_ = _thisItem_[5]
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
-				FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Checkbox{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Checkbox{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1306,10 +1306,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementKey_ not in FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_]):
-					FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+				if (_thisElementKey_ not in FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_]):
+					FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Column{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Column{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1328,7 +1328,7 @@ _SCTNS_ = {
 				_thisTabLevel_ = _thisItem_[5]
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
-				FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Combo{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Combo{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1348,7 +1348,7 @@ _SCTNS_ = {
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
 				_thisVal_ = _thisItem_[7]
-				FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}**{_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}**{_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1369,7 +1369,7 @@ _SCTNS_ = {
 				_thisElementKey_ = _thisItem_[6]
 				_thisValKey_ = _thisItem_[7]
 				_thisVal_ = _thisItem_[8]
-				FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}{_thisValKey_}={_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}{_thisValKey_}={_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1388,7 +1388,7 @@ _SCTNS_ = {
 				_thisTabLevel_ = _thisItem_[5]
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
-				FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Radio{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Radio{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1407,10 +1407,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = _thisItem_[5]
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisRowKey_ not in FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_]):
-					FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_] = {}
+				if (_thisRowKey_ not in FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_]):
+					FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][FM.FMDEF.TABLEVEL] = _thisTabLevel_
+				FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][FMDEF.TABLEVEL] = _thisTabLevel_
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1430,10 +1430,10 @@ _SCTNS_ = {
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementKey_ not in FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisLayoutName_][thisRowKey_]):
-					FM.FMPSG_SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] = {}
+				if (_thisElementKey_ not in FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisLayoutName_][thisRowKey_]):
+					FMDEF.SCTN02FF_CLASS_DICT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Spin{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Spin{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1452,7 +1452,7 @@ _SCTNS_ = {
 				_thisTabLevel_ = _thisItem_[5]
 				_thisTabLevel_ = int(_thisTabLevel_[1:])
 				_thisElementKey_ = _thisItem_[6]
-				FM.FMPSG_SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Text{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{FM.NTAB(_thisTabLevel_)}SG.Text{FM.OPAREN}  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1472,20 +1472,20 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisListName_ = _thisItem_[3]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_LIST_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_LIST_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_LIST_DICT):
+					FMDEF.SCTN02FF_CLASS_LIST_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisListName_ not in FM.FMPSG_SCTN02FF_CLASS_LIST_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_LIST_DICT[_thisClassName_][_thisListName_] = ""
+				if (_thisListName_ not in FMDEF.SCTN02FF_CLASS_LIST_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_LIST_DICT[_thisClassName_][_thisListName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_LIST_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_LIST_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_LIST_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_LIST_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_LIST_CMNT_DICT[_thisClassName_][_thisListName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_LIST_CMNT_DICT[_thisClassName_][_thisListName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1500,7 +1500,7 @@ _SCTNS_ = {
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				_thisListName_ = _thisItem_[2]
 				_thisVal_ = _thisItem_[3]
-				FM.FMPSG_SCTN02FF_CLASS_LIST_DICT[_thisListName_] += f"""{FM.NTAB(1)}{FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_LIST_DICT[_thisListName_] += f"""{FM.NTAB(1)}{FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1515,7 +1515,7 @@ _SCTNS_ = {
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 				_thisListName_ = _thisItem_[2]
 				_thisVal_ = _thisItem_[3]
-				FM.FMPSG_SCTN0903_LIST_DICT[_thisListName_] += f"""{FM.NTAB(1)}{_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN0903_LIST_DICT[_thisListName_] += f"""{FM.NTAB(1)}{_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1545,13 +1545,13 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_SPIN_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_SPIN_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_SPIN_DICT):
+					FMDEF.SCTN02FF_CLASS_SPIN_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_SPIN_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_SPIN_DICT[_thisClassName_][_thisElementName_] = {}
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_SPIN_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_SPIN_DICT[_thisClassName_][_thisElementName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
@@ -1565,10 +1565,10 @@ _SCTNS_ = {
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_SPIN_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_SPIN_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_SPIN_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_SPIN_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1595,10 +1595,10 @@ _SCTNS_ = {
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
-					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
-					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
+					FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_SPIN_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_SPIN_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1624,10 +1624,10 @@ _SCTNS_ = {
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_ == "KEY"):
-					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
-					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
+					FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_SPIN_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_SPIN_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1680,37 +1680,37 @@ _SCTNS_ = {
 				_thisElementName_ = _thisItem_[3]
 				_isThisATime_ = _thisItem_[4]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_TEXT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_TEXT_DICT):
+					FMDEF.SCTN02FF_CLASS_TEXT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_TEXT_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] = ""
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_TEXT_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT):
+					FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_TEXT_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_TEXT_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_TEXT_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_isThisATime_ == "True"):
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append(PSG.{_thisElementName_[1:-1]}){FM.NEWLINE}"""
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.{_thisElementName_[1:-1]})){FM.NEWLINE}"""
+					FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append(PSG.{_thisElementName_[1:-1]}){FM.NEWLINE}"""
+					FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_(PSG.{_thisElementName_[1:-1]})){FM.NEWLINE}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_DEF_DICT[f"""K{_thisElementName_}"""] = f"""{FM.DBLQT}k{_thisElementName_}"""
-				FM.FMPSG_SCTN02FF_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_DEF_DICT[f"""K{_thisElementName_}"""] = f"""{FM.DBLQT}k{_thisElementName_}"""
+				FMDEF.SCTN02FF_CLASS_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1727,15 +1727,15 @@ _SCTNS_ = {
 				_thisElementName_ = _thisItem_[3]
 				_thisVal_ = _thisItem_[4]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT):
+					FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1755,19 +1755,19 @@ _SCTNS_ = {
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_[-3:] == "KEY"):
 					thisValStr_ = f"""self._USE_THIS_KEY_{FM.OPAREN}{FM.DBLQT}{_thisVal_}{FM.DBLQT}{FM.CPAREN}"""
-					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
-					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
+					FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 					# 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱
-					if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]):
-						FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
+					if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]):
+						FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 					# ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisModule_}{_thisVal_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.NEWLINE}"""
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}{_thisVal_}{FM.CPAREN}{FM.CBRKT} = {_thisVal_}{FM.NEWLINE}"""
+					FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisModule_}{_thisVal_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisVal_}{FM.CPAREN}{FM.NEWLINE}"""
+					FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}{_thisVal_}{FM.CPAREN}{FM.CBRKT} = {_thisVal_}{FM.NEWLINE}"""
 				# ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱
 				else:
 					thisValStr_ = f"""{_thisVal_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {_thisModule_}{thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {_thisModule_}{thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1788,19 +1788,19 @@ _SCTNS_ = {
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
 				if (_thisKey_[-3:] == "KEY"):
 					thisValStr_ = f"""self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}.{_thisVal_}{FM.CPAREN}"""
-					FM.FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
-					FM.FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
+					FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{FM.DBLQT}{_thisVal_}{FM.DBLQT}"""
+					FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 					# 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱ 5⟱
-					if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]):
-						FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
+					if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_]):
+						FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 					# ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5 ⟰5
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisModule_}.{_thisVal_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}.{_thisVal_}{FM.CPAREN}{FM.NEWLINE}"""
-					FM.FMPSG_SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}.{_thisVal_}{FM.CPAREN}{FM.CBRKT} = {_thisModule_}.{_thisVal_}{FM.NEWLINE}"""
+					FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_{FM.OBRKT}{_thisModule_}.{_thisVal_}{FM.CBRKT} = self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}.{_thisVal_}{FM.CPAREN}{FM.NEWLINE}"""
+					FMDEF.SCTN02FF_CLASS_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(2)}self._DICT_KEYS_REVERSE_{FM.OBRKT}self._USE_THIS_KEY_{FM.OPAREN}{_thisModule_}.{_thisVal_}{FM.CPAREN}{FM.CBRKT} = {_thisModule_}.{_thisVal_}{FM.NEWLINE}"""
 				# ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱ ⟰4⟱
 				else:
 					thisValStr_ = f"""{_thisVal_}"""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1820,20 +1820,20 @@ _SCTNS_ = {
 				_thisClassName_ = _thisItem_[2]
 				_thisElementName_ = _thisItem_[3]
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_WINDOW_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_WINDOW_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_WINDOW_DICT):
+					FMDEF.SCTN02FF_CLASS_WINDOW_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisElementName_ not in FM.FMPSG_SCTN02FF_CLASS_WINDOW_DICT[_thisClassName_]):
-					FM.FMPSG_SCTN02FF_CLASS_WINDOW_DICT[_thisClassName_][_thisElementName_] = ""
+				if (_thisElementName_ not in FMDEF.SCTN02FF_CLASS_WINDOW_DICT[_thisClassName_]):
+					FMDEF.SCTN02FF_CLASS_WINDOW_DICT[_thisClassName_][_thisElementName_] = ""
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				if (_thisClassName_ not in FM.FMPSG_SCTN02FF_CLASS_WINDOW_CMNT_DICT):
-					FM.FMPSG_SCTN02FF_CLASS_WINDOW_CMNT_DICT[_thisClassName_] = {}
+				if (_thisClassName_ not in FMDEF.SCTN02FF_CLASS_WINDOW_CMNT_DICT):
+					FMDEF.SCTN02FF_CLASS_WINDOW_CMNT_DICT[_thisClassName_] = {}
 				# ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4 ⟰4
-				FM.FMPSG_SCTN02FF_CLASS_WINDOW_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+				FMDEF.SCTN02FF_CLASS_WINDOW_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1850,7 +1850,7 @@ _SCTNS_ = {
 				_thisElementName_ = _thisItem_[3]
 				_thisKey_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
-				FM.FMPSG_SCTN02FF_CLASS_WINDOW_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_WINDOW_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {FM.DBLQT}{_thisVal_}{FM.DBLQT},  # {_thisComment_}{FM.NEWLINE}"""
 				continue
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -1867,7 +1867,7 @@ _SCTNS_ = {
 				_thisElementName_ = _thisItem_[3]
 				_thisKey_ = _thisItem_[4]
 				_thisVal_ = _thisItem_[5]
-				FM.FMPSG_SCTN02FF_CLASS_WINDOW_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
+				FMDEF.SCTN02FF_CLASS_WINDOW_DICT[_thisClassName_][_thisElementName_] += f"""{FM.NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{FM.NEWLINE}"""
 				# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
 		# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3

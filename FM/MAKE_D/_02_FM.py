@@ -34,58 +34,58 @@ def __make__():
 	):
 		_FDmakeFM_.write(f"""{V.readFileToStr(N.MAKE_GLBL_NAME(__MODULE_NAME__="FM", __SUB0__="FM", __SUB1__="TOP"))}""")
 		_FDmakeFM_.write(f"""{M.makeAComment("SCTN003 TYPEs and lambda")}""")
-		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0003_TYPE_DICT)
+		_dictToUse_ = FM.sortADict(FMDEF.SCTN0003_TYPE_DICT)
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		for _thisName_, _value_ in _dictToUse_.items():
-			_value_ = FM.FMDEF.SCTN0003_TYPE_DICT[_thisName_]
-			_FDmakeFM_.write(f"""{_thisName_} = {_value_}  # {FM.FMDEF.SCTN0003_TYPE_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
+			_value_ = FMDEF.SCTN0003_TYPE_DICT[_thisName_]
+			_FDmakeFM_.write(f"""{_thisName_} = {_value_}  # {FMDEF.SCTN0003_TYPE_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		_FDmakeFM_.write(F"""{V.NEWLINE}{V.NEWLINE}""")
 		_FDmakeFM_.write(f"""{M.makeAComment("SCTN101 FMAX _DEF_")}""")
 		strToRtn01_ = ""
-		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0101_AX_DICT)
+		_dictToUse_ = FM.sortADict(FMDEF.SCTN0101_AX_DICT)
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		for _thisName_, _value_ in _dictToUse_.items():
-			_FDmakeFMAX_.write(f"""{_thisName_} = {_value_}  # {FM.FMDEF.SCTN0101_AX_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
-			strToRtn01_ += f"""{V.NTAB(1)}{_thisName_},  # {FM.FMDEF.SCTN0101_AX_CMNT_DICT[_thisName_]}{V.NEWLINE}"""
+			_FDmakeFMAX_.write(f"""{_thisName_} = {_value_}  # {FMDEF.SCTN0101_AX_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
+			strToRtn01_ += f"""{V.NTAB(1)}{_thisName_},  # {FMDEF.SCTN0101_AX_CMNT_DICT[_thisName_]}{V.NEWLINE}"""
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		_FDmakeFMAX_.write(f"""{V.NEWLINE}{V.NEWLINE}FMAXFM_AXLST = {V.OBRKT}{V.NEWLINE}{strToRtn01_}{V.CBRKT}{V.NEWLINE}{V.NEWLINE}{V.NEWLINE}""")
 		_FDmakeFM_.write(f"""{M.makeAComment("SCTN102 VAL _DEF_")}""")
 		strToRtn01_ = ""
-		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0102_VAL_DICT)
+		_dictToUse_ = FM.sortADict(FMDEF.SCTN0102_VAL_DICT)
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		for _thisName_, _value_ in _dictToUse_.items():
-			_FDmakeFM_.write(f"""{_thisName_} = {_value_}  # {FM.FMDEF.SCTN0102_VAL_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
+			_FDmakeFM_.write(f"""{_thisName_} = {_value_}  # {FMDEF.SCTN0102_VAL_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		_FDmakeFM_.write(f"""{V.NEWLINE}{V.NEWLINE}""")
 		_FDmakeFM_.write(f"""{M.makeAComment("SCTN103 _DICT_ _DEF_")}""")
-		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0103_DICT_DICT)
+		_dictToUse_ = FM.sortADict(FMDEF.SCTN0103_DICT_DICT)
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		for _thisName_, _value_ in _dictToUse_.items():
-			_FDmakeFM_.write(f"""{_thisName_} = {V.OBRCE}{V.CBRCE}  # {FM.FMDEF.SCTN0103_DICT_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
+			_FDmakeFM_.write(f"""{_thisName_} = {V.OBRCE}{V.CBRCE}  # {FMDEF.SCTN0103_DICT_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		_FDmakeFM_.write(f"""{V.NEWLINE}{V.NEWLINE}""")
 		_FDmakeFM_.write(f"""{M.makeAComment("SCTN104 _LIST_ _DEF_")}""")
-		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0104_LIST_DICT)
+		_dictToUse_ = FM.sortADict(FMDEF.SCTN0104_LIST_DICT)
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		for _thisName_, _value_ in _dictToUse_.items():
-			_FDmakeFM_.write(f"""{_thisName_} = {_value_}  # {FM.FMDEF.SCTN0104_LIST_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
+			_FDmakeFM_.write(f"""{_thisName_} = {_value_}  # {FMDEF.SCTN0104_LIST_CMNT_DICT[_thisName_]}{V.NEWLINE}""")
 		_FDmakeFM_.write(f"""{V.NEWLINE}{V.NEWLINE}{M.makeAWideComment("end of managed portions of FM.py")}{V.NEWLINE}{V.NEWLINE}""")
 	# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
-#		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0103_DICT_DICT)
+#		_dictToUse_ = FM.sortADict(FMDEF.SCTN0103_DICT_DICT)
 #		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 #		for _name_, _value_ in _dictToUse_.items():
 #			_FDmakeFM_.write(f"""{V.NTAB(2)}{_name_}, {V.OBRCE}{V.NEWLINE}""")
 #		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 #		_strToRtn_ = ""
-#		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0104_LIST_DICT)
+#		_dictToUse_ = FM.sortADict(FMDEF.SCTN0104_LIST_DICT)
 #		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 #		for _name_, _value_ in _dictToUse_.items():
 #			_strToRtn_ += (f"""{V.NTAB(2)}{_name_}, {V.OBRCE}{V.NEWLINE}""")
 #		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 #		_FDmakeFM_.write(f"""{_strToRtn_[:-4]}{V.NEWLINE}""")
 #		_FDmakeFM_.write(f"""{V.NTAB(1)}global {V.OBRCE}{V.NEWLINE}""")
-#		_dictToUse_ = FM.sortADict(FM.FMDEF.SCTN0102_VAL_DICT)
+#		_dictToUse_ = FM.sortADict(FMDEF.SCTN0102_VAL_DICT)
 #		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 #		for _name_, _value_ in _dictToUse_.items():
 #			_FDmakeFM_.write(f"""{V.NTAB(2)}{_name_}, {V.OBRCE}{V.NEWLINE}""")

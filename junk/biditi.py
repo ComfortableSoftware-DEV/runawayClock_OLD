@@ -925,14 +925,14 @@ CLMTIMER = [
 
 mainLayout = [  # FMAX.SCTN090B_COLUMN_DEF FMAX.SCTN090E_LAYOUT_DEF <COL|LAYOUT>[NAME]
 
-FMPSG_SCTN090B_COLUMN_DICT {ROWKEY} = ""
-00	00 [  # FMAX.SCTN090B_COLUMN_ROW_ADD FMPSG_SCTN090B_COLUMN_DICT =[NAME] =[ROWKEY] {} LEVEL
-01		01 SG.Col(  # FMAX.SCTN090B_COLUMN_PARM_ADD ELEMENTTYPE FMPSG_SCTN090B_COLUMN_DICT =[NAME] =[ROWKEY] LEVEL =""
-02		02 CLMTIMER,  # FMAXPSG_SCTN090B_COLUMN_PARAM_ADDPARM FMPSG_SCTN090B_COLUMN_DICT [NAME] [ROWKEY] LEVEL +=<STR|VAL>
+FMDEF.SCTN090B_COLUMN_DICT {ROWKEY} = ""
+00	00 [  # FMAX.SCTN090B_COLUMN_ROW_ADD FMDEF.SCTN090B_COLUMN_DICT =[NAME] =[ROWKEY] {} LEVEL
+01		01 SG.Col(  # FMAX.SCTN090B_COLUMN_PARM_ADD ELEMENTTYPE FMDEF.SCTN090B_COLUMN_DICT =[NAME] =[ROWKEY] LEVEL =""
+02		02 CLMTIMER,  # FMAXPSG_SCTN090B_COLUMN_PARAM_ADDPARM FMDEF.SCTN090B_COLUMN_DICT [NAME] [ROWKEY] LEVEL +=<STR|VAL>
 03		),
 04	],
 
-FMPSG_SCTN090B_COLUMN_DICT {ROWKEY} = ""
+FMDEF.SCTN090B_COLUMN_DICT {ROWKEY} = ""
 05	[  # FMAX.SCTN090B_COLUMN_ROW_ADD NAME ROWKEY LEVEL
 06		00 SG.Text(  # FMAX.SCTN090B_COLUMN_TEXT_ADD NAME ROWKEY LEVEL
 07			01 key="_upTime_",  # FMAX.SCTN090B_COLUMN_KEY_ADD NAME ROWKEY LEVEL VALUE
@@ -1625,9 +1625,9 @@ TKCalendar
 
 
 #
-SCTN090C FMPSG_SCTN090C_MAPPDS_DICT |{
+SCTN090C FMDEF.SCTN090C_MAPPDS_DICT |{
 'MAPPDS': {'TIME_CLOCK': '\tTIME_CLOCK: "00:00:00",  # start the clock at midnight\n', 'TIME_ELAPSED': '\tTIME_ELAPSED: "00:00:00",  # start the clock at midnight\n', 'TIME_OF_NEXT_EVENT': '\tTIME_OF_NEXT_EVENT: "00:00:00",  # holds the time of the next coming event for easy maths\n', 'TIME_TOGO': '\tTIME_TOGO: "00:00:00",  # start the clock at midnight\n', 'APPMODE': '\tAPPMODE: APPMODE_CLOCKS,  # default mode is clocks\n', 'AVOID_MOUSE': '\tAVOID_MOUSE: True,  # default to avoiding mouse\n', 'INDEX_OF_NEXT_EVENT': '\tINDEX_OF_NEXT_EVENT: 0,  # default to first entry as next until the app can sort through them\n', 'TRANSPARENT': '\tTRANSPARENT: False,  # default transparent to False\n', 'TRANSPARENT_UNDER_MOUSE': '\tTRANSPARENT_UNDER_MOUSE: True,  # default transparent under mouse when cornered to True\n', 'EVENT_ENTRIES': '\tEVENT_ENTRIES: {  # holds events\n'}}|
-FMPSG_SCTN090C_MAPPDSDICT_DICT|{'MAPPDS': {'EVENT_ENTRIES': '\tNAME: "go to bed",  # this entry\'s name\n\tTIME_ALARM: "04:00:00",  # time of this event\n\tTIME_TOGO: "00:00:00",  # updated only when the edit window is open with this event countdown to next event\n\tDISMISSED: False,  # is this event dismissed\n\tENABLED: False,  # is this event enabled\n\tEVENT_MODE: EVENT_MODE_ALARM,  # this entry\'s event_mode\n\tPREDISMISSABLE: True,  # is this event dismissable in advance\n\tSNOOZABLE: False,  # can this event be snoozed\n\tSNOOZED: False,  # is this event snoozed\n'}}|
+FMDEF.SCTN090C_MAPPDSDICT_DICT|{'MAPPDS': {'EVENT_ENTRIES': '\tNAME: "go to bed",  # this entry\'s name\n\tTIME_ALARM: "04:00:00",  # time of this event\n\tTIME_TOGO: "00:00:00",  # updated only when the edit window is open with this event countdown to next event\n\tDISMISSED: False,  # is this event dismissed\n\tENABLED: False,  # is this event enabled\n\tEVENT_MODE: EVENT_MODE_ALARM,  # this entry\'s event_mode\n\tPREDISMISSABLE: True,  # is this event dismissable in advance\n\tSNOOZABLE: False,  # can this event be snoozed\n\tSNOOZED: False,  # is this event snoozed\n'}}|
 
 
 

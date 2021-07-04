@@ -1118,7 +1118,7 @@ _dictToRtn_ {_dictToRtn_}
 		elif (
 				(self._CURRENT_EVENT_ == PSG.K_BTN_ZERO)
 		):
-			self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE] = PSG.NOW_FULL
+			self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE] = PSG.NOWF
 			self.updateFromDict()
 			return
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1365,7 +1365,7 @@ _dictToRtn_ {_dictToRtn_}
 		self._TIME_MS_AT_MOVE_ = 0
 		self._TIME_MS_AT_UPDATE_ = 0
 		self._TIME_MS_AT_CHECK_MOUSE_ = 0
-		_TTimeDiffElapsed_ = PSG.NOW_FULL -  self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE]
+		_TTimeDiffElapsed_ = PSG.NOWF -  self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE]
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		if (
 				(_TTimeDiffElapsed_ >= CF.TIME_S_995959)
@@ -1778,7 +1778,7 @@ __dummy__ {__dummy__}{CF.NEWLINE}""")
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 		self._DICTIN_[PSG.K_TIME_S_CLOCK] = PSG.NOWS
 		self._DICTIN_[PSG.K_TIME_S_TOGO] = (self._DICTIN_[PSG.K_TIME_S_AT_NEXT_ALERT] - PSG.NOWS)
-		self._DICTIN_[PSG.K_TIME_S_ELAPSED] = (PSG.NOW_FULL - self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE]) % CF.TIME_S_995959
+		self._DICTIN_[PSG.K_TIME_S_ELAPSED] = (PSG.NOWF - self._DICTIN_[PSG.K_TIME_F_AT_ZEROELAPSE]) % CF.TIME_S_995959
 		self.updateFromDict()
 		self.quickRead()
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱

@@ -737,107 +737,107 @@ FMDEF.SCTN0105_LDICT_CMNT_DICT = {}  # SCTN105 ldict defined
 FMDEF.SCTN0105_LDICT_DICT = {}  # SCTN105 ldict defined
 FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
 FMDEF.SCTN0900_DEF1_CMNT_DICT = {}  #
-FMPSG_SCTN0900_DEF1_DICT = {}  #
-FMPSG_SCTN0901_DEF2_CMNT_DICT = {}  # define the dict to hold everything in SCTN0901
-FMPSG_SCTN0901_DEF2_DICT = {}  # define the dict to hold everything in SCTN0901
-FMPSG_SCTN0902_DICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0902
-FMPSG_SCTN0902_DICT_DICT = {}  # define the dict to hold everything in SCTN0902
-FMPSG_SCTN0903_LIST_CMNT_DICT = {}  # define the dict to hold everything in SCTN0903
-FMPSG_SCTN0903_LIST_DICT = {}  # define the dict to hold everything in SCTN0903
-FMPSG_SCTN0904_PLATEQ_INNER_CMNT_DICT = {}  # define the dict to hold everything in SCTN0904
-FMPSG_SCTN0904_PLATEQ_INNER_DICT = {}  # define the dict to hold everything in SCTN0904
-FMPSG_SCTN0904_PLATEQ_OUTER_CMNT_DICT = {}  # define the dict to hold everything in SCTN0904
-FMPSG_SCTN0904_PLATEQ_OUTER_DICT = {}  # define the dict to hold everything in SCTN0904
-FMPSG_SCTN0905_TUPDICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0905
-FMPSG_SCTN0905_TUPDICT_DICT = {}  # define the dict to hold everything in SCTN0905
-FMPSG_SCTN0905_TUPDICT_TDD_DICT = {}  # define the dict to hold everything in SCTN0905
-FMPSG_SCTN0906_BTNS_CMNT_DICT = {}  #
-FMPSG_SCTN0906_BTNS_DICT = {}  #
-FMPSG_SCTN0907_SPIN_CMNT_DICT = {}  # holds the spin element stuffs (TUPDICT)f
-FMPSG_SCTN0907_SPIN_DICT = {}  # holds the spin element stuffs (TUPDICT)
-FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
-FMPSG_SCTN0908_CHECKBOX_CMNT_DICT = {}  #
-FMPSG_SCTN0908_CHECKBOX_DICT = {}  #
-FMPSG_SCTN0909_TEXT_CMNT_DICT = {}  #
-FMPSG_SCTN0909_TEXT_DICT = {}  #
-FMPSG_SCTN090A_RADIO_CMNT_DICT = {}  #
-FMPSG_SCTN090A_RADIO_DICT = {}  #
-FMPSG_SCTN090B_COLUMN_CMNT_DICT = {}  #
-FMPSG_SCTN090B_COLUMN_DICT = {}  #
-FMPSG_SCTN090B_COLUMN_PARMS_DICT = {}  #
-FMPSG_SCTN090C_APPDS_CMNT_DICT = {}  # the main app dict for this app
-FMPSG_SCTN090C_APPDS_DICT = {}  # the main app dict for this app
-FMPSG_SCTN090C_APPDSDICT_DICT = {}  # the main app dict+dict for this app
-FMPSG_SCTN090D_FORMMAIN_CMNT_DICT = {}  #
-FMPSG_SCTN090D_FORMMAIN_DICT = {}  #
-FMPSG_SCTN090E_LAYOUT_CMNT_DICT = {}  #
-FMPSG_SCTN090E_LAYOUT_DICT = {}  #
-FMPSG_SCTN090F_WINDOW_CMNT_DICT = {}  #
-FMPSG_SCTN090F_WINDOW_DICT = {}  #
-FMPSG_SCTN0910_DEF3_CMNT_DICT = {}  #
-FMPSG_SCTN0910_DEF3_DICT = {}  #
-FMPSG_SCTN0911_COMBO_CMNT_DICT = {}  #
-FMPSG_SCTN0911_COMBO_DICT = {}  #
-FMPSG_SCTN0912_FRAME_CMNT_DICT = {}  #
-FMPSG_SCTN0912_FRAME_DICT = {}  #
-FMPSG_SCTN0913_RCMENU_CMNT_DICT = {}  #
-FMPSG_SCTN0913_RCMENU_DICT = {}  #
-FMPSG_SCTN0914_FORMPOPUP_CMNT_DICT = {}  #
-FMPSG_SCTN0914_FORMPOPUP_DICT = {}  #
-FMPSG_SCTN0915_PUDLG_CMNT_DICT = {}  #
-FMPSG_SCTN0915_PUDLG_DICT_DICT = {}  #
-FMPSG_SCTN0915_PUDLG_LIST_DICT = {}  #
-FMPSG_SCTN0915_PUDLG_TYPE_DICT = {}  #
-FMPSG_SCTN09FF_BTNS_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_BTNS_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_BTNS_DICT = {}  #
-FMPSG_SCTN09FF_CHECKBOX_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_CHECKBOX_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_CHECKBOX_DICT = {}  #
-FMPSG_SCTN09FF_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_COLUMN_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_COLUMN_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_COLUMN_DICT = {}  #
-FMPSG_SCTN09FF_COLUMN_PARMS_DICT = {}  #
-FMPSG_SCTN09FF_COMBO_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_COMBO_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_COMBO_DICT = {}  #
-FMPSG_SCTN09FF_DEF_DICT = {}  # str and val defines in a class
-FMPSG_SCTN09FF_DICT = {}  #
-FMPSG_SCTN09FF_DICT_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_DICT_DICT = {}  #
-FMPSG_SCTN09FF_FRAME_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_FRAME_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_FRAME_DICT = {}  #
-FMPSG_SCTN09FF_FUNCTION_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_FUNCTION_DEF1_DICT = {}  #
-FMPSG_SCTN09FF_FUNCTION_DEF2_DICT = {}  #
-FMPSG_SCTN09FF_FUNCTION_DICT = {}  #
-FMPSG_SCTN09FF_INIT_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_INIT_DEF1_DICT = {}  #
-FMPSG_SCTN09FF_INIT_DEF2_DICT = {}  #
-FMPSG_SCTN09FF_INIT_DEF3_DICT = {}  #
-FMPSG_SCTN09FF_INIT_DICT = {}  #
-FMPSG_SCTN09FF_INIT_DICTIN_DICT = {}  #
-FMPSG_SCTN09FF_INIT_DICTINSTR_DICT = {}  #
-FMPSG_SCTN09FF_LAYOUT_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_LAYOUT_DICT = {}  #
-FMPSG_SCTN09FF_LIST_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_LIST_DICT = {}  #
-FMPSG_SCTN09FF_RADIO_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_RADIO_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_RADIO_DICT = {}  #
-FMPSG_SCTN09FF_RCMENU_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_RCMENU_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_RCMENU_DICT = {}  #
-FMPSG_SCTN09FF_SPIN_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_SPIN_CMNT_DICT = {}  # holds the spin element stuffs (TUPDICT)f
-FMPSG_SCTN09FF_SPIN_DICT = {}  # holds the spin element stuffs (TUPDICT)
-FMPSG_SCTN09FF_TEXT_ADDON_DICT = {}  #
-FMPSG_SCTN09FF_TEXT_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_TEXT_DICT = {}  #
-FMPSG_SCTN09FF_WINDOW_CMNT_DICT = {}  #
-FMPSG_SCTN09FF_WINDOW_DICT = {}  #
+FMDEF.SCTN0900_DEF1_DICT = {}  #
+FMDEF.SCTN0901_DEF2_CMNT_DICT = {}  # define the dict to hold everything in SCTN0901
+FMDEF.SCTN0901_DEF2_DICT = {}  # define the dict to hold everything in SCTN0901
+FMDEF.SCTN0902_DICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0902
+FMDEF.SCTN0902_DICT_DICT = {}  # define the dict to hold everything in SCTN0902
+FMDEF.SCTN0903_LIST_CMNT_DICT = {}  # define the dict to hold everything in SCTN0903
+FMDEF.SCTN0903_LIST_DICT = {}  # define the dict to hold everything in SCTN0903
+FMDEF.SCTN0904_PLATEQ_INNER_CMNT_DICT = {}  # define the dict to hold everything in SCTN0904
+FMDEF.SCTN0904_PLATEQ_INNER_DICT = {}  # define the dict to hold everything in SCTN0904
+FMDEF.SCTN0904_PLATEQ_OUTER_CMNT_DICT = {}  # define the dict to hold everything in SCTN0904
+FMDEF.SCTN0904_PLATEQ_OUTER_DICT = {}  # define the dict to hold everything in SCTN0904
+FMDEF.SCTN0905_TUPDICT_CMNT_DICT = {}  # define the dict to hold everything in SCTN0905
+FMDEF.SCTN0905_TUPDICT_DICT = {}  # define the dict to hold everything in SCTN0905
+FMDEF.SCTN0905_TUPDICT_TDD_DICT = {}  # define the dict to hold everything in SCTN0905
+FMDEF.SCTN0906_BTNS_CMNT_DICT = {}  #
+FMDEF.SCTN0906_BTNS_DICT = {}  #
+FMDEF.SCTN0907_SPIN_CMNT_DICT = {}  # holds the spin element stuffs (TUPDICT)f
+FMDEF.SCTN0907_SPIN_DICT = {}  # holds the spin element stuffs (TUPDICT)
+FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT = {}  # holds the spin element stuffs (TUPDICT)
+FMDEF.SCTN0908_CHECKBOX_CMNT_DICT = {}  #
+FMDEF.SCTN0908_CHECKBOX_DICT = {}  #
+FMDEF.SCTN0909_TEXT_CMNT_DICT = {}  #
+FMDEF.SCTN0909_TEXT_DICT = {}  #
+FMDEF.SCTN090A_RADIO_CMNT_DICT = {}  #
+FMDEF.SCTN090A_RADIO_DICT = {}  #
+FMDEF.SCTN090B_COLUMN_CMNT_DICT = {}  #
+FMDEF.SCTN090B_COLUMN_DICT = {}  #
+FMDEF.SCTN090B_COLUMN_PARMS_DICT = {}  #
+FMDEF.SCTN090C_APPDS_CMNT_DICT = {}  # the main app dict for this app
+FMDEF.SCTN090C_APPDS_DICT = {}  # the main app dict for this app
+FMDEF.SCTN090C_APPDSDICT_DICT = {}  # the main app dict+dict for this app
+FMDEF.SCTN090D_FORMMAIN_CMNT_DICT = {}  #
+FMDEF.SCTN090D_FORMMAIN_DICT = {}  #
+FMDEF.SCTN090E_LAYOUT_CMNT_DICT = {}  #
+FMDEF.SCTN090E_LAYOUT_DICT = {}  #
+FMDEF.SCTN090F_WINDOW_CMNT_DICT = {}  #
+FMDEF.SCTN090F_WINDOW_DICT = {}  #
+FMDEF.SCTN0910_DEF3_CMNT_DICT = {}  #
+FMDEF.SCTN0910_DEF3_DICT = {}  #
+FMDEF.SCTN0911_COMBO_CMNT_DICT = {}  #
+FMDEF.SCTN0911_COMBO_DICT = {}  #
+FMDEF.SCTN0912_FRAME_CMNT_DICT = {}  #
+FMDEF.SCTN0912_FRAME_DICT = {}  #
+FMDEF.SCTN0913_RCMENU_CMNT_DICT = {}  #
+FMDEF.SCTN0913_RCMENU_DICT = {}  #
+FMDEF.SCTN0914_FORMPOPUP_CMNT_DICT = {}  #
+FMDEF.SCTN0914_FORMPOPUP_DICT = {}  #
+FMDEF.SCTN0915_PUDLG_CMNT_DICT = {}  #
+FMDEF.SCTN0915_PUDLG_DICT_DICT = {}  #
+FMDEF.SCTN0915_PUDLG_LIST_DICT = {}  #
+FMDEF.SCTN0915_PUDLG_TYPE_DICT = {}  #
+FMDEF.SCTN09FF_BTNS_ADDON_DICT = {}  #
+FMDEF.SCTN09FF_BTNS_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_BTNS_DICT = {}  #
+FMDEF.SCTN09FF_CHECKBOX_ADDON_DICT = {}  #
+FMDEF.SCTN09FF_CHECKBOX_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_CHECKBOX_DICT = {}  #
+FMDEF.SCTN09FF_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_COLUMN_ADDON_DICT = {}  #
+FMDEF.SCTN09FF_COLUMN_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_COLUMN_DICT = {}  #
+FMDEF.SCTN09FF_COLUMN_PARMS_DICT = {}  #
+FMDEF.SCTN09FF_COMBO_ADDON_DICT = {}  #
+FMDEF.SCTN09FF_COMBO_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_COMBO_DICT = {}  #
+FMDEF.SCTN09FF_DEF_DICT = {}  # str and val defines in a class
+FMDEF.SCTN09FF_DICT = {}  #
+FMDEF.SCTN09FF_DICT_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_DICT_DICT = {}  #
+FMDEF.SCTN09FF_FRAME_ADDON_DICT = {}  #
+FMDEF.SCTN09FF_FRAME_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_FRAME_DICT = {}  #
+FMDEF.SCTN09FF_FUNCTION_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_FUNCTION_DEF1_DICT = {}  #
+FMDEF.SCTN09FF_FUNCTION_DEF2_DICT = {}  #
+FMDEF.SCTN09FF_FUNCTION_DICT = {}  #
+FMDEF.SCTN09FF_INIT_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_INIT_DEF1_DICT = {}  #
+FMDEF.SCTN09FF_INIT_DEF2_DICT = {}  #
+FMDEF.SCTN09FF_INIT_DEF3_DICT = {}  #
+FMDEF.SCTN09FF_INIT_DICT = {}  #
+FMDEF.SCTN09FF_INIT_DICTIN_DICT = {}  #
+FMDEF.SCTN09FF_INIT_DICTINSTR_DICT = {}  #
+FMDEF.SCTN09FF_LAYOUT_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_LAYOUT_DICT = {}  #
+FMDEF.SCTN09FF_LIST_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_LIST_DICT = {}  #
+FMDEF.SCTN09FF_RADIO_ADDON_DICT = {}  #
+FMDEF.SCTN09FF_RADIO_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_RADIO_DICT = {}  #
+FMDEF.SCTN09FF_RCMENU_ADDON_DICT = {}  #
+FMDEF.SCTN09FF_RCMENU_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_RCMENU_DICT = {}  #
+FMDEF.SCTN09FF_SPIN_ADDON_DICT = {}  #
+FMDEF.SCTN09FF_SPIN_CMNT_DICT = {}  # holds the spin element stuffs (TUPDICT)f
+FMDEF.SCTN09FF_SPIN_DICT = {}  # holds the spin element stuffs (TUPDICT)
+FMDEF.SCTN09FF_TEXT_ADDON_DICT = {}  #
+FMDEF.SCTN09FF_TEXT_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_TEXT_DICT = {}  #
+FMDEF.SCTN09FF_WINDOW_CMNT_DICT = {}  #
+FMDEF.SCTN09FF_WINDOW_DICT = {}  #
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -1131,107 +1131,107 @@ TBGLST = [
 	("FMPSG", FMAX.NOP, "FMPSG_BEGINS",),
 	("FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
 	("FMDEF.SCTN0900_DEF1_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0900_DEF1_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0901_DEF2_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0901",),
-	("FMPSG_SCTN0901_DEF2_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0901",),
-	("FMPSG_SCTN0902_DICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0902",),
-	("FMPSG_SCTN0902_DICT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0902",),
-	("FMPSG_SCTN0903_LIST_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0903",),
-	("FMPSG_SCTN0903_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0903",),
-	("FMPSG_SCTN0904_PLATEQ_INNER_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0904",),
-	("FMPSG_SCTN0904_PLATEQ_INNER_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0904",),
-	("FMPSG_SCTN0904_PLATEQ_OUTER_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0904",),
-	("FMPSG_SCTN0904_PLATEQ_OUTER_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0904",),
-	("FMPSG_SCTN0905_TUPDICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0905",),
-	("FMPSG_SCTN0905_TUPDICT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0905",),
-	("FMPSG_SCTN0905_TUPDICT_TDD_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0905",),
-	("FMPSG_SCTN0906_BTNS_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0906_BTNS_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0907_SPIN_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)f",),
-	("FMPSG_SCTN0907_SPIN_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
-	("FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
-	("FMPSG_SCTN0908_CHECKBOX_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0908_CHECKBOX_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0909_TEXT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0909_TEXT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN090A_RADIO_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN090A_RADIO_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN090B_COLUMN_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN090B_COLUMN_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN090B_COLUMN_PARMS_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN090C_APPDSDICT_DICT", FMAX.SCTN0103_DICT_DEF, "the main app dict+dict for this app",),
-	("FMPSG_SCTN090C_APPDS_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "the main app dict for this app",),
-	("FMPSG_SCTN090C_APPDS_DICT", FMAX.SCTN0103_DICT_DEF, "the main app dict for this app",),
-	("FMPSG_SCTN090D_FORMMAIN_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN090D_FORMMAIN_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN090E_LAYOUT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN090E_LAYOUT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN090F_WINDOW_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN090F_WINDOW_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0910_DEF3_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0910_DEF3_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0911_COMBO_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0911_COMBO_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0912_FRAME_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0912_FRAME_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0913_RCMENU_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0913_RCMENU_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0914_FORMPOPUP_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0914_FORMPOPUP_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0915_PUDLG_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0915_PUDLG_DICT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0915_PUDLG_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN0915_PUDLG_TYPE_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_BTNS_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_BTNS_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_BTNS_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_CHECKBOX_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_CHECKBOX_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_CHECKBOX_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_COLUMN_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_COLUMN_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_COLUMN_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_COLUMN_PARMS_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_COMBO_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_COMBO_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_COMBO_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_DEF_DICT", FMAX.SCTN0103_DICT_DEF, "str and val defines in a class",),
-	("FMPSG_SCTN09FF_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_DICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_DICT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_FRAME_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_FRAME_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_FRAME_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_FUNCTION_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_FUNCTION_DEF1_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_FUNCTION_DEF2_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_FUNCTION_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_INIT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_INIT_DEF1_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_INIT_DEF2_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_INIT_DEF3_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_INIT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_INIT_DICTINSTR_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_INIT_DICTIN_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_LAYOUT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_LAYOUT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_LIST_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_RADIO_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_RADIO_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_RADIO_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_RCMENU_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_RCMENU_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_RCMENU_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_SPIN_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_SPIN_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)f",),
-	("FMPSG_SCTN09FF_SPIN_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
-	("FMPSG_SCTN09FF_TEXT_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_TEXT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_TEXT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_WINDOW_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
-	("FMPSG_SCTN09FF_WINDOW_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0900_DEF1_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0901_DEF2_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0901",),
+	("FMDEF.SCTN0901_DEF2_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0901",),
+	("FMDEF.SCTN0902_DICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0902",),
+	("FMDEF.SCTN0902_DICT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0902",),
+	("FMDEF.SCTN0903_LIST_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0903",),
+	("FMDEF.SCTN0903_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0903",),
+	("FMDEF.SCTN0904_PLATEQ_INNER_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0904",),
+	("FMDEF.SCTN0904_PLATEQ_INNER_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0904",),
+	("FMDEF.SCTN0904_PLATEQ_OUTER_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0904",),
+	("FMDEF.SCTN0904_PLATEQ_OUTER_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0904",),
+	("FMDEF.SCTN0905_TUPDICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0905",),
+	("FMDEF.SCTN0905_TUPDICT_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0905",),
+	("FMDEF.SCTN0905_TUPDICT_TDD_DICT", FMAX.SCTN0103_DICT_DEF, "define the dict to hold everything in SCTN0905",),
+	("FMDEF.SCTN0906_BTNS_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0906_BTNS_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0907_SPIN_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)f",),
+	("FMDEF.SCTN0907_SPIN_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
+	("FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
+	("FMDEF.SCTN0908_CHECKBOX_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0908_CHECKBOX_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0909_TEXT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0909_TEXT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN090A_RADIO_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN090A_RADIO_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN090B_COLUMN_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN090B_COLUMN_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN090B_COLUMN_PARMS_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN090C_APPDSDICT_DICT", FMAX.SCTN0103_DICT_DEF, "the main app dict+dict for this app",),
+	("FMDEF.SCTN090C_APPDS_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "the main app dict for this app",),
+	("FMDEF.SCTN090C_APPDS_DICT", FMAX.SCTN0103_DICT_DEF, "the main app dict for this app",),
+	("FMDEF.SCTN090D_FORMMAIN_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN090D_FORMMAIN_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN090E_LAYOUT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN090E_LAYOUT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN090F_WINDOW_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN090F_WINDOW_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0910_DEF3_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0910_DEF3_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0911_COMBO_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0911_COMBO_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0912_FRAME_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0912_FRAME_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0913_RCMENU_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0913_RCMENU_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0914_FORMPOPUP_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0914_FORMPOPUP_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0915_PUDLG_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0915_PUDLG_DICT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0915_PUDLG_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN0915_PUDLG_TYPE_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_BTNS_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_BTNS_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_BTNS_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_CHECKBOX_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_CHECKBOX_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_CHECKBOX_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_COLUMN_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_COLUMN_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_COLUMN_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_COLUMN_PARMS_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_COMBO_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_COMBO_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_COMBO_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_DEF_DICT", FMAX.SCTN0103_DICT_DEF, "str and val defines in a class",),
+	("FMDEF.SCTN09FF_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_DICT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_DICT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_FRAME_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_FRAME_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_FRAME_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_FUNCTION_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_FUNCTION_DEF1_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_FUNCTION_DEF2_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_FUNCTION_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_INIT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_INIT_DEF1_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_INIT_DEF2_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_INIT_DEF3_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_INIT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_INIT_DICTINSTR_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_INIT_DICTIN_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_LAYOUT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_LAYOUT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_LIST_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_LIST_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_RADIO_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_RADIO_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_RADIO_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_RCMENU_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_RCMENU_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_RCMENU_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_SPIN_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_SPIN_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)f",),
+	("FMDEF.SCTN09FF_SPIN_DICT", FMAX.SCTN0103_DICT_DEF, "holds the spin element stuffs (TUPDICT)",),
+	("FMDEF.SCTN09FF_TEXT_ADDON_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_TEXT_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_TEXT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_WINDOW_CMNT_DICT", FMAX.SCTN0103_DICT_DEF, "",),
+	("FMDEF.SCTN09FF_WINDOW_DICT", FMAX.SCTN0103_DICT_DEF, "",),
 	("FMPSG_____", FMAX.NOP, "FMPSG_ENDS",),
 	("FMVAl_FMDEF.TABLEVEL", FMAX.SCTN0102_STR_DEF, "FMDEF.TABLEVEL", "FMDEF.TABLEVEL", "key for tab levels",),
 	("PSGVAL", FMAX.NOP, "FMPSG_BEGINS",),
@@ -2535,7 +2535,7 @@ def makePSGClasses():
 	_strToRtn_ += f"""{makeAComment("SCTN09FF classes")}{NEWLINE}{NEWLINE}"""
 
 	# 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱
-	_dictToUse1_ = sortADict(FMPSG_SCTN09FF_DICT)
+	_dictToUse1_ = sortADict(FMDEF.SCTN09FF_DICT)
 	for _thisClassName_, _theseVars_ in _dictToUse1_.items():
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 
@@ -2545,24 +2545,24 @@ def makePSGClasses():
 {NTAB(2)}APPDS_MAIN
 {NTAB(1)}{FOLD1STARTHERE}{NEWLINE}
 """
-		_strToRtn_ += f"""{NTAB(1)}def __init__{OPAREN}self{FMPSG_SCTN09FF_INIT_DICT[_thisClassName_].pop(0)}{CPAREN}:{NEWLINE}{NTAB(2)}{FOLD2STARTHERELN}"""
+		_strToRtn_ += f"""{NTAB(1)}def __init__{OPAREN}self{FMDEF.SCTN09FF_INIT_DICT[_thisClassName_].pop(0)}{CPAREN}:{NEWLINE}{NTAB(2)}{FOLD2STARTHERELN}"""
 
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
-		for _thisItem_ in FMPSG_SCTN09FF_INIT_DEF1_DICT[_thisClassName_]:
+		for _thisItem_ in FMDEF.SCTN09FF_INIT_DEF1_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 
 		_strToRtn_ += f"""{NEWLINE}"""
 
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
-		for _thisItem_ in FMPSG_SCTN09FF_INIT_DEF2_DICT[_thisClassName_]:
+		for _thisItem_ in FMDEF.SCTN09FF_INIT_DEF2_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 
 			# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			if (_thisClassName_ in FMPSG_SCTN09FF_DEF_DICT):
-				# print(f"""FMPSG_SCTN09FF_DICT_CMNT_DICT {FMPSG_SCTN09FF_DICT_CMNT_DICT}""")
+			if (_thisClassName_ in FMDEF.SCTN09FF_DEF_DICT):
+				# print(f"""FMDEF.SCTN09FF_DICT_CMNT_DICT {FMDEF.SCTN09FF_DICT_CMNT_DICT}""")
 
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				for _thisValName_, _thisVal_ in FMPSG_SCTN09FF_DEF_DICT[_thisClassName_].items():
+				for _thisValName_, _thisVal_ in FMDEF.SCTN09FF_DEF_DICT[_thisClassName_].items():
 					_strToRtn_ += f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}{NEWLINE}"""
 
 				_strToRtn_ += f"""{NEWLINE}"""
@@ -2572,33 +2572,33 @@ def makePSGClasses():
 
 		_strToRtn_ += f"""{NTAB(2)}self._DICTIN_ = {OBRCE}{NEWLINE}{NTAB(2)}{FOLD3STARTHERELN}"""
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
-		for _thisItem_ in FMPSG_SCTN09FF_INIT_DICTIN_DICT[_thisClassName_]:
+		for _thisItem_ in FMDEF.SCTN09FF_INIT_DICTIN_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 
 		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{FOLD3ENDHERELN}{NEWLINE}"""
 
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		_strToRtn_ += f"""{NTAB(2)}self._DICTINSTR_ = {OBRCE}{NEWLINE}{NTAB(2)}{FOLD3STARTHERELN}"""
-		for _thisItem_ in FMPSG_SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_]:
+		for _thisItem_ in FMDEF.SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 
 		_strToRtn_ += f"""{NTAB(2)}{CBRCE}{NEWLINE}{FOLD3ENDHERELN}{NEWLINE}"""
 
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
-		if _thisClassName_ in FMPSG_SCTN09FF_DICT_DICT:
-			# print(f"""FMPSG_SCTN09FF_DICT_CMNT_DICT {FMPSG_SCTN09FF_DICT_CMNT_DICT}""")
+		if _thisClassName_ in FMDEF.SCTN09FF_DICT_DICT:
+			# print(f"""FMDEF.SCTN09FF_DICT_CMNT_DICT {FMDEF.SCTN09FF_DICT_CMNT_DICT}""")
 			# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN09FF_DICT_DICT[_thisClassName_].items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN09FF_DICT_CMNT_DICT[_thisClassName_][_thisElementName_]}
+			for _thisElementName_, _thisElementVals_ in FMDEF.SCTN09FF_DICT_DICT[_thisClassName_].items():
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMDEF.SCTN09FF_DICT_CMNT_DICT[_thisClassName_][_thisElementName_]}
 {NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}{NEWLINE}"""
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
 
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
-		if _thisClassName_ in FMPSG_SCTN09FF_LIST_DICT:
-			# print(f"""FMPSG_SCTN09FF_DICT_CMNT_DICT {FMPSG_SCTN09FF_DICT_CMNT_DICT}""")
+		if _thisClassName_ in FMDEF.SCTN09FF_LIST_DICT:
+			# print(f"""FMDEF.SCTN09FF_DICT_CMNT_DICT {FMDEF.SCTN09FF_DICT_CMNT_DICT}""")
 			# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN09FF_LIST_DICT[_thisClassName_].items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN09FF_LIST_CMNT_DICT[_thisClassName_][_thisElementName_]}
+			for _thisElementName_, _thisElementVals_ in FMDEF.SCTN09FF_LIST_DICT[_thisClassName_].items():
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMDEF.SCTN09FF_LIST_CMNT_DICT[_thisClassName_][_thisElementName_]}
 {NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRKT}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}"""
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
 			_strToRtn_ += f"""{NEWLINE}"""
@@ -2610,10 +2610,10 @@ def makePSGClasses():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
-		if _thisClassName_ in FMPSG_SCTN09FF_BTNS_DICT:
+		if _thisClassName_ in FMDEF.SCTN09FF_BTNS_DICT:
 			# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN09FF_BTNS_DICT[_thisClassName_].items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN09FF_BTNS_CMNT_DICT[_thisClassName_][_thisElementName_]}
+			for _thisElementName_, _thisElementVals_ in FMDEF.SCTN09FF_BTNS_DICT[_thisClassName_].items():
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMDEF.SCTN09FF_BTNS_CMNT_DICT[_thisClassName_][_thisElementName_]}
 {NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}
 """
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
@@ -2621,49 +2621,49 @@ def makePSGClasses():
 
 	# ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
-		if _thisClassName_ in FMPSG_SCTN09FF_CHECKBOX_DICT:
-			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN09FF_CHECKBOX_DICT[_thisClassName_].items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN09FF_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_]}
+		if _thisClassName_ in FMDEF.SCTN09FF_CHECKBOX_DICT:
+			for _thisElementName_, _thisElementVals_ in FMDEF.SCTN09FF_CHECKBOX_DICT[_thisClassName_].items():
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMDEF.SCTN09FF_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_]}
 {NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}"""
-				if _thisElementName_ in FMPSG_SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_]:
-					_strToRtn_ += f"""{FMPSG_SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_]}"""
+				if _thisElementName_ in FMDEF.SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_]:
+					_strToRtn_ += f"""{FMDEF.SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_]}"""
 
 				_strToRtn_ += f"""{NEWLINE}"""
 
 	# ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
-		if _thisClassName_ in FMPSG_SCTN09FF_COMBO_DICT:
-			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN09FF_COMBO_DICT[_thisClassName_].items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN09FF_COMBO_CMNT_DICT[_thisClassName_][_thisElementName_]}
+		if _thisClassName_ in FMDEF.SCTN09FF_COMBO_DICT:
+			for _thisElementName_, _thisElementVals_ in FMDEF.SCTN09FF_COMBO_DICT[_thisClassName_].items():
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMDEF.SCTN09FF_COMBO_CMNT_DICT[_thisClassName_][_thisElementName_]}
 {NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}
 """
 
 	# ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
-		if _thisClassName_ in FMPSG_SCTN09FF_RADIO_DICT:
-			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN09FF_RADIO_DICT[_thisClassName_].items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN09FF_RADIO_CMNT_DICT[_thisClassName_][_thisElementName_]}
+		if _thisClassName_ in FMDEF.SCTN09FF_RADIO_DICT:
+			for _thisElementName_, _thisElementVals_ in FMDEF.SCTN09FF_RADIO_DICT[_thisClassName_].items():
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMDEF.SCTN09FF_RADIO_CMNT_DICT[_thisClassName_][_thisElementName_]}
 {NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}
 """
 
 	# ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
-		if _thisClassName_ in FMPSG_SCTN09FF_SPIN_DICT:
-			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN09FF_SPIN_DICT[_thisClassName_].items():
+		if _thisClassName_ in FMDEF.SCTN09FF_SPIN_DICT:
+			for _thisElementName_, _thisElementVals_ in FMDEF.SCTN09FF_SPIN_DICT[_thisClassName_].items():
 				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_}_SPIN_LIST = {OBRKT}
 {FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_][_thisElementName_]}{NTAB(2)}{CBRKT}{NEWLINE}
-{NTAB(2)}self.{_thisElementName_}_SPIN_DICT = {OBRCE}  # {FMPSG_SCTN09FF_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_]}
+{NTAB(2)}self.{_thisElementName_}_SPIN_DICT = {OBRCE}  # {FMDEF.SCTN09FF_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_]}
 {NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}
 """
 
 	# ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
-		if _thisClassName_ in FMPSG_SCTN09FF_TEXT_DICT:
-			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN09FF_TEXT_DICT[_thisClassName_].items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN09FF_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_]}
+		if _thisClassName_ in FMDEF.SCTN09FF_TEXT_DICT:
+			for _thisElementName_, _thisElementVals_ in FMDEF.SCTN09FF_TEXT_DICT[_thisClassName_].items():
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMDEF.SCTN09FF_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_]}
 {NTAB(2)}{FOLD3STARTHERELN}{_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}"""
-				if _thisElementName_ in FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_]:
-					_strToRtn_ += f"""{FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_]}"""
+				if _thisElementName_ in FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_]:
+					_strToRtn_ += f"""{FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_]}"""
 
 				_strToRtn_ += f"""{NEWLINE}"""
 
@@ -2673,14 +2673,14 @@ def makePSGClasses():
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
-		if _thisClassName_ in FMPSG_SCTN09FF_COLUMN_DICT:
-			_dictToUse2_ = sortADict(FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_])
+		if _thisClassName_ in FMDEF.SCTN09FF_COLUMN_DICT:
+			_dictToUse2_ = sortADict(FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_])
 
 			for _thisElementName_, _vals1_ in _dictToUse2_.items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN09FF_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_]}{NEWLINE}{NTAB(2)}{FOLD3STARTHERELN}"""
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMDEF.SCTN09FF_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_]}{NEWLINE}{NTAB(2)}{FOLD3STARTHERELN}"""
 
 				for _thisRow_, _vals2_ in _vals1_.items():
-					_thisTabLevel1_ = FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRow_][FMDEF.TABLEVEL]
+					_thisTabLevel1_ = FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRow_][FMDEF.TABLEVEL]
 					_strToRtn_ += f"""{NTAB(_thisTabLevel1_)}{OBRKT}{NEWLINE}"""
 
 					for _thisElementKey_, _vals3_ in _vals2_.items():
@@ -2697,14 +2697,14 @@ def makePSGClasses():
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
-		if _thisClassName_ in FMPSG_SCTN09FF_LAYOUT_DICT:
-			_dictToUse2_ = sortADict(FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_])
+		if _thisClassName_ in FMDEF.SCTN09FF_LAYOUT_DICT:
+			_dictToUse2_ = sortADict(FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_])
 
 			for _thisElementName_, _vals1_ in _dictToUse2_.items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN09FF_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_]}{NEWLINE}{NTAB(2)}{FOLD3STARTHERELN}"""
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRKT}  # {FMDEF.SCTN09FF_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_]}{NEWLINE}{NTAB(2)}{FOLD3STARTHERELN}"""
 
 				for _thisRow_, _vals2_ in _vals1_.items():
-					_thisTabLevel1_ = FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRow_][FMDEF.TABLEVEL]
+					_thisTabLevel1_ = FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRow_][FMDEF.TABLEVEL]
 					_strToRtn_ += f"""{NTAB(_thisTabLevel1_)}{OBRKT}{NEWLINE}"""
 
 					for _thisElementKey_, _vals3_ in _vals2_.items():
@@ -2721,9 +2721,9 @@ def makePSGClasses():
 
 	# ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
-		if _thisClassName_ in FMPSG_SCTN09FF_WINDOW_DICT:
-			for _thisElementName_, _thisElementVals_ in FMPSG_SCTN09FF_WINDOW_DICT[_thisClassName_].items():
-				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMPSG_SCTN09FF_WINDOW_CMNT_DICT[_thisClassName_][_thisElementName_]}{NEWLINE}{NTAB(2)}{FOLD3STARTHERE}
+		if _thisClassName_ in FMDEF.SCTN09FF_WINDOW_DICT:
+			for _thisElementName_, _thisElementVals_ in FMDEF.SCTN09FF_WINDOW_DICT[_thisClassName_].items():
+				_strToRtn_ += f"""{NTAB(2)}self.{_thisElementName_} = {OBRCE}  # {FMDEF.SCTN09FF_WINDOW_CMNT_DICT[_thisClassName_][_thisElementName_]}{NEWLINE}{NTAB(2)}{FOLD3STARTHERE}
 {_thisElementVals_}{NTAB(2)}{CBRCE}{NEWLINE}{NTAB(2)}{FOLD3ENDHERELN}
 """
 
@@ -2741,14 +2741,14 @@ def makePSGClasses():
 
 
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
-		for _thisItem_ in FMPSG_SCTN09FF_INIT_DEF3_DICT[_thisClassName_]:
+		for _thisItem_ in FMDEF.SCTN09FF_INIT_DEF3_DICT[_thisClassName_]:
 			_strToRtn_ += f"""{_thisItem_}"""
 
 		_strToRtn_ += f"""{NEWLINE}{NTAB(2)}{FOLD2ENDHERELN}{NEWLINE}"""
 
-#		print(f"""FMPSG_SCTN09FF_FUNCTION_DICT {FMPSG_SCTN09FF_FUNCTION_DICT}""")
-		if _thisClassName_ in FMPSG_SCTN09FF_FUNCTION_DICT:
-			for __thisFuncName__, __funcVals__ in FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_].items():
+#		print(f"""FMDEF.SCTN09FF_FUNCTION_DICT {FMDEF.SCTN09FF_FUNCTION_DICT}""")
+		if _thisClassName_ in FMDEF.SCTN09FF_FUNCTION_DICT:
+			for __thisFuncName__, __funcVals__ in FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_].items():
 				for __thisElement__ in __funcVals__:
 					_strToRtn_ += f"""{__thisElement__}{NEWLINE}"""
 
@@ -2767,94 +2767,94 @@ def makePSG():
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{readFileToStr(NAME_GLBL_TOP_PY("PSG"))}{makeAComment("SCTN0900 DEF1")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0900_DEF1_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0900_DEF1_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
 		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisName_]}{NEWLINE}"""
 	_strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0901 DEF2")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0901_DEF2_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0901_DEF2_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisName_]}{NEWLINE}"""
+		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMDEF.SCTN0901_DEF2_CMNT_DICT[_thisName_]}{NEWLINE}"""
 	_strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0910 DEF3")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0910_DEF3_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0910_DEF3_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMPSG_SCTN0910_DEF3_CMNT_DICT[_thisName_]}{NEWLINE}"""
+		_strToRtn_ += f"""{_thisName_} = {_value_}  # {FMDEF.SCTN0910_DEF3_CMNT_DICT[_thisName_]}{NEWLINE}"""
 	_strToRtn_ += f"""{NEWLINE}{NEWLINE}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0902 dicts")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0902_DICT_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0902_DICT_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{makeADict(_thisName_, FMPSG_SCTN0902_DICT_CMNT_DICT[_thisName_], _value_)}"""
+		_strToRtn_ += f"""{makeADict(_thisName_, FMDEF.SCTN0902_DICT_CMNT_DICT[_thisName_], _value_)}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0903 lists")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0903_LIST_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0903_LIST_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{_thisName_} = {OBRKT}  # {FMPSG_SCTN0903_LIST_CMNT_DICT[_thisName_]}{NEWLINE}{_value_}{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
+		_strToRtn_ += f"""{_thisName_} = {OBRKT}  # {FMDEF.SCTN0903_LIST_CMNT_DICT[_thisName_]}{NEWLINE}{_value_}{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0904 platform equalizers")}"""
-	dictToUseOuter_ = sortADict(FMPSG_SCTN0904_PLATEQ_OUTER_DICT)
-	dictToUseInner_ = sortADict(FMPSG_SCTN0904_PLATEQ_INNER_DICT)
+	dictToUseOuter_ = sortADict(FMDEF.SCTN0904_PLATEQ_OUTER_DICT)
+	dictToUseInner_ = sortADict(FMDEF.SCTN0904_PLATEQ_INNER_DICT)
 	for thisouterKey, outerVal_ in dictToUseOuter_.items():
 		_strToRtn_ += f""""""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0905 tupdict")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0905_TUPDICT_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0905_TUPDICT_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{makeANormalTDD(_thisName_, _value_, FMPSG_SCTN0905_TUPDICT_TDD_DICT[_thisName_])}"""
+		_strToRtn_ += f"""{makeANormalTDD(_thisName_, _value_, FMDEF.SCTN0905_TUPDICT_TDD_DICT[_thisName_])}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0913 right click menu options")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0913_RCMENU_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0913_RCMENU_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{_thisName_} = {OBRKT}  # {FMPSG_SCTN0913_RCMENU_CMNT_DICT[_thisName_]}{NEWLINE}"""
+		_strToRtn_ += f"""{_thisName_} = {OBRKT}  # {FMDEF.SCTN0913_RCMENU_CMNT_DICT[_thisName_]}{NEWLINE}"""
 		_strToRtn_ += f"""{NTAB(1)}{OBRKT}{CBRKT},{NEWLINE}{NTAB(1)}{OBRKT}{NEWLINE}{_value_}{NTAB(1)}{CBRKT},{NEWLINE}{CBRKT}{NEWLINE}{NEWLINE}{NEWLINE}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0906 button elements")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0906_BTNS_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0906_BTNS_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{makeADict(_thisName_, FMPSG_SCTN0906_BTNS_CMNT_DICT[_thisName_], _value_)}"""
+		_strToRtn_ += f"""{makeADict(_thisName_, FMDEF.SCTN0906_BTNS_CMNT_DICT[_thisName_], _value_)}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0907 spin box elements")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0907_SPIN_DICT)  ## add FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT
+	_dictToUse_ = sortADict(FMDEF.SCTN0907_SPIN_DICT)  ## add FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{makeADict(_thisName_, FMPSG_SCTN0907_SPIN_CMNT_DICT[_thisName_], _value_)}"""
+		_strToRtn_ += f"""{makeADict(_thisName_, FMDEF.SCTN0907_SPIN_CMNT_DICT[_thisName_], _value_)}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0908 checkbox elements")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0908_CHECKBOX_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0908_CHECKBOX_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{makeADict(_thisName_, FMPSG_SCTN0908_CHECKBOX_CMNT_DICT[_thisName_], _value_)}"""
+		_strToRtn_ += f"""{makeADict(_thisName_, FMDEF.SCTN0908_CHECKBOX_CMNT_DICT[_thisName_], _value_)}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0909 text elements")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0909_TEXT_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0909_TEXT_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{makeADict(_thisName_, FMPSG_SCTN0909_TEXT_CMNT_DICT[_thisName_], _value_)}"""
+		_strToRtn_ += f"""{makeADict(_thisName_, FMDEF.SCTN0909_TEXT_CMNT_DICT[_thisName_], _value_)}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN090A radio elements")}""" ## needs to be managed with the same structure as layouts
-	_dictToUse_ = sortADict(FMPSG_SCTN090A_RADIO_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN090A_RADIO_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{makeADict(_thisName_, FMPSG_SCTN090A_RADIO_DICT[_thisName_], _value_)}"""
+		_strToRtn_ += f"""{makeADict(_thisName_, FMDEF.SCTN090A_RADIO_DICT[_thisName_], _value_)}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN090B column elements")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN090B_COLUMN_DICT)
-	for _thisElementName_, _vals1_ in FMPSG_SCTN090B_COLUMN_DICT.items():
-		_strToRtn_ += f"""{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN090B_COLUMN_CMNT_DICT[_thisElementName_]}{NEWLINE}"""
+	_dictToUse_ = sortADict(FMDEF.SCTN090B_COLUMN_DICT)
+	for _thisElementName_, _vals1_ in FMDEF.SCTN090B_COLUMN_DICT.items():
+		_strToRtn_ += f"""{_thisElementName_} = {OBRKT}  # {FMDEF.SCTN090B_COLUMN_CMNT_DICT[_thisElementName_]}{NEWLINE}"""
 		for _thisRow_, _vals2_ in _vals1_.items():
-			_thisTabLevel1_ = FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRow_][FMDEF.TABLEVEL]
+			_thisTabLevel1_ = FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRow_][FMDEF.TABLEVEL]
 			_strToRtn_ += f"""{NTAB(_thisTabLevel1_)}{OBRKT}{NEWLINE}"""
 			for _thisElementKey_, _vals3_ in _vals2_.items():
 				if _thisElementKey_ == FMDEF.TABLEVEL:
@@ -2866,11 +2866,11 @@ def makePSG():
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN090E layout elements")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN090E_LAYOUT_DICT)
-	for _thisElementName_, _vals1_ in FMPSG_SCTN090E_LAYOUT_DICT.items():
-		_strToRtn_ += f"""{_thisElementName_} = {OBRKT}  # {FMPSG_SCTN090E_LAYOUT_CMNT_DICT[_thisElementName_]}{NEWLINE}"""
+	_dictToUse_ = sortADict(FMDEF.SCTN090E_LAYOUT_DICT)
+	for _thisElementName_, _vals1_ in FMDEF.SCTN090E_LAYOUT_DICT.items():
+		_strToRtn_ += f"""{_thisElementName_} = {OBRKT}  # {FMDEF.SCTN090E_LAYOUT_CMNT_DICT[_thisElementName_]}{NEWLINE}"""
 		for _thisRow_, _vals2_ in _vals1_.items():
-			_thisTabLevel1_ = FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRow_][FMDEF.TABLEVEL]
+			_thisTabLevel1_ = FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRow_][FMDEF.TABLEVEL]
 			_strToRtn_ += f"""{NTAB(_thisTabLevel1_)}{OBRKT}{NEWLINE}"""
 			for _thisElementKey_, _vals3_ in _vals2_.items():
 				if _thisElementKey_ == FMDEF.TABLEVEL:
@@ -2882,13 +2882,13 @@ def makePSG():
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN090F window")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN090F_WINDOW_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN090F_WINDOW_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
-		_strToRtn_ += f"""{makeADict(_thisName_, FMPSG_SCTN090F_WINDOW_CMNT_DICT[_thisName_], _value_)}"""
+		_strToRtn_ += f"""{makeADict(_thisName_, FMDEF.SCTN090F_WINDOW_CMNT_DICT[_thisName_], _value_)}"""
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN090D mainframe")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN090D_FORMMAIN_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN090D_FORMMAIN_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
 		_strToRtn_ += f"""{makeAComment(f"{_thisName_}_CLASS")}class {_thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global FORMMAIN, APPDS{NEWLINE}{NEWLINE}"""
 		_strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global FORMMAIN, APPDS{NEWLINE}"""
@@ -2898,7 +2898,7 @@ def makePSG():
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 	_strToRtn_ += f"""{makeAComment("SCTN0914 popupframe")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN0914_FORMPOPUP_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN0914_FORMPOPUP_DICT)
 	for _thisName_, _value_ in _dictToUse_.items():
 		_strToRtn_ += f"""{makeAComment(f"{_thisName_}_CLASS")}class {_thisName_}_CLASS{OPAREN}{CPAREN}:{NEWLINE}{NTAB(1)}global FORMPOPUP, APPDS, PREVIOUS_APPMODE{NEWLINE}{NEWLINE}"""
 		_strToRtn_ += f"""{NTAB(1)}def __enter__{OPAREN}self{CPAREN}:{NEWLINE}{NTAB(2)}global FORMPOPUP, APPDS, PREVIOUS_APPMODE{NEWLINE}"""
@@ -2909,7 +2909,7 @@ def makePSG():
 
 	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
 #	_strToRtn_ += f"""{makeAComment("SCTN0915 popup dialogs")}"""
-#	_dictToUse_ = sortADict(FMPSG_SCTN0915_PUDLG_DICT_DICT)
+#	_dictToUse_ = sortADict(FMDEF.SCTN0915_PUDLG_DICT_DICT)
 # 	for _thisName_, _value_ in _dictToUse_.items():
 # 		_strToRtn_ += f"""{NEWLINE}{NEWLINE}{makeAComment(f"{_thisName_} PUDLG")}
 # class CLASS_{_thisName_}{OPAREN}object{CPAREN}:
@@ -2923,7 +2923,7 @@ def makePSG():
 # {NTAB(2)}{CBRKT}.append{OPAREN}*splatArgs_{CPAREN}{NEWLINE}
 # {NTAB(2)}return self{NEWLINE}
 # {NTAB(1)}def __enter__{OPAREN}self{CPAREN}:
-# {NTAB(2)}SG.{FMPSG_SCTN0915_PUDLG_TYPE_DICT[_thisName_]}{OPAREN}
+# {NTAB(2)}SG.{FMDEF.SCTN0915_PUDLG_TYPE_DICT[_thisName_]}{OPAREN}
 # {NTAB(3)}*self.{_thisName_}_LIST,
 # {NTAB(3)}**self.{_thisName_}_DICT,
 # {NTAB(2)}{CPAREN}{NEWLINE}{NTAB(1)}{FOLD1ENDHERELN}{NEWLINE}
@@ -2938,14 +2938,14 @@ def makePSG():
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #	# ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰ ⟱1⟰
-	# print(f"""SCTN090C FMPSG_SCTN090C_APPDS_DICT |{FMPSG_SCTN090C_APPDS_DICT}|{NEWLINE}FMPSG_SCTN090C_APPDSDICT_DICT|{FMPSG_SCTN090C_APPDSDICT_DICT}|""")
+	# print(f"""SCTN090C FMDEF.SCTN090C_APPDS_DICT |{FMDEF.SCTN090C_APPDS_DICT}|{NEWLINE}FMDEF.SCTN090C_APPDSDICT_DICT|{FMDEF.SCTN090C_APPDSDICT_DICT}|""")
 	_strToRtn_ += f"""{makeAComment("SCTN090C APPDS")}"""
-	_dictToUse_ = sortADict(FMPSG_SCTN090C_APPDS_DICT)
+	_dictToUse_ = sortADict(FMDEF.SCTN090C_APPDS_DICT)
 	# 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱
 	for _thisName_, _values_ in _dictToUse_.items():
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		_valuesDict_ = sortADict(_values_)
-		_strToRtn_ += f"""{_thisName_} = {OBRCE}  # {FMPSG_SCTN090C_APPDS_CMNT_DICT[_thisName_]}{NEWLINE}"""
+		_strToRtn_ += f"""{_thisName_} = {OBRCE}  # {FMDEF.SCTN090C_APPDS_CMNT_DICT[_thisName_]}{NEWLINE}"""
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
 
 	# ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱
@@ -2957,9 +2957,9 @@ def makePSG():
 	# ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
 			# ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱ ⟰3⟱
-			if _thisKey_ in FMPSG_SCTN090C_APPDSDICT_DICT[_thisName_]:
+			if _thisKey_ in FMDEF.SCTN090C_APPDSDICT_DICT[_thisName_]:
 				# 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱ 4⟱
-				_dictToAdd_ = sortADict(FMPSG_SCTN090C_APPDSDICT_DICT[_thisName_][_thisKey_])
+				_dictToAdd_ = sortADict(FMDEF.SCTN090C_APPDSDICT_DICT[_thisName_][_thisKey_])
 
 	# ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱
 		# ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱ ⟰2⟱
@@ -3042,107 +3042,107 @@ def parseTBGLST(FDTBGLST):
 		FMDEF.SCTN0105_LDICT_DICT, \
 		FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT, \
 		FMDEF.SCTN0900_DEF1_CMNT_DICT, \
-		FMPSG_SCTN0900_DEF1_DICT, \
-		FMPSG_SCTN0901_DEF2_CMNT_DICT, \
-		FMPSG_SCTN0901_DEF2_DICT, \
-		FMPSG_SCTN0902_DICT_CMNT_DICT, \
-		FMPSG_SCTN0902_DICT_DICT, \
-		FMPSG_SCTN0903_LIST_CMNT_DICT, \
-		FMPSG_SCTN0903_LIST_DICT, \
-		FMPSG_SCTN0904_PLATEQ_INNER_CMNT_DICT, \
-		FMPSG_SCTN0904_PLATEQ_INNER_DICT, \
-		FMPSG_SCTN0904_PLATEQ_OUTER_CMNT_DICT, \
-		FMPSG_SCTN0904_PLATEQ_OUTER_DICT, \
-		FMPSG_SCTN0905_TUPDICT_CMNT_DICT, \
-		FMPSG_SCTN0905_TUPDICT_DICT, \
-		FMPSG_SCTN0905_TUPDICT_TDD_DICT, \
-		FMPSG_SCTN0906_BTNS_CMNT_DICT, \
-		FMPSG_SCTN0906_BTNS_DICT, \
-		FMPSG_SCTN0907_SPIN_CMNT_DICT, \
-		FMPSG_SCTN0907_SPIN_DICT, \
-		FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT, \
-		FMPSG_SCTN0908_CHECKBOX_CMNT_DICT, \
-		FMPSG_SCTN0908_CHECKBOX_DICT, \
-		FMPSG_SCTN0909_TEXT_CMNT_DICT, \
-		FMPSG_SCTN0909_TEXT_DICT, \
-		FMPSG_SCTN090A_RADIO_CMNT_DICT, \
-		FMPSG_SCTN090A_RADIO_DICT, \
-		FMPSG_SCTN090B_COLUMN_CMNT_DICT, \
-		FMPSG_SCTN090B_COLUMN_DICT, \
-		FMPSG_SCTN090B_COLUMN_PARMS_DICT, \
-		FMPSG_SCTN090C_APPDS_CMNT_DICT, \
-		FMPSG_SCTN090C_APPDS_DICT, \
-		FMPSG_SCTN090C_APPDSDICT_DICT, \
-		FMPSG_SCTN090D_FORMMAIN_CMNT_DICT, \
-		FMPSG_SCTN090D_FORMMAIN_DICT, \
-		FMPSG_SCTN090E_LAYOUT_CMNT_DICT, \
-		FMPSG_SCTN090E_LAYOUT_DICT, \
-		FMPSG_SCTN090F_WINDOW_CMNT_DICT, \
-		FMPSG_SCTN090F_WINDOW_DICT, \
-		FMPSG_SCTN0910_DEF3_CMNT_DICT, \
-		FMPSG_SCTN0910_DEF3_DICT, \
-		FMPSG_SCTN0911_COMBO_CMNT_DICT, \
-		FMPSG_SCTN0911_COMBO_DICT, \
-		FMPSG_SCTN0912_FRAME_CMNT_DICT, \
-		FMPSG_SCTN0912_FRAME_DICT, \
-		FMPSG_SCTN0913_RCMENU_CMNT_DICT, \
-		FMPSG_SCTN0913_RCMENU_DICT, \
-		FMPSG_SCTN0914_FORMPOPUP_CMNT_DICT, \
-		FMPSG_SCTN0914_FORMPOPUP_DICT, \
-		FMPSG_SCTN0915_PUDLG_CMNT_DICT, \
-		FMPSG_SCTN0915_PUDLG_DICT_DICT, \
-		FMPSG_SCTN0915_PUDLG_LIST_DICT, \
-		FMPSG_SCTN0915_PUDLG_TYPE_DICT, \
-		FMPSG_SCTN09FF_BTNS_ADDON_DICT, \
-		FMPSG_SCTN09FF_BTNS_CMNT_DICT, \
-		FMPSG_SCTN09FF_BTNS_DICT, \
-		FMPSG_SCTN09FF_CHECKBOX_ADDON_DICT, \
-		FMPSG_SCTN09FF_CHECKBOX_CMNT_DICT, \
-		FMPSG_SCTN09FF_CHECKBOX_DICT, \
-		FMPSG_SCTN09FF_CMNT_DICT, \
-		FMPSG_SCTN09FF_COLUMN_ADDON_DICT, \
-		FMPSG_SCTN09FF_COLUMN_CMNT_DICT, \
-		FMPSG_SCTN09FF_COLUMN_DICT, \
-		FMPSG_SCTN09FF_COLUMN_PARMS_DICT, \
-		FMPSG_SCTN09FF_COMBO_ADDON_DICT, \
-		FMPSG_SCTN09FF_COMBO_CMNT_DICT, \
-		FMPSG_SCTN09FF_COMBO_DICT, \
-		FMPSG_SCTN09FF_DEF_DICT, \
-		FMPSG_SCTN09FF_DICT, \
-		FMPSG_SCTN09FF_DICT_CMNT_DICT, \
-		FMPSG_SCTN09FF_DICT_DICT, \
-		FMPSG_SCTN09FF_FRAME_ADDON_DICT, \
-		FMPSG_SCTN09FF_FRAME_CMNT_DICT, \
-		FMPSG_SCTN09FF_FRAME_DICT, \
-		FMPSG_SCTN09FF_FUNCTION_CMNT_DICT, \
-		FMPSG_SCTN09FF_FUNCTION_DEF1_DICT, \
-		FMPSG_SCTN09FF_FUNCTION_DEF2_DICT, \
-		FMPSG_SCTN09FF_FUNCTION_DICT, \
-		FMPSG_SCTN09FF_INIT_CMNT_DICT, \
-		FMPSG_SCTN09FF_INIT_DEF1_DICT, \
-		FMPSG_SCTN09FF_INIT_DEF2_DICT, \
-		FMPSG_SCTN09FF_INIT_DEF3_DICT, \
-		FMPSG_SCTN09FF_INIT_DICT, \
-		FMPSG_SCTN09FF_INIT_DICTIN_DICT, \
-		FMPSG_SCTN09FF_INIT_DICTINSTR_DICT, \
-		FMPSG_SCTN09FF_LAYOUT_CMNT_DICT, \
-		FMPSG_SCTN09FF_LAYOUT_DICT, \
-		FMPSG_SCTN09FF_LIST_CMNT_DICT, \
-		FMPSG_SCTN09FF_LIST_DICT, \
-		FMPSG_SCTN09FF_RADIO_ADDON_DICT, \
-		FMPSG_SCTN09FF_RADIO_CMNT_DICT, \
-		FMPSG_SCTN09FF_RADIO_DICT, \
-		FMPSG_SCTN09FF_RCMENU_ADDON_DICT, \
-		FMPSG_SCTN09FF_RCMENU_CMNT_DICT, \
-		FMPSG_SCTN09FF_RCMENU_DICT, \
-		FMPSG_SCTN09FF_SPIN_ADDON_DICT, \
-		FMPSG_SCTN09FF_SPIN_CMNT_DICT, \
-		FMPSG_SCTN09FF_SPIN_DICT, \
-		FMPSG_SCTN09FF_TEXT_ADDON_DICT, \
-		FMPSG_SCTN09FF_TEXT_CMNT_DICT, \
-		FMPSG_SCTN09FF_TEXT_DICT, \
-		FMPSG_SCTN09FF_WINDOW_CMNT_DICT, \
-		FMPSG_SCTN09FF_WINDOW_DICT
+		FMDEF.SCTN0900_DEF1_DICT, \
+		FMDEF.SCTN0901_DEF2_CMNT_DICT, \
+		FMDEF.SCTN0901_DEF2_DICT, \
+		FMDEF.SCTN0902_DICT_CMNT_DICT, \
+		FMDEF.SCTN0902_DICT_DICT, \
+		FMDEF.SCTN0903_LIST_CMNT_DICT, \
+		FMDEF.SCTN0903_LIST_DICT, \
+		FMDEF.SCTN0904_PLATEQ_INNER_CMNT_DICT, \
+		FMDEF.SCTN0904_PLATEQ_INNER_DICT, \
+		FMDEF.SCTN0904_PLATEQ_OUTER_CMNT_DICT, \
+		FMDEF.SCTN0904_PLATEQ_OUTER_DICT, \
+		FMDEF.SCTN0905_TUPDICT_CMNT_DICT, \
+		FMDEF.SCTN0905_TUPDICT_DICT, \
+		FMDEF.SCTN0905_TUPDICT_TDD_DICT, \
+		FMDEF.SCTN0906_BTNS_CMNT_DICT, \
+		FMDEF.SCTN0906_BTNS_DICT, \
+		FMDEF.SCTN0907_SPIN_CMNT_DICT, \
+		FMDEF.SCTN0907_SPIN_DICT, \
+		FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT, \
+		FMDEF.SCTN0908_CHECKBOX_CMNT_DICT, \
+		FMDEF.SCTN0908_CHECKBOX_DICT, \
+		FMDEF.SCTN0909_TEXT_CMNT_DICT, \
+		FMDEF.SCTN0909_TEXT_DICT, \
+		FMDEF.SCTN090A_RADIO_CMNT_DICT, \
+		FMDEF.SCTN090A_RADIO_DICT, \
+		FMDEF.SCTN090B_COLUMN_CMNT_DICT, \
+		FMDEF.SCTN090B_COLUMN_DICT, \
+		FMDEF.SCTN090B_COLUMN_PARMS_DICT, \
+		FMDEF.SCTN090C_APPDS_CMNT_DICT, \
+		FMDEF.SCTN090C_APPDS_DICT, \
+		FMDEF.SCTN090C_APPDSDICT_DICT, \
+		FMDEF.SCTN090D_FORMMAIN_CMNT_DICT, \
+		FMDEF.SCTN090D_FORMMAIN_DICT, \
+		FMDEF.SCTN090E_LAYOUT_CMNT_DICT, \
+		FMDEF.SCTN090E_LAYOUT_DICT, \
+		FMDEF.SCTN090F_WINDOW_CMNT_DICT, \
+		FMDEF.SCTN090F_WINDOW_DICT, \
+		FMDEF.SCTN0910_DEF3_CMNT_DICT, \
+		FMDEF.SCTN0910_DEF3_DICT, \
+		FMDEF.SCTN0911_COMBO_CMNT_DICT, \
+		FMDEF.SCTN0911_COMBO_DICT, \
+		FMDEF.SCTN0912_FRAME_CMNT_DICT, \
+		FMDEF.SCTN0912_FRAME_DICT, \
+		FMDEF.SCTN0913_RCMENU_CMNT_DICT, \
+		FMDEF.SCTN0913_RCMENU_DICT, \
+		FMDEF.SCTN0914_FORMPOPUP_CMNT_DICT, \
+		FMDEF.SCTN0914_FORMPOPUP_DICT, \
+		FMDEF.SCTN0915_PUDLG_CMNT_DICT, \
+		FMDEF.SCTN0915_PUDLG_DICT_DICT, \
+		FMDEF.SCTN0915_PUDLG_LIST_DICT, \
+		FMDEF.SCTN0915_PUDLG_TYPE_DICT, \
+		FMDEF.SCTN09FF_BTNS_ADDON_DICT, \
+		FMDEF.SCTN09FF_BTNS_CMNT_DICT, \
+		FMDEF.SCTN09FF_BTNS_DICT, \
+		FMDEF.SCTN09FF_CHECKBOX_ADDON_DICT, \
+		FMDEF.SCTN09FF_CHECKBOX_CMNT_DICT, \
+		FMDEF.SCTN09FF_CHECKBOX_DICT, \
+		FMDEF.SCTN09FF_CMNT_DICT, \
+		FMDEF.SCTN09FF_COLUMN_ADDON_DICT, \
+		FMDEF.SCTN09FF_COLUMN_CMNT_DICT, \
+		FMDEF.SCTN09FF_COLUMN_DICT, \
+		FMDEF.SCTN09FF_COLUMN_PARMS_DICT, \
+		FMDEF.SCTN09FF_COMBO_ADDON_DICT, \
+		FMDEF.SCTN09FF_COMBO_CMNT_DICT, \
+		FMDEF.SCTN09FF_COMBO_DICT, \
+		FMDEF.SCTN09FF_DEF_DICT, \
+		FMDEF.SCTN09FF_DICT, \
+		FMDEF.SCTN09FF_DICT_CMNT_DICT, \
+		FMDEF.SCTN09FF_DICT_DICT, \
+		FMDEF.SCTN09FF_FRAME_ADDON_DICT, \
+		FMDEF.SCTN09FF_FRAME_CMNT_DICT, \
+		FMDEF.SCTN09FF_FRAME_DICT, \
+		FMDEF.SCTN09FF_FUNCTION_CMNT_DICT, \
+		FMDEF.SCTN09FF_FUNCTION_DEF1_DICT, \
+		FMDEF.SCTN09FF_FUNCTION_DEF2_DICT, \
+		FMDEF.SCTN09FF_FUNCTION_DICT, \
+		FMDEF.SCTN09FF_INIT_CMNT_DICT, \
+		FMDEF.SCTN09FF_INIT_DEF1_DICT, \
+		FMDEF.SCTN09FF_INIT_DEF2_DICT, \
+		FMDEF.SCTN09FF_INIT_DEF3_DICT, \
+		FMDEF.SCTN09FF_INIT_DICT, \
+		FMDEF.SCTN09FF_INIT_DICTIN_DICT, \
+		FMDEF.SCTN09FF_INIT_DICTINSTR_DICT, \
+		FMDEF.SCTN09FF_LAYOUT_CMNT_DICT, \
+		FMDEF.SCTN09FF_LAYOUT_DICT, \
+		FMDEF.SCTN09FF_LIST_CMNT_DICT, \
+		FMDEF.SCTN09FF_LIST_DICT, \
+		FMDEF.SCTN09FF_RADIO_ADDON_DICT, \
+		FMDEF.SCTN09FF_RADIO_CMNT_DICT, \
+		FMDEF.SCTN09FF_RADIO_DICT, \
+		FMDEF.SCTN09FF_RCMENU_ADDON_DICT, \
+		FMDEF.SCTN09FF_RCMENU_CMNT_DICT, \
+		FMDEF.SCTN09FF_RCMENU_DICT, \
+		FMDEF.SCTN09FF_SPIN_ADDON_DICT, \
+		FMDEF.SCTN09FF_SPIN_CMNT_DICT, \
+		FMDEF.SCTN09FF_SPIN_DICT, \
+		FMDEF.SCTN09FF_TEXT_ADDON_DICT, \
+		FMDEF.SCTN09FF_TEXT_CMNT_DICT, \
+		FMDEF.SCTN09FF_TEXT_DICT, \
+		FMDEF.SCTN09FF_WINDOW_CMNT_DICT, \
+		FMDEF.SCTN09FF_WINDOW_DICT
 	# fold here ⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1⟱1
 
 	# 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱
@@ -3440,7 +3440,7 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 4 items", _thisItem_)
 				continue
 			_thisValName_ = _thisItem_[2]
-			FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{DBLQT}{_thisValName_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[_thisValName_] = f"""{DBLQT}{_thisValName_}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3456,9 +3456,9 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
 
-			FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[_thisValName_] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 
 			continue
@@ -3475,9 +3475,9 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
 
-			FMPSG_SCTN0900_DEF1_DICT[_thisValName_] = f"""{_thisVal_}"""
+			FMDEF.SCTN0900_DEF1_DICT[_thisValName_] = f"""{_thisVal_}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
 
 			continue
@@ -3500,9 +3500,9 @@ def parseTBGLST(FDTBGLST):
 			_thisVal2_ = _thisItem_[4]
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
-			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{DBLQT}{_thisVal1_}{DBLQT}, {DBLQT}{_thisVal2_}{DBLQT}{CPAREN},"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
+			FMDEF.SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{DBLQT}{_thisVal1_}{DBLQT}, {DBLQT}{_thisVal2_}{DBLQT}{CPAREN},"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3520,9 +3520,9 @@ def parseTBGLST(FDTBGLST):
 			_thisVal2_ = _thisItem_[4]
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
-			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{DBLQT}{_thisVal1_}{DBLQT}, {_thisVal2_}{CPAREN},"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
+			FMDEF.SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{DBLQT}{_thisVal1_}{DBLQT}, {_thisVal2_}{CPAREN},"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3540,9 +3540,9 @@ def parseTBGLST(FDTBGLST):
 			_thisVal2_ = _thisItem_[4]
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
-			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{_thisVal1_}, {DBLQT}{_thisVal2_}{DBLQT}{CPAREN},"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
+			FMDEF.SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{_thisVal1_}, {DBLQT}{_thisVal2_}{DBLQT}{CPAREN},"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3560,9 +3560,9 @@ def parseTBGLST(FDTBGLST):
 			_thisVal2_ = _thisItem_[4]
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
-			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{_thisVal1_}, {_thisVal2_}{CPAREN}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
+			FMDEF.SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0901_DEF2_DICT[_thisValName_] = f"""{OPAREN}{_thisVal1_}, {_thisVal2_}{CPAREN}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3577,8 +3577,8 @@ def parseTBGLST(FDTBGLST):
 
 			_thisValName_ = _thisItem_[2]
 
-			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{DBLQT}{_thisValName_}{DBLQT}"""
-			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0901_DEF2_DICT[_thisValName_] = f"""{DBLQT}{_thisValName_}{DBLQT}"""
+			FMDEF.SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3593,10 +3593,10 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
 
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
-			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0901_DEF2_DICT[_thisValName_] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+			FMDEF.SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3612,10 +3612,10 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
 
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisValName_}"""] = f"""{DBLQT}K_{_thisValName_}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisValName_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0901_DEF2_DICT[_thisValName_] = f"""{_thisVal_}"""
-			FMPSG_SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0901_DEF2_DICT[_thisValName_] = f"""{_thisVal_}"""
+			FMDEF.SCTN0901_DEF2_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3634,12 +3634,12 @@ def parseTBGLST(FDTBGLST):
 
 			_thisDictName_ = _thisItem_[2]
 
-			if _thisDictName_ not in FMPSG_SCTN0902_DICT_DICT:
-				FMPSG_SCTN0902_DICT_DICT[_thisDictName_] = ""
+			if _thisDictName_ not in FMDEF.SCTN0902_DICT_DICT:
+				FMDEF.SCTN0902_DICT_DICT[_thisDictName_] = ""
 
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisDictName_}"""] = f"""{DBLQT}K_{_thisDictName_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisDictName_}"""] = f"""{DBLQT}K_{_thisDictName_}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisDictName_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0902_DICT_CMNT_DICT[_thisDictName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0902_DICT_CMNT_DICT[_thisDictName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3656,10 +3656,10 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisDictName_ not in FMPSG_SCTN0902_DICT_DICT:
-				FMPSG_SCTN0902_DICT_DICT[_thisDictName_] = ""
+			if _thisDictName_ not in FMDEF.SCTN0902_DICT_DICT:
+				FMDEF.SCTN0902_DICT_DICT[_thisDictName_] = ""
 
-			FMPSG_SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3676,10 +3676,10 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisDictName_ not in FMPSG_SCTN0902_DICT_DICT:
-				FMPSG_SCTN0902_DICT_DICT[_thisDictName_] = ""
+			if _thisDictName_ not in FMDEF.SCTN0902_DICT_DICT:
+				FMDEF.SCTN0902_DICT_DICT[_thisDictName_] = ""
 
-			FMPSG_SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3696,10 +3696,10 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisDictName_ not in FMPSG_SCTN0902_DICT_DICT:
-				FMPSG_SCTN0902_DICT_DICT[_thisDictName_] = ""
+			if _thisDictName_ not in FMDEF.SCTN0902_DICT_DICT:
+				FMDEF.SCTN0902_DICT_DICT[_thisDictName_] = ""
 
-			FMPSG_SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3716,10 +3716,10 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisDictName_ not in FMPSG_SCTN0902_DICT_DICT:
-				FMPSG_SCTN0902_DICT_DICT[_thisDictName_] = ""
+			if _thisDictName_ not in FMDEF.SCTN0902_DICT_DICT:
+				FMDEF.SCTN0902_DICT_DICT[_thisDictName_] = ""
 
-			FMPSG_SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0902_DICT_DICT[_thisDictName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3742,13 +3742,13 @@ def parseTBGLST(FDTBGLST):
 			_thisListName_ = _thisItem_[2]
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			if _thisListName_ not in FMPSG_SCTN0903_LIST_DICT:
-				FMPSG_SCTN0903_LIST_DICT[_thisListName_] = ""
+			if _thisListName_ not in FMDEF.SCTN0903_LIST_DICT:
+				FMDEF.SCTN0903_LIST_DICT[_thisListName_] = ""
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
 
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisListName_}"""] = f"""{DBLQT}K_{_thisListName_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisListName_}"""] = f"""{DBLQT}K_{_thisListName_}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisListName_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0903_LIST_CMNT_DICT[_thisListName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0903_LIST_CMNT_DICT[_thisListName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3762,9 +3762,9 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisListName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			if _thisListName_ not in FMPSG_SCTN0903_LIST_DICT:
-				FMPSG_SCTN0903_LIST_DICT[_thisListName_] = ""
-			FMPSG_SCTN0903_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			if _thisListName_ not in FMDEF.SCTN0903_LIST_DICT:
+				FMDEF.SCTN0903_LIST_DICT[_thisListName_] = ""
+			FMDEF.SCTN0903_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3777,9 +3777,9 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisListName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			if _thisListName_ not in FMPSG_SCTN0903_LIST_DICT:
-				FMPSG_SCTN0903_LIST_DICT[_thisListName_] = ""
-			FMPSG_SCTN0903_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			if _thisListName_ not in FMDEF.SCTN0903_LIST_DICT:
+				FMDEF.SCTN0903_LIST_DICT[_thisListName_] = ""
+			FMDEF.SCTN0903_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
@@ -3797,9 +3797,9 @@ def parseTBGLST(FDTBGLST):
 			_thisPlatEqName_ = _thisItem_[2]
 			_thisPlatEqKey_ = _thisItem_[3]
 			_thisPlatEqCondition_ = _thisItem_[4]
-			if _thisPlatEqName_ not in FMPSG_SCTN0904_PLATEQ_OUTER_DICT:
-				FMPSG_SCTN0904_PLATEQ_OUTER_DICT[_thisPlatEqName_] = ""
-			FMPSG_SCTN0904_PLATEQ_OUTER_DICT[_thisPlatEqName_] = f"""{_thisPlatEqKey_} = {_thisPlatEqCondition_}"""
+			if _thisPlatEqName_ not in FMDEF.SCTN0904_PLATEQ_OUTER_DICT:
+				FMDEF.SCTN0904_PLATEQ_OUTER_DICT[_thisPlatEqName_] = ""
+			FMDEF.SCTN0904_PLATEQ_OUTER_DICT[_thisPlatEqName_] = f"""{_thisPlatEqKey_} = {_thisPlatEqCondition_}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
@@ -3817,13 +3817,13 @@ def parseTBGLST(FDTBGLST):
 
 			_thisTupdictName_ = _thisItem_[2]
 
-			if _thisTupdictName_ not in FMPSG_SCTN0905_TUPDICT_DICT:
-				FMPSG_SCTN0905_TUPDICT_DICT[_thisTupdictName_] = ""
-				FMPSG_SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] = ""
+			if _thisTupdictName_ not in FMDEF.SCTN0905_TUPDICT_DICT:
+				FMDEF.SCTN0905_TUPDICT_DICT[_thisTupdictName_] = ""
+				FMDEF.SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] = ""
 
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisTupdictName_}"""] = f"""{DBLQT}K_{_thisTupdictName_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisTupdictName_}"""] = f"""{DBLQT}K_{_thisTupdictName_}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisTupdictName_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0905_TUPDICT_CMNT_DICT[_thisTupdictName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0905_TUPDICT_CMNT_DICT[_thisTupdictName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3838,10 +3838,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTupdictName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
-			if _thisTupdictName_ not in FMPSG_SCTN0905_TUPDICT_DICT:
-				FMPSG_SCTN0905_TUPDICT_DICT[_thisTupdictName_] = ""
-			FMPSG_SCTN0905_TUPDICT_DICT[_thisTupdictName_] += f"""{NTAB(1)}{OPAREN}{DBLQT}{_thisKey_}{DBLQT}, {DBLQT}{_thisVal_}{DBLQT}{CPAREN},  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] += f"""{NTAB(1)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			if _thisTupdictName_ not in FMDEF.SCTN0905_TUPDICT_DICT:
+				FMDEF.SCTN0905_TUPDICT_DICT[_thisTupdictName_] = ""
+			FMDEF.SCTN0905_TUPDICT_DICT[_thisTupdictName_] += f"""{NTAB(1)}{OPAREN}{DBLQT}{_thisKey_}{DBLQT}, {DBLQT}{_thisVal_}{DBLQT}{CPAREN},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] += f"""{NTAB(1)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3855,11 +3855,11 @@ def parseTBGLST(FDTBGLST):
 			_thisTupdictName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
-			if _thisTupdictName_ not in FMPSG_SCTN0905_TUPDICT_DICT:
-				FMPSG_SCTN0905_TUPDICT_DICT[_thisTupdictName_] = ""
-				FMPSG_SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] = ""
-			FMPSG_SCTN0905_TUPDICT_DICT[_thisTupdictName_] += f"""{NTAB(1)}{OPAREN}{DBLQT}{_thisKey_}{DBLQT}, {_thisVal_}{CPAREN},  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] += f"""{NTAB(1)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			if _thisTupdictName_ not in FMDEF.SCTN0905_TUPDICT_DICT:
+				FMDEF.SCTN0905_TUPDICT_DICT[_thisTupdictName_] = ""
+				FMDEF.SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] = ""
+			FMDEF.SCTN0905_TUPDICT_DICT[_thisTupdictName_] += f"""{NTAB(1)}{OPAREN}{DBLQT}{_thisKey_}{DBLQT}, {_thisVal_}{CPAREN},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] += f"""{NTAB(1)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3873,11 +3873,11 @@ def parseTBGLST(FDTBGLST):
 			_thisTupdictName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
-			if _thisTupdictName_ not in FMPSG_SCTN0905_TUPDICT_DICT:
-				FMPSG_SCTN0905_TUPDICT_DICT[_thisTupdictName_] = ""
-				FMPSG_SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] = ""
-			FMPSG_SCTN0905_TUPDICT_DICT[_thisTupdictName_] += f"""{NTAB(1)}{OPAREN}{_thisKey_}, {DBLQT}{_thisVal_}{DBLQT}{CPAREN},  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			if _thisTupdictName_ not in FMDEF.SCTN0905_TUPDICT_DICT:
+				FMDEF.SCTN0905_TUPDICT_DICT[_thisTupdictName_] = ""
+				FMDEF.SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] = ""
+			FMDEF.SCTN0905_TUPDICT_DICT[_thisTupdictName_] += f"""{NTAB(1)}{OPAREN}{_thisKey_}, {DBLQT}{_thisVal_}{DBLQT}{CPAREN},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -3891,10 +3891,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTupdictName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
-			if _thisTupdictName_ not in FMPSG_SCTN0905_TUPDICT_DICT:
-				FMPSG_SCTN0905_TUPDICT_DICT[_thisTupdictName_] = ""
-			FMPSG_SCTN0905_TUPDICT_DICT[_thisTupdictName_] += f"""{NTAB(1)}{OPAREN}{_thisKey_}, {_thisVal_}{CPAREN},  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			if _thisTupdictName_ not in FMDEF.SCTN0905_TUPDICT_DICT:
+				FMDEF.SCTN0905_TUPDICT_DICT[_thisTupdictName_] = ""
+			FMDEF.SCTN0905_TUPDICT_DICT[_thisTupdictName_] += f"""{NTAB(1)}{OPAREN}{_thisKey_}, {_thisVal_}{CPAREN},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0905_TUPDICT_TDD_DICT[_thisTupdictName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
@@ -3913,12 +3913,12 @@ def parseTBGLST(FDTBGLST):
 			_thisElementName_ = _thisItem_[2]
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			if _thisElementName_ not in FMPSG_SCTN0906_BTNS_DICT:
-				FMPSG_SCTN0906_BTNS_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0906_BTNS_DICT:
+				FMDEF.SCTN0906_BTNS_DICT[_thisElementName_] = ""
 
 			# ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3 ⟰3
 
-			FMPSG_SCTN0906_BTNS_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0906_BTNS_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3936,15 +3936,15 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			if (_thisElementName_ not in FMPSG_SCTN0906_BTNS_DICT):
-				FMPSG_SCTN0906_BTNS_DICT[_thisElementName_] = ""
+			if (_thisElementName_ not in FMDEF.SCTN0906_BTNS_DICT):
+				FMDEF.SCTN0906_BTNS_DICT[_thisElementName_] = ""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN0906_BTNS_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0906_BTNS_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3961,15 +3961,15 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisElementName_ not in FMPSG_SCTN0906_BTNS_DICT:
-				FMPSG_SCTN0906_BTNS_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0906_BTNS_DICT:
+				FMDEF.SCTN0906_BTNS_DICT[_thisElementName_] = ""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN0906_BTNS_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0906_BTNS_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -3988,13 +3988,13 @@ def parseTBGLST(FDTBGLST):
 
 			_thisElementName_ = _thisItem_[2]
 
-			if _thisElementName_ not in FMPSG_SCTN0907_SPIN_DICT:
-				FMPSG_SCTN0907_SPIN_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0907_SPIN_DICT:
+				FMDEF.SCTN0907_SPIN_DICT[_thisElementName_] = ""
 
-			if _thisElementName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
-				FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = ""
+			if _thisElementName_ not in FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT:
+				FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT = ""
 
-			FMPSG_SCTN0907_SPIN_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0907_SPIN_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4011,18 +4011,18 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisElementName_ not in FMPSG_SCTN0907_SPIN_DICT:
-				FMPSG_SCTN0907_SPIN_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0907_SPIN_DICT:
+				FMDEF.SCTN0907_SPIN_DICT[_thisElementName_] = ""
 
-			if _thisElementName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
-				FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = ""
+			if _thisElementName_ not in FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT:
+				FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT = ""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN0907_SPIN_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0907_SPIN_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4039,18 +4039,18 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisElementName_ not in FMPSG_SCTN0907_SPIN_DICT:
-				FMPSG_SCTN0907_SPIN_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0907_SPIN_DICT:
+				FMDEF.SCTN0907_SPIN_DICT[_thisElementName_] = ""
 
-			if _thisElementName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
-				FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = ""
+			if _thisElementName_ not in FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT:
+				FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT = ""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN0907_SPIN_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0907_SPIN_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4063,11 +4063,11 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisElementName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			if _thisElementName_ not in FMPSG_SCTN0907_SPIN_DICT:
-				FMPSG_SCTN0907_SPIN_DICT[_thisElementName_] = ""
-			if _thisElementName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
-				FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = ""
-			FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT[_thisElementName_] += f"""{NTAB(1)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN0907_SPIN_DICT:
+				FMDEF.SCTN0907_SPIN_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT:
+				FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT = ""
+			FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT[_thisElementName_] += f"""{NTAB(1)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4080,11 +4080,11 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisElementName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			if _thisElementName_ not in FMPSG_SCTN0907_SPIN_DICT:
-				FMPSG_SCTN0907_SPIN_DICT[_thisElementName_] = ""
-			if _thisElementName_ not in FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT:
-				FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT = ""
-			FMPSG_SCTN0907_SPIN_VALUES_LIST_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN0907_SPIN_DICT:
+				FMDEF.SCTN0907_SPIN_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT:
+				FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT = ""
+			FMDEF.SCTN0907_SPIN_VALUES_LIST_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
@@ -4103,11 +4103,11 @@ def parseTBGLST(FDTBGLST):
 
 			_thisElementName_ = _thisItem_[2]
 
-			if _thisElementName_ not in FMPSG_SCTN0908_CHECKBOX_DICT:
-				FMPSG_SCTN0908_CHECKBOX_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0908_CHECKBOX_DICT:
+				FMDEF.SCTN0908_CHECKBOX_DICT[_thisElementName_] = ""
 
-			FMPSG_SCTN0908_CHECKBOX_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0903_LIST_DICT["LIST_DNUPDATE"] += f"""{NTAB(1)}K_{_thisElementName_[:-2].upper()},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0908_CHECKBOX_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0903_LIST_DICT["LIST_DNUPDATE"] += f"""{NTAB(1)}K_{_thisElementName_[:-2].upper()},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4124,15 +4124,15 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisElementName_ not in FMPSG_SCTN0908_CHECKBOX_DICT:
-				FMPSG_SCTN0908_CHECKBOX_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0908_CHECKBOX_DICT:
+				FMDEF.SCTN0908_CHECKBOX_DICT[_thisElementName_] = ""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN0908_CHECKBOX_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0908_CHECKBOX_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4149,15 +4149,15 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisElementName_ not in FMPSG_SCTN0908_CHECKBOX_DICT:
-				FMPSG_SCTN0908_CHECKBOX_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0908_CHECKBOX_DICT:
+				FMDEF.SCTN0908_CHECKBOX_DICT[_thisElementName_] = ""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN0908_CHECKBOX_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0908_CHECKBOX_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4176,10 +4176,10 @@ def parseTBGLST(FDTBGLST):
 
 			_thisElementName_ = _thisItem_[2]
 
-			if _thisElementName_ not in FMPSG_SCTN0909_TEXT_DICT:
-				FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0909_TEXT_DICT:
+				FMDEF.SCTN0909_TEXT_DICT[_thisElementName_] = ""
 
-			FMPSG_SCTN0909_TEXT_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0909_TEXT_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4196,15 +4196,15 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisElementName_ not in FMPSG_SCTN0909_TEXT_DICT:
-				FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0909_TEXT_DICT:
+				FMDEF.SCTN0909_TEXT_DICT[_thisElementName_] = ""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0909_TEXT_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4221,15 +4221,15 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisElementName_ not in FMPSG_SCTN0909_TEXT_DICT:
-				FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN0909_TEXT_DICT:
+				FMDEF.SCTN0909_TEXT_DICT[_thisElementName_] = ""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN0909_TEXT_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0909_TEXT_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4251,9 +4251,9 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 4 items", _thisItem_)
 				continue
 			_thisElementName_ = _thisItem_[2]
-			if _thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
-			FMPSG_SCTN090B_COLUMN_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
+			if _thisElementName_ not in FMDEF.SCTN090B_COLUMN_DICT:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_] = {}
+			FMDEF.SCTN090B_COLUMN_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4269,13 +4269,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Button{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090B_COLUMN_DICT:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Button{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4291,13 +4291,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Checkbox{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090B_COLUMN_DICT:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Checkbox{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4313,13 +4313,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Col{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090B_COLUMN_DICT:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Col{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4335,13 +4335,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = thisItem[5]
-			if _thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Combo{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090B_COLUMN_DICT:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Combo{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4358,13 +4358,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
 			_thisVal_ = _thisItem_[6]
-			if _thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}**{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090B_COLUMN_DICT:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}**{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4381,13 +4381,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
 			_thisVal_ = _thisItem_[6]
-			if _thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090B_COLUMN_DICT:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4403,13 +4403,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Radio{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090B_COLUMN_DICT:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Radio{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4424,11 +4424,11 @@ def parseTBGLST(FDTBGLST):
 			_thisRowKey_ = _thisItem_[3]
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
-			if _thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
-			FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][FMDEF.TABLEVEL] = _thisTabLevel_
+			if _thisElementName_ not in FMDEF.SCTN090B_COLUMN_DICT:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
+			FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][FMDEF.TABLEVEL] = _thisTabLevel_
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4444,13 +4444,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Spin{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090B_COLUMN_DICT:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Spin{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4466,13 +4466,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090B_COLUMN_DICT:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Text{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090B_COLUMN_DICT:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090B_COLUMN_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Text{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
@@ -4490,10 +4490,10 @@ def parseTBGLST(FDTBGLST):
 
 			_thisAPPDSName_ = _thisItem_[2]
 
-			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDS_DICT:
-				FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
+			if _thisAPPDSName_ not in FMDEF.SCTN090C_APPDS_DICT:
+				FMDEF.SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
 
-			FMPSG_SCTN090C_APPDS_CMNT_DICT[_thisAPPDSName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN090C_APPDS_CMNT_DICT[_thisAPPDSName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4510,18 +4510,18 @@ def parseTBGLST(FDTBGLST):
 			_thisDictName_ = _thisItem_[3]
 			_thisIndexNum_ = _thisItem_[4]
 
-			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDS_DICT:
-				FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
-			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDSDICT_DICT:
-				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_] = {}
-			if _thisDictName_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_]:
-				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_] = {}
-			if _thisIndexNum_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
-				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
+			if _thisAPPDSName_ not in FMDEF.SCTN090C_APPDS_DICT:
+				FMDEF.SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
+			if _thisAPPDSName_ not in FMDEF.SCTN090C_APPDSDICT_DICT:
+				FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_] = {}
+			if _thisDictName_ not in FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_]:
+				FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_] = {}
+			if _thisIndexNum_ not in FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
+				FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
-			FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisDictName_] = f"""{NTAB(1)}{_thisDictName_}: {OBRCE}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
+			FMDEF.SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisDictName_] = f"""{NTAB(1)}{_thisDictName_}: {OBRCE}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4540,16 +4540,16 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[5]
 			_thisVal_ = _thisItem_[6]
 
-			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDSDICT_DICT:
-				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_] = {}
-			if _thisDictName_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_]:
-				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_] = {}
-			if _thisIndexNum_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
-				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
+			if _thisAPPDSName_ not in FMDEF.SCTN090C_APPDSDICT_DICT:
+				FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_] = {}
+			if _thisDictName_ not in FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_]:
+				FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_] = {}
+			if _thisIndexNum_ not in FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
+				FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K_{_thisKey_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""K_{_thisKey_}"""] = f"""{DBLQT}K_{_thisKey_}{DBLQT}"""
-			FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_][_thisKey_] = f"""{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K_{_thisKey_}"""] = f"""{DBLQT}K_{_thisKey_}{DBLQT}"""
+			FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_][_thisKey_] = f"""{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4568,16 +4568,16 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[5]
 			_thisVal_ = _thisItem_[6]
 
-			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDSDICT_DICT:
-				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_] = {}
-			if _thisDictName_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_]:
-				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_] = {}
-			if _thisIndexNum_ not in FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
-				FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
+			if _thisAPPDSName_ not in FMDEF.SCTN090C_APPDSDICT_DICT:
+				FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_] = {}
+			if _thisDictName_ not in FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_]:
+				FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_] = {}
+			if _thisIndexNum_ not in FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_]:
+				FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_] = {}
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
-			FMPSG_SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_][_thisKey_] = f"""{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
+			FMDEF.SCTN090C_APPDSDICT_DICT[_thisAPPDSName_][_thisDictName_][_thisIndexNum_][_thisKey_] = f"""{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4594,12 +4594,12 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDS_DICT:
-				FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
+			if _thisAPPDSName_ not in FMDEF.SCTN090C_APPDS_DICT:
+				FMDEF.SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
-			FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisKey_] = f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
+			FMDEF.SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisKey_] = f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4616,12 +4616,12 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisAPPDSName_ not in FMPSG_SCTN090C_APPDS_DICT:
-				FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
+			if _thisAPPDSName_ not in FMDEF.SCTN090C_APPDS_DICT:
+				FMDEF.SCTN090C_APPDS_DICT[_thisAPPDSName_] = {}
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
-			FMPSG_SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisKey_] = f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
+			FMDEF.SCTN090C_APPDS_DICT[_thisAPPDSName_][_thisKey_] = f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -4641,9 +4641,9 @@ def parseTBGLST(FDTBGLST):
 #			_thisElementName_ = _thisItem_[3]
 #			thisFinalize_ = _thisItem_[4]
 #			if thisFinalize_ == "True":
-#				FMPSG_SCTN090D_FORMMAIN_DICT[thisMainframeName_] = f"""{NTAB(3)}**{_thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NEWLINE}"""
+#				FMDEF.SCTN090D_FORMMAIN_DICT[thisMainframeName_] = f"""{NTAB(3)}**{_thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}.finalize{OPAREN}{CPAREN}{NEWLINE}{NEWLINE}"""
 #			else:
-#				FMPSG_SCTN090D_FORMMAIN_DICT[thisMainframeName_] = f"""{NTAB(3)}**{_thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
+#				FMDEF.SCTN090D_FORMMAIN_DICT[thisMainframeName_] = f"""{NTAB(3)}**{_thisElementName_},{NEWLINE}{NTAB(2)}{CPAREN}{NEWLINE}{NEWLINE}"""
 #			continue
 #			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 # fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
@@ -4659,9 +4659,9 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 4 items", _thisItem_)
 				continue
 			_thisElementName_ = _thisItem_[2]
-			if _thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
-			FMPSG_SCTN090E_LAYOUT_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
+			if _thisElementName_ not in FMDEF.SCTN090E_LAYOUT_DICT:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
+			FMDEF.SCTN090E_LAYOUT_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4677,13 +4677,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Button{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090E_LAYOUT_DICT:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Button{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4699,13 +4699,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Checkbox{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090E_LAYOUT_DICT:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Checkbox{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4721,13 +4721,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Col{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090E_LAYOUT_DICT:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Col{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4743,13 +4743,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = thisItem[5]
-			if _thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Combo{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090E_LAYOUT_DICT:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Combo{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4766,13 +4766,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
 			_thisVal_ = _thisItem_[6]
-			if _thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}**{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090E_LAYOUT_DICT:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}**{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4790,13 +4790,13 @@ def parseTBGLST(FDTBGLST):
 			_thisElementKey_ = _thisItem_[5]
 			_thisKey_ = _thisItem_[6]
 			_thisVal_ = _thisItem_[7]
-			if _thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}{_thisKey_}={_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090E_LAYOUT_DICT:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}{_thisKey_}={_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4812,13 +4812,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Radio{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090E_LAYOUT_DICT:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Radio{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4833,11 +4833,11 @@ def parseTBGLST(FDTBGLST):
 			_thisRowKey_ = _thisItem_[3]
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
-			if _thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
-			FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][FMDEF.TABLEVEL] = _thisTabLevel_
+			if _thisElementName_ not in FMDEF.SCTN090E_LAYOUT_DICT:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
+			FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][FMDEF.TABLEVEL] = _thisTabLevel_
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4853,13 +4853,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Spin{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090E_LAYOUT_DICT:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Spin{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4875,13 +4875,13 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[4]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[5]
-			if _thisElementName_ not in FMPSG_SCTN090E_LAYOUT_DICT:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
-			if _thisRowKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
-			if _thisElementKey_ not in FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
-			FMPSG_SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Text{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090E_LAYOUT_DICT:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			FMDEF.SCTN090E_LAYOUT_DICT[_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Text{OPAREN}  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
@@ -4897,9 +4897,9 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 4 items", _thisItem_)
 				continue
 			_thisElementName_ = _thisItem_[2]
-			if _thisElementName_ not in FMPSG_SCTN090F_WINDOW_DICT:
-				FMPSG_SCTN090F_WINDOW_DICT[_thisElementName_] = ""
-			FMPSG_SCTN090F_WINDOW_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
+			if _thisElementName_ not in FMDEF.SCTN090F_WINDOW_DICT:
+				FMDEF.SCTN090F_WINDOW_DICT[_thisElementName_] = ""
+			FMDEF.SCTN090F_WINDOW_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4913,9 +4913,9 @@ def parseTBGLST(FDTBGLST):
 			_thisElementName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
-			if _thisElementName_ not in FMPSG_SCTN090F_WINDOW_DICT:
-				FMPSG_SCTN090F_WINDOW_DICT[_thisElementName_] = ""
-			FMPSG_SCTN090F_WINDOW_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090F_WINDOW_DICT:
+				FMDEF.SCTN090F_WINDOW_DICT[_thisElementName_] = ""
+			FMDEF.SCTN090F_WINDOW_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4929,9 +4929,9 @@ def parseTBGLST(FDTBGLST):
 			_thisElementName_ = _thisItem_[2]
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
-			if _thisElementName_ not in FMPSG_SCTN090F_WINDOW_DICT:
-				FMPSG_SCTN090F_WINDOW_DICT[_thisElementName_] = ""
-			FMPSG_SCTN090F_WINDOW_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN090F_WINDOW_DICT:
+				FMDEF.SCTN090F_WINDOW_DICT[_thisElementName_] = ""
+			FMDEF.SCTN090F_WINDOW_DICT[_thisElementName_] += f"""{NTAB(1)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
@@ -4948,8 +4948,8 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			FMPSG_SCTN0910_DEF3_DICT[_thisValName_] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
-			FMPSG_SCTN0910_DEF3_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0910_DEF3_DICT[_thisValName_] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+			FMDEF.SCTN0910_DEF3_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4962,8 +4962,8 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisValName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			FMPSG_SCTN0910_DEF3_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0910_DEF3_DICT[_thisValName_] += f"""{_thisVal_}"""
+			FMDEF.SCTN0910_DEF3_CMNT_DICT[_thisValName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0910_DEF3_DICT[_thisValName_] += f"""{_thisVal_}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
@@ -4979,9 +4979,9 @@ def parseTBGLST(FDTBGLST):
 				doErrorItem("not 4 items", _thisItem_)
 				continue
 			_thisElementName_ = _thisItem_[2]
-			if _thisElementName_ not in FMPSG_SCTN0913_RCMENU_DICT:
-				FMPSG_SCTN0913_RCMENU_DICT[_thisElementName_] = ""
-			FMPSG_SCTN0913_RCMENU_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
+			if _thisElementName_ not in FMDEF.SCTN0913_RCMENU_DICT:
+				FMDEF.SCTN0913_RCMENU_DICT[_thisElementName_] = ""
+			FMDEF.SCTN0913_RCMENU_CMNT_DICT[_thisElementName_] = f"""{_thisComment_}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
@@ -4994,9 +4994,9 @@ def parseTBGLST(FDTBGLST):
 				continue
 			_thisElementName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
-			if _thisElementName_ not in FMPSG_SCTN0913_RCMENU_DICT:
-				FMPSG_SCTN0913_RCMENU_DICT[_thisElementName_] = ""
-			FMPSG_SCTN0913_RCMENU_DICT[_thisElementName_] += f"""{NTAB(2)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			if _thisElementName_ not in FMDEF.SCTN0913_RCMENU_DICT:
+				FMDEF.SCTN0913_RCMENU_DICT[_thisElementName_] = ""
+			FMDEF.SCTN0913_RCMENU_DICT[_thisElementName_] += f"""{NTAB(2)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
@@ -5020,35 +5020,35 @@ def parseTBGLST(FDTBGLST):
 
 			_thisClassName_ = _thisItem_[2]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_DICT:
-				FMPSG_SCTN09FF_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_DICT:
+				FMDEF.SCTN09FF_DICT[_thisClassName_] = {}
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_INIT_DICT:
-				FMPSG_SCTN09FF_INIT_DICT[_thisClassName_] = []
+			if _thisClassName_ not in FMDEF.SCTN09FF_INIT_DICT:
+				FMDEF.SCTN09FF_INIT_DICT[_thisClassName_] = []
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_INIT_DEF1_DICT:
-				FMPSG_SCTN09FF_INIT_DEF1_DICT[_thisClassName_] = []
+			if _thisClassName_ not in FMDEF.SCTN09FF_INIT_DEF1_DICT:
+				FMDEF.SCTN09FF_INIT_DEF1_DICT[_thisClassName_] = []
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_INIT_DEF2_DICT:
-				FMPSG_SCTN09FF_INIT_DEF2_DICT[_thisClassName_] = []
+			if _thisClassName_ not in FMDEF.SCTN09FF_INIT_DEF2_DICT:
+				FMDEF.SCTN09FF_INIT_DEF2_DICT[_thisClassName_] = []
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_INIT_DEF3_DICT:
-				FMPSG_SCTN09FF_INIT_DEF3_DICT[_thisClassName_] = []
+			if _thisClassName_ not in FMDEF.SCTN09FF_INIT_DEF3_DICT:
+				FMDEF.SCTN09FF_INIT_DEF3_DICT[_thisClassName_] = []
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_FUNCTION_DICT:
-				FMPSG_SCTN09FF_FUNCTION_DEF2_DICT[_thisClassName_] = []
+			if _thisClassName_ not in FMDEF.SCTN09FF_FUNCTION_DICT:
+				FMDEF.SCTN09FF_FUNCTION_DEF2_DICT[_thisClassName_] = []
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_FUNCTION_DEF1_DICT:
-				FMPSG_SCTN09FF_INIT_DEF1_DICT[_thisClassName_] = []
+			if _thisClassName_ not in FMDEF.SCTN09FF_FUNCTION_DEF1_DICT:
+				FMDEF.SCTN09FF_INIT_DEF1_DICT[_thisClassName_] = []
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_FUNCTION_DEF2_DICT:
-				FMPSG_SCTN09FF_INIT_DEF2_DICT[_thisClassName_] = []
+			if _thisClassName_ not in FMDEF.SCTN09FF_FUNCTION_DEF2_DICT:
+				FMDEF.SCTN09FF_INIT_DEF2_DICT[_thisClassName_] = []
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_INIT_DICTIN_DICT:
-				FMPSG_SCTN09FF_INIT_DICTIN_DICT[_thisClassName_] = []
-				FMPSG_SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_] = []
+			if _thisClassName_ not in FMDEF.SCTN09FF_INIT_DICTIN_DICT:
+				FMDEF.SCTN09FF_INIT_DICTIN_DICT[_thisClassName_] = []
+				FMDEF.SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_] = []
 
-			FMPSG_SCTN09FF_CMNT_DICT[_thisClassName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_CMNT_DICT[_thisClassName_] = f"""{_thisComment_}"""
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 
 	# fold here ⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3⟰3
@@ -5067,15 +5067,15 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_BTNS_DICT:
-				FMPSG_SCTN09FF_BTNS_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN09FF_BTNS_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_BTNS_DICT[_thisClassName_][_thisElementName_] = ""
+			if _thisClassName_ not in FMDEF.SCTN09FF_BTNS_DICT:
+				FMDEF.SCTN09FF_BTNS_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMDEF.SCTN09FF_BTNS_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_BTNS_DICT[_thisClassName_][_thisElementName_] = ""
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_BTNS_CMNT_DICT:
-				FMPSG_SCTN09FF_BTNS_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_BTNS_CMNT_DICT:
+				FMDEF.SCTN09FF_BTNS_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_BTNS_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_BTNS_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5094,14 +5094,14 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[5]
 
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				thisValStr_ = f"""f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}"""
 
 			else:
 				thisValStr_ = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 
-			FMPSG_SCTN09FF_BTNS_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_BTNS_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5120,14 +5120,14 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[5]
 
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 				thisValStr_ = f"""f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}"""
 
 			else:
 				thisValStr_ = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 
-			FMPSG_SCTN09FF_BTNS_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_BTNS_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5147,26 +5147,26 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_CHECKBOX_DICT:
-				FMPSG_SCTN09FF_CHECKBOX_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN09FF_CHECKBOX_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_CHECKBOX_DICT[_thisClassName_][_thisElementName_] = ""
+			if _thisClassName_ not in FMDEF.SCTN09FF_CHECKBOX_DICT:
+				FMDEF.SCTN09FF_CHECKBOX_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMDEF.SCTN09FF_CHECKBOX_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_CHECKBOX_DICT[_thisClassName_][_thisElementName_] = ""
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_CHECKBOX_CMNT_DICT:
-				FMPSG_SCTN09FF_CHECKBOX_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_CHECKBOX_CMNT_DICT:
+				FMDEF.SCTN09FF_CHECKBOX_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_CHECKBOX_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			thisValStr_ = f"""{_thisElementName_}{CPAREN}{CBRCE}{TRIQT}"""
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_CHECKBOX_ADDON_DICT:
-				FMPSG_SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
+			if _thisClassName_ not in FMDEF.SCTN09FF_CHECKBOX_ADDON_DICT:
+				FMDEF.SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMDEF.SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
-			FMPSG_SCTN0903_LIST_DICT["LIST_DNUPDATE"] += f"""{NTAB(1)}K_{_thisElementName_.upper()},  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_{OBRKT}K{_thisElementName_[:-1]}{CBRKT} = K{_thisElementName_[:-1]}{NEWLINE}"""
-			FMPSG_SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}K{_thisElementName_[:-1]}{CBRKT} = K{_thisElementName_[:-1]}{NEWLINE}"""
+			FMDEF.SCTN0903_LIST_DICT["LIST_DNUPDATE"] += f"""{NTAB(1)}K_{_thisElementName_.upper()},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_{OBRKT}K{_thisElementName_[:-1]}{CBRKT} = K{_thisElementName_[:-1]}{NEWLINE}"""
+			FMDEF.SCTN09FF_CHECKBOX_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}K{_thisElementName_[:-1]}{CBRKT} = K{_thisElementName_[:-1]}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5183,7 +5183,7 @@ def parseTBGLST(FDTBGLST):
 			_thisElementName_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			FMPSG_SCTN09FF_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5203,10 +5203,10 @@ def parseTBGLST(FDTBGLST):
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN09FF_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {DBLQT}_thisVal_{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {DBLQT}_thisVal_{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5226,10 +5226,10 @@ def parseTBGLST(FDTBGLST):
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN09FF_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: _thisVal_,  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_CHECKBOX_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: _thisVal_,  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5249,17 +5249,17 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_COLUMN_DICT:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_COLUMN_DICT:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_] = {}
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_COLUMN_CMNT_DICT:
-				FMPSG_SCTN09FF_COLUMN_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_COLUMN_CMNT_DICT:
+				FMDEF.SCTN09FF_COLUMN_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisElementName_[:-1]}"""] = f"""{DBLQT}K{_thisElementName_[:-1]}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""K{_thisElementName_[:-1]}"""] = f"""{DBLQT}K{_thisElementName_[:-1]}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisElementName_[:-1]}"""] = _thisComment_
-			FMPSG_SCTN09FF_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_COLUMN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5279,10 +5279,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisElementKey_ not in FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+			if _thisElementKey_ not in FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 
-			FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Button{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Button{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5302,10 +5302,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisElementKey_ not in FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+			if _thisElementKey_ not in FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 
-			FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Checkbox{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Checkbox{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5325,10 +5325,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisElementKey_ not in FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+			if _thisElementKey_ not in FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 
-			FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Column{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Column{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5348,10 +5348,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisElementKey_ not in FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+			if _thisElementKey_ not in FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 
-			FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Combo{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Combo{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5371,10 +5371,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisElementKey_ not in FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+			if _thisElementKey_ not in FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 
-			FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}**{_thisElementKey_}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}**{_thisElementKey_}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5395,10 +5395,10 @@ def parseTBGLST(FDTBGLST):
 			_thisElementKey_ = _thisItem_[6]
 			_thisVal_ = _thisItem_[7]
 
-			if _thisElementKey_ not in FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+			if _thisElementKey_ not in FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 
-			FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}{_thisVal_}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}{_thisVal_}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5418,10 +5418,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisElementKey_ not in FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+			if _thisElementKey_ not in FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 
-			FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Radio{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Radio{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5440,10 +5440,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[5]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 
-			if _thisRowKey_ not in FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_]:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_]:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_] = {}
 
-			FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][FMDEF.TABLEVEL] = _thisTabLevel_
+			FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][FMDEF.TABLEVEL] = _thisTabLevel_
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5463,10 +5463,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisElementKey_ not in FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+			if _thisElementKey_ not in FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 
-			FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Spin{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Spin{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5486,10 +5486,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisElementKey_ not in FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
-				FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
+			if _thisElementKey_ not in FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_]:
+				FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] = ""
 
-			FMPSG_SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Text{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_COLUMN_DICT[_thisClassName_][_thisColumnName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Text{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5514,15 +5514,15 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisDictName_ = _thisItem_[3]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_DICT_DICT:
-				FMPSG_SCTN09FF_DICT_DICT[_thisClassName_] = {}
-			if _thisDictName_ not in FMPSG_SCTN09FF_DICT_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] = ""
+			if _thisClassName_ not in FMDEF.SCTN09FF_DICT_DICT:
+				FMDEF.SCTN09FF_DICT_DICT[_thisClassName_] = {}
+			if _thisDictName_ not in FMDEF.SCTN09FF_DICT_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] = ""
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_DICT_CMNT_DICT:
-				FMPSG_SCTN09FF_DICT_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_DICT_CMNT_DICT:
+				FMDEF.SCTN09FF_DICT_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5540,7 +5540,7 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5558,7 +5558,7 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5576,7 +5576,7 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5594,7 +5594,7 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5614,15 +5614,15 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisDictName_ = _thisItem_[3]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_DICT_DICT:
-				FMPSG_SCTN09FF_DICT_DICT[_thisClassName_] = {}
-			if _thisDictName_ not in FMPSG_SCTN09FF_DICT_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] = ""
+			if _thisClassName_ not in FMDEF.SCTN09FF_DICT_DICT:
+				FMDEF.SCTN09FF_DICT_DICT[_thisClassName_] = {}
+			if _thisDictName_ not in FMDEF.SCTN09FF_DICT_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] = ""
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_DICT_CMNT_DICT:
-				FMPSG_SCTN09FF_DICT_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_DICT_CMNT_DICT:
+				FMDEF.SCTN09FF_DICT_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_DICT_CMNT_DICT[_thisClassName_][_thisDictName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5640,9 +5640,9 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			FMPSG_SCTN0900_DEF1_DICT[_thisKey_] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[_thisKey_] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisKey_] = f"""{_thisComment_}"""
-			FMPSG_SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_DICT_DICT[_thisClassName_][_thisDictName_] += f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5669,32 +5669,32 @@ def parseTBGLST(FDTBGLST):
 			_theseParms_ = _thisItem_[4]
 			_thisDPDBool_ = _thisItem_[5]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_FUNCTION_DICT:
-				FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
+			if _thisClassName_ not in FMDEF.SCTN09FF_FUNCTION_DICT:
+				FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 
-			FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(1)}def {_thisElementName_}{OPAREN}self{_theseParms_}{CPAREN}:""")
+			FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(1)}def {_thisElementName_}{OPAREN}self{_theseParms_}{CPAREN}:""")
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_FUNCTION_CMNT_DICT:
-				FMPSG_SCTN09FF_FUNCTION_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_FUNCTION_CMNT_DICT:
+				FMDEF.SCTN09FF_FUNCTION_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN0900_DEF1_DICT[_thisElementName_.upper()] = f"""{DBLQT}F_{_thisElementName_.upper()}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[_thisElementName_.upper()] = f"""{DBLQT}F_{_thisElementName_.upper()}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[_thisElementName_.upper()] = f"""{_thisComment_}"""
-			FMPSG_SCTN09FF_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{NTAB(3)}{_thisKey_}: {_thisDPDBool_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{NTAB(3)}{_thisKey_}: {_thisDPDBool_},  # {_thisComment_}{NEWLINE}"""
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_DICT_DICT:
-				FMPSG_SCTN09FF_DICT_DICT[_thisClassName_] = {}
-			if "_DPD_" not in FMPSG_SCTN09FF_DICT_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_DICT_DICT[_thisClassName_]["_DPD_"] = ""
+			if _thisClassName_ not in FMDEF.SCTN09FF_DICT_DICT:
+				FMDEF.SCTN09FF_DICT_DICT[_thisClassName_] = {}
+			if "_DPD_" not in FMDEF.SCTN09FF_DICT_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_DICT_DICT[_thisClassName_]["_DPD_"] = ""
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_DICT_CMNT_DICT:
-				FMPSG_SCTN09FF_DICT_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_DICT_CMNT_DICT:
+				FMDEF.SCTN09FF_DICT_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{NTAB(3)}F_{_thisElementName_.upper()}: {_thisDPDBool_},  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN09FF_DICT_CMNT_DICT[_thisClassName_]["_DPD_"] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{NTAB(3)}F_{_thisElementName_.upper()}: {_thisDPDBool_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_DICT_CMNT_DICT[_thisClassName_]["_DPD_"] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5712,19 +5712,19 @@ def parseTBGLST(FDTBGLST):
 			_thisFilename_ = _thisItem_[4]
 			_thisDPDBool_ = _thisItem_[5]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_FUNCTION_DICT:
-				FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
+			if _thisClassName_ not in FMDEF.SCTN09FF_FUNCTION_DICT:
+				FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_] = []
 
-			FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr("res/functions/" + _thisFilename_)}""")
+			FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr("res/functions/" + _thisFilename_)}""")
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_FUNCTION_CMNT_DICT:
-				FMPSG_SCTN09FF_FUNCTION_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_FUNCTION_CMNT_DICT:
+				FMDEF.SCTN09FF_FUNCTION_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{NTAB(3)}F_{_thisElementName_.upper()}: {_thisDPDBool_},  # {_thisComment_}{NEWLINE}"""
-			FMPSG_SCTN09FF_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""F_{_thisElementName_.upper()}"""] = f"""{DBLQT}F_{_thisElementName_.upper()}{DBLQT}"""
+			FMDEF.SCTN09FF_DICT_DICT[_thisClassName_]["_DPD_"] += f"""{NTAB(3)}F_{_thisElementName_.upper()}: {_thisDPDBool_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_FUNCTION_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""F_{_thisElementName_.upper()}"""] = f"""{DBLQT}F_{_thisElementName_.upper()}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""F_{_thisElementName_.upper()}"""] = f"""{_thisComment_}"""
 
 			continue
@@ -5741,7 +5741,7 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 
-			FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NEWLINE}""")
+			FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5758,7 +5758,7 @@ def parseTBGLST(FDTBGLST):
 			_thisElementName_ = _thisItem_[3]
 			_thisLine_ = _thisItem_[4]
 
-			FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisLine_}{NEWLINE}""")
+			FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisLine_}{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5775,7 +5775,7 @@ def parseTBGLST(FDTBGLST):
 			_thisElementName_ = _thisItem_[3]
 			_thisFilename_ = _thisItem_[4]
 
-			FMPSG_SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr("res/functions/" + _thisFilename_)}""")
+			FMDEF.SCTN09FF_FUNCTION_DICT[_thisClassName_][_thisElementName_].append(f"""{readFileToStr("res/functions/" + _thisFilename_)}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5793,7 +5793,7 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_FUNCTION_DEF1_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}""")
+			FMDEF.SCTN09FF_FUNCTION_DEF1_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5811,7 +5811,7 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_FUNCTION_DEF2_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}""")
+			FMDEF.SCTN09FF_FUNCTION_DEF2_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5829,7 +5829,7 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_FUNCTION_DEF1_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisValName_} = {_thisVal_}  # {_thisComment_}""")
+			FMDEF.SCTN09FF_FUNCTION_DEF1_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisValName_} = {_thisVal_}  # {_thisComment_}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5847,7 +5847,7 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_FUNCTION_DEF2_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisValName_} = {_thisVal_}  # {_thisComment_}""")
+			FMDEF.SCTN09FF_FUNCTION_DEF2_DICT[_thisClassName_][_thisElementName_].append(f"""{NTAB(2)}{_thisValName_} = {_thisVal_}  # {_thisComment_}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5870,10 +5870,10 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisParmStr_ = subMyPlaceKpr(_thisItem_[3])
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_INIT_DICT:
-				FMPSG_SCTN09FF_INIT_DICT[_thisClassName_] = []
+			if _thisClassName_ not in FMDEF.SCTN09FF_INIT_DICT:
+				FMDEF.SCTN09FF_INIT_DICT[_thisClassName_] = []
 
-			FMPSG_SCTN09FF_INIT_DICT[_thisClassName_].append(f"""{_thisParmStr_}""")
+			FMDEF.SCTN09FF_INIT_DICT[_thisClassName_].append(f"""{_thisParmStr_}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5891,7 +5891,7 @@ def parseTBGLST(FDTBGLST):
 			_thisLambda_ = _thisItem_[4]
 
 			_thisLambda_ = subMyPlaceKpr(_thisLambda_)
-			FMPSG_SCTN09FF_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN09FF_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5908,7 +5908,7 @@ def parseTBGLST(FDTBGLST):
 			_thisLine_ = _thisItem_[3]
 			_thisLine_ = subMyPlaceKpr(_thisLine_)
 
-			FMPSG_SCTN09FF_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}{_thisLine_}  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN09FF_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}{_thisLine_}  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5924,7 +5924,7 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisFilename_ = _thisItem_[3]
 
-			FMPSG_SCTN09FF_INIT_DICT[_thisClassName_].append(f"""{readFileToStr(_thisFilename_)}{NEWLINE}""")
+			FMDEF.SCTN09FF_INIT_DICT[_thisClassName_].append(f"""{readFileToStr(_thisFilename_)}{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5942,8 +5942,8 @@ def parseTBGLST(FDTBGLST):
 			_thisVal_ = _thisItem_[4]
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
-			FMPSG_SCTN09FF_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
+			FMDEF.SCTN09FF_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5960,8 +5960,8 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			FMPSG_SCTN09FF_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
+			FMDEF.SCTN09FF_INIT_DEF1_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
 
 			continue
@@ -5979,8 +5979,8 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			FMPSG_SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -5997,8 +5997,8 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			FMPSG_SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{DBLQT}{_thisKey_}{DBLQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6017,15 +6017,15 @@ def parseTBGLST(FDTBGLST):
 			_isARevKeyItem_ = _thisItem_[5]
 
 			if (_isARevKeyItem_ == "True"):
-				FMPSG_SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
-				FMPSG_SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisKey_}{CPAREN}{CBRCE}{TRIQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisKey_}{CPAREN}{CBRCE}{TRIQT}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
 
 			else:
-				FMPSG_SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
-				FMPSG_SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}""")
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6044,15 +6044,15 @@ def parseTBGLST(FDTBGLST):
 			_isARevKeyItem_ = _thisItem_[5]
 
 			if (_isARevKeyItem_ == "True"):
-				FMPSG_SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
-				FMPSG_SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisKey_}{CPAREN}{CBRCE}{TRIQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisKey_}{CPAREN}{CBRCE}{TRIQT}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
 
 			else:
-				FMPSG_SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
-				FMPSG_SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DICTIN_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DICTINSTR_DICT[_thisClassName_].append(f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}""")
 
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisKey_}"""] = f"""{_thisComment_}"""
-			FMPSG_SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
+			FMDEF.SCTN0900_DEF1_DICT[f"""{_thisKey_}"""] = f"""{DBLQT}{_thisKey_}{DBLQT}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6070,12 +6070,12 @@ def parseTBGLST(FDTBGLST):
 			_isARevKeyItem_ = _thisItem_[4]
 
 			if _isARevKeyItem_ == "True":
-				FMPSG_SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisKey_}{CBRKT} = self._USE_THIS_KEY_{OPAREN}{_thisKey_}{CPAREN}  # {_thisComment_}{NEWLINE}""")
-				FMPSG_SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}self._USE_THIS_KEY_{OPAREN}{_thisKey_}{CPAREN}{CBRKT} = {_thisKey_}  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisKey_}{CBRKT} = self._USE_THIS_KEY_{OPAREN}{_thisKey_}{CPAREN}  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}self._USE_THIS_KEY_{OPAREN}{_thisKey_}{CPAREN}{CBRKT} = {_thisKey_}  # {_thisComment_}{NEWLINE}""")
 
 			else:
-				FMPSG_SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisKey_}{CBRKT} = {_thisKey_}  # {_thisComment_}{NEWLINE}""")
-				FMPSG_SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}{_thisKey_}{CBRKT} = {_thisKey_}  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisKey_}{CBRKT} = {_thisKey_}  # {_thisComment_}{NEWLINE}""")
+				FMDEF.SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}{_thisKey_}{CBRKT} = {_thisKey_}  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6093,7 +6093,7 @@ def parseTBGLST(FDTBGLST):
 			_thisLambda_ = _thisItem_[4]
 
 			_thisLambda_ = subMyPlaceKpr(_thisLambda_)
-			FMPSG_SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = lambda {_thisLambda_}  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6110,7 +6110,7 @@ def parseTBGLST(FDTBGLST):
 			_thisLine_ = _thisItem_[3]
 			_thisLine_ = subMyPlaceKpr(_thisLine_)
 
-			FMPSG_SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}{_thisLine_}  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}{_thisLine_}  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6127,8 +6127,8 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			FMPSG_SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
+			FMDEF.SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {DBLQT}{_thisVal_}{DBLQT}  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
 
 			continue
@@ -6146,8 +6146,8 @@ def parseTBGLST(FDTBGLST):
 			_thisValName_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			FMPSG_SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{NEWLINE}""")
-			FMPSG_SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
+			FMDEF.SCTN09FF_INIT_DEF2_DICT[_thisClassName_].append(f"""{NTAB(2)}self.{_thisValName_} = {_thisVal_}  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN0900_DEF1_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{DBLQT}K{_thisValName_[:-1]}{DBLQT}"""
 			FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""K{_thisValName_[:-1]}"""] = f"""{_thisComment_}"""
 
 			continue
@@ -6165,7 +6165,7 @@ def parseTBGLST(FDTBGLST):
 			_thisLine_ = _thisItem_[3]
 			_thisLine_ = subMyPlaceKpr(_thisLine_)
 
-			FMPSG_SCTN09FF_INIT_DEF3_DICT[_thisClassName_].append(f"""{NTAB(2)}{_thisLine_}  # {_thisComment_}{NEWLINE}""")
+			FMDEF.SCTN09FF_INIT_DEF3_DICT[_thisClassName_].append(f"""{NTAB(2)}{_thisLine_}  # {_thisComment_}{NEWLINE}""")
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6186,15 +6186,15 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_LAYOUT_DICT:
-				FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_LAYOUT_DICT:
+				FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_] = {}
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_LAYOUT_CMNT_DICT:
-				FMPSG_SCTN09FF_LAYOUT_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_LAYOUT_CMNT_DICT:
+				FMDEF.SCTN09FF_LAYOUT_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_LAYOUT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6214,7 +6214,7 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Button{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Button{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6234,7 +6234,7 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Checkbox{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Checkbox{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6254,10 +6254,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisElementKey_ not in FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_]:
-				FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
+			if _thisElementKey_ not in FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_]:
+				FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] = ""
 
-			FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Column{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Column{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6277,7 +6277,7 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Combo{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Combo{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6298,7 +6298,7 @@ def parseTBGLST(FDTBGLST):
 			_thisElementKey_ = _thisItem_[6]
 			_thisVal_ = _thisItem_[7]
 
-			FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}**{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}**{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6320,7 +6320,7 @@ def parseTBGLST(FDTBGLST):
 			_thisValKey_ = _thisItem_[7]
 			_thisVal_ = _thisItem_[8]
 
-			FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}{_thisValKey_}={_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}{_thisValKey_}={_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6340,7 +6340,7 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Radio{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisElementName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Radio{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6359,10 +6359,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = _thisItem_[5]
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 
-			if _thisRowKey_ not in FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_]:
-				FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_] = {}
+			if _thisRowKey_ not in FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_]:
+				FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_] = {}
 
-			FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][FMDEF.TABLEVEL] = _thisTabLevel_
+			FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][FMDEF.TABLEVEL] = _thisTabLevel_
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6382,10 +6382,10 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			if _thisElementKey_ not in FMPSG_SCTN09FF_DICT_DICT[_thisClassName_][_thisLayoutName_][thisRowKey_]:
-				FMPSG_SCTN09FF_DICT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] = {}
+			if _thisElementKey_ not in FMDEF.SCTN09FF_DICT_DICT[_thisClassName_][_thisLayoutName_][thisRowKey_]:
+				FMDEF.SCTN09FF_DICT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] = {}
 
-			FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Spin{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Spin{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6405,7 +6405,7 @@ def parseTBGLST(FDTBGLST):
 			_thisTabLevel_ = int(_thisTabLevel_[1:])
 			_thisElementKey_ = _thisItem_[6]
 
-			FMPSG_SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Text{OPAREN}  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_LAYOUT_DICT[_thisClassName_][_thisLayoutName_][_thisRowKey_][_thisElementKey_] += f"""{NTAB(_thisTabLevel_)}SG.Text{OPAREN}  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6425,14 +6425,14 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisListName_ = _thisItem_[3]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_LIST_DICT:
-				FMPSG_SCTN09FF_LIST_DICT[_thisClassName_] = {}
-			if _thisListName_ not in FMPSG_SCTN09FF_LIST_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_LIST_DICT[_thisClassName_][_thisListName_] = ""
-			if _thisClassName_ not in FMPSG_SCTN09FF_LIST_CMNT_DICT:
-				FMPSG_SCTN09FF_LIST_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_LIST_DICT:
+				FMDEF.SCTN09FF_LIST_DICT[_thisClassName_] = {}
+			if _thisListName_ not in FMDEF.SCTN09FF_LIST_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_LIST_DICT[_thisClassName_][_thisListName_] = ""
+			if _thisClassName_ not in FMDEF.SCTN09FF_LIST_CMNT_DICT:
+				FMDEF.SCTN09FF_LIST_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_LIST_CMNT_DICT[_thisClassName_][_thisListName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_LIST_CMNT_DICT[_thisClassName_][_thisListName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6448,7 +6448,7 @@ def parseTBGLST(FDTBGLST):
 			_thisListName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
 
-			FMPSG_SCTN09FF_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6464,7 +6464,7 @@ def parseTBGLST(FDTBGLST):
 			_thisListName_ = _thisItem_[2]
 			_thisVal_ = _thisItem_[3]
 
-			FMPSG_SCTN0903_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN0903_LIST_DICT[_thisListName_] += f"""{NTAB(1)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6495,20 +6495,20 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_SPIN_DICT:
-				FMPSG_SCTN09FF_SPIN_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN09FF_SPIN_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_SPIN_DICT[_thisClassName_][_thisElementName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_SPIN_DICT:
+				FMDEF.SCTN09FF_SPIN_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMDEF.SCTN09FF_SPIN_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_SPIN_DICT[_thisClassName_][_thisElementName_] = {}
 
 			if _thisClassName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_] = {}
 			if _thisElementName_ not in FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_]:
 				FMPSG_SCTB0916_CLASS_SPIN_LIST_DICT[_thisClassName_][_thisElementName_] = ""
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_SPIN_CMNT_DICT:
-				FMPSG_SCTN09FF_SPIN_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_SPIN_CMNT_DICT:
+				FMDEF.SCTN09FF_SPIN_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_SPIN_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6533,10 +6533,10 @@ def parseTBGLST(FDTBGLST):
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN09FF_SPIN_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_SPIN_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6561,10 +6561,10 @@ def parseTBGLST(FDTBGLST):
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN09FF_SPIN_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_SPIN_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6623,32 +6623,32 @@ def parseTBGLST(FDTBGLST):
 			_isThisATime_ = _thisItem_[4]
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			if _thisClassName_ not in FMPSG_SCTN09FF_TEXT_DICT:
-				FMPSG_SCTN09FF_TEXT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_TEXT_DICT:
+				FMDEF.SCTN09FF_TEXT_DICT[_thisClassName_] = {}
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			if _thisElementName_ not in FMPSG_SCTN09FF_TEXT_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_TEXT_DICT[_thisClassName_][_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN09FF_TEXT_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_TEXT_DICT[_thisClassName_][_thisElementName_] = ""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			if _thisClassName_ not in FMPSG_SCTN09FF_TEXT_ADDON_DICT:
-				FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_TEXT_ADDON_DICT:
+				FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_] = {}
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			if _thisElementName_ not in FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
+			if _thisElementName_ not in FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
-			if _thisClassName_ not in FMPSG_SCTN09FF_TEXT_CMNT_DICT:
-				FMPSG_SCTN09FF_TEXT_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_TEXT_CMNT_DICT:
+				FMDEF.SCTN09FF_TEXT_CMNT_DICT[_thisClassName_] = {}
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if _isThisATime_ == "True":
-				FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._LIST_KEYS_TIME_.append({_thisElementName_[1:-1]}){NEWLINE}"""
-				FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_({_thisElementName_[1:-1]})){NEWLINE}"""
+				FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._LIST_KEYS_TIME_.append({_thisElementName_[1:-1]}){NEWLINE}"""
+				FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._LIST_KEYS_TIME_.append(self._USE_THIS_KEY_({_thisElementName_[1:-1]})){NEWLINE}"""
 
-			FMPSG_SCTN09FF_DEF_DICT[f"""K{_thisElementName_}"""] = f"""{DBLQT}k{_thisElementName_}"""
-			FMPSG_SCTN09FF_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_DEF_DICT[f"""K{_thisElementName_}"""] = f"""{DBLQT}k{_thisElementName_}"""
+			FMDEF.SCTN09FF_TEXT_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6665,12 +6665,12 @@ def parseTBGLST(FDTBGLST):
 			_thisElementName_ = _thisItem_[3]
 			_thisVal_ = _thisItem_[4]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_TEXT_ADDON_DICT:
-				FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
+			if _thisClassName_ not in FMDEF.SCTN09FF_TEXT_ADDON_DICT:
+				FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
-			FMPSG_SCTN09FF_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6687,27 +6687,27 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_TEXT_ADDON_DICT:
-				FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_TEXT_ADDON_DICT:
+				FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_] = {}
 
 			if (_thisKey_ == "KEY"):
 				thisValStr_ = f"""f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}"""
 
-				if _thisElementName_ not in FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_]:
-					FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
+				if _thisElementName_ not in FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_]:
+					FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
-				FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{NEWLINE}"""
-				FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{CBRKT} = {_thisVal_}{NEWLINE}"""
+				FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{NEWLINE}"""
+				FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{CBRKT} = {_thisVal_}{NEWLINE}"""
 
 			else:
 				thisValStr_ = f"""{_thisVal_}"""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN09FF_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {DBLQT}{thisValStr_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {DBLQT}{thisValStr_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6728,21 +6728,21 @@ def parseTBGLST(FDTBGLST):
 			if (_thisKey_ == "KEY"):
 				thisValStr_ = f"""f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}"""
 
-				if _thisElementName_ not in FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_]:
-					FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
+				if _thisElementName_ not in FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_]:
+					FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] = ""
 
-				FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{NEWLINE}"""
-				FMPSG_SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{CBRKT} = {_thisVal_}{NEWLINE}"""
+				FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_{OBRKT}{_thisVal_}{CBRKT} = f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{NEWLINE}"""
+				FMDEF.SCTN09FF_TEXT_ADDON_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(2)}self._DICT_KEYS_REVERSE_{OBRKT}f{TRIQT}{OBRCE}self._USE_THIS_KEY_{OPAREN}{_thisVal_}{CPAREN}{CBRCE}{TRIQT}{CBRKT} = {_thisVal_}{NEWLINE}"""
 
 			else:
 				thisValStr_ = f"""{_thisVal_}"""
 
 				# 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱ 3⟱
 			if (_thisKey_ == "KEY"):
-				FMPSG_SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
+				FMDEF.SCTN0900_DEF1_DICT[f"""{_thisVal_}"""] = f"""{DBLQT}{_thisVal_}{DBLQT}"""
 				FMDEF.SCTN0900_DEF1_CMNT_DICT[f"""{_thisVal_}"""] = f"""{_thisComment_}"""
 
-			FMPSG_SCTN09FF_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_TEXT_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {thisValStr_},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6762,15 +6762,15 @@ def parseTBGLST(FDTBGLST):
 			_thisClassName_ = _thisItem_[2]
 			_thisElementName_ = _thisItem_[3]
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_WINDOW_DICT:
-				FMPSG_SCTN09FF_WINDOW_DICT[_thisClassName_] = {}
-			if _thisElementName_ not in FMPSG_SCTN09FF_WINDOW_DICT[_thisClassName_]:
-				FMPSG_SCTN09FF_WINDOW_DICT[_thisClassName_][_thisElementName_] = ""
+			if _thisClassName_ not in FMDEF.SCTN09FF_WINDOW_DICT:
+				FMDEF.SCTN09FF_WINDOW_DICT[_thisClassName_] = {}
+			if _thisElementName_ not in FMDEF.SCTN09FF_WINDOW_DICT[_thisClassName_]:
+				FMDEF.SCTN09FF_WINDOW_DICT[_thisClassName_][_thisElementName_] = ""
 
-			if _thisClassName_ not in FMPSG_SCTN09FF_WINDOW_CMNT_DICT:
-				FMPSG_SCTN09FF_WINDOW_CMNT_DICT[_thisClassName_] = {}
+			if _thisClassName_ not in FMDEF.SCTN09FF_WINDOW_CMNT_DICT:
+				FMDEF.SCTN09FF_WINDOW_CMNT_DICT[_thisClassName_] = {}
 
-			FMPSG_SCTN09FF_WINDOW_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
+			FMDEF.SCTN09FF_WINDOW_CMNT_DICT[_thisClassName_][_thisElementName_] = f"""{_thisComment_}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6788,7 +6788,7 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_WINDOW_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_WINDOW_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {DBLQT}{_thisVal_}{DBLQT},  # {_thisComment_}{NEWLINE}"""
 
 			continue
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
@@ -6806,7 +6806,7 @@ def parseTBGLST(FDTBGLST):
 			_thisKey_ = _thisItem_[4]
 			_thisVal_ = _thisItem_[5]
 
-			FMPSG_SCTN09FF_WINDOW_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
+			FMDEF.SCTN09FF_WINDOW_DICT[_thisClassName_][_thisElementName_] += f"""{NTAB(3)}{_thisKey_}: {_thisVal_},  # {_thisComment_}{NEWLINE}"""
 
 			# fold here ⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2⟰2
 

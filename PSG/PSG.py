@@ -1303,7 +1303,7 @@ def localTimes(
 		mins_=None,
 ):
 	global \
-		NOW_FULL, \
+		NOWF, \
 		NOW_NOMS, \
 		NOWM, \
 		NOWMS, \
@@ -1323,7 +1323,7 @@ def localTimes(
 	if (_adjSecs_ < 0):
 		_adjSecs_ += CF.DAY_S
 	# ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1
-	NOW_FULL = int(_adjSecs_)
+	NOWF = int(_adjSecs_)
 	_adjSecs_ = _adjSecs_ % CF.DAY_S
 	NOWS = _adjSecs_
 	NOW_NOMS = int(NOWS)
@@ -1817,7 +1817,7 @@ def doStartup():
 		_tempDS_[K_SNOOZED] = None
 		_tempDS_[K_TIME_S_AT_LAST_RUN] = 0
 		_tempDS_[K_TIME_S_INTERVAL_START] = 0
-		_tempDS_[K_TIME_F_AT_ZEROELAPSE] = NOW_FULL
+		_tempDS_[K_TIME_F_AT_ZEROELAPSE] = NOWF
 		APPDS_MAIN[K_EVENT_ENTRIES][_index_] = CF.quickCopyDict(_tempDS_)
 	# ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1 ⟰1
 	DICT_ALL_THE_FORMS[FORM_CLOCKS].easyUpdate(
