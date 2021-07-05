@@ -3,7 +3,7 @@
 #
 #
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
-# * start of __KEYS__.CF._01_00_NAMES
+# * start of __KEYS__.CF._01_00_NAMES often used as NK
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
@@ -16,6 +16,7 @@ __CLASS__ = "__CLASS__"
 __CLASSES__ = "__CLASSES__"
 __DOCS__ = "__DOCS__"
 __EXTENSION__ = "__EXTENSION__"
+__FILENAME__ = "__FILENAME__"
 __FUNCTIONS__ = "__FUNCTIONS__"
 __IMAGES__ = "__IMAGES__"
 __KEYS__ = "__KEYS__"
@@ -56,6 +57,7 @@ FULL_ID = {
 		__CLASSES__: None,
 		__DOCS__: None,
 		__EXTENSION__: None,
+		__FILENAME__: None,
 		__FUNCTIONS__: None,
 		__IMAGES__: None,
 		__KEYS__: None,
@@ -71,6 +73,54 @@ FULL_ID = {
 		__SUBD0__: None,
 		__SUBD1__: None,
 		__SUBSECTION__: None,
+}
+
+
+FULL_FORWARD_ID = {
+		__CLASS__: "_class_",
+		__CLASSES__: "_classes_",
+		__DOCS__: "_docs_",
+		__EXTENSION__: "_extension_",
+		__FILENAME__: "_filename_",
+		__FUNCTIONS__: "_functions_",
+		__IMAGES__: "_images_",
+		__KEYS__: "_keys_",
+		__MODULE_NAME__: "_moduleName_",
+		__NEW_FILENAME__: "_newFilename_",
+		__SECTION__: "_section_",
+		__SUB0__: "_sub0_",
+		__SUB1__: "_sub1_",
+		__SUB2__: "_sub2_",
+		__SUB3__: "_sub3_",
+		__SUB4__: "_sub4_",
+		__SUB5__: "_sub5_",
+		__SUBD0__: "_subd0_",
+		__SUBD1__: "_subd1_",
+		__SUBSECTION__: "_subsection_",
+}
+
+
+FULL_REVERSE_ID = {
+		"_class_": __CLASS__,
+		"_classes_": __CLASSES__,
+		"_docs_": __DOCS__,
+		"_extension_": __EXTENSION__,
+		"_filename_": __FILENAME__,
+		"_functions_": __FUNCTIONS__,
+		"_images_": __IMAGES__,
+		"_keys_": __KEYS__,
+		"_moduleName_": __MODULE_NAME__,
+		"_newFilename_": __NEW_FILENAME__,
+		"_section_": __SECTION__,
+		"_sub0_": __SUB0__,
+		"_sub1_": __SUB1__,
+		"_sub2_": __SUB2__,
+		"_sub3_": __SUB3__,
+		"_sub4_": __SUB4__,
+		"_sub5_": __SUB5__,
+		"_subd0_": __SUBD0__,
+		"_subd1_": __SUBD1__,
+		"_subsection_": __SUBSECTION__,
 }
 
 
