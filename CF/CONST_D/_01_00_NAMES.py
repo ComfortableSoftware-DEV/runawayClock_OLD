@@ -9,8 +9,8 @@
 #
 
 
-import _01_00_VALS as V
-from .. SUBM_D import _01_00_ITERABLES as I
+from CF.SUBM_D import _01_00_VALS as V
+from CF.SUBM_D import _01_00_ITERABLES as I
 from ... __KEYS__.CF import _01_00_NAMES as NK
 
 

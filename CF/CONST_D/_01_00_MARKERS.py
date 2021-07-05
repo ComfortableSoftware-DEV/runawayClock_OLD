@@ -9,9 +9,9 @@
 #
 
 
-import ._01_00_MARKERS as M
-import ._01_00_NAMES as N
-import ._01_00_VALS as V
+from CF.CONST_D import _01_00_MARKERS as M
+from CF.CONST_D import _01_00_NAMES as N
+from CF.CONST_D import _01_00_VALS as V
 
 
 CMNTLEN = 250
