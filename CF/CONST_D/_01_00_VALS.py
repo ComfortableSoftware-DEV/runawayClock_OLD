@@ -7,7 +7,8 @@
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 #
 #
-__NAME__ = "runawayClock"
+
+
 
 
 BKQT = "`"  # BACK TICK
@@ -25,6 +26,23 @@ OPAREN = "("  # OPENPAREN
 SGLQT = "'"  # simple ' character
 SPCSTR = " "  # SPACE character"
 TABSTR = "\t"  # TAB
+
+
+FOLDLEN = 250
+
+
+FOLD1ENDHERE = f"""# fold here {"⟰1" * (FOLDLEN // 2)}"""
+FOLD1ENDHERELN = f"""# fold here {"⟰1" * (FOLDLEN // 2)}{NEWLINE}"""
+FOLD1STARTHERE = f"""# fold here {"⟱1" * (FOLDLEN // 2)}"""
+FOLD1STARTHERELN = f"""# fold here {"⟱1" * (FOLDLEN // 2)}{NEWLINE}"""
+FOLD2ENDHERE = f"""# fold here {"⟰2" * (FOLDLEN // 2)}"""
+FOLD2ENDHERELN = f"""# fold here {"⟰2" * (FOLDLEN // 2)}{NEWLINE}"""
+FOLD2STARTHERE = f"""# fold here {"⟱2" * (FOLDLEN // 2)}"""
+FOLD2STARTHERELN = f"""# fold here {"⟱2" * (FOLDLEN // 2)}{NEWLINE}"""
+FOLD3ENDHERE = f"""# fold here {"⟰3" * (FOLDLEN // 2)}"""
+FOLD3ENDHERELN = f"""# fold here {"⟰3" * (FOLDLEN // 2)}{NEWLINE}"""
+FOLD3STARTHERE = f"""# fold here {"⟱3" * (FOLDLEN // 2)}"""
+FOLD3STARTHERELN = f"""# fold here {"⟱3" * (FOLDLEN // 2)}{NEWLINE}"""
 
 
 FTQ = f"""f{DBLQT}{DBLQT}{DBLQT}"""

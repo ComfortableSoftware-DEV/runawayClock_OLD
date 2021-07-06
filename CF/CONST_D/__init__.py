@@ -29,12 +29,6 @@ for _module_ in sorted(LISTDIR(DIRNAME(__file__))):
 # ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0 ⟰0
 
 
-__author__ = "Liam A. Blaylock"
-__copyright__ = "BSD"
-__date__ = "2021.07.05 04:00:00-0600"
-__license__ = "GPL"
-__version__ = "0.7.10"
-
 print(f"""CF.CONST_D.__init__.py
 __file__ {__file__}
 __name__ {__name__}

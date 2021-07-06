@@ -9,10 +9,19 @@
 #
 
 
-from CF.SUBM_D import _01_00_VALS as V
-from CF.SUBM_D import _01_00_ITERABLES as I
-from ... __KEYS__.CF import _01_00_NAMES as NK
+from ..SUBM_D import _01_00_ITERABLES as I
+from __KEYS__.CF import _01_00_NAMES as NK
 
+
+BKQT = "`"  # BACK TICK
+DBLQT = "\""  # DOUBLE QUOTE
+NEWLINE = "\n"  # NEWLINE
+SGLQT = "'"  # simple ' character
+SPCSTR = " "  # SPACE character"
+TABSTR = "\t"  # TAB
+
+
+EMPTY_STR_LST = [None, "", DBLQT, EMPTY_STR_STR, SGLQT, f"""{SGLQT}{SGLQT}""", BKQT, f"""{BKQT}{BKQT}""", "None", "\r", NEWLINE, "\r\n", "\n\r", ]
 
 
 # * #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
@@ -68,7 +77,7 @@ def MAKE_ID(
 		_thisVal_ = _dictToRtn_[_thisKey_]
 		# 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱ 2⟱
 		if (
-				(_thisVal_ in V.EMPTY_STR_LST)
+				(_thisVal_ in EMPTY_STR_LST)
 		):
 			_dictToRtn_[_thisKey_] = None
 		# ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2 ⟰2
@@ -94,7 +103,7 @@ def MAKE_ID(
 	_firstName_ = True
 	# 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱ 1⟱
 	if (
-			(_extension_ in V.EMPTY_STR_LST)
+			(_extension_ in EMPTY_STR_LST)
 	):
 		_extension_ = ".py"
 	# ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱ ⟰1⟱

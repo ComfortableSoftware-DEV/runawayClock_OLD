@@ -31,6 +31,7 @@ for _module_ in sorted(LISTDIR(DIRNAME(__file__))):
 
 
 print(f"""CF.CONST_D.__init__.py
+__all__ {__all__}
 __file__ {__file__}
 __name__ {__name__}
 """)
