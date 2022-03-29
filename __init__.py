@@ -1,5 +1,1 @@
-__all__ = [
-		"FM",
-		"PSG",
-		"runawayClock",
-]
+__all__ = ["CF", "PSG", "runawayClock"]
